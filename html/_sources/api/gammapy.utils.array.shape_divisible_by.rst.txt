@@ -1,0 +1,6 @@
+shape_divisible_by
+==================
+
+.. currentmodule:: gammapy.utils.array
+
+.. autofunction:: shape_divisible_by

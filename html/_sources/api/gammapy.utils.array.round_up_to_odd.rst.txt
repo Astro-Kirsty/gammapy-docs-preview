@@ -1,0 +1,6 @@
+round_up_to_odd
+===============
+
+.. currentmodule:: gammapy.utils.array
+
+.. autofunction:: round_up_to_odd
