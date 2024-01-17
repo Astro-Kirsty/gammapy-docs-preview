@@ -188,7 +188,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1441+g328316928 variable.
+            // this version, rather than using sphinx's 1.2.dev1465+gced7228bc.d20240117 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -1293,6 +1293,8 @@ function checkPageExistsAndRedirect(event) {
       <li><a href="api/gammapy.estimators.ASmoothMapEstimator.html#gammapy.estimators.ASmoothMapEstimator.config_parameters">config_parameters (gammapy.estimators.ASmoothMapEstimator attribute)</a>
 
       <ul>
+        <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.config_parameters">(gammapy.estimators.EnergyDependenceEstimator attribute)</a>
+</li>
         <li><a href="api/gammapy.estimators.Estimator.html#gammapy.estimators.Estimator.config_parameters">(gammapy.estimators.Estimator attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.ExcessMapEstimator.html#gammapy.estimators.ExcessMapEstimator.config_parameters">(gammapy.estimators.ExcessMapEstimator attribute)</a>
@@ -1514,6 +1516,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.copy">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
 </li>
         <li><a href="api/gammapy.estimators.ASmoothMapEstimator.html#gammapy.estimators.ASmoothMapEstimator.copy">(gammapy.estimators.ASmoothMapEstimator method)</a>
+</li>
+        <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.copy">(gammapy.estimators.EnergyDependenceEstimator method)</a>
 </li>
         <li><a href="api/gammapy.estimators.Estimator.html#gammapy.estimators.Estimator.copy">(gammapy.estimators.Estimator method)</a>
 </li>
@@ -2868,6 +2872,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.energy_ref">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator">EnergyDependenceEstimator (class in gammapy.estimators)</a>
+</li>
       <li><a href="api/gammapy.irf.EnergyDependentMultiGaussPSF.html#gammapy.irf.EnergyDependentMultiGaussPSF">EnergyDependentMultiGaussPSF (class in gammapy.irf)</a>
 </li>
       <li><a href="api/gammapy.irf.EnergyDispersion2D.html#gammapy.irf.EnergyDispersion2D">EnergyDispersion2D (class in gammapy.irf)</a>
@@ -2926,6 +2932,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.estimate_counts">(gammapy.estimators.ParameterEstimator static method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.estimate_energy_dependence">estimate_energy_dependence() (gammapy.estimators.EnergyDependenceEstimator method)</a>
+</li>
       <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.estimate_errn_errp">estimate_errn_errp() (gammapy.estimators.FluxPointsEstimator method)</a>
 
       <ul>
@@ -10210,6 +10218,8 @@ function checkPageExistsAndRedirect(event) {
       <ul>
         <li><a href="api/gammapy.estimators.ASmoothMapEstimator.html#gammapy.estimators.ASmoothMapEstimator.run">(gammapy.estimators.ASmoothMapEstimator method)</a>
 </li>
+        <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.run">(gammapy.estimators.EnergyDependenceEstimator method)</a>
+</li>
         <li><a href="api/gammapy.estimators.Estimator.html#gammapy.estimators.Estimator.run">(gammapy.estimators.Estimator method)</a>
 </li>
         <li><a href="api/gammapy.estimators.ExcessMapEstimator.html#gammapy.estimators.ExcessMapEstimator.run">(gammapy.estimators.ExcessMapEstimator method)</a>
@@ -10514,6 +10524,8 @@ function checkPageExistsAndRedirect(event) {
       <li><a href="api/gammapy.estimators.ASmoothMapEstimator.html#gammapy.estimators.ASmoothMapEstimator.selection_optional">selection_optional (gammapy.estimators.ASmoothMapEstimator attribute)</a>
 
       <ul>
+        <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.selection_optional">(gammapy.estimators.EnergyDependenceEstimator attribute)</a>
+</li>
         <li><a href="api/gammapy.estimators.Estimator.html#gammapy.estimators.Estimator.selection_optional">(gammapy.estimators.Estimator attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.ExcessMapEstimator.html#gammapy.estimators.ExcessMapEstimator.selection_optional">(gammapy.estimators.ExcessMapEstimator attribute)</a>
@@ -10867,6 +10879,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.sort">(gammapy.data.ObservationTable method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.catalog.SourceCatalog.html#gammapy.catalog.SourceCatalog.source_name">source_name() (gammapy.catalog.SourceCatalog method)</a>
 
       <ul>
@@ -10889,8 +10903,6 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.source_name">(gammapy.catalog.SourceCatalogHGPS method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.catalog.SourceCatalog.html#gammapy.catalog.SourceCatalog">SourceCatalog (class in gammapy.catalog)</a>
 </li>
       <li><a href="api/gammapy.catalog.SourceCatalog1LHAASO.html#gammapy.catalog.SourceCatalog1LHAASO">SourceCatalog1LHAASO (class in gammapy.catalog)</a>
@@ -11535,6 +11547,8 @@ function checkPageExistsAndRedirect(event) {
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.tag">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.ASmoothMapEstimator.html#gammapy.estimators.ASmoothMapEstimator.tag">(gammapy.estimators.ASmoothMapEstimator attribute)</a>
+</li>
+        <li><a href="api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.tag">(gammapy.estimators.EnergyDependenceEstimator attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.Estimator.html#gammapy.estimators.Estimator.tag">(gammapy.estimators.Estimator attribute)</a>
 </li>
@@ -13208,7 +13222,7 @@ function checkPageExistsAndRedirect(event) {
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     
