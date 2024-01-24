@@ -188,7 +188,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1441+g328316928 variable.
+            // this version, rather than using sphinx's 1.2.dev1704+g457836e73.d20240124 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -527,7 +527,7 @@ function checkPageExistsAndRedirect(event) {
             <span class="n">time_start</span><span class="o">=</span><span class="n">gti</span><span class="o">.</span><span class="n">time_start</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
             <span class="n">time_stop</span><span class="o">=</span><span class="n">gti</span><span class="o">.</span><span class="n">time_stop</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
             <span class="n">reference_time</span><span class="o">=</span><span class="n">reference_time</span><span class="p">,</span>
-            <span class="n">creation</span><span class="o">=</span><span class="n">CreatorMetaData</span><span class="o">.</span><span class="n">from_default</span><span class="p">(),</span>
+            <span class="n">creation</span><span class="o">=</span><span class="n">CreatorMetaData</span><span class="p">(),</span>
             <span class="n">target</span><span class="o">=</span><span class="n">TargetMetaData</span><span class="p">(),</span>
         <span class="p">)</span>
 
@@ -629,43 +629,10 @@ function checkPageExistsAndRedirect(event) {
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the pointing in ICRS for given time.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pointing</span><span class="o">.</span><span class="n">get_icrs</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">observatory_earth_location</span><span class="p">)</span></div>
 
-    <span class="nd">@lazyproperty</span>
-    <span class="nd">@deprecated</span><span class="p">(</span>
-        <span class="s2">&quot;v1.1&quot;</span><span class="p">,</span>
-        <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Use observation.pointing or observation.get_pointing_{{altaz,icrs}} instead&quot;</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">def</span> <span class="nf">fixed_pointing_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Fixed pointing information for this observation as a `~gammapy.data.FixedPointingInfo` object.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pointing</span>
-
-    <span class="nd">@property</span>
-    <span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;v1.1&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Use observation.get_pointing_icrs(time) instead&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">pointing_radec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pointing RA / DEC sky coordinates as a `~astropy.coordinates.SkyCoord` object.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixed_pointing_info</span><span class="o">.</span><span class="n">radec</span>
-
-    <span class="nd">@property</span>
-    <span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;v1.1&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Use observation.get_pointing_altaz(time) instead&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">pointing_altaz</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pointing ALT / AZ sky coordinates as a `~astropy.coordinates.SkyCoord` object.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixed_pointing_info</span><span class="o">.</span><span class="n">altaz</span>
-
-    <span class="nd">@property</span>
-    <span class="nd">@deprecated</span><span class="p">(</span><span class="s2">&quot;v1.1&quot;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Use observation.get_pointing_altaz(time).zen instead&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">pointing_zen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Pointing zenith angle sky as a `~astropy.units.Quantity`.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pointing_altaz</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tmid</span><span class="p">)</span><span class="o">.</span><span class="n">zen</span>
-
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">observatory_earth_location</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Observatory location as an`~astropy.coordinates.EarthLocation` object.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_location</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_location</span>
-
-        <span class="c1"># for now we catch the deprecation warning until we store location on the observation properly</span>
-        <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
-            <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">GammapyDeprecationWarning</span><span class="p">)</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fixed_pointing_info</span><span class="o">.</span><span class="n">location</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Observatory location as an `~astropy.coordinates.EarthLocation` object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_location</span>
 
     <span class="nd">@lazyproperty</span>
     <span class="k">def</span> <span class="nf">target_radec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -838,7 +805,7 @@ function checkPageExistsAndRedirect(event) {
 <span class="sd">            Path for the output file.</span>
 <span class="sd">        overwrite : bool, optional</span>
 <span class="sd">            Overwrite existing file. Default is False.</span>
-<span class="sd">        format : str, optional</span>
+<span class="sd">        format : {&quot;gadf&quot;}</span>
 <span class="sd">            Output format, currently only &quot;gadf&quot; is supported. Default is &quot;gadf&quot;.</span>
 <span class="sd">        include_irfs : bool, optional</span>
 <span class="sd">            Whether to include irf components in the output file. Default is True.</span>
@@ -878,7 +845,7 @@ function checkPageExistsAndRedirect(event) {
 <div class="viewcode-block" id="Observation.copy"><a class="viewcode-back" href="../../../api/gammapy.data.Observation.html#gammapy.data.Observation.copy">[docs]</a>    <span class="k">def</span> <span class="nf">copy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Copy observation.</span>
 
-<span class="sd">        Overwriting `Observation` arguments requires the &#39;in_memory&#39; argument to be true.</span>
+<span class="sd">        Overwriting `Observation` arguments requires the ``in_memory`` argument to be true.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -889,14 +856,14 @@ function checkPageExistsAndRedirect(event) {
 
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
-<span class="sd">        &gt;&gt;&gt;from gammapy.data import Observation</span>
+<span class="sd">        &gt;&gt;&gt; from gammapy.data import Observation</span>
 <span class="sd">        &gt;&gt;&gt;</span>
-<span class="sd">        &gt;&gt;&gt;obs = Observation.read(</span>
-<span class="sd">        &gt;&gt;&gt;    &quot;$GAMMAPY_DATA/hess-dl3-dr1/data/hess_dl3_dr1_obs_id_020136.fits.gz&quot;</span>
-<span class="sd">        &gt;&gt;&gt;)</span>
+<span class="sd">        &gt;&gt;&gt; obs = Observation.read(</span>
+<span class="sd">        &gt;&gt;&gt;     &quot;$GAMMAPY_DATA/hess-dl3-dr1/data/hess_dl3_dr1_obs_id_020136.fits.gz&quot;</span>
+<span class="sd">        &gt;&gt;&gt; )</span>
 <span class="sd">        &gt;&gt;&gt;</span>
-<span class="sd">        &gt;&gt;&gt;obs_copy = obs.copy(in_memory=True, obs_id=1234)</span>
-<span class="sd">        &gt;&gt;&gt;print(obs_copy)</span>
+<span class="sd">        &gt;&gt;&gt; obs_copy = obs.copy(in_memory=True, obs_id=1234)</span>
+<span class="sd">        &gt;&gt;&gt; print(obs_copy)</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -1217,7 +1184,7 @@ function checkPageExistsAndRedirect(event) {
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     

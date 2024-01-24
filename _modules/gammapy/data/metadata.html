@@ -188,7 +188,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1441+g328316928 variable.
+            // this version, rather than using sphinx's 1.2.dev1704+g457836e73.d20240124 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -263,10 +263,8 @@ function checkPageExistsAndRedirect(event) {
                 
   <h1>Source code for gammapy.data.metadata</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
-<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">EarthLocation</span>
-<span class="kn">from</span> <span class="nn">astropy.time</span> <span class="kn">import</span> <span class="n">Time</span>
-<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">Field</span><span class="p">,</span> <span class="n">validator</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">ClassVar</span><span class="p">,</span> <span class="n">Literal</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">Field</span>
 <span class="kn">from</span> <span class="nn">gammapy.utils.fits</span> <span class="kn">import</span> <span class="n">earth_location_from_dict</span>
 <span class="kn">from</span> <span class="nn">gammapy.utils.metadata</span> <span class="kn">import</span> <span class="p">(</span>
     <span class="n">METADATA_FITS_KEYS</span><span class="p">,</span>
@@ -276,8 +274,9 @@ function checkPageExistsAndRedirect(event) {
     <span class="n">PointingInfoMetaData</span><span class="p">,</span>
     <span class="n">TargetMetaData</span><span class="p">,</span>
 <span class="p">)</span>
+<span class="kn">from</span> <span class="nn">gammapy.utils.types</span> <span class="kn">import</span> <span class="n">EarthLocationType</span><span class="p">,</span> <span class="n">TimeType</span>
 
-<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ObservationMetaData&quot;</span><span class="p">]</span>
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ObservationMetaData&quot;</span><span class="p">,</span> <span class="s2">&quot;GTIMetaData&quot;</span><span class="p">]</span>
 
 <span class="n">OBSERVATION_METADATA_FITS_KEYS</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -324,46 +323,23 @@ function checkPageExistsAndRedirect(event) {
 <span class="sd">        Additional optional metadata.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">_tag</span> <span class="o">=</span> <span class="s2">&quot;observation&quot;</span>
-    <span class="n">obs_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ObsInfoMetaData</span><span class="p">]</span>
-    <span class="n">pointing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PointingInfoMetaData</span><span class="p">]</span>
-    <span class="n">target</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TargetMetaData</span><span class="p">]</span>
-    <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">EarthLocation</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
+    <span class="n">_tag</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;observation&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;observation&quot;</span>
+    <span class="n">obs_info</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ObsInfoMetaData</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">pointing</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">PointingInfoMetaData</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">target</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TargetMetaData</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">EarthLocationType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">deadtime_fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="n">time_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Time</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
-    <span class="n">time_stop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Time</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
-    <span class="n">reference_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Time</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span>
-    <span class="n">creation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CreatorMetaData</span><span class="p">]</span>
-    <span class="n">optional</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span>
-
-<div class="viewcode-block" id="ObservationMetaData.validate_location"><a class="viewcode-back" href="../../../api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.validate_location">[docs]</a>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;location&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">validate_location</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Validate the location value.&quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">observatory_locations</span>
-
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="ow">and</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">observatory_locations</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="k">return</span> <span class="n">observatory_locations</span><span class="p">[</span><span class="n">v</span><span class="p">]</span>
-        <span class="k">elif</span> <span class="n">v</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">EarthLocation</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">v</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Incorrect location value&quot;</span><span class="p">)</span></div>
-
-<div class="viewcode-block" id="ObservationMetaData.validate_time"><a class="viewcode-back" href="../../../api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.validate_time">[docs]</a>    <span class="nd">@validator</span><span class="p">(</span><span class="s2">&quot;time_start&quot;</span><span class="p">,</span> <span class="s2">&quot;time_stop&quot;</span><span class="p">,</span> <span class="s2">&quot;reference_time&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">validate_time</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Validate the time value.&quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">Time</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">Time</span><span class="p">)</span> <span class="ow">or</span> <span class="n">v</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="c1"># check size?</span>
-            <span class="k">return</span> <span class="n">v</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Incorrect time input value.&quot;</span><span class="p">)</span></div>
+    <span class="n">time_start</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">time_stop</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">reference_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">creation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">CreatorMetaData</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">optional</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
 
 <div class="viewcode-block" id="ObservationMetaData.from_header"><a class="viewcode-back" href="../../../api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.from_header">[docs]</a>    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_header</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
         <span class="n">meta</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">ObservationMetaData</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">from_header</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
 
-        <span class="n">meta</span><span class="o">.</span><span class="n">creation</span> <span class="o">=</span> <span class="n">CreatorMetaData</span><span class="o">.</span><span class="n">from_default</span><span class="p">()</span>
+        <span class="n">meta</span><span class="o">.</span><span class="n">creation</span> <span class="o">=</span> <span class="n">CreatorMetaData</span><span class="p">()</span>
         <span class="c1"># Include additional gadf keywords not specified as ObservationMetaData attributes</span>
         <span class="n">optional_keywords</span> <span class="o">=</span> <span class="p">[</span>
             <span class="s2">&quot;OBSERVER&quot;</span><span class="p">,</span>
@@ -394,6 +370,24 @@ function checkPageExistsAndRedirect(event) {
         <span class="n">meta</span><span class="o">.</span><span class="n">optional</span> <span class="o">=</span> <span class="n">optional</span>
 
         <span class="k">return</span> <span class="n">meta</span></div></div>
+
+
+<span class="k">class</span> <span class="nc">GTIMetaData</span><span class="p">(</span><span class="n">MetaData</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Metadata containing information about the GTI.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    reference_time : Time, str</span>
+<span class="sd">        The GTI reference time.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_tag</span><span class="p">:</span> <span class="n">ClassVar</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s2">&quot;GTI&quot;</span><span class="p">]]</span> <span class="o">=</span> <span class="s2">&quot;GTI&quot;</span>
+    <span class="n">reference_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TimeType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">from_header</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
+        <span class="n">meta</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">GTIMetaData</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="n">from_header</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="nb">format</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">meta</span>
 </pre></div>
 
               </div>
@@ -412,7 +406,7 @@ function checkPageExistsAndRedirect(event) {
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     

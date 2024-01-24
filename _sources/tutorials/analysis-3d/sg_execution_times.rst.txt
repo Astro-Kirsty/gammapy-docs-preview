@@ -6,12 +6,12 @@
 
 Computation times
 =================
-**00:17.676** total execution time for **tutorials_analysis-3d** files:
+**00:13.990** total execution time for **tutorials_analysis-3d** files:
 
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_analysis-3d_simulate_3d.py` (``simulate_3d.py``)                                           | 00:13.065 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_analysis-3d_simulate_3d.py` (``simulate_3d.py``)                                           | 00:10.764 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_analysis-3d_event_sampling_nrg_depend_models.py` (``event_sampling_nrg_depend_models.py``) | 00:04.611 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_analysis-3d_event_sampling_nrg_depend_models.py` (``event_sampling_nrg_depend_models.py``) | 00:03.226 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_tutorials_analysis-3d_analysis_3d.py` (``analysis_3d.py``)                                           | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+

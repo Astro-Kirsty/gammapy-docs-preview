@@ -188,7 +188,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev620+gee7f2f30d.d20231208 variable.
+            // this version, rather than using sphinx's 1.2.dev1465+gced7228bc.d20240117 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -265,7 +265,6 @@ function checkPageExistsAndRedirect(event) {
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
 <span class="sd">&quot;&quot;&quot;Implementation of energy dependent estimator tool.&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
 <span class="kn">from</span> <span class="nn">gammapy.datasets</span> <span class="kn">import</span> <span class="n">Datasets</span>
 <span class="kn">from</span> <span class="nn">gammapy.modeling</span> <span class="kn">import</span> <span class="n">Fit</span>
 <span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">FoVBackgroundModel</span>
@@ -276,39 +275,60 @@ function checkPageExistsAndRedirect(event) {
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;weighted_chi2_parameter&quot;</span><span class="p">,</span> <span class="s2">&quot;EnergyDependenceEstimator&quot;</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">weighted_chi2_parameter</span><span class="p">(</span><span class="n">results_edep</span><span class="p">,</span> <span class="n">parameter</span><span class="o">=</span><span class="s2">&quot;sigma&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate the weighted chi-squared value for the parameter of interest.</span>
+<span class="k">def</span> <span class="nf">weighted_chi2_parameter</span><span class="p">(</span><span class="n">results_edep</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]):</span>
+<span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Calculate the weighted chi-squared value for the parameter of interest.</span>
+
+<span class="sd">    The chi-squared parameter is defined as follows:</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \chi^2 = \sum_i \frac{(x_i - \bar{\mu})^2}{\sigma_i ^ 2}</span>
+
+<span class="sd">    where the :math:`x_i` and :math:`\sigma_i` are the value and error of the</span>
+<span class="sd">    parameter of interest, and the weighted mean is</span>
+
+<span class="sd">    .. math::</span>
+<span class="sd">        \bar{\mu} = \sum_i \frac{(x_i/ \sigma_i ^ 2)}{(1/\sigma_i ^ 2)}</span>
+
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    result_edep : dict</span>
+<span class="sd">    result_edep : `dict`</span>
 <span class="sd">        Dictionary of results for the energy-dependent estimator.</span>
-<span class="sd">    parameter : str, optional</span>
+<span class="sd">    parameters : list of str, optional</span>
 <span class="sd">        The model parameter to calculate the chi-squared value for.</span>
-<span class="sd">        Default is &quot;sigma&quot;.</span>
+<span class="sd">        Default is [&quot;sigma&quot;].</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    chi2_result : dict</span>
+<span class="sd">    chi2_result : `dict`</span>
 <span class="sd">        Dictionary with the chi-squared value for parameter of interest.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This chi-square should be utilised with caution as it does not take into</span>
+<span class="sd">    account any correlation between the parameters.</span>
+<span class="sd">    To properly utilise the chi-squared parameter one must ensure each of the parameters</span>
+<span class="sd">    are independent, which cannot be guaranteed in this use case.</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">table_edep</span> <span class="o">=</span> <span class="n">Table</span><span class="p">(</span><span class="n">results_edep</span><span class="p">)</span>
+    <span class="n">chi2_value</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">parameter</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+        <span class="n">values</span> <span class="o">=</span> <span class="n">results_edep</span><span class="p">[</span><span class="n">parameter</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">errors</span> <span class="o">=</span> <span class="n">results_edep</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parameter</span><span class="si">}</span><span class="s2">_err&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">errors</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="n">avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
+        <span class="n">chi2_value</span> <span class="o">+=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">values</span> <span class="o">-</span> <span class="n">avg</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">errors</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">to_value</span><span class="p">()]</span>
+        <span class="n">df</span> <span class="o">+=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
 
-    <span class="n">values</span> <span class="o">=</span> <span class="n">table_edep</span><span class="p">[</span><span class="n">parameter</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
-    <span class="n">errors</span> <span class="o">=</span> <span class="n">table_edep</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">parameter</span><span class="si">}</span><span class="s2">_err&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
-
-    <span class="n">weights</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">errors</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="n">weights</span><span class="p">)</span>
-
-    <span class="n">chi2_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">values</span> <span class="o">-</span> <span class="n">avg</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">errors</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
-    <span class="n">sigma_value</span> <span class="o">=</span> <span class="n">ts_to_sigma</span><span class="p">(</span><span class="n">chi2_value</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+    <span class="n">significance</span> <span class="o">=</span> <span class="p">[</span><span class="n">ts_to_sigma</span><span class="p">(</span><span class="n">chi2_value</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chi2_value</span><span class="p">))]</span>
 
     <span class="n">chi2_result</span> <span class="o">=</span> <span class="p">{}</span>
-    <span class="n">chi2_result</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;chi2 </span><span class="si">{</span><span class="n">parameter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">chi2_value</span><span class="p">]</span>
-    <span class="n">chi2_result</span><span class="p">[</span><span class="s2">&quot;df&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">df</span><span class="p">]</span>
-    <span class="n">chi2_result</span><span class="p">[</span><span class="s2">&quot;significance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">sigma_value</span><span class="p">]</span>
+    <span class="n">chi2_result</span><span class="p">[</span><span class="s2">&quot;parameter&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parameters</span>
+    <span class="n">chi2_result</span><span class="p">[</span><span class="s2">&quot;chi2&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chi2_value</span>
+    <span class="n">chi2_result</span><span class="p">[</span><span class="s2">&quot;df&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span>
+    <span class="n">chi2_result</span><span class="p">[</span><span class="s2">&quot;significance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">significance</span>
 
     <span class="k">return</span> <span class="n">chi2_result</span>
 
@@ -331,16 +351,47 @@ function checkPageExistsAndRedirect(event) {
 
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;EnergyDependenceEstimator&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_edges</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">fit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_edges</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">fit</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span> <span class="o">=</span> <span class="n">energy_edges</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">source</span> <span class="o">=</span> <span class="n">source</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_energy_bands</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 
         <span class="k">if</span> <span class="n">fit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">fit</span> <span class="o">=</span> <span class="n">Fit</span><span class="p">(</span><span class="n">optimize_opts</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;print_level&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+            <span class="n">fit</span> <span class="o">=</span> <span class="n">Fit</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">fit</span> <span class="o">=</span> <span class="n">fit</span>
+
+    <span class="k">def</span> <span class="nf">_slice_datasets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datasets</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Calculate a dataset for each energy slice.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        datasets : `~gammapy.datasets.Datasets`</span>
+<span class="sd">            Input datasets to use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        slices_src : `~gammapy.datasets.Datasets`</span>
+<span class="sd">            Sliced datasets.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">]</span>
+
+        <span class="n">slices_src</span> <span class="o">=</span> <span class="n">Datasets</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">emin</span><span class="p">,</span> <span class="n">emax</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span>
+            <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+        <span class="p">):</span>
+            <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+                <span class="n">sliced_src</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slice_by_energy</span><span class="p">(</span>
+                    <span class="n">emin</span><span class="p">,</span> <span class="n">emax</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+                <span class="n">bkg_sliced_model</span> <span class="o">=</span> <span class="n">FoVBackgroundModel</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="n">sliced_src</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+                <span class="n">sliced_src</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sliced_src</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">-model&quot;</span><span class="p">),</span>
+                    <span class="n">bkg_sliced_model</span><span class="p">,</span>
+                <span class="p">]</span>
+                <span class="n">slices_src</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sliced_src</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">slices_src</span>
 
     <span class="k">def</span> <span class="nf">_estimate_source_significance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datasets</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Estimate the significance of the source above the background.</span>
@@ -352,33 +403,30 @@ function checkPageExistsAndRedirect(event) {
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        result_bkg_src : dict</span>
+<span class="sd">        result_bkg_src : `dict`</span>
 <span class="sd">            Dictionary with the results of the null hypothesis with no source, and alternative</span>
 <span class="sd">            hypothesis with the source added in. Entries are:</span>
-<span class="sd">            * &quot;Emin&quot; : the minimum energy of the energy band</span>
-<span class="sd">            * &quot;Emax&quot; : the maximum energy of the energy band</span>
-<span class="sd">            * &quot;delta_ts&quot; : difference in ts</span>
-<span class="sd">            * &quot;df&quot; : the degrees of freedom between null and alternative hypothesis</span>
-<span class="sd">            * &quot;significance&quot; : significance of the result</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">model</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">]</span>
 
-        <span class="c1"># Calculate the dataset for each energy slice</span>
-        <span class="n">slices_src</span> <span class="o">=</span> <span class="n">Datasets</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">emin</span><span class="p">,</span> <span class="n">emax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
-            <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
-                <span class="n">sliced_src</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slice_by_energy</span><span class="p">(</span><span class="n">emin</span><span class="p">,</span> <span class="n">emax</span><span class="p">)</span>
-                <span class="n">bkg_sliced_model</span> <span class="o">=</span> <span class="n">FoVBackgroundModel</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="n">sliced_src</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-                <span class="n">sliced_src</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">bkg_sliced_model</span><span class="p">]</span>
-                <span class="n">slices_src</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sliced_src</span><span class="p">)</span>
+<span class="sd">                * &quot;Emin&quot; : the minimum energy of the energy band</span>
+<span class="sd">                * &quot;Emax&quot; : the maximum energy of the energy band</span>
+<span class="sd">                * &quot;delta_ts&quot; : difference in ts</span>
+<span class="sd">                * &quot;df&quot; : the degrees of freedom between null and alternative hypothesis</span>
+<span class="sd">                * &quot;significance&quot; : significance of the result</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">slices_src</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slice_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
 
         <span class="c1"># Norm is free and fit</span>
         <span class="n">test_results</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">sliced</span> <span class="ow">in</span> <span class="n">slices_src</span><span class="p">:</span>
-            <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="n">param</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">sliced</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">free_parameters</span><span class="p">]</span>
+            <span class="n">parameters</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">param</span> <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">sliced</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sliced</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">-model&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">free_parameters</span>
+            <span class="p">]</span>
             <span class="n">null_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span>
                 <span class="n">param</span><span class="o">.</span><span class="n">value</span>
-                <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">sliced</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">free_parameters</span>
+                <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">sliced</span><span class="o">.</span><span class="n">models</span><span class="p">[</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sliced</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">-model&quot;</span>
+                <span class="p">]</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">free_parameters</span>
             <span class="p">]</span>
 
             <span class="n">test</span> <span class="o">=</span> <span class="n">TestStatisticNested</span><span class="p">(</span>
@@ -420,21 +468,15 @@ function checkPageExistsAndRedirect(event) {
 <span class="sd">        -------</span>
 <span class="sd">        results : `dict`</span>
 <span class="sd">            Dictionary with results of the energy-dependence test. Entries are:</span>
-<span class="sd">            * &quot;delta_ts&quot; : difference in ts between fitting each energy band individually (sliced fit) and the joint fit</span>
-<span class="sd">            * &quot;df&quot; : the degrees of freedom between fitting each energy band individually (sliced fit) and the joint fit</span>
-<span class="sd">            * &quot;result&quot; : the results for the fitting each energy band individually (sliced fit) and the joint fit</span>
+
+<span class="sd">                * &quot;delta_ts&quot; : difference in ts between fitting each energy band individually (sliced fit) and the joint fit</span>
+<span class="sd">                * &quot;df&quot; : the degrees of freedom between fitting each energy band individually (sliced fit) and the joint fit</span>
+<span class="sd">                * &quot;result&quot; : the results for the fitting each energy band individually (sliced fit) and the joint fit</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">model</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">]</span>
 
         <span class="c1"># Calculate the individually sliced components</span>
-        <span class="n">slices_src</span> <span class="o">=</span> <span class="n">Datasets</span><span class="p">()</span>
-        <span class="k">for</span> <span class="n">emin</span><span class="p">,</span> <span class="n">emax</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
-            <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
-                <span class="n">sliced_src</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slice_by_energy</span><span class="p">(</span><span class="n">emin</span><span class="p">,</span> <span class="n">emax</span><span class="p">)</span>
-                <span class="n">bkg_sliced_model</span> <span class="o">=</span> <span class="n">FoVBackgroundModel</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="n">sliced_src</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-                <span class="n">sliced_src</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="n">bkg_sliced_model</span><span class="p">]</span>
-                <span class="n">slices_src</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sliced_src</span><span class="p">)</span>
-
+        <span class="n">slices_src</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_slice_datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
         <span class="n">results_src</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">sliced</span> <span class="ow">in</span> <span class="n">slices_src</span><span class="p">:</span>
             <span class="n">results_src</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">sliced</span><span class="p">))</span>
@@ -448,12 +490,12 @@ function checkPageExistsAndRedirect(event) {
         <span class="c1"># Calculate the joint fit</span>
         <span class="n">parameters</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">free_parameters</span><span class="o">.</span><span class="n">names</span>
         <span class="n">slice0</span> <span class="o">=</span> <span class="n">slices_src</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">for</span> <span class="n">slice_j</span> <span class="ow">in</span> <span class="n">slices_src</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">slice_j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">slices_src</span><span class="p">[</span><span class="mi">1</span><span class="p">:]):</span>
             <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
                 <span class="nb">setattr</span><span class="p">(</span>
-                    <span class="n">slice_j</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_model</span><span class="p">,</span>
+                    <span class="n">slice_j</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">-model&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_model</span><span class="p">,</span>
                     <span class="n">param</span><span class="p">,</span>
-                    <span class="n">slice0</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">param</span><span class="p">],</span>
+                    <span class="n">slice0</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="si">}</span><span class="s2">_0-model&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="n">param</span><span class="p">],</span>
                 <span class="p">)</span>
         <span class="n">result_joint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">slices_src</span><span class="p">)</span>
 
@@ -496,7 +538,7 @@ function checkPageExistsAndRedirect(event) {
 
         <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">delta_ts</span><span class="o">=</span><span class="n">delta_ts_joint</span><span class="p">,</span> <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="EnergyDependenceEstimator.run"><a class="viewcode-back" href="../../../api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+<div class="viewcode-block" id="EnergyDependenceEstimator.run"><a class="viewcode-back" href="../../../api/gammapy.estimators.EnergyDependenceEstimator.html#gammapy.estimators.EnergyDependenceEstimator.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datasets</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Run the energy-dependence estimator.</span>
 
 <span class="sd">        Parameters</span>
@@ -506,16 +548,16 @@ function checkPageExistsAndRedirect(event) {
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
-<span class="sd">        results : dict</span>
+<span class="sd">        results : `dict`</span>
 <span class="sd">            Dictionary with the various energy-dependence estimation values.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">Datasets</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported dataset type.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="n">Datasets</span><span class="p">)</span> <span class="ow">or</span> <span class="n">datasets</span><span class="o">.</span><span class="n">is_all_same_type</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Unsupported datasets type.&quot;</span><span class="p">)</span>
 
         <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">results</span><span class="p">[</span><span class="s2">&quot;energy_dependence&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_energy_dependence</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
-        <span class="n">results</span><span class="p">[</span><span class="s2">&quot;src_above_bkg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_estimate_source_significance</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="n">results</span><span class="p">[</span><span class="s2">&quot;energy_dependence&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_energy_dependence</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
+        <span class="n">results</span><span class="p">[</span><span class="s2">&quot;src_above_bkg&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_estimate_source_significance</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">results</span></div></div>
 </pre></div>
@@ -536,7 +578,7 @@ function checkPageExistsAndRedirect(event) {
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     

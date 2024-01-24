@@ -72,7 +72,7 @@ As usual, we’ll start with some setup …
 .. code-block:: python3
 
     from IPython.display import display
-    from gammapy.data import Observation, observatory_locations
+    from gammapy.data import FixedPointingInfo, Observation, observatory_locations
     from gammapy.datasets import SpectrumDataset, SpectrumDatasetOnOff
     from gammapy.estimators import FluxPoints, SensitivityEstimator
     from gammapy.irf import load_irf_dict_from_file
@@ -120,13 +120,13 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1438+g6f2f4a480.d20231213 
+            version                : 1.2.dev1604+g14385521d.d20240118 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.2     
+            numpy                  : 1.26.3     
             scipy                  : 1.11.4     
             astropy                : 5.2.2      
             regions                : 0.8        
@@ -142,12 +142,12 @@ Check setup
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.0      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.0.2 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -193,7 +193,7 @@ Load IRFs and prepare dataset
 We extract the 1D IRFs from the full 3D IRFs provided by CTA.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-96
+.. GENERATED FROM PYTHON SOURCE LINES 81-97
 
 .. code-block:: python3
 
@@ -202,7 +202,8 @@ We extract the 1D IRFs from the full 3D IRFs provided by CTA.
         "$GAMMAPY_DATA/cta-1dc/caldb/data/cta/1dc/bcf/South_z20_50h/irf_file.fits"
     )
     location = observatory_locations["cta_south"]
-    pointing = SkyCoord("0 deg", "0 deg")
+    pointing_position = SkyCoord("0 deg", "0 deg")
+    pointing = FixedPointingInfo(fixed_icrs=pointing_position)
     livetime = 5.0 * u.h
     obs = Observation.create(
         pointing=pointing, irfs=irfs, livetime=livetime, location=location
@@ -223,18 +224,16 @@ We extract the 1D IRFs from the full 3D IRFs provided by CTA.
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
       warnings.warn(msg, UnitsWarning)
     Invalid unit found in background table! Assuming (s-1 MeV-1 sr-1)
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/data/observations.py:271: GammapyDeprecationWarning: Pointing will be required to be provided as FixedPointingInfo
-      warnings.warn(
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-99
+.. GENERATED FROM PYTHON SOURCE LINES 98-100
 
 Now we correct for the energy dependent region size:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-113
+.. GENERATED FROM PYTHON SOURCE LINES 100-114
 
 .. code-block:: python3
 
@@ -259,13 +258,13 @@ Now we correct for the energy dependent region size:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-117
+.. GENERATED FROM PYTHON SOURCE LINES 115-118
 
 And finally define a `SpectrumDatasetOnOff` with an alpha of ``0.2``.
 The off counts are created from the background model:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-123
+.. GENERATED FROM PYTHON SOURCE LINES 118-124
 
 .. code-block:: python3
 
@@ -282,7 +281,7 @@ The off counts are created from the background model:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-131
+.. GENERATED FROM PYTHON SOURCE LINES 125-132
 
 Compute sensitivity
 -------------------
@@ -292,7 +291,7 @@ minimal significance of 3 per bin. We assume an alpha of 0.2 (ratio
 between ON and OFF area). We then run the sensitivity estimator.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-138
+.. GENERATED FROM PYTHON SOURCE LINES 132-139
 
 .. code-block:: python3
 
@@ -316,7 +315,7 @@ between ON and OFF area). We then run the sensitivity estimator.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-147
+.. GENERATED FROM PYTHON SOURCE LINES 140-148
 
 Results
 -------
@@ -327,7 +326,7 @@ statistical significance from bins where the sensitivity is limited by
 the number of signal counts. This is visible in the plot below.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-186
+.. GENERATED FROM PYTHON SOURCE LINES 148-187
 
 .. code-block:: python3
 
@@ -383,41 +382,41 @@ the number of signal counts. This is visible in the plot below.
 
  .. code-block:: none
 
-      energy    e_ref     e_min     e_max   ...  excess background  criterion  
-       TeV       TeV       TeV       TeV    ...                                
-    --------- --------- --------- --------- ... ------- ---------- ------------
-    0.0356551 0.0356551      0.03 0.0423761 ... 328.477    3284.77          bkg
-    0.0503641 0.0503641 0.0423761 0.0598579 ...  165.06     1650.6          bkg
-    0.0711412 0.0711412 0.0598579 0.0845515 ... 92.4984    756.756 significance
-      0.10049   0.10049 0.0845515  0.119432 ... 65.8637    376.563 significance
-     0.141945  0.141945  0.119432  0.168702 ... 46.0027    178.563 significance
-     0.200503  0.200503  0.168702  0.238298 ... 30.9746    77.2881 significance
-     0.283218  0.283218  0.238298  0.336606 ... 21.3831    34.5112 significance
-     0.400056  0.400056  0.336606  0.475468 ... 14.9743    15.4188 significance
-     0.565095  0.565095  0.475468  0.671616 ... 11.0135    7.41691 significance
-     0.798218  0.798218  0.671616  0.948683 ... 8.17611     3.4654 significance
-      1.12751   1.12751  0.948683   1.34005 ... 6.53986    1.86033 significance
-      1.59265   1.59265   1.34005   1.89287 ... 5.65742    1.19845 significance
-      2.24968   2.24968   1.89287   2.67375 ...       5   0.743113        gamma
-      3.17776   3.17776   2.67375   3.77678 ...       5   0.466104        gamma
-      4.48871   4.48871   3.77678   5.33484 ...       5     0.3196        gamma
-      6.34047   6.34047   5.33484   7.53566 ...       5    0.18669        gamma
-      8.95615   8.95615   7.53566   10.6444 ...       5  0.0845693        gamma
-      12.6509   12.6509   10.6444   15.0356 ...       5  0.0447552        gamma
-      17.8699   17.8699   15.0356   21.2384 ...       5  0.0266192        gamma
-      25.2419   25.2419   21.2384        30 ...       5  0.0126585        gamma
+      energy    e_ref     e_min     e_max       e2dnde     excess background  criterion  
+       TeV       TeV       TeV       TeV    erg / (cm2 s)                                
+    --------- --------- --------- --------- ------------- ------- ---------- ------------
+    0.0356551 0.0356551      0.03 0.0423761   1.61512e-11 328.477    3284.77          bkg
+    0.0503641 0.0503641 0.0423761 0.0598579   8.66737e-12  165.06     1650.6          bkg
+    0.0711412 0.0711412 0.0598579 0.0845515   3.27253e-12 92.4984    756.756 significance
+      0.10049   0.10049 0.0845515  0.119432   1.79729e-12 65.8637    376.563 significance
+     0.141945  0.141945  0.119432  0.168702   1.30282e-12 46.0027    178.563 significance
+     0.200503  0.200503  0.168702  0.238298   9.29846e-13 30.9746    77.2881 significance
+     0.283218  0.283218  0.238298  0.336606   6.38702e-13 21.3831    34.5112 significance
+     0.400056  0.400056  0.336606  0.475468   5.16894e-13 14.9743    15.4188 significance
+     0.565095  0.565095  0.475468  0.671616    3.7804e-13 11.0135    7.41691 significance
+     0.798218  0.798218  0.671616  0.948683    3.3034e-13 8.17611     3.4654 significance
+      1.12751   1.12751  0.948683   1.34005   2.89668e-13 6.53986    1.86033 significance
+      1.59265   1.59265   1.34005   1.89287   2.40531e-13 5.65742    1.19845 significance
+      2.24968   2.24968   1.89287   2.67375   2.16291e-13       5   0.743113        gamma
+      3.17776   3.17776   2.67375   3.77678   2.29643e-13       5   0.466104        gamma
+      4.48871   4.48871   3.77678   5.33484   2.73642e-13       5     0.3196        gamma
+      6.34047   6.34047   5.33484   7.53566   3.57511e-13       5    0.18669        gamma
+      8.95615   8.95615   7.53566   10.6444   4.65419e-13       5  0.0845693        gamma
+      12.6509   12.6509   10.6444   15.0356   6.65067e-13       5  0.0447552        gamma
+      17.8699   17.8699   15.0356   21.2384   7.96271e-13       5  0.0266192        gamma
+      25.2419   25.2419   21.2384        30   1.12581e-12       5  0.0126585        gamma
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-191
+.. GENERATED FROM PYTHON SOURCE LINES 188-192
 
 We add some control plots showing the expected number of background
 counts per bin and the ON region size cut (here the 68% containment
 radius of the PSF).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-210
+.. GENERATED FROM PYTHON SOURCE LINES 192-211
 
 .. code-block:: python3
 
@@ -452,7 +451,7 @@ radius of the PSF).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 211-220
+.. GENERATED FROM PYTHON SOURCE LINES 212-221
 
 Obtaining an integral flux sensitivity
 --------------------------------------
@@ -464,7 +463,7 @@ Here, we simply squash the previously created dataset into one with a single
 energy
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 220-239
+.. GENERATED FROM PYTHON SOURCE LINES 221-240
 
 .. code-block:: python3
 
@@ -505,7 +504,7 @@ energy
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 240-247
+.. GENERATED FROM PYTHON SOURCE LINES 241-248
 
 Exercises
 ---------

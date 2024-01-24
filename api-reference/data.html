@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1441+g328316928 variable.
+            // this version, rather than using sphinx's 1.2.dev1704+g457836e73.d20240124 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -297,8 +297,8 @@ function checkPageExistsAndRedirect(event) {
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../api/gammapy.data.ObservationMetaData.html">
-     ObservationMetaData
+    <a class="reference internal" href="../api/gammapy.data.ObservationsEventsSampler.html">
+     ObservationsEventsSampler
     </a>
    </li>
    <li class="toctree-l2">
@@ -568,6 +568,11 @@ function checkPageExistsAndRedirect(event) {
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../api/gammapy.datasets.create_map_dataset_from_observation.html">
+     create_map_dataset_from_observation
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../api/gammapy.datasets.create_map_dataset_geoms.html">
      create_map_dataset_geoms
     </a>
@@ -600,6 +605,11 @@ function checkPageExistsAndRedirect(event) {
    <li class="toctree-l2">
     <a class="reference internal" href="../api/gammapy.datasets.MapDatasetOnOff.html">
      MapDatasetOnOff
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../api/gammapy.datasets.ObservationEventSampler.html">
+     ObservationEventSampler
     </a>
    </li>
    <li class="toctree-l2">
@@ -2149,8 +2159,8 @@ function checkPageExistsAndRedirect(event) {
 <tr class="row-even"><td><p><a class="reference internal" href="../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code></a>([observations])</p></td>
 <td><p>Container class that holds a list of observations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData" title="gammapy.data.ObservationMetaData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObservationMetaData</span></code></a>(*[, obs_info, pointing, ...])</p></td>
-<td><p>Metadata containing information about the Observation.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/gammapy.data.ObservationsEventsSampler.html#gammapy.data.ObservationsEventsSampler" title="gammapy.data.ObservationsEventsSampler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObservationsEventsSampler</span></code></a>([sampler_kwargs, ...])</p></td>
+<td><p>Run event sampling for an emsemble of observations</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObservationTable</span></code></a>([data, masked, names, ...])</p></td>
 <td><p>Observation table.</p></td>
@@ -2198,7 +2208,7 @@ function checkPageExistsAndRedirect(event) {
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     

@@ -139,7 +139,7 @@ Check setup
 
     System:
 
-            python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python 
+            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
             python_version         : 3.9.18     
             machine                : x86_64     
             system                 : Linux      
@@ -147,34 +147,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev50+gbf9da8718.d20230602 
-            path                   : /home/feijen/Documents/github/gammapy/gammapy 
+            version                : 1.2.dev1704+g457836e73.d20240124 
+            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.25.2     
-            scipy                  : 1.11.2     
-            astropy                : 5.3.3      
-            regions                : 0.7        
+            numpy                  : 1.26.3     
+            scipy                  : 1.12.0     
+            astropy                : 5.2.2      
+            regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
-            IPython                : 8.15.0     
-            jupyterlab             : 3.5.3      
-            matplotlib             : 3.7.2      
-            pandas                 : 2.1.0      
-            healpy                 : 1.16.5     
+            IPython                : 8.18.1     
+            jupyterlab             : not installed 
+            matplotlib             : 3.8.2      
+            pandas                 : not installed 
+            healpy                 : 1.16.6     
             iminuit                : 2.24.0     
-            sherpa                 : 4.15.1     
+            sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : not installed 
+            ray                    : 2.9.1      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -572,7 +572,7 @@ Finally we plot the result for the 1D lightcurve:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  32.759 seconds)
+   **Total running time of the script:** ( 0 minutes  17.462 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-time_light_curve_flare.py:

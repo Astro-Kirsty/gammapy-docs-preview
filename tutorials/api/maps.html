@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1441+g328316928 variable.
+            // this version, rather than using sphinx's 1.2.dev1704+g457836e73.d20240124 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -372,6 +372,11 @@ function checkPageExistsAndRedirect(event) {
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../analysis-time/Variability_estimation.html">
+   Estimation of time variability in a lightcurve
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../analysis-time/light_curve.html">
    Light curves
   </a>
@@ -506,6 +511,11 @@ function checkPageExistsAndRedirect(event) {
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#adding-non-spatial-axes">
      Adding Non-Spatial Axes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-non-contiguous-axes">
+     Adding Non-contiguous axes
     </a>
    </li>
   </ul>
@@ -681,9 +691,19 @@ future!</p>
 <span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a>
 <span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
 <span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">from</span> <span class="nn">astropy.time</span> <span class="kn">import</span> <a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
 <span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">EventList</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">MapAxis</span></a><span class="p">,</span> <span class="n">WcsGeom</span><span class="p">,</span> <span class="n">WcsNDMap</span>
+<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="p">(</span>
+    <a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">LabelMapAxis</span></a><span class="p">,</span>
+    <span class="n">Map</span><span class="p">,</span>
+    <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">MapAxes</span></a><span class="p">,</span>
+    <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">MapAxis</span></a><span class="p">,</span>
+    <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">TimeMapAxis</span></a><span class="p">,</span>
+    <span class="n">WcsGeom</span><span class="p">,</span>
+    <span class="n">WcsNDMap</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -696,7 +716,7 @@ future!</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
-        python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python
+        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
         python_version         : 3.9.18
         machine                : x86_64
         system                 : Linux
@@ -704,34 +724,34 @@ future!</p>
 
 Gammapy package:
 
-        version                : 1.2.dev50+gbf9da8718.d20230602
-        path                   : /home/feijen/Documents/github/gammapy/gammapy
+        version                : 1.2.dev1704+g457836e73.d20240124
+        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.25.2
-        scipy                  : 1.11.2
-        astropy                : 5.3.3
-        regions                : 0.7
+        numpy                  : 1.26.3
+        scipy                  : 1.12.0
+        astropy                : 5.2.2
+        regions                : 0.8
         click                  : 8.1.7
         yaml                   : 6.0.1
-        IPython                : 8.15.0
-        jupyterlab             : 3.5.3
-        matplotlib             : 3.7.2
-        pandas                 : 2.1.0
-        healpy                 : 1.16.5
+        IPython                : 8.18.1
+        jupyterlab             : not installed
+        matplotlib             : 3.8.2
+        pandas                 : not installed
+        healpy                 : 1.16.6
         iminuit                : 2.24.0
-        sherpa                 : 4.15.1
+        sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : not installed
+        ray                    : 2.9.1
 
 
 Gammapy environment variables:
 
-        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1
+        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev
 </pre></div>
 </div>
 </section>
@@ -905,7 +925,7 @@ first define an energy axis, with 4 bins:</p>
 between the bins, equivalent to <code class="docutils literal notranslate"><span class="pre">np.logspace(0,</span> <span class="pre">2,</span> <span class="pre">4)</span></code>. This
 <a class="reference internal" href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxis</span></code></a> object we can now pass to <a class="reference internal" href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create()</span></code></a> using the
 <code class="docutils literal notranslate"><span class="pre">axes=</span></code> argument:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m_cube</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="n">binsz</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">])</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m_cube</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="n">binsz</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.geom" title="gammapy.maps.WcsNDMap.geom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m_cube</span><span class="o">.</span><span class="n">geom</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -930,7 +950,7 @@ pass both axes to <code class="xref py py-obj docutils literal notranslate"><spa
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_axis</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.from_bounds" title="gammapy.maps.MapAxis.from_bounds" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">MapAxis</span><span class="o">.</span><span class="n">from_bounds</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="n">nbin</span><span class="o">=</span><span class="mi">24</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;hour&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">name</span></a><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="s2">&quot;lin&quot;</span><span class="p">)</span>
 
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m_4d</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
-    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_axis</span></a><span class="p">]</span>
+    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_axis</span></a><span class="p">]</span>
 <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.geom" title="gammapy.maps.WcsNDMap.geom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m_4d</span><span class="o">.</span><span class="n">geom</span></a><span class="p">)</span>
 </pre></div>
@@ -975,6 +995,267 @@ attribute:</p>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[ 1.77827941  5.62341325 17.7827941  56.23413252] TeV
+</pre></div>
+</div>
+</section>
+<section id="adding-non-contiguous-axes">
+<h3>Adding Non-contiguous axes<a class="headerlink" href="#adding-non-contiguous-axes" title="Permalink to this headline">#</a></h3>
+<p>Non-spatial map axes can also be handled through two other objects known as the <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a>
+and the <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelMapAxis</span></code></a>. The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> object provides an axis for non-adjacent
+time intervals.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">TimeMapAxis</span></a><span class="p">(</span>
+    <span class="n">edges_min</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">day</span></a><span class="p">,</span>
+    <span class="n">edges_max</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">day</span></a><span class="p">,</span>
+    <span class="n">reference_time</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><span class="s2">&quot;2020-03-19&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TimeMapAxis
+-----------
+
+  name           : time
+  nbins          : 2
+  reference time : 2020-03-19 00:00:00.000
+  scale          : utc
+  time min.      : 2020-03-20 00:00:00.000
+  time max.      : 2020-04-01 00:00:00.000
+  total time     : 96.0 h
+</pre></div>
+</div>
+<p>This <code class="xref py py-obj docutils literal notranslate"><span class="pre">time_map_axis</span></code> can then be utilised in a similar way to the previous implementation to create
+a <a class="reference internal" href="../../api/gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">map_4d</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
+    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis</span></a><span class="p">]</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.geom" title="gammapy.maps.WcsNDMap.geom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">map_4d</span><span class="o">.</span><span class="n">geom</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WcsGeom
+
+        axes       : [&#39;lon&#39;, &#39;lat&#39;, &#39;energy&#39;, &#39;time&#39;]
+        shape      : (500, 250, 4, 2)
+        ndim       : 4
+        frame      : galactic
+        projection : CAR
+        center     : 0.0 deg, 0.0 deg
+        width      : 10.0 deg x 5.0 deg
+        wcs ref    : 0.0 deg, 0.0 deg
+</pre></div>
+</div>
+<p>It is possible to utilise the <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.slice" title="gammapy.maps.TimeMapAxis.slice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code></a> and
+<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.squash" title="gammapy.maps.TimeMapAxis.squash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squash</span></code></a> attributes to create new a
+<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> as follows:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.slice" title="gammapy.maps.TimeMapAxis.slice" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">slice</span></a><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.squash" title="gammapy.maps.TimeMapAxis.squash" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">squash</span></a><span class="p">())</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>TimeMapAxis
+-----------
+
+  name           : time
+  nbins          : 1
+  reference time : 2020-03-19 00:00:00.000
+  scale          : utc
+  time min.      : 2020-03-29 00:00:00.000
+  time max.      : 2020-04-01 00:00:00.000
+  total time     : 72.0 h
+
+TimeMapAxis
+-----------
+
+  name           : time
+  nbins          : 1
+  reference time : 2020-03-19 00:00:00.000
+  scale          : utc
+  time min.      : 2020-03-20 00:00:00.000
+  time max.      : 2020-04-01 00:00:00.000
+  total time     : 288.0 h
+</pre></div>
+</div>
+<p>Here we define a second <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> which contains only one time interval.
+The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges" title="gammapy.maps.TimeMapAxis.edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges</span></code></a> method is shown which returns
+<a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> with respect to the reference time.
+In this case the defined <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_min" title="gammapy.maps.TimeMapAxis.edges_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_min</span></code></a> and <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_max" title="gammapy.maps.TimeMapAxis.edges_max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_max</span></code></a>.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis2</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">TimeMapAxis</span></a><span class="p">(</span>
+    <span class="n">edges_min</span><span class="o">=</span><span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">d</span></a><span class="p">,</span>
+    <span class="n">edges_max</span><span class="o">=</span><span class="mi">11</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">d</span></a><span class="p">,</span>
+    <span class="n">reference_time</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><span class="s2">&quot;2020-03-19&quot;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges" title="gammapy.maps.TimeMapAxis.edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis2</span><span class="o">.</span><span class="n">edges</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[ 1. 11.] d
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_edges" title="gammapy.maps.TimeMapAxis.time_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_edges</span></code></a> will return the <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a> object directly</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_edges" title="gammapy.maps.TimeMapAxis.time_edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis2</span><span class="o">.</span><span class="n">time_edges</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;2020-03-20 00:00:00.000&#39; &#39;2020-03-30 00:00:00.000&#39;]
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_contiguous</span></code></a> method returns a boolean which indicates whether the
+<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> is contiguous or not. This can be utilised on
+the two previously defined <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> objects:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">is_contiguous</span></a><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis2</span><span class="o">.</span><span class="n">is_contiguous</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>False
+True
+</pre></div>
+</div>
+<p><a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> also has both functionalities of <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_pix" title="gammapy.maps.TimeMapAxis.coord_to_pix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coord_to_pix</span></code></a>
+and <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_idx" title="gammapy.maps.TimeMapAxis.coord_to_idx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coord_to_idx</span></code></a>.</p>
+<p>Start by choosing a time which we know is within the <code class="docutils literal notranslate"><span class="pre">time_map_axis</span></code> and see the results.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_max" title="gammapy.maps.TimeMapAxis.time_max" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">time_max</span><span class="o">.</span><span class="n">mjd</span></a><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;mjd&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_pix" title="gammapy.maps.TimeMapAxis.coord_to_pix" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">coord_to_pix</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time</span></a><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_idx" title="gammapy.maps.TimeMapAxis.coord_to_idx" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">coord_to_idx</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time</span></a><span class="p">))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0.5]
+0
+</pre></div>
+</div>
+<p>This functionality can also be used with an array of <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a> values.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">times</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_max" title="gammapy.maps.TimeMapAxis.time_max" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">time_max</span><span class="o">.</span><span class="n">mjd</span></a><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mjd&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_pix" title="gammapy.maps.TimeMapAxis.coord_to_pix" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">coord_to_pix</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">times</span></a><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_idx" title="gammapy.maps.TimeMapAxis.coord_to_idx" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">coord_to_idx</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">times</span></a><span class="p">))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0.5 1.5]
+[0 1]
+</pre></div>
+</div>
+<p>Note here we take a <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a> which is outside the edges. For the
+<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_pix" title="gammapy.maps.TimeMapAxis.coord_to_pix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coord_to_pix</span></code></a> method this will return <code class="docutils literal notranslate"><span class="pre">nan</span></code> and
+for the <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_idx" title="gammapy.maps.TimeMapAxis.coord_to_idx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coord_to_idx</span></code></a> method it returns -1.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_pix" title="gammapy.maps.TimeMapAxis.coord_to_pix" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">coord_to_pix</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">time</span><span class="o">.</span><span class="n">mjd</span></a><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mjd&#39;</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.coord_to_idx" title="gammapy.maps.TimeMapAxis.coord_to_idx" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">coord_to_idx</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><a href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">time</span><span class="o">.</span><span class="n">mjd</span></a><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;mjd&#39;</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[nan]
+-1
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelMapAxis</span></code></a> object allows for handling of labels for map axes.
+It provides an axis for non-numeric entries.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">label_axis</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">LabelMapAxis</span></a><span class="p">(</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dataset-1&quot;</span><span class="p">,</span> <span class="s2">&quot;dataset-2&quot;</span><span class="p">,</span> <span class="s2">&quot;dataset-3&quot;</span><span class="p">],</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">name</span></a><span class="o">=</span><span class="s2">&quot;dataset&quot;</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">label_axis</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LabelMapAxis
+------------
+
+  name       : dataset
+  nbins      : 3
+  node type  : label
+  labels     : [&#39;dataset-1&#39;, &#39;dataset-2&#39;, &#39;dataset-3&#39;]
+</pre></div>
+</div>
+<p>The labels can be checked using the <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.center" title="gammapy.maps.LabelMapAxis.center"><code class="xref py py-obj docutils literal notranslate"><span class="pre">center</span></code></a> attribute:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.center" title="gammapy.maps.LabelMapAxis.center" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">label_axis</span><span class="o">.</span><span class="n">center</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;dataset-1&#39; &#39;dataset-2&#39; &#39;dataset-3&#39;]
+</pre></div>
+</div>
+<p>To obtain the position of the label, one can utilise the <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.coord_to_pix" title="gammapy.maps.LabelMapAxis.coord_to_pix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coord_to_pix</span></code></a> attribute</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.coord_to_pix" title="gammapy.maps.LabelMapAxis.coord_to_pix" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">label_axis</span><span class="o">.</span><span class="n">coord_to_pix</span></a><span class="p">([</span><span class="s1">&#39;dataset-3&#39;</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[2.]
+</pre></div>
+</div>
+<p>To adapt and create new axes the following attributes can be utilised:
+<a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.concatenate" title="gammapy.maps.LabelMapAxis.concatenate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">concatenate</span></code></a>, <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.slice" title="gammapy.maps.LabelMapAxis.slice"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code></a> and
+<a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.squash" title="gammapy.maps.LabelMapAxis.squash"><code class="xref py py-obj docutils literal notranslate"><span class="pre">squash</span></code></a>.</p>
+<p>Combining two different <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelMapAxis</span></code></a> is done in the following way:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">label_axis2</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">LabelMapAxis</span></a><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;dataset-a&quot;</span><span class="p">,</span> <span class="s2">&quot;dataset-b&quot;</span><span class="p">],</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">name</span></a><span class="o">=</span><span class="s2">&quot;dataset&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.concatenate" title="gammapy.maps.LabelMapAxis.concatenate" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">label_axis</span><span class="o">.</span><span class="n">concatenate</span></a><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">label_axis2</span></a><span class="p">))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LabelMapAxis
+------------
+
+  name       : dataset
+  nbins      : 5
+  node type  : label
+  labels     : [&#39;dataset-1&#39;, &#39;dataset-2&#39;, &#39;dataset-3&#39;, &#39;dataset-a&#39;, &#39;dataset-b&#39;]
+</pre></div>
+</div>
+<p>A new <a class="reference internal" href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LabelMapAxis</span></code></a> can be created by slicing an already existing one.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.slice" title="gammapy.maps.LabelMapAxis.slice" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">label_axis</span><span class="o">.</span><span class="n">slice</span></a><span class="p">([</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LabelMapAxis
+------------
+
+  name       : dataset
+  nbins      : 1
+  node type  : label
+  labels     : [&#39;dataset-2&#39;]
+</pre></div>
+</div>
+<p>A new axis object can be created by squashing the axis into a single bin.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.squash" title="gammapy.maps.LabelMapAxis.squash" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">label_axis2</span><span class="o">.</span><span class="n">squash</span></a><span class="p">())</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LabelMapAxis
+------------
+
+  name       : dataset
+  nbins      : 1
+  node type  : label
+  labels     : [&#39;dataset-a...dataset-b&#39;]
+</pre></div>
+</div>
+<p>Mixing the above axes types would be done like so:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">MapAxes</span></a><span class="p">(</span><a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis" title="gammapy.maps.LabelMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">label_axis</span></a><span class="p">])</span>
+<a href="https://docs.astropy.org/en/latest/io/fits/api/tables.html#astropy.io.fits.BinTableHDU" title="astropy.io.fits.BinTableHDU" class="sphx-glr-backref-module-astropy-io-fits sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hdu</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.to_table_hdu" title="gammapy.maps.MapAxes.to_table_hdu" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">axes</span><span class="o">.</span><span class="n">to_table_hdu</span></a><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">)</span>
+<a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">table</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table.read" title="astropy.table.Table.read" class="sphx-glr-backref-module-astropy-table-Table sphx-glr-backref-type-py-attribute"><span class="n">Table</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/io/fits/api/tables.html#astropy.io.fits.BinTableHDU" title="astropy.io.fits.BinTableHDU" class="sphx-glr-backref-module-astropy-io-fits sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hdu</span></a><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">table</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>CHANNEL       ENERGY             E_MIN        ... TIME_MIN TIME_MAX  DATASET
+               TeV                TeV         ...    d        d
+------- ------------------ ------------------ ... -------- -------- ---------
+      0  1.778279410038923                1.0 ...      1.0      2.0 dataset-1
+      1  1.778279410038923                1.0 ...      1.0      2.0 dataset-2
+      2  1.778279410038923                1.0 ...      1.0      2.0 dataset-3
+      3  5.623413251903492 3.1622776601683795 ...      1.0      2.0 dataset-1
+      4  5.623413251903492 3.1622776601683795 ...      1.0      2.0 dataset-2
+      5  5.623413251903492 3.1622776601683795 ...      1.0      2.0 dataset-3
+      6  17.78279410038923 10.000000000000002 ...      1.0      2.0 dataset-1
+      7  17.78279410038923 10.000000000000002 ...      1.0      2.0 dataset-2
+      8  17.78279410038923 10.000000000000002 ...      1.0      2.0 dataset-3
+      9 56.234132519034915  31.62277660168379 ...      1.0      2.0 dataset-1
+    ...                ...                ... ...      ...      ...       ...
+     14  1.778279410038923                1.0 ...     10.0     13.0 dataset-3
+     15  5.623413251903492 3.1622776601683795 ...     10.0     13.0 dataset-1
+     16  5.623413251903492 3.1622776601683795 ...     10.0     13.0 dataset-2
+     17  5.623413251903492 3.1622776601683795 ...     10.0     13.0 dataset-3
+     18  17.78279410038923 10.000000000000002 ...     10.0     13.0 dataset-1
+     19  17.78279410038923 10.000000000000002 ...     10.0     13.0 dataset-2
+     20  17.78279410038923 10.000000000000002 ...     10.0     13.0 dataset-3
+     21 56.234132519034915  31.62277660168379 ...     10.0     13.0 dataset-1
+     22 56.234132519034915  31.62277660168379 ...     10.0     13.0 dataset-2
+     23 56.234132519034915  31.62277660168379 ...     10.0     13.0 dataset-3
+Length = 24 rows
 </pre></div>
 </div>
 </section>
@@ -1026,7 +1307,7 @@ will be instantiated with the pixelization of the input HDU.</p>
 the filename and read the data from there. If multiple HDUs are present
 in the FITS file, the desired one can be chosen with the additional
 <code class="xref py py-obj docutils literal notranslate"><span class="pre">hdu=</span></code> argument:</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m_3fhl_gc</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.read" title="gammapy.maps.Map.read" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">,</span> <span class="n">hdu</span><span class="o">=</span><span class="s2">&quot;PRIMARY&quot;</span><span class="p">)</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m_3fhl_gc</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.read" title="gammapy.maps.Map.read" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/io/fits/api/tables.html#astropy.io.fits.BinTableHDU" title="astropy.io.fits.BinTableHDU" class="sphx-glr-backref-module-astropy-io-fits sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hdu</span></a><span class="o">=</span><span class="s2">&quot;PRIMARY&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m_3fhl_gc</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -1049,7 +1330,7 @@ certain HDU before creating the <code class="xref py py-obj docutils literal not
 <span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/io/fits/api/hdulists.html#astropy.io.fits.HDUList.info" title="astropy.io.fits.HDUList.info" class="sphx-glr-backref-module-astropy-io-fits sphx-glr-backref-type-py-method"><span class="n">hdulist</span><span class="o">.</span><span class="n">info</span></a><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Filename: /home/feijen/gammapy-datasets/1.1rc1/fermi-3fhl-gc/fermi-3fhl-gc-exposure.fits.gz
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Filename: /home/feijen/gammapy-datasets/dev/fermi-3fhl-gc/fermi-3fhl-gc-exposure.fits.gz
 No.    Name      Ver    Type      Cards   Dimensions   Format
   0  PRIMARY       1 PrimaryHDU      23   (400, 200)   float32
 None
@@ -1161,8 +1442,8 @@ Length = 96 rows
 <code class="xref py py-obj docutils literal notranslate"><span class="pre">sparse=True</span></code>. This will write all non-zero pixels in the map to a
 data table appropriate to the pixelization scheme.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">map_type</span><span class="o">=</span><span class="s2">&quot;wcs&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">10.0</span><span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.write" title="gammapy.maps.WcsNDMap.write" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">m</span><span class="o">.</span><span class="n">write</span></a><span class="p">(</span><span class="s2">&quot;file.fits&quot;</span><span class="p">,</span> <span class="n">hdu</span><span class="o">=</span><span class="s2">&quot;IMAGE&quot;</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.read" title="gammapy.maps.Map.read" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><span class="s2">&quot;file.fits&quot;</span><span class="p">,</span> <span class="n">hdu</span><span class="o">=</span><span class="s2">&quot;IMAGE&quot;</span><span class="p">,</span> <span class="n">map_type</span><span class="o">=</span><span class="s2">&quot;wcs&quot;</span><span class="p">)</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.write" title="gammapy.maps.WcsNDMap.write" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">m</span><span class="o">.</span><span class="n">write</span></a><span class="p">(</span><span class="s2">&quot;file.fits&quot;</span><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/io/fits/api/tables.html#astropy.io.fits.BinTableHDU" title="astropy.io.fits.BinTableHDU" class="sphx-glr-backref-module-astropy-io-fits sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hdu</span></a><span class="o">=</span><span class="s2">&quot;IMAGE&quot;</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.read" title="gammapy.maps.Map.read" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><span class="s2">&quot;file.fits&quot;</span><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/io/fits/api/tables.html#astropy.io.fits.BinTableHDU" title="astropy.io.fits.BinTableHDU" class="sphx-glr-backref-module-astropy-io-fits sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">hdu</span></a><span class="o">=</span><span class="s2">&quot;IMAGE&quot;</span><span class="p">,</span> <span class="n">map_type</span><span class="o">=</span><span class="s2">&quot;wcs&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -1343,7 +1624,7 @@ directly. Here is an example for an in-place convolution of an image
 using <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.convolution.convolve.html#astropy.convolution.convolve" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convolve</span></code></a> to interpolate NaN values:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axis1</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">MapAxis</span></a><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">interp</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">name</span></a><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">)</span>
 <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axis2</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">MapAxis</span></a><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="n">interp</span><span class="o">=</span><span class="s2">&quot;lin&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">name</span></a><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axis1</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axis2</span></a><span class="p">],</span> <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.create" title="gammapy.maps.Map.create" class="sphx-glr-backref-module-gammapy-maps-Map sphx-glr-backref-type-py-method"><span class="n">Map</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axis1</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axis2</span></a><span class="p">],</span> <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.data" title="gammapy.maps.WcsNDMap.data" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m</span><span class="o">.</span><span class="n">data</span></a><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">15</span><span class="p">:</span><span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">25</span><span class="p">]</span> <span class="o">=</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">nan</span></a>
 
 <span class="k">for</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">idx</span></a> <span class="ow">in</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.iter_by_image_data" title="gammapy.maps.WcsNDMap.iter_by_image_data" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">m</span><span class="o">.</span><span class="n">iter_by_image_data</span></a><span class="p">():</span>
@@ -1395,7 +1676,7 @@ this case we have to use the <code class="docutils literal notranslate"><span cl
     <span class="mf">10.0</span><span class="p">,</span> <span class="mf">2e3</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">name</span></a><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;GeV&quot;</span>
 <span class="p">)</span>
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">counts_3d</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.create" title="gammapy.maps.WcsNDMap.create" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">WcsNDMap</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
-    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">]</span>
+    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">]</span>
 <span class="p">)</span>
 
 <a href="../../api/gammapy.data.EventList.html#gammapy.data.EventList" title="gammapy.data.EventList" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.EventList.html#gammapy.data.EventList.read" title="gammapy.data.EventList.read" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">EventList</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><span class="s2">&quot;$GAMMAPY_DATA/fermi-3fhl-gc/fermi-3fhl-gc-events.fits.gz&quot;</span><span class="p">)</span>
@@ -1406,7 +1687,7 @@ this case we have to use the <code class="docutils literal notranslate"><span cl
 </div>
 <p>Alternatively you can use the <a class="reference internal" href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.fill_events" title="gammapy.maps.Map.fill_events"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fill_events</span></code></a> method:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">counts_3d</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.create" title="gammapy.maps.WcsNDMap.create" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">WcsNDMap</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
-    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">]</span>
+    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">]</span>
 <span class="p">)</span>
 
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.fill_events" title="gammapy.maps.WcsNDMap.fill_events" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">counts_3d</span><span class="o">.</span><span class="n">fill_events</span></a><span class="p">(</span><a href="../../api/gammapy.data.EventList.html#gammapy.data.EventList" title="gammapy.data.EventList" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">)</span>
@@ -1475,7 +1756,7 @@ arithmetic.</p>
 <span class="p">)</span>
 <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="mf">266.4</span><span class="p">,</span> <span class="o">-</span><span class="mf">28.9</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">)</span>
 <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom" title="gammapy.maps.WcsGeom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wcs_geom_3d</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.create" title="gammapy.maps.WcsGeom.create" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">WcsGeom</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="p">,</span> <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">]</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">skydir</span></a><span class="p">,</span> <span class="n">binsz</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <a href="../../api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">]</span>
 <span class="p">)</span>
 
 <span class="c1"># create the interpolated map</span>
@@ -1491,7 +1772,7 @@ arithmetic.</p>
         axes  : [&#39;lon&#39;, &#39;lat&#39;, &#39;energy_true&#39;]
         shape : (80, 40, 6)
         ndim  : 3
-        unit  : 1 / (MeV s sr cm2)
+        unit  : 1 / (cm2 MeV s sr)
         dtype : float64
 </pre></div>
 </div>
@@ -1636,7 +1917,7 @@ are not the same, we can make them consistent using the <code class="xref py py-
 </div>
 <img src="../../_images/sphx_glr_maps_005.png" srcset="../../_images/sphx_glr_maps_005.png" alt="Energy 10.0 GeV - 15.6 GeV, Energy 15.6 GeV - 24.2 GeV, Energy 24.2 GeV - 37.6 GeV, Energy 37.6 GeV - 58.5 GeV, Energy 58.5 GeV - 90.9 GeV, Energy 90.9 GeV - 141 GeV, Energy 141 GeV - 220 GeV, Energy 220 GeV - 342 GeV, Energy 342 GeV - 532 GeV, Energy 532 GeV - 827 GeV, Energy 827 GeV - 1.29 TeV, Energy 1.29 TeV - 2.00 TeV" class = "sphx-glr-single-img"/><div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-maps-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/api/maps.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/api/maps.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo7.svg" width="150px" /></a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b7957f43ba7bcfcfd46ad57faa8b16d9/maps.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">maps.py</span></code></a></p>
@@ -1667,7 +1948,7 @@ are not the same, we can make them consistent using the <code class="xref py py-
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     

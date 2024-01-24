@@ -192,7 +192,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1441+g328316928 variable.
+            // this version, rather than using sphinx's 1.2.dev1704+g457836e73.d20240124 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -298,8 +298,8 @@ function checkPageExistsAndRedirect(event) {
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="gammapy.data.ObservationMetaData.html">
-     ObservationMetaData
+    <a class="reference internal" href="gammapy.data.ObservationsEventsSampler.html">
+     ObservationsEventsSampler
     </a>
    </li>
    <li class="toctree-l2">
@@ -569,6 +569,11 @@ function checkPageExistsAndRedirect(event) {
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="gammapy.datasets.create_map_dataset_from_observation.html">
+     create_map_dataset_from_observation
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="gammapy.datasets.create_map_dataset_geoms.html">
      create_map_dataset_geoms
     </a>
@@ -601,6 +606,11 @@ function checkPageExistsAndRedirect(event) {
    <li class="toctree-l2">
     <a class="reference internal" href="gammapy.datasets.MapDatasetOnOff.html">
      MapDatasetOnOff
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gammapy.datasets.ObservationEventSampler.html">
+     ObservationEventSampler
     </a>
    </li>
    <li class="toctree-l2">
@@ -3128,7 +3138,7 @@ used for its computation can be controlled using the method parameter.</p>
 </dd>
 <dt><strong>method</strong><span class="classifier">{“diff”, “diff/sqrt(model)”}</span></dt><dd><p>Normalization used to compute the residuals, see <a class="reference internal" href="gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.residuals" title="gammapy.datasets.SpectrumDataset.residuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumDataset.residuals</span></code></a>. Default is “diff”.</p>
 </dd>
-<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev9+g8c38cc0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a> (required)</span></dt><dd><p>Target sky region. Default is None.</p>
+<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a> (required)</span></dt><dd><p>Target sky region. Default is None.</p>
 </dd>
 <dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
 </dd>
@@ -3416,7 +3426,7 @@ dispersion kernel are taken at the center of the region.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev9+g8c38cc0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></span></dt><dd><p>Region from which to extract the spectrum.</p>
+<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></span></dt><dd><p>Region from which to extract the spectrum.</p>
 </dd>
 <dt><strong>name</strong><span class="classifier">str, optional</span></dt><dd><p>Name of the new dataset. Default is None.</p>
 </dd>
@@ -3497,7 +3507,7 @@ Default is False.</p>
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2023, The Gammapy developers.<br>
+    &copy; Copyright 2024, The Gammapy developers.<br>
 </p>
     </div>
     
