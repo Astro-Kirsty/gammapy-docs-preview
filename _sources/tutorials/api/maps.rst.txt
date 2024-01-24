@@ -122,7 +122,7 @@ Check setup
 
     System:
 
-            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
+            python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python 
             python_version         : 3.9.18     
             machine                : x86_64     
             system                 : Linux      
@@ -130,25 +130,25 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1704+g457836e73.d20240124 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
+            version                : 1.2.dev1704+ge937438b7.d20240123 
+            path                   : /home/feijen/Documents/github/gammapy/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.3     
             scipy                  : 1.12.0     
-            astropy                : 5.2.2      
+            astropy                : 6.0.0      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
-            jupyterlab             : not installed 
+            jupyterlab             : 3.5.3      
             matplotlib             : 3.8.2      
-            pandas                 : not installed 
+            pandas                 : 2.2.0      
             healpy                 : 1.16.6     
             iminuit                : 2.24.0     
-            sherpa                 : 4.16.0     
+            sherpa                 : 4.15.1     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
@@ -976,7 +976,7 @@ This functionality can also be used with an array of `~astropy.time.Time` values
 .. code-block:: python3
 
 
-    times = Time(time_map_axis.time_max.mjd, format='mjd')
+    times = Time(time_map_axis.time_max.mjd, format="mjd")
 
     print(time_map_axis.coord_to_pix(times))
 
@@ -1007,9 +1007,9 @@ for the `~gammapy.maps.TimeMapAxis.coord_to_idx` method it returns -1.
 .. code-block:: python3
 
 
-    print(time_map_axis.coord_to_pix(Time(time.mjd+1, format='mjd')))
+    print(time_map_axis.coord_to_pix(Time(time.mjd + 1, format="mjd")))
 
-    print(time_map_axis.coord_to_idx(Time(time.mjd+1, format='mjd')))
+    print(time_map_axis.coord_to_idx(Time(time.mjd + 1, format="mjd")))
 
 
 
@@ -1096,7 +1096,7 @@ To obtain the position of the label, one can utilise the `~gammapy.maps.LabelMap
 .. code-block:: python3
 
 
-    print(label_axis.coord_to_pix(['dataset-3']))
+    print(label_axis.coord_to_pix(["dataset-3"]))
 
 
 
@@ -2357,7 +2357,7 @@ arithmetic.
             axes  : ['lon', 'lat', 'energy_true']
             shape : (80, 40, 6)
             ndim  : 3
-            unit  : 1 / (cm2 MeV s sr)
+            unit  : 1 / (MeV s sr cm2)
             dtype : float64
 
 
@@ -2578,6 +2578,13 @@ After reading the map we can now plot it on the screen by calling the
    :class: sphx-glr-single-img
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/feijen/Documents/github/gammapy/examples/tutorials/api/maps.py:984: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+      plt.show()
+
 
 
 
@@ -2607,6 +2614,13 @@ further to
    :srcset: /tutorials/api/images/sphx_glr_maps_002.png
    :class: sphx-glr-single-img
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/feijen/Documents/github/gammapy/examples/tutorials/api/maps.py:996: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+      plt.show()
 
 
 
@@ -2639,6 +2653,13 @@ font size:
    :srcset: /tutorials/api/images/sphx_glr_maps_003.png
    :class: sphx-glr-single-img
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/feijen/Documents/github/gammapy/examples/tutorials/api/maps.py:1010: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+      plt.show()
 
 
 
@@ -2682,7 +2703,11 @@ the data cube by calling `~gammapy.maps.Map.plot_interactive()`:
 
  .. code-block:: none
 
-            interactive(children=(SelectionSlider(continuous_update=False, description='Select energy_true:', layout=Layout(width='50%'), options=('58.5 MeV', '80.0 MeV', '109 MeV', '150 MeV', '205 MeV', '280 MeV', '383 MeV', '523 MeV', '716 MeV', '979 MeV', '1.34 GeV', '1.83 GeV', '2.50 GeV', '3.42 GeV', '4.68 GeV', '6.41 GeV', '8.76 GeV', '12.0 GeV', '16.4 GeV', '22.4 GeV', '30.6 GeV', '41.9 GeV', '57.3 GeV', '78.4 GeV', '107 GeV', '147 GeV', '201 GeV', '274 GeV', '375 GeV', '513 GeV'), style=SliderStyle(description_width='initial'), value='58.5 MeV'), RadioButtons(description='Select stretch:', index=1, options=('linear', 'sqrt', 'log'), style=DescriptionStyle(description_width='initial'), value='sqrt'), Output()), _dom_classes=('widget-interact',))
+            /home/feijen/Documents/github/gammapy/gammapy/maps/core.py:1451: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+      plt.show()
+    interactive(children=(SelectionSlider(continuous_update=False, description='Select energy_true:', layout=Layout(width='50%'), options=('58.5 MeV', '80.0 MeV', '109 MeV', '150 MeV', '205 MeV', '280 MeV', '383 MeV', '523 MeV', '716 MeV', '979 MeV', '1.34 GeV', '1.83 GeV', '2.50 GeV', '3.42 GeV', '4.68 GeV', '6.41 GeV', '8.76 GeV', '12.0 GeV', '16.4 GeV', '22.4 GeV', '30.6 GeV', '41.9 GeV', '57.3 GeV', '78.4 GeV', '107 GeV', '147 GeV', '201 GeV', '274 GeV', '375 GeV', '513 GeV'), style=SliderStyle(description_width='initial'), value='58.5 MeV'), RadioButtons(description='Select stretch:', index=1, options=('linear', 'sqrt', 'log'), style=DescriptionStyle(description_width='initial'), value='sqrt'), Output()), _dom_classes=('widget-interact',))
+    /home/feijen/Documents/github/gammapy/examples/tutorials/api/maps.py:1030: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+      plt.show()
 
 
 
@@ -2718,6 +2743,13 @@ are not the same, we can make them consistent using the `vmin` and
    :srcset: /tutorials/api/images/sphx_glr_maps_005.png
    :class: sphx-glr-single-img
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/feijen/Documents/github/gammapy/examples/tutorials/api/maps.py:1049: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+      plt.show()
 
 
 

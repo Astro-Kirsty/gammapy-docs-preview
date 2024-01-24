@@ -359,7 +359,7 @@ print(time_map_axis.coord_to_idx(time))
 ######################################################################
 # This functionality can also be used with an array of `~astropy.time.Time` values.
 
-times = Time(time_map_axis.time_max.mjd, format='mjd')
+times = Time(time_map_axis.time_max.mjd, format="mjd")
 
 print(time_map_axis.coord_to_pix(times))
 
@@ -370,9 +370,9 @@ print(time_map_axis.coord_to_idx(times))
 # `~gammapy.maps.TimeMapAxis.coord_to_pix` method this will return ``nan`` and
 # for the `~gammapy.maps.TimeMapAxis.coord_to_idx` method it returns -1.
 
-print(time_map_axis.coord_to_pix(Time(time.mjd+1, format='mjd')))
+print(time_map_axis.coord_to_pix(Time(time.mjd + 1, format="mjd")))
 
-print(time_map_axis.coord_to_idx(Time(time.mjd+1, format='mjd')))
+print(time_map_axis.coord_to_idx(Time(time.mjd + 1, format="mjd")))
 
 
 ######################################################################
@@ -394,7 +394,7 @@ print(label_axis.center)
 ######################################################################
 # To obtain the position of the label, one can utilise the `~gammapy.maps.LabelMapAxis.coord_to_pix` attribute
 
-print(label_axis.coord_to_pix(['dataset-3']))
+print(label_axis.coord_to_pix(["dataset-3"]))
 
 ######################################################################
 # To adapt and create new axes the following attributes can be utilised:
