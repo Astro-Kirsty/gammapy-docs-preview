@@ -132,7 +132,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1704+g457836e73.d20240124 
+            version                : 1.2.dev1705+gee295e215 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -281,31 +281,6 @@ Run the 3D data reduction
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Setting logging config: {'level': 'INFO', 'filename': None, 'filemode': None, 'format': None, 'datefmt': None}
-    Fetching observations.
-    Observations selected: 4 out of 4.
-    Number of selected observations: 4
-    Creating reference dataset and makers.
-    Creating the background Maker.
-    No background maker set. Check configuration.
-    Start the data reduction loop.
-    Computing dataset for observation 23523
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 23526
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 23559
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 23592
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-
 
 
 
@@ -361,69 +336,6 @@ We assign them the model to be fitted to each dataset
 
 
 
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Reading model.
-    Models
-
-    Component 0: SkyModel
-
-      Name                      : crab
-      Datasets names            : None
-      Spectral model type       : PowerLawSpectralModel
-      Spatial  model type       : PointSpatialModel
-      Temporal model type       : 
-      Parameters:
-        index                         :      2.702   +/-    0.00             
-        amplitude                     :   4.71e-11   +/- 0.0e+00 1 / (cm2 s TeV)
-        reference             (frozen):      1.000       TeV         
-        lon_0                         :     83.633   +/-    0.00 deg         
-        lat_0                         :     22.015   +/-    0.00 deg         
-
-    Component 1: FoVBackgroundModel
-
-      Name                      : 1KoMfYFB-bkg
-      Datasets names            : ['1KoMfYFB']
-      Spectral model type       : PowerLawNormSpectralModel
-      Parameters:
-        norm                          :      1.000   +/-    0.00             
-        tilt                  (frozen):      0.000                   
-        reference             (frozen):      1.000       TeV         
-
-    Component 2: FoVBackgroundModel
-
-      Name                      : SKcwWACH-bkg
-      Datasets names            : ['SKcwWACH']
-      Spectral model type       : PowerLawNormSpectralModel
-      Parameters:
-        norm                          :      1.000   +/-    0.00             
-        tilt                  (frozen):      0.000                   
-        reference             (frozen):      1.000       TeV         
-
-    Component 3: FoVBackgroundModel
-
-      Name                      : tt52d6nt-bkg
-      Datasets names            : ['tt52d6nt']
-      Spectral model type       : PowerLawNormSpectralModel
-      Parameters:
-        norm                          :      1.000   +/-    0.00             
-        tilt                  (frozen):      0.000                   
-        reference             (frozen):      1.000       TeV         
-
-    Component 4: FoVBackgroundModel
-
-      Name                      : zm11NtAV-bkg
-      Datasets names            : ['zm11NtAV']
-      Spectral model type       : PowerLawNormSpectralModel
-      Parameters:
-        norm                          :      1.000   +/-    0.00             
-        tilt                  (frozen):      0.000                   
-        reference             (frozen):      1.000       TeV         
 
 
 
@@ -629,18 +541,6 @@ Run the 1D data reduction
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Setting logging config: {'level': 'INFO', 'filename': None, 'filemode': None, 'format': None, 'datefmt': None}
-    Fetching observations.
-    Observations selected: 4 out of 4.
-    Number of selected observations: 4
-    Reducing spectrum datasets.
-    Creating the background Maker.
-    No background maker set. Check configuration.
-
 
 
 
@@ -695,27 +595,6 @@ We assign the model to be fitted to each dataset. We can use the same
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Reading model.
-    Models
-
-    Component 0: SkyModel
-
-      Name                      : crab
-      Datasets names            : None
-      Spectral model type       : PowerLawSpectralModel
-      Spatial  model type       : 
-      Temporal model type       : 
-      Parameters:
-        index                         :      2.702   +/-    0.00             
-        amplitude                     :   4.71e-11   +/- 0.0e+00 1 / (cm2 s TeV)
-        reference             (frozen):      1.000       TeV         
-
-
-
 
 
 
@@ -752,10 +631,10 @@ Extracting the light curve
          time_min           time_max           e_ref        ...    counts   success
                                                 TeV         ...                    
     ------------------ ----------------- ------------------ ... ----------- -------
-     53343.92234009259 53343.94186555556 3.4517490659800822 ... 81.0 .. nan    True
-     53343.95421509259 53343.97369425926 3.4517490659800822 ...  nan .. nan    True
+     53343.92234009259 53343.94186555556 3.4517490659800822 ...  nan .. nan    True
+     53343.95421509259 53343.97369425926 3.4517490659800822 ... nan .. 71.0    True
      53345.96198129629 53345.98149518518 3.4517490659800822 ...  nan .. nan    True
-    53347.913196574074 53347.93271046296 3.4517490659800822 ... nan .. 59.0    True
+    53347.913196574074 53347.93271046296 3.4517490659800822 ... 59.0 .. nan    True
 
 
 
