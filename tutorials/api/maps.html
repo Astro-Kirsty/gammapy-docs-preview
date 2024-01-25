@@ -1096,39 +1096,48 @@ between the extreme edges of the initial axis.</p>
   total time     : 408.0 h
 </pre></div>
 </div>
-<p>Here we define a second <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> which contains only one time interval.
-The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges" title="gammapy.maps.TimeMapAxis.edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges</span></code></a> method is shown which returns
-<a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> with respect to the reference time.
-In this case the defined <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_min" title="gammapy.maps.TimeMapAxis.edges_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_min</span></code></a> and <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_max" title="gammapy.maps.TimeMapAxis.edges_max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_max</span></code></a>.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis2</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class"><span class="n">TimeMapAxis</span></a><span class="p">(</span>
-    <span class="n">edges_min</span><span class="o">=</span><span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">d</span></a><span class="p">,</span>
-    <span class="n">edges_max</span><span class="o">=</span><span class="mi">11</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">d</span></a><span class="p">,</span>
-    <span class="n">reference_time</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="astropy.time.Time" class="sphx-glr-backref-module-astropy-time sphx-glr-backref-type-py-class"><span class="n">Time</span></a><span class="p">(</span><span class="s2">&quot;2020-03-19&quot;</span><span class="p">),</span>
-<span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges" title="gammapy.maps.TimeMapAxis.edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis2</span><span class="o">.</span><span class="n">edges</span></a><span class="p">)</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[ 1. 11.] d
-</pre></div>
-</div>
-<p>The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_edges" title="gammapy.maps.TimeMapAxis.time_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_edges</span></code></a> will return the <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a> object directly</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_edges" title="gammapy.maps.TimeMapAxis.time_edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis2</span><span class="o">.</span><span class="n">time_edges</span></a><span class="p">)</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;2020-03-20 00:00:00.000&#39; &#39;2020-03-30 00:00:00.000&#39;]
-</pre></div>
-</div>
-<p>The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_contiguous</span></code></a> method returns a boolean which indicates whether the
-<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> is contiguous or not. This can be utilised on
-the two previously defined <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> objects:</p>
+<p>The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_contiguous</span></code></a> method returns a boolean
+which indicates whether the <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> is contiguous or not.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">is_contiguous</span></a><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis2</span><span class="o">.</span><span class="n">is_contiguous</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>False
-True
+</pre></div>
+</div>
+<p>As we have a non-contiguous axis we can print the array of bin edges for both
+the minimum axis edges (<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_min" title="gammapy.maps.TimeMapAxis.edges_min"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_min</span></code></a>) and the maximum axis
+edges (<a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_max" title="gammapy.maps.TimeMapAxis.edges_max"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges_max</span></code></a>).</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_min" title="gammapy.maps.TimeMapAxis.edges_min" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">edges_min</span></a><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges_max" title="gammapy.maps.TimeMapAxis.edges_max" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">edges_max</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[ 1.  5. 10. 15.] d
+[ 2.  7. 13. 18.] d
+</pre></div>
+</div>
+<p>Next, we use the <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.to_contiguous" title="gammapy.maps.TimeMapAxis.to_contiguous"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_contiguous</span></code></a> functionality to
+create a contiguous axis and expose <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges" title="gammapy.maps.TimeMapAxis.edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">edges</span></code></a>. This
+method returns a <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> with respect to the reference time.</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_map_axis_contiguous</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.to_contiguous" title="gammapy.maps.TimeMapAxis.to_contiguous" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">time_map_axis</span><span class="o">.</span><span class="n">to_contiguous</span></a><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.is_contiguous" title="gammapy.maps.TimeMapAxis.is_contiguous" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis_contiguous</span><span class="o">.</span><span class="n">is_contiguous</span></a><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.edges" title="gammapy.maps.TimeMapAxis.edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis_contiguous</span><span class="o">.</span><span class="n">edges</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
+[ 1.  2.  5.  7. 10. 13. 15. 18.] d
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_edges" title="gammapy.maps.TimeMapAxis.time_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_edges</span></code></a> will return the <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a> object directly</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.time_edges" title="gammapy.maps.TimeMapAxis.time_edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">time_map_axis_contiguous</span><span class="o">.</span><span class="n">time_edges</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;2020-03-20 00:00:00.000&#39; &#39;2020-03-21 00:00:00.000&#39;
+ &#39;2020-03-24 00:00:00.000&#39; &#39;2020-03-26 00:00:00.000&#39;
+ &#39;2020-03-29 00:00:00.000&#39; &#39;2020-04-01 00:00:00.000&#39;
+ &#39;2020-04-03 00:00:00.000&#39; &#39;2020-04-06 00:00:00.000&#39;]
 </pre></div>
 </div>
 <p><a class="reference internal" href="../../api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis" title="gammapy.maps.TimeMapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeMapAxis</span></code></a> also has both functionalities of
@@ -1242,7 +1251,7 @@ Here we are slicing between the second and third bins to extract the subsection.
 </pre></div>
 </div>
 <p>A new axis object can be created by squashing the axis into a single bin.</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.squash" title="gammapy.maps.LabelMapAxis.squash" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">label_axis2</span><span class="o">.</span><span class="n">squash</span></a><span class="p">())</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.squash" title="gammapy.maps.LabelMapAxis.squash" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">label_axis</span><span class="o">.</span><span class="n">squash</span></a><span class="p">())</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LabelMapAxis
@@ -1251,7 +1260,7 @@ Here we are slicing between the second and third bins to extract the subsection.
   name       : dataset
   nbins      : 1
   node type  : label
-  labels     : [&#39;dataset-a...dataset-b&#39;]
+  labels     : [&#39;dataset-1...dataset-3&#39;]
 </pre></div>
 </div>
 <p>Mixing the three previous axis types (<a class="reference internal" href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxis</span></code></a>,

@@ -878,79 +878,17 @@ between the extreme edges of the initial axis.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-335
+.. GENERATED FROM PYTHON SOURCE LINES 331-333
 
-Here we define a second `~gammapy.maps.TimeMapAxis` which contains only one time interval.
-The `~gammapy.maps.TimeMapAxis.edges` method is shown which returns
-`~astropy.units.Quantity` with respect to the reference time.
-In this case the defined `~gammapy.maps.TimeMapAxis.edges_min` and `~gammapy.maps.TimeMapAxis.edges_max`.
+The `~gammapy.maps.TimeMapAxis.is_contiguous` method returns a boolean
+which indicates whether the `~gammapy.maps.TimeMapAxis` is contiguous or not.
 
-.. GENERATED FROM PYTHON SOURCE LINES 335-344
-
-.. code-block:: python3
-
-
-    time_map_axis2 = TimeMapAxis(
-        edges_min=1 * u.d,
-        edges_max=11 * u.d,
-        reference_time=Time("2020-03-19"),
-    )
-
-    print(time_map_axis2.edges)
-
-
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    [ 1. 11.] d
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 345-346
-
-The `~gammapy.maps.TimeMapAxis.time_edges` will return the `~astropy.time.Time` object directly
-
-.. GENERATED FROM PYTHON SOURCE LINES 346-350
-
-.. code-block:: python3
-
-
-    print(time_map_axis2.time_edges)
-
-
-
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    ['2020-03-20 00:00:00.000' '2020-03-30 00:00:00.000']
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 351-354
-
-The `~gammapy.maps.TimeMapAxis.is_contiguous` method returns a boolean which indicates whether the
-`~gammapy.maps.TimeMapAxis` is contiguous or not. This can be utilised on
-the two previously defined `~gammapy.maps.TimeMapAxis` objects:
-
-.. GENERATED FROM PYTHON SOURCE LINES 354-360
+.. GENERATED FROM PYTHON SOURCE LINES 333-336
 
 .. code-block:: python3
 
 
     print(time_map_axis.is_contiguous)
-
-    print(time_map_axis2.is_contiguous)
-
 
 
 
@@ -961,12 +899,100 @@ the two previously defined `~gammapy.maps.TimeMapAxis` objects:
  .. code-block:: none
 
     False
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 337-340
+
+As we have a non-contiguous axis we can print the array of bin edges for both
+the minimum axis edges (`~gammapy.maps.TimeMapAxis.edges_min`) and the maximum axis
+edges (`~gammapy.maps.TimeMapAxis.edges_max`).
+
+.. GENERATED FROM PYTHON SOURCE LINES 340-345
+
+.. code-block:: python3
+
+
+    print(time_map_axis.edges_min)
+
+    print(time_map_axis.edges_max)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    [ 1.  5. 10. 15.] d
+    [ 2.  7. 13. 18.] d
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 346-349
+
+Next, we use the `~gammapy.maps.TimeMapAxis.to_contiguous` functionality to
+create a contiguous axis and expose `~gammapy.maps.TimeMapAxis.edges`. This
+method returns a `~astropy.units.Quantity` with respect to the reference time.
+
+.. GENERATED FROM PYTHON SOURCE LINES 349-357
+
+.. code-block:: python3
+
+
+    time_map_axis_contiguous = time_map_axis.to_contiguous()
+
+    print(time_map_axis_contiguous.is_contiguous)
+
+    print(time_map_axis_contiguous.edges)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
     True
+    [ 1.  2.  5.  7. 10. 13. 15. 18.] d
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 361-368
+.. GENERATED FROM PYTHON SOURCE LINES 358-359
+
+The `~gammapy.maps.TimeMapAxis.time_edges` will return the `~astropy.time.Time` object directly
+
+.. GENERATED FROM PYTHON SOURCE LINES 359-363
+
+.. code-block:: python3
+
+
+    print(time_map_axis_contiguous.time_edges)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    ['2020-03-20 00:00:00.000' '2020-03-21 00:00:00.000'
+     '2020-03-24 00:00:00.000' '2020-03-26 00:00:00.000'
+     '2020-03-29 00:00:00.000' '2020-04-01 00:00:00.000'
+     '2020-04-03 00:00:00.000' '2020-04-06 00:00:00.000']
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 364-371
 
 `~gammapy.maps.TimeMapAxis` also has both functionalities of
 `~gammapy.maps.TimeMapAxis.coord_to_pix` and `~gammapy.maps.TimeMapAxis.coord_to_idx`.
@@ -976,7 +1002,7 @@ the pixel. A linear interpolation is assumed.
 
 Start by choosing a time which we know is within the `~gammapy.maps.TimeMapAxis` and see the results.
 
-.. GENERATED FROM PYTHON SOURCE LINES 368-377
+.. GENERATED FROM PYTHON SOURCE LINES 371-380
 
 .. code-block:: python3
 
@@ -1003,11 +1029,11 @@ Start by choosing a time which we know is within the `~gammapy.maps.TimeMapAxis`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 378-379
+.. GENERATED FROM PYTHON SOURCE LINES 381-382
 
 This functionality can also be used with an array of `~astropy.time.Time` values.
 
-.. GENERATED FROM PYTHON SOURCE LINES 379-386
+.. GENERATED FROM PYTHON SOURCE LINES 382-389
 
 .. code-block:: python3
 
@@ -1032,7 +1058,7 @@ This functionality can also be used with an array of `~astropy.time.Time` values
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 387-393
+.. GENERATED FROM PYTHON SOURCE LINES 390-396
 
 Note here we take a `~astropy.time.Time` which is outside the edges.
 A linear interpolation is assumed for both methods, therefore for a time
@@ -1041,7 +1067,7 @@ outside the ``time_map_axis`` there is no extrapolation and -1 is returned.
 Note: due to this, the `~gammapy.maps.TimeMapAxis.coord_to_pix` method will
 return ``nan`` and the `~gammapy.maps.TimeMapAxis.coord_to_idx` method returns -1.
 
-.. GENERATED FROM PYTHON SOURCE LINES 393-399
+.. GENERATED FROM PYTHON SOURCE LINES 396-402
 
 .. code-block:: python3
 
@@ -1065,7 +1091,7 @@ return ``nan`` and the `~gammapy.maps.TimeMapAxis.coord_to_idx` method returns -
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 400-406
+.. GENERATED FROM PYTHON SOURCE LINES 403-409
 
 LabelMapAxis
 ^^^^^^^^^^^^
@@ -1074,7 +1100,7 @@ The `~gammapy.maps.LabelMapAxis` object allows for handling of labels for map ax
 It provides an axis for non-numeric entries.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 406-413
+.. GENERATED FROM PYTHON SOURCE LINES 409-416
 
 .. code-block:: python3
 
@@ -1105,11 +1131,11 @@ It provides an axis for non-numeric entries.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 414-415
+.. GENERATED FROM PYTHON SOURCE LINES 417-418
 
 The labels can be checked using the `~gammapy.maps.LabelMapAxis.center` attribute:
 
-.. GENERATED FROM PYTHON SOURCE LINES 415-418
+.. GENERATED FROM PYTHON SOURCE LINES 418-421
 
 .. code-block:: python3
 
@@ -1129,11 +1155,11 @@ The labels can be checked using the `~gammapy.maps.LabelMapAxis.center` attribut
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 419-420
+.. GENERATED FROM PYTHON SOURCE LINES 422-423
 
 To obtain the position of the label, one can utilise the `~gammapy.maps.LabelMapAxis.coord_to_pix` attribute
 
-.. GENERATED FROM PYTHON SOURCE LINES 420-423
+.. GENERATED FROM PYTHON SOURCE LINES 423-426
 
 .. code-block:: python3
 
@@ -1153,7 +1179,7 @@ To obtain the position of the label, one can utilise the `~gammapy.maps.LabelMap
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 424-429
+.. GENERATED FROM PYTHON SOURCE LINES 427-432
 
 To adapt and create new axes the following attributes can be utilised:
 `~gammapy.maps.LabelMapAxis.concatenate`, `~gammapy.maps.LabelMapAxis.slice` and
@@ -1161,7 +1187,7 @@ To adapt and create new axes the following attributes can be utilised:
 
 Combining two different `~gammapy.maps.LabelMapAxis` is done in the following way:
 
-.. GENERATED FROM PYTHON SOURCE LINES 429-434
+.. GENERATED FROM PYTHON SOURCE LINES 432-437
 
 .. code-block:: python3
 
@@ -1190,12 +1216,12 @@ Combining two different `~gammapy.maps.LabelMapAxis` is done in the following wa
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 435-437
+.. GENERATED FROM PYTHON SOURCE LINES 438-440
 
 A new `~gammapy.maps.LabelMapAxis` can be created by slicing an already existing one.
 Here we are slicing between the second and third bins to extract the subsection.
 
-.. GENERATED FROM PYTHON SOURCE LINES 437-439
+.. GENERATED FROM PYTHON SOURCE LINES 440-442
 
 .. code-block:: python3
 
@@ -1221,16 +1247,16 @@ Here we are slicing between the second and third bins to extract the subsection.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 440-441
+.. GENERATED FROM PYTHON SOURCE LINES 443-444
 
 A new axis object can be created by squashing the axis into a single bin.
 
-.. GENERATED FROM PYTHON SOURCE LINES 441-445
+.. GENERATED FROM PYTHON SOURCE LINES 444-448
 
 .. code-block:: python3
 
 
-    print(label_axis2.squash())
+    print(label_axis.squash())
 
 
 
@@ -1247,20 +1273,20 @@ A new axis object can be created by squashing the axis into a single bin.
       name       : dataset   
       nbins      : 1         
       node type  : label     
-      labels     : ['dataset-a...dataset-b']
+      labels     : ['dataset-1...dataset-3']
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 446-450
+.. GENERATED FROM PYTHON SOURCE LINES 449-453
 
 Mixing the three previous axis types (`~gammapy.maps.MapAxis`,
 `~gammapy.maps.TimeMapAxis` and `~gammapy.maps.LabelMapAxis`)
 would be done like so:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 450-457
+.. GENERATED FROM PYTHON SOURCE LINES 453-460
 
 .. code-block:: python3
 
@@ -1307,7 +1333,7 @@ would be done like so:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 458-489
+.. GENERATED FROM PYTHON SOURCE LINES 461-492
 
 Reading and Writing
 -------------------
@@ -1341,7 +1367,7 @@ Reading FITS files is mainly exposed via the `~gammapy.maps.Map.read()` method. 
 us take a look at a first example:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 489-495
+.. GENERATED FROM PYTHON SOURCE LINES 492-498
 
 .. code-block:: python3
 
@@ -1372,7 +1398,7 @@ us take a look at a first example:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 496-504
+.. GENERATED FROM PYTHON SOURCE LINES 499-507
 
 If ``map_type`` argument is not given when calling read a map object
 will be instantiated with the pixelization of the input HDU.
@@ -1383,7 +1409,7 @@ in the FITS file, the desired one can be chosen with the additional
 `hdu=` argument:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 504-509
+.. GENERATED FROM PYTHON SOURCE LINES 507-512
 
 .. code-block:: python3
 
@@ -1413,7 +1439,7 @@ in the FITS file, the desired one can be chosen with the additional
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 510-515
+.. GENERATED FROM PYTHON SOURCE LINES 513-518
 
 In rare cases e.g. when the FITS file is not valid or meta data is
 missing from the header it can be necessary to modify the header of a
@@ -1421,7 +1447,7 @@ certain HDU before creating the `Map` object. In this case we can use
 `astropy.io.fits` directly to read the FITS file:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 515-521
+.. GENERATED FROM PYTHON SOURCE LINES 518-524
 
 .. code-block:: python3
 
@@ -1447,13 +1473,13 @@ certain HDU before creating the `Map` object. In this case we can use
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 522-525
+.. GENERATED FROM PYTHON SOURCE LINES 525-528
 
 And then modify the header keyword and use `Map.from_hdulist()` to
 create the `Map` object after:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 525-530
+.. GENERATED FROM PYTHON SOURCE LINES 528-533
 
 .. code-block:: python3
 
@@ -1483,7 +1509,7 @@ create the `Map` object after:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 531-537
+.. GENERATED FROM PYTHON SOURCE LINES 534-540
 
 Writing Maps
 ~~~~~~~~~~~~
@@ -1492,7 +1518,7 @@ Writing FITS files on disk via the `Map.write()` method.
 Here is a first example:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 537-541
+.. GENERATED FROM PYTHON SOURCE LINES 540-544
 
 .. code-block:: python3
 
@@ -1507,14 +1533,14 @@ Here is a first example:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 542-546
+.. GENERATED FROM PYTHON SOURCE LINES 545-549
 
 By default Gammapy does not overwrite files. In this example we set
 `overwrite=True` in case the cell gets executed multiple times. Now we
 can read back the cube from disk using `Map.read()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 546-551
+.. GENERATED FROM PYTHON SOURCE LINES 549-554
 
 .. code-block:: python3
 
@@ -1544,13 +1570,13 @@ can read back the cube from disk using `Map.read()`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 552-555
+.. GENERATED FROM PYTHON SOURCE LINES 555-558
 
 We can also choose a different FITS convention to write the example cube
 in a format compatible to the Fermi Galactic diffuse background model:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 555-559
+.. GENERATED FROM PYTHON SOURCE LINES 558-562
 
 .. code-block:: python3
 
@@ -1565,13 +1591,13 @@ in a format compatible to the Fermi Galactic diffuse background model:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 560-563
+.. GENERATED FROM PYTHON SOURCE LINES 563-566
 
 To understand a little bit better the generic `gadf` convention we use
 `Map.to_hdulist()` to generate a list of FITS HDUs first:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 563-568
+.. GENERATED FROM PYTHON SOURCE LINES 566-571
 
 .. code-block:: python3
 
@@ -1597,14 +1623,14 @@ To understand a little bit better the generic `gadf` convention we use
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 569-573
+.. GENERATED FROM PYTHON SOURCE LINES 572-576
 
 As we can see the `HDUList` object contains to HDUs. The first one
 named `PRIMARY` contains the data array with shape corresponding to
 our data and the WCS information stored in the header:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 573-577
+.. GENERATED FROM PYTHON SOURCE LINES 576-580
 
 .. code-block:: python3
 
@@ -1625,7 +1651,7 @@ our data and the WCS information stored in the header:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 578-583
+.. GENERATED FROM PYTHON SOURCE LINES 581-586
 
 The second HDU is a `BinTableHDU` named `PRIMARY_BANDS` contains the
 information on the non-spatial axes such as name, order, unit, min, max
@@ -1633,7 +1659,7 @@ and center values of the axis bins. We use an `astropy.table.Table` to
 show the information:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 583-587
+.. GENERATED FROM PYTHON SOURCE LINES 586-590
 
 .. code-block:: python3
 
@@ -1677,14 +1703,14 @@ show the information:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 588-592
+.. GENERATED FROM PYTHON SOURCE LINES 591-595
 
 Maps can be serialized to a sparse data format by calling write with
 `sparse=True`. This will write all non-zero pixels in the map to a
 data table appropriate to the pixelization scheme.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 592-598
+.. GENERATED FROM PYTHON SOURCE LINES 595-601
 
 .. code-block:: python3
 
@@ -1701,7 +1727,7 @@ data table appropriate to the pixelization scheme.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 599-617
+.. GENERATED FROM PYTHON SOURCE LINES 602-620
 
 Accessing Data
 --------------
@@ -1722,7 +1748,7 @@ tuple of indices. The order of the indices corresponds to the axis order
 of the map:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 617-621
+.. GENERATED FROM PYTHON SOURCE LINES 620-624
 
 .. code-block:: python3
 
@@ -1743,14 +1769,14 @@ of the map:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 622-626
+.. GENERATED FROM PYTHON SOURCE LINES 625-629
 
 **Important:** Gammapy uses a reversed index order in the map API with
 the longitude axes first. To achieve the same by directly indexing into
 the numpy array we have to call:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 626-630
+.. GENERATED FROM PYTHON SOURCE LINES 629-633
 
 .. code-block:: python3
 
@@ -1771,13 +1797,13 @@ the numpy array we have to call:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 631-634
+.. GENERATED FROM PYTHON SOURCE LINES 634-637
 
 To check the order of the axes you can always print the ``.geom```
 attribute:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 634-638
+.. GENERATED FROM PYTHON SOURCE LINES 637-641
 
 .. code-block:: python3
 
@@ -1808,14 +1834,14 @@ attribute:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 639-643
+.. GENERATED FROM PYTHON SOURCE LINES 642-646
 
 To access values directly by sky coordinates we can use the
 `~gammapy.maps.Map.get_by_coord()` method. This time we pass in a `dict`, specifying
 the axes names corresponding to the given coordinates:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 643-647
+.. GENERATED FROM PYTHON SOURCE LINES 646-650
 
 .. code-block:: python3
 
@@ -1836,7 +1862,7 @@ the axes names corresponding to the given coordinates:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 648-657
+.. GENERATED FROM PYTHON SOURCE LINES 651-660
 
 The units of the coordinates are assumed to be in degrees in the
 coordinate system used by the map. If the coordinates do not correspond
@@ -1848,7 +1874,7 @@ rules <https://jakevdp.github.io/PythonDataScienceHandbook/02.05-computation-on-
 So the following works as expected:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 657-662
+.. GENERATED FROM PYTHON SOURCE LINES 660-665
 
 .. code-block:: python3
 
@@ -1870,13 +1896,13 @@ So the following works as expected:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 663-666
+.. GENERATED FROM PYTHON SOURCE LINES 666-669
 
 Or as an even more advanced example, we can provide `lats` as column
 vector and broadcasting to a 2D result array will be applied:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 666-672
+.. GENERATED FROM PYTHON SOURCE LINES 669-675
 
 .. code-block:: python3
 
@@ -1906,7 +1932,7 @@ vector and broadcasting to a 2D result array will be applied:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 673-685
+.. GENERATED FROM PYTHON SOURCE LINES 676-688
 
 Indexing and Slicing Sub-Maps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1921,7 +1947,7 @@ The following example demonstrates how to get the map at the energy bin
 number 3:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 685-690
+.. GENERATED FROM PYTHON SOURCE LINES 688-693
 
 .. code-block:: python3
 
@@ -1951,7 +1977,7 @@ number 3:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 691-698
+.. GENERATED FROM PYTHON SOURCE LINES 694-701
 
 Note that the returned object is again a `~gammapy.maps.Map` with updated axes
 information. In this case, because we extracted only a single image, the
@@ -1961,7 +1987,7 @@ To extract a sub-cube with a sliced energy axes we can use a normal
 ``slice()`` object:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 698-703
+.. GENERATED FROM PYTHON SOURCE LINES 701-706
 
 .. code-block:: python3
 
@@ -1991,7 +2017,7 @@ To extract a sub-cube with a sliced energy axes we can use a normal
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 704-710
+.. GENERATED FROM PYTHON SOURCE LINES 707-713
 
 Note that the returned object is also a `~gammapy.maps.Map` object, but this time
 with updated energy axis specification.
@@ -2000,7 +2026,7 @@ Slicing of multiple dimensions is supported by adding further entries to
 the dict passed to `~gammapy.maps.Map.slice_by_idx()`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 710-715
+.. GENERATED FROM PYTHON SOURCE LINES 713-718
 
 .. code-block:: python3
 
@@ -2030,14 +2056,14 @@ the dict passed to `~gammapy.maps.Map.slice_by_idx()`
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 716-720
+.. GENERATED FROM PYTHON SOURCE LINES 719-723
 
 For convenience there is also a `~gammapy.maps.Map.get_image_by_coord()` method which
 allows to access image planes at given non-spatial physical coordinates.
 This method also supports `~astropy.units.Quantity` objects:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 720-725
+.. GENERATED FROM PYTHON SOURCE LINES 723-728
 
 .. code-block:: python3
 
@@ -2069,7 +2095,7 @@ This method also supports `~astropy.units.Quantity` objects:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 726-735
+.. GENERATED FROM PYTHON SOURCE LINES 729-738
 
 Iterating by image
 ~~~~~~~~~~~~~~~~~~
@@ -2081,7 +2107,7 @@ directly. Here is an example for an in-place convolution of an image
 using `~astropy.convolution.convolve` to interpolate NaN values:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 735-748
+.. GENERATED FROM PYTHON SOURCE LINES 738-751
 
 .. code-block:: python3
 
@@ -2105,7 +2131,7 @@ using `~astropy.convolution.convolve` to interpolate NaN values:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 749-758
+.. GENERATED FROM PYTHON SOURCE LINES 752-761
 
 Modifying Data
 --------------
@@ -2117,7 +2143,7 @@ To modify and set map data values the `Map` object features as well a
 `~gammapy.maps.Map.set_by_idx()` method:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 758-762
+.. GENERATED FROM PYTHON SOURCE LINES 761-765
 
 .. code-block:: python3
 
@@ -2132,12 +2158,12 @@ To modify and set map data values the `Map` object features as well a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 763-765
+.. GENERATED FROM PYTHON SOURCE LINES 766-768
 
 here we check that data have been updated:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 765-769
+.. GENERATED FROM PYTHON SOURCE LINES 768-772
 
 .. code-block:: python3
 
@@ -2158,13 +2184,13 @@ here we check that data have been updated:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 770-773
+.. GENERATED FROM PYTHON SOURCE LINES 773-776
 
 Of course there is also a `~gammapy.maps.Map.set_by_coord()` method, which allows to
 set map data values in physical coordinates.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 773-777
+.. GENERATED FROM PYTHON SOURCE LINES 776-780
 
 .. code-block:: python3
 
@@ -2179,7 +2205,7 @@ set map data values in physical coordinates.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 778-787
+.. GENERATED FROM PYTHON SOURCE LINES 781-790
 
 Again the `lon` and `lat` values are assumed to be given in degrees
 in the coordinate system used by the map. For the energy axis, the unit
@@ -2191,7 +2217,7 @@ this case we have to use the ``"skycoord"`` keyword instead of ``"lon"`` and
 ``"lat"``:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 787-792
+.. GENERATED FROM PYTHON SOURCE LINES 790-795
 
 .. code-block:: python3
 
@@ -2207,7 +2233,7 @@ this case we have to use the ``"skycoord"`` keyword instead of ``"lon"`` and
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 793-798
+.. GENERATED FROM PYTHON SOURCE LINES 796-801
 
 Filling maps from event lists
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2215,7 +2241,7 @@ Filling maps from event lists
 This example shows how to fill a counts cube from an event list:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 798-812
+.. GENERATED FROM PYTHON SOURCE LINES 801-815
 
 .. code-block:: python3
 
@@ -2240,12 +2266,12 @@ This example shows how to fill a counts cube from an event list:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 813-815
+.. GENERATED FROM PYTHON SOURCE LINES 816-818
 
 Alternatively you can use the `~gammapy.maps.Map.fill_events` method:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 815-823
+.. GENERATED FROM PYTHON SOURCE LINES 818-826
 
 .. code-block:: python3
 
@@ -2264,14 +2290,14 @@ Alternatively you can use the `~gammapy.maps.Map.fill_events` method:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 824-828
+.. GENERATED FROM PYTHON SOURCE LINES 827-831
 
 If you have a given map already, and want to make a counts image with
 the same geometry (not using the pixel data from the original map), you
 can also use the `~gammapy.maps.Map.fill_events` method.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 828-835
+.. GENERATED FROM PYTHON SOURCE LINES 831-838
 
 .. code-block:: python3
 
@@ -2289,14 +2315,14 @@ can also use the `~gammapy.maps.Map.fill_events` method.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 836-840
+.. GENERATED FROM PYTHON SOURCE LINES 839-843
 
 It works for IACT and Fermi-LAT events, for WCS or HEALPix map
 geometries, and also for extra axes. Especially energy axes are
 automatically handled correctly.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 843-864
+.. GENERATED FROM PYTHON SOURCE LINES 846-867
 
 Filling maps from interpolation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -2320,7 +2346,7 @@ In the following example we create a new map and fill it by
 interpolating another map:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 864-885
+.. GENERATED FROM PYTHON SOURCE LINES 867-888
 
 .. code-block:: python3
 
@@ -2352,20 +2378,20 @@ interpolating another map:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 886-889
+.. GENERATED FROM PYTHON SOURCE LINES 889-892
 
 Interpolating onto a different geometry
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 892-896
+.. GENERATED FROM PYTHON SOURCE LINES 895-899
 
 For 3d geometries this operation can be performed directly using the
 `~gammapy.maps.Map.interp_to_geom()` method. This is very useful, ex: while using map
 arithmetic.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 896-913
+.. GENERATED FROM PYTHON SOURCE LINES 899-916
 
 .. code-block:: python3
 
@@ -2407,14 +2433,14 @@ arithmetic.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 914-918
+.. GENERATED FROM PYTHON SOURCE LINES 917-921
 
 Note that ``preserve_counts=`` option should be true if the map is an
 integral quantity (e.g. counts) and false if the map is a differential
 quantity (e.g. intensity).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 921-930
+.. GENERATED FROM PYTHON SOURCE LINES 924-933
 
 Maps operations
 ---------------
@@ -2426,7 +2452,7 @@ One can perform simple arithmetic on maps using the `+`, `-`, `*`,
 `/` operators, this works only for maps with the same geometry:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 930-936
+.. GENERATED FROM PYTHON SOURCE LINES 933-939
 
 .. code-block:: python3
 
@@ -2443,13 +2469,13 @@ One can perform simple arithmetic on maps using the `+`, `-`, `*`,
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 937-940
+.. GENERATED FROM PYTHON SOURCE LINES 940-943
 
 These operations can be applied between a Map and a scalar in that
 specific order:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 940-945
+.. GENERATED FROM PYTHON SOURCE LINES 943-948
 
 .. code-block:: python3
 
@@ -2465,13 +2491,13 @@ specific order:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 946-949
+.. GENERATED FROM PYTHON SOURCE LINES 949-952
 
 The logic operators can also be applied on maps (the result is a map of
 boolean type):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 949-954
+.. GENERATED FROM PYTHON SOURCE LINES 952-957
 
 .. code-block:: python3
 
@@ -2501,13 +2527,13 @@ boolean type):
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 955-958
+.. GENERATED FROM PYTHON SOURCE LINES 958-961
 
 Here we check that the result is `True` for all the well-defined
 pixels (not `NaN`):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 958-962
+.. GENERATED FROM PYTHON SOURCE LINES 961-965
 
 .. code-block:: python3
 
@@ -2528,7 +2554,7 @@ pixels (not `NaN`):
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 963-970
+.. GENERATED FROM PYTHON SOURCE LINES 966-973
 
 Cutouts
 ~~~~~~~
@@ -2538,7 +2564,7 @@ you to cut out a smaller part of a larger map. This can be useful,
 e.g. when working with all-sky diffuse maps. Here is an example:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 970-975
+.. GENERATED FROM PYTHON SOURCE LINES 973-978
 
 .. code-block:: python3
 
@@ -2554,7 +2580,7 @@ e.g. when working with all-sky diffuse maps. Here is an example:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 976-982
+.. GENERATED FROM PYTHON SOURCE LINES 979-985
 
 The returned object is again a `~gammapy.maps.Map` object with updated WCS
 information and data size. As one can see the cutout is automatically
@@ -2563,7 +2589,7 @@ in the order of `(lon, lat)` and can be specified with units that will
 be handled correctly.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 985-1000
+.. GENERATED FROM PYTHON SOURCE LINES 988-1003
 
 Visualizing and Plotting
 ------------------------
@@ -2581,7 +2607,7 @@ For debugging and inspecting the map data it is useful to plot or
 visualize the images planes contained in the map.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1000-1005
+.. GENERATED FROM PYTHON SOURCE LINES 1003-1008
 
 .. code-block:: python3
 
@@ -2597,13 +2623,13 @@ visualize the images planes contained in the map.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1006-1009
+.. GENERATED FROM PYTHON SOURCE LINES 1009-1012
 
 After reading the map we can now plot it on the screen by calling the
 ``.plot()`` method:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1009-1014
+.. GENERATED FROM PYTHON SOURCE LINES 1012-1017
 
 .. code-block:: python3
 
@@ -2624,7 +2650,7 @@ After reading the map we can now plot it on the screen by calling the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1015-1020
+.. GENERATED FROM PYTHON SOURCE LINES 1018-1023
 
 We can easily improve the plot by calling `~gammapy.maps.Map.smooth()` first and
 providing additional arguments to `~gammapy.maps.Map.plot()`. Most of them are passed
@@ -2632,7 +2658,7 @@ further to
 `plt.imshow() <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.imshow.html>`__:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1020-1026
+.. GENERATED FROM PYTHON SOURCE LINES 1023-1029
 
 .. code-block:: python3
 
@@ -2654,7 +2680,7 @@ further to
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1027-1032
+.. GENERATED FROM PYTHON SOURCE LINES 1030-1035
 
 We can use the
 `plt.rc_context() <https://matplotlib.org/api/_as_gen/matplotlib.pyplot.rc_context.html>`__
@@ -2662,7 +2688,7 @@ context manager to further tweak the plot by adapting the figure and
 font size:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1032-1040
+.. GENERATED FROM PYTHON SOURCE LINES 1035-1043
 
 .. code-block:: python3
 
@@ -2686,7 +2712,7 @@ font size:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1041-1050
+.. GENERATED FROM PYTHON SOURCE LINES 1044-1053
 
 Cube plotting
 ~~~~~~~~~~~~~
@@ -2698,7 +2724,7 @@ small example cutout from the Fermi Galactic diffuse model and display
 the data cube by calling `~gammapy.maps.Map.plot_interactive()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1050-1060
+.. GENERATED FROM PYTHON SOURCE LINES 1053-1063
 
 .. code-block:: python3
 
@@ -2730,7 +2756,7 @@ the data cube by calling `~gammapy.maps.Map.plot_interactive()`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1061-1074
+.. GENERATED FROM PYTHON SOURCE LINES 1064-1077
 
 Now you can use the interactive slider to select an energy range and the
 corresponding image is displayed on the screen. You can also use the
@@ -2746,7 +2772,7 @@ are not the same, we can make them consistent using the `vmin` and
 `vmax` options:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 1074-1077
+.. GENERATED FROM PYTHON SOURCE LINES 1077-1080
 
 .. code-block:: python3
 

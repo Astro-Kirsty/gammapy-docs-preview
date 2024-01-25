@@ -328,33 +328,36 @@ print(time_map_axis.squash())
 
 
 ######################################################################
-# Here we define a second `~gammapy.maps.TimeMapAxis` which contains only one time interval.
-# The `~gammapy.maps.TimeMapAxis.edges` method is shown which returns
-# `~astropy.units.Quantity` with respect to the reference time.
-# In this case the defined `~gammapy.maps.TimeMapAxis.edges_min` and `~gammapy.maps.TimeMapAxis.edges_max`.
+# The `~gammapy.maps.TimeMapAxis.is_contiguous` method returns a boolean
+# which indicates whether the `~gammapy.maps.TimeMapAxis` is contiguous or not.
 
-time_map_axis2 = TimeMapAxis(
-    edges_min=1 * u.d,
-    edges_max=11 * u.d,
-    reference_time=Time("2020-03-19"),
-)
+print(time_map_axis.is_contiguous)
 
-print(time_map_axis2.edges)
+######################################################################
+# As we have a non-contiguous axis we can print the array of bin edges for both
+# the minimum axis edges (`~gammapy.maps.TimeMapAxis.edges_min`) and the maximum axis
+# edges (`~gammapy.maps.TimeMapAxis.edges_max`).
+
+print(time_map_axis.edges_min)
+
+print(time_map_axis.edges_max)
+
+######################################################################
+# Next, we use the `~gammapy.maps.TimeMapAxis.to_contiguous` functionality to
+# create a contiguous axis and expose `~gammapy.maps.TimeMapAxis.edges`. This
+# method returns a `~astropy.units.Quantity` with respect to the reference time.
+
+time_map_axis_contiguous = time_map_axis.to_contiguous()
+
+print(time_map_axis_contiguous.is_contiguous)
+
+print(time_map_axis_contiguous.edges)
+
 
 ######################################################################
 # The `~gammapy.maps.TimeMapAxis.time_edges` will return the `~astropy.time.Time` object directly
 
-print(time_map_axis2.time_edges)
-
-
-######################################################################
-# The `~gammapy.maps.TimeMapAxis.is_contiguous` method returns a boolean which indicates whether the
-# `~gammapy.maps.TimeMapAxis` is contiguous or not. This can be utilised on
-# the two previously defined `~gammapy.maps.TimeMapAxis` objects:
-
-print(time_map_axis.is_contiguous)
-
-print(time_map_axis2.is_contiguous)
+print(time_map_axis_contiguous.time_edges)
 
 
 ######################################################################
@@ -439,7 +442,7 @@ print(label_axis.slice([1,2]))
 ######################################################################
 # A new axis object can be created by squashing the axis into a single bin.
 
-print(label_axis2.squash())
+print(label_axis.squash())
 
 
 ######################################################################
