@@ -161,21 +161,21 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev978+ge43ec2735.d20231107 
+            version                : 1.2.dev1721+g6c725d50c 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.1     
-            scipy                  : 1.11.3     
+            numpy                  : 1.26.3     
+            scipy                  : 1.12.0     
             astropy                : 5.2.2      
-            regions                : 0.7        
+            regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
-            IPython                : 8.17.2     
+            IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.1      
+            matplotlib             : 3.8.2      
             pandas                 : not installed 
             healpy                 : 1.16.6     
             iminuit                : 2.24.0     
@@ -183,12 +183,12 @@ Check setup
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.1      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -250,8 +250,7 @@ a `mask_fit` it is equal to the safe energy range.
 
  .. code-block:: none
 
-    HDU 'MASK_FIT' not found
-    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f416e4cae50>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f4151ffcdc0>)
+    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f2cd9690040>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f2cd93a4ee0>)
 
 
 
@@ -308,7 +307,7 @@ edges closest to requested range provide the actual fit range.
 
  .. code-block:: none
 
-    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f41517d4fd0>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f41517d4a30>)
+    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f2cd3f12a30>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f2cd3f124c0>)
 
 
 
