@@ -125,13 +125,13 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1721+g6c725d50c 
+            version                : 1.2.dev1721+g6c725d50c.d20240227 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
+            numpy                  : 1.26.4     
             scipy                  : 1.12.0     
             astropy                : 5.2.2      
             regions                : 0.8        
@@ -139,15 +139,15 @@ Check setup
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.3      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.9.3      
 
 
     Gammapy environment variables:
@@ -238,7 +238,7 @@ analysis as *3D*, and define the geometry of the analysis.
         data = self.to_yaml()
       File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/analysis/config.py", line 267, in to_yaml
         data = json.loads(self.model_dump_json())
-      File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/pydantic/main.py", line 352, in model_dump_json
+      File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/pydantic/main.py", line 358, in model_dump_json
         return self.__pydantic_serializer__.to_json(
     pydantic_core._pydantic_core.PydanticSerializationError: Unable to serialize unknown type: <class 'astropy.units.quantity.Quantity'>
 

@@ -188,7 +188,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -751,7 +751,7 @@ function checkPageExistsAndRedirect(event) {
         <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndindex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">shape_axes</span><span class="p">):</span>
             <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="n">idx</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 
-    <span class="k">def</span> <span class="nf">iter_by_image_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="Map.iter_by_image_index"><a class="viewcode-back" href="../../../api/gammapy.maps.Map.html#gammapy.maps.Map.iter_by_image_index">[docs]</a>    <span class="k">def</span> <span class="nf">iter_by_image_index</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Iterate over image planes of the map.</span>
 
 <span class="sd">        The image plane index is in data order, so that the data array can be</span>
@@ -767,7 +767,7 @@ function checkPageExistsAndRedirect(event) {
 <span class="sd">        iter_by_image : iterate by image returning a map.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndindex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">shape_axes</span><span class="p">):</span>
-            <span class="k">yield</span> <span class="n">idx</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="k">yield</span> <span class="n">idx</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span></div>
 
 <div class="viewcode-block" id="Map.coadd"><a class="viewcode-back" href="../../../api/gammapy.maps.Map.html#gammapy.maps.Map.coadd">[docs]</a>    <span class="k">def</span> <span class="nf">coadd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_in</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add the contents of ``map_in`` to this map.</span>
@@ -1382,7 +1382,7 @@ function checkPageExistsAndRedirect(event) {
             <span class="n">output_map</span> <span class="o">=</span> <span class="n">output_map</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">geom</span><span class="p">,</span> <span class="n">preserve_counts</span><span class="o">=</span><span class="n">preserve_counts</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">output_map</span></div>
 
-    <span class="k">def</span> <span class="nf">reproject_by_image</span><span class="p">(</span>
+<div class="viewcode-block" id="Map.reproject_by_image"><a class="viewcode-back" href="../../../api/gammapy.maps.Map.html#gammapy.maps.Map.reproject_by_image">[docs]</a>    <span class="k">def</span> <span class="nf">reproject_by_image</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">geom</span><span class="p">,</span>
         <span class="n">preserve_counts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -1425,7 +1425,7 @@ function checkPageExistsAndRedirect(event) {
         <span class="p">)</span>
         <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">ndindex</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">shape_axes</span><span class="p">):</span>
             <span class="n">output_map</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="n">maps</span><span class="p">[</span><span class="n">idx</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">data</span>
-        <span class="k">return</span> <span class="n">output_map</span>
+        <span class="k">return</span> <span class="n">output_map</span></div>
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_reproject_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">preserve_counts</span><span class="p">,</span> <span class="n">precision_factor</span><span class="p">):</span>

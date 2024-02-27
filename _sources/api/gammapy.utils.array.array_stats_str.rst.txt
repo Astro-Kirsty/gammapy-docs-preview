@@ -1,6 +1,0 @@
-array_stats_str
-===============
-
-.. currentmodule:: gammapy.utils.array
-
-.. autofunction:: array_stats_str

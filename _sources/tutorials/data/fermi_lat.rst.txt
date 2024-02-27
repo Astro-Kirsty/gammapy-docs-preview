@@ -140,14 +140,14 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1423+gc6103d165.d20231211 
+            version                : 1.2.dev1813+g9f8503aa9 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.2     
-            scipy                  : 1.11.4     
+            numpy                  : 1.26.3     
+            scipy                  : 1.12.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
@@ -157,17 +157,17 @@ Check setup
             matplotlib             : 3.8.2      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.0     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.1      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -1008,6 +1008,8 @@ background normalization free.
         norm                          :      1.048   +/-    0.01             
         tilt                  (frozen):      0.000                   
         reference             (frozen):      1.000       TeV         
+        lon_0                 (frozen):      0.000       deg         
+        lat_0                 (frozen):     -0.062       deg         
 
     Component 2: SkyModel
 

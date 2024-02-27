@@ -126,7 +126,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1785+g59401d670.d20240126 
+            version                : 1.2.dev1813+g9f8503aa9 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -143,7 +143,7 @@ Check setup
             matplotlib             : 3.8.2      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.0     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
@@ -364,13 +364,13 @@ energy band and for each energy bin shown for :math:`H_1`.
 
     The delta_ts for the energy-dependent study: 75.596.
     Converting this to a significance gives: 7.603 σ
-    Hypothesis Emin Emax       lon_0       ...      lat_0_err              sigma             sigma_err      
-               TeV  TeV         deg        ...         deg                  deg                 deg         
-    ---------- ---- ---- ----------------- ... -------------------- ------------------- --------------------
-            H0  1.0 20.0 5.606742543182293 ... 0.008444220549368933 0.21469420116756052 0.005926654348947036
-            H1  1.0  3.0 5.601891692370852 ... 0.013366838246593208 0.25640217669446475 0.009488770111122315
-            H1  3.0  5.0 5.618083522854331 ...  0.01326267403231904 0.19704826941259612 0.008176908174282039
-            H1  5.0 20.0 5.597622612550685 ... 0.014836530766991374 0.13529073828091737  0.00890507389083128
+    Hypothesis Emin Emax ...        sigma             sigma_err      
+               TeV  TeV  ...         deg                 deg         
+    ---------- ---- ---- ... ------------------- --------------------
+            H0  1.0 20.0 ... 0.21469420116756052 0.005926654348947036
+            H1  1.0  3.0 ... 0.25640217669446475 0.009488770111122315
+            H1  3.0  5.0 ... 0.19704826941259612 0.008176908174282039
+            H1  5.0 20.0 ... 0.13529073828091737  0.00890507389083128
 
 
 
@@ -482,7 +482,7 @@ Plotting the results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  11.914 seconds)
+   **Total running time of the script:** ( 0 minutes  17.129 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_energy_dependent_estimation.py:

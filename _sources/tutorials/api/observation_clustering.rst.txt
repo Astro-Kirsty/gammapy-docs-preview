@@ -232,9 +232,9 @@ be adjusted according to each specific science case.
 
  .. code-block:: none
 
-    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x7f2cd2f0be20>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x7f2cd2f0baf0>}
+    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x7f0185982ee0>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x7f01859829d0>}
 
-    <matplotlib.lines.Line2D object at 0x7f2cd9321f40>
+    <matplotlib.lines.Line2D object at 0x7f01860f6ee0>
 
 
 
@@ -469,9 +469,9 @@ Finally, `observations.group_by_label` creates a dictionary containing `t`
 
  .. code-block:: none
 
-    {'group_1': <gammapy.data.observations.Observations object at 0x7f2cea8bc070>, 'group_2': <gammapy.data.observations.Observations object at 0x7f2cea8bc3d0>}
+    {'group_1': <gammapy.data.observations.Observations object at 0x7f017d9fd340>, 'group_2': <gammapy.data.observations.Observations object at 0x7f017d9fd8e0>}
 
-    <matplotlib.legend.Legend object at 0x7f2cd375fee0>
+    <matplotlib.legend.Legend object at 0x7f018724da60>
 
 
 

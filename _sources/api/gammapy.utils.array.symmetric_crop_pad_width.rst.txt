@@ -1,6 +1,0 @@
-symmetric_crop_pad_width
-========================
-
-.. currentmodule:: gammapy.utils.array
-
-.. autofunction:: symmetric_crop_pad_width

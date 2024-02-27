@@ -182,11 +182,11 @@ Here is an example YAML file using the model:
                     value: 1.0
                 -   name: redshift
                     value: 0.117
-                filename: /home/feijen/gammapy-datasets/1.1rc1/ebl/ebl_dominguez11.fits.gz
+                filename: /home/feijen/gammapy-datasets/dev/ebl/ebl_dominguez11.fits.gz
             operator: mul
     metadata:
-        creator: Gammapy 1.2.dev1423+gc6103d165.d20231211
-        date: '2023-12-11 09:34:23.642'
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:25.912061'
         origin: null
 
 

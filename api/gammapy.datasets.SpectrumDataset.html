@@ -192,7 +192,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -2140,29 +2140,35 @@ here the Cash statistic (see <a class="reference internal" href="gammapy.stats.c
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.geoms" title="gammapy.datasets.SpectrumDataset.geoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geoms</span></code></a></p></td>
 <td><p>Map geometries.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask" title="gammapy.datasets.SpectrumDataset.mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.gti" title="gammapy.datasets.SpectrumDataset.gti"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gti</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask" title="gammapy.datasets.SpectrumDataset.mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask</span></code></a></p></td>
 <td><p>Combined fit and safe mask.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_fit" title="gammapy.datasets.SpectrumDataset.mask_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_fit" title="gammapy.datasets.SpectrumDataset.mask_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit</span></code></a></p></td>
 <td><p>A lazy FITS data descriptor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_fit_image" title="gammapy.datasets.SpectrumDataset.mask_fit_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit_image</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_fit_image" title="gammapy.datasets.SpectrumDataset.mask_fit_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit_image</span></code></a></p></td>
 <td><p>Reduced fit mask.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_image" title="gammapy.datasets.SpectrumDataset.mask_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_image</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_image" title="gammapy.datasets.SpectrumDataset.mask_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_image</span></code></a></p></td>
 <td><p>Reduced mask.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe" title="gammapy.datasets.SpectrumDataset.mask_safe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe" title="gammapy.datasets.SpectrumDataset.mask_safe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe</span></code></a></p></td>
 <td><p>A lazy FITS data descriptor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe_edisp" title="gammapy.datasets.SpectrumDataset.mask_safe_edisp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe_edisp</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe_edisp" title="gammapy.datasets.SpectrumDataset.mask_safe_edisp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe_edisp</span></code></a></p></td>
 <td><p>Safe mask for edisp maps.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe_image" title="gammapy.datasets.SpectrumDataset.mask_safe_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe_image</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe_image" title="gammapy.datasets.SpectrumDataset.mask_safe_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe_image</span></code></a></p></td>
 <td><p>Reduced safe mask.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe_psf" title="gammapy.datasets.SpectrumDataset.mask_safe_psf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe_psf</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.mask_safe_psf" title="gammapy.datasets.SpectrumDataset.mask_safe_psf"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe_psf</span></code></a></p></td>
 <td><p>Safe mask for PSF maps.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.meta_table" title="gammapy.datasets.SpectrumDataset.meta_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meta_table</span></code></a></p></td>
+<td><p></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.SpectrumDataset.models" title="gammapy.datasets.SpectrumDataset.models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code></a></p></td>
 <td><p>Models set on the dataset (<a class="reference internal" href="gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models</span></code></a>).</p></td>
@@ -2420,6 +2426,11 @@ here the Cash statistic (see <a class="reference internal" href="gammapy.stats.c
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.datasets.SpectrumDataset.gti">
+<span class="sig-name descname"><span class="pre">gti</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#gammapy.datasets.SpectrumDataset.gti" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.datasets.SpectrumDataset.mask">
 <span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#gammapy.datasets.SpectrumDataset.mask" title="Permalink to this definition">#</a></dt>
 <dd><p>Combined fit and safe mask.</p>
@@ -2482,6 +2493,11 @@ here the Cash statistic (see <a class="reference internal" href="gammapy.stats.c
 <span class="sig-name descname"><span class="pre">mask_safe_psf</span></span><a class="headerlink" href="#gammapy.datasets.SpectrumDataset.mask_safe_psf" title="Permalink to this definition">#</a></dt>
 <dd><p>Safe mask for PSF maps.</p>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.datasets.SpectrumDataset.meta_table">
+<span class="sig-name descname"><span class="pre">meta_table</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#gammapy.datasets.SpectrumDataset.meta_table" title="Permalink to this definition">#</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.datasets.SpectrumDataset.models">
@@ -2832,19 +2848,19 @@ If none, all the SkyModel predicted counts are computed.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
 </dd>
-<dt><strong>kwargs_counts</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a> for the counts. Default is None.</p>
+<dt><strong>kwargs_counts</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a> for the counts. Default is None.</p>
 </dd>
-<dt><strong>kwargs_background</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a> for the background. Default is None.</p>
+<dt><strong>kwargs_background</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a> for the background. Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to both <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to both <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
 </dd>
 </dl>
 </dd>
@@ -2859,12 +2875,12 @@ If none, all the SkyModel predicted counts are computed.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
 </dd>
-<dt><strong>kwargs_excess</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a> for
+<dt><strong>kwargs_excess</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a> for
 the excess. Default is None.</p>
 </dd>
-<dt><strong>kwargs_npred_signal</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a> for the
+<dt><strong>kwargs_npred_signal</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.hist.html#matplotlib.axes.Axes.hist" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a> for the
 predicted signal. Default is None.</p>
 </dd>
 <dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to both plot methods.</p>
@@ -2873,7 +2889,7 @@ predicted signal. Default is None.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
 </dd>
 </dl>
 </dd>
@@ -2902,9 +2918,9 @@ predicted signal. Default is None.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax_spectrum</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot spectrum on. Default is None.</p>
+<dt><strong>ax_spectrum</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot spectrum on. Default is None.</p>
 </dd>
-<dt><strong>ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot residuals on. Default is None.</p>
+<dt><strong>ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot residuals on. Default is None.</p>
 </dd>
 <dt><strong>kwargs_spectrum</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="#gammapy.datasets.SpectrumDataset.plot_excess" title="gammapy.datasets.SpectrumDataset.plot_excess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_excess</span></code></a>. Default is None.</p>
 </dd>
@@ -2914,7 +2930,7 @@ predicted signal. Default is None.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>ax_spectrum, ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Spectrum and residuals plots.</p>
+<dt><strong>ax_spectrum, ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Spectrum and residuals plots.</p>
 </dd>
 </dl>
 </dd>
@@ -2944,7 +2960,7 @@ predicted signal. Default is None.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
 </dd>
 <dt><strong>kwargs_fit</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_mask()</span></code> for mask fit. Default is None.</p>
 </dd>
@@ -2954,7 +2970,7 @@ predicted signal. Default is None.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
 </dd>
 </dl>
 </dd>
@@ -2989,7 +3005,7 @@ the residuals are computed for the entire map.</p>
 <dd class="field-odd"><dl>
 <dt><strong>ax_spatial</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.visualization.wcsaxes.WCSAxes.html#astropy.visualization.wcsaxes.WCSAxes" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code></a>, optional</span></dt><dd><p>Axes to plot spatial residuals on. Default is None.</p>
 </dd>
-<dt><strong>ax_spectral</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot spectral residuals on. Default is None.</p>
+<dt><strong>ax_spectral</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot spectral residuals on. Default is None.</p>
 </dd>
 <dt><strong>kwargs_spatial</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.plot_residuals_spatial" title="gammapy.datasets.MapDataset.plot_residuals_spatial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_residuals_spatial</span></code></a>. Default is None.</p>
 </dd>
@@ -3000,7 +3016,7 @@ The region should be passed as a dictionary key. Default is None.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>ax_spatial, ax_spectral</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.visualization.wcsaxes.WCSAxes.html#astropy.visualization.wcsaxes.WCSAxes" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Spatial and spectral residuals plots.</p>
+<dt><strong>ax_spatial, ax_spectral</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.visualization.wcsaxes.WCSAxes.html#astropy.visualization.wcsaxes.WCSAxes" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code></a>, <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Spatial and spectral residuals plots.</p>
 </dd>
 </dl>
 </dd>
@@ -3035,19 +3051,19 @@ used for its computation can be controlled using the method parameter.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
 </dd>
 <dt><strong>method</strong><span class="classifier">{“diff”, “diff/sqrt(model)”}</span></dt><dd><p>Normalization used to compute the residuals, see <a class="reference internal" href="#gammapy.datasets.SpectrumDataset.residuals" title="gammapy.datasets.SpectrumDataset.residuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectrumDataset.residuals</span></code></a>. Default is “diff”.</p>
 </dd>
-<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a> (required)</span></dt><dd><p>Target sky region. Default is None.</p>
+<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a> (required)</span></dt><dd><p>Target sky region. Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
 </dd>
 </dl>
 </dd>
@@ -3340,7 +3356,7 @@ dispersion kernel are taken at the center of the region.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></span></dt><dd><p>Region from which to extract the spectrum.</p>
+<dt><strong>region</strong><span class="classifier"><a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></span></dt><dd><p>Region from which to extract the spectrum.</p>
 </dd>
 <dt><strong>name</strong><span class="classifier">str, optional</span></dt><dd><p>Name of the new dataset. Default is None.</p>
 </dd>

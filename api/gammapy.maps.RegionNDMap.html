@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -2244,47 +2244,53 @@ Default is “”.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.iter_by_image_data" title="gammapy.maps.RegionNDMap.iter_by_image_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_image_data</span></code></a>()</p></td>
 <td><p>Iterate over image planes of the map.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.mask_nearest_position" title="gammapy.maps.RegionNDMap.mask_nearest_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_nearest_position</span></code></a>(position)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.iter_by_image_index" title="gammapy.maps.RegionNDMap.iter_by_image_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_image_index</span></code></a>()</p></td>
+<td><p>Iterate over image planes of the map.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.mask_nearest_position" title="gammapy.maps.RegionNDMap.mask_nearest_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_nearest_position</span></code></a>(position)</p></td>
 <td><p>Given a sky coordinate return nearest valid position in the mask.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.normalize" title="gammapy.maps.RegionNDMap.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>([axis_name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.normalize" title="gammapy.maps.RegionNDMap.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>([axis_name])</p></td>
 <td><p>Normalise data in place along a given axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.pad" title="gammapy.maps.RegionNDMap.pad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad</span></code></a>(pad_width[, axis_name, mode, cval, method])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.pad" title="gammapy.maps.RegionNDMap.pad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad</span></code></a>(pad_width[, axis_name, mode, cval, method])</p></td>
 <td><p>Pad the spatial dimensions of the map.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot" title="gammapy.maps.RegionNDMap.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax, axis_name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot" title="gammapy.maps.RegionNDMap.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax, axis_name])</p></td>
 <td><p>Plot the data contained in region map along the non-spatial axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_grid" title="gammapy.maps.RegionNDMap.plot_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_grid</span></code></a>([figsize, ncols])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_grid" title="gammapy.maps.RegionNDMap.plot_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_grid</span></code></a>([figsize, ncols])</p></td>
 <td><p>Plot map as a grid of subplots for non-spatial axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_hist" title="gammapy.maps.RegionNDMap.plot_hist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hist</span></code></a>([ax])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_hist" title="gammapy.maps.RegionNDMap.plot_hist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_hist</span></code></a>([ax])</p></td>
 <td><p>Plot as histogram.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_interactive" title="gammapy.maps.RegionNDMap.plot_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_interactive</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_interactive" title="gammapy.maps.RegionNDMap.plot_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_interactive</span></code></a>()</p></td>
 <td><p>Plot map with interactive widgets to explore the non-spatial axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_mask" title="gammapy.maps.RegionNDMap.plot_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_mask</span></code></a>([ax])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_mask" title="gammapy.maps.RegionNDMap.plot_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_mask</span></code></a>([ax])</p></td>
 <td><p>Plot the mask as a shaded area in a xmin-xmax range.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_region" title="gammapy.maps.RegionNDMap.plot_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_region</span></code></a>([ax])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.plot_region" title="gammapy.maps.RegionNDMap.plot_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_region</span></code></a>([ax])</p></td>
 <td><p>Plot region.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.read" title="gammapy.maps.RegionNDMap.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>(filename[, format, ogip_column, hdu])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.read" title="gammapy.maps.RegionNDMap.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>(filename[, format, ogip_column, hdu])</p></td>
 <td><p>Read from file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reduce" title="gammapy.maps.RegionNDMap.reduce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce</span></code></a>(axis_name[, func, keepdims, weights])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reduce" title="gammapy.maps.RegionNDMap.reduce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce</span></code></a>(axis_name[, func, keepdims, weights])</p></td>
 <td><p>Reduce map over a single non-spatial axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reduce_over_axes" title="gammapy.maps.RegionNDMap.reduce_over_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce_over_axes</span></code></a>([func, keepdims, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reduce_over_axes" title="gammapy.maps.RegionNDMap.reduce_over_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce_over_axes</span></code></a>([func, keepdims, ...])</p></td>
 <td><p>Reduce map over non-spatial axes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.rename_axes" title="gammapy.maps.RegionNDMap.rename_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_axes</span></code></a>(names, new_names)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.rename_axes" title="gammapy.maps.RegionNDMap.rename_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_axes</span></code></a>(names, new_names)</p></td>
 <td><p>Rename the Map axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reorder_axes" title="gammapy.maps.RegionNDMap.reorder_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_axes</span></code></a>(axes_names)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reorder_axes" title="gammapy.maps.RegionNDMap.reorder_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_axes</span></code></a>(axes_names)</p></td>
 <td><p>Return a new map re-ordering the non-spatial axes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reproject_by_image" title="gammapy.maps.RegionNDMap.reproject_by_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reproject_by_image</span></code></a>(geom[, preserve_counts, ...])</p></td>
+<td><p>Reproject each image of a ND map to input 2d geometry.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.RegionNDMap.reproject_to_geom" title="gammapy.maps.RegionNDMap.reproject_to_geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reproject_to_geom</span></code></a>(geom[, preserve_counts, ...])</p></td>
 <td><p>Reproject map to input geometry.</p></td>
@@ -2430,7 +2436,7 @@ or differential quantities if the maps have the same binning.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>region</strong><span class="classifier">str or <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></span></dt><dd><p>Region specification.</p>
+<dt><strong>region</strong><span class="classifier">str or <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></span></dt><dd><p>Region specification.</p>
 </dd>
 <dt><strong>axes</strong><span class="classifier">list of <a class="reference internal" href="gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxis</span></code></a>, optional</span></dt><dd><p>Non-spatial axes. Default is None.</p>
 </dd>
@@ -3174,6 +3180,29 @@ and <code class="docutils literal notranslate"><span class="pre">idx</span></cod
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="gammapy.maps.RegionNDMap.iter_by_image_index">
+<span class="sig-name descname"><span class="pre">iter_by_image_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.maps.RegionNDMap.iter_by_image_index" title="Permalink to this definition">#</a></dt>
+<dd><p>Iterate over image planes of the map.</p>
+<p>The image plane index is in data order, so that the data array can be
+indexed directly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idx</strong><span class="classifier">tuple</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">idx</span></code> is a tuple of int, the index of the image plane.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#gammapy.maps.RegionNDMap.iter_by_image" title="gammapy.maps.RegionNDMap.iter_by_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_image</span></code></a></dt><dd><p>iterate by image returning a map.</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="gammapy.maps.RegionNDMap.mask_nearest_position">
 <span class="sig-name descname"><span class="pre">mask_nearest_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.maps.RegionNDMap.mask_nearest_position" title="Permalink to this definition">#</a></dt>
 <dd><p>Given a sky coordinate return nearest valid position in the mask.</p>
@@ -3249,7 +3278,7 @@ Default is None.</p>
 <dt><strong>axis_name</strong><span class="classifier">str, optional</span></dt><dd><p>Which axis to plot on the x-axis. Extra axes will be plotted as
 additional lines. Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html#matplotlib.pyplot.errorbar" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html#matplotlib.pyplot.errorbar" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -3293,10 +3322,10 @@ additional lines. Default is None.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/axis_api.html#module-matplotlib.axis" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></a>, optional</span></dt><dd><p>Axis instance to be used for the plot.
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/axis_api.html#module-matplotlib.axis" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></a>, optional</span></dt><dd><p>Axis instance to be used for the plot.
 Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html#matplotlib.pyplot.hist" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hist</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -3345,10 +3374,10 @@ Default is None.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/axis_api.html#module-matplotlib.axis" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></a>, optional</span></dt><dd><p>Axis instance to be used for the plot.
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/axis_api.html#module-matplotlib.axis" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axis</span></code></a>, optional</span></dt><dd><p>Axis instance to be used for the plot.
 Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvspan.html#matplotlib.pyplot.axvspan" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axvspan</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.axvspan.html#matplotlib.pyplot.axvspan" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axvspan</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -3372,7 +3401,7 @@ Default is None.</p>
 the region is shown using the minimal
 equivalent WCS geometry. Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments forwarded to <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.PixelRegion.html#regions.PixelRegion.as_artist" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as_artist</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments forwarded to <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.PixelRegion.html#regions.PixelRegion.as_artist" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">as_artist</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -3497,6 +3526,34 @@ the map with a single bin. Default is False.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
 <dt><strong>map</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></span></dt><dd><p>The map with axes re-ordered.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.maps.RegionNDMap.reproject_by_image">
+<span class="sig-name descname"><span class="pre">reproject_by_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_counts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.maps.RegionNDMap.reproject_by_image" title="Permalink to this definition">#</a></dt>
+<dd><p>Reproject each image of a ND map to input 2d geometry.</p>
+<p>For large maps this method is faster than <a class="reference internal" href="#gammapy.maps.RegionNDMap.reproject_to_geom" title="gammapy.maps.RegionNDMap.reproject_to_geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reproject_to_geom</span></code></a>.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>geom</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Geom.html#gammapy.maps.Geom" title="gammapy.maps.Geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Geom</span></code></a></span></dt><dd><p>Target slice geometry in 2D.</p>
+</dd>
+<dt><strong>preserve_counts</strong><span class="classifier">bool, optional</span></dt><dd><p>Preserve the integral over each bin. This should be True
+if the map is an integral quantity (e.g. counts) and False if
+the map is a differential quantity (e.g. intensity). Default is False.</p>
+</dd>
+<dt><strong>precision_factor</strong><span class="classifier">int, optional</span></dt><dd><p>Minimal factor between the bin size of the output map and the oversampled base map.
+Used only for the oversampling method. Default is 10.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>output_map</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></span></dt><dd><p>Reprojected Map.</p>
 </dd>
 </dl>
 </dd>

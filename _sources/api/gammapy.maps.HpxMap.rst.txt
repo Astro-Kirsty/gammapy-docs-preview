@@ -22,7 +22,6 @@ HpxMap
 
    .. autosummary::
 
-      ~HpxMap.apply_edisp
       ~HpxMap.coadd
       ~HpxMap.copy
       ~HpxMap.create
@@ -52,6 +51,7 @@ HpxMap
       ~HpxMap.iter_by_axis
       ~HpxMap.iter_by_image
       ~HpxMap.iter_by_image_data
+      ~HpxMap.iter_by_image_index
       ~HpxMap.mask_nearest_position
       ~HpxMap.normalize
       ~HpxMap.pad
@@ -62,6 +62,7 @@ HpxMap
       ~HpxMap.reduce_over_axes
       ~HpxMap.rename_axes
       ~HpxMap.reorder_axes
+      ~HpxMap.reproject_by_image
       ~HpxMap.reproject_to_geom
       ~HpxMap.resample
       ~HpxMap.resample_axis
@@ -93,7 +94,6 @@ HpxMap
 
    .. rubric:: Methods Documentation
 
-   .. automethod:: apply_edisp
    .. automethod:: coadd
    .. automethod:: copy
    .. automethod:: create
@@ -123,6 +123,7 @@ HpxMap
    .. automethod:: iter_by_axis
    .. automethod:: iter_by_image
    .. automethod:: iter_by_image_data
+   .. automethod:: iter_by_image_index
    .. automethod:: mask_nearest_position
    .. automethod:: normalize
    .. automethod:: pad
@@ -133,6 +134,7 @@ HpxMap
    .. automethod:: reduce_over_axes
    .. automethod:: rename_axes
    .. automethod:: reorder_axes
+   .. automethod:: reproject_by_image
    .. automethod:: reproject_to_geom
    .. automethod:: resample
    .. automethod:: resample_axis

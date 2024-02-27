@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -697,7 +697,7 @@ the spectral part of the fit.</p></li>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
-        python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python
+        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
         python_version         : 3.9.18
         machine                : x86_64
         system                 : Linux
@@ -705,34 +705,34 @@ the spectral part of the fit.</p></li>
 
 Gammapy package:
 
-        version                : 1.2.dev50+gbf9da8718.d20230602
-        path                   : /home/feijen/Documents/github/gammapy/gammapy
+        version                : 1.2.dev1813+g9f8503aa9
+        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.25.2
-        scipy                  : 1.11.2
-        astropy                : 5.3.3
-        regions                : 0.7
+        numpy                  : 1.26.3
+        scipy                  : 1.12.0
+        astropy                : 5.2.2
+        regions                : 0.8
         click                  : 8.1.7
         yaml                   : 6.0.1
-        IPython                : 8.15.0
-        jupyterlab             : 3.5.3
-        matplotlib             : 3.7.2
-        pandas                 : 2.1.0
-        healpy                 : 1.16.5
-        iminuit                : 2.24.0
-        sherpa                 : 4.15.1
+        IPython                : 8.18.1
+        jupyterlab             : not installed
+        matplotlib             : 3.8.2
+        pandas                 : not installed
+        healpy                 : 1.16.6
+        iminuit                : 2.25.0
+        sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : not installed
+        ray                    : 2.9.1
 
 
 Gammapy environment variables:
 
-        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1
+        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev
 </pre></div>
 </div>
 </section>
@@ -939,8 +939,8 @@ parameter error calculation.</p>
         method     : migrad
         success    : True
         message    : Optimization terminated successfully.
-        nfev       : 142
-        total stat : 16240.97
+        nfev       : 152
+        total stat : 16240.87
 
 CovarianceResult
 
@@ -955,16 +955,16 @@ CovarianceResult
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">stacked</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">to_parameters_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     model         type      name     value    ... frozen is_norm link prior
----------------- -------- --------- ---------- ... ------ ------- ---- -----
-            crab spectral     index 2.6000e+00 ...  False   False       None
-            crab spectral amplitude 4.5911e-11 ...  False    True       None
-            crab spectral reference 1.0000e+00 ...   True   False       None
-            crab  spatial     lon_0 8.3619e+01 ...  False   False       None
-            crab  spatial     lat_0 2.2024e+01 ...  False   False       None
-crab-stacked-bkg spectral      norm 9.3478e-01 ...  False    True       None
-crab-stacked-bkg spectral      tilt 0.0000e+00 ...   True   False       None
-crab-stacked-bkg spectral reference 1.0000e+00 ...   True   False       None
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     model       type    name     value    ... frozen is_norm link prior
+---------------- ---- --------- ---------- ... ------ ------- ---- -----
+            crab          index 2.6002e+00 ...  False   False
+            crab      amplitude 4.5915e-11 ...  False    True
+            crab      reference 1.0000e+00 ...   True   False
+            crab          lon_0 8.3619e+01 ...  False   False
+            crab          lat_0 2.2024e+01 ...  False   False
+crab-stacked-bkg           norm 9.3485e-01 ...  False    True
+crab-stacked-bkg           tilt 0.0000e+00 ...   True   False
+crab-stacked-bkg      reference 1.0000e+00 ...   True   False
 </pre></div>
 </div>
 <p>Here we can plot the number of predicted counts for each model and

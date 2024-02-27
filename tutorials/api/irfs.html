@@ -189,7 +189,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -314,6 +314,16 @@ function checkPageExistsAndRedirect(event) {
      Serialisation
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-dl4-product-psfmap">
+     Create DL4 product -
+     <code class="xref py py-obj docutils literal notranslate">
+      <span class="pre">
+       PSFMap
+      </span>
+     </code>
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -350,7 +360,6 @@ IRF classes internally supported, see
 <a class="reference external" href="https://gamma-astro-data-formats.readthedocs.io/en/v0.3/irfs/full_enclosure/index.html">https://gamma-astro-data-formats.readthedocs.io/en/v0.3/irfs/full_enclosure/index.html</a></p>
 <p>This tutorial is intended for advanced users typically creating IRFs.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy.special</span>
 <span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
 <span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">SkyCoord</span>
 <span class="kn">from</span> <span class="nn">astropy.visualization</span> <span class="kn">import</span> <span class="n">quantity_support</span>
@@ -363,8 +372,12 @@ IRF classes internally supported, see
     <span class="n">EnergyDispersion2D</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span> <span class="nn">gammapy.irf.io</span> <span class="kn">import</span> <span class="n">COMMON_IRF_HEADERS</span><span class="p">,</span> <span class="n">IRF_DL3_HDU_SPECIFICATION</span>
-<span class="kn">from</span> <span class="nn">gammapy.makers.utils</span> <span class="kn">import</span> <span class="n">make_edisp_kernel_map</span><span class="p">,</span> <span class="n">make_map_exposure_true_energy</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">MapAxes</span><span class="p">,</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">WcsGeom</span>
+<span class="kn">from</span> <span class="nn">gammapy.makers.utils</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">make_edisp_kernel_map</span><span class="p">,</span>
+    <span class="n">make_map_exposure_true_energy</span><span class="p">,</span>
+    <span class="n">make_psf_map</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">WcsGeom</span>
 </pre></div>
 </div>
 <section id="inbuilt-gammapy-irfs">
@@ -524,15 +537,15 @@ can also check the Field of view alignment. Currently, two possible
 alignments are supported: alignment with the horizontal coordinate
 system (ALTAZ) and alignment with the equatorial coordinate system
 (RADEC).</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bkg</span><span class="o">.</span><span class="n">fov_alignment</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bkg</span><span class="o">.</span><span class="n">fov_alignment</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;FoVAlignment.RADEC: &#39;RADEC&#39;&gt;
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FoVAlignment.RADEC
 </pre></div>
 </div>
 <p>To evaluate the IRFs, pass the values for each axis. To know the default
 interpolation scheme for the data</p>
-<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">bkg</span><span class="o">.</span><span class="n">interp_kwargs</span>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">bkg</span><span class="o">.</span><span class="n">interp_kwargs</span><span class="p">)</span>
 
 <span class="c1"># Evaluate background</span>
 <span class="c1"># Note that evaluate functions support  numpy-style broadcasting</span>
@@ -547,7 +560,8 @@ interpolation scheme for the data</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">ev</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[[1.27093776e-04 1.12423250e-04]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;bounds_error&#39;: False, &#39;fill_value&#39;: 0.0, &#39;values_scale&#39;: &#39;log&#39;}
+[[[1.27093776e-04 1.12423250e-04]
   [1.12423250e-04 9.85188496e-05]]
 
  [[7.67759236e-07 9.01235137e-07]
@@ -764,7 +778,8 @@ Text(0.5, 1.0, &#39;Asymmetric effective area&#39;)
     <span class="n">pointing</span><span class="o">=</span><span class="n">pointing</span><span class="p">,</span> <span class="n">livetime</span><span class="o">=</span><span class="s2">&quot;42 h&quot;</span><span class="p">,</span> <span class="n">aeff</span><span class="o">=</span><span class="n">aeff_3d</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="n">geom</span>
 <span class="p">)</span>
 
-<span class="n">exposure_map</span><span class="o">.</span><span class="n">plot_grid</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">exposure_map</span><span class="o">.</span><span class="n">plot_grid</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_irfs_004.png" srcset="../../_images/sphx_glr_irfs_004.png" alt="Energy_true 100 GeV - 215 GeV, Energy_true 215 GeV - 464 GeV, Energy_true 464 GeV - 1.00 TeV, Energy_true 1.00 TeV - 2.15 TeV, Energy_true 2.15 TeV - 4.64 TeV, Energy_true 4.64 TeV - 10.0 TeV" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WcsGeom
@@ -777,15 +792,6 @@ Text(0.5, 1.0, &#39;Asymmetric effective area&#39;)
         center     : 2.0 deg, 1.0 deg
         width      : 8.0 deg x 6.0 deg
         wcs ref    : 2.0 deg, 1.0 deg
-
-
-array([[&lt;WCSAxes: title={&#39;center&#39;: &#39;Energy_true 100 GeV - 215 GeV&#39;}&gt;,
-        &lt;WCSAxes: title={&#39;center&#39;: &#39;Energy_true 215 GeV - 464 GeV&#39;}&gt;,
-        &lt;WCSAxes: title={&#39;center&#39;: &#39;Energy_true 464 GeV - 1.00 TeV&#39;}&gt;],
-       [&lt;WCSAxes: title={&#39;center&#39;: &#39;Energy_true 1.00 TeV - 2.15 TeV&#39;}&gt;,
-        &lt;WCSAxes: title={&#39;center&#39;: &#39;Energy_true 2.15 TeV - 4.64 TeV&#39;}&gt;,
-        &lt;WCSAxes: title={&#39;center&#39;: &#39;Energy_true 4.64 TeV - 10.0 TeV&#39;}&gt;]],
-      dtype=object)
 </pre></div>
 </div>
 </section>
@@ -933,21 +939,26 @@ easily generalised to higher dimensions.</p>
 <span class="n">edispmap</span> <span class="o">=</span> <span class="n">make_edisp_kernel_map</span><span class="p">(</span><span class="n">edisp3d</span><span class="p">,</span> <span class="n">pointing</span><span class="p">,</span> <span class="n">geom</span><span class="p">)</span>
 
 <span class="n">edispmap</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="n">edispmap</span><span class="o">.</span><span class="n">edisp_map</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span>
+<span class="c1">#</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">edispmap</span><span class="o">.</span><span class="n">edisp_map</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_irfs_005.png" srcset="../../_images/sphx_glr_irfs_005.png" alt="irfs" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>array([0.        , 0.        , 0.20097159, 0.2009851 , 0.20099855,
-       0.20072608, 0.20009124, 0.19932878, 0.        , 0.        ])
+<img src="../../_images/sphx_glr_irfs_005.png" srcset="../../_images/sphx_glr_irfs_005.png" alt="irfs" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0.         0.         0.20097159 0.2009851  0.20099855 0.20072608
+ 0.20009124 0.19932878 0.         0.        ]
 </pre></div>
 </div>
 </section>
 </section>
 <section id="psf">
 <h2>PSF<a class="headerlink" href="#psf" title="Permalink to this headline">#</a></h2>
-<p>Asymmetric PSFs are not correctly supported at present in the data
-reduction scheme. However, higher dimensional PSF Table can be created
-as a data container, as shown here.</p>
+<p>There are two types of asymmetric PSFs that can be considered
+- Asymmetry about the camera center: Such PSF Tables can be supported
+- Asymmetry about the source position: These PSF models cannot be supported
+correctly within the data reduction scheme at present
+Also, analytic PSF models defined within the GADF scheme cannot be
+directly generalised to the 3D case for use within Gammapy.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PSF_assym</span><span class="p">(</span><span class="n">IRF</span><span class="p">):</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;psf_assym&quot;</span>
     <span class="n">required_axes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;energy_true&quot;</span><span class="p">,</span> <span class="s2">&quot;fov_lon&quot;</span><span class="p">,</span> <span class="s2">&quot;fov_lat&quot;</span><span class="p">,</span> <span class="s2">&quot;rad&quot;</span><span class="p">]</span>
@@ -1035,14 +1046,27 @@ as a data container, as shown here.</p>
 
 <span class="n">psf_new</span> <span class="o">=</span> <span class="n">PSF_assym</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s2">&quot;test_psf.fits.gz&quot;</span><span class="p">)</span>
 
-<span class="n">psf_new</span> <span class="o">==</span> <span class="n">psf_assym</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">psf_new</span> <span class="o">==</span> <span class="n">psf_assym</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
-<p>Containers for asymmetric analytic PSFs are not supported at present.</p>
-<p><strong>NOTE</strong>: Support for asymmetric IRFs is priliminary at the moment, and
+</section>
+<section id="create-dl4-product-psfmap">
+<h3>Create DL4 product - <code class="xref py py-obj docutils literal notranslate"><span class="pre">PSFMap</span></code><a class="headerlink" href="#create-dl4-product-psfmap" title="Permalink to this headline">#</a></h3>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">rad</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="o">.</span><span class="n">from_edges</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;rad&quot;</span><span class="p">)</span>
+<span class="n">etrue</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_bounds</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;TeV&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;energy_true&quot;</span><span class="p">)</span>
+<span class="n">geom</span> <span class="o">=</span> <span class="n">WcsGeom</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">binsz</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">rad</span><span class="p">,</span> <span class="n">etrue</span><span class="p">],</span> <span class="n">skydir</span><span class="o">=</span><span class="n">pointing</span><span class="p">)</span>
+
+<span class="n">psfmap</span> <span class="o">=</span> <span class="n">make_psf_map</span><span class="p">(</span><span class="n">psf_assym</span><span class="p">,</span> <span class="n">pointing</span><span class="p">,</span> <span class="n">geom</span><span class="p">)</span>
+
+<span class="n">psfmap</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_irfs_006.png" srcset="../../_images/sphx_glr_irfs_006.png" alt="Exposure, Containment radius at 1 TeV, Containment radius at center of map, PSF at center of map" class = "sphx-glr-single-img"/><p>Containers for asymmetric analytic PSFs are not supported at present.</p>
+<p><strong>NOTE</strong>: Support for asymmetric IRFs is preliminary at the moment, and
 will evolve depending on feedback.</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-irfs-py">
 <div class="binder-badge docutils container">

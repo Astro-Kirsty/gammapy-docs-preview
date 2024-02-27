@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -699,13 +699,13 @@ extract a light curve independently of the dataset type.</p>
 
 Gammapy package:
 
-        version                : 1.2.dev1721+g6c725d50c
+        version                : 1.2.dev1721+g6c725d50c.d20240227
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.26.3
+        numpy                  : 1.26.4
         scipy                  : 1.12.0
         astropy                : 5.2.2
         regions                : 0.8
@@ -713,15 +713,15 @@ Other packages:
         yaml                   : 6.0.1
         IPython                : 8.18.1
         jupyterlab             : not installed
-        matplotlib             : 3.8.2
+        matplotlib             : 3.8.3
         pandas                 : not installed
         healpy                 : 1.16.6
-        iminuit                : 2.24.0
+        iminuit                : 2.25.2
         sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : 2.9.1
+        ray                    : 2.9.3
 
 
 Gammapy environment variables:
@@ -848,13 +848,13 @@ Here one dataset equals to one observing run.</p>
 <span class="n">display</span><span class="p">(</span><span class="n">table</span><span class="p">[</span><span class="s2">&quot;time_min&quot;</span><span class="p">,</span> <span class="s2">&quot;time_max&quot;</span><span class="p">,</span> <span class="s2">&quot;e_min&quot;</span><span class="p">,</span> <span class="s2">&quot;e_max&quot;</span><span class="p">,</span> <span class="s2">&quot;flux&quot;</span><span class="p">,</span> <span class="s2">&quot;flux_err&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_light_curve_001.png" srcset="../../_images/sphx_glr_light_curve_001.png" alt="light curve" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     time_min           time_max     ...        flux_err
-                                     ...      1 / (cm2 s)
------------------- ----------------- ... ----------------------
- 53343.92234009259 53343.94186555556 ... 2.1193777560333226e-12
- 53343.95421509259 53343.97369425926 ...  2.140779935183259e-12
- 53345.96198129629 53345.98149518518 ... 2.7872234642813915e-12
-53347.913196574074 53347.93271046296 ...  2.912868843587422e-12
+<img src="../../_images/sphx_glr_light_curve_001.png" srcset="../../_images/sphx_glr_light_curve_001.png" alt="light curve" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     time_min           time_max     ...          flux                 flux_err
+                                     ...      1 / (cm2 s)            1 / (cm2 s)
+------------------ ----------------- ... ---------------------- ----------------------
+ 53343.92234009259 53343.94186555556 ... 2.0351680828157952e-11 2.1193777560333226e-12
+ 53343.95421509259 53343.97369425926 ... 2.0610287367784535e-11  2.140779935183259e-12
+ 53345.96198129629 53345.98149518518 ... 2.1762888544216773e-11 2.7872234642813915e-12
+53347.913196574074 53347.93271046296 ...  2.505804961870718e-11  2.912868843587422e-12
 </pre></div>
 </div>
 </section>
@@ -942,9 +942,9 @@ we use predefined values instead.</p>
      time_min           time_max           e_ref        ...    counts   success
                                             TeV         ...
 ------------------ ----------------- ------------------ ... ----------- -------
- 53343.92234009259 53343.94186555556 3.4517490659800822 ... nan .. 81.0    True
+ 53343.92234009259 53343.94186555556 3.4517490659800822 ...  nan .. nan    True
  53343.95421509259 53343.97369425926 3.4517490659800822 ... 71.0 .. nan    True
- 53345.96198129629 53345.98149518518 3.4517490659800822 ...  nan .. nan    True
+ 53345.96198129629 53345.98149518518 3.4517490659800822 ... nan .. 51.0    True
 53347.913196574074 53347.93271046296 3.4517490659800822 ...  nan .. nan    True
 </pre></div>
 </div>

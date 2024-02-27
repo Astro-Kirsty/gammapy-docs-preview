@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -663,7 +663,7 @@ change the loaded data or IRFs to CTA.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
-        python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python
+        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
         python_version         : 3.9.18
         machine                : x86_64
         system                 : Linux
@@ -671,34 +671,34 @@ change the loaded data or IRFs to CTA.</p>
 
 Gammapy package:
 
-        version                : 1.2.dev50+gbf9da8718.d20230602
-        path                   : /home/feijen/Documents/github/gammapy/gammapy
+        version                : 1.2.dev1721+g6c725d50c.d20240227
+        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.25.2
-        scipy                  : 1.11.2
-        astropy                : 5.3.3
-        regions                : 0.7
+        numpy                  : 1.26.4
+        scipy                  : 1.12.0
+        astropy                : 5.2.2
+        regions                : 0.8
         click                  : 8.1.7
         yaml                   : 6.0.1
-        IPython                : 8.15.0
-        jupyterlab             : 3.5.3
-        matplotlib             : 3.7.2
-        pandas                 : 2.1.0
-        healpy                 : 1.16.5
-        iminuit                : 2.24.0
-        sherpa                 : 4.15.1
+        IPython                : 8.18.1
+        jupyterlab             : not installed
+        matplotlib             : 3.8.3
+        pandas                 : not installed
+        healpy                 : 1.16.6
+        iminuit                : 2.25.2
+        sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : not installed
+        ray                    : 2.9.3
 
 
 Gammapy environment variables:
 
-        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1
+        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev
 </pre></div>
 </div>
 </section>
@@ -752,7 +752,7 @@ overwrite the one you may have already defined.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Data store:
 HDU index table:
-BASE_DIR: /home/feijen/gammapy-datasets/1.1rc1/cta-1dc/index/gps
+BASE_DIR: /home/feijen/gammapy-datasets/dev/cta-1dc/index/gps
 Rows: 24
 OBS_ID: 110380 -- 111630
 HDU_TYPE: [&#39;aeff&#39;, &#39;bkg&#39;, &#39;edisp&#39;, &#39;events&#39;, &#39;gti&#39;, &#39;psf&#39;]
@@ -834,14 +834,14 @@ which <code class="xref py py-obj docutils literal notranslate"><span class="pre
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">events</span><span class="o">.</span><span class="n">table</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EVENT_ID        TIME           RA        DEC     ...    DETX       DETY    MC_ID
-                 s            deg        deg     ...    deg        deg
--------- ----------------- ---------- ---------- ... ---------- ---------- -----
-       1 664502403.0454683  -92.63541 -30.514854 ... -0.9077294 -0.2727693     2
-       2 664502405.2579999  -92.64103 -28.262728 ...  1.3443842 -0.2838398     2
-       3 664502408.8205513  -93.20372 -28.599625 ...  1.0049409 -0.7769775     2
-       4 664502409.0143764  -94.03383 -29.269627 ... 0.32684833  -1.496021     2
-       5 664502414.8090746 -93.330505 -30.319725 ...  -0.716062 -0.8733348     2
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EVENT_ID        TIME           RA        DEC        ENERGY      DETX       DETY    MC_ID
+                 s            deg        deg         TeV        deg        deg
+-------- ----------------- ---------- ---------- ----------- ---------- ---------- -----
+       1 664502403.0454683  -92.63541 -30.514854  0.03902182 -0.9077294 -0.2727693     2
+       2 664502405.2579999  -92.64103 -28.262728 0.030796371  1.3443842 -0.2838398     2
+       3 664502408.8205513  -93.20372 -28.599625  0.04009629  1.0049409 -0.7769775     2
+       4 664502409.0143764  -94.03383 -29.269627 0.039580025 0.32684833  -1.496021     2
+       5 664502414.8090746 -93.330505 -30.319725  0.03035851  -0.716062 -0.8733348     2
 </pre></div>
 </div>
 <p>And show a summary plot:</p>
@@ -897,9 +897,10 @@ when using the DC1 IRFs for some analyses.</p></li>
   unit  : m2
   dtype : &gt;f4
 
-/home/feijen/micromamba/envs/gammapy-dev/lib/python3.9/site-packages/astropy/units/core.py:2123: UnitsWarning: &#39;1/s/MeV/sr&#39; did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: &#39;1/s/MeV/sr&#39; did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
   warnings.warn(msg, UnitsWarning)
-{&#39;aeff&#39;: &lt;gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7fd38977f160&gt;, &#39;psf&#39;: &lt;gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7fd38977fcd0&gt;, &#39;edisp&#39;: &lt;gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7fd3894926a0&gt;, &#39;bkg&#39;: &lt;gammapy.irf.background.Background3D object at 0x7fd388fee3d0&gt;}
+Invalid unit found in background table! Assuming (s-1 MeV-1 sr-1)
+{&#39;aeff&#39;: &lt;gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7f018776d940&gt;, &#39;psf&#39;: &lt;gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7f018775d6a0&gt;, &#39;edisp&#39;: &lt;gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7f018770ddf0&gt;, &#39;bkg&#39;: &lt;gammapy.irf.background.Background3D object at 0x7f018770d820&gt;}
 </pre></div>
 </div>
 <section id="effective-area">

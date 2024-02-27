@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -2201,22 +2201,25 @@ function checkPageExistsAndRedirect(event) {
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.to_template_sky_model" title="gammapy.modeling.models.DatasetModels.to_template_sky_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_template_sky_model</span></code></a>(geom[, ...])</p></td>
 <td><p>Merge a list of models into a single <a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.to_yaml" title="gammapy.modeling.models.DatasetModels.to_yaml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_yaml</span></code></a>([full_output, overwrite_templates])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.to_template_spectral_model" title="gammapy.modeling.models.DatasetModels.to_template_spectral_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_template_spectral_model</span></code></a>(geom[, mask])</p></td>
+<td><p>Merge a list of models into a single <a class="reference internal" href="gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel" title="gammapy.modeling.models.TemplateSpectralModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TemplateSpectralModel</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.to_yaml" title="gammapy.modeling.models.DatasetModels.to_yaml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_yaml</span></code></a>([full_output, overwrite_templates])</p></td>
 <td><p>Convert to YAML string.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.unfreeze" title="gammapy.modeling.models.DatasetModels.unfreeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unfreeze</span></code></a>([model_type])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.unfreeze" title="gammapy.modeling.models.DatasetModels.unfreeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unfreeze</span></code></a>([model_type])</p></td>
 <td><p>Restore parameters frozen status to default depending on model type.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.update_link_label" title="gammapy.modeling.models.DatasetModels.update_link_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_link_label</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.update_link_label" title="gammapy.modeling.models.DatasetModels.update_link_label"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_link_label</span></code></a>()</p></td>
 <td><p>Update linked parameters labels used for serialisation and print.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.update_parameters_from_table" title="gammapy.modeling.models.DatasetModels.update_parameters_from_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_parameters_from_table</span></code></a>(t)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.update_parameters_from_table" title="gammapy.modeling.models.DatasetModels.update_parameters_from_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_parameters_from_table</span></code></a>(t)</p></td>
 <td><p>Update models from a <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.write" title="gammapy.modeling.models.DatasetModels.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a>(path[, overwrite, full_output, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.write" title="gammapy.modeling.models.DatasetModels.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a>(path[, overwrite, full_output, ...])</p></td>
 <td><p>Write to YAML file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.write_covariance" title="gammapy.modeling.models.DatasetModels.write_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_covariance</span></code></a>(filename, **kwargs)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.modeling.models.DatasetModels.write_covariance" title="gammapy.modeling.models.DatasetModels.write_covariance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_covariance</span></code></a>(filename, **kwargs)</p></td>
 <td><p>Write covariance to file.</p></td>
 </tr>
 </tbody>
@@ -2335,7 +2338,7 @@ recommended.</p>
 <dt><strong>ax</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code>, optional</span></dt><dd><p>Axes to plot on. If no axes are given, an all-sky WCS
 is chosen using a CAR projection. Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scatter</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scatter</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -2358,7 +2361,7 @@ is chosen using a CAR projection. Default is None.</p>
 <dt><strong>ax</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code>, optional</span></dt><dd><p>Axes to plot on. If no axes are given, an all-sky WCS
 is chosen using a CAR projection. Default is None.</p>
 </dd>
-<dt><strong>kwargs_point</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Line2D</span></code></a> for plotting
+<dt><strong>kwargs_point</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.lines.Line2D.html#matplotlib.lines.Line2D" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Line2D</span></code></a> for plotting
 of point sources. Default is None.</p>
 </dd>
 <dt><strong>path_effect</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PathEffect</span></code>, optional</span></dt><dd><p>Path effect applied to artists and lines. Default is None.</p>
@@ -2517,7 +2520,7 @@ Used to take into account PSF width. Default is “0 deg”.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>regions</strong><span class="classifier">str, <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.Region.html#regions.Region" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Region</span></code></a> or list of <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.Region.html#regions.Region" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Region</span></code></a></span></dt><dd><p>Region or list of regions (pixel or sky regions accepted).
+<dt><strong>regions</strong><span class="classifier">str, <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.Region.html#regions.Region" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Region</span></code></a> or list of <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.Region.html#regions.Region" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Region</span></code></a></span></dt><dd><p>Region or list of regions (pixel or sky regions accepted).
 A region can be defined as a string ind DS9 format as well.
 See <a class="reference external" href="http://ds9.si.edu/doc/ref/region.html">http://ds9.si.edu/doc/ref/region.html</a> for details.</p>
 </dd>
@@ -2605,7 +2608,7 @@ See <a class="reference external" href="http://ds9.si.edu/doc/ref/region.html">h
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><dl class="simple">
-<dt>regions: list of <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></dt><dd><p>Regions.</p>
+<dt>regions: list of <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a></dt><dd><p>Regions.</p>
 </dd>
 </dl>
 </dd>
@@ -2630,6 +2633,30 @@ See <a class="reference external" href="http://ds9.si.edu/doc/ref/region.html">h
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
 <dt><strong>model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a></span></dt><dd><p>Template sky model.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.modeling.models.DatasetModels.to_template_spectral_model">
+<span class="sig-name descname"><span class="pre">to_template_spectral_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/modeling/models/core.html#DatasetModels.to_template_spectral_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.modeling.models.DatasetModels.to_template_spectral_model" title="Permalink to this definition">#</a></dt>
+<dd><p>Merge a list of models into a single <a class="reference internal" href="gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel" title="gammapy.modeling.models.TemplateSpectralModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TemplateSpectralModel</span></code></a>.</p>
+<p>For each model the spatial component is integrated over the given geometry where the mask is true
+and multiplied by the spectral component value in each energy bin.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>geom</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Geom.html#gammapy.maps.Geom" title="gammapy.maps.Geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Geom</span></code></a></span></dt><dd><p>Map geometry on which the template model is computed.</p>
+</dd>
+<dt><strong>mask</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> with bool dtype.</span></dt><dd><p>Evaluate the model only where the mask is True.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel" title="gammapy.modeling.models.TemplateSpectralModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TemplateSpectralModel</span></code></a></span></dt><dd><p>Template spectral model.</p>
 </dd>
 </dl>
 </dd>

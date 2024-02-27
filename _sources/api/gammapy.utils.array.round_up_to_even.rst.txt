@@ -1,6 +1,0 @@
-round_up_to_even
-================
-
-.. currentmodule:: gammapy.utils.array
-
-.. autofunction:: round_up_to_even

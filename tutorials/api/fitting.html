@@ -192,7 +192,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -624,7 +624,7 @@ particular how to :</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
-        python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python
+        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
         python_version         : 3.9.18
         machine                : x86_64
         system                 : Linux
@@ -632,34 +632,34 @@ particular how to :</p>
 
 Gammapy package:
 
-        version                : 1.2.dev50+gbf9da8718.d20230602
-        path                   : /home/feijen/Documents/github/gammapy/gammapy
+        version                : 1.2.dev1813+g9f8503aa9
+        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.25.2
-        scipy                  : 1.11.2
-        astropy                : 5.3.3
-        regions                : 0.7
+        numpy                  : 1.26.3
+        scipy                  : 1.12.0
+        astropy                : 5.2.2
+        regions                : 0.8
         click                  : 8.1.7
         yaml                   : 6.0.1
-        IPython                : 8.15.0
-        jupyterlab             : 3.5.3
-        matplotlib             : 3.7.2
-        pandas                 : 2.1.0
-        healpy                 : 1.16.5
-        iminuit                : 2.24.0
-        sherpa                 : 4.15.1
+        IPython                : 8.18.1
+        jupyterlab             : not installed
+        matplotlib             : 3.8.2
+        pandas                 : not installed
+        healpy                 : 1.16.6
+        iminuit                : 2.25.0
+        sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : not installed
+        ray                    : 2.9.1
 
 
 Gammapy environment variables:
 
-        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1
+        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev
 </pre></div>
 </div>
 </section>
@@ -868,9 +868,7 @@ properly</p>
 30.350556388466543  3.8122425483643125e-11 ...  0.2264827111476982
  30.34953910575007  3.8122425483643125e-11 ...  0.2264827111476982
 30.349542158419318  3.8122425483643125e-11 ...  0.2264827111476982
- 30.35030398537787  3.8122425483643125e-11 ...  0.2278975306934438
                ...                     ... ...                 ...
-30.349537804239922  3.8122169596532167e-11 ... 0.22662622801631419
  30.34953807814367  3.8122169596532167e-11 ... 0.22635140877790516
  30.34953077463306   3.812358724314062e-11 ... 0.22648881839710966
  30.34953075819191   3.812075194992371e-11 ... 0.22648881839710966
@@ -891,12 +889,12 @@ for all parameters are reasonable, and no fitted parameter value is “too close
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">result_minuit</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">to_parameters_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>model   type      name     value         unit      ... frozen is_norm link prior
------ -------- --------- ---------- -------------- ... ------ ------- ---- -----
- crab spectral amplitude 3.8122e-11 TeV-1 s-1 cm-2 ...  False    True       None
- crab spectral reference 1.0000e+00            TeV ...   True   False       None
- crab spectral     alpha 2.1958e+00                ...  False   False       None
- crab spectral      beta 2.2649e-01                ...  False   False       None
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>model type    name     value         unit      ... frozen is_norm link prior
+----- ---- --------- ---------- -------------- ... ------ ------- ---- -----
+ crab      amplitude 3.8122e-11 cm-2 s-1 TeV-1 ...  False    True
+ crab      reference 1.0000e+00            TeV ...   True   False
+ crab          alpha 2.1958e+00                ...  False   False
+ crab           beta 2.2649e-01                ...  False   False
 </pre></div>
 </div>
 <p>Plot fit statistic profiles for all fitted parameters, using
@@ -1169,7 +1167,7 @@ close to the contours lines, it is expected that the statistical meaning
 of the contours is not well defined. That’s why we advise to always
 choose a parameter space that contains the contours you’re interested
 in.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.975 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  10.542 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-fitting-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/api/fitting.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>

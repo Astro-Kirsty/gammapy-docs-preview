@@ -100,13 +100,17 @@ Here is an example YAML file using the model:
             parameters:
             -   name: amplitude
                 value: 1.0e-12
-                unit: s-1 cm-2
+                unit: cm-2 s-1
             -   name: mean
                 value: 2.0
                 unit: TeV
             -   name: sigma
                 value: 0.2
                 unit: TeV
+    metadata:
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:28.181113'
+        origin: null
 
 
 

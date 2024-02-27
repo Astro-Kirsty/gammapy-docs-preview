@@ -1,6 +1,0 @@
-weighted_chi2_parameter
-=======================
-
-.. currentmodule:: gammapy.estimators
-
-.. autofunction:: weighted_chi2_parameter

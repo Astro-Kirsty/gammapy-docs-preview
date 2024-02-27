@@ -132,7 +132,7 @@ Here is an example YAML file using the model:
                 frozen: false
                 interp: lin
                 scale_method: scale10
-                is_norm: true
+                is_norm: false
             -   name: e_0
                 value: 10.0
                 unit: TeV
@@ -173,6 +173,10 @@ Here is an example YAML file using the model:
                 interp: lin
                 scale_method: scale10
                 is_norm: false
+    metadata:
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:29.251774'
+        origin: null
 
 
 

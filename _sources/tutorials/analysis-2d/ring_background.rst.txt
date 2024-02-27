@@ -119,7 +119,7 @@ Check setup
 
     System:
 
-            python_executable      : /home/feijen/micromamba/envs/gammapy-dev/bin/python 
+            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
             python_version         : 3.9.18     
             machine                : x86_64     
             system                 : Linux      
@@ -127,34 +127,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev50+gbf9da8718.d20230602 
-            path                   : /home/feijen/Documents/github/gammapy/gammapy 
+            version                : 1.2.dev1721+g6c725d50c.d20240227 
+            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.25.2     
-            scipy                  : 1.11.2     
-            astropy                : 5.3.3      
-            regions                : 0.7        
+            numpy                  : 1.26.4     
+            scipy                  : 1.12.0     
+            astropy                : 5.2.2      
+            regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
-            IPython                : 8.15.0     
-            jupyterlab             : 3.5.3      
-            matplotlib             : 3.7.2      
-            pandas                 : 2.1.0      
-            healpy                 : 1.16.5     
-            iminuit                : 2.24.0     
-            sherpa                 : 4.15.1     
+            IPython                : 8.18.1     
+            jupyterlab             : not installed 
+            matplotlib             : 3.8.3      
+            pandas                 : not installed 
+            healpy                 : 1.16.6     
+            iminuit                : 2.25.2     
+            sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : not installed 
+            ray                    : 2.9.3      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -230,7 +230,7 @@ MSH 1552
             datasets_file: null
             models_file: null
         observations:
-            datastore: $GAMMAPY_DATA/hess-dl3-dr1
+            datastore: /home/feijen/gammapy-datasets/dev/hess-dl3-dr1
             obs_ids: []
             obs_file: null
             obs_cone: {frame: icrs, lon: 228.32 deg, lat: -59.08 deg, radius: 2.5 deg}
@@ -325,7 +325,7 @@ create the config
             datasets_file: null
             models_file: null
         observations:
-            datastore: $GAMMAPY_DATA/hess-dl3-dr1
+            datastore: /home/feijen/gammapy-datasets/dev/hess-dl3-dr1
             obs_ids: []
             obs_file: null
             obs_cone: {frame: icrs, lon: 228.32 deg, lat: -59.08 deg, radius: 2.5 deg}
@@ -547,7 +547,7 @@ events in the `on` and `off` regions respectively.
 
       Total counts_off                : 88113384 
       Acceptance                      : 22500 
-      Acceptance off                  : 49447600 
+      Acceptance off                  : 49447596 
 
 
 
@@ -666,7 +666,7 @@ to be a standard normal distribution.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  12.663 seconds)
+   **Total running time of the script:** ( 0 minutes  11.919 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-2d_ring_background.py:

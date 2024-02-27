@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -2249,44 +2249,50 @@ array with dimensions commensurate with the largest image plane.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.iter_by_image_data" title="gammapy.maps.WcsNDMap.iter_by_image_data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_image_data</span></code></a>()</p></td>
 <td><p>Iterate over image planes of the map.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.mask_contains_region" title="gammapy.maps.WcsNDMap.mask_contains_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_contains_region</span></code></a>(region)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.iter_by_image_index" title="gammapy.maps.WcsNDMap.iter_by_image_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_image_index</span></code></a>()</p></td>
+<td><p>Iterate over image planes of the map.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.mask_contains_region" title="gammapy.maps.WcsNDMap.mask_contains_region"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_contains_region</span></code></a>(region)</p></td>
 <td><p>Check if input region is contained in a boolean mask map.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.mask_nearest_position" title="gammapy.maps.WcsNDMap.mask_nearest_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_nearest_position</span></code></a>(position)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.mask_nearest_position" title="gammapy.maps.WcsNDMap.mask_nearest_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_nearest_position</span></code></a>(position)</p></td>
 <td><p>Given a sky coordinate return nearest valid position in the mask.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.normalize" title="gammapy.maps.WcsNDMap.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>([axis_name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.normalize" title="gammapy.maps.WcsNDMap.normalize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">normalize</span></code></a>([axis_name])</p></td>
 <td><p>Normalise data in place along a given axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.pad" title="gammapy.maps.WcsNDMap.pad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad</span></code></a>(pad_width[, axis_name, mode, cval, method])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.pad" title="gammapy.maps.WcsNDMap.pad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pad</span></code></a>(pad_width[, axis_name, mode, cval, method])</p></td>
 <td><p>Pad the spatial dimensions of the map.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot" title="gammapy.maps.WcsNDMap.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax, fig, add_cbar, stretch])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot" title="gammapy.maps.WcsNDMap.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax, fig, add_cbar, stretch])</p></td>
 <td><p>Plot image on matplotlib WCS axes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_grid</span></code></a>([figsize, ncols])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_grid</span></code></a>([figsize, ncols])</p></td>
 <td><p>Plot map as a grid of subplots for non-spatial axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot_interactive" title="gammapy.maps.WcsNDMap.plot_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_interactive</span></code></a>([rc_params])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot_interactive" title="gammapy.maps.WcsNDMap.plot_interactive"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_interactive</span></code></a>([rc_params])</p></td>
 <td><p>Plot map with interactive widgets to explore the non-spatial axes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot_mask" title="gammapy.maps.WcsNDMap.plot_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_mask</span></code></a>([ax])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.plot_mask" title="gammapy.maps.WcsNDMap.plot_mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_mask</span></code></a>([ax])</p></td>
 <td><p>Plot the mask as a shaded area.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.read" title="gammapy.maps.WcsNDMap.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>(filename[, hdu, hdu_bands, map_type, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.read" title="gammapy.maps.WcsNDMap.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>(filename[, hdu, hdu_bands, map_type, ...])</p></td>
 <td><p>Read a map from a FITS file.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reduce" title="gammapy.maps.WcsNDMap.reduce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce</span></code></a>(axis_name[, func, keepdims, weights])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reduce" title="gammapy.maps.WcsNDMap.reduce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce</span></code></a>(axis_name[, func, keepdims, weights])</p></td>
 <td><p>Reduce map over a single non-spatial axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reduce_over_axes" title="gammapy.maps.WcsNDMap.reduce_over_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce_over_axes</span></code></a>([func, keepdims, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reduce_over_axes" title="gammapy.maps.WcsNDMap.reduce_over_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reduce_over_axes</span></code></a>([func, keepdims, ...])</p></td>
 <td><p>Reduce map over non-spatial axes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.rename_axes" title="gammapy.maps.WcsNDMap.rename_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_axes</span></code></a>(names, new_names)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.rename_axes" title="gammapy.maps.WcsNDMap.rename_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rename_axes</span></code></a>(names, new_names)</p></td>
 <td><p>Rename the Map axes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reorder_axes" title="gammapy.maps.WcsNDMap.reorder_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_axes</span></code></a>(axes_names)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reorder_axes" title="gammapy.maps.WcsNDMap.reorder_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_axes</span></code></a>(axes_names)</p></td>
 <td><p>Return a new map re-ordering the non-spatial axes.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reproject_by_image" title="gammapy.maps.WcsNDMap.reproject_by_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reproject_by_image</span></code></a>(geom[, preserve_counts, ...])</p></td>
+<td><p>Reproject each image of a ND map to input 2d geometry.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.maps.WcsNDMap.reproject_to_geom" title="gammapy.maps.WcsNDMap.reproject_to_geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reproject_to_geom</span></code></a>(geom[, preserve_counts, ...])</p></td>
 <td><p>Reproject map to input geometry.</p></td>
@@ -3334,6 +3340,29 @@ and <code class="docutils literal notranslate"><span class="pre">idx</span></cod
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="gammapy.maps.WcsNDMap.iter_by_image_index">
+<span class="sig-name descname"><span class="pre">iter_by_image_index</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.maps.WcsNDMap.iter_by_image_index" title="Permalink to this definition">#</a></dt>
+<dd><p>Iterate over image planes of the map.</p>
+<p>The image plane index is in data order, so that the data array can be
+indexed directly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Yields</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idx</strong><span class="classifier">tuple</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">idx</span></code> is a tuple of int, the index of the image plane.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="#gammapy.maps.WcsNDMap.iter_by_image" title="gammapy.maps.WcsNDMap.iter_by_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_image</span></code></a></dt><dd><p>iterate by image returning a map.</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="gammapy.maps.WcsNDMap.mask_contains_region">
 <span class="sig-name descname"><span class="pre">mask_contains_region</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/maps/wcs/ndmap.html#WcsNDMap.mask_contains_region"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.maps.WcsNDMap.mask_contains_region" title="Permalink to this definition">#</a></dt>
 <dd><p>Check if input region is contained in a boolean mask map.</p>
@@ -3425,7 +3454,7 @@ an extrapolated value. Default is ‘constant’.</p>
 <dd class="field-odd"><dl>
 <dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.visualization.wcsaxes.WCSAxes.html#astropy.visualization.wcsaxes.WCSAxes" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code></a>, optional</span></dt><dd><p>WCS axis object to plot on. Default is None.</p>
 </dd>
-<dt><strong>fig</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a>, optional</span></dt><dd><p>Figure object. Default is None.</p>
+<dt><strong>fig</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Figure</span></code></a>, optional</span></dt><dd><p>Figure object. Default is None.</p>
 </dd>
 <dt><strong>add_cbar</strong><span class="classifier">bool, optional</span></dt><dd><p>Add color bar. Default is False.</p>
 </dd>
@@ -3434,7 +3463,7 @@ an extrapolated value. Default is ‘constant’.</p>
 </dd>
 </dl>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imshow</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.imshow.html#matplotlib.pyplot.imshow" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">imshow</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -3509,7 +3538,7 @@ an extrapolated value. Default is ‘constant’.</p>
 <dd class="field-odd"><dl>
 <dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.visualization.wcsaxes.WCSAxes.html#astropy.visualization.wcsaxes.WCSAxes" title="(in Astropy v6.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WCSAxes</span></code></a>, optional</span></dt><dd><p>WCS axis object to plot on. Default is None.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf" title="(in Matplotlib v3.8.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contourf</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.contourf.html#matplotlib.pyplot.contourf" title="(in Matplotlib v3.8.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">contourf</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
@@ -3646,6 +3675,34 @@ the map with a single bin. Default is False.</p>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
 <dt><strong>map</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></span></dt><dd><p>The map with axes re-ordered.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.maps.WcsNDMap.reproject_by_image">
+<span class="sig-name descname"><span class="pre">reproject_by_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">geom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserve_counts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">precision_factor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.maps.WcsNDMap.reproject_by_image" title="Permalink to this definition">#</a></dt>
+<dd><p>Reproject each image of a ND map to input 2d geometry.</p>
+<p>For large maps this method is faster than <a class="reference internal" href="#gammapy.maps.WcsNDMap.reproject_to_geom" title="gammapy.maps.WcsNDMap.reproject_to_geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reproject_to_geom</span></code></a>.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>geom</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Geom.html#gammapy.maps.Geom" title="gammapy.maps.Geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Geom</span></code></a></span></dt><dd><p>Target slice geometry in 2D.</p>
+</dd>
+<dt><strong>preserve_counts</strong><span class="classifier">bool, optional</span></dt><dd><p>Preserve the integral over each bin. This should be True
+if the map is an integral quantity (e.g. counts) and False if
+the map is a differential quantity (e.g. intensity). Default is False.</p>
+</dd>
+<dt><strong>precision_factor</strong><span class="classifier">int, optional</span></dt><dd><p>Minimal factor between the bin size of the output map and the oversampled base map.
+Used only for the oversampling method. Default is 10.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>output_map</strong><span class="classifier"><a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a></span></dt><dd><p>Reprojected Map.</p>
 </dd>
 </dl>
 </dd>

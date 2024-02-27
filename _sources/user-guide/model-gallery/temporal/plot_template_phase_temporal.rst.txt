@@ -104,7 +104,7 @@ Here is an example YAML file using the model:
                 value: 2.0
             -   name: amplitude
                 value: 1.0e-12
-                unit: TeV-1 s-1 cm-2
+                unit: cm-2 s-1 TeV-1
             -   name: reference
                 value: 1.0
                 unit: TeV
@@ -126,7 +126,11 @@ Here is an example YAML file using the model:
                 value: 0.0
                 unit: s-3
             scale: utc
-            filename: /home/feijen/gammapy-datasets/1.1rc1/tests/phasecurve_LSI_DC.fits
+            filename: /home/feijen/gammapy-datasets/dev/tests/phasecurve_LSI_DC.fits
+    metadata:
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:33.984794'
+        origin: null
 
 
 

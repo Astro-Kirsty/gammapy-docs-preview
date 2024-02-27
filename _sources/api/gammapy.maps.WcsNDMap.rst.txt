@@ -22,7 +22,6 @@ WcsNDMap
 
    .. autosummary::
 
-      ~WcsNDMap.apply_edisp
       ~WcsNDMap.binary_dilate
       ~WcsNDMap.binary_erode
       ~WcsNDMap.coadd
@@ -58,6 +57,7 @@ WcsNDMap
       ~WcsNDMap.iter_by_axis
       ~WcsNDMap.iter_by_image
       ~WcsNDMap.iter_by_image_data
+      ~WcsNDMap.iter_by_image_index
       ~WcsNDMap.mask_contains_region
       ~WcsNDMap.mask_nearest_position
       ~WcsNDMap.normalize
@@ -71,6 +71,7 @@ WcsNDMap
       ~WcsNDMap.reduce_over_axes
       ~WcsNDMap.rename_axes
       ~WcsNDMap.reorder_axes
+      ~WcsNDMap.reproject_by_image
       ~WcsNDMap.reproject_to_geom
       ~WcsNDMap.resample
       ~WcsNDMap.resample_axis
@@ -104,7 +105,6 @@ WcsNDMap
 
    .. rubric:: Methods Documentation
 
-   .. automethod:: apply_edisp
    .. automethod:: binary_dilate
    .. automethod:: binary_erode
    .. automethod:: coadd
@@ -140,6 +140,7 @@ WcsNDMap
    .. automethod:: iter_by_axis
    .. automethod:: iter_by_image
    .. automethod:: iter_by_image_data
+   .. automethod:: iter_by_image_index
    .. automethod:: mask_contains_region
    .. automethod:: mask_nearest_position
    .. automethod:: normalize
@@ -153,6 +154,7 @@ WcsNDMap
    .. automethod:: reduce_over_axes
    .. automethod:: rename_axes
    .. automethod:: reorder_axes
+   .. automethod:: reproject_by_image
    .. automethod:: reproject_to_geom
    .. automethod:: resample
    .. automethod:: resample_axis

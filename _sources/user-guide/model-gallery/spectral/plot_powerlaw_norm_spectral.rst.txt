@@ -133,8 +133,8 @@ Here is an example YAML file using the model:
                     unit: TeV
             operator: mul
     metadata:
-        creator: Gammapy 1.2.dev1423+gc6103d165.d20231211
-        date: '2023-12-11 09:34:24.567'
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:30.646643'
         origin: null
 
 

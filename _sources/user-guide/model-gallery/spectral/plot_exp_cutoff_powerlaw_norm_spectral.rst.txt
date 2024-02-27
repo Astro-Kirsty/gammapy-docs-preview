@@ -77,7 +77,7 @@ Here is an example plot of the model:
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1364: GammapyDeprecationWarning: The default index value changed from 1.5 to 0 since v1.2
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1367: GammapyDeprecationWarning: The default index value changed from 1.5 to 0 since v1.2
       warnings.warn(
 
 
@@ -147,8 +147,8 @@ Here is an example YAML file using the model:
                     value: 1.0
             operator: mul
     metadata:
-        creator: Gammapy 1.2.dev1423+gc6103d165.d20231211
-        date: '2023-12-11 09:34:23.941'
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:27.820895'
         origin: null
 
 

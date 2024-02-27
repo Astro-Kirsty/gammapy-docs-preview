@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -641,16 +641,13 @@ This operation create a new <a class="reference internal" href="../../../api/gam
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>CompoundSpectralModel
     Component 1 : TemplateSpectralModel
 
-  type   name   value    unit   error   min max frozen is_norm link prior
--------- ---- ---------- ---- --------- --- --- ------ ------- ---- -----
-spectral norm 1.0000e+00      0.000e+00 nan nan   True    True       None
     Component 2 : PowerLawNormSpectralModel
 
-  type      name     value    unit   error   min max frozen is_norm link prior
--------- --------- ---------- ---- --------- --- --- ------ ------- ---- -----
-spectral      norm 2.0000e+00      0.000e+00 nan nan  False    True       None
-spectral      tilt 0.0000e+00      0.000e+00 nan nan   True   False       None
-spectral reference 1.0000e+00  TeV 0.000e+00 nan nan   True   False       None
+type    name     value    unit   error   min max frozen is_norm link prior
+---- --------- ---------- ---- --------- --- --- ------ ------- ---- -----
+          norm 2.0000e+00      0.000e+00 nan nan  False    True
+          tilt 0.0000e+00      0.000e+00 nan nan   True   False
+     reference 1.0000e+00  TeV 0.000e+00 nan nan   True   False
     Operator : mul
 </pre></div>
 </div>
@@ -669,9 +666,7 @@ spectral reference 1.0000e+00  TeV 0.000e+00 nan nan   True   False       None
     type: SkyModel
     spectral:
         type: TemplateSpectralModel
-        parameters:
-        -   name: norm
-            value: 1.0
+        parameters: []
         energy:
             data:
             - 1000000.0
@@ -685,7 +680,11 @@ spectral reference 1.0000e+00  TeV 0.000e+00 nan nan   True   False       None
             - 2.0e-38
             - 8.8e-39
             - 3.9e-39
-            unit: 1 / (MeV s cm2)
+            unit: 1 / (cm2 MeV s)
+metadata:
+    creator: Gammapy 1.2.dev1813+g9f8503aa9
+    date: &#39;2024-02-01T11:54:32.185030&#39;
+    origin: null
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-user-guide-model-gallery-spectral-plot-template-spectral-py">

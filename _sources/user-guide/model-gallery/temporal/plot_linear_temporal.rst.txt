@@ -104,7 +104,7 @@ Here is an example YAML file using the model:
                 value: 2.0
             -   name: amplitude
                 value: 1.0e-12
-                unit: TeV-1 s-1 cm-2
+                unit: cm-2 s-1 TeV-1
             -   name: reference
                 value: 1.0
                 unit: TeV
@@ -117,9 +117,13 @@ Here is an example YAML file using the model:
                 value: 0.5
                 unit: d-1
             -   name: t_ref
-                value: 60247.46727823366
+                value: 60341.39621649707
                 unit: d
             scale: utc
+    metadata:
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:33.198340'
+        origin: null
 
 
 

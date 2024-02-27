@@ -188,7 +188,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -1269,7 +1269,7 @@ function checkPageExistsAndRedirect(event) {
             <span class="n">spectral_model</span><span class="o">=</span><span class="n">spectral_model</span><span class="p">,</span> <span class="n">spatial_model</span><span class="o">=</span><span class="n">spatial_model</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span>
         <span class="p">)</span></div>
 
-    <span class="k">def</span> <span class="nf">to_template_spectral_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="DatasetModels.to_template_spectral_model"><a class="viewcode-back" href="../../../../api/gammapy.modeling.models.DatasetModels.html#gammapy.modeling.models.DatasetModels.to_template_spectral_model">[docs]</a>    <span class="k">def</span> <span class="nf">to_template_spectral_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Merge a list of models into a single `~gammapy.modeling.models.TemplateSpectralModel`.</span>
 
 <span class="sd">        For each model the spatial component is integrated over the given geometry where the mask is true</span>
@@ -1303,7 +1303,7 @@ function checkPageExistsAndRedirect(event) {
             <span class="n">spatial_integ</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">spatial_integ</span><span class="o">.</span><span class="n">data</span><span class="p">)]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
             <span class="n">dnde</span> <span class="o">*=</span> <span class="n">masked_integ</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="n">spatial_integ</span><span class="o">.</span><span class="n">unit</span>
             <span class="n">values</span> <span class="o">+=</span> <span class="n">dnde</span>
-        <span class="k">return</span> <span class="n">TemplateSpectralModel</span><span class="p">(</span><span class="n">energy</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">TemplateSpectralModel</span><span class="p">(</span><span class="n">energy</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span></div>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">positions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>

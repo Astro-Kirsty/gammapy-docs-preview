@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -622,10 +622,10 @@ to download the full example code or to run this example in your browser via Bin
 <span class="n">model</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../../_images/sphx_glr_plot_template_001.png" srcset="../../../_images/sphx_glr_plot_template_001.png" alt="plot template" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/feijen/micromamba/envs/gammapy-dev/lib/python3.9/site-packages/astropy/wcs/wcs.py:551: FITSFixedWarning: RADECSYS= &#39;FK5&#39;
+<img src="../../../_images/sphx_glr_plot_template_001.png" srcset="../../../_images/sphx_glr_plot_template_001.png" alt="plot template" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/wcs/wcs.py:551: FITSFixedWarning: RADECSYS= &#39;FK5&#39;
 the RADECSYS keyword is deprecated, use RADESYSa.
   wcsprm = _wcs.Wcsprm(
-/home/feijen/micromamba/envs/gammapy-dev/lib/python3.9/site-packages/astropy/wcs/wcs.py:819: FITSFixedWarning: &#39;celfix&#39; made the change &#39;Success&#39;.
+/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/wcs/wcs.py:803: FITSFixedWarning: &#39;celfix&#39; made the change &#39;Success&#39;.
   warnings.warn(
 </pre></div>
 </div>
@@ -653,17 +653,27 @@ components:
             value: 2.0
         -   name: amplitude
             value: 1.0e-12
-            unit: TeV-1 s-1 cm-2
+            unit: cm-2 s-1 TeV-1
         -   name: reference
             value: 1.0
             unit: TeV
     spatial:
         type: TemplateSpatialModel
         frame: fk5
-        parameters: []
-        filename: /home/feijen/gammapy-datasets/1.1rc1/catalogs/fermi/Extended_archive_v18/Templates/RXJ1713_2016_250GeV.fits
+        parameters:
+        -   name: lon_0
+            value: 258.388
+            unit: deg
+        -   name: lat_0
+            value: -39.762199399999986
+            unit: deg
+        filename: /home/feijen/gammapy-datasets/dev/catalogs/fermi/Extended_archive_v18/Templates/RXJ1713_2016_250GeV.fits
         normalize: true
         unit: 1 / sr
+metadata:
+    creator: Gammapy 1.2.dev1813+g9f8503aa9
+    date: &#39;2024-02-01T11:54:24.807950&#39;
+    origin: null
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-user-guide-model-gallery-spatial-plot-template-py">

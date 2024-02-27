@@ -174,34 +174,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1423+gc6103d165.d20231211 
+            version                : 1.2.dev1721+g6c725d50c.d20240227 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.2     
-            scipy                  : 1.11.4     
+            numpy                  : 1.26.4     
+            scipy                  : 1.12.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.3      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.3      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -879,6 +879,8 @@ look at the event’s properties:
         norm                          :      5.000   +/-    0.00             
         tilt                  (frozen):      0.000                   
         reference             (frozen):      1.000       TeV         
+        lon_0                 (frozen):      0.000       deg         
+        lat_0                 (frozen):     -0.062       deg         
 
     Component 1: FoVBackgroundModel
 
@@ -985,20 +987,14 @@ observation:
 
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/utils/random/inverse_cdf.py:36: RuntimeWarning: invalid value encountered in divide
       pdf = pdf.ravel() / pdf.sum()
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/quantity.py:673: RuntimeWarning: divide by zero encountered in divide
-      result = super().__array_ufunc__(function, method, *arrays, **kwargs)
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/quantity.py:673: RuntimeWarning: invalid value encountered in divide
       result = super().__array_ufunc__(function, method, *arrays, **kwargs)
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/utils/random/inverse_cdf.py:36: RuntimeWarning: invalid value encountered in divide
       pdf = pdf.ravel() / pdf.sum()
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/quantity.py:673: RuntimeWarning: divide by zero encountered in divide
-      result = super().__array_ufunc__(function, method, *arrays, **kwargs)
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/quantity.py:673: RuntimeWarning: invalid value encountered in divide
       result = super().__array_ufunc__(function, method, *arrays, **kwargs)
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/utils/random/inverse_cdf.py:36: RuntimeWarning: invalid value encountered in divide
       pdf = pdf.ravel() / pdf.sum()
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/quantity.py:673: RuntimeWarning: divide by zero encountered in divide
-      result = super().__array_ufunc__(function, method, *arrays, **kwargs)
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/quantity.py:673: RuntimeWarning: invalid value encountered in divide
       result = super().__array_ufunc__(function, method, *arrays, **kwargs)
 
@@ -1030,12 +1026,12 @@ You can now load the event list and the corresponding IRFs with
 
  .. code-block:: none
 
-    OBS_ID    TSTART      TSTOP          ONTIME      ... TIMEUNIT TIMESYS TIMEREF
-                s           s              s         ...                         
-    ------ ----------- ----------- ----------------- ... -------- ------- -------
-         2 631177205.0 631180805.0 3599.999999999997 ...        s     utc   LOCAL
-         1 631170005.0 631173605.0 3600.000000000002 ...        s     utc   LOCAL
-         0 631155605.0 631159205.0 3600.000000000006 ...        s     utc   LOCAL
+    OBS_ID    TSTART      TSTOP          ONTIME      ... MJDREFF TIMEUNIT TIMESYS TIMEREF
+                s           s              s         ...                                 
+    ------ ----------- ----------- ----------------- ... ------- -------- ------- -------
+         2 631177205.0 631180805.0 3599.999999999997 ...     0.0        s     utc   LOCAL
+         1 631170005.0 631173605.0 3600.000000000002 ...     0.0        s     utc   LOCAL
+         0 631155605.0 631159205.0 3600.000000000006 ...     0.0        s     utc   LOCAL
 
 
 
@@ -1082,7 +1078,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  22.113 seconds)
+   **Total running time of the script:** ( 0 minutes  16.526 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_event_sampling.py:

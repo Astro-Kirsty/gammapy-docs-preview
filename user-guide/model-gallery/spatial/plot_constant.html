@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -644,13 +644,17 @@ to download the full example code or to run this example in your browser via Bin
             value: 2.0
         -   name: amplitude
             value: 1.0e-12
-            unit: TeV-1 s-1 cm-2
+            unit: cm-2 s-1 TeV-1
         -   name: reference
             value: 1.0
             unit: TeV
     spatial:
         type: ConstantSpatialModel
         parameters: []
+metadata:
+    creator: Gammapy 1.2.dev1813+g9f8503aa9
+    date: &#39;2024-02-01T11:54:22.325943&#39;
+    origin: null
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-user-guide-model-gallery-spatial-plot-constant-py">

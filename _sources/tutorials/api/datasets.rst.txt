@@ -103,34 +103,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1423+gc6103d165.d20231211 
+            version                : 1.2.dev1721+g6c725d50c.d20240227 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.2     
-            scipy                  : 1.11.4     
+            numpy                  : 1.26.4     
+            scipy                  : 1.12.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.3      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.3      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -297,7 +297,7 @@ To see the geometry of each map, we can use:
 
  .. code-block:: none
 
-    {'geom': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f18284b2be0>, 'geom_exposure': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f18181898e0>, 'geom_psf': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f1818189d60>, 'geom_edisp': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f181a376a30>}
+    {'geom': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f01851c43d0>, 'geom_exposure': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f018610aa90>, 'geom_psf': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f0187f8a5e0>, 'geom_edisp': <gammapy.maps.wcs.geom.WcsGeom object at 0x7f0186171df0>}
 
 
 
@@ -633,7 +633,7 @@ Printing the dataset will now show the model components:
       Number of fit bins              : 691680 
 
       Fit statistic type              : cash
-      Fit statistic value (-2 log(L)) : 424648.57
+      Fit statistic value (-2 log(L)) : 424649.33
 
       Number of models                : 2 
       Number of parameters            : 8
@@ -1096,7 +1096,7 @@ preserved during the down-sampling:
       Number of fit bins              : 67824 
 
       Fit statistic type              : cash
-      Fit statistic value (-2 log(L)) : 44317.66
+      Fit statistic value (-2 log(L)) : 44318.32
 
       Number of models                : 2 
       Number of parameters            : 8
@@ -1344,8 +1344,53 @@ by default, masks the upper limit points.
 
  .. code-block:: none
 
-    [ True  True  True  True  True  True  True  True  True  True  True  True
-      True  True  True  True  True False  True False False  True False False]
+    [[[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[ True]]
+
+     [[False]]
+
+     [[ True]]
+
+     [[False]]
+
+     [[False]]
+
+     [[ True]]
+
+     [[False]]
+
+     [[False]]]
 
 
 
@@ -1496,11 +1541,11 @@ collecting all the information from the individual calls to
 
  .. code-block:: none
 
-         name     counts     excess    ... n_fit_bins stat_type      stat_sum    
-                                       ...                                       
-    ------------- ------ ------------- ... ---------- --------- -----------------
-    dataset-empty      0           0.0 ...          0      cash               nan
-      dataset-cta 104317 12809.3046875 ...      67824      cash 44317.66107365424
+         name     counts     excess    ... n_fit_bins stat_type      stat_sum     
+                                       ...                                        
+    ------------- ------ ------------- ... ---------- --------- ------------------
+    dataset-empty      0           0.0 ...          0      cash                nan
+      dataset-cta 104317 12809.3046875 ...      67824      cash 44318.324424288934
     ['dataset-empty', 'dataset-cta']
 
 
@@ -1780,8 +1825,8 @@ Now we can stack all datasets using `~gammapy.datasets.Datasets.stack_reduce()`:
       Number of free parameters       : 0
 
       Total counts_off                : 645 
-      Acceptance                      : 80 
-      Acceptance off                  : 2016 
+      Acceptance                      : 43 
+      Acceptance off                  : 1149 
 
 
 
@@ -1818,7 +1863,7 @@ Or slice all datasets by a given energy range:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  13.347 seconds)
+   **Total running time of the script:** ( 0 minutes  12.143 seconds)
 
 
 .. _sphx_glr_download_tutorials_api_datasets.py:

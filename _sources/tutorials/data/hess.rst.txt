@@ -111,14 +111,14 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1423+gc6103d165.d20231211 
+            version                : 1.2.dev1813+g9f8503aa9 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.2     
-            scipy                  : 1.11.4     
+            numpy                  : 1.26.3     
+            scipy                  : 1.12.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
@@ -128,17 +128,17 @@ Check setup
             matplotlib             : 3.8.2      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.0     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.1      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -178,7 +178,7 @@ Create and get info on the data store
 
     Data store:
     HDU index table:
-    BASE_DIR: /home/feijen/gammapy-datasets/1.1rc1/hess-dl3-dr1
+    BASE_DIR: /home/feijen/gammapy-datasets/dev/hess-dl3-dr1
     Rows: 630
     OBS_ID: 20136 -- 47829
     HDU_TYPE: ['aeff', 'bkg', 'edisp', 'events', 'gti', 'psf']

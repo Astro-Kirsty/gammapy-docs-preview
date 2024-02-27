@@ -76,9 +76,9 @@ Here is an example plot of the model:
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1671: GammapyDeprecationWarning: The default alpha value changed from 2 to 0 since v1.2
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1675: GammapyDeprecationWarning: The default alpha value changed from 2 to 0 since v1.2
       warnings.warn(
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1677: GammapyDeprecationWarning: The default beta value changed from 1 to 0 since v1.2
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1681: GammapyDeprecationWarning: The default beta value changed from 1 to 0 since v1.2
       warnings.warn(
 
 
@@ -145,8 +145,8 @@ Here is an example YAML file using the model:
                     value: 0.0
             operator: mul
     metadata:
-        creator: Gammapy 1.2.dev1423+gc6103d165.d20231211
-        date: '2023-12-11 09:34:24.255'
+        creator: Gammapy 1.2.dev1813+g9f8503aa9
+        date: '2024-02-01T11:54:28.789990'
         origin: null
 
 

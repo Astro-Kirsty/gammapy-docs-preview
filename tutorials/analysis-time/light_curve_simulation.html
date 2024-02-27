@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -671,13 +671,13 @@ source model</p></li>
 
 Gammapy package:
 
-        version                : 1.2.dev1721+g6c725d50c
+        version                : 1.2.dev1721+g6c725d50c.d20240227
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.26.3
+        numpy                  : 1.26.4
         scipy                  : 1.12.0
         astropy                : 5.2.2
         regions                : 0.8
@@ -685,15 +685,15 @@ Other packages:
         yaml                   : 6.0.1
         IPython                : 8.18.1
         jupyterlab             : not installed
-        matplotlib             : 3.8.2
+        matplotlib             : 3.8.3
         pandas                 : not installed
         healpy                 : 1.16.6
-        iminuit                : 2.24.0
+        iminuit                : 2.25.2
         sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : 2.9.1
+        ray                    : 2.9.3
 
 
 Gammapy environment variables:
@@ -758,13 +758,13 @@ symmetrical sky position from which background can be estimated.</p>
 <span class="n">display</span><span class="p">(</span><span class="n">model_simu</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   ... frozen is_norm link prior
----- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-         index 3.0000e+00                0.000e+00 ...  False   False
-     amplitude 1.0000e-11 cm-2 s-1 TeV-1 0.000e+00 ...  False    True
-     reference 1.0000e+00            TeV 0.000e+00 ...   True   False
-            t0 6.0000e+00              h 0.000e+00 ...  False   False
-         t_ref 5.8909e+04              d 0.000e+00 ...   True   False
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   min max frozen is_norm link prior
+---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
+         index 3.0000e+00                0.000e+00 nan nan  False   False
+     amplitude 1.0000e-11 cm-2 s-1 TeV-1 0.000e+00 nan nan  False    True
+     reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False
+            t0 6.0000e+00              h 0.000e+00 nan nan  False   False
+         t_ref 5.8909e+04              d 0.000e+00 nan nan   True   False
 </pre></div>
 </div>
 <p>Now, define the start and observation livetime wrt to the reference
@@ -810,16 +810,16 @@ quick look into our datasets.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>   name   counts       excess       ... n_fit_bins stat_type       stat_sum
                                     ...
 --------- ------ ------------------ ... ---------- --------- -------------------
-dataset-0    803  782.6812133789062 ...          9      cash                 nan
-dataset-1    343 333.76419591747674 ...          9      cash -2137.8355245296075
-dataset-2    277  267.3947637541758 ...          9      cash -1621.1516453231745
-dataset-3    340  325.2227134679628 ...          9      cash -2160.9180047700447
-dataset-4    198 183.22271346796282 ...          9      cash -1032.5497227809806
-dataset-5    213 194.52839183495354 ...          9      cash   -1115.89777883496
-dataset-6     39  24.22271346796283 ...          9      cash  -68.30722031465997
-dataset-7     45  25.78952750835169 ...          9      cash -114.15785304100467
-dataset-8     38 22.114416978060046 ...          9      cash  -66.67748318926016
-dataset-9     37 19.636688324856333 ...          9      cash  -52.45318674162799
+dataset-0    823  802.6812133789062 ...          9      cash                 nan
+dataset-1    344 334.76419591747674 ...          9      cash -2169.0423719975047
+dataset-2    307  297.3947637541758 ...          9      cash  -1886.419748248986
+dataset-3    329  314.2227134679628 ...          9      cash  -2013.544949773633
+dataset-4    201 186.22271346796282 ...          9      cash  -1000.271669511889
+dataset-5    190 171.52839183495354 ...          9      cash  -937.7721976188909
+dataset-6     30  15.22271346796283 ...          9      cash  -53.67554015288321
+dataset-7     34  14.78952750835169 ...          9      cash  -63.17585728361764
+dataset-8     39 23.114416978060046 ...          9      cash  -96.39845916439677
+dataset-9     31 13.636688324856333 ...          9      cash  -50.82988698737346
 </pre></div>
 </div>
 </section>
@@ -900,10 +900,10 @@ that <code class="xref py py-obj docutils literal notranslate"><span class="pre"
   Name                            : dataset_lc
 
   Number of total flux points     : 30
-  Number of fit bins              : 28
+  Number of fit bins              : 23
 
   Fit statistic type              : chi2
-  Fit statistic value (-2 log(L)) : 1515.41
+  Fit statistic value (-2 log(L)) : 1524.06
 
   Number of models                : 1
   Number of parameters            : 5
@@ -930,13 +930,13 @@ that <code class="xref py py-obj docutils literal notranslate"><span class="pre"
 <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   ... frozen is_norm link prior
----- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-         index 3.0158e+00                2.792e-02 ...  False   False
-     amplitude 9.6207e-12 cm-2 s-1 TeV-1 3.095e-13 ...  False    True
-     reference 1.0000e+00            TeV 0.000e+00 ...   True   False
-            t0 6.3392e+00              h 2.164e-01 ...  False   False
-         t_ref 5.8909e+04              d 0.000e+00 ...   True   False
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   min max frozen is_norm link prior
+---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
+         index 2.9643e+00                2.731e-02 nan nan  False   False
+     amplitude 1.0219e-11 cm-2 s-1 TeV-1 3.346e-13 nan nan  False    True
+     reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False
+            t0 5.9853e+00              h 2.209e-01 nan nan  False   False
+         t_ref 5.8909e+04              d 0.000e+00 nan nan   True   False
 </pre></div>
 </div>
 <p>Now let’s plot model and data. We plot only the normalisation of the
@@ -972,13 +972,13 @@ fitting in Gammapy, see <a class="reference internal" href="../analysis-3d/analy
 <span class="n">datasets</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="n">model2</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   ... frozen is_norm link prior
----- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-         index 2.0000e+00                0.000e+00 ...  False   False
-     amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True
-     reference 1.0000e+00            TeV 0.000e+00 ...   True   False
-            t0 1.0000e+01              h 0.000e+00 ...  False   False
-         t_ref 5.8909e+04              d 0.000e+00 ...   True   False
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   min max frozen is_norm link prior
+---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
+         index 2.0000e+00                0.000e+00 nan nan  False   False
+     amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False    True
+     reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False
+            t0 1.0000e+01              h 0.000e+00 nan nan  False   False
+         t_ref 5.8909e+04              d 0.000e+00 nan nan   True   False
 </pre></div>
 </div>
 <p>Do a joint fit</p>
@@ -988,13 +988,13 @@ fitting in Gammapy, see <a class="reference internal" href="../analysis-3d/analy
 <span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   ... frozen is_norm link prior
----- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-         index 3.0054e+00                3.176e-02 ...  False   False
-     amplitude 9.6412e-12 cm-2 s-1 TeV-1 3.277e-13 ...  False    True
-     reference 1.0000e+00            TeV 0.000e+00 ...   True   False
-            t0 6.4082e+00              h 2.153e-01 ...  False   False
-         t_ref 5.8909e+04              d 0.000e+00 ...   True   False
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   min max frozen is_norm link prior
+---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
+         index 2.9472e+00                3.080e-02 nan nan  False   False
+     amplitude 1.0495e-11 cm-2 s-1 TeV-1 3.572e-13 nan nan  False    True
+     reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False
+            t0 5.8731e+00              h 1.986e-01 nan nan  False   False
+         t_ref 5.8909e+04              d 0.000e+00 nan nan   True   False
 </pre></div>
 </div>
 <p>We see that the fitted parameters are consistent between fitting flux
@@ -1010,7 +1010,7 @@ the <a class="reference internal" href="light_curve_flare.html"><span class="doc
 Use a combination of a Gaussian and Exponential flare profiles.</p></li>
 <li><p>Do a joint fitting of the datasets.</p></li>
 </ol>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.111 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  15.892 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-analysis-time-light-curve-simulation-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-time/light_curve_simulation.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo3.svg" width="150px" /></a>

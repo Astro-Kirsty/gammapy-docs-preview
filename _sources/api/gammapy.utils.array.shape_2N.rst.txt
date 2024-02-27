@@ -1,6 +1,0 @@
-shape_2N
-========
-
-.. currentmodule:: gammapy.utils.array
-
-.. autofunction:: shape_2N

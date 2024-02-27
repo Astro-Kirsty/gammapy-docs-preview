@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -643,34 +643,34 @@ catalog and source that does not have that information will return
 
 Gammapy package:
 
-        version                : 1.2.dev978+ge43ec2735.d20231107
+        version                : 1.2.dev1813+g9f8503aa9
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.26.1
-        scipy                  : 1.11.3
+        numpy                  : 1.26.3
+        scipy                  : 1.12.0
         astropy                : 5.2.2
-        regions                : 0.7
+        regions                : 0.8
         click                  : 8.1.7
         yaml                   : 6.0.1
-        IPython                : 8.17.2
+        IPython                : 8.18.1
         jupyterlab             : not installed
-        matplotlib             : 3.8.1
+        matplotlib             : 3.8.2
         pandas                 : not installed
         healpy                 : 1.16.6
-        iminuit                : 2.24.0
+        iminuit                : 2.25.0
         sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : 2.8.0
+        ray                    : 2.9.1
 
 
 Gammapy environment variables:
 
-        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1
+        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev
 </pre></div>
 </div>
 </section>
@@ -726,9 +726,7 @@ example here we load an older version of 4FGL catalog:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">catalog</span><span class="o">.</span><span class="n">table</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: &#39;_&#39; did not parse as fits unit: At col 0, Unit &#39;_&#39; not supported by the FITS standard.  If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
-  warnings.warn(msg, UnitsWarning)
-Number of sources : 5066
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Number of sources : 5066
 </pre></div>
 </div>
 <p>Alternatively you can load a catalog by name via
@@ -1057,10 +1055,10 @@ this section.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PointSpatialModel
 
-  type   name    value    unit   error   ...    max    frozen is_norm link prior
-------- ----- ----------- ---- --------- ... --------- ------ ------- ---- -----
-spatial lon_0  3.2971e+02  deg 3.735e-03 ...       nan  False   False       None
-spatial lat_0 -3.0225e+01  deg 3.227e-03 ... 9.000e+01  False   False       None
+type  name    value    unit   error   ...    max    frozen is_norm link prior
+---- ----- ----------- ---- --------- ... --------- ------ ------- ---- -----
+     lon_0  3.2971e+02  deg 3.735e-03 ...       nan  False   False
+     lat_0 -3.0225e+01  deg 3.227e-03 ... 9.000e+01  False   False
 </pre></div>
 </div>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="p">)</span>
@@ -1068,12 +1066,12 @@ spatial lat_0 -3.0225e+01  deg 3.227e-03 ... 9.000e+01  False   False       None
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LogParabolaSpectralModel
 
-  type      name     value         unit      ... frozen is_norm link prior
--------- --------- ---------- -------------- ... ------ ------- ---- -----
-spectral amplitude 1.2591e-11 cm-2 MeV-1 s-1 ...  False    True       None
-spectral reference 1.1610e+03            MeV ...   True   False       None
-spectral     alpha 1.7733e+00                ...  False   False       None
-spectral      beta 4.1893e-02                ...  False   False       None
+type    name     value         unit        error   ... frozen is_norm link prior
+---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+     amplitude 1.2591e-11 cm-2 MeV-1 s-1 1.317e-13 ...  False    True
+     reference 1.1610e+03            MeV 0.000e+00 ...   True   False
+         alpha 1.7733e+00                1.029e-02 ...  False   False
+          beta 4.1893e-02                3.743e-03 ...  False   False
 </pre></div>
 </div>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">energy_bounds</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">MeV</span><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">GeV</span><span class="p">)</span>

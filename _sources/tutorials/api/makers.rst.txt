@@ -99,14 +99,14 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1423+gc6103d165.d20231211 
+            version                : 1.2.dev1813+g9f8503aa9 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.2     
-            scipy                  : 1.11.4     
+            numpy                  : 1.26.3     
+            scipy                  : 1.12.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
@@ -116,17 +116,17 @@ Check setup
             matplotlib             : 3.8.2      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.24.0     
+            iminuit                : 2.25.0     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
             emcee                  : 3.1.4      
             corner                 : 2.2.2      
-            ray                    : 2.8.0      
+            ray                    : 2.9.1      
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1 
+            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
 
 
 
@@ -175,7 +175,7 @@ object. This is illustrated in the following example:
     MapDataset
     ----------
 
-      Name                            : vzyWx6SQ 
+      Name                            : sBm6Mu8i 
 
       Total counts                    : 0 
       Total background counts         : 0.00
@@ -346,7 +346,7 @@ observational data using the `~gammapy.makers.MapDatasetMaker`:
     MapDataset
     ----------
 
-      Name                            : HXALwvmQ 
+      Name                            : tFLP4tW- 
 
       Total counts                    : 2016 
       Total background counts         : 1866.72
@@ -598,7 +598,7 @@ dataset per observation is stacked into a larger map.
     MapDataset
     ----------
 
-      Name                            : uGcYCtGs 
+      Name                            : L8zGmr0T 
 
       Total counts                    : 7972 
       Total background counts         : 7555.42
@@ -673,30 +673,30 @@ allow to use multiple processes on run.
     Dataset 0: 
 
       Type       : MapDataset
-      Name       : LoiuuDcA
+      Name       : 0Ag6upVi
       Instrument : HESS
-      Models     : ['LoiuuDcA-bkg']
+      Models     : ['0Ag6upVi-bkg']
 
     Dataset 1: 
 
       Type       : MapDataset
-      Name       : 7ybTClTH
+      Name       : oUVap-lo
       Instrument : HESS
-      Models     : ['7ybTClTH-bkg']
+      Models     : ['oUVap-lo-bkg']
 
     Dataset 2: 
 
       Type       : MapDataset
-      Name       : O5EMLTS7
+      Name       : eXXGt2mo
       Instrument : HESS
-      Models     : ['O5EMLTS7-bkg']
+      Models     : ['eXXGt2mo-bkg']
 
     Dataset 3: 
 
       Type       : MapDataset
-      Name       : xxdYbECk
+      Name       : o6DHmiNy
       Instrument : HESS
-      Models     : ['xxdYbECk-bkg']
+      Models     : ['o6DHmiNy-bkg']
 
 
 
@@ -958,7 +958,7 @@ use `get_by_coord`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  14.696 seconds)
+   **Total running time of the script:** ( 0 minutes  17.013 seconds)
 
 
 .. _sphx_glr_download_tutorials_api_makers.py:

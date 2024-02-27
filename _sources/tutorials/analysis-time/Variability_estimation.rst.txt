@@ -20,36 +20,43 @@
 
 Estimation of time variability in a lightcurve
 ==============================================
+
 Compute a series of time variability significance estimators for a lightcurve.
 
 Prerequisites
 -------------
 
-Understanding the light curve estimator, please refer to the :doc:`light curve notebook </tutorials/analysis-time/light_curve`.
-For more in-depth explanation on the creation of smaller observations for exploring time variability, refer to :doc:`light curve notebook </tutorials/analysis-time/light_curve_flare`
+Understanding the light curve estimator, please refer to the :doc:`/tutorials/analysis-time/light_curve` tutorial.
+For more in-depth explanation on the creation of smaller observations for exploring time variability, refer to the
+:doc:`/tutorials/analysis-time/light_curve_flare` tutorial.
 
 Context
 -------
-Frequently, after computing a lightcurve, we need to quantify its variability in the time domain, for example in the case of a flare, burst, decaying light curve in GRBs or heightened activity in general.
+Frequently, after computing a lightcurve, we need to quantify its variability in the time domain, for example
+in the case of a flare, burst, decaying light curve in GRBs or heightened activity in general.
 
 There are many ways to define the significance of the variability.
 
 **Objective: Estimate the level time variability in a lightcurve through different methods.**
 
 Proposed approach
--------------
-We will start by reading the pre-computed light curve for PKS 2155-304 that is stored in `$GAMMAPY_DATA` 
-To learn how to compute such an object, see the :doc:`light curve tutorial </tutorials/analysis-time/light_curve_flare`
+-----------------
 
-This tutorial will demonstrate how to compute different estimates which measure the significance of variability. These estimators range from basic ones that calculate the peak-to-trough variation, to more complex ones like fractional excess and point-to-point fractional variance, which consider the entire light curve. We also show an approach which utilises the change points inn Bayesian blocks as indicators of variability.
+We will start by reading the pre-computed light curve for PKS 2155-304 that is stored in `$GAMMAPY_DATA`
+To learn how to compute such an object, see the :doc:`/tutorials/analysis-time/light_curve_flare` tutorial.
 
-.. GENERATED FROM PYTHON SOURCE LINES 28-31
+This tutorial will demonstrate how to compute different estimates which measure the significance of variability.
+These estimators range from basic ones that calculate the peak-to-trough variation, to more complex ones like
+fractional excess and point-to-point fractional variance, which consider the entire light curve. We also show an
+approach which utilises the change points in Bayesian blocks as indicators of variability.
+
+.. GENERATED FROM PYTHON SOURCE LINES 37-40
 
 Setup
 -----
 As usual, we’ll start with some general imports…
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-43
+.. GENERATED FROM PYTHON SOURCE LINES 40-54
 
 .. code-block:: python3
 
@@ -57,6 +64,7 @@ As usual, we’ll start with some general imports…
 
     import numpy as np
     from astropy.stats import bayesian_blocks
+    from astropy.time import Time
     import matplotlib.pyplot as plt
     from gammapy.estimators import FluxPoints
     from gammapy.estimators.utils import (
@@ -64,6 +72,7 @@ As usual, we’ll start with some general imports…
         compute_lightcurve_fpp,
         compute_lightcurve_fvar,
     )
+    from gammapy.maps import TimeMapAxis
 
 
 
@@ -72,11 +81,11 @@ As usual, we’ll start with some general imports…
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 44-45
+.. GENERATED FROM PYTHON SOURCE LINES 55-56
 
-Load the light curve for the PKS 2155-304 flare directly from “$GAMMAPY_DATA/estimators”
+Load the light curve for the PKS 2155-304 flare directly from `$GAMMAPY_DATA/estimators`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-54
+.. GENERATED FROM PYTHON SOURCE LINES 56-65
 
 .. code-block:: python3
 
@@ -108,18 +117,24 @@ Load the light curve for the PKS 2155-304 flare directly from “$GAMMAPY_DATA/e
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 55-63
+.. GENERATED FROM PYTHON SOURCE LINES 66-80
 
 Methods to characterize variability
 -----------------------------------
- Amplitude maximum variation, relative variability amplitude and variability amplitude
+
+The three methods shown here are:
+
+-  amplitude maximum variation
+-  relative variability amplitude
+-  variability amplitude.
 
 The amplitude maximum variation is the simplest method to define variability (as described in
-[Boller et al., 2016](https://ui.adsabs.harvard.edu/abs/2016A&A...588A.103B/abstract)) as it just computes
+`Boller et al., 2016 <https://ui.adsabs.harvard.edu/abs/2016A&A...588A.103B/abstract>`__)
+as it just computes
 the level of tension between the lowest and highest measured fluxes in the lightcurve.
 This estimator requires fully Gaussian errors.
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-83
+.. GENERATED FROM PYTHON SOURCE LINES 80-100
 
 .. code-block:: python3
 
@@ -156,13 +171,13 @@ This estimator requires fully Gaussian errors.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-87
+.. GENERATED FROM PYTHON SOURCE LINES 101-104
 
 There are other methods based on the peak-to-trough difference to assess the variability in a lightcurve.
-Here we present as example the relative variability amplitude as presented in [Kovalev et al., 2004]
-(https://iopscience.iop.org/article/10.1086/497430):
+Here we present as example the relative variability amplitude as presented in
+`Kovalev et al., 2004 <https://iopscience.iop.org/article/10.1086/497430>`__:
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-102
+.. GENERATED FROM PYTHON SOURCE LINES 104-119
 
 .. code-block:: python3
 
@@ -194,11 +209,11 @@ Here we present as example the relative variability amplitude as presented in [K
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-104
+.. GENERATED FROM PYTHON SOURCE LINES 120-121
 
-And the variability amplitude as presented in [Heidt & Wagner, 1996](https://ui.adsabs.harvard.edu/abs/1996A%26A...305...42H/abstract):
+The variability amplitude as presented in `Heidt & Wagner, 1996 <https://ui.adsabs.harvard.edu/abs/1996A%26A...305...42H/abstract>`__ is:
 
-.. GENERATED FROM PYTHON SOURCE LINES 104-126
+.. GENERATED FROM PYTHON SOURCE LINES 121-143
 
 .. code-block:: python3
 
@@ -237,17 +252,17 @@ And the variability amplitude as presented in [Heidt & Wagner, 1996](https://ui.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 127-134
+.. GENERATED FROM PYTHON SOURCE LINES 144-151
 
 Fractional excess variance, point-to-point fractional variance and doubling/halving time
 -----------------------------------------------------------------------------------------
-The fractional excess variance as presented by
-[Vaughan et al., 2003](https://ui.adsabs.harvard.edu/abs/2003MNRAS.345.1271V/abstract)) is a simple but effective
+The fractional excess variance, as presented by
+`Vaughan et al., 2003 <https://ui.adsabs.harvard.edu/abs/2003MNRAS.345.1271V/abstract>`__, is a simple but effective
 method to assess the significance of a time variability feature in an object, for example an AGN flare.
 It is important to note that it requires Gaussian errors to be applicable.
 The excess variance computation is implemented in `~gammapy.estimators.utils`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 134-138
+.. GENERATED FROM PYTHON SOURCE LINES 151-155
 
 .. code-block:: python3
 
@@ -263,23 +278,23 @@ The excess variance computation is implemented in `~gammapy.estimators.utils`.
 
  .. code-block:: none
 
-        min_energy         max_energy    ...       fvar_err          significance  
-           TeV                TeV        ...                                       
-    ------------------ ----------------- ... -------------------- -----------------
-    0.5915030546513256 6.184989894219833 ... 0.017007098882380126 33.08275723795431
+        min_energy         max_energy           fvar              fvar_err          significance  
+           TeV                TeV                                                                 
+    ------------------ ----------------- ------------------ -------------------- -----------------
+    0.5915030546513256 6.184989894219833 0.5626417236476657 0.017007098882380126 33.08275723795431
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-144
+.. GENERATED FROM PYTHON SOURCE LINES 156-161
 
 A similar estimator is the point-to-point fractional variance, as defined by
-[Edelson et al., 2002](https://ui.adsabs.harvard.edu/abs/2002ApJ...568..610E/abstract)
+`Edelson et al., 2002 <https://ui.adsabs.harvard.edu/abs/2002ApJ...568..610E/abstract>`__,
 which samples the lightcurve on smaller time granularity.
 In general, the point-to-point fractional variance being higher than the fractional excess variance is indicative
 of the presence of very short timescale variability.
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-148
+.. GENERATED FROM PYTHON SOURCE LINES 161-165
 
 .. code-block:: python3
 
@@ -295,21 +310,21 @@ of the presence of very short timescale variability.
 
  .. code-block:: none
 
-        min_energy         max_energy    ...       fpp_err           significance   
-           TeV                TeV        ...                                        
-    ------------------ ----------------- ... -------------------- ------------------
-    0.5915030546513256 6.184989894219833 ... 0.017442923420188716 15.299572033482987
+        min_energy         max_energy           fpp               fpp_err           significance   
+           TeV                TeV                                                                  
+    ------------------ ----------------- ------------------ -------------------- ------------------
+    0.5915030546513256 6.184989894219833 0.2668692633417047 0.017442923420188716 15.299572033482987
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-152
+.. GENERATED FROM PYTHON SOURCE LINES 166-169
 
-The characteristic doubling and halving time, as introduced by
-[Brown, 2013](https://durham-repository.worktribe.com/output/1478453/) of the light curve can also be computed.
+The characteristic doubling and halving time of the light curve, as introduced by
+`Brown, 2013 <https://durham-repository.worktribe.com/output/1478453/>`__, can also be computed.
 This provides information on the shape of the variability feature, in particular how quickly it rises and falls.
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-156
+.. GENERATED FROM PYTHON SOURCE LINES 169-173
 
 .. code-block:: python3
 
@@ -325,24 +340,29 @@ This provides information on the shape of the variability feature, in particular
 
  .. code-block:: none
 
-        min_energy         max_energy    ...    halving_err      halving_coord  
-           TeV                TeV        ...         s                          
-    ------------------ ----------------- ... ----------------- -----------------
-    0.5915030546513256 6.184989894219833 ... 20.93582792770181 53946.00384472222
+        min_energy         max_energy       doublingtime   ...    halving_err      halving_coord  
+           TeV                TeV                s         ...         s                          
+    ------------------ ----------------- ----------------- ... ----------------- -----------------
+    0.5915030546513256 6.184989894219833 716.8519094661344 ... 20.93582792770181 53946.00384472222
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 157-163
+.. GENERATED FROM PYTHON SOURCE LINES 174-185
 
 Bayesian blocks
 ---------------
-The presence of temporal variability in a lightcurve can be assessed by using bayesian blocks ([reference
-paper](https://ui.adsabs.harvard.edu/abs/2013ApJ...764..167S/abstract)). A good and simple-to-use implementation of the algorithm is found in `astropy.stats`([documentation](https://docs.astropy.org/en/stable/api/astropy.stats.bayesian_blocks.html)). This implementation uses Gaussian statistics, as opposed to the [first introductory paper](https://iopscience.iop.org/article/10.1086/306064) which was based on Poissonian statistics.
+The presence of temporal variability in a lightcurve can be assessed by using bayesian blocks
+(`Scargle et al., 2013 <https://ui.adsabs.harvard.edu/abs/2013ApJ...764..167S/abstract>`__).
+A good and simple-to-use implementation of the algorithm is found in
+`astropy.stats.bayesian_blocks`.
+This implementation uses Gaussian statistics, as opposed to the `first introductory paper <https://iopscience.iop.org/article/10.1086/306064>`__
+which is based on Poissonian statistics.
 
-By passing the flux and error on the flux as `measures` to the method we can obtain the list of optimal bin edges defined by the bayesian blocks algorithm.
+By passing the flux and error on the flux as ``measures`` to the method we can obtain the list of optimal bin edges
+defined by the bayesian blocks algorithm.
 
-.. GENERATED FROM PYTHON SOURCE LINES 163-170
+.. GENERATED FROM PYTHON SOURCE LINES 185-192
 
 .. code-block:: python3
 
@@ -360,59 +380,12 @@ By passing the flux and error on the flux as `measures` to the method we can obt
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-172
+.. GENERATED FROM PYTHON SOURCE LINES 193-195
 
-We can visualize the difference between the original lightcurve and the rebin with bayesian blocks
+The result giving a significance estimation for variability in the lightcurve is the number of *change points*,
+i.e. the number of internal bin edges: if at least one change point is identified by the algorithm, there is significant variability.
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-200
-
-.. code-block:: python3
-
-
-    bayesian_flux = []
-    for tmin, tmax in zip(bayesian_edges[:-1], bayesian_edges[1:]):
-        mask = (time >= tmin) & (time <= tmax)
-        bayesian_flux.append(
-            np.average(
-                flux.flatten()[mask], weights=1 / (flux_err.flatten()[mask] ** 2)
-            ).value
-        )
-
-    xerr = np.diff(bayesian_edges) / 2
-    bayesian_x = bayesian_edges[:-1] + xerr
-
-    fig, ax = plt.subplots(
-        figsize=(8, 6),
-        gridspec_kw={"left": 0.16, "bottom": 0.2, "top": 0.98, "right": 0.98},
-    )
-    plt.plot(time, flux.flatten(), marker="+", linestyle="", color="teal")
-    plt.errorbar(
-        bayesian_x,
-        bayesian_flux,
-        xerr=np.diff(bayesian_edges) / 2,
-        linestyle="",
-        color="orange",
-    )
-    plt.ylim(bottom=0)
-    plt.show()
-
-
-
-
-.. image-sg:: /tutorials/analysis-time/images/sphx_glr_Variability_estimation_002.png
-   :alt: Variability estimation
-   :srcset: /tutorials/analysis-time/images/sphx_glr_Variability_estimation_002.png
-   :class: sphx-glr-single-img
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 201-202
-
-The result giving a significance estimation for variability in the lightcurve is the number of *change points*, i.e. the number of internal bin edges: if at least one change point is identified by the algorithm, there is significant variability.
-
-.. GENERATED FROM PYTHON SOURCE LINES 202-205
+.. GENERATED FROM PYTHON SOURCE LINES 195-199
 
 .. code-block:: python3
 
@@ -423,11 +396,53 @@ The result giving a significance estimation for variability in the lightcurve is
 
 
 
+
 .. rst-class:: sphx-glr-script-out
 
  .. code-block:: none
 
     7
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 200-203
+
+We can rebin the lightcurve to compute the one expected with bayesian edges
+First, we adjust the first and last bins of the bayesian_edges to coincide
+with the original light curve start and end points.
+
+.. GENERATED FROM PYTHON SOURCE LINES 203-218
+
+.. code-block:: python3
+
+
+    # create a new axis
+    axis_original = lc_1d.geom.axes["time"]
+    bayesian_edges[0] = axis_original.time_edges[0].value
+    bayesian_edges[-1] = axis_original.time_edges[-1].value
+    edges = Time(bayesian_edges, format="mjd", scale=axis_original.reference_time.scale)
+    axis_new = TimeMapAxis.from_time_edges(edges[:-1], edges[1:])
+
+    # rebin the lightcurve
+    resample = lc_1d.resample_axis(axis_new)
+
+    # plot the new lightcurve on top of the old one
+    ax = lc_1d.plot(label="original")
+    resample.plot(ax=ax, marker="s", label="rebinned")
+    plt.legend()
+
+
+.. rst-class:: sphx-glr-script-out
+
+.. code-block:: pytb
+
+    Traceback (most recent call last):
+      File "/home/feijen/Documents/github/gammapy/examples/tutorials/analysis-time/Variability_estimation.py", line 212, in <module>
+        resample = lc_1d.resample_axis(axis_new)
+      File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/estimators/points/core.py", line 843, in resample_axis
+        raise ValueError("Stat profiles not present, rebinning is not possible")
+    ValueError: Stat profiles not present, rebinning is not possible
 
 
 

@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c variable.
+            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -629,7 +629,7 @@ average responses in the ON region, we can set
 the IRFs are averaged over the entire region.</p>
 <p>In summary, we have to:</p>
 <ul class="simple">
-<li><p>Define an ON region (a <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a>) fully enclosing the
+<li><p>Define an ON region (a <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.SkyRegion.html#regions.SkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyRegion</span></code></a>) fully enclosing the
 source we want to study.</p></li>
 <li><p>Define a <a class="reference internal" href="../../api/gammapy.maps.RegionGeom.html#gammapy.maps.RegionGeom" title="gammapy.maps.RegionGeom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionGeom</span></code></a> with the ON region and the
 required energy range (in particular, beware of the true energy range).</p></li>
@@ -699,14 +699,14 @@ intermediate level API.</p>
 
 Gammapy package:
 
-        version                : 1.2.dev1423+gc6103d165.d20231211
+        version                : 1.2.dev1813+g9f8503aa9
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.26.2
-        scipy                  : 1.11.4
+        numpy                  : 1.26.3
+        scipy                  : 1.12.0
         astropy                : 5.2.2
         regions                : 0.8
         click                  : 8.1.7
@@ -716,17 +716,17 @@ Other packages:
         matplotlib             : 3.8.2
         pandas                 : not installed
         healpy                 : 1.16.6
-        iminuit                : 2.24.0
+        iminuit                : 2.25.0
         sherpa                 : 4.16.0
         naima                  : 0.10.0
         emcee                  : 3.1.4
         corner                 : 2.2.2
-        ray                    : 2.8.0
+        ray                    : 2.9.1
 
 
 Gammapy environment variables:
 
-        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/1.1rc1
+        GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev
 </pre></div>
 </div>
 </section>
@@ -749,7 +749,7 @@ source.</p>
 <h3>Select the ON region<a class="headerlink" href="#select-the-on-region" title="Permalink to this headline">#</a></h3>
 <p>Here we take a simple 1 degree circular region because it fits well with
 the morphology of RX J1713-3945. More complex regions could be used
-e.g. <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.EllipseSkyRegion.html#regions.EllipseSkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EllipseSkyRegion</span></code></a> or <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.RectangleSkyRegion.html#regions.RectangleSkyRegion" title="(in regions v0.9.dev12+g90c44ad)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectangleSkyRegion</span></code></a>.</p>
+e.g. <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.EllipseSkyRegion.html#regions.EllipseSkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EllipseSkyRegion</span></code></a> or <a class="reference external" href="https://astropy-regions.readthedocs.io/en/latest/api/regions.RectangleSkyRegion.html#regions.RectangleSkyRegion" title="(in regions v0.9.dev15+g6a895d4)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RectangleSkyRegion</span></code></a>.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_position</span> <span class="o">=</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="mf">347.3</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">)</span>
 <span class="n">radius</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;0.5 deg&quot;</span><span class="p">)</span>
 <span class="n">on_region</span> <span class="o">=</span> <span class="n">CircleSkyRegion</span><span class="p">(</span><span class="n">target_position</span><span class="p">,</span> <span class="n">radius</span><span class="p">)</span>
@@ -941,11 +941,11 @@ CovarianceResult
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">datasets</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">to_parameters_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span> model     type      name     value    ... frozen is_norm link prior
--------- -------- --------- ---------- ... ------ ------- ---- -----
-RXJ 1713 spectral     index 2.1102e+00 ...  False   False       None
-RXJ 1713 spectral amplitude 1.3576e-11 ...  False    True       None
-RXJ 1713 spectral reference 1.0000e+00 ...   True   False       None
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span> model   type    name     value         unit      ... frozen is_norm link prior
+-------- ---- --------- ---------- -------------- ... ------ ------- ---- -----
+RXJ 1713          index 2.1102e+00                ...  False   False
+RXJ 1713      amplitude 1.3576e-11 cm-2 s-1 TeV-1 ...  False    True
+RXJ 1713      reference 1.0000e+00            TeV ...   True   False
 </pre></div>
 </div>
 <p>Then plot the fit result to compare measured and expected counts. Rather
