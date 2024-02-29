@@ -192,7 +192,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
+            // this version, rather than using sphinx's 1.2.dev1722+gb61c8a564.d20240229 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -616,7 +616,7 @@ data.</p>
 
 Gammapy package:
 
-        version                : 1.2.dev1721+g6c725d50c.d20240227
+        version                : 1.2.dev1722+gb61c8a564.d20240229
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
@@ -1111,7 +1111,7 @@ generated:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">model_without_name</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0qXwLxv2
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>KhhKJwnE
 </pre></div>
 </div>
 <p>The individual components of the source model can be accessed using
@@ -1199,7 +1199,7 @@ existing FITS file:</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SkyModel
 
-  Name                      : Tc3OckNw
+  Name                      : vYFA6SVg
   Datasets names            : None
   Spectral model type       : PowerLawNormSpectralModel
   Spatial  model type       : TemplateSpatialModel
@@ -1238,18 +1238,18 @@ point), eg:</p>
 <span class="n">display</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   ...    max    frozen is_norm link prior
----- --------- ---------- -------------- --------- ... --------- ------ ------- ---- -----
-         index 3.0000e+00                0.000e+00 ... 5.000e+00  False   False
-     amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 ...       nan  False    True
-     reference 1.0000e+00            TeV 0.000e+00 ...       nan   True   False
-         lon_0 0.0000e+00            deg 0.000e+00 ...       nan  False   False
-         lat_0 0.0000e+00            deg 0.000e+00 ... 9.000e+01  False   False
-         sigma 2.0000e-01            deg 0.000e+00 ...       nan  False   False
-             e 0.0000e+00                0.000e+00 ... 1.000e+00   True   False
-           phi 0.0000e+00            deg 0.000e+00 ...       nan   True   False
-         t_ref 5.9240e+04              d 0.000e+00 ...       nan  False   False
-         sigma 2.0000e+00              d 0.000e+00 ...       nan  False   False
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>type    name     value         unit        error   ... frozen is_norm link prior
+---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+         index 3.0000e+00                0.000e+00 ...  False   False
+     amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True
+     reference 1.0000e+00            TeV 0.000e+00 ...   True   False
+         lon_0 0.0000e+00            deg 0.000e+00 ...  False   False
+         lat_0 0.0000e+00            deg 0.000e+00 ...  False   False
+         sigma 2.0000e-01            deg 0.000e+00 ...  False   False
+             e 0.0000e+00                0.000e+00 ...   True   False
+           phi 0.0000e+00            deg 0.000e+00 ...   True   False
+         t_ref 5.9240e+04              d 0.000e+00 ...  False   False
+         sigma 2.0000e+00              d 0.000e+00 ...  False   False
 </pre></div>
 </div>
 <p>You can use the interactive boxes to choose model parameters by name,
@@ -1289,7 +1289,7 @@ Component 0: SkyModel
 
 Component 1: SkyModel
 
-  Name                      : Tc3OckNw
+  Name                      : vYFA6SVg
   Datasets names            : None
   Spectral model type       : PowerLawNormSpectralModel
   Spatial  model type       : TemplateSpatialModel
@@ -1332,7 +1332,7 @@ have a unique name, otherwise an error will be thrown.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;my-source&#39;, &#39;Tc3OckNw&#39;]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[&#39;my-source&#39;, &#39;vYFA6SVg&#39;]
 </pre></div>
 </div>
 <p>Note that a <code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code> object can be evaluated for a given longitude,
@@ -1396,7 +1396,7 @@ format:</p>
             value: 2.0
             unit: d
         scale: utc
--   name: Tc3OckNw
+-   name: vYFA6SVg
     type: SkyModel
     spectral:
         type: PowerLawNormSpectralModel
@@ -1465,8 +1465,8 @@ format:</p>
             unit: d
         scale: utc
 metadata:
-    creator: Gammapy 1.2.dev1721+g6c725d50c.d20240227
-    date: &#39;2024-02-27T07:08:28.356965&#39;
+    creator: Gammapy 1.2.dev1722+gb61c8a564.d20240229
+    date: &#39;2024-02-29T09:03:50.806265&#39;
     origin: null
 </pre></div>
 </div>
@@ -1505,8 +1505,8 @@ amplitudes:</p>
 <span class="nb">print</span><span class="p">(</span><span class="n">pwl2</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7f018613dee0)
-Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7f018613dee0)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7f58af76ae80)
+Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7f58af76ae80)
 </pre></div>
 </div>
 <p>In the YAML files the shared parameter is flagged by the additional
@@ -1526,7 +1526,7 @@ Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dime
             value: 2.3
             min: 1.0
             max: 5.0
-            link: index@xJ9ihdtj
+            link: index@Q0B4QJZF
         -   name: amplitude
             value: 2.7e-12
             unit: cm-2 s-1 TeV-1
@@ -1542,7 +1542,7 @@ Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dime
             value: 2.3
             min: 1.0
             max: 5.0
-            link: index@xJ9ihdtj
+            link: index@Q0B4QJZF
         -   name: amplitude
             value: 1.0e-12
             unit: cm-2 s-1 TeV-1
@@ -1550,8 +1550,8 @@ Parameter(name=&#39;index&#39;, value=2.3, factor=2.3, scale=1.0, unit=Unit(dime
             value: 1.0
             unit: TeV
 metadata:
-    creator: Gammapy 1.2.dev1721+g6c725d50c.d20240227
-    date: &#39;2024-02-27T07:08:28.503232&#39;
+    creator: Gammapy 1.2.dev1722+gb61c8a564.d20240229
+    date: &#39;2024-02-29T09:03:50.910703&#39;
     origin: null
 </pre></div>
 </div>
@@ -1628,13 +1628,13 @@ all SpectralModel evaluate functions return a flux in unit of
 </div>
 <img src="../../_images/sphx_glr_models_008.png" srcset="../../_images/sphx_glr_models_008.png" alt="models" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MyCustomSpectralModel
 
-type    name     value         unit        error      min    max frozen is_norm link prior
----- --------- ---------- -------------- --------- --------- --- ------ ------- ---- -----
-     amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 0.000e+00 nan  False    True
-         index 2.0000e+00                0.000e+00 0.000e+00 nan  False   False
-     reference 1.0000e+00            TeV 0.000e+00       nan nan   True   False
-          mean 3.0000e+00            TeV 0.000e+00 0.000e+00 nan  False   False
-         width 1.0000e-01            TeV 0.000e+00 0.000e+00 nan   True   False
+type    name     value         unit        error   ... max frozen is_norm link prior
+---- --------- ---------- -------------- --------- ... --- ------ ------- ---- -----
+     amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 ... nan  False    True
+         index 2.0000e+00                0.000e+00 ... nan  False   False
+     reference 1.0000e+00            TeV 0.000e+00 ... nan   True   False
+          mean 3.0000e+00            TeV 0.000e+00 ... nan  False   False
+         width 1.0000e-01            TeV 0.000e+00 ... nan   True   False
 1.1442739329466746e-12 1 / (cm2 s)
 </pre></div>
 </div>

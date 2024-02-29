@@ -131,7 +131,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1721+g6c725d50c.d20240227 
+            version                : 1.2.dev1722+gb61c8a564.d20240229 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -524,7 +524,7 @@ Notes:
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
       warnings.warn(msg, UnitsWarning)
     Invalid unit found in background table! Assuming (s-1 MeV-1 sr-1)
-    {'aeff': <gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7f018776d940>, 'psf': <gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7f018775d6a0>, 'edisp': <gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7f018770ddf0>, 'bkg': <gammapy.irf.background.Background3D object at 0x7f018770d820>}
+    {'aeff': <gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7f58afeb0d90>, 'psf': <gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7f58afebc550>, 'edisp': <gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7f58afe50910>, 'bkg': <gammapy.irf.background.Background3D object at 0x7f58afe58430>}
 
 
 

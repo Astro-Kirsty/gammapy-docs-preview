@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1721+g6c725d50c.d20240227 variable.
+            // this version, rather than using sphinx's 1.2.dev1722+gb61c8a564.d20240229 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -660,9 +660,9 @@ be adjusted according to each specific science case.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">median_zenith</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_observation_clustering_001.png" srcset="../../_images/sphx_glr_observation_clustering_001.png" alt="observation clustering" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_high_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x7f0185982ee0&gt;, &#39;group_low_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x7f01859829d0&gt;}
+<img src="../../_images/sphx_glr_observation_clustering_001.png" srcset="../../_images/sphx_glr_observation_clustering_001.png" alt="observation clustering" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_high_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x7f58ae1f7f10&gt;, &#39;group_low_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x7f58ae1f7610&gt;}
 
-&lt;matplotlib.lines.Line2D object at 0x7f01860f6ee0&gt;
+&lt;matplotlib.lines.Line2D object at 0x7f58a5dca7f0&gt;
 </pre></div>
 </div>
 <p>This shows the observations grouped by zenith angle. The diamonds
@@ -812,9 +812,9 @@ a dictionary here.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_observation_clustering_002.png" srcset="../../_images/sphx_glr_observation_clustering_002.png" alt="observation clustering" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_1&#39;: &lt;gammapy.data.observations.Observations object at 0x7f017d9fd340&gt;, &#39;group_2&#39;: &lt;gammapy.data.observations.Observations object at 0x7f017d9fd8e0&gt;}
+<img src="../../_images/sphx_glr_observation_clustering_002.png" srcset="../../_images/sphx_glr_observation_clustering_002.png" alt="observation clustering" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_1&#39;: &lt;gammapy.data.observations.Observations object at 0x7f58a5a7fe80&gt;, &#39;group_2&#39;: &lt;gammapy.data.observations.Observations object at 0x7f58a5a7f070&gt;}
 
-&lt;matplotlib.legend.Legend object at 0x7f018724da60&gt;
+&lt;matplotlib.legend.Legend object at 0x7f58ae1fcb80&gt;
 </pre></div>
 </div>
 <p>The groups here are divided by the quality of the IRFs values <code class="xref py py-obj docutils literal notranslate"><span class="pre">edisp-res</span></code>

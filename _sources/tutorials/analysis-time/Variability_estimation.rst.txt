@@ -278,10 +278,10 @@ The excess variance computation is implemented in `~gammapy.estimators.utils`.
 
  .. code-block:: none
 
-        min_energy         max_energy           fvar              fvar_err          significance  
-           TeV                TeV                                                                 
-    ------------------ ----------------- ------------------ -------------------- -----------------
-    0.5915030546513256 6.184989894219833 0.5626417236476657 0.017007098882380126 33.08275723795431
+        min_energy         max_energy    ...       fvar_err          significance  
+           TeV                TeV        ...                                       
+    ------------------ ----------------- ... -------------------- -----------------
+    0.5915030546513256 6.184989894219833 ... 0.017007098882380126 33.08275723795431
 
 
 
@@ -310,10 +310,10 @@ of the presence of very short timescale variability.
 
  .. code-block:: none
 
-        min_energy         max_energy           fpp               fpp_err           significance   
-           TeV                TeV                                                                  
-    ------------------ ----------------- ------------------ -------------------- ------------------
-    0.5915030546513256 6.184989894219833 0.2668692633417047 0.017442923420188716 15.299572033482987
+        min_energy         max_energy    ...       fpp_err           significance   
+           TeV                TeV        ...                                        
+    ------------------ ----------------- ... -------------------- ------------------
+    0.5915030546513256 6.184989894219833 ... 0.017442923420188716 15.299572033482987
 
 
 
@@ -340,10 +340,10 @@ This provides information on the shape of the variability feature, in particular
 
  .. code-block:: none
 
-        min_energy         max_energy       doublingtime   ...    halving_err      halving_coord  
-           TeV                TeV                s         ...         s                          
-    ------------------ ----------------- ----------------- ... ----------------- -----------------
-    0.5915030546513256 6.184989894219833 716.8519094661344 ... 20.93582792770181 53946.00384472222
+        min_energy         max_energy    ...    halving_err      halving_coord  
+           TeV                TeV        ...         s                          
+    ------------------ ----------------- ... ----------------- -----------------
+    0.5915030546513256 6.184989894219833 ... 20.93582792770181 53946.00384472222
 
 
 

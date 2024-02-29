@@ -174,7 +174,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1721+g6c725d50c.d20240227 
+            version                : 1.2.dev1722+gb61c8a564.d20240229 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -1078,7 +1078,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  16.526 seconds)
+   **Total running time of the script:** ( 0 minutes  11.703 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_event_sampling.py:

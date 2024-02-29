@@ -147,7 +147,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1721+g6c725d50c.d20240227 
+            version                : 1.2.dev1722+gb61c8a564.d20240229 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -572,7 +572,7 @@ Finally we plot the result for the 1D lightcurve:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  27.301 seconds)
+   **Total running time of the script:** ( 0 minutes  18.477 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-time_light_curve_flare.py:
