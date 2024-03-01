@@ -161,7 +161,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1722+gb61c8a564.d20240229 
+            version                : 1.2.dev1723+gcc78c6251.d20240301 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -250,7 +250,7 @@ a `mask_fit` it is equal to the safe energy range.
 
  .. code-block:: none
 
-    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f58a6000580>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f58a6000a60>)
+    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7fc66571e490>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7fc66571ed90>)
 
 
 
@@ -307,7 +307,7 @@ edges closest to requested range provide the actual fit range.
 
  .. code-block:: none
 
-    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f58a6000a90>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7f58a6000400>)
+    Fit range : (<gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7fc66571ee50>, <gammapy.maps.wcs.ndmap.WcsNDMap object at 0x7fc657333310>)
 
 
 

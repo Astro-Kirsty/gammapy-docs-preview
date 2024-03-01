@@ -189,7 +189,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1722+gb61c8a564.d20240229 variable.
+            // this version, rather than using sphinx's 1.2.dev1723+gcc78c6251.d20240301 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -292,9 +292,10 @@ currently aren’t available on Windows.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For Apple silicon M1 (<code class="xref py py-obj docutils literal notranslate"><span class="pre">arm64</span></code>) architectures you also have to open the
-environment file and delete the <code class="xref py py-obj docutils literal notranslate"><span class="pre">sherpa</span></code> entry, as currently there are
-no conda packages available. However you can later install <code class="xref py py-obj docutils literal notranslate"><span class="pre">sherpa</span></code>
+<p>For gammapy versions <strong>prior to v1.2</strong>, if you’re using
+Apple silicon M1 (<code class="xref py py-obj docutils literal notranslate"><span class="pre">arm64</span></code>) architectures you have to open the
+environment file and delete the <code class="xref py py-obj docutils literal notranslate"><span class="pre">sherpa</span></code> entry. Currently there are
+no conda packages available. You can then install <code class="xref py py-obj docutils literal notranslate"><span class="pre">sherpa</span></code>
 in the environment using <code class="xref py py-obj docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sherpa</span></code>.</p>
 </div>
 <p>The best way to get started and learn Gammapy are the <a class="reference internal" href="../tutorials/index.html#tutorials"><span class="std std-ref">Tutorials</span></a>.

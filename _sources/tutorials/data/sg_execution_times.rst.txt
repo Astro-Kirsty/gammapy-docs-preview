@@ -6,10 +6,10 @@
 
 Computation times
 =================
-**00:03.495** total execution time for **tutorials_data** files:
+**00:06.042** total execution time for **tutorials_data** files:
 
 +----------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_data_cta.py` (``cta.py``)             | 00:03.495 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_data_cta.py` (``cta.py``)             | 00:06.042 | 0.0 MB |
 +----------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_tutorials_data_fermi_lat.py` (``fermi_lat.py``) | 00:00.000 | 0.0 MB |
 +----------------------------------------------------------------+-----------+--------+

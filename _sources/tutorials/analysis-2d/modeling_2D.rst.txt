@@ -125,7 +125,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1722+gb61c8a564.d20240229 
+            version                : 1.2.dev1723+gcc78c6251.d20240301 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 

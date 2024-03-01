@@ -95,7 +95,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1722+gb61c8a564.d20240229 
+            version                : 1.2.dev1723+gcc78c6251.d20240301 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
@@ -158,11 +158,11 @@ Let’s start with a `PowerLawSpectralModel`:
 
     PowerLawSpectralModel
 
-    type    name     value         unit        error   min max frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
-             index 2.0000e+00                0.000e+00 nan nan  False   False           
-         amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False    True           
-         reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False           
+    type    name     value         unit        error   ... frozen is_norm link prior
+    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+             index 2.0000e+00                0.000e+00 ...  False   False           
+         amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
+         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
 
 
 
@@ -272,11 +272,11 @@ well:
 
     PowerLawSpectralModel
 
-    type    name     value         unit        error   min max frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
-             index 2.2000e+00                0.000e+00 nan nan  False   False           
-         amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False    True           
-         reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False           
+    type    name     value         unit        error   ... frozen is_norm link prior
+    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+             index 2.2000e+00                0.000e+00 ...  False   False           
+         amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
+         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
 
 
 
@@ -641,11 +641,11 @@ To create an additive model, you can do simply:
     CompoundSpectralModel
         Component 1 : PowerLawSpectralModel
 
-    type    name     value         unit        error   min max frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
-             index 2.2000e+00                0.000e+00 nan nan  False   False           
-         amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False    True           
-         reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False           
+    type    name     value         unit        error   ... frozen is_norm link prior
+    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+             index 2.2000e+00                0.000e+00 ...  False   False           
+         amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
+         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
         Component 2 : TemplateSpectralModel
 
         Operator : add
@@ -687,13 +687,13 @@ namespace, let’s start with a `GaussianSpatialModel`:
 
     GaussianSpatialModel
 
-    type  name   value    unit   error      min        max    frozen is_norm link prior
-    ---- ----- ---------- ---- --------- ---------- --------- ------ ------- ---- -----
-         lon_0 0.0000e+00  deg 0.000e+00        nan       nan  False   False           
-         lat_0 0.0000e+00  deg 0.000e+00 -9.000e+01 9.000e+01  False   False           
-         sigma 2.0000e-01  deg 0.000e+00  0.000e+00       nan  False   False           
-             e 0.0000e+00      0.000e+00  0.000e+00 1.000e+00   True   False           
-           phi 0.0000e+00  deg 0.000e+00        nan       nan   True   False           
+    type  name   value    unit   error   ...    max    frozen is_norm link prior
+    ---- ----- ---------- ---- --------- ... --------- ------ ------- ---- -----
+         lon_0 0.0000e+00  deg 0.000e+00 ...       nan  False   False           
+         lat_0 0.0000e+00  deg 0.000e+00 ... 9.000e+01  False   False           
+         sigma 2.0000e-01  deg 0.000e+00 ...       nan  False   False           
+             e 0.0000e+00      0.000e+00 ... 1.000e+00   True   False           
+           phi 0.0000e+00  deg 0.000e+00 ...       nan   True   False           
 
 
 
@@ -1203,7 +1203,7 @@ generated:
 
  .. code-block:: none
 
-    KhhKJwnE
+    MqO1EgfY
 
 
 
@@ -1231,11 +1231,11 @@ The individual components of the source model can be accessed using
 
     PowerLawSpectralModel
 
-    type    name     value         unit        error   min max frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- --- --- ------ ------- ---- -----
-             index 2.2000e+00                0.000e+00 nan nan  False   False           
-         amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False    True           
-         reference 1.0000e+00            TeV 0.000e+00 nan nan   True   False           
+    type    name     value         unit        error   ... frozen is_norm link prior
+    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+             index 2.2000e+00                0.000e+00 ...  False   False           
+         amplitude 2.7000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
+         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
 
 
 
@@ -1256,13 +1256,13 @@ The individual components of the source model can be accessed using
 
     GaussianSpatialModel
 
-    type  name   value    unit   error      min        max    frozen is_norm link prior
-    ---- ----- ---------- ---- --------- ---------- --------- ------ ------- ---- -----
-         lon_0 0.0000e+00  deg 0.000e+00        nan       nan  False   False           
-         lat_0 0.0000e+00  deg 0.000e+00 -9.000e+01 9.000e+01  False   False           
-         sigma 2.0000e-01  deg 0.000e+00  0.000e+00       nan  False   False           
-             e 0.0000e+00      0.000e+00  0.000e+00 1.000e+00   True   False           
-           phi 0.0000e+00  deg 0.000e+00        nan       nan   True   False           
+    type  name   value    unit   error   ...    max    frozen is_norm link prior
+    ---- ----- ---------- ---- --------- ... --------- ------ ------- ---- -----
+         lon_0 0.0000e+00  deg 0.000e+00 ...       nan  False   False           
+         lat_0 0.0000e+00  deg 0.000e+00 ... 9.000e+01  False   False           
+         sigma 2.0000e-01  deg 0.000e+00 ...       nan  False   False           
+             e 0.0000e+00      0.000e+00 ... 1.000e+00   True   False           
+           phi 0.0000e+00  deg 0.000e+00 ...       nan   True   False           
 
 
 
@@ -1397,7 +1397,7 @@ existing FITS file:
 
     SkyModel
 
-      Name                      : vYFA6SVg
+      Name                      : 3eKDNXkk
       Datasets names            : None
       Spectral model type       : PowerLawNormSpectralModel
       Spatial  model type       : TemplateSpatialModel
@@ -1535,7 +1535,7 @@ multiple model components, Gammapy has a `Models` class:
 
     Component 1: SkyModel
 
-      Name                      : vYFA6SVg
+      Name                      : 3eKDNXkk
       Datasets names            : None
       Spectral model type       : PowerLawNormSpectralModel
       Spatial  model type       : TemplateSpatialModel
@@ -1621,7 +1621,7 @@ To see which models are available you can use the ``.names`` attribute:
 
  .. code-block:: none
 
-    ['my-source', 'vYFA6SVg']
+    ['my-source', '3eKDNXkk']
 
 
 
@@ -1721,7 +1721,7 @@ format:
                 value: 2.0
                 unit: d
             scale: utc
-    -   name: vYFA6SVg
+    -   name: 3eKDNXkk
         type: SkyModel
         spectral:
             type: PowerLawNormSpectralModel
@@ -1790,8 +1790,8 @@ format:
                 unit: d
             scale: utc
     metadata:
-        creator: Gammapy 1.2.dev1722+gb61c8a564.d20240229
-        date: '2024-02-29T09:03:50.806265'
+        creator: Gammapy 1.2.dev1723+gcc78c6251.d20240301
+        date: '2024-03-01T16:11:00.532810'
         origin: null
 
 
@@ -1868,8 +1868,8 @@ amplitudes:
 
  .. code-block:: none
 
-    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7f58af76ae80)
-    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7f58af76ae80)
+    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7fc65ffdfac0)
+    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x7fc65ffdfac0)
 
 
 
@@ -1908,7 +1908,7 @@ In the YAML files the shared parameter is flagged by the additional
                 value: 2.3
                 min: 1.0
                 max: 5.0
-                link: index@Q0B4QJZF
+                link: index@6UjLxcBA
             -   name: amplitude
                 value: 2.7e-12
                 unit: cm-2 s-1 TeV-1
@@ -1924,7 +1924,7 @@ In the YAML files the shared parameter is flagged by the additional
                 value: 2.3
                 min: 1.0
                 max: 5.0
-                link: index@Q0B4QJZF
+                link: index@6UjLxcBA
             -   name: amplitude
                 value: 1.0e-12
                 unit: cm-2 s-1 TeV-1
@@ -1932,8 +1932,8 @@ In the YAML files the shared parameter is flagged by the additional
                 value: 1.0
                 unit: TeV
     metadata:
-        creator: Gammapy 1.2.dev1722+gb61c8a564.d20240229
-        date: '2024-02-29T09:03:50.910703'
+        creator: Gammapy 1.2.dev1723+gcc78c6251.d20240301
+        date: '2024-03-01T16:11:00.727913'
         origin: null
 
 
@@ -2054,13 +2054,13 @@ This model can now be used as any other spectral model in Gammapy:
 
     MyCustomSpectralModel
 
-    type    name     value         unit        error   ... max frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- ... --- ------ ------- ---- -----
-         amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 ... nan  False    True           
-             index 2.0000e+00                0.000e+00 ... nan  False   False           
-         reference 1.0000e+00            TeV 0.000e+00 ... nan   True   False           
-              mean 3.0000e+00            TeV 0.000e+00 ... nan  False   False           
-             width 1.0000e-01            TeV 0.000e+00 ... nan   True   False           
+    type    name     value         unit        error   ... frozen is_norm link prior
+    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
+         amplitude 1.0000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
+             index 2.0000e+00                0.000e+00 ...  False   False           
+         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
+              mean 3.0000e+00            TeV 0.000e+00 ...  False   False           
+             width 1.0000e-01            TeV 0.000e+00 ...   True   False           
     1.1442739329466746e-12 1 / (cm2 s)
 
 

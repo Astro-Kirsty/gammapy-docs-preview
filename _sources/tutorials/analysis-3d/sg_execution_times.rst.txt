@@ -6,10 +6,10 @@
 
 Computation times
 =================
-**00:11.703** total execution time for **tutorials_analysis-3d** files:
+**00:15.176** total execution time for **tutorials_analysis-3d** files:
 
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_tutorials_analysis-3d_event_sampling.py` (``event_sampling.py``)                                     | 00:11.703 | 0.0 MB |
+| :ref:`sphx_glr_tutorials_analysis-3d_event_sampling.py` (``event_sampling.py``)                                     | 00:15.176 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+
 | :ref:`sphx_glr_tutorials_analysis-3d_analysis_3d.py` (``analysis_3d.py``)                                           | 00:00.000 | 0.0 MB |
 +---------------------------------------------------------------------------------------------------------------------+-----------+--------+

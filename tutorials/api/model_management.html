@@ -191,7 +191,7 @@ function checkPageExistsAndRedirect(event) {
 
             $("#version_switcher_menu").append(node);
             // replace dropdown button text with the preferred display name of
-            // this version, rather than using sphinx's 1.2.dev1722+gb61c8a564.d20240229 variable.
+            // this version, rather than using sphinx's 1.2.dev1723+gcc78c6251.d20240301 variable.
             // also highlight the dropdown entry for the currently-viewed
             // version's entry
             if (entry.version == "dev") {
@@ -671,7 +671,7 @@ notebook.</p>
 
 Gammapy package:
 
-        version                : 1.2.dev1722+gb61c8a564.d20240229
+        version                : 1.2.dev1723+gcc78c6251.d20240301
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
 
 
@@ -735,11 +735,11 @@ Gammapy environment variables:
 <img src="../../_images/sphx_glr_model_management_001.png" srcset="../../_images/sphx_glr_model_management_001.png" alt="Fermi counts, CTA counts" class = "sphx-glr-single-img"/><div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">datasets</span><span class="o">.</span><span class="n">info_table</span><span class="p">(</span><span class="n">cumulative</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     name     counts     excess          sqrt_ts      ... n_fit_bins stat_type stat_sum
-                                                      ...
-------------- ------ -------------- ----------------- ... ---------- --------- --------
-fermi_dataset  27727 3792.244140625 23.90421023961601 ...     633600      cash      nan
-  cta_dataset 104317  12809.3046875 41.41009347393684 ...     691680      cash      nan
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     name     counts     excess     ... n_fit_bins stat_type stat_sum
+                                    ...
+------------- ------ -------------- ... ---------- --------- --------
+fermi_dataset  27727 3792.244140625 ...     633600      cash      nan
+  cta_dataset 104317  12809.3046875 ...     691680      cash      nan
 </pre></div>
 </div>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
