@@ -195,7 +195,7 @@ ring_maker = RingBackgroundMaker(
 # together to create a single stacked map for further analysis
 #
 
-#%%time
+# %%time
 energy_axis_true = analysis.datasets[0].exposure.geom.axes["energy_true"]
 stacked_on_off = MapDatasetOnOff.create(
     geom=geom_image, energy_axis_true=energy_axis_true, name="stacked"
@@ -238,7 +238,7 @@ excess_map = lima_maps["npred_excess"]
 
 # We can plot the excess and significance maps
 fig, (ax1, ax2) = plt.subplots(
-    figsize=(11, 5), subplot_kw={"projection": lima_maps.geom.wcs}, ncols=2
+    figsize=(11, 4), subplot_kw={"projection": lima_maps.geom.wcs}, ncols=2
 )
 
 ax1.set_title("Significance map")

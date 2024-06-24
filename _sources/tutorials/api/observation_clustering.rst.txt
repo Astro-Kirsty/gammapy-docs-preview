@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_api_observation_clustering.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -48,10 +48,9 @@ For completeness two different methods for grouping of observations are shown he
 
 - Grouping the observations depending on the IRF quality, by means of hierarchical clustering.
 
-.. GENERATED FROM PYTHON SOURCE LINES 33-44
+.. GENERATED FROM PYTHON SOURCE LINES 33-43
 
-.. code-block:: python3
-
+.. code-block:: Python
 
 
     import numpy as np
@@ -70,7 +69,7 @@ For completeness two different methods for grouping of observations are shown he
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-54
+.. GENERATED FROM PYTHON SOURCE LINES 44-53
 
 Obtain the observations
 -----------------------
@@ -82,9 +81,9 @@ In this case, we choose PKS 2155-304 as the object of interest.
 The `~gammapy.data.ObservationTable` is then filtered using the `select_observations` tool.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-68
+.. GENERATED FROM PYTHON SOURCE LINES 53-67
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     data_store = DataStore.from_dir("$GAMMAPY_DATA/hess-dl3-dr1")
@@ -107,16 +106,16 @@ The `~gammapy.data.ObservationTable` is then filtered using the `select_observat
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-73
+.. GENERATED FROM PYTHON SOURCE LINES 68-72
 
 More complex selection can be done by utilising the obs_table entries directly.
 We can now retrieve the relevant observations by passing their obs_id to the
 `~gammapy.data.DataStore.get_observations` method.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-78
+.. GENERATED FROM PYTHON SOURCE LINES 72-77
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     obs_ids = selected_obs_table["OBS_ID"]
@@ -130,7 +129,7 @@ We can now retrieve the relevant observations by passing their obs_id to the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-85
+.. GENERATED FROM PYTHON SOURCE LINES 78-84
 
 Show various observation quantities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,9 +138,9 @@ Print here the range of zenith angles and muon efficiencies, to see
 if there is a sensible way to group the observations.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-93
+.. GENERATED FROM PYTHON SOURCE LINES 84-92
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     obs_zenith = selected_obs_table["ZEN_PNT"].to(u.deg)
@@ -165,7 +164,7 @@ if there is a sensible way to group the observations.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 94-106
+.. GENERATED FROM PYTHON SOURCE LINES 93-105
 
 Manual grouping of observations
 -------------------------------
@@ -180,9 +179,9 @@ zenith angle, muon efficiency, offset angle. The quantity chosen can therefore
 be adjusted according to each specific science case.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-141
+.. GENERATED FROM PYTHON SOURCE LINES 105-116
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     median_zenith = np.median(obs_zenith)
@@ -195,9 +194,28 @@ be adjusted according to each specific science case.
 
     print(grouped_observations)
 
-    #
-    # The results for each group of observations is shown visually below.
-    #
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x7a4d8a810d00>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x7a4d8af32040>}
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 117-119
+
+The results for each group of observations is shown visually below.
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 120-142
+
+.. code-block:: Python
+
 
     fix, ax = plt.subplots(1, 1, figsize=(7, 5))
     for obs in grouped_observations["group_low_zenith"]:
@@ -217,6 +235,7 @@ be adjusted according to each specific science case.
     ax.set_ylabel("Muon efficiency")
     ax.set_xlabel("Zenith angle (deg)")
     ax.axvline(median_zenith.value, ls="--", color="black")
+    plt.show()
 
 
 
@@ -228,17 +247,10 @@ be adjusted according to each specific science case.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x7fc65f4bb2b0>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x7fc65f4bb310>}
-
-    <matplotlib.lines.Line2D object at 0x7fc6640253d0>
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-150
+.. GENERATED FROM PYTHON SOURCE LINES 143-151
 
 This shows the observations grouped by zenith angle. The diamonds
 are observations which have a zenith angle less than the median value,
@@ -249,7 +261,7 @@ which can be utilised in the usual way to show the various properties
 of the observations i.e. see the :doc:`/tutorials/data/cta` tutorial.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 153-167
+.. GENERATED FROM PYTHON SOURCE LINES 154-168
 
 Hierarchical clustering of observations
 ---------------------------------------
@@ -263,12 +275,12 @@ the variance of both edisp and psf within a specific group to limit the error
 on the quantity when they are stacked at the dataset level.
 
 In this example, the irf features are computed for the `edisp-res` and
-`psf-radius` at 1 TeV. This is stored as a `astropy.table.table.Table`, as shown below.
+`psf-radius` at 1 TeV. This is stored as a `~astropy.table.table.Table`, as shown below.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-175
+.. GENERATED FROM PYTHON SOURCE LINES 168-176
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     source_position = SkyCoord(329.71693826 * u.deg, -30.2255890 * u.deg, frame="icrs")
@@ -314,15 +326,15 @@ In this example, the irf features are computed for the `edisp-res` and
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-179
+.. GENERATED FROM PYTHON SOURCE LINES 177-180
 
 Compute standardized features by removing the mean and scaling to unit
 variance:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-184
+.. GENERATED FROM PYTHON SOURCE LINES 180-185
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     scaled_features_irfs = standard_scaler(features_irfs)
@@ -364,21 +376,21 @@ variance:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-194
+.. GENERATED FROM PYTHON SOURCE LINES 186-195
 
 The `~gammapy.utils.cluster.hierarchical_clustering` then clusters
-this table into `t=2` groups with a corresponding label for each group.
+this table into ``t=2`` groups with a corresponding label for each group.
 In this case, we choose to cluster the observations into two groups.
 We can print this table to show the corresponding label which has been
-added to the previous `feature_irfs` table.
+added to the previous ``feature_irfs`` table.
 
 The arguments for `~scipy.cluster.hierarchy.fcluster` are passed as
 a dictionary here.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-198
+.. GENERATED FROM PYTHON SOURCE LINES 195-199
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     features = hierarchical_clustering(scaled_features_irfs, fcluster_kwargs={"t": 2})
@@ -419,15 +431,15 @@ a dictionary here.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-202
+.. GENERATED FROM PYTHON SOURCE LINES 200-203
 
-Finally, `observations.group_by_label` creates a dictionary containing `t`
+Finally, ``observations.group_by_label`` creates a dictionary containing ``t``
 `~gammapy.data.Observations` objects by grouping the similar labels.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-229
+.. GENERATED FROM PYTHON SOURCE LINES 203-231
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     obs_clusters = observations.group_by_label(features["labels"])
@@ -454,6 +466,7 @@ Finally, `observations.group_by_label` creates a dictionary containing `t`
         label="Group 2",
     )
     ax.legend()
+    plt.show()
 
 
 
@@ -469,16 +482,15 @@ Finally, `observations.group_by_label` creates a dictionary containing `t`
 
  .. code-block:: none
 
-    {'group_1': <gammapy.data.observations.Observations object at 0x7fc656f88fd0>, 'group_2': <gammapy.data.observations.Observations object at 0x7fc656f88a00>}
-
-    <matplotlib.legend.Legend object at 0x7fc65f5c5ee0>
+    {'group_1': <gammapy.data.observations.Observations object at 0x7a4d86bad220>, 'group_2': <gammapy.data.observations.Observations object at 0x7a4d86bad3d0>}
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-240
 
-The groups here are divided by the quality of the IRFs values `edisp-res`
-and `psf-radius`. The diamond and circular points indicate how the observations
+.. GENERATED FROM PYTHON SOURCE LINES 232-242
+
+The groups here are divided by the quality of the IRFs values ``edisp-res``
+and ``psf-radius``. The diamond and circular points indicate how the observations
 are grouped.
 
 
@@ -495,23 +507,20 @@ specific case) separate datasets. These can then be jointly fitted using the
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/api/observation_clustering.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/observation_clustering.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: observation_clustering.py <observation_clustering.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: observation_clustering.ipynb <observation_clustering.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: observation_clustering.py <observation_clustering.py>`
 
 
 .. only:: html

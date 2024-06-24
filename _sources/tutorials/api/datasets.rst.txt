@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_api_datasets.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -40,7 +40,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 23-40
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     import astropy.units as u
@@ -73,7 +73,7 @@ Check setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 43-52
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
     from gammapy.utils.scripts import make_path
@@ -103,34 +103,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1723+gcc78c6251.d20240301 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.12.0     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.3      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
             iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.3      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
@@ -158,7 +158,7 @@ An empty `~gammapy.datasets.MapDataset` can be directly instantiated from any
 
 .. GENERATED FROM PYTHON SOURCE LINES 70-84
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     energy_axis = MapAxis.from_energy_bounds(1, 10, nbin=11, name="energy", unit="TeV")
@@ -190,7 +190,7 @@ unique. Now we can already print the dataset:
 
 .. GENERATED FROM PYTHON SOURCE LINES 89-93
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset_empty)
@@ -246,7 +246,7 @@ define the binning of the IRF related maps:
 
 .. GENERATED FROM PYTHON SOURCE LINES 100-121
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # choose a different true energy binning for the exposure, psf and edisp
@@ -283,7 +283,7 @@ To see the geometry of each map, we can use:
 
 .. GENERATED FROM PYTHON SOURCE LINES 124-128
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset_empty.geoms)
@@ -297,7 +297,7 @@ To see the geometry of each map, we can use:
 
  .. code-block:: none
 
-    {'geom': <gammapy.maps.wcs.geom.WcsGeom object at 0x7fc65ffb7bb0>, 'geom_exposure': <gammapy.maps.wcs.geom.WcsGeom object at 0x7fc65f1b9160>, 'geom_psf': <gammapy.maps.wcs.geom.WcsGeom object at 0x7fc65f1b9460>, 'geom_edisp': <gammapy.maps.wcs.geom.WcsGeom object at 0x7fc6575328b0>}
+    {'geom': <gammapy.maps.wcs.geom.WcsGeom object at 0x7a4d8676ba30>, 'geom_exposure': <gammapy.maps.wcs.geom.WcsGeom object at 0x7a4d8527f5b0>, 'geom_psf': <gammapy.maps.wcs.geom.WcsGeom object at 0x7a4d83048310>, 'geom_edisp': <gammapy.maps.wcs.geom.WcsGeom object at 0x7a4d83048130>}
 
 
 
@@ -310,7 +310,7 @@ from a FITS file:
 
 .. GENERATED FROM PYTHON SOURCE LINES 132-140
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset_cta = MapDataset.read(
@@ -378,7 +378,7 @@ For a quick info, use
 
 .. GENERATED FROM PYTHON SOURCE LINES 154-157
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset_cta.info_dict())
@@ -403,7 +403,7 @@ For a quick view, use
 
 .. GENERATED FROM PYTHON SOURCE LINES 160-164
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset_cta.peek()
@@ -428,7 +428,7 @@ And access individual maps like:
 
 .. GENERATED FROM PYTHON SOURCE LINES 167-173
 
-.. code-block:: python3
+.. code-block:: Python
 
     plt.figure()
     counts_image = dataset_cta.counts.sum_over_axes()
@@ -456,7 +456,7 @@ Of course you can also access IRF related maps, e.g. the psf as
 
 .. GENERATED FROM PYTHON SOURCE LINES 177-181
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset_cta.psf)
@@ -490,7 +490,7 @@ And use any method on the `~gammapy.irf.PSFMap` object:
 
 .. GENERATED FROM PYTHON SOURCE LINES 184-187
 
-.. code-block:: python3
+.. code-block:: Python
 
     radius = dataset_cta.psf.containment_radius(energy_true=1 * u.TeV, fraction=0.95)
     print(radius)
@@ -510,7 +510,7 @@ And use any method on the `~gammapy.irf.PSFMap` object:
 
 .. GENERATED FROM PYTHON SOURCE LINES 188-194
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     edisp_kernel = dataset_cta.edisp.get_edisp_kernel()
@@ -539,7 +539,7 @@ map:
 
 .. GENERATED FROM PYTHON SOURCE LINES 199-203
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset_cta.background)
@@ -574,7 +574,7 @@ As a next step we define a minimal model on the dataset using the
 
 .. GENERATED FROM PYTHON SOURCE LINES 207-215
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     model = SkyModel.create("pl", "point", name="gc")
@@ -599,7 +599,7 @@ Printing the dataset will now show the model components:
 
 .. GENERATED FROM PYTHON SOURCE LINES 219-223
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset_cta)
@@ -620,7 +620,7 @@ Printing the dataset will now show the model components:
 
       Total counts                    : 104317 
       Total background counts         : 91507.70
-      Total excess counts             : 12809.30
+      Total excess counts             : 12809.31
 
       Predicted counts                : 91719.65
       Predicted background counts     : 91507.69
@@ -676,7 +676,7 @@ of the model:
 
 .. GENERATED FROM PYTHON SOURCE LINES 227-233
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     npred = dataset_cta.npred()
@@ -704,7 +704,7 @@ use:
 
 .. GENERATED FROM PYTHON SOURCE LINES 237-243
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     npred_source = dataset_cta.npred_signal(model_names=["gc"])
@@ -734,7 +734,7 @@ corrected background, one can use `~gammapy.datasets.MapDataset.npred_background
 
 .. GENERATED FROM PYTHON SOURCE LINES 249-255
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     npred_background = dataset_cta.npred_background()
@@ -778,7 +778,7 @@ have the same `~gammapy.maps.Map.geom` as the `~gammapy.datasets.MapDataset.coun
 
 .. GENERATED FROM PYTHON SOURCE LINES 275-282
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # eg: to see the safe data range
@@ -806,7 +806,7 @@ In addition it is possible to define a custom `~gammapy.datasets.MapDataset.mask
 
 .. GENERATED FROM PYTHON SOURCE LINES 285-299
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # To apply a mask fit - in energy and space
@@ -838,17 +838,17 @@ In addition it is possible to define a custom `~gammapy.datasets.MapDataset.mask
 
 To access the energy range defined by the mask you can use:
 
--`~gammapy.datasets.MapDataset.energy_range_safe` : energy range defined by the `~gammapy.datasets.MapDataset.mask_safe`
-- `~gammapy.datasets.MapDataset.energy_range_fit` : energy range defined by the `~gammapy.datasets.MapDataset.mask_fit`
-- `~gammapy.datasets.MapDataset.energy_range` : the final energy range used in likelihood computation
+-  `~gammapy.datasets.MapDataset.energy_range_safe` : energy range defined by the `~gammapy.datasets.MapDataset.mask_safe`
+-  `~gammapy.datasets.MapDataset.energy_range_fit` : energy range defined by the `~gammapy.datasets.MapDataset.mask_fit`
+-  `~gammapy.datasets.MapDataset.energy_range` : the final energy range used in likelihood computation
 
 These methods return two maps, with the `min` and `max` energy
 values at each spatial pixel
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 309-323
+.. GENERATED FROM PYTHON SOURCE LINES 309-317
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     e_min, e_max = dataset_cta.energy_range
@@ -857,12 +857,6 @@ values at each spatial pixel
 
     e_min.plot(add_cbar=True)
     plt.show()
-
-    # To see the high energy threshold at each point
-
-    e_max.plot(add_cbar=True)
-    plt.show()
-
 
 
 
@@ -876,25 +870,16 @@ values at each spatial pixel
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 324-328
+.. GENERATED FROM PYTHON SOURCE LINES 318-319
 
-Just as for `~gammapy.maps.Map` objects it is possible to cutout a whole
-`~gammapy.datasets.MapDataset`, which will perform the cutout for all maps in
-parallel.Optionally one can provide a new name to the resulting dataset:
+To see the high energy threshold at each point
 
+.. GENERATED FROM PYTHON SOURCE LINES 319-324
 
-.. GENERATED FROM PYTHON SOURCE LINES 328-339
-
-.. code-block:: python3
+.. code-block:: Python
 
 
-    cutout = dataset_cta.cutout(
-        position=SkyCoord("0d", "0d", frame="galactic"),
-        width=2 * u.deg,
-        name="cta-cutout",
-    )
-
-    cutout.counts.sum_over_axes().plot()
+    e_max.plot(add_cbar=True)
     plt.show()
 
 
@@ -910,20 +895,25 @@ parallel.Optionally one can provide a new name to the resulting dataset:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-342
+.. GENERATED FROM PYTHON SOURCE LINES 325-329
 
-It is also possible to slice a `~gammapy.datasets.MapDataset` in energy:
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 342-350
-
-.. code-block:: python3
+Just as for `~gammapy.maps.Map` objects it is possible to cutout a whole
+`~gammapy.datasets.MapDataset`, which will perform the cutout for all maps in
+parallel. Optionally one can provide a new name to the resulting dataset:
 
 
-    sliced = dataset_cta.slice_by_energy(
-        energy_min=1 * u.TeV, energy_max=5 * u.TeV, name="slice-energy"
+.. GENERATED FROM PYTHON SOURCE LINES 329-340
+
+.. code-block:: Python
+
+
+    cutout = dataset_cta.cutout(
+        position=SkyCoord("0d", "0d", frame="galactic"),
+        width=2 * u.deg,
+        name="cta-cutout",
     )
-    sliced.counts.plot_grid()
+
+    cutout.counts.sum_over_axes().plot()
     plt.show()
 
 
@@ -931,7 +921,7 @@ It is also possible to slice a `~gammapy.datasets.MapDataset` in energy:
 
 
 .. image-sg:: /tutorials/api/images/sphx_glr_datasets_011.png
-   :alt: Energy 1.00 TeV - 1.58 TeV, Energy 1.58 TeV - 2.51 TeV, Energy 2.51 TeV - 3.98 TeV
+   :alt: datasets
    :srcset: /tutorials/api/images/sphx_glr_datasets_011.png
    :class: sphx-glr-single-img
 
@@ -939,18 +929,20 @@ It is also possible to slice a `~gammapy.datasets.MapDataset` in energy:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 351-354
+.. GENERATED FROM PYTHON SOURCE LINES 341-343
 
-The same operation will be applied to all other maps contained in the
-datasets such as `~gammapy.datasets.MapDataset.mask_fit`:
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 354-359
-
-.. code-block:: python3
+It is also possible to slice a `~gammapy.datasets.MapDataset` in energy:
 
 
-    sliced.mask_fit.plot_grid()
+.. GENERATED FROM PYTHON SOURCE LINES 343-351
+
+.. code-block:: Python
+
+
+    sliced = dataset_cta.slice_by_energy(
+        energy_min=1 * u.TeV, energy_max=5 * u.TeV, name="slice-energy"
+    )
+    sliced.counts.plot_grid()
     plt.show()
 
 
@@ -966,7 +958,34 @@ datasets such as `~gammapy.datasets.MapDataset.mask_fit`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 360-367
+.. GENERATED FROM PYTHON SOURCE LINES 352-355
+
+The same operation will be applied to all other maps contained in the
+datasets such as `~gammapy.datasets.MapDataset.mask_fit`:
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 355-360
+
+.. code-block:: Python
+
+
+    sliced.mask_fit.plot_grid()
+    plt.show()
+
+
+
+
+
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_013.png
+   :alt: Energy 1.00 TeV - 1.58 TeV, Energy 1.58 TeV - 2.51 TeV, Energy 2.51 TeV - 3.98 TeV
+   :srcset: /tutorials/api/images/sphx_glr_datasets_013.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 361-368
 
 Resampling datasets
 ~~~~~~~~~~~~~~~~~~~
@@ -976,9 +995,9 @@ by a specified factor. This can be done in either spatial or energy
 axes:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 367-374
+.. GENERATED FROM PYTHON SOURCE LINES 368-375
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     plt.figure()
@@ -990,23 +1009,23 @@ axes:
 
 
 
-.. image-sg:: /tutorials/api/images/sphx_glr_datasets_013.png
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_014.png
    :alt: datasets
-   :srcset: /tutorials/api/images/sphx_glr_datasets_013.png
+   :srcset: /tutorials/api/images/sphx_glr_datasets_014.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 375-377
+.. GENERATED FROM PYTHON SOURCE LINES 376-378
 
 And the same down-sampling process is possible along the energy axis:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 377-385
+.. GENERATED FROM PYTHON SOURCE LINES 378-386
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     downsampled_energy = dataset_cta.downsample(
@@ -1019,24 +1038,24 @@ And the same down-sampling process is possible along the energy axis:
 
 
 
-.. image-sg:: /tutorials/api/images/sphx_glr_datasets_014.png
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_015.png
    :alt: Energy 100 GeV - 1.00 TeV, Energy 1.00 TeV - 10.0 TeV
-   :srcset: /tutorials/api/images/sphx_glr_datasets_014.png
+   :srcset: /tutorials/api/images/sphx_glr_datasets_015.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 386-389
+.. GENERATED FROM PYTHON SOURCE LINES 387-390
 
 In the printout one can see that the actual number of counts is
 preserved during the down-sampling:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 389-393
+.. GENERATED FROM PYTHON SOURCE LINES 390-394
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(downsampled_energy, dataset_cta)
@@ -1083,7 +1102,7 @@ preserved during the down-sampling:
 
       Total counts                    : 104317 
       Total background counts         : 91507.70
-      Total excess counts             : 12809.30
+      Total excess counts             : 12809.31
 
       Predicted counts                : 91719.65
       Predicted background counts     : 91507.69
@@ -1131,15 +1150,15 @@ preserved during the down-sampling:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 394-397
+.. GENERATED FROM PYTHON SOURCE LINES 395-398
 
 We can also resample the finer binned datasets to an arbitrary coarser
 energy binning using:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 397-404
+.. GENERATED FROM PYTHON SOURCE LINES 398-405
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     energy_axis_new = MapAxis.from_energy_edges([0.1, 0.3, 1, 3, 10] * u.TeV)
@@ -1151,24 +1170,24 @@ energy binning using:
 
 
 
-.. image-sg:: /tutorials/api/images/sphx_glr_datasets_015.png
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_016.png
    :alt: Energy 100 GeV - 251 GeV, Energy 251 GeV - 1.00 TeV, Energy 1.00 TeV - 2.51 TeV, Energy 2.51 TeV - 10.0 TeV
-   :srcset: /tutorials/api/images/sphx_glr_datasets_015.png
+   :srcset: /tutorials/api/images/sphx_glr_datasets_016.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 405-408
+.. GENERATED FROM PYTHON SOURCE LINES 406-409
 
 To squash the whole dataset into a single energy bin there is the
 `~gammapy.datasets.MapDataset.to_image()` convenience method:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 408-414
+.. GENERATED FROM PYTHON SOURCE LINES 409-415
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset_image = dataset_cta.to_image()
@@ -1179,31 +1198,31 @@ To squash the whole dataset into a single energy bin there is the
 
 
 
-.. image-sg:: /tutorials/api/images/sphx_glr_datasets_016.png
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_017.png
    :alt: datasets
-   :srcset: /tutorials/api/images/sphx_glr_datasets_016.png
+   :srcset: /tutorials/api/images/sphx_glr_datasets_017.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 415-425
+.. GENERATED FROM PYTHON SOURCE LINES 416-426
 
 SpectrumDataset
 ---------------
 
 `~gammapy.datasets.SpectrumDataset` inherits from a `~gammapy.datasets.MapDataset`, and is specially
-adapted for 1D spectral analysis, and uses a `RegionGeom` instead of a
-`WcsGeom`. A `~gammapy.datasets.MapDataset` can be converted to a `~gammapy.datasets.SpectrumDataset`,
+adapted for 1D spectral analysis, and uses a `~gammapy.maps.RegionGeom` instead of a
+`~gammapy.maps.WcsGeom`. A `~gammapy.datasets.MapDataset` can be converted to a `~gammapy.datasets.SpectrumDataset`,
 by summing the `counts` and `background` inside the `on_region`,
 which can then be used for classical spectral analysis. Containment
 correction is feasible only for circular regions.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 425-437
+.. GENERATED FROM PYTHON SOURCE LINES 426-438
 
-.. code-block:: python3
+.. code-block:: Python
 
 
 
@@ -1220,16 +1239,16 @@ correction is feasible only for circular regions.
 
 
 
-.. image-sg:: /tutorials/api/images/sphx_glr_datasets_017.png
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_018.png
    :alt: Counts, Exposure, Energy Dispersion
-   :srcset: /tutorials/api/images/sphx_glr_datasets_017.png
+   :srcset: /tutorials/api/images/sphx_glr_datasets_018.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 438-443
+.. GENERATED FROM PYTHON SOURCE LINES 439-444
 
 A `~gammapy.datasets.MapDataset` can also be integrated over the `on_region` to create
 a `~gammapy.datasets.MapDataset` with a `~gammapy.maps.RegionGeom`. Complex regions can be handled
@@ -1237,9 +1256,9 @@ and since the full IRFs are used, containment correction is not
 required.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 443-448
+.. GENERATED FROM PYTHON SOURCE LINES 444-449
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     reg_dataset = dataset_cta.to_region_map_dataset(region, name="region-map-dataset")
@@ -1285,7 +1304,7 @@ required.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 449-455
+.. GENERATED FROM PYTHON SOURCE LINES 450-456
 
 FluxPointsDataset
 -----------------
@@ -1294,9 +1313,9 @@ FluxPointsDataset
 points, which can be then used in fitting.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 455-466
+.. GENERATED FROM PYTHON SOURCE LINES 456-467
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     flux_points = FluxPoints.read(
@@ -1312,16 +1331,16 @@ points, which can be then used in fitting.
 
 
 
-.. image-sg:: /tutorials/api/images/sphx_glr_datasets_018.png
+.. image-sg:: /tutorials/api/images/sphx_glr_datasets_019.png
    :alt: datasets
-   :srcset: /tutorials/api/images/sphx_glr_datasets_018.png
+   :srcset: /tutorials/api/images/sphx_glr_datasets_019.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 467-472
+.. GENERATED FROM PYTHON SOURCE LINES 468-473
 
 The masks on `~gammapy.datasets.FluxPointsDataset` are `~numpy.ndarray` objects
 and the data is a
@@ -1329,9 +1348,9 @@ and the data is a
 by default, masks the upper limit points.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 472-475
+.. GENERATED FROM PYTHON SOURCE LINES 473-476
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(fp_dataset.mask_safe)  # Note: the mask here is simply a numpy array
@@ -1395,9 +1414,9 @@ by default, masks the upper limit points.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 476-479
+.. GENERATED FROM PYTHON SOURCE LINES 477-480
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(fp_dataset.data)  # is a `FluxPoints` object
@@ -1427,9 +1446,9 @@ by default, masks the upper limit points.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 480-484
+.. GENERATED FROM PYTHON SOURCE LINES 481-485
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(fp_dataset.data_shape())  # number of data points
@@ -1448,13 +1467,13 @@ by default, masks the upper limit points.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 485-488
+.. GENERATED FROM PYTHON SOURCE LINES 486-489
 
 For an example of fitting `~gammapy.estimators.FluxPoints`, see :doc:`/tutorials/analysis-1d/sed_fitting`,
-and for using source catalogs see :doc:`/tutorials/api/catalog`
+and for using source catalogs see :doc:`/tutorials/api/catalog`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 492-511
+.. GENERATED FROM PYTHON SOURCE LINES 493-513
 
 Datasets
 --------
@@ -1465,20 +1484,21 @@ same type, or of different types, eg: mix of `~gammapy.datasets.FluxPointsDatase
 
 For modelling and fitting of a list of `~gammapy.datasets.Dataset` objects, you can
 either:
-(a) Do a joint fitting of all the datasets together OR
-(b) Stack the datasets together, and then fit them.
+
+-  (A) Do a joint fitting of all the datasets together **OR**
+-  (B) Stack the datasets together, and then fit them.
 
 `~gammapy.datasets.Datasets` is a convenient tool to handle joint fitting of
-simultaneous datasets. As an example, please see :doc:`/tutorials/analysis-3d/analysis_mwl`
+simultaneous datasets. As an example, please see :doc:`/tutorials/analysis-3d/analysis_mwl`.
 
 To see how stacking is performed, please see :ref:`stack`.
 
 To create a `~gammapy.datasets.Datasets` object, pass a list of `~gammapy.datasets.Dataset` on init, eg
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 511-517
+.. GENERATED FROM PYTHON SOURCE LINES 513-519
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     datasets = Datasets([dataset_empty, dataset_cta])
@@ -1516,16 +1536,16 @@ To create a `~gammapy.datasets.Datasets` object, pass a list of `~gammapy.datase
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 518-522
+.. GENERATED FROM PYTHON SOURCE LINES 520-524
 
 If all the datasets have the same type we can also print an info table,
 collecting all the information from the individual calls to
 `~gammapy.datasets.Dataset.info_dict()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 522-528
+.. GENERATED FROM PYTHON SOURCE LINES 524-530
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     display(datasets.info_table())  # quick info of all datasets
@@ -1541,24 +1561,24 @@ collecting all the information from the individual calls to
 
  .. code-block:: none
 
-         name     counts     excess    ... n_fit_bins stat_type      stat_sum     
-                                       ...                                        
-    ------------- ------ ------------- ... ---------- --------- ------------------
-    dataset-empty      0           0.0 ...          0      cash                nan
-      dataset-cta 104317 12809.3046875 ...      67824      cash 44318.324424288934
+         name     counts       excess       ... stat_type      stat_sum     
+                                            ...                             
+    ------------- ------ ------------------ ... --------- ------------------
+    dataset-empty      0                0.0 ...      cash                nan
+      dataset-cta 104317 12809.313714614138 ...      cash 44318.324424288934
     ['dataset-empty', 'dataset-cta']
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 529-531
+.. GENERATED FROM PYTHON SOURCE LINES 531-533
 
 We can access individual datasets in `Datasets` object by name:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 531-535
+.. GENERATED FROM PYTHON SOURCE LINES 533-537
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(datasets["dataset-empty"])  # extracts the first dataset
@@ -1603,14 +1623,14 @@ We can access individual datasets in `Datasets` object by name:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 536-538
+.. GENERATED FROM PYTHON SOURCE LINES 538-540
 
 Or by index:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 538-542
+.. GENERATED FROM PYTHON SOURCE LINES 540-544
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(datasets[0])
@@ -1655,14 +1675,14 @@ Or by index:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 543-545
+.. GENERATED FROM PYTHON SOURCE LINES 545-547
 
 Other list type operations work as well such as:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 545-551
+.. GENERATED FROM PYTHON SOURCE LINES 547-553
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # Use python list convention to remove/add datasets, eg:
@@ -1683,14 +1703,14 @@ Other list type operations work as well such as:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 552-554
+.. GENERATED FROM PYTHON SOURCE LINES 554-556
 
 Or
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 554-559
+.. GENERATED FROM PYTHON SOURCE LINES 556-561
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     datasets.append(spectrum_dataset)
@@ -1710,15 +1730,15 @@ Or
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 560-563
+.. GENERATED FROM PYTHON SOURCE LINES 562-565
 
 Let’s create a list of spectrum datasets to illustrate some more
 functionality:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 563-575
+.. GENERATED FROM PYTHON SOURCE LINES 565-577
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     datasets = Datasets()
@@ -1776,14 +1796,14 @@ functionality:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 576-578
+.. GENERATED FROM PYTHON SOURCE LINES 578-580
 
 Now we can stack all datasets using `~gammapy.datasets.Datasets.stack_reduce()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 578-583
+.. GENERATED FROM PYTHON SOURCE LINES 580-585
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     stacked = datasets.stack_reduce(name="stacked")
@@ -1832,14 +1852,14 @@ Now we can stack all datasets using `~gammapy.datasets.Datasets.stack_reduce()`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 584-586
+.. GENERATED FROM PYTHON SOURCE LINES 586-588
 
 Or slice all datasets by a given energy range:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 586-592
+.. GENERATED FROM PYTHON SOURCE LINES 588-594
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     datasets_sliced = datasets.slice_by_energy(energy_min="1 TeV", energy_max="10 TeV")
@@ -1861,34 +1881,26 @@ Or slice all datasets by a given energy range:
 
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** ( 0 minutes  13.116 seconds)
-
-
 .. _sphx_glr_download_tutorials_api_datasets.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/api/datasets.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/datasets.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: datasets.py <datasets.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: datasets.ipynb <datasets.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: datasets.py <datasets.py>`
 
 
 .. only:: html

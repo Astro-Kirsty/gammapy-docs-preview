@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-3d_flux_profiles.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -52,10 +52,9 @@ We will work on a pre-computed `~gammapy.datasets.MapDataset` of Fermi-LAT data,
 `~regions.SkyRegion` to define the structure of the bins of the flux profile and
 run the flux profile extraction using the `~gammapy.estimators.FluxProfileEstimator`
 
-.. GENERATED FROM PYTHON SOURCE LINES 37-46
+.. GENERATED FROM PYTHON SOURCE LINES 37-45
 
-.. code-block:: python3
-
+.. code-block:: Python
 
 
     import numpy as np
@@ -72,15 +71,15 @@ run the flux profile extraction using the `~gammapy.estimators.FluxProfileEstima
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-50
+.. GENERATED FROM PYTHON SOURCE LINES 46-49
 
 Setup
 -----
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-56
+.. GENERATED FROM PYTHON SOURCE LINES 49-55
 
-.. code-block:: python3
+.. code-block:: Python
 
     from IPython.display import display
     from gammapy.datasets import MapDataset
@@ -95,14 +94,14 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 57-59
+.. GENERATED FROM PYTHON SOURCE LINES 56-58
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-68
+.. GENERATED FROM PYTHON SOURCE LINES 58-67
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
     from gammapy.utils.regions import (
@@ -132,48 +131,48 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1813+g9f8503aa9 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
-            scipy                  : 1.12.0     
+            numpy                  : 1.26.4     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.25.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-72
+.. GENERATED FROM PYTHON SOURCE LINES 68-71
 
 Read and Introduce Data
 -----------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-78
+.. GENERATED FROM PYTHON SOURCE LINES 71-77
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset = MapDataset.read(
@@ -188,14 +187,14 @@ Read and Introduce Data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-81
+.. GENERATED FROM PYTHON SOURCE LINES 78-80
 
 This is what the counts image we will work with looks like:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-86
+.. GENERATED FROM PYTHON SOURCE LINES 80-85
 
-.. code-block:: python3
+.. code-block:: Python
 
     counts_image = dataset.counts.sum_over_axes()
     counts_image.smooth("0.1 deg").plot(stretch="sqrt")
@@ -214,15 +213,15 @@ This is what the counts image we will work with looks like:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-90
+.. GENERATED FROM PYTHON SOURCE LINES 86-89
 
 There are 400x200 pixels in the dataset and 11 energy bins between 10
 GeV and 2 TeV:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-94
+.. GENERATED FROM PYTHON SOURCE LINES 89-93
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(dataset.counts)
@@ -249,7 +248,7 @@ GeV and 2 TeV:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-109
+.. GENERATED FROM PYTHON SOURCE LINES 94-108
 
 Profile Estimation
 ------------------
@@ -266,9 +265,9 @@ have to specify the `wcs` to take into account possible projections
 effects on the region definition:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-119
+.. GENERATED FROM PYTHON SOURCE LINES 108-118
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     regions = make_orthogonal_rectangle_sky_regions(
@@ -287,15 +286,15 @@ effects on the region definition:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-123
+.. GENERATED FROM PYTHON SOURCE LINES 119-122
 
 We can use the `~gammapy.maps.RegionGeom` object to illustrate the regions on top of
 the counts image:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-130
+.. GENERATED FROM PYTHON SOURCE LINES 122-129
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     geom = RegionGeom.create(region=regions)
@@ -323,16 +322,16 @@ the counts image:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 131-135
+.. GENERATED FROM PYTHON SOURCE LINES 130-134
 
 Next we create the `~gammapy.estimators.FluxProfileEstimator`. For the estimation of the
 flux profile we assume a spectral model with a power-law shape and an
 index of 2.3
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 135-144
+.. GENERATED FROM PYTHON SOURCE LINES 134-143
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     flux_profile_estimator = FluxProfileEstimator(
@@ -350,14 +349,14 @@ index of 2.3
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-147
+.. GENERATED FROM PYTHON SOURCE LINES 144-146
 
 We can see the full configuration by printing the estimator object:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-151
+.. GENERATED FROM PYTHON SOURCE LINES 146-150
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(flux_profile_estimator)
@@ -375,11 +374,11 @@ We can see the full configuration by printing the estimator object:
     --------------------
 
       energy_edges           : [  10. 2000.] GeV
-      fit                    : <gammapy.modeling.fit.Fit object at 0x7f02d3fa9280>
+      fit                    : <gammapy.modeling.fit.Fit object at 0x7a4d838a65b0>
       n_jobs                 : None
       n_sigma                : 1
       n_sigma_ul             : 2
-      norm                   : Parameter(name='norm', value=1.0, factor=1.0, scale=1.0, unit=Unit(dimensionless), min=nan, max=nan, frozen=False, prior=None, id=0x7f02d3fa9b80)
+      norm                   : Parameter(name='norm', value=1.0, factor=1.0, scale=1.0, unit=Unit(dimensionless), min=nan, max=nan, frozen=False, prior=None, id=0x7a4d838a68e0)
       null_value             : 0
       parallel_backend       : None
       reoptimize             : False
@@ -392,7 +391,7 @@ We can see the full configuration by printing the estimator object:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-157
+.. GENERATED FROM PYTHON SOURCE LINES 151-156
 
 Run Estimation
 ~~~~~~~~~~~~~~
@@ -400,9 +399,9 @@ Run Estimation
 Now we can run the profile estimation and explore the results:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-164
+.. GENERATED FROM PYTHON SOURCE LINES 158-163
 
-.. code-block:: python3
+.. code-block:: Python
 
     profile = flux_profile_estimator.run(datasets=dataset)
 
@@ -434,7 +433,7 @@ Now we can run the profile estimation and explore the results:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 165-174
+.. GENERATED FROM PYTHON SOURCE LINES 164-173
 
 We can see the flux profile is represented by a `~gammapy.estimators.FluxPoints` object
 with a `projected-distance` axis, which defines the main axis the flux
@@ -446,9 +445,9 @@ Plotting Results
 Let us directly plot the result using `~gammapy.estimators.FluxPoints.plot`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-179
+.. GENERATED FROM PYTHON SOURCE LINES 173-178
 
-.. code-block:: python3
+.. code-block:: Python
 
     ax = profile.plot(sed_type="dnde")
     ax.set_yscale("linear")
@@ -467,16 +466,16 @@ Let us directly plot the result using `~gammapy.estimators.FluxPoints.plot`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 180-184
+.. GENERATED FROM PYTHON SOURCE LINES 179-183
 
 Based on the spectral model we specified above we can also plot in any
 other sed type, e.g. energy flux and define a different threshold when
 to plot upper limits:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 184-193
+.. GENERATED FROM PYTHON SOURCE LINES 183-192
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     profile.sqrt_ts_threshold_ul = 2
@@ -499,16 +498,16 @@ to plot upper limits:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-198
+.. GENERATED FROM PYTHON SOURCE LINES 193-197
 
 We can also plot any other quantity of interest, that is defined on the
 `~gammapy.estimators.FluxPoints` result object. E.g. the predicted total counts,
 background counts and excess counts:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-210
+.. GENERATED FROM PYTHON SOURCE LINES 197-209
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     quantities = ["npred", "npred_excess", "npred_background"]
@@ -534,7 +533,7 @@ background counts and excess counts:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 211-217
+.. GENERATED FROM PYTHON SOURCE LINES 210-216
 
 Serialisation and I/O
 ~~~~~~~~~~~~~~~~~~~~~
@@ -543,9 +542,9 @@ The profile can be serialised using `~gammapy.estimators.FluxPoints.write`, give
 specific format:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-232
+.. GENERATED FROM PYTHON SOURCE LINES 216-231
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     profile.write(
@@ -574,15 +573,15 @@ specific format:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 233-236
+.. GENERATED FROM PYTHON SOURCE LINES 232-235
 
 The profile can be serialised to a `~astropy.table.Table` object
 using:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 236-241
+.. GENERATED FROM PYTHON SOURCE LINES 235-240
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     table = profile.to_table(format="profile", formatted=True)
@@ -610,6 +609,7 @@ using:
       2.549019607843138  2.941176470588236  2.745098039215687 ...  339.0    True
       2.941176470588236 3.3333333333333344  3.137254901960785 ...  531.0    True
                     ...                ...                ... ...    ...     ...
+     15.882352941176466 16.274509803921596  16.07843137254903 ...  321.0    True
      16.274509803921596 16.666666666666696 16.470588235294144 ...  421.0    True
      16.666666666666696 17.058823529411775 16.862745098039234 ...  431.0    True
      17.058823529411775   17.4509803921569 17.254901960784338 ...  374.0    True
@@ -624,15 +624,15 @@ using:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 242-245
+.. GENERATED FROM PYTHON SOURCE LINES 241-244
 
 No we can also estimate a radial profile starting from the Galactic
 center:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 245-253
+.. GENERATED FROM PYTHON SOURCE LINES 244-252
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     regions = make_concentric_annulus_sky_regions(
@@ -649,14 +649,14 @@ center:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 254-256
+.. GENERATED FROM PYTHON SOURCE LINES 253-255
 
 Again we first illustrate the regions:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-265
+.. GENERATED FROM PYTHON SOURCE LINES 255-264
 
-.. code-block:: python3
+.. code-block:: Python
 
     geom = RegionGeom.create(region=regions)
     gc_image = counts_image.cutout(
@@ -686,14 +686,14 @@ Again we first illustrate the regions:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-268
+.. GENERATED FROM PYTHON SOURCE LINES 265-267
 
 This time we define two energy bins and include the fit statistic
 profile in the computation:
 
-.. GENERATED FROM PYTHON SOURCE LINES 268-275
+.. GENERATED FROM PYTHON SOURCE LINES 267-274
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     flux_profile_estimator = FluxProfileEstimator(
@@ -709,13 +709,13 @@ profile in the computation:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 276-277
+.. GENERATED FROM PYTHON SOURCE LINES 275-276
 
 The configuration of the fit statistic profile is done throught the norm parameter:
 
-.. GENERATED FROM PYTHON SOURCE LINES 277-279
+.. GENERATED FROM PYTHON SOURCE LINES 276-278
 
-.. code-block:: python3
+.. code-block:: Python
 
     flux_profile_estimator.norm.scan_values = np.linspace(-1, 5, 11)
 
@@ -726,13 +726,13 @@ The configuration of the fit statistic profile is done throught the norm paramet
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-281
+.. GENERATED FROM PYTHON SOURCE LINES 279-280
 
 Now we can run the estimator,
 
-.. GENERATED FROM PYTHON SOURCE LINES 281-285
+.. GENERATED FROM PYTHON SOURCE LINES 280-284
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     profile = flux_profile_estimator.run(datasets=dataset)
@@ -745,14 +745,14 @@ Now we can run the estimator,
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 286-288
+.. GENERATED FROM PYTHON SOURCE LINES 285-287
 
 and plot the result:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 288-293
+.. GENERATED FROM PYTHON SOURCE LINES 287-292
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     profile.plot(axis_name="projected-distance", sed_type="flux")
@@ -771,15 +771,15 @@ and plot the result:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 294-297
+.. GENERATED FROM PYTHON SOURCE LINES 293-296
 
 However because of the powerlaw spectrum the flux at high energies is
 much lower. To extract the profile at high energies only we can use:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 297-302
+.. GENERATED FROM PYTHON SOURCE LINES 296-301
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     profile_high = profile.slice_by_idx({"energy": slice(1, 2)})
@@ -793,14 +793,14 @@ much lower. To extract the profile at high energies only we can use:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-305
+.. GENERATED FROM PYTHON SOURCE LINES 302-304
 
 And now plot the points together with the likelihood profiles:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 305-313
+.. GENERATED FROM PYTHON SOURCE LINES 304-312
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     fig, ax = plt.subplots()
@@ -825,7 +825,7 @@ And now plot the points together with the likelihood profiles:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  19.520 seconds)
+   **Total running time of the script:** (0 minutes 13.403 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_flux_profiles.py:
@@ -834,23 +834,20 @@ And now plot the points together with the likelihood profiles:
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/flux_profiles.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/flux_profiles.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: flux_profiles.py <flux_profiles.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: flux_profiles.ipynb <flux_profiles.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: flux_profiles.py <flux_profiles.py>`
 
 
 .. only:: html

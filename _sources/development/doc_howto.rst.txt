@@ -111,6 +111,32 @@ the code as well as the output value produced.
             (10., 20.)>
         radius: 3.0 deg
 
+To allow the code block to be placed correctly over multiple lines utilise the "...":
+
+.. code-block:: text
+
+        Examples
+        --------
+        >>> from gammapy.maps import WcsGeom, MapAxis
+        >>> energy_axis_true = MapAxis.from_energy_bounds(
+        ...            0.5, 20, 10, unit="TeV", name="energy_true"
+        ...        )
+
+
+For a larger code block it is also possible to utilise the following syntax.
+
+.. code-block:: text
+
+        Examples
+        --------
+        .. testcode::
+
+            from gammapy.maps import MapAxis
+            from gammapy.irf import EnergyDispersion2D
+            filename = '$GAMMAPY_DATA/hess-dl3-dr1/data/hess_dl3_dr1_obs_id_020136.fits.gz'
+            edisp2d = EnergyDispersion2D.read(filename, hdu="EDISP")
+
+
 In order to perform tests of these snippets of code present in the docstrings of the Python files, you may run the
 following command.
 
@@ -157,7 +183,7 @@ please refer to it for more details.
 
 The tooltip is the text that appears when you hover over the thumbnail. It is taken from the first line 
 of the docstring of the tutorial. You can change it by editing the docstring. See e.g.
- `Analysis 1 Tutorial <https://github.com/gammapy/gammapy/blob/main/examples/tutorials/starting/analysis_1.py#L5>`__.
+`Analysis 1 Tutorial <https://github.com/gammapy/gammapy/blob/main/examples/tutorials/starting/analysis_1.py#L5>`__.
 
 
 Dealing with links
@@ -202,7 +228,7 @@ To check for broken external links you can use ``tox``:
 
 .. code-block:: bash
 
-   $ tox -e linkcheck
+   tox -e linkcheck
 
 Include png files as images
 ----------------------------

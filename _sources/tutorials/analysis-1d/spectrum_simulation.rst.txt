@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-1d_spectrum_simulation.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -63,10 +63,9 @@ We will use the following classes and functions:
 -  `~gammapy.irf.load_irf_dict_from_file`
 -  `~gammapy.modeling.models.PowerLawSpectralModel`
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-58
+.. GENERATED FROM PYTHON SOURCE LINES 48-57
 
-.. code-block:: python3
-
+.. code-block:: Python
 
 
     import numpy as np
@@ -84,15 +83,15 @@ We will use the following classes and functions:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-62
+.. GENERATED FROM PYTHON SOURCE LINES 58-61
 
 Setup
 -----
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-71
+.. GENERATED FROM PYTHON SOURCE LINES 61-70
 
-.. code-block:: python3
+.. code-block:: Python
 
     from IPython.display import display
     from gammapy.data import FixedPointingInfo, Observation, observatory_locations
@@ -110,14 +109,14 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 72-74
+.. GENERATED FROM PYTHON SOURCE LINES 71-73
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-79
+.. GENERATED FROM PYTHON SOURCE LINES 73-78
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
 
@@ -143,40 +142,40 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1813+g9f8503aa9 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
-            scipy                  : 1.12.0     
+            numpy                  : 1.26.4     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.25.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-90
+.. GENERATED FROM PYTHON SOURCE LINES 79-89
 
 Simulation of a single spectrum
 -------------------------------
@@ -189,9 +188,9 @@ get the predicted number of counts. This is Poisson fluctuated using
 the `fake()` to get the simulated counts for each observation.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 90-127
+.. GENERATED FROM PYTHON SOURCE LINES 89-126
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # Define simulation parameters parameters
@@ -249,14 +248,14 @@ the `fake()` to get the simulated counts for each observation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 128-130
+.. GENERATED FROM PYTHON SOURCE LINES 127-129
 
 Load the IRFs
 In this simulation, we use the CTA-1DC IRFs shipped with Gammapy.
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-143
+.. GENERATED FROM PYTHON SOURCE LINES 129-142
 
-.. code-block:: python3
+.. code-block:: Python
 
     irfs = load_irf_dict_from_file(
         "$GAMMAPY_DATA/cta-1dc/caldb/data/cta/1dc/bcf/South_z20_50h/irf_file.fits"
@@ -295,14 +294,14 @@ In this simulation, we use the CTA-1DC IRFs shipped with Gammapy.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-146
+.. GENERATED FROM PYTHON SOURCE LINES 143-145
 
 Simulate a spectra
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-163
+.. GENERATED FROM PYTHON SOURCE LINES 145-162
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # Make the SpectrumDataset
@@ -372,12 +371,12 @@ Simulate a spectra
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 164-166
+.. GENERATED FROM PYTHON SOURCE LINES 163-165
 
 You can see that background counts are now simulated
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 169-178
+.. GENERATED FROM PYTHON SOURCE LINES 168-177
 
 On-Off analysis
 ~~~~~~~~~~~~~~~
@@ -389,9 +388,9 @@ section in the :doc:`/tutorials/analysis-1d/spectral_analysis_rad_max` tutorial,
 dealing with simulations based on observations of real off counts.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-186
+.. GENERATED FROM PYTHON SOURCE LINES 177-185
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset_on_off = SpectrumDatasetOnOff.from_spectrum_dataset(
@@ -412,14 +411,14 @@ dealing with simulations based on observations of real off counts.
     SpectrumDatasetOnOff
     --------------------
 
-      Name                            : -NdX6Q1U 
+      Name                            : 9V2Q4gso 
 
-      Total counts                    : 294 
-      Total background counts         : 22.00
-      Total excess counts             : 272.00
+      Total counts                    : 299 
+      Total background counts         : 25.60
+      Total excess counts             : 273.40
 
-      Predicted counts                : 303.18
-      Predicted background counts     : 21.81
+      Predicted counts                : 306.85
+      Predicted background counts     : 25.48
       Predicted excess counts         : 281.37
 
       Exposure min                    : 2.53e+08 m2 s
@@ -429,7 +428,7 @@ dealing with simulations based on observations of real off counts.
       Number of fit bins              : 9 
 
       Fit statistic type              : wstat
-      Fit statistic value (-2 log(L)) : 15.55
+      Fit statistic value (-2 log(L)) : 1.81
 
       Number of models                : 1 
       Number of parameters            : 3
@@ -447,7 +446,7 @@ dealing with simulations based on observations of real off counts.
           amplitude                     :   2.50e-12   +/- 0.0e+00 1 / (cm2 s TeV)
           reference             (frozen):      1.000       TeV         
   
-        Total counts_off                : 110 
+        Total counts_off                : 128 
       Acceptance                      : 9 
       Acceptance off                  : 45 
 
@@ -455,15 +454,15 @@ dealing with simulations based on observations of real off counts.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-190
+.. GENERATED FROM PYTHON SOURCE LINES 186-189
 
 You can see that off counts are now simulated as well. We now simulate
 several spectra using the same set of observation conditions.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 192-206
+.. GENERATED FROM PYTHON SOURCE LINES 191-205
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     n_obs = 100
@@ -487,42 +486,43 @@ several spectra using the same set of observation conditions.
 
  .. code-block:: none
 
-     name  counts       excess      ...   acceptance_off         alpha       
-                                    ...                                      
-    ------ ------ ----------------- ... ----------------- -------------------
-     obs-0    317 298.6000061035156 ...              45.0 0.20000000298023224
-     obs-1    275             253.0 ...              45.0                 0.2
-     obs-2    293             272.4 ...              45.0                 0.2
-     obs-3    280             257.6 ... 45.00000000000001 0.19999999999999998
-     obs-4    337             316.4 ...              45.0                 0.2
-     obs-5    283             258.6 ...              45.0                 0.2
-     obs-6    330             307.6 ... 44.99999999999999 0.20000000000000004
-     obs-7    283             257.2 ...              45.0                 0.2
-     obs-8    308             284.6 ...              45.0                 0.2
-       ...    ...               ... ...               ...                 ...
-    obs-91    285             259.8 ...              45.0                 0.2
-    obs-92    313             289.4 ...              45.0                 0.2
-    obs-93    302             283.2 ...              45.0                 0.2
-    obs-94    322             300.2 ...              45.0                 0.2
-    obs-95    305             280.6 ... 44.99999999999999 0.20000000000000004
-    obs-96    301             277.4 ...              45.0                 0.2
-    obs-97    290             271.2 ...              45.0                 0.2
-    obs-98    301             280.6 ...              45.0                 0.2
-    obs-99    323             302.2 ...              45.0                 0.2
+     name  counts excess ... acceptance   acceptance_off         alpha       
+                         ...                                                 
+    ------ ------ ------ ... ---------- ----------------- -------------------
+     obs-0    317  298.6 ...        9.0              45.0                 0.2
+     obs-1    275  253.0 ...        9.0              45.0                 0.2
+     obs-2    293  272.4 ...        9.0              45.0                 0.2
+     obs-3    280  257.6 ...        9.0 45.00000000000001 0.19999999999999998
+     obs-4    337  316.4 ...        9.0              45.0                 0.2
+     obs-5    283  258.6 ...        9.0              45.0                 0.2
+     obs-6    330  307.6 ...        9.0 44.99999999999999 0.20000000000000004
+     obs-7    283  257.2 ...        9.0              45.0                 0.2
+     obs-8    308  284.6 ...        9.0              45.0                 0.2
+       ...    ...    ... ...        ...               ...                 ...
+    obs-90    286  267.0 ...        9.0 44.99999999999999 0.20000000000000004
+    obs-91    285  259.8 ...        9.0              45.0                 0.2
+    obs-92    313  289.4 ...        9.0              45.0                 0.2
+    obs-93    302  283.2 ...        9.0              45.0                 0.2
+    obs-94    322  300.2 ...        9.0              45.0                 0.2
+    obs-95    305  280.6 ...        9.0 44.99999999999999 0.20000000000000004
+    obs-96    301  277.4 ...        9.0              45.0                 0.2
+    obs-97    290  271.2 ...        9.0              45.0                 0.2
+    obs-98    301  280.6 ...        9.0              45.0                 0.2
+    obs-99    323  302.2 ...        9.0              45.0                 0.2
     Length = 100 rows
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 207-210
+.. GENERATED FROM PYTHON SOURCE LINES 206-209
 
 Before moving on to the fit let’s have a look at the simulated
 observations.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 210-221
+.. GENERATED FROM PYTHON SOURCE LINES 209-220
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     fix, axes = plt.subplots(1, 3, figsize=(12, 4))
@@ -547,14 +547,14 @@ observations.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-224
+.. GENERATED FROM PYTHON SOURCE LINES 221-223
 
 Now, we fit each simulated spectrum individually
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-241
+.. GENERATED FROM PYTHON SOURCE LINES 225-240
 
-.. code-block:: python3
+.. code-block:: Python
 
     results = []
 
@@ -578,15 +578,15 @@ Now, we fit each simulated spectrum individually
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 242-245
+.. GENERATED FROM PYTHON SOURCE LINES 241-244
 
 We take a look at the distribution of the fitted indices. This matches
 very well with the spectrum that we initially injected.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 245-255
+.. GENERATED FROM PYTHON SOURCE LINES 244-254
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     fig, ax = plt.subplots()
@@ -616,7 +616,7 @@ very well with the spectrum that we initially injected.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-266
+.. GENERATED FROM PYTHON SOURCE LINES 255-265
 
 Exercises
 ---------
@@ -636,23 +636,20 @@ Exercises
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-1d/spectrum_simulation.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-1d/spectrum_simulation.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: spectrum_simulation.py <spectrum_simulation.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: spectrum_simulation.ipynb <spectrum_simulation.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: spectrum_simulation.py <spectrum_simulation.py>`
 
 
 .. only:: html

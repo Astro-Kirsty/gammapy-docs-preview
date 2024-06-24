@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-1d_spectral_analysis_hli.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -80,10 +80,9 @@ In summary, we have to:
    -  Model fitting
    -  Estimating flux points
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-72
+.. GENERATED FROM PYTHON SOURCE LINES 65-71
 
-.. code-block:: python3
-
+.. code-block:: Python
 
 
     from pathlib import Path
@@ -98,15 +97,15 @@ In summary, we have to:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 73-76
+.. GENERATED FROM PYTHON SOURCE LINES 72-75
 
 Setup
 -----
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-80
+.. GENERATED FROM PYTHON SOURCE LINES 75-79
 
-.. code-block:: python3
+.. code-block:: Python
 
     from IPython.display import display
     from gammapy.analysis import Analysis, AnalysisConfig
@@ -119,14 +118,14 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-83
+.. GENERATED FROM PYTHON SOURCE LINES 80-82
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-87
+.. GENERATED FROM PYTHON SOURCE LINES 82-86
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
 
@@ -151,40 +150,40 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1813+g9f8503aa9 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
-            scipy                  : 1.12.0     
+            numpy                  : 1.26.4     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.25.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-100
+.. GENERATED FROM PYTHON SOURCE LINES 87-99
 
 Analysis configuration
 ----------------------
@@ -199,9 +198,9 @@ with any text editor of your choice.
 Here is what the configuration for our analysis looks like:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-132
+.. GENERATED FROM PYTHON SOURCE LINES 99-131
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     yaml_str = """
@@ -252,7 +251,7 @@ Here is what the configuration for our analysis looks like:
             datasets_file: null
             models_file: null
         observations:
-            datastore: /home/feijen/gammapy-datasets/dev/hess-dl3-dr1
+            datastore: /home/feijen/Documents/github/gammapy-data/hess-dl3-dr1
             obs_ids: []
             obs_file: null
             obs_cone: {frame: icrs, lon: 83.633 deg, lat: 22.014 deg, radius: 5.0 deg}
@@ -301,15 +300,15 @@ Here is what the configuration for our analysis looks like:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-136
+.. GENERATED FROM PYTHON SOURCE LINES 132-135
 
 Note that you can save this string into a yaml file and load it as
 follow:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-142
+.. GENERATED FROM PYTHON SOURCE LINES 135-141
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # config = AnalysisConfig.read("config-1d.yaml")
@@ -324,13 +323,13 @@ follow:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-146
+.. GENERATED FROM PYTHON SOURCE LINES 142-145
 
 Using data stored into your computer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-158
+.. GENERATED FROM PYTHON SOURCE LINES 148-157
 
 Here, we want to use Crab runs from the H.E.S.S. DL3-DR1. We have
 defined the datastore and a cone search of observations pointing with 5
@@ -342,13 +341,13 @@ your local directory containing the H.E.S.S. DL3-DR1 as described in
 :ref:`quickstart-setup`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 161-164
+.. GENERATED FROM PYTHON SOURCE LINES 160-163
 
 Setting the exclusion mask
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-172
+.. GENERATED FROM PYTHON SOURCE LINES 166-171
 
 In order to properly adjust the background normalisation on regions
 without gamma-ray signal, one needs to define an exclusion mask for the
@@ -356,9 +355,9 @@ background normalisation. For this tutorial, we use the following one
 `$GAMMAPY_DATA/joint-crab/exclusion/exclusion_mask_crab.fits.gz`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-178
+.. GENERATED FROM PYTHON SOURCE LINES 171-177
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     config.datasets.background.exclusion = (
@@ -373,13 +372,13 @@ background normalisation. For this tutorial, we use the following one
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-182
+.. GENERATED FROM PYTHON SOURCE LINES 178-181
 
 We’re all set. But before we go on let’s see how to save or import
 `~gammapy.analysis.AnalysisConfig` objects though YAML files.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-190
+.. GENERATED FROM PYTHON SOURCE LINES 184-189
 
 Using YAML configuration files for setting/writing the Data Reduction parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -387,9 +386,9 @@ Using YAML configuration files for setting/writing the Data Reduction parameters
 One can export/import the `~gammapy.analysis.AnalysisConfig` to/from a YAML file.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 190-197
+.. GENERATED FROM PYTHON SOURCE LINES 189-196
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     config.write("config.yaml", overwrite=True)
@@ -415,7 +414,7 @@ One can export/import the `~gammapy.analysis.AnalysisConfig` to/from a YAML file
             datasets_file: null
             models_file: null
         observations:
-            datastore: /home/feijen/gammapy-datasets/dev/hess-dl3-dr1
+            datastore: /home/feijen/Documents/github/gammapy-data/hess-dl3-dr1
             obs_ids: []
             obs_file: null
             obs_cone: {frame: icrs, lon: 83.633 deg, lat: 22.014 deg, radius: 5.0 deg}
@@ -437,7 +436,7 @@ One can export/import the `~gammapy.analysis.AnalysisConfig` to/from a YAML file
             map_selection: [counts, exposure, background, psf, edisp]
             background:
                 method: reflected
-                exclusion: /home/feijen/gammapy-datasets/dev/joint-crab/exclusion/exclusion_mask_crab.fits.gz
+                exclusion: /home/feijen/Documents/github/gammapy-data/joint-crab/exclusion/exclusion_mask_crab.fits.gz
                 parameters: {}
             safe_mask:
                 methods: [aeff-default, aeff-max]
@@ -464,13 +463,13 @@ One can export/import the `~gammapy.analysis.AnalysisConfig` to/from a YAML file
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-201
+.. GENERATED FROM PYTHON SOURCE LINES 197-200
 
 Running the first step of the analysis: the Data Reduction
 ----------------------------------------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 204-210
+.. GENERATED FROM PYTHON SOURCE LINES 203-209
 
 Configuration of the analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -479,9 +478,9 @@ We first create an `~gammapy.analysis.Analysis` object from our
 configuration.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 210-214
+.. GENERATED FROM PYTHON SOURCE LINES 209-213
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     analysis = Analysis(config)
@@ -494,7 +493,7 @@ configuration.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-221
+.. GENERATED FROM PYTHON SOURCE LINES 214-220
 
 Observation selection
 ~~~~~~~~~~~~~~~~~~~~~
@@ -503,9 +502,9 @@ We can directly select and load the observations from disk using
 `~gammapy.analysis.Analysis.get_observations()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 221-225
+.. GENERATED FROM PYTHON SOURCE LINES 220-224
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     analysis.get_observations()
@@ -518,15 +517,15 @@ We can directly select and load the observations from disk using
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-229
+.. GENERATED FROM PYTHON SOURCE LINES 225-228
 
 The observations are now available on the `Analysis` object. The
 selection corresponds to the following ids:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-233
+.. GENERATED FROM PYTHON SOURCE LINES 228-232
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(analysis.observations.ids)
@@ -545,13 +544,13 @@ selection corresponds to the following ids:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-237
+.. GENERATED FROM PYTHON SOURCE LINES 233-236
 
 To see how to explore observations, please refer to the following
 notebook: :doc:`/tutorials/data/cta` or :doc:`/tutorials/data/hess`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 240-247
+.. GENERATED FROM PYTHON SOURCE LINES 239-246
 
 Running the Data Reduction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -561,9 +560,9 @@ a WCS map geometry, energy axis and decided to stack the maps. We can
 run the reduction using `.get_datasets()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 249-252
+.. GENERATED FROM PYTHON SOURCE LINES 248-251
 
-.. code-block:: python3
+.. code-block:: Python
 
     analysis.get_datasets()
 
@@ -575,7 +574,7 @@ run the reduction using `.get_datasets()`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 253-259
+.. GENERATED FROM PYTHON SOURCE LINES 252-258
 
 Results exploration
 ~~~~~~~~~~~~~~~~~~~
@@ -584,9 +583,9 @@ As we have chosen to stack the data, one can print what contains the
 unique entry of the datasets:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-263
+.. GENERATED FROM PYTHON SOURCE LINES 258-262
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(analysis.datasets[0])
@@ -634,7 +633,7 @@ unique entry of the datasets:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-271
+.. GENERATED FROM PYTHON SOURCE LINES 263-270
 
 As you can see the dataset uses WStat with the background computed with
 the Reflected Background method during the data reduction, but no source
@@ -644,9 +643,9 @@ The counts, exposure and background, etc are directly available on the
 dataset and can be printed:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-281
+.. GENERATED FROM PYTHON SOURCE LINES 270-280
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     info_table = analysis.datasets.info_table()
@@ -671,7 +670,7 @@ dataset and can be printed:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-289
+.. GENERATED FROM PYTHON SOURCE LINES 281-288
 
 Save dataset to disk
 ~~~~~~~~~~~~~~~~~~~~
@@ -681,9 +680,9 @@ fit, because often the preparation of counts, collection are and energy
 dispersion is slow if you have a lot of data. We first create a folder:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 289-294
+.. GENERATED FROM PYTHON SOURCE LINES 288-293
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     path = Path("hli_spectrum_analysis")
@@ -697,15 +696,15 @@ dispersion is slow if you have a lot of data. We first create a folder:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-298
+.. GENERATED FROM PYTHON SOURCE LINES 294-297
 
 And then write the stacked dataset to disk by calling the dedicated
 `write()` method:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 298-303
+.. GENERATED FROM PYTHON SOURCE LINES 297-302
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     filename = path / "crab-stacked-dataset.fits.gz"
@@ -719,13 +718,13 @@ And then write the stacked dataset to disk by calling the dedicated
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 304-307
+.. GENERATED FROM PYTHON SOURCE LINES 303-306
 
 Model fitting
 -------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 310-318
+.. GENERATED FROM PYTHON SOURCE LINES 309-317
 
 Creation of the model
 ~~~~~~~~~~~~~~~~~~~~~
@@ -736,9 +735,9 @@ object. Here is a pre-defined YAML configuration file created for this
 1D analysis:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 318-346
+.. GENERATED FROM PYTHON SOURCE LINES 317-345
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     model_str = """
@@ -795,14 +794,14 @@ object. Here is a pre-defined YAML configuration file created for this
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 347-349
+.. GENERATED FROM PYTHON SOURCE LINES 346-348
 
 Or from a yaml file, e.g.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 349-354
+.. GENERATED FROM PYTHON SOURCE LINES 348-353
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # model_1d = Models.read("model-1d.yaml")
@@ -816,14 +815,14 @@ Or from a yaml file, e.g.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 355-357
+.. GENERATED FROM PYTHON SOURCE LINES 354-356
 
 Now we set the model on the analysis object:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 357-361
+.. GENERATED FROM PYTHON SOURCE LINES 356-360
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     analysis.set_models(model_1d)
@@ -836,7 +835,7 @@ Now we set the model on the analysis object:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-369
+.. GENERATED FROM PYTHON SOURCE LINES 361-368
 
 Setting fitting parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -846,15 +845,15 @@ reduction. Parameters have then to be passed to the configuration
 object.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 372-375
+.. GENERATED FROM PYTHON SOURCE LINES 371-374
 
 Running the fit
 ~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 377-380
+.. GENERATED FROM PYTHON SOURCE LINES 376-379
 
-.. code-block:: python3
+.. code-block:: Python
 
     analysis.run_fit()
 
@@ -866,15 +865,15 @@ Running the fit
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 381-384
+.. GENERATED FROM PYTHON SOURCE LINES 380-383
 
 Exploration of the fit results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 384-390
+.. GENERATED FROM PYTHON SOURCE LINES 383-389
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(analysis.fit_result)
@@ -915,15 +914,15 @@ Exploration of the fit results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 391-394
+.. GENERATED FROM PYTHON SOURCE LINES 390-393
 
 To check the fit is correct, we compute the excess spectrum with the
 predicted counts.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 394-403
+.. GENERATED FROM PYTHON SOURCE LINES 393-402
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     ax_spectrum, ax_residuals = analysis.datasets[0].plot_fit()
@@ -946,7 +945,7 @@ predicted counts.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 404-409
+.. GENERATED FROM PYTHON SOURCE LINES 403-408
 
 Serialisation of the fit result
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -954,9 +953,9 @@ Serialisation of the fit result
 This is how we can write the model back to file again:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 409-417
+.. GENERATED FROM PYTHON SOURCE LINES 408-416
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     filename = path / "model-best-fit.yaml"
@@ -992,29 +991,29 @@ This is how we can write the model back to file again:
                 unit: TeV
     covariance: model-best-fit_covariance.dat
     metadata:
-        creator: Gammapy 1.2.dev1813+g9f8503aa9
-        date: '2024-02-01T11:55:49.353681'
+        creator: Gammapy 1.3.dev284+g868b2a7d7.d20240510
+        date: '2024-05-10T13:48:28.671977'
         origin: null
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 418-421
+.. GENERATED FROM PYTHON SOURCE LINES 417-420
 
 Creation of the Flux points
 ---------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 424-427
+.. GENERATED FROM PYTHON SOURCE LINES 423-426
 
 Running the estimation
 ~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 427-435
+.. GENERATED FROM PYTHON SOURCE LINES 426-434
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     analysis.get_flux_points()
@@ -1047,14 +1046,14 @@ Running the estimation
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 436-438
+.. GENERATED FROM PYTHON SOURCE LINES 435-437
 
 Let’s plot the flux points with their likelihood profile
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 438-446
+.. GENERATED FROM PYTHON SOURCE LINES 437-445
 
-.. code-block:: python3
+.. code-block:: Python
 
     fig, ax_sed = plt.subplots()
     crab_fp.plot(ax=ax_sed, sed_type="e2dnde", color="darkorange")
@@ -1076,7 +1075,7 @@ Let’s plot the flux points with their likelihood profile
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 447-454
+.. GENERATED FROM PYTHON SOURCE LINES 446-453
 
 Serialisation of the results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1086,9 +1085,9 @@ defined
 `here <https://gamma-astro-data-formats.readthedocs.io/en/latest/spectra/flux_points/index.html>`__
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 454-459
+.. GENERATED FROM PYTHON SOURCE LINES 453-458
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     filename = path / "flux-points.fits"
@@ -1102,21 +1101,21 @@ defined
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 460-463
+.. GENERATED FROM PYTHON SOURCE LINES 459-462
 
 Plotting the final results of the 1D Analysis
 ---------------------------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 466-469
+.. GENERATED FROM PYTHON SOURCE LINES 465-468
 
 We can plot of the spectral fit with its error band overlaid with the
 flux points:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 469-475
+.. GENERATED FROM PYTHON SOURCE LINES 468-474
 
-.. code-block:: python3
+.. code-block:: Python
 
     ax_sed, ax_residuals = analysis.flux_points.plot_fit()
     ax_sed.set_ylim(1.0e-12, 1.0e-9)
@@ -1136,7 +1135,7 @@ flux points:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 476-485
+.. GENERATED FROM PYTHON SOURCE LINES 475-484
 
 What’s next?
 ------------
@@ -1155,23 +1154,20 @@ both methods on a unique plot.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-1d/spectral_analysis_hli.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-1d/spectral_analysis_hli.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: spectral_analysis_hli.py <spectral_analysis_hli.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: spectral_analysis_hli.ipynb <spectral_analysis_hli.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: spectral_analysis_hli.py <spectral_analysis_hli.py>`
 
 
 .. only:: html

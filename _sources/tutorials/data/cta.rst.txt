@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_data_cta.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -78,7 +78,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 61-72
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     import os
@@ -105,7 +105,7 @@ Check setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 75-80
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
 
@@ -131,34 +131,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1723+gcc78c6251.d20240301 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.12.0     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.3      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
             iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.3      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
@@ -200,7 +200,7 @@ the end of this notebook.
 
 .. GENERATED FROM PYTHON SOURCE LINES 112-122
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # !ls -1 $GAMMAPY_DATA/cta-1dc
@@ -228,7 +228,7 @@ overwrite the one you may have already defined.
 
 .. GENERATED FROM PYTHON SOURCE LINES 127-131
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     os.environ["CALDB"] = os.environ["GAMMAPY_DATA"] + "/cta-1dc/caldb"
@@ -251,7 +251,7 @@ You can use the `~gammapy.data.DataStore` to load via the index files
 
 .. GENERATED FROM PYTHON SOURCE LINES 137-142
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     data_store = DataStore.from_dir("$GAMMAPY_DATA/cta-1dc/index/gps")
@@ -268,7 +268,7 @@ You can use the `~gammapy.data.DataStore` to load via the index files
 
     Data store:
     HDU index table:
-    BASE_DIR: /home/feijen/gammapy-datasets/dev/cta-1dc/index/gps
+    BASE_DIR: /home/feijen/Documents/github/gammapy-data/cta-1dc/index/gps
     Rows: 24
     OBS_ID: 110380 -- 111630
     HDU_TYPE: ['aeff', 'bkg', 'edisp', 'events', 'gti', 'psf']
@@ -292,7 +292,7 @@ event files.
 
 .. GENERATED FROM PYTHON SOURCE LINES 147-159
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     path = Path(os.environ["GAMMAPY_DATA"]) / "cta-1dc/data"
@@ -367,7 +367,7 @@ Events can be accessed from the observation object like:
 
 .. GENERATED FROM PYTHON SOURCE LINES 181-184
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     events = observation.events
@@ -386,7 +386,7 @@ Or read directly from an event file:
 
 .. GENERATED FROM PYTHON SOURCE LINES 187-192
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     events = EventList.read(
@@ -407,7 +407,7 @@ Here we print the data from the first 5 events listed in the table:
 
 .. GENERATED FROM PYTHON SOURCE LINES 195-198
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     display(events.table[:5])
@@ -439,7 +439,7 @@ And show a summary plot:
 
 .. GENERATED FROM PYTHON SOURCE LINES 201-205
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     events.peek()
@@ -492,7 +492,7 @@ Notes:
 
 .. GENERATED FROM PYTHON SOURCE LINES 236-246
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(observation.aeff)
@@ -523,8 +523,7 @@ Notes:
 
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
       warnings.warn(msg, UnitsWarning)
-    Invalid unit found in background table! Assuming (s-1 MeV-1 sr-1)
-    {'aeff': <gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7fc6653eeeb0>, 'psf': <gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7fc6653e0e80>, 'edisp': <gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7fc66538e940>, 'bkg': <gammapy.irf.background.Background3D object at 0x7fc66538ebb0>}
+    {'aeff': <gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7a4d86a87a60>, 'psf': <gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7a4d86a9af10>, 'edisp': <gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7a4d8b3dd9a0>, 'bkg': <gammapy.irf.background.Background3D object at 0x7a4dce0e6730>}
 
 
 
@@ -537,7 +536,7 @@ Effective area
 
 .. GENERATED FROM PYTHON SOURCE LINES 250-262
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # Equivalent alternative way to load IRFs directly
@@ -586,7 +585,7 @@ Energy dispersion
 
 .. GENERATED FROM PYTHON SOURCE LINES 266-271
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     irfs["edisp"].peek()
@@ -611,20 +610,14 @@ Point spread function
 ~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-286
+.. GENERATED FROM PYTHON SOURCE LINES 275-280
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     irfs["psf"].peek()
     plt.show()
 
-    # This is how for analysis you could slice out the PSF
-    # at a given field of view offset
-    irfs["psf"].plot_containment_radius_vs_energy(
-        offset=[1] * u.deg, fraction=[0.68, 0.8, 0.95]
-    )
-    plt.show()
 
 
 
@@ -638,7 +631,33 @@ Point spread function
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 287-292
+.. GENERATED FROM PYTHON SOURCE LINES 281-283
+
+This is how for analysis you could slice out the PSF
+at a given field of view offset
+
+.. GENERATED FROM PYTHON SOURCE LINES 283-288
+
+.. code-block:: Python
+
+    irfs["psf"].plot_containment_radius_vs_energy(
+        offset=[1] * u.deg, fraction=[0.68, 0.8, 0.95]
+    )
+    plt.show()
+
+
+
+
+.. image-sg:: /tutorials/data/images/sphx_glr_cta_005.png
+   :alt: cta
+   :srcset: /tutorials/data/images/sphx_glr_cta_005.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 289-294
 
 Background
 ~~~~~~~~~~
@@ -646,9 +665,9 @@ Background
 The background is given as a rate in units `MeV-1 s-1 sr-1`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 292-299
+.. GENERATED FROM PYTHON SOURCE LINES 294-301
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     irfs["bkg"].peek()
@@ -660,9 +679,9 @@ The background is given as a rate in units `MeV-1 s-1 sr-1`.
 
 
 
-.. image-sg:: /tutorials/data/images/sphx_glr_cta_005.png
+.. image-sg:: /tutorials/data/images/sphx_glr_cta_006.png
    :alt: cta
-   :srcset: /tutorials/data/images/sphx_glr_cta_005.png
+   :srcset: /tutorials/data/images/sphx_glr_cta_006.png
    :class: sphx-glr-single-img
 
 
@@ -675,14 +694,14 @@ The background is given as a rate in units `MeV-1 s-1 sr-1`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-302
+.. GENERATED FROM PYTHON SOURCE LINES 302-304
 
 To visualise the background at particular energies:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-308
+.. GENERATED FROM PYTHON SOURCE LINES 304-310
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     irfs["bkg"].plot_at_energy(
@@ -693,16 +712,16 @@ To visualise the background at particular energies:
 
 
 
-.. image-sg:: /tutorials/data/images/sphx_glr_cta_006.png
+.. image-sg:: /tutorials/data/images/sphx_glr_cta_007.png
    :alt: 100 GeV, 500 GeV, 1 TeV, 3 TeV, 10 TeV, 100 TeV
-   :srcset: /tutorials/data/images/sphx_glr_cta_006.png
+   :srcset: /tutorials/data/images/sphx_glr_cta_007.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 309-327
+.. GENERATED FROM PYTHON SOURCE LINES 311-329
 
 Source models
 -------------
@@ -723,9 +742,9 @@ for a given source, and to convert it into the sky model format Gammapy
 understands.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 327-355
+.. GENERATED FROM PYTHON SOURCE LINES 329-357
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # This is what the XML file looks like
@@ -762,7 +781,7 @@ understands.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 356-367
+.. GENERATED FROM PYTHON SOURCE LINES 358-369
 
 CTA performance files
 ---------------------
@@ -776,9 +795,9 @@ If you want to run the download and examples in the next code cells,
 remove the # to uncomment.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 367-381
+.. GENERATED FROM PYTHON SOURCE LINES 369-383
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # !curl -O https://www.cta-observatory.org/wp-content/uploads/2019/04/CTA-Performance-prod3b-v2-FITS.tar.gz
@@ -801,7 +820,7 @@ remove the # to uncomment.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 382-401
+.. GENERATED FROM PYTHON SOURCE LINES 384-403
 
 Exercises
 ---------
@@ -823,9 +842,9 @@ Exercises
    `South_z20_50h` configurations.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 401-405
+.. GENERATED FROM PYTHON SOURCE LINES 403-407
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # start typing here ...
@@ -838,7 +857,7 @@ Exercises
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 406-418
+.. GENERATED FROM PYTHON SOURCE LINES 408-420
 
 Next steps
 ----------
@@ -860,23 +879,20 @@ Next steps
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/data/cta.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/data/cta.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: cta.py <cta.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: cta.ipynb <cta.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: cta.py <cta.py>`
 
 
 .. only:: html

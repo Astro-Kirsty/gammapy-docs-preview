@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_api_priors.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -76,19 +76,18 @@ amplitude, this can be avoided.
 The setup
 ---------
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-76
+.. GENERATED FROM PYTHON SOURCE LINES 61-75
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     import numpy as np
     from astropy import units as u
     import matplotlib.pyplot as plt
-    from gammapy.datasets import Datasets, SpectrumDatasetOnOff
+    from gammapy.datasets import SpectrumDatasetOnOff
     from gammapy.modeling import Fit
     from gammapy.modeling.models import (
         GaussianPrior,
-        Models,
         PowerLawSpectralModel,
         SkyModel,
         UniformPrior,
@@ -102,15 +101,15 @@ The setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 77-80
+.. GENERATED FROM PYTHON SOURCE LINES 76-79
 
 Check setup
 -----------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-85
+.. GENERATED FROM PYTHON SOURCE LINES 79-84
 
-.. code-block:: python3
+.. code-block:: Python
 
 
 
@@ -136,40 +135,40 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.3.dev45+gc10346aa1.d20240226 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.12.0     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.3      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
             iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.3      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 86-92
+.. GENERATED FROM PYTHON SOURCE LINES 85-91
 
 Model and dataset
 -----------------
@@ -178,9 +177,9 @@ First, we define the source model, a power-law with an index of
 :math:`2.3`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-100
+.. GENERATED FROM PYTHON SOURCE LINES 91-99
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     pl_spectrum = PowerLawSpectralModel(
@@ -197,18 +196,18 @@ First, we define the source model, a power-law with an index of
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-107
+.. GENERATED FROM PYTHON SOURCE LINES 100-106
 
 The data and background are read from pre-computed ON/OFF datasets of
 HESS observations. For simplicity, we stack them together and transform
-the dataset to a `SpectrumDataset`. Then we set the model and create
+the dataset to a `~gammapy.datasets.SpectrumDataset`. Then we set the model and create
 an Asimov dataset (dataset without statistics) by setting the counts as
 the model predictions.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-123
+.. GENERATED FROM PYTHON SOURCE LINES 106-122
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset = SpectrumDatasetOnOff.read(
@@ -233,7 +232,7 @@ the model predictions.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-137
+.. GENERATED FROM PYTHON SOURCE LINES 123-136
 
 Example 1: Including Prior Information about the Sources Index
 --------------------------------------------------------------
@@ -249,9 +248,9 @@ the constraining ability of the prior. For now, we set it to the
 arbitrary value of :math:`0.1`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-145
+.. GENERATED FROM PYTHON SOURCE LINES 136-144
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # initialising the gaussian prior
@@ -268,7 +267,7 @@ arbitrary value of :math:`0.1`.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-152
+.. GENERATED FROM PYTHON SOURCE LINES 145-151
 
 The value of the prior depends on the value of the index. If the index
 value equals the Gaussians mean (here 2.1), the prior is zero. This
@@ -277,9 +276,9 @@ favoured in the fit. If the value of the index deviates from the mean of
 2.1, a prior value > 0 is added to the cash statistics.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-178
+.. GENERATED FROM PYTHON SOURCE LINES 151-177
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # For the visualisation, the values are appended to the list; this is not a necessity for the fitting
@@ -319,19 +318,19 @@ favoured in the fit. If the value of the index deviates from the mean of
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-186
+.. GENERATED FROM PYTHON SOURCE LINES 178-185
 
 Fitting a Dataset with and without the Prior
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now, we copy the dataset consisting of the power-law source and assign
 the model with the Gaussian prior set on its index to it. Both of the
 datasets are fitted.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-196
+.. GENERATED FROM PYTHON SOURCE LINES 185-195
 
-.. code-block:: python3
+.. code-block:: Python
 
     dataset1.fake()
     dataset1_prior = dataset1.copy()
@@ -350,16 +349,16 @@ datasets are fitted.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 197-201
+.. GENERATED FROM PYTHON SOURCE LINES 196-200
 
 The Likelihood profiles can be computed for both the datasets. Hereby,
 the likelihood gets computed for different values of the index. For each
 step the other free parameters are getting reoptimized.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 201-212
+.. GENERATED FROM PYTHON SOURCE LINES 200-211
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset1.models.parameters["index"].scan_n_values = 20
@@ -379,7 +378,7 @@ step the other free parameters are getting reoptimized.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 213-234
+.. GENERATED FROM PYTHON SOURCE LINES 212-233
 
 Now, we can compare the two Likelihood scans. In the first case, we did
 not set any prior. This means that only the Cash Statistic itself is
@@ -403,9 +402,9 @@ deviation of the Gaussian prior. You can vary :math:`\sigma` and see how
 the Likelihood profiles and corresponding minima will change.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-277
+.. GENERATED FROM PYTHON SOURCE LINES 233-276
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     plt.plot(scan["model.spectral.index_scan"], scan["stat_scan"], label="Cash Statistics")
@@ -462,7 +461,7 @@ the Likelihood profiles and corresponding minima will change.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 278-290
+.. GENERATED FROM PYTHON SOURCE LINES 277-289
 
 This example shows a critical note on using priors: we were able to
 manipulate the best-fit index. This can have multiple advantages if one
@@ -477,7 +476,7 @@ be fitted correctly, and the :math:`\Delta`\ TS values would be the
 same.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 293-304
+.. GENERATED FROM PYTHON SOURCE LINES 292-303
 
 Example 2: Encouraging Positive Amplitude Values
 ------------------------------------------------
@@ -491,9 +490,9 @@ small. Together with statistical fluctuations, this will result in some
 negative amplitude best-fit values.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 304-317
+.. GENERATED FROM PYTHON SOURCE LINES 303-316
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     model_weak = SkyModel(
@@ -515,7 +514,7 @@ negative amplitude best-fit values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 318-327
+.. GENERATED FROM PYTHON SOURCE LINES 317-326
 
 We set the maximum value where the prior is applied to zero. Note that,
 per default, the minimum value is set to negative infinity. Therefore, the
@@ -527,9 +526,9 @@ being. Here, we are setting it to 2. This value is only applied if the
 amplitude value is below zero.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 327-347
+.. GENERATED FROM PYTHON SOURCE LINES 326-346
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     uni_prior_stat_sums = []
@@ -563,18 +562,18 @@ amplitude value is below zero.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 348-354
+.. GENERATED FROM PYTHON SOURCE LINES 347-353
 
 Fitting Multiple Datasets with and without the Prior
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To showcase how the uniform prior affects the fit results, :math:`100`
 datasets are created and fitted without and with the prior
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 354-398
+.. GENERATED FROM PYTHON SOURCE LINES 353-397
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     results, results_prior = [], []
@@ -632,7 +631,7 @@ datasets are created and fitted without and with the prior
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 399-411
+.. GENERATED FROM PYTHON SOURCE LINES 398-410
 
 The distribution of the best-fit amplitudes shows how less best-fit
 amplitudes have negative values. This also has an effect on the
@@ -647,25 +646,25 @@ uniform. Calculating the uncertainties from the profile likelihood
 is advised. For more details see the :doc:`/tutorials/api/fitting` tutorial.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 413-426
+.. GENERATED FROM PYTHON SOURCE LINES 412-425
 
 Implementing a custom prior
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For now, only ``GaussianPrior`` and `UniformPrior`` are implemented.
-To add a use case specfific prior one has to create a prior subclass
+For now, only ``GaussianPrior`` and ``UniformPrior`` are implemented.
+To add a use case specific prior one has to create a prior subclass
 containing:
 
-- a tag and a _type used for the serialization
-- an instantiation of each PriorParameter with their unit and default values
-- the evaluate function where the mathematical expression for the prior
-   is defined.
+-  a tag and a _type used for the serialization
+-  an instantiation of each PriorParameter with their unit and default values
+-  the evaluate function where the mathematical expression for the prior is defined.
+
 As an example for a custom prior a Jeffrey prior for a scale parameter is chosen.
-The only parameter is ``sigma`` and the evaluation method return the quared inverse of ``sigma``.
+The only parameter is ``sigma`` and the evaluation method return the squared inverse of ``sigma``.
 
-.. GENERATED FROM PYTHON SOURCE LINES 426-474
+.. GENERATED FROM PYTHON SOURCE LINES 425-473
 
-.. code-block:: python3
+.. code-block:: Python
 
 
 
@@ -725,14 +724,14 @@ The only parameter is ``sigma`` and the evaluation method return the quared inve
 
     {'spectral': {'type': 'PowerLawSpectralModel', 'parameters': [{'name': 'index', 'value': 2.0, 'prior': {'type': 'MyCustomPrior', 'parameters': [{'name': 'sigma', 'value': 0.5, 'unit': ''}], 'weight': 1}}, {'name': 'amplitude', 'value': 1e-12, 'unit': 'cm-2 s-1 TeV-1'}, {'name': 'reference', 'value': 1.0, 'unit': 'TeV'}]}}
 
-    [<__main__.MyCustomPrior object at 0x7f734532a6d0>, None, None]
+    [<__main__.MyCustomPrior object at 0x7a4d86a546a0>, None, None]
 
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 1 minutes  6.225 seconds)
+   **Total running time of the script:** (0 minutes 44.466 seconds)
 
 
 .. _sphx_glr_download_tutorials_api_priors.py:
@@ -741,23 +740,20 @@ The only parameter is ``sigma`` and the evaluation method return the quared inve
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/api/priors.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/priors.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: priors.py <priors.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: priors.ipynb <priors.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: priors.py <priors.py>`
 
 
 .. only:: html

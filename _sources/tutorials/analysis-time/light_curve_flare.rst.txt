@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-time_light_curve_flare.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -70,8 +70,9 @@ In summary, we have to:
 -  Define the source model
 -  Extract the light curve from the reduced dataset
 
-Here, we will use the PKS 2155-304 observations from the H.E.S.S. first
-public test data release. We will use time intervals of 5 minutes
+Here, we will use the PKS 2155-304 observations from the
+`H.E.S.S. first public test data release <https://www.mpi-hd.mpg.de/hfm/HESS/pages/dl3-dr1/>`__.
+We will use time intervals of 5 minutes
 duration. The tutorial is implemented with the intermediate level API.
 
 Setup
@@ -79,9 +80,9 @@ Setup
 
 As usual, we’ll start with some general imports…
 
-.. GENERATED FROM PYTHON SOURCE LINES 64-88
+.. GENERATED FROM PYTHON SOURCE LINES 65-90
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     import logging
@@ -99,6 +100,7 @@ As usual, we’ll start with some general imports…
     from gammapy.data import DataStore
     from gammapy.datasets import Datasets, SpectrumDataset
     from gammapy.estimators import LightCurveEstimator
+    from gammapy.estimators.utils import get_rebinned_axis
     from gammapy.makers import (
         ReflectedRegionsBackgroundMaker,
         SafeMaskMaker,
@@ -114,14 +116,14 @@ As usual, we’ll start with some general imports…
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 89-91
+.. GENERATED FROM PYTHON SOURCE LINES 91-93
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-96
+.. GENERATED FROM PYTHON SOURCE LINES 93-98
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
 
@@ -147,40 +149,40 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1723+gcc78c6251.d20240301 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.12.0     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.3      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
             iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.3      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-102
+.. GENERATED FROM PYTHON SOURCE LINES 99-104
 
 Select the data
 ---------------
@@ -188,9 +190,9 @@ Select the data
 We first set the datastore.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 102-106
+.. GENERATED FROM PYTHON SOURCE LINES 104-108
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     data_store = DataStore.from_dir("$GAMMAPY_DATA/hess-dl3-dr1/")
@@ -203,14 +205,14 @@ We first set the datastore.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-109
+.. GENERATED FROM PYTHON SOURCE LINES 109-111
 
 Now we select observations within 2 degrees of PKS 2155-304.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-123
+.. GENERATED FROM PYTHON SOURCE LINES 111-125
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     target_position = SkyCoord(329.71693826 * u.deg, -30.2255890 * u.deg, frame="icrs")
@@ -239,7 +241,7 @@ Now we select observations within 2 degrees of PKS 2155-304.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-130
+.. GENERATED FROM PYTHON SOURCE LINES 126-132
 
 Define time intervals
 ---------------------
@@ -248,9 +250,9 @@ We create the list of time intervals. Each time interval is an
 `astropy.time.Time` object, containing a start and stop time.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-139
+.. GENERATED FROM PYTHON SOURCE LINES 132-141
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     t0 = Time("2006-07-29T20:30")
@@ -274,7 +276,7 @@ We create the list of time intervals. Each time interval is an
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-150
+.. GENERATED FROM PYTHON SOURCE LINES 142-152
 
 Filter the observations list in time intervals
 ----------------------------------------------
@@ -282,14 +284,14 @@ Filter the observations list in time intervals
 Here we apply the list of time intervals to the observations with
 `~gammapy.data.Observations.select_time()`.
 
-This will return a new list of Observations filtered by time_intervals.
+This will return a new list of Observations filtered by ``time_intervals``.
 For each time interval, a new observation is created that converts the
 intersection of the GTIs and time interval.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 150-157
+.. GENERATED FROM PYTHON SOURCE LINES 152-159
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     short_observations = observations.select_time(time_intervals)
@@ -320,7 +322,7 @@ intersection of the GTIs and time interval.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-164
+.. GENERATED FROM PYTHON SOURCE LINES 160-166
 
 As we can see, we have now observations of duration equal to the chosen
 time step.
@@ -329,7 +331,7 @@ Now data reduction and light curve extraction can proceed exactly as
 before.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-175
+.. GENERATED FROM PYTHON SOURCE LINES 169-177
 
 Building 1D datasets from the new observations
 ----------------------------------------------
@@ -340,7 +342,7 @@ Here we will perform the data reduction in 1D with reflected regions.
 regions might become problematic.*
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-188
+.. GENERATED FROM PYTHON SOURCE LINES 180-190
 
 Defining the geometry
 ~~~~~~~~~~~~~~~~~~~~~
@@ -350,12 +352,12 @@ wider range to ensure a good coverage of the measured energy range
 chosen.
 
 We need to define the ON extraction region. Its size follows typical
-spectral extraction regions for HESS analyses.
+spectral extraction regions for H.E.S.S. analyses.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-201
+.. GENERATED FROM PYTHON SOURCE LINES 190-203
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # Target definition
@@ -377,7 +379,7 @@ spectral extraction regions for HESS analyses.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-208
+.. GENERATED FROM PYTHON SOURCE LINES 204-210
 
 Creation of the data reduction makers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -386,9 +388,9 @@ We now create the dataset and background makers for the selected
 geometry.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 208-216
+.. GENERATED FROM PYTHON SOURCE LINES 210-218
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     dataset_maker = SpectrumDatasetMaker(
@@ -405,17 +407,17 @@ geometry.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-222
+.. GENERATED FROM PYTHON SOURCE LINES 219-224
 
 Creation of the datasets
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Now we perform the actual data reduction in the time_intervals.
+Now we perform the actual data reduction in the ``time_intervals``.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-236
+.. GENERATED FROM PYTHON SOURCE LINES 226-238
 
-.. code-block:: python3
+.. code-block:: Python
 
     datasets = Datasets()
 
@@ -436,7 +438,7 @@ Now we perform the actual data reduction in the time_intervals.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 237-248
+.. GENERATED FROM PYTHON SOURCE LINES 239-250
 
 Define the Model
 ----------------
@@ -450,9 +452,9 @@ Here we use only a spectral model in the
 `~gammapy.modeling.models.SkyModel` object.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 248-257
+.. GENERATED FROM PYTHON SOURCE LINES 250-259
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     spectral_model = PowerLawSpectralModel(
@@ -470,7 +472,7 @@ Here we use only a spectral model in the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 258-263
+.. GENERATED FROM PYTHON SOURCE LINES 260-265
 
 Assign to model to all datasets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -478,9 +480,9 @@ Assign to model to all datasets
 We assign each dataset its spectral model
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 263-267
+.. GENERATED FROM PYTHON SOURCE LINES 265-269
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     datasets.models = sky_model
@@ -493,7 +495,7 @@ We assign each dataset its spectral model
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 268-275
+.. GENERATED FROM PYTHON SOURCE LINES 270-279
 
 Extract the light curve
 -----------------------
@@ -501,19 +503,22 @@ Extract the light curve
 We first create the `~gammapy.estimators.LightCurveEstimator` for the
 list of datasets we just produced. We give the estimator the name of the
 source component to be fitted.
+By default the likelihood scan is computed from 0.2 to 5.0.
+Here, we increase the max value to 10.0, because we are
+dealing with a large flare.
 
+.. GENERATED FROM PYTHON SOURCE LINES 279-289
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-284
-
-.. code-block:: python3
+.. code-block:: Python
 
 
     lc_maker_1d = LightCurveEstimator(
         energy_edges=[0.7, 20] * u.TeV,
         source="pks2155",
         time_intervals=time_intervals,
-        selection_optional=None,
+        selection_optional="all",
     )
+    lc_maker_1d.norm.scan_max = 10
 
 
 
@@ -523,7 +528,7 @@ source component to be fitted.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 285-290
+.. GENERATED FROM PYTHON SOURCE LINES 290-295
 
 We can now perform the light curve extraction itself. To compare with
 the `reference
@@ -531,9 +536,9 @@ paper <https://ui.adsabs.harvard.edu/abs/2009A%26A...502..749A/abstract>`__,
 we select the 0.7-20 TeV range.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 292-295
+.. GENERATED FROM PYTHON SOURCE LINES 297-300
 
-.. code-block:: python3
+.. code-block:: Python
 
     lc_1d = lc_maker_1d.run(datasets)
 
@@ -545,18 +550,20 @@ we select the 0.7-20 TeV range.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 296-298
+.. GENERATED FROM PYTHON SOURCE LINES 301-303
 
 Finally we plot the result for the 1D lightcurve:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 298-301
+.. GENERATED FROM PYTHON SOURCE LINES 303-308
 
-.. code-block:: python3
+.. code-block:: Python
 
     plt.figure(figsize=(8, 6))
     lc_1d.plot(marker="o")
     plt.show()
+
+
 
 
 
@@ -569,10 +576,58 @@ Finally we plot the result for the 1D lightcurve:
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 309-312
+
+Light curves once obtained can be rebinned.
+Here, we rebin 4 adjacent bins together, to get 30 min bins
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 312-322
+
+.. code-block:: Python
+
+
+    axis_new = get_rebinned_axis(lc_1d, method="fixed-bins", group_size=3, axis_name="time")
+    print(axis_new)
+
+    lc_new = lc_1d.resample_axis(axis_new)
+    plt.figure(figsize=(8, 6))
+    ax = lc_1d.plot(label="original")
+    lc_new.plot(ax=ax, label="rebinned")
+    plt.legend()
+    plt.show()
+
+
+
+.. image-sg:: /tutorials/analysis-time/images/sphx_glr_light_curve_flare_002.png
+   :alt: light curve flare
+   :srcset: /tutorials/analysis-time/images/sphx_glr_light_curve_flare_002.png
+   :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    TimeMapAxis
+    -----------
+
+      name           : time      
+      nbins          : 12        
+      reference time : 2006-07-29 20:31:05.184
+      scale          : tt        
+      time min.      : 2006-07-29 20:31:05.184
+      time max.      : 2006-07-30 02:11:05.184
+      total time     : 5.6666666666583865 h
+
+
+
+
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  30.926 seconds)
+   **Total running time of the script:** (0 minutes 22.924 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-time_light_curve_flare.py:
@@ -581,23 +636,20 @@ Finally we plot the result for the 1D lightcurve:
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-time/light_curve_flare.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-time/light_curve_flare.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: light_curve_flare.py <light_curve_flare.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: light_curve_flare.ipynb <light_curve_flare.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: light_curve_flare.py <light_curve_flare.py>`
 
 
 .. only:: html

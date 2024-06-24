@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-3d_energy_dependent_estimation.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -68,7 +68,7 @@ Setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 51-69
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     from astropy import units as u
@@ -102,7 +102,7 @@ Check setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 72-75
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     check_tutorials_setup()
@@ -126,34 +126,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1813+g9f8503aa9 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
-            scipy                  : 1.12.0     
+            numpy                  : 1.26.4     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.25.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
@@ -171,7 +171,7 @@ to your local directory.
 
 .. GENERATED FROM PYTHON SOURCE LINES 83-90
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     stacked_dataset = MapDataset.read(
@@ -194,7 +194,7 @@ investigate the potential of energy-dependent morphology in the dataset.
 
 .. GENERATED FROM PYTHON SOURCE LINES 93-97
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     energy_edges = [1, 3, 5, 20] * u.TeV
@@ -219,7 +219,7 @@ in each model.
 
 .. GENERATED FROM PYTHON SOURCE LINES 105-127
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     source_position = SkyCoord(5.58, 0.2, unit="deg", frame="galactic")
@@ -267,7 +267,7 @@ in each energy band.
 
 .. GENERATED FROM PYTHON SOURCE LINES 140-152
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     model.spatial_model.lon_0.frozen = False
@@ -304,7 +304,7 @@ energy band has significant signal above the background.
 
 .. GENERATED FROM PYTHON SOURCE LINES 164-169
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     results = estimator.run(datasets)
@@ -322,9 +322,9 @@ energy band has significant signal above the background.
     Emin Emax      delta_ts      df    significance   
     TeV  TeV                                          
     ---- ---- ----------------- --- ------------------
-     1.0  3.0 972.6524522136606   4 30.870071823681624
-     3.0  5.0 698.2916633963614   4  26.06911863160015
-     5.0 20.0 289.8437703157979   4    16.547095956069
+     1.0  3.0 998.0521842481248   4 31.277522957147003
+     3.0  5.0  712.873581766271   4  26.34613004113985
+     5.0 20.0   290.41405230487   4  16.56413952067279
 
 
 
@@ -340,7 +340,7 @@ energy band and for each energy bin shown for :math:`H_1`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 176-188
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     ts = results["energy_dependence"]["delta_ts"]
@@ -362,15 +362,15 @@ energy band and for each energy bin shown for :math:`H_1`.
 
  .. code-block:: none
 
-    The delta_ts for the energy-dependent study: 75.596.
-    Converting this to a significance gives: 7.603 σ
+    The delta_ts for the energy-dependent study: 76.816.
+    Converting this to a significance gives: 7.678 σ
     Hypothesis Emin Emax ...        sigma             sigma_err      
                TeV  TeV  ...         deg                 deg         
     ---------- ---- ---- ... ------------------- --------------------
-            H0  1.0 20.0 ... 0.21469420116756052 0.005926654348947036
-            H1  1.0  3.0 ... 0.25640217669446475 0.009488770111122315
-            H1  3.0  5.0 ... 0.19704826941259612 0.008176908174282039
-            H1  5.0 20.0 ... 0.13529073828091737  0.00890507389083128
+            H0  1.0 20.0 ... 0.21525376976022406 0.005914854792576181
+            H1  1.0  3.0 ...  0.2568720263723087 0.009431203058496632
+            H1  3.0  5.0 ... 0.19735897928723367 0.008164325487530225
+            H1  5.0 20.0 ... 0.13500566998758723 0.008898002182656187
 
 
 
@@ -388,7 +388,7 @@ The weighted chi-squared significance for the ``sigma``, ``lat_0`` and ``lon_0``
 
 .. GENERATED FROM PYTHON SOURCE LINES 197-207
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     display(
@@ -410,9 +410,9 @@ The weighted chi-squared significance for the ``sigma``, ``lat_0`` and ``lon_0``
 
     parameter        chi2         df    significance   
     --------- ------------------ --- ------------------
-        sigma  86.85310388045771   2   9.05380882444822
-        lat_0 4.6709072339461315   2 1.6607355133423811
-        lon_0  1.300558786013642   2 0.6404194500982603
+        sigma  88.56393115380234   2   9.14671140315352
+        lat_0  4.690311850083152   2 1.6654036168695552
+        lon_0 1.3035897658854436   2  0.641635917844372
 
 
 
@@ -430,7 +430,7 @@ Plotting the results
 
 .. GENERATED FROM PYTHON SOURCE LINES 216-251
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     empty_map = Map.create(
@@ -466,7 +466,7 @@ Plotting the results
     plt.show()
 
 
-    # sphinx_gallery_thumbnail_number = 2
+    # sphinx_gallery_thumbnail_number = 1
 
 
 
@@ -482,7 +482,7 @@ Plotting the results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  17.129 seconds)
+   **Total running time of the script:** (0 minutes 14.928 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_energy_dependent_estimation.py:
@@ -491,23 +491,20 @@ Plotting the results
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/energy_dependent_estimation.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/energy_dependent_estimation.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: energy_dependent_estimation.py <energy_dependent_estimation.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: energy_dependent_estimation.ipynb <energy_dependent_estimation.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: energy_dependent_estimation.py <energy_dependent_estimation.py>`
 
 
 .. only:: html

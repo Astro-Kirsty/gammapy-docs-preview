@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_scripts_survey_map.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -23,18 +23,20 @@ Survey Map Script
 
 Make a survey counts map using a script.
 
-We create an all-sky map in AIT projection
-for the HESS DL3 DR1 dataset.
+We create an all-sky map in AIT projection for the
+`H.E.S.S. DL3 DR1 <https://www.mpi-hd.mpg.de/hfm/HESS/pages/dl3-dr1/>`__
+dataset.
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-33
-
-
-
+.. GENERATED FROM PYTHON SOURCE LINES 11-35
 
 
 
 
-.. code-block:: python3
+
+
+
+.. code-block:: Python
+
 
     import logging
     from gammapy.data import DataStore
@@ -67,23 +69,20 @@ for the HESS DL3 DR1 dataset.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/scripts/survey_map.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/scripts/survey_map.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: survey_map.py <survey_map.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: survey_map.ipynb <survey_map.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: survey_map.py <survey_map.py>`
 
 
 .. only:: html

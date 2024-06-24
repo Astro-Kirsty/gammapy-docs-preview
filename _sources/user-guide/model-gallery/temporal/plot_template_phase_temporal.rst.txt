@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_user-guide_model-gallery_temporal_plot_template_phase_temporal.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,10 +25,9 @@ Phase curve temporal model
 
 This model parametrises a PhaseCurve time model, i.e. with a template phasogram and timing parameters
 
-.. GENERATED FROM PYTHON SOURCE LINES 10-30
+.. GENERATED FROM PYTHON SOURCE LINES 10-29
 
-.. code-block:: python3
-
+.. code-block:: Python
 
 
     import astropy.units as u
@@ -67,15 +66,15 @@ This model parametrises a PhaseCurve time model, i.e. with a template phasogram 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 31-34
+.. GENERATED FROM PYTHON SOURCE LINES 30-33
 
 YAML representation
 -------------------
 Here is an example YAML file using the model:
 
-.. GENERATED FROM PYTHON SOURCE LINES 34-43
+.. GENERATED FROM PYTHON SOURCE LINES 33-42
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     model = SkyModel(
@@ -126,10 +125,10 @@ Here is an example YAML file using the model:
                 value: 0.0
                 unit: s-3
             scale: utc
-            filename: /home/feijen/gammapy-datasets/dev/tests/phasecurve_LSI_DC.fits
+            filename: /home/feijen/Documents/github/gammapy-data/tests/phasecurve_LSI_DC.fits
     metadata:
-        creator: Gammapy 1.2.dev1813+g9f8503aa9
-        date: '2024-02-01T11:54:33.984794'
+        creator: Gammapy 1.3.dev284+g868b2a7d7.d20240510
+        date: '2024-05-10T13:47:34.094372'
         origin: null
 
 
@@ -143,23 +142,20 @@ Here is an example YAML file using the model:
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/user-guide/model-gallery/temporal/plot_template_phase_temporal.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/user-guide/model-gallery/temporal/plot_template_phase_temporal.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: plot_template_phase_temporal.py <plot_template_phase_temporal.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: plot_template_phase_temporal.ipynb <plot_template_phase_temporal.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: plot_template_phase_temporal.py <plot_template_phase_temporal.py>`
 
 
 .. only:: html

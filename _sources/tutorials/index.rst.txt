@@ -31,6 +31,9 @@ handbook`_ and the `Astropy Hands-On Tutorial`_.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -54,6 +57,7 @@ basic data structures like event lists, source catalogs, sky maps, spectral mode
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -106,6 +110,8 @@ basic data structures like event lists, source catalogs, sky maps, spectral mode
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -131,6 +137,7 @@ event lists according to different criteria, as well as to get a quick look of t
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -200,6 +207,8 @@ event lists according to different criteria, as well as to get a quick look of t
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -228,6 +237,7 @@ time-dependent analysis with light-curves.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -348,6 +358,8 @@ time-dependent analysis with light-curves.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -372,6 +384,7 @@ time-dependent analysis with light-curves.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -424,6 +437,8 @@ time-dependent analysis with light-curves.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -444,6 +459,7 @@ time-dependent analysis with light-curves.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -493,6 +509,23 @@ time-dependent analysis with light-curves.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Basic image exploration and fitting</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Learn how to test for energy-dependent morphology in your dataset.">
+
+.. only:: html
+
+  .. image:: /tutorials/analysis-3d/images/thumb/sphx_glr_energy_dependent_estimation_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_analysis-3d_energy_dependent_estimation.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Morphological energy dependence estimation</div>
     </div>
 
 
@@ -564,6 +597,8 @@ time-dependent analysis with light-curves.
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -575,6 +610,7 @@ time-dependent analysis with light-curves.
    /tutorials/analysis-3d/analysis_3d
    /tutorials/analysis-3d/analysis_mwl
    /tutorials/analysis-3d/cta_data_analysis
+   /tutorials/analysis-3d/energy_dependent_estimation
    /tutorials/analysis-3d/event_sampling
    /tutorials/analysis-3d/event_sampling_nrg_depend_models
    /tutorials/analysis-3d/flux_profiles
@@ -588,10 +624,11 @@ Time
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Prerequisites -------------">
+    <div class="sphx-glr-thumbcontainer" tooltip="Compute a series of time variability significance estimators for a lightcurve.">
 
 .. only:: html
 
@@ -674,6 +711,8 @@ Time
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -700,6 +739,7 @@ expose how to perform more specific use cases.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -766,6 +806,23 @@ expose how to perform more specific use cases.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Fitting</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="gammapy.irf contains classes for handling Instrument Response Functions typically stored as mul...">
+
+.. only:: html
+
+  .. image:: /tutorials/api/images/thumb/sphx_glr_irfs_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_api_irfs.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Using Gammapy IRFs</div>
     </div>
 
 
@@ -873,6 +930,25 @@ expose how to perform more specific use cases.
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Learn how you can include prior knowledge into the fitting by setting priors on single paramete...">
+
+.. only:: html
+
+  .. image:: /tutorials/api/images/thumb/sphx_glr_priors_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_api_priors.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Priors</div>
+    </div>
+
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
     </div>
 
 
@@ -883,12 +959,14 @@ expose how to perform more specific use cases.
    /tutorials/api/catalog
    /tutorials/api/datasets
    /tutorials/api/fitting
+   /tutorials/api/irfs
    /tutorials/api/makers
    /tutorials/api/maps
    /tutorials/api/mask_maps
    /tutorials/api/model_management
    /tutorials/api/models
    /tutorials/api/observation_clustering
+   /tutorials/api/priors
 
 
 Scripts
@@ -905,6 +983,7 @@ The following example shows how to run Gammapy within a Python script.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -922,6 +1001,8 @@ The following example shows how to run Gammapy within a Python script.
       <div class="sphx-glr-thumbnail-title">Survey Map Script</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

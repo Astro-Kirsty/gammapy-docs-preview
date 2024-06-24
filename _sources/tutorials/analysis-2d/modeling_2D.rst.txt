@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-2d_modeling_2D.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -53,10 +53,9 @@ a single set of stacked maps with a single bin in energy (thus, an
 spatial model of our choice, while keeping the spectral model fixed to
 an integrated power law.
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-44
+.. GENERATED FROM PYTHON SOURCE LINES 38-43
 
-.. code-block:: python3
-
+.. code-block:: Python
 
 
     # %matplotlib inline
@@ -70,7 +69,7 @@ an integrated power law.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 45-50
+.. GENERATED FROM PYTHON SOURCE LINES 44-49
 
 Setup
 -----
@@ -78,9 +77,9 @@ Setup
 As usual, we’ll start with some general imports…
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-53
+.. GENERATED FROM PYTHON SOURCE LINES 49-52
 
-.. code-block:: python3
+.. code-block:: Python
 
     from IPython.display import display
     from gammapy.analysis import Analysis, AnalysisConfig
@@ -92,14 +91,14 @@ As usual, we’ll start with some general imports…
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 54-56
+.. GENERATED FROM PYTHON SOURCE LINES 53-55
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 56-61
+.. GENERATED FROM PYTHON SOURCE LINES 55-60
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
 
@@ -125,40 +124,40 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1723+gcc78c6251.d20240301 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.12.0     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.3      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
             iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.3      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 62-70
+.. GENERATED FROM PYTHON SOURCE LINES 61-69
 
 Creating the config file
 ------------------------
@@ -169,9 +168,9 @@ disc if you have a pre-defined config file.
 Here, we use 3 simulated CTA runs of the galactic center.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-77
+.. GENERATED FROM PYTHON SOURCE LINES 69-76
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     config = AnalysisConfig()
@@ -187,16 +186,16 @@ Here, we use 3 simulated CTA runs of the galactic center.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-82
+.. GENERATED FROM PYTHON SOURCE LINES 77-81
 
 Technically, gammapy implements 2D analysis as a special case of 3D
 analysis (one bin in energy). So, we must specify the type of
 analysis as *3D*, and define the geometry of the analysis.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 82-109
+.. GENERATED FROM PYTHON SOURCE LINES 81-108
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     config.datasets.type = "3d"
@@ -211,7 +210,7 @@ analysis as *3D*, and define the geometry of the analysis.
     # The FoV radius to use for cutouts
     config.datasets.geom.selection.offset_max = 2.5 * u.deg
     config.datasets.safe_mask.methods = ["offset-max"]
-    config.datasets.safe_mask.parameters = {"offset_max": 2.5 * u.deg}
+    config.datasets.safe_mask.parameters = {"offset_max": "2.5 deg"}
     config.datasets.background.method = "fov_background"
     config.fit.fit_range = {"min": "0.1 TeV", "max": "30.0 TeV"}
 
@@ -220,46 +219,92 @@ analysis as *3D*, and define the geometry of the analysis.
     config.datasets.geom.axes.energy.max = "10 TeV"
     config.datasets.geom.axes.energy.nbins = 1
 
-    config.datasets.geom.wcs.binsize_irf = 0.2 * u.deg
+    config.datasets.geom.wcs.binsize_irf = "0.2 deg"
 
     print(config)
 
 
 
 
+
+
 .. rst-class:: sphx-glr-script-out
 
-.. code-block:: pytb
+ .. code-block:: none
 
-    Traceback (most recent call last):
-      File "/home/feijen/Documents/github/gammapy/examples/tutorials/analysis-2d/modeling_2D.py", line 106, in <module>
-        print(config)
-      File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/analysis/config.py", line 239, in __str__
-        data = self.to_yaml()
-      File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/analysis/config.py", line 267, in to_yaml
-        data = json.loads(self.model_dump_json())
-      File "/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/pydantic/main.py", line 358, in model_dump_json
-        return self.__pydantic_serializer__.to_json(
-    pydantic_core._pydantic_core.PydanticSerializationError: Unable to serialize unknown type: <class 'astropy.units.quantity.Quantity'>
+    AnalysisConfig
+
+        general:
+            log: {level: info, filename: null, filemode: null, format: null, datefmt: null}
+            outdir: .
+            n_jobs: 1
+            datasets_file: null
+            models_file: null
+        observations:
+            datastore: /home/feijen/Documents/github/gammapy-data/cta-1dc/index/gps
+            obs_ids: [110380, 111140, 111159]
+            obs_file: null
+            obs_cone: {frame: null, lon: null, lat: null, radius: null}
+            obs_time: {start: null, stop: null}
+            required_irf: [aeff, edisp, psf, bkg]
+        datasets:
+            type: 3d
+            stack: true
+            geom:
+                wcs:
+                    skydir: {frame: galactic, lon: 0.0 deg, lat: 0.0 deg}
+                    binsize: 0.02 deg
+                    width: {width: 8.0 deg, height: 6.0 deg}
+                    binsize_irf: 0.2 deg
+                selection: {offset_max: 2.5 deg}
+                axes:
+                    energy: {min: 0.1 TeV, max: 10.0 TeV, nbins: 1}
+                    energy_true: {min: 0.5 TeV, max: 20.0 TeV, nbins: 16}
+            map_selection: [counts, exposure, background, psf, edisp]
+            background:
+                method: fov_background
+                exclusion: null
+                parameters: {}
+            safe_mask:
+                methods: [offset-max]
+                parameters: {offset_max: 2.5 deg}
+            on_region: {frame: null, lon: null, lat: null, radius: null}
+            containment_correction: true
+        fit:
+            fit_range: {min: 0.1 TeV, max: 30.0 TeV}
+        flux_points:
+            energy: {min: null, max: null, nbins: null}
+            source: source
+            parameters: {selection_optional: all}
+        excess_map:
+            correlation_radius: 0.1 deg
+            parameters: {}
+            energy_edges: {min: null, max: null, nbins: null}
+        light_curve:
+            time_intervals: {start: null, stop: null}
+            energy_edges: {min: null, max: null, nbins: null}
+            source: source
+            parameters: {selection_optional: all}
+    
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-113
+.. GENERATED FROM PYTHON SOURCE LINES 109-112
 
 Getting the reduced dataset
 ---------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-119
+.. GENERATED FROM PYTHON SOURCE LINES 115-118
 
 We now use the config file and create a single `MapDataset` containing
 `counts`, `background`, `exposure`, `psf` and `edisp` maps.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-128
+.. GENERATED FROM PYTHON SOURCE LINES 120-127
 
-.. code-block:: python3
+.. code-block:: Python
 
     analysis = Analysis(config)
     analysis.get_observations()
@@ -269,7 +314,51 @@ We now use the config file and create a single `MapDataset` containing
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-134
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+      warnings.warn(msg, UnitsWarning)
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+      warnings.warn(msg, UnitsWarning)
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+      warnings.warn(msg, UnitsWarning)
+    MapDataset
+    ----------
+
+      Name                            : stacked 
+
+      Total counts                    : 85625 
+      Total background counts         : 85624.99
+      Total excess counts             : 0.01
+
+      Predicted counts                : 85625.00
+      Predicted background counts     : 85624.99
+      Predicted excess counts         : nan
+
+      Exposure min                    : 8.46e+08 m2 s
+      Exposure max                    : 2.14e+10 m2 s
+
+      Number of total bins            : 120000 
+      Number of fit bins              : 96602 
+
+      Fit statistic type              : cash
+      Fit statistic value (-2 log(L)) : nan
+
+      Number of models                : 0 
+      Number of parameters            : 0
+      Number of free parameters       : 0
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 128-133
 
 The counts and background maps have only one bin in reconstructed
 energy. The exposure and IRF maps are in true energy, and hence, have a
@@ -277,9 +366,9 @@ different binning based upon the binning of the IRFs. We need not bother
 about them presently.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 134-142
+.. GENERATED FROM PYTHON SOURCE LINES 133-141
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(analysis.datasets["stacked"].counts)
@@ -290,14 +379,52 @@ about them presently.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-145
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    WcsNDMap
+
+            geom  : WcsGeom 
+            axes  : ['lon', 'lat', 'energy']
+            shape : (400, 300, 1)
+            ndim  : 3
+            unit  : 
+            dtype : float32
+
+    WcsNDMap
+
+            geom  : WcsGeom 
+            axes  : ['lon', 'lat', 'energy']
+            shape : (400, 300, 1)
+            ndim  : 3
+            unit  : 
+            dtype : float32
+
+    WcsNDMap
+
+            geom  : WcsGeom 
+            axes  : ['lon', 'lat', 'energy_true']
+            shape : (400, 300, 16)
+            ndim  : 3
+            unit  : m2 s
+            dtype : float32
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 142-144
 
 We can have a quick look of these maps in the following way:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-150
+.. GENERATED FROM PYTHON SOURCE LINES 144-149
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     analysis.datasets["stacked"].counts.reduce_over_axes().plot(vmax=10, add_cbar=True)
@@ -305,7 +432,18 @@ We can have a quick look of these maps in the following way:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 151-159
+
+
+.. image-sg:: /tutorials/analysis-2d/images/sphx_glr_modeling_2D_001.png
+   :alt: modeling 2D
+   :srcset: /tutorials/analysis-2d/images/sphx_glr_modeling_2D_001.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 150-158
 
 Modelling
 ---------
@@ -316,9 +454,9 @@ with only free normalisation**. Here, we use its YAML definition to load
 it:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-197
+.. GENERATED FROM PYTHON SOURCE LINES 158-196
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     model_config = """
@@ -359,14 +497,20 @@ it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-200
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 197-199
 
 We will freeze the parameters of the background
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-208
+.. GENERATED FROM PYTHON SOURCE LINES 199-207
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     analysis.datasets["stacked"].background_model.parameters["tilt"].frozen = True
@@ -378,29 +522,48 @@ We will freeze the parameters of the background
     display(analysis.models.to_parameters_table())
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+       model    type    name      value      unit   ... frozen is_norm link prior
+    ----------- ---- --------- ----------- -------- ... ------ ------- ---- -----
+           GC-1      amplitude  4.1496e-11 cm-2 s-1 ...  False    True           
+           GC-1          index  2.0000e+00          ...   True   False           
+           GC-1           emin  1.0000e-01      TeV ...   True   False           
+           GC-1           emax  1.0000e+01      TeV ...   True   False           
+           GC-1          lon_0 -4.7613e-02      deg ...  False   False           
+           GC-1          lat_0 -5.3570e-02      deg ...  False   False           
+    stacked-bkg           norm  9.9445e-01          ...  False    True           
+    stacked-bkg           tilt  0.0000e+00          ...   True   False           
+    stacked-bkg      reference  1.0000e+00      TeV ...   True   False           
+
+
+
+
+
 .. _sphx_glr_download_tutorials_analysis-2d_modeling_2D.py:
 
 .. only:: html
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-2d/modeling_2D.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-2d/modeling_2D.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: modeling_2D.py <modeling_2D.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: modeling_2D.ipynb <modeling_2D.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: modeling_2D.py <modeling_2D.py>`
 
 
 .. only:: html

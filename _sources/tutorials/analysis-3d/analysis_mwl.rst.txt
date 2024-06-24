@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-3d_analysis_mwl.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -70,7 +70,7 @@ The setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 53-63
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     from pathlib import Path
@@ -96,7 +96,7 @@ Check setup
 
 .. GENERATED FROM PYTHON SOURCE LINES 66-72
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
     from gammapy.utils.scripts import make_path
@@ -123,34 +123,34 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1813+g9f8503aa9 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
-            scipy                  : 1.12.0     
+            numpy                  : 1.26.4     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.25.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
@@ -170,7 +170,7 @@ Fermi-LAT-3FHL_datasets.yaml:
 
 .. GENERATED FROM PYTHON SOURCE LINES 82-89
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     path = make_path("$GAMMAPY_DATA/fermi-3fhl-crab/Fermi-LAT-3FHL_datasets.yaml")
@@ -209,7 +209,7 @@ Fermi-LAT-3FHL_models.yaml:
 
 .. GENERATED FROM PYTHON SOURCE LINES 98-105
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     path = make_path("$GAMMAPY_DATA/fermi-3fhl-crab/Fermi-LAT-3FHL_models.yaml")
@@ -324,7 +324,7 @@ For now we let’s use the datasets serialization only to read the 3D
 
 .. GENERATED FROM PYTHON SOURCE LINES 115-125
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     path = Path("$GAMMAPY_DATA/fermi-3fhl-crab")
@@ -344,6 +344,8 @@ For now we let’s use the datasets serialization only to read the 3D
 
  .. code-block:: none
 
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/utils/scripts.py:65: UserWarning: Checksum verification failed for /home/feijen/Documents/github/gammapy-data/fermi-3fhl-crab/Fermi-LAT-3FHL_datasets.yaml.
+      warnings.warn(f"Checksum verification failed for {filename}.", UserWarning)
     Models
 
     Component 0: SkyModel
@@ -383,7 +385,7 @@ We get the Crab model in order to share it with the other datasets
 
 .. GENERATED FROM PYTHON SOURCE LINES 128-132
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     print(models["Crab Nebula"])
@@ -431,7 +433,7 @@ is added to the dataset.
 
 .. GENERATED FROM PYTHON SOURCE LINES 142-158
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     datasets_hess = Datasets()
@@ -491,7 +493,7 @@ a `FluxPointsDataset` together with the source spectral model.
 
 .. GENERATED FROM PYTHON SOURCE LINES 166-180
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # read flux points from https://arxiv.org/pdf/1905.12518.pdf
@@ -557,7 +559,7 @@ from these files.
 
 .. GENERATED FROM PYTHON SOURCE LINES 189-203
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     path = Path("crab-3datasets")
@@ -581,6 +583,8 @@ from these files.
 
  .. code-block:: none
 
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/utils/scripts.py:65: UserWarning: Checksum verification failed for crab-3datasets/crab_10GeV_100TeV_datasets.yaml.
+      warnings.warn(f"Checksum verification failed for {filename}.", UserWarning)
     Datasets
     --------
 
@@ -621,7 +625,7 @@ each instrument
 
 .. GENERATED FROM PYTHON SOURCE LINES 212-217
 
-.. code-block:: python3
+.. code-block:: Python
 
     fit_joint = Fit()
     results_joint = fit_joint.run(datasets=datasets)
@@ -663,7 +667,7 @@ Let’s display only the parameters of the Crab spectral model
 
 .. GENERATED FROM PYTHON SOURCE LINES 220-225
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     crab_spec = datasets[0].models["Crab Nebula"].spectral_model
@@ -698,7 +702,7 @@ them together with the HAWC flux point.
 
 .. GENERATED FROM PYTHON SOURCE LINES 229-246
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # compute Fermi-LAT and HESS flux points
@@ -732,7 +736,7 @@ instrument.
 
 .. GENERATED FROM PYTHON SOURCE LINES 250-267
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # display spectrum and flux points
@@ -770,23 +774,20 @@ instrument.
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/analysis_mwl.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/analysis_mwl.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: analysis_mwl.py <analysis_mwl.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: analysis_mwl.ipynb <analysis_mwl.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: analysis_mwl.py <analysis_mwl.py>`
 
 
 .. only:: html

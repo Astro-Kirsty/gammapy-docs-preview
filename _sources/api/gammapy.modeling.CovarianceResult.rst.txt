@@ -1,0 +1,25 @@
+CovarianceResult
+================
+
+.. currentmodule:: gammapy.modeling
+
+.. autoclass:: CovarianceResult
+   :show-inheritance:
+
+   .. rubric:: Attributes Summary
+
+   .. autosummary::
+
+      ~CovarianceResult.backend
+      ~CovarianceResult.matrix
+      ~CovarianceResult.message
+      ~CovarianceResult.method
+      ~CovarianceResult.success
+
+   .. rubric:: Attributes Documentation
+
+   .. autoattribute:: backend
+   .. autoattribute:: matrix
+   .. autoattribute:: message
+   .. autoattribute:: method
+   .. autoattribute:: success

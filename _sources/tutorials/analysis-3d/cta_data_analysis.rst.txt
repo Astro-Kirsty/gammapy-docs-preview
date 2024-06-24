@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download_tutorials_analysis-3d_cta_data_analysis.py>`
-        to download the full example code or to run this example in your browser via Binder
+        to download the full example code. or to run this example in your browser via Binder
 
 .. rst-class:: sphx-glr-example-title
 
@@ -34,7 +34,7 @@ Center. This is a tiny (and thus quick to process and play with and
 learn) subset of the simulated CTA dataset that was produced for the
 first data challenge in August 2017.
 
-.. GENERATED FROM PYTHON SOURCE LINES 22-27
+.. GENERATED FROM PYTHON SOURCE LINES 21-26
 
 Setup
 -----
@@ -42,9 +42,9 @@ Setup
 As usual, we’ll start with some setup …
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 27-60
+.. GENERATED FROM PYTHON SOURCE LINES 26-59
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # Configure the logger, so that the spectral analysis
@@ -86,14 +86,14 @@ As usual, we’ll start with some setup …
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 61-63
+.. GENERATED FROM PYTHON SOURCE LINES 60-62
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-68
+.. GENERATED FROM PYTHON SOURCE LINES 62-67
 
-.. code-block:: python3
+.. code-block:: Python
 
     from gammapy.utils.check import check_tutorials_setup
 
@@ -119,40 +119,40 @@ Check setup
 
     Gammapy package:
 
-            version                : 1.2.dev1813+g9f8503aa9 
+            version                : 1.3.dev284+g868b2a7d7.d20240510 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.3     
-            scipy                  : 1.12.0     
+            numpy                  : 1.26.4     
+            scipy                  : 1.13.0     
             astropy                : 5.2.2      
             regions                : 0.8        
             click                  : 8.1.7      
             yaml                   : 6.0.1      
             IPython                : 8.18.1     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.2      
+            matplotlib             : 3.8.4      
             pandas                 : not installed 
             healpy                 : 1.16.6     
-            iminuit                : 2.25.0     
+            iminuit                : 2.25.2     
             sherpa                 : 4.16.0     
             naima                  : 0.10.0     
-            emcee                  : 3.1.4      
+            emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.9.1      
+            ray                    : 2.21.0     
 
 
     Gammapy environment variables:
 
-            GAMMAPY_DATA           : /home/feijen/gammapy-datasets/dev 
+            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-78
+.. GENERATED FROM PYTHON SOURCE LINES 68-77
 
 Select observations
 -------------------
@@ -164,9 +164,9 @@ This is shown in detail in other notebooks (see e.g. the :doc:`/tutorials/starti
 here we choose three observations near the Galactic Center.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-98
+.. GENERATED FROM PYTHON SOURCE LINES 77-97
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     data_store = DataStore.from_dir("$GAMMAPY_DATA/cta-1dc/index/gps")
@@ -206,7 +206,7 @@ here we choose three observations near the Galactic Center.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-108
+.. GENERATED FROM PYTHON SOURCE LINES 98-107
 
 Make sky images
 ---------------
@@ -218,9 +218,9 @@ Select the target position and define an ON region for the spectral
 analysis
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 108-129
+.. GENERATED FROM PYTHON SOURCE LINES 107-128
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     axis = MapAxis.from_energy_bounds(
@@ -266,15 +266,15 @@ analysis
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-133
+.. GENERATED FROM PYTHON SOURCE LINES 129-132
 
 Compute images
 ~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 135-153
+.. GENERATED FROM PYTHON SOURCE LINES 134-152
 
-.. code-block:: python3
+.. code-block:: Python
 
     stacked = MapDataset.create(geom=geom, energy_axis_true=axis_true)
     maker = MapDatasetMaker(selection=["counts", "background", "exposure", "psf"])
@@ -312,7 +312,7 @@ Compute images
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 154-159
+.. GENERATED FROM PYTHON SOURCE LINES 153-158
 
 Show images
 ~~~~~~~~~~~
@@ -320,9 +320,9 @@ Show images
 Let’s have a quick look at the images we computed …
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-178
+.. GENERATED FROM PYTHON SOURCE LINES 158-177
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     fig, (ax1, ax2, ax3) = plt.subplots(
@@ -355,7 +355,7 @@ Let’s have a quick look at the images we computed …
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-186
+.. GENERATED FROM PYTHON SOURCE LINES 178-185
 
 Source Detection
 ----------------
@@ -365,9 +365,9 @@ Use the class `~gammapy.estimators.TSMapEstimator` and function
 We search for 0.1 deg sigma gaussian sources in the dataset.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-200
+.. GENERATED FROM PYTHON SOURCE LINES 185-199
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     spatial_model = GaussianSpatialModel(sigma="0.05 deg")
@@ -390,9 +390,9 @@ We search for 0.1 deg sigma gaussian sources in the dataset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 201-210
+.. GENERATED FROM PYTHON SOURCE LINES 200-209
 
-.. code-block:: python3
+.. code-block:: Python
 
     images_ts = ts_image_estimator.run(stacked)
 
@@ -427,14 +427,14 @@ We search for 0.1 deg sigma gaussian sources in the dataset.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 211-213
+.. GENERATED FROM PYTHON SOURCE LINES 210-212
 
 To get the position of the sources, simply
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 213-216
+.. GENERATED FROM PYTHON SOURCE LINES 212-215
 
-.. code-block:: python3
+.. code-block:: Python
 
     source_pos = SkyCoord(sources["ra"], sources["dec"])
     print(source_pos)
@@ -457,14 +457,14 @@ To get the position of the sources, simply
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-219
+.. GENERATED FROM PYTHON SOURCE LINES 216-218
 
 Plot sources on top of significance sky image
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 219-235
+.. GENERATED FROM PYTHON SOURCE LINES 218-234
 
-.. code-block:: python3
+.. code-block:: Python
 
     fig, ax = plt.subplots(figsize=(8, 6), subplot_kw={"projection": geom_image.wcs})
     images_ts["sqrt_ts"].plot(ax=ax, add_cbar=True)
@@ -494,7 +494,7 @@ Plot sources on top of significance sky image
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 236-241
+.. GENERATED FROM PYTHON SOURCE LINES 235-240
 
 Spatial analysis
 ----------------
@@ -502,7 +502,7 @@ Spatial analysis
 See other notebooks for how to run a 3D cube or 2D image based analysis.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 244-251
+.. GENERATED FROM PYTHON SOURCE LINES 243-250
 
 Spectrum
 --------
@@ -512,9 +512,9 @@ background estimation method, and using the on-off (often called WSTAT)
 likelihood function.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-260
+.. GENERATED FROM PYTHON SOURCE LINES 250-259
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     target_position = SkyCoord(0, 0, unit="deg", frame="galactic")
@@ -537,13 +537,13 @@ likelihood function.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 261-262
+.. GENERATED FROM PYTHON SOURCE LINES 260-261
 
 Configure spectral analysis
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-277
+.. GENERATED FROM PYTHON SOURCE LINES 261-276
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     energy_axis = MapAxis.from_energy_bounds(0.1, 40, 40, unit="TeV", name="energy")
@@ -567,13 +567,13 @@ Configure spectral analysis
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 278-279
+.. GENERATED FROM PYTHON SOURCE LINES 277-278
 
 Run data reduction
 
-.. GENERATED FROM PYTHON SOURCE LINES 281-291
+.. GENERATED FROM PYTHON SOURCE LINES 280-290
 
-.. code-block:: python3
+.. code-block:: Python
 
     datasets = Datasets()
 
@@ -592,13 +592,13 @@ Run data reduction
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 292-293
+.. GENERATED FROM PYTHON SOURCE LINES 291-292
 
 Plot results
 
-.. GENERATED FROM PYTHON SOURCE LINES 293-302
+.. GENERATED FROM PYTHON SOURCE LINES 292-301
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     plt.figure(figsize=(8, 6))
@@ -630,7 +630,7 @@ Plot results
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-309
+.. GENERATED FROM PYTHON SOURCE LINES 302-308
 
 Model fit
 ~~~~~~~~~
@@ -639,9 +639,9 @@ The next step is to fit a spectral model, using all data (i.e. a
 “global” fit, using all energies).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 311-324
+.. GENERATED FROM PYTHON SOURCE LINES 310-323
 
-.. code-block:: python3
+.. code-block:: Python
 
     spectral_model = PowerLawSpectralModel(
         index=2, amplitude=1e-11 * u.Unit("cm-2 s-1 TeV-1"), reference=1 * u.TeV
@@ -684,7 +684,7 @@ The next step is to fit a spectral model, using all data (i.e. a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 325-331
+.. GENERATED FROM PYTHON SOURCE LINES 324-330
 
 Here we can plot the predicted number of counts for each model and
 for the background in the dataset. This is especially useful when
@@ -693,9 +693,9 @@ in the visualization sub-package of gammapy that does this automatically.
 
 First we need to stack our datasets.
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-339
+.. GENERATED FROM PYTHON SOURCE LINES 330-338
 
-.. code-block:: python3
+.. code-block:: Python
 
 
 
@@ -759,14 +759,14 @@ First we need to stack our datasets.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-342
+.. GENERATED FROM PYTHON SOURCE LINES 339-341
 
 Call `~gammapy.visualization.plot_npred_signal` to plot the predicted counts.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 342-348
+.. GENERATED FROM PYTHON SOURCE LINES 341-347
 
-.. code-block:: python3
+.. code-block:: Python
 
 
 
@@ -786,7 +786,7 @@ Call `~gammapy.visualization.plot_npred_signal` to plot the predicted counts.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 349-356
+.. GENERATED FROM PYTHON SOURCE LINES 348-355
 
 Spectral points
 ~~~~~~~~~~~~~~~
@@ -796,9 +796,9 @@ choose an energy binning, and then to do a 1-dim likelihood fit /
 profile to compute the flux and flux error.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 356-366
+.. GENERATED FROM PYTHON SOURCE LINES 355-365
 
-.. code-block:: python3
+.. code-block:: Python
 
 
 
@@ -819,7 +819,7 @@ profile to compute the flux and flux error.
 
     <div class="output_subarea output_html rendered_html output_result">
     <div><i>Table length=5</i>
-    <table id="table139650131805136" class="table-striped table-bordered table-condensed">
+    <table id="table134473348561072" class="table-striped table-bordered table-condensed">
     <thead><tr><th>e_ref</th><th>e_min</th><th>e_max</th><th>dnde</th><th>dnde_err</th><th>ts</th><th>sqrt_ts</th><th>npred</th><th>npred_excess</th><th>stat</th><th>stat_null</th><th>counts</th><th>success</th></tr></thead>
     <thead><tr><th>TeV</th><th>TeV</th><th>TeV</th><th>1 / (cm2 s TeV)</th><th>1 / (cm2 s TeV)</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead>
     <thead><tr><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64</th><th>float64[1]</th><th>float32[1]</th><th>float64</th><th>float64</th><th>float64[1]</th><th>bool</th></tr></thead>
@@ -833,7 +833,7 @@ profile to compute the flux and flux error.
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 367-374
+.. GENERATED FROM PYTHON SOURCE LINES 366-373
 
 Plot
 ~~~~
@@ -843,9 +843,9 @@ for convenience we bundle the model and the flux points in a
 `~gammapy.datasets.FluxPointsDataset`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 374-380
+.. GENERATED FROM PYTHON SOURCE LINES 373-379
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     flux_points_dataset = FluxPointsDataset(data=flux_points, models=model)
@@ -865,7 +865,7 @@ for convenience we bundle the model and the flux points in a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 381-397
+.. GENERATED FROM PYTHON SOURCE LINES 380-396
 
 Exercises
 ---------
@@ -884,9 +884,9 @@ Exercises
       analysis of gamma-ray astronomy.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 397-402
+.. GENERATED FROM PYTHON SOURCE LINES 396-401
 
-.. code-block:: python3
+.. code-block:: Python
 
 
     # print('hello world')
@@ -900,7 +900,7 @@ Exercises
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 403-410
+.. GENERATED FROM PYTHON SOURCE LINES 402-409
 
 What next?
 ----------
@@ -913,7 +913,7 @@ What next?
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  17.322 seconds)
+   **Total running time of the script:** (0 minutes 12.765 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_cta_data_analysis.py:
@@ -922,23 +922,20 @@ What next?
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
-
     .. container:: binder-badge
 
       .. image:: images/binder_badge_logo.svg
-        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/master?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/cta_data_analysis.ipynb
+        :target: https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/cta_data_analysis.ipynb
         :alt: Launch binder
         :width: 150 px
-
-
-
-    .. container:: sphx-glr-download sphx-glr-download-python
-
-      :download:`Download Python source code: cta_data_analysis.py <cta_data_analysis.py>`
 
     .. container:: sphx-glr-download sphx-glr-download-jupyter
 
       :download:`Download Jupyter notebook: cta_data_analysis.ipynb <cta_data_analysis.ipynb>`
+
+    .. container:: sphx-glr-download sphx-glr-download-python
+
+      :download:`Download Python source code: cta_data_analysis.py <cta_data_analysis.py>`
 
 
 .. only:: html
