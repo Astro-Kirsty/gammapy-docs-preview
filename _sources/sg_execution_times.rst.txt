@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:32.432** total execution time for 81 files **from all galleries**:
+**00:12.143** total execution time for 81 files **from all galleries**:
 
 .. container::
 
@@ -32,11 +32,8 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_tutorials_analysis-3d_energy_dependent_estimation.py` (``../examples/tutorials/analysis-3d/energy_dependent_estimation.py``)
-     - 00:31.230
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_analysis-time_Variability_estimation.py` (``../examples/tutorials/analysis-time/Variability_estimation.py``)
-     - 00:01.202
+   * - :ref:`sphx_glr_tutorials_api_fitting.py` (``../examples/tutorials/api/fitting.py``)
+     - 00:12.143
      - 0.0
    * - :ref:`sphx_glr_user-guide_model-gallery_spatial_plot_constant.py` (``../examples/models/spatial/plot_constant.py``)
      - 00:00.000
@@ -191,6 +188,9 @@ Computation times
    * - :ref:`sphx_glr_tutorials_analysis-3d_cta_data_analysis.py` (``../examples/tutorials/analysis-3d/cta_data_analysis.py``)
      - 00:00.000
      - 0.0
+   * - :ref:`sphx_glr_tutorials_analysis-3d_energy_dependent_estimation.py` (``../examples/tutorials/analysis-3d/energy_dependent_estimation.py``)
+     - 00:00.000
+     - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-3d_event_sampling.py` (``../examples/tutorials/analysis-3d/event_sampling.py``)
      - 00:00.000
      - 0.0
@@ -201,6 +201,9 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-3d_simulate_3d.py` (``../examples/tutorials/analysis-3d/simulate_3d.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_analysis-time_Variability_estimation.py` (``../examples/tutorials/analysis-time/Variability_estimation.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-time_light_curve.py` (``../examples/tutorials/analysis-time/light_curve.py``)
@@ -222,9 +225,6 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_datasets.py` (``../examples/tutorials/api/datasets.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_fitting.py` (``../examples/tutorials/api/fitting.py``)
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_irfs.py` (``../examples/tutorials/api/irfs.py``)
