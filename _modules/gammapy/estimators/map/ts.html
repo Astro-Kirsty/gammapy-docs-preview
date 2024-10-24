@@ -15,55 +15,60 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../../../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../../_static/copybutton.js?v=30646c52"></script>
-    <script src="../../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/gammapy/estimators/map/ts';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../../../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -79,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../../search.html"
       method="get">
@@ -99,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -107,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -117,7 +110,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -126,6 +119,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../../index.html">
@@ -138,7 +133,7 @@
     
     
     <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -150,50 +145,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../../../release-notes/index.html">
     Release notes
   </a>
@@ -213,55 +208,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -272,7 +247,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -284,7 +259,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -296,7 +271,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -308,15 +283,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -333,7 +304,8 @@ document.write(`
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -345,45 +317,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../../release-notes/index.html">
     Release notes
   </a>
@@ -400,42 +372,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -446,7 +402,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -458,7 +414,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -470,7 +426,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -501,8 +457,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -514,7 +468,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Module code</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">gammapy.esti...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">gammapy.estimators.map.ts</span></li>
   </ul>
 </nav>
 </div>
@@ -534,23 +488,31 @@ document.write(`
   <h1>Source code for gammapy.estimators.map.ts</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
 <span class="sd">&quot;&quot;&quot;Functions to compute test statistic images.&quot;&quot;&quot;</span>
+
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">repeat</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy.optimize</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">InterpolatedUnivariateSpline</span>
 <span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span>
 <span class="kn">from</span> <span class="nn">astropy.utils</span> <span class="kn">import</span> <span class="n">lazyproperty</span>
 <span class="kn">import</span> <span class="nn">gammapy.utils.parallel</span> <span class="k">as</span> <span class="nn">parallel</span>
+<span class="kn">from</span> <span class="nn">gammapy.datasets</span> <span class="kn">import</span> <span class="n">Datasets</span>
 <span class="kn">from</span> <span class="nn">gammapy.datasets.map</span> <span class="kn">import</span> <span class="n">MapEvaluator</span>
 <span class="kn">from</span> <span class="nn">gammapy.datasets.utils</span> <span class="kn">import</span> <span class="n">get_nearest_valid_exposure_position</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">Maps</span>
+<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">Maps</span>
 <span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">PointSpatialModel</span><span class="p">,</span> <span class="n">PowerLawSpectralModel</span><span class="p">,</span> <span class="n">SkyModel</span>
-<span class="kn">from</span> <span class="nn">gammapy.stats</span> <span class="kn">import</span> <span class="n">cash_sum_cython</span><span class="p">,</span> <span class="n">f_cash_root_cython</span><span class="p">,</span> <span class="n">norm_bounds_cython</span>
+<span class="kn">from</span> <span class="nn">gammapy.stats</span> <span class="kn">import</span> <span class="n">cash</span><span class="p">,</span> <span class="n">cash_sum_cython</span><span class="p">,</span> <span class="n">f_cash_root_cython</span><span class="p">,</span> <span class="n">norm_bounds_cython</span>
 <span class="kn">from</span> <span class="nn">gammapy.utils.array</span> <span class="kn">import</span> <span class="n">shape_2N</span><span class="p">,</span> <span class="n">symmetric_crop_pad_width</span>
 <span class="kn">from</span> <span class="nn">gammapy.utils.pbar</span> <span class="kn">import</span> <span class="n">progress_bar</span>
 <span class="kn">from</span> <span class="nn">gammapy.utils.roots</span> <span class="kn">import</span> <span class="n">find_roots</span>
 <span class="kn">from</span> <span class="nn">..core</span> <span class="kn">import</span> <span class="n">Estimator</span>
-<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">estimate_exposure_reco_energy</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">_generate_scan_values</span><span class="p">,</span>
+    <span class="n">_get_default_norm</span><span class="p">,</span>
+    <span class="n">_get_norm_scan_values</span><span class="p">,</span>
+    <span class="n">estimate_exposure_reco_energy</span><span class="p">,</span>
+<span class="p">)</span>
 <span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="n">FluxMaps</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TSMapEstimator&quot;</span><span class="p">]</span>
@@ -593,7 +555,7 @@ document.write(`
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    model : `~gammapy.modeling.model.SkyModel`</span>
+<span class="sd">    model : `~gammapy.modeling.models.SkyModel`</span>
 <span class="sd">        Source model kernel. If set to None,</span>
 <span class="sd">        assume spatail model: point source model, PointSpatialModel.</span>
 <span class="sd">        spectral model: PowerLawSpectral Model of index 2</span>
@@ -620,6 +582,7 @@ document.write(`
 <span class="sd">            * &quot;all&quot;: all the optional steps are executed</span>
 <span class="sd">            * &quot;errn-errp&quot;: estimate asymmetric error on flux.</span>
 <span class="sd">            * &quot;ul&quot;: estimate upper limits on flux.</span>
+<span class="sd">            * &quot;stat_scan&quot;: estimate likelihood profile</span>
 
 <span class="sd">        Default is None so the optional steps are not executed.</span>
 <span class="sd">    energy_edges : list of `~astropy.units.Quantity`, optional</span>
@@ -630,12 +593,23 @@ document.write(`
 <span class="sd">    sum_over_energy_groups : bool</span>
 <span class="sd">        Whether to sum over the energy groups or fit the norm on the full energy</span>
 <span class="sd">        cube.</span>
+<span class="sd">    norm : `~gammapy.modeling.Parameter` or dict</span>
+<span class="sd">        Norm parameter used for the likelihood profile computation on a fixed norm range.</span>
+<span class="sd">        Only used for &quot;stat_scan&quot; in `selection_optional`.</span>
+<span class="sd">        Default is None and a new parameter is created automatically,</span>
+<span class="sd">        with value=1, name=&quot;norm&quot;, scan_min=-100, scan_max=100,</span>
+<span class="sd">        and values sampled such as we can probe a 0.1% relative error on the norm.</span>
+<span class="sd">        If a dict is given the entries should be a subset of</span>
+<span class="sd">        `~gammapy.modeling.Parameter` arguments.</span>
 <span class="sd">    n_jobs : int</span>
 <span class="sd">        Number of processes used in parallel for the computation. Default is one,</span>
 <span class="sd">        unless `~gammapy.utils.parallel.N_JOBS_DEFAULT` was modified. The number</span>
 <span class="sd">        of jobs limited to the number of physical CPUs.</span>
 <span class="sd">    parallel_backend : {&quot;multiprocessing&quot;, &quot;ray&quot;}</span>
 <span class="sd">        Which backend to use for multiprocessing. Defaults to `~gammapy.utils.parallel.BACKEND_DEFAULT`.</span>
+<span class="sd">    max_niter : int</span>
+<span class="sd">        Maximal number of iterations used by the root finding algorithm.</span>
+<span class="sd">        Default is 100.</span>
 
 <span class="sd">    Notes</span>
 <span class="sd">    -----</span>
@@ -671,7 +645,7 @@ document.write(`
 <span class="sd">    &lt;BLANKLINE&gt;</span>
 <span class="sd">      geom                   : WcsGeom</span>
 <span class="sd">      axes                   : [&#39;lon&#39;, &#39;lat&#39;, &#39;energy&#39;]</span>
-<span class="sd">      shape                  : (400, 200, 1)</span>
+<span class="sd">      shape                  : (np.int64(400), np.int64(200), 1)</span>
 <span class="sd">      quantities             : [&#39;ts&#39;, &#39;norm&#39;, &#39;niter&#39;, &#39;norm_err&#39;, &#39;npred&#39;, &#39;npred_excess&#39;, &#39;stat&#39;, &#39;stat_null&#39;, &#39;success&#39;]</span>
 <span class="sd">      ref. model             : pl</span>
 <span class="sd">      n_sigma                : 1</span>
@@ -686,7 +660,7 @@ document.write(`
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;TSMapEstimator&quot;</span>
-    <span class="n">_available_selection_optional</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;errn-errp&quot;</span><span class="p">,</span> <span class="s2">&quot;ul&quot;</span><span class="p">]</span>
+    <span class="n">_available_selection_optional</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;errn-errp&quot;</span><span class="p">,</span> <span class="s2">&quot;ul&quot;</span><span class="p">,</span> <span class="s2">&quot;stat_scan&quot;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
@@ -702,11 +676,15 @@ document.write(`
         <span class="n">sum_over_energy_groups</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
         <span class="n">n_jobs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">parallel_backend</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">norm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">max_niter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="k">if</span> <span class="n">kernel_width</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">kernel_width</span> <span class="o">=</span> <span class="n">Angle</span><span class="p">(</span><span class="n">kernel_width</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">kernel_width</span> <span class="o">=</span> <span class="n">kernel_width</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">norm</span> <span class="o">=</span> <span class="n">_get_default_norm</span><span class="p">(</span><span class="n">norm</span><span class="p">,</span> <span class="n">scan_values</span><span class="o">=</span><span class="n">_generate_scan_values</span><span class="p">())</span>
 
         <span class="k">if</span> <span class="n">model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">model</span> <span class="o">=</span> <span class="n">SkyModel</span><span class="p">(</span>
@@ -724,6 +702,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span> <span class="o">=</span> <span class="n">n_jobs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">parallel_backend</span> <span class="o">=</span> <span class="n">parallel_backend</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sum_over_energy_groups</span> <span class="o">=</span> <span class="n">sum_over_energy_groups</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_niter</span> <span class="o">=</span> <span class="n">max_niter</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span> <span class="o">=</span> <span class="n">selection_optional</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">energy_edges</span> <span class="o">=</span> <span class="n">energy_edges</span>
@@ -733,6 +712,8 @@ document.write(`
             <span class="n">n_sigma_ul</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">n_sigma_ul</span><span class="p">,</span>
             <span class="n">selection_optional</span><span class="o">=</span><span class="n">selection_optional</span><span class="p">,</span>
             <span class="n">ts_threshold</span><span class="o">=</span><span class="n">threshold</span><span class="p">,</span>
+            <span class="n">norm</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span>
+            <span class="n">max_niter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_niter</span><span class="p">,</span>
         <span class="p">)</span>
 
     <span class="nd">@property</span>
@@ -750,11 +731,19 @@ document.write(`
             <span class="s2">&quot;success&quot;</span><span class="p">,</span>
         <span class="p">]</span>
 
-        <span class="k">if</span> <span class="s2">&quot;errn-errp&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
-            <span class="n">selection</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;norm_errp&quot;</span><span class="p">,</span> <span class="s2">&quot;norm_errn&quot;</span><span class="p">]</span>
-
-        <span class="k">if</span> <span class="s2">&quot;ul&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
-            <span class="n">selection</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;norm_ul&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s2">&quot;stat_scan&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
+            <span class="n">selection</span> <span class="o">+=</span> <span class="p">[</span>
+                <span class="s2">&quot;dnde_scan_values&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;stat_scan&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;norm_errp&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;norm_errn&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;norm_ul&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s2">&quot;errn-errp&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
+                <span class="n">selection</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;norm_errp&quot;</span><span class="p">,</span> <span class="s2">&quot;norm_errn&quot;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="s2">&quot;ul&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
+                <span class="n">selection</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;norm_ul&quot;</span><span class="p">]</span>
 
         <span class="k">return</span> <span class="n">selection</span>
 
@@ -807,6 +796,7 @@ document.write(`
             <span class="n">geom</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="p">,</span>
             <span class="n">mask</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">mask_image</span><span class="p">,</span>
         <span class="p">)</span>
+
         <span class="n">kernel</span> <span class="o">=</span> <span class="n">evaluator</span><span class="o">.</span><span class="n">compute_npred</span><span class="p">()</span>
         <span class="n">kernel</span><span class="o">.</span><span class="n">data</span> <span class="o">/=</span> <span class="n">kernel</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">kernel</span></div>
@@ -845,6 +835,8 @@ document.write(`
 
         <span class="n">flux</span><span class="o">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">flux</span><span class="o">.</span><span class="n">quantity</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;1 / (cm2 s)&quot;</span><span class="p">)</span>
         <span class="n">flux</span> <span class="o">=</span> <span class="n">flux</span><span class="o">.</span><span class="n">convolve</span><span class="p">(</span><span class="n">kernel</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">:</span>
+            <span class="n">flux</span> <span class="o">*=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span>
         <span class="k">return</span> <span class="n">flux</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span></div>
 
 
@@ -874,7 +866,10 @@ document.write(`
         <span class="c1"># in some image there are pixels, which have exposure, but zero</span>
         <span class="c1"># background, which doesn&#39;t make sense and causes the TS computation</span>
         <span class="c1"># to fail, this is a temporary fix</span>
-        <span class="n">background</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">(</span><span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">npred</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">:</span>
+            <span class="n">npred</span> <span class="o">*=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span>
+        <span class="n">background</span> <span class="o">=</span> <span class="n">npred</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">(</span><span class="n">keepdims</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">mask</span><span class="p">[</span><span class="n">background</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="k">return</span> <span class="n">Map</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="n">geom</span><span class="p">)</span></div>
 
@@ -927,8 +922,6 @@ document.write(`
 <span class="sd">            Maps dictionary.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># First create 2D map arrays</span>
-        <span class="n">counts</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">counts</span>
-        <span class="n">background</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span>
 
         <span class="n">exposure</span> <span class="o">=</span> <span class="n">estimate_exposure_reco_energy</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="p">)</span>
 
@@ -940,6 +933,11 @@ document.write(`
             <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">,</span> <span class="n">exposure</span><span class="o">=</span><span class="n">exposure</span>
         <span class="p">)</span>
 
+        <span class="n">mask_safe</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span> <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span> <span class="k">else</span> <span class="mf">1.0</span>
+        <span class="n">counts</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">counts</span> <span class="o">*</span> <span class="n">mask_safe</span>
+        <span class="n">background</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span> <span class="o">*</span> <span class="n">mask_safe</span>
+        <span class="n">exposure</span> <span class="o">*=</span> <span class="n">mask_safe</span>
+
         <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">]</span>
 
         <span class="n">flux_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span>
@@ -947,13 +945,24 @@ document.write(`
         <span class="p">)</span>
 
         <span class="n">exposure_npred</span> <span class="o">=</span> <span class="p">(</span><span class="n">exposure</span> <span class="o">*</span> <span class="n">flux_ref</span> <span class="o">*</span> <span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-
         <span class="n">norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">flux</span> <span class="o">/</span> <span class="n">flux_ref</span><span class="p">)</span><span class="o">.</span><span class="n">to_unit</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sum_over_energy_groups</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">mask_safe</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">mask_safe</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+            <span class="n">counts</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span>
+            <span class="n">background</span> <span class="o">=</span> <span class="n">background</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span>
+            <span class="n">exposure_npred</span> <span class="o">=</span> <span class="n">exposure_npred</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">mask_safe</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># already applied</span>
+
         <span class="k">return</span> <span class="p">{</span>
             <span class="s2">&quot;counts&quot;</span><span class="p">:</span> <span class="n">counts</span><span class="p">,</span>
             <span class="s2">&quot;background&quot;</span><span class="p">:</span> <span class="n">background</span><span class="p">,</span>
             <span class="s2">&quot;norm&quot;</span><span class="p">:</span> <span class="n">norm</span><span class="p">,</span>
             <span class="s2">&quot;mask&quot;</span><span class="p">:</span> <span class="n">mask</span><span class="p">,</span>
+            <span class="s2">&quot;mask_safe&quot;</span><span class="p">:</span> <span class="n">mask_safe</span><span class="p">,</span>
             <span class="s2">&quot;exposure&quot;</span><span class="p">:</span> <span class="n">exposure_npred</span><span class="p">,</span>
             <span class="s2">&quot;kernel&quot;</span><span class="p">:</span> <span class="n">kernel</span><span class="p">,</span>
         <span class="p">}</span></div>
@@ -961,32 +970,44 @@ document.write(`
 
 <div class="viewcode-block" id="TSMapEstimator.estimate_flux_map">
 <a class="viewcode-back" href="../../../../api/gammapy.estimators.TSMapEstimator.html#gammapy.estimators.TSMapEstimator.estimate_flux_map">[docs]</a>
-    <span class="k">def</span> <span class="nf">estimate_flux_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">estimate_flux_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datasets</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Estimate flux and test statistic maps for single dataset.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        dataset : `~gammapy.datasets.MapDataset`</span>
-<span class="sd">            Map dataset.</span>
+<span class="sd">        dataset : `~gammapy.datasets.Datasets` or `~gammapy.datasets.MapDataset`</span>
+<span class="sd">            Map dataset or Datasets (list of MapDataset with the same spatial geometry).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">maps</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_fit_input_maps</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">estimate_fit_input_maps</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">]</span>
 
-        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s2">&quot;mask&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+        <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;mask&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mask</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="w">                </span><span class="sd">&quot;&quot;&quot;No valid positions found.</span>
+<span class="sd">            Check that the dataset background is defined and not only zeros,</span>
+<span class="sd">            or that the mask_safe is not all False.&quot;</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="p">)</span>
+
+        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="n">mask</span><span class="p">))</span>
         <span class="n">positions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
 
         <span class="n">inputs</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span>
             <span class="n">positions</span><span class="p">,</span>
-            <span class="n">repeat</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)),</span>
-            <span class="n">repeat</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s2">&quot;exposure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)),</span>
-            <span class="n">repeat</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)),</span>
-            <span class="n">repeat</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s2">&quot;kernel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">),</span>
-            <span class="n">repeat</span><span class="p">(</span><span class="n">maps</span><span class="p">[</span><span class="s2">&quot;norm&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="p">),</span>
+            <span class="n">repeat</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">]),</span>
+            <span class="n">repeat</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;exposure&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">]),</span>
+            <span class="n">repeat</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">]),</span>
+            <span class="n">repeat</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;kernel&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">]),</span>
+            <span class="n">repeat</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;norm&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">data</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">]),</span>
+            <span class="n">repeat</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="s2">&quot;mask_safe&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">maps</span><span class="p">]),</span>
             <span class="n">repeat</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_flux_estimator</span><span class="p">),</span>
         <span class="p">)</span>
 
         <span class="n">results</span> <span class="o">=</span> <span class="n">parallel</span><span class="o">.</span><span class="n">run_multiprocessing</span><span class="p">(</span>
             <span class="n">_ts_value</span><span class="p">,</span>
             <span class="n">inputs</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">parallel_backend</span><span class="p">,</span>
             <span class="n">pool_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">processes</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">n_jobs</span><span class="p">),</span>
             <span class="n">task_name</span><span class="o">=</span><span class="s2">&quot;TS map&quot;</span><span class="p">,</span>
         <span class="p">)</span>
@@ -995,11 +1016,35 @@ document.write(`
 
         <span class="n">j</span><span class="p">,</span> <span class="n">i</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">positions</span><span class="p">)</span>
 
-        <span class="n">geom</span> <span class="o">=</span> <span class="n">maps</span><span class="p">[</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">squash</span><span class="p">(</span><span class="n">axis_name</span><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">)</span>
+        <span class="n">geom</span> <span class="o">=</span> <span class="n">maps</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;counts&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">squash</span><span class="p">(</span><span class="n">axis_name</span><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">)</span>
+        <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">]</span>
+        <span class="n">dnde_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="p">(</span><span class="n">energy_axis</span><span class="o">.</span><span class="n">center</span><span class="p">)</span>
 
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_all</span><span class="p">:</span>
-            <span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="n">geom</span><span class="o">=</span><span class="n">geom</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-            <span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">_</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;dnde_scan_values&quot;</span><span class="p">,</span> <span class="s2">&quot;stat_scan&quot;</span><span class="p">]:</span>
+                <span class="n">norm_bin_axis</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="p">(</span>
+                    <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;dnde_scan_values&quot;</span><span class="p">])),</span>
+                    <span class="n">interp</span><span class="o">=</span><span class="s2">&quot;lin&quot;</span><span class="p">,</span>
+                    <span class="n">node_type</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
+                    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;dnde_bin&quot;</span><span class="p">,</span>
+                <span class="p">)</span>
+
+                <span class="n">axes</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">axes</span> <span class="o">+</span> <span class="p">[</span><span class="n">norm_bin_axis</span><span class="p">]</span>
+                <span class="n">geom_scan</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span><span class="o">.</span><span class="n">to_cube</span><span class="p">(</span><span class="n">axes</span><span class="p">)</span>
+
+                <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s2">&quot;dnde_scan_values&quot;</span><span class="p">:</span>
+                    <span class="n">unit</span> <span class="o">=</span> <span class="n">dnde_ref</span><span class="o">.</span><span class="n">unit</span>
+                    <span class="n">factor</span> <span class="o">=</span> <span class="n">dnde_ref</span><span class="o">.</span><span class="n">value</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">unit</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+                    <span class="n">factor</span> <span class="o">=</span> <span class="mi">1</span>
+
+                <span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="n">geom_scan</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="n">unit</span><span class="p">)</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">factor</span>
+
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="n">geom</span><span class="o">=</span><span class="n">geom</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+                <span class="n">m</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">_</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
             <span class="n">result</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span>
 
         <span class="k">return</span> <span class="n">result</span></div>
@@ -1007,7 +1052,7 @@ document.write(`
 
 <div class="viewcode-block" id="TSMapEstimator.run">
 <a class="viewcode-back" href="../../../../api/gammapy.estimators.TSMapEstimator.html#gammapy.estimators.TSMapEstimator.run">[docs]</a>
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">datasets</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Run test statistic map estimation.</span>
 
@@ -1020,8 +1065,8 @@ document.write(`
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        dataset : `~gammapy.datasets.MapDataset`</span>
-<span class="sd">            Input MapDataset.</span>
+<span class="sd">        dataset : `~gammapy.datasets.Datasets` or `~gammapy.datasets.MapDataset`</span>
+<span class="sd">            Map dataset or Datasets (list of MapDataset with the same spatial geometry).</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -1035,36 +1080,50 @@ document.write(`
 <span class="sd">                * flux_ul : upper limit map.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">!=</span> <span class="s2">&quot;cash&quot;</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="si">}</span><span class="s2"> is not a valid type for </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">dataset_models</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">models</span>
+        <span class="n">datasets</span> <span class="o">=</span> <span class="n">Datasets</span><span class="p">(</span><span class="n">datasets</span><span class="p">)</span>
 
-        <span class="n">pad_width</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_pad_width</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">)</span>
-        <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">pad_width</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">downsample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">downsampling_factor</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">geom_ref</span> <span class="o">=</span> <span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span>
+        <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">!=</span> <span class="s2">&quot;cash&quot;</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="si">}</span><span class="s2"> is not a valid type for </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="p">)</span>
+            <span class="k">if</span> <span class="n">dataset</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span> <span class="o">!=</span> <span class="n">geom_ref</span><span class="o">.</span><span class="n">to_image</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Datasets geometries must match&quot;</span><span class="p">)</span>
 
-        <span class="n">energy_axis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_energy_axis</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="n">datasets_models</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">models</span>
+
+        <span class="n">pad_width</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+            <span class="n">pad_width_dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_pad_width</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="p">)</span>
+            <span class="n">pad_width</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">pad_width</span><span class="p">,</span> <span class="n">pad_width_dataset</span><span class="p">))</span>
+
+        <span class="n">datasets_padded</span> <span class="o">=</span> <span class="n">Datasets</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">:</span>
+            <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">pad_width</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">downsample</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">downsampling_factor</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">datasets_padded</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+        <span class="n">datasets</span> <span class="o">=</span> <span class="n">datasets_padded</span>
+
+        <span class="n">energy_axis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_energy_axis</span><span class="p">(</span><span class="n">dataset</span><span class="o">=</span><span class="n">datasets</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
         <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">for</span> <span class="n">energy_min</span><span class="p">,</span> <span class="n">energy_max</span> <span class="ow">in</span> <span class="n">progress_bar</span><span class="p">(</span>
             <span class="n">energy_axis</span><span class="o">.</span><span class="n">iter_by_edges</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">&quot;Energy bins&quot;</span>
         <span class="p">):</span>
-            <span class="n">dataset_sliced</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">slice_by_energy</span><span class="p">(</span>
-                <span class="n">energy_min</span><span class="o">=</span><span class="n">energy_min</span><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="n">energy_max</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span>
+            <span class="n">datasets_sliced</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">slice_by_energy</span><span class="p">(</span>
+                <span class="n">energy_min</span><span class="o">=</span><span class="n">energy_min</span><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="n">energy_max</span>
             <span class="p">)</span>
 
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sum_over_energy_groups</span><span class="p">:</span>
-                <span class="n">dataset_sliced</span> <span class="o">=</span> <span class="n">dataset_sliced</span><span class="o">.</span><span class="n">to_image</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-            <span class="k">if</span> <span class="n">dataset_models</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">models_sliced</span> <span class="o">=</span> <span class="n">dataset_models</span><span class="o">.</span><span class="n">_slice_by_energy</span><span class="p">(</span>
+            <span class="k">if</span> <span class="n">datasets_models</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">models_sliced</span> <span class="o">=</span> <span class="n">datasets_models</span><span class="o">.</span><span class="n">_slice_by_energy</span><span class="p">(</span>
                     <span class="n">energy_min</span><span class="o">=</span><span class="n">energy_min</span><span class="p">,</span>
                     <span class="n">energy_max</span><span class="o">=</span><span class="n">energy_max</span><span class="p">,</span>
                     <span class="n">sum_over_energy_groups</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sum_over_energy_groups</span><span class="p">,</span>
                 <span class="p">)</span>
-                <span class="n">dataset_sliced</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="n">models_sliced</span>
-            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_flux_map</span><span class="p">(</span><span class="n">dataset_sliced</span><span class="p">)</span>
+                <span class="n">datasets_sliced</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="n">models_sliced</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_flux_map</span><span class="p">(</span><span class="n">datasets_sliced</span><span class="p">)</span>
             <span class="n">results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 
         <span class="n">maps</span> <span class="o">=</span> <span class="n">Maps</span><span class="p">()</span>
@@ -1115,10 +1174,8 @@ document.write(`
 
     <span class="nd">@lazyproperty</span>
     <span class="k">def</span> <span class="nf">norm_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Bounds for x&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">norm_bounds_cython</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-        <span class="p">)</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Bounds for x.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">norm_bounds_cython</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">npred</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">norm</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicted number of counts.&quot;&quot;&quot;</span>
@@ -1126,13 +1183,11 @@ document.write(`
 
     <span class="k">def</span> <span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">norm</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistics sum.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">(</span><span class="n">norm</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">(</span><span class="n">norm</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">stat_derivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">norm</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistics derivative.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">f_cash_root_cython</span><span class="p">(</span>
-            <span class="n">norm</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">f_cash_root_cython</span><span class="p">(</span><span class="n">norm</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">stat_2nd_derivative</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">norm</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistics 2nd derivative.&quot;&quot;&quot;</span>
@@ -1142,16 +1197,28 @@ document.write(`
         <span class="k">return</span> <span class="p">(</span><span class="n">term_top</span> <span class="o">/</span> <span class="n">term_bottom</span><span class="p">)[</span><span class="o">~</span><span class="n">mask</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_arrays</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">kernel</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">from_arrays</span><span class="p">(</span>
+        <span class="bp">cls</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">mask_safe</span>
+    <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">mask_safe</span><span class="p">:</span>
+            <span class="c1"># compute mask_safe weighted kernel for the sum_over_axes case</span>
+            <span class="n">mask_safe</span> <span class="o">=</span> <span class="n">_extract_array</span><span class="p">(</span><span class="n">mask_safe</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">kernel</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
+            <span class="n">kernel</span> <span class="o">=</span> <span class="p">(</span><span class="n">kernel</span> <span class="o">*</span> <span class="n">mask_safe</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">errstate</span><span class="p">(</span><span class="n">invalid</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">divide</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">):</span>
+                <span class="n">kernel</span> <span class="o">/=</span> <span class="n">mask_safe</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+                <span class="n">kernel</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">kernel</span><span class="p">)]</span> <span class="o">=</span> <span class="mi">0</span>
+
         <span class="n">counts_cutout</span> <span class="o">=</span> <span class="n">_extract_array</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">kernel</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
         <span class="n">background_cutout</span> <span class="o">=</span> <span class="n">_extract_array</span><span class="p">(</span><span class="n">background</span><span class="p">,</span> <span class="n">kernel</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
         <span class="n">exposure_cutout</span> <span class="o">=</span> <span class="n">_extract_array</span><span class="p">(</span><span class="n">exposure</span><span class="p">,</span> <span class="n">kernel</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">position</span><span class="p">)</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">kernel</span> <span class="o">*</span> <span class="n">exposure_cutout</span>
         <span class="n">norm_guess</span> <span class="o">=</span> <span class="n">norm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">position</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+        <span class="n">mask_invalid</span> <span class="o">=</span> <span class="p">(</span><span class="n">counts_cutout</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">background_cutout</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">model</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
-            <span class="n">counts</span><span class="o">=</span><span class="n">counts_cutout</span><span class="p">,</span>
-            <span class="n">background</span><span class="o">=</span><span class="n">background_cutout</span><span class="p">,</span>
-            <span class="n">model</span><span class="o">=</span><span class="n">kernel</span> <span class="o">*</span> <span class="n">exposure_cutout</span><span class="p">,</span>
+            <span class="n">counts</span><span class="o">=</span><span class="n">counts_cutout</span><span class="p">[</span><span class="o">~</span><span class="n">mask_invalid</span><span class="p">],</span>
+            <span class="n">background</span><span class="o">=</span><span class="n">background_cutout</span><span class="p">[</span><span class="o">~</span><span class="n">mask_invalid</span><span class="p">],</span>
+            <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">[</span><span class="o">~</span><span class="n">mask_invalid</span><span class="p">],</span>
             <span class="n">norm_guess</span><span class="o">=</span><span class="n">norm_guess</span><span class="p">,</span>
         <span class="p">)</span>
 
@@ -1160,7 +1227,7 @@ document.write(`
 <span class="k">class</span> <span class="nc">BrentqFluxEstimator</span><span class="p">(</span><span class="n">Estimator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Single parameter flux estimator.&quot;&quot;&quot;</span>
 
-    <span class="n">_available_selection_optional</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;errn-errp&quot;</span><span class="p">,</span> <span class="s2">&quot;ul&quot;</span><span class="p">]</span>
+    <span class="n">_available_selection_optional</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;errn-errp&quot;</span><span class="p">,</span> <span class="s2">&quot;ul&quot;</span><span class="p">,</span> <span class="s2">&quot;stat_scan&quot;</span><span class="p">]</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;BrentqFluxEstimator&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
@@ -1169,8 +1236,9 @@ document.write(`
         <span class="n">n_sigma</span><span class="p">,</span>
         <span class="n">n_sigma_ul</span><span class="p">,</span>
         <span class="n">selection_optional</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">max_niter</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+        <span class="n">max_niter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
         <span class="n">ts_threshold</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">norm</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">rtol</span> <span class="o">=</span> <span class="n">rtol</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_sigma</span> <span class="o">=</span> <span class="n">n_sigma</span>
@@ -1178,6 +1246,7 @@ document.write(`
         <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span> <span class="o">=</span> <span class="n">selection_optional</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">max_niter</span> <span class="o">=</span> <span class="n">max_niter</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ts_threshold</span> <span class="o">=</span> <span class="n">ts_threshold</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">norm</span> <span class="o">=</span> <span class="n">norm</span>
 
     <span class="k">def</span> <span class="nf">estimate_best_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Estimate best fit norm parameter.</span>
@@ -1303,6 +1372,64 @@ document.write(`
         <span class="p">)</span>
         <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;norm_errn&quot;</span><span class="p">:</span> <span class="n">flux_errn</span><span class="p">,</span> <span class="s2">&quot;norm_errp&quot;</span><span class="p">:</span> <span class="n">flux_errp</span><span class="p">}</span>
 
+    <span class="k">def</span> <span class="nf">estimate_scan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute likelihood profile.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dataset : `SimpleMapDataset`</span>
+<span class="sd">            Simple map dataset.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        result : dict</span>
+<span class="sd">            Result dictionary including &#39;stat_scan&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">sparse_norms</span> <span class="o">=</span> <span class="n">_get_norm_scan_values</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">norm</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+        <span class="n">scale</span> <span class="o">=</span> <span class="n">sparse_norms</span><span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">background</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">background</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">counts</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[:,</span> <span class="kc">None</span><span class="p">]</span>
+        <span class="n">stat_scan</span> <span class="o">=</span> <span class="n">cash</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">model</span> <span class="o">*</span> <span class="n">scale</span> <span class="o">+</span> <span class="n">background</span><span class="p">)</span>
+
+        <span class="n">stat_scan_local</span> <span class="o">=</span> <span class="n">stat_scan</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;stat_null&quot;</span><span class="p">]</span>
+
+        <span class="n">spline</span> <span class="o">=</span> <span class="n">InterpolatedUnivariateSpline</span><span class="p">(</span>
+            <span class="n">sparse_norms</span><span class="p">,</span> <span class="n">stat_scan_local</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ext</span><span class="o">=</span><span class="s2">&quot;raise&quot;</span><span class="p">,</span> <span class="n">check_finite</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span>
+
+        <span class="n">norms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sparse_norms</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">scan_values</span><span class="p">)))</span>
+        <span class="n">stat_scan</span> <span class="o">=</span> <span class="n">spline</span><span class="p">(</span><span class="n">norms</span><span class="p">)</span>
+
+        <span class="n">ts</span> <span class="o">=</span> <span class="o">-</span><span class="n">stat_scan</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">stat_scan</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">norms</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="n">maskp</span> <span class="o">=</span> <span class="n">norms</span> <span class="o">&gt;</span> <span class="n">norm</span>
+        <span class="n">stat_diff</span> <span class="o">=</span> <span class="n">stat_scan</span> <span class="o">-</span> <span class="n">stat_scan</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">stat_diff</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)[</span><span class="o">~</span><span class="n">maskp</span><span class="p">]</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+        <span class="n">norm_errn</span> <span class="o">=</span> <span class="n">norm</span> <span class="o">-</span> <span class="n">norms</span><span class="p">[</span><span class="o">~</span><span class="n">maskp</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">stat_diff</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)[</span><span class="n">maskp</span><span class="p">]</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+        <span class="n">norm_errp</span> <span class="o">=</span> <span class="n">norms</span><span class="p">[</span><span class="n">maskp</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span> <span class="o">-</span> <span class="n">norm</span>
+
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">stat_diff</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_sigma_ul</span><span class="o">**</span><span class="mi">2</span><span class="p">)[</span><span class="n">maskp</span><span class="p">]</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+        <span class="n">norm_ul</span> <span class="o">=</span> <span class="n">norms</span><span class="p">[</span><span class="n">maskp</span><span class="p">][</span><span class="n">ind</span><span class="p">]</span>
+
+        <span class="n">norm_err</span> <span class="o">=</span> <span class="p">(</span><span class="n">norm_errn</span> <span class="o">+</span> <span class="n">norm_errp</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+        <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
+            <span class="n">ts</span><span class="o">=</span><span class="n">ts</span><span class="p">,</span>
+            <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
+            <span class="n">norm_err</span><span class="o">=</span><span class="n">norm_err</span><span class="p">,</span>
+            <span class="n">norm_errn</span><span class="o">=</span><span class="n">norm_errn</span><span class="p">,</span>
+            <span class="n">norm_errp</span><span class="o">=</span><span class="n">norm_errp</span><span class="p">,</span>
+            <span class="n">norm_ul</span><span class="o">=</span><span class="n">norm_ul</span><span class="p">,</span>
+            <span class="n">stat_scan</span><span class="o">=</span><span class="n">stat_scan_local</span><span class="p">,</span>
+            <span class="n">dnde_scan_values</span><span class="o">=</span><span class="n">sparse_norms</span><span class="p">,</span>
+        <span class="p">)</span>
+
     <span class="k">def</span> <span class="nf">estimate_default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dataset</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Estimate default norm.</span>
 
@@ -1354,20 +1481,26 @@ document.write(`
         <span class="k">else</span><span class="p">:</span>
             <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">estimate_best_fit</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 
-        <span class="n">norm</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;norm&quot;</span><span class="p">]</span>
-        <span class="n">result</span><span class="p">[</span><span class="s2">&quot;npred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-        <span class="n">result</span><span class="p">[</span><span class="s2">&quot;npred_excess&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;npred&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-
         <span class="k">if</span> <span class="s2">&quot;ul&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
             <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">estimate_ul</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
 
         <span class="k">if</span> <span class="s2">&quot;errn-errp&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
             <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">estimate_errn_errp</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
 
+        <span class="k">if</span> <span class="s2">&quot;stat_scan&quot;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">selection_optional</span><span class="p">:</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">estimate_scan</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
+
+        <span class="n">norm</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;norm&quot;</span><span class="p">]</span>
+        <span class="n">result</span><span class="p">[</span><span class="s2">&quot;npred&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">result</span><span class="p">[</span><span class="s2">&quot;npred_excess&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;npred&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">dataset</span><span class="o">.</span><span class="n">npred</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+        <span class="n">result</span><span class="p">[</span><span class="s2">&quot;stat&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">stat_sum</span><span class="p">(</span><span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">)</span>
+
         <span class="k">return</span> <span class="n">result</span>
 
 
-<span class="k">def</span> <span class="nf">_ts_value</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">flux_estimator</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">_ts_value</span><span class="p">(</span>
+    <span class="n">position</span><span class="p">,</span> <span class="n">counts</span><span class="p">,</span> <span class="n">exposure</span><span class="p">,</span> <span class="n">background</span><span class="p">,</span> <span class="n">kernel</span><span class="p">,</span> <span class="n">norm</span><span class="p">,</span> <span class="n">mask_safe</span><span class="p">,</span> <span class="n">flux_estimator</span>
+<span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute test statistic value at a given pixel position.</span>
 
 <span class="sd">    Uses approach described in Stewart (2009).</span>
@@ -1393,13 +1526,32 @@ document.write(`
 <span class="sd">    TS : float</span>
 <span class="sd">        Test statistic value at the given pixel position.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">SimpleMapDataset</span><span class="o">.</span><span class="n">from_arrays</span><span class="p">(</span>
-        <span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span>
-        <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">,</span>
-        <span class="n">exposure</span><span class="o">=</span><span class="n">exposure</span><span class="p">,</span>
-        <span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">,</span>
-        <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
-        <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">,</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">nd</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nd</span><span class="p">):</span>
+        <span class="n">datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">SimpleMapDataset</span><span class="o">.</span><span class="n">from_arrays</span><span class="p">(</span>
+                <span class="n">counts</span><span class="o">=</span><span class="n">counts</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                <span class="n">background</span><span class="o">=</span><span class="n">background</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                <span class="n">exposure</span><span class="o">=</span><span class="n">exposure</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                <span class="n">norm</span><span class="o">=</span><span class="n">norm</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
+                <span class="n">kernel</span><span class="o">=</span><span class="n">kernel</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+                <span class="n">mask_safe</span><span class="o">=</span><span class="n">mask_safe</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="n">norm_guess</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">d</span><span class="o">.</span><span class="n">norm_guess</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">])</span>
+    <span class="n">mask_valid</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">norm_guess</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mask_valid</span><span class="p">):</span>
+        <span class="n">norm_guess</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">norm_guess</span><span class="p">[</span><span class="n">mask_valid</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">norm_guess</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">SimpleMapDataset</span><span class="p">(</span>
+        <span class="n">counts</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">d</span><span class="o">.</span><span class="n">counts</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">]),</span>
+        <span class="n">background</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">d</span><span class="o">.</span><span class="n">background</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">]),</span>
+        <span class="n">model</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">d</span><span class="o">.</span><span class="n">model</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">datasets</span><span class="p">]),</span>
+        <span class="n">norm_guess</span><span class="o">=</span><span class="n">norm_guess</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="k">return</span> <span class="n">flux_estimator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
 </pre></div>
@@ -1425,8 +1577,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1443,23 +1595,32 @@ document.write(`
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

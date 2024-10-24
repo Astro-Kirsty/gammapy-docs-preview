@@ -16,49 +16,53 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/jquery.js?v=5d32c60e"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/gammapy.datasets.FluxPointsDataset';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -66,7 +70,8 @@
     <link rel="prev" title="Datasets" href="gammapy.datasets.Datasets.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +113,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -129,6 +122,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +136,7 @@
     
     
     <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -153,50 +148,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -216,55 +211,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -275,7 +250,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -287,7 +262,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -299,7 +274,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -311,20 +286,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -338,7 +309,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,45 +322,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -405,42 +377,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -451,7 +407,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -463,7 +419,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -475,7 +431,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -495,6 +451,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.DataStore.html">DataStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.EventList.html">EventList</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.EventListMetaData.html">EventListMetaData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.data.ObservationMetaData.html">ObservationMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.FixedPointingInfo.html">FixedPointingInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.GTI.html">GTI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.HDUIndexTable.html">HDUIndexTable</a></li>
@@ -654,6 +611,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.PowerLawNormSpectralModel.html">PowerLawNormSpectralModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.PowerLawSpectralModel.html">PowerLawSpectralModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.PowerLawTemporalModel.html">PowerLawTemporalModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.Prior.html">Prior</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.ScaleSpectralModel.html">ScaleSpectralModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.Shell2SpatialModel.html">Shell2SpatialModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.ShellSpatialModel.html">ShellSpatialModel</a></li>
@@ -706,6 +664,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_fvar.html">compute_lightcurve_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_fpp.html">compute_lightcurve_fpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_doublingtime.html">compute_lightcurve_doublingtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_discrete_correlation.html">compute_lightcurve_discrete_correlation</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/analysis.html">analysis - High level interface</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -798,6 +757,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_flux_doubling.html">compute_flux_doubling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_chisq.html">compute_chisq</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.WStatCountsStatistic.html">WStatCountsStatistic</a></li>
@@ -858,10 +818,12 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.parallel.POOL_KWARGS_DEFAULT.html">POOL_KWARGS_DEFAULT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.parallel.METHOD_DEFAULT.html">METHOD_DEFAULT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.parallel.METHOD_KWARGS_DEFAULT.html">METHOD_KWARGS_DEFAULT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.from_yaml.html">from_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.get_images_paths.html">get_images_paths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.make_path.html">make_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.read_yaml.html">read_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.recursive_merge_dicts.html">recursive_merge_dicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.to_yaml.html">to_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.write_yaml.html">write_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.table.hstack_columns.html">hstack_columns</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.table.table_row_to_dict.html">table_row_to_dict</a></li>
@@ -909,8 +871,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -925,7 +885,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../api-reference/datasets.html" class="nav-link">datasets - Reduced datasets</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">FluxPointsDataset</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">FluxPointsDataset</span></li>
   </ul>
 </nav>
 </div>
@@ -948,8 +908,7 @@ document.write(`
 <dt class="sig sig-object py" id="gammapy.datasets.FluxPointsDataset">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.datasets.</span></span><span class="sig-name descname"><span class="pre">FluxPointsDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_fit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask_safe</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta_table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stat_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'chi2'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stat_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/datasets/flux_points.html#FluxPointsDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.datasets.FluxPointsDataset" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="gammapy.datasets.Dataset.html#gammapy.datasets.Dataset" title="gammapy.datasets.core.Dataset"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dataset</span></code></a></p>
-<p>Bundle a set of flux points with a parametric model,
-to compute fit statistic function using chi2 statistics.</p>
+<p>Bundle a set of flux points with a parametric model, to compute fit statistic function using different statistics (see <code class="docutils literal notranslate"><span class="pre">stat_type</span></code>).</p>
 <p>For more information see <a class="reference internal" href="../user-guide/datasets/index.html#datasets"><span class="std std-ref">Datasets (DL4)</span></a>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -958,32 +917,31 @@ to compute fit statistic function using chi2 statistics.</p>
 </dd>
 <dt><strong>data</strong><span class="classifier"><a class="reference internal" href="gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPoints</span></code></a></span></dt><dd><p>Flux points. Must be sorted along the energy axis.</p>
 </dd>
-<dt><strong>mask_fit</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></span></dt><dd><p>Mask to apply for fitting.</p>
+<dt><strong>mask_fit</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></span></dt><dd><p>Mask to apply for fitting.</p>
 </dd>
-<dt><strong>mask_safe</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></span></dt><dd><p>Mask defining the safe data range. By default, upper limit values are excluded.</p>
+<dt><strong>mask_safe</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a></span></dt><dd><p>Mask defining the safe data range. By default, upper limit values are excluded.</p>
 </dd>
 <dt><strong>meta_table</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a></span></dt><dd><p>Table listing information on observations used to create the dataset.
 One line per observation for stacked datasets.</p>
 </dd>
-<dt><strong>stat_type</strong><span class="classifier">str</span></dt><dd><p>Method used to compute the statistics:
-* chi2 : estimate from chi2 statistics.
-* profile : estimate from interpolation of the likelihood profile.
-* distrib : Assuming gaussian errors the likelihood is given by the</p>
+<dt><strong>stat_type</strong><span class="classifier">str</span></dt><dd><p>Method used to compute the statistics:</p>
 <blockquote>
-<div><p>probability density function of the normal distribution.
-For the upper limit case it is necessary to marginalize over the unknown measurement,
-So we integrate the normal distribution up to the upper limit value
-which gives the complementary error function.
-See eq. C7 of Mohanty et al (2013) :
-<a class="reference external" href="https://iopscience.iop.org/article/10.1088/0004-637X/773/2/168/pdf">https://iopscience.iop.org/article/10.1088/0004-637X/773/2/168/pdf</a></p>
+<div><ul class="simple">
+<li><p>chi2 : estimate from chi2 statistics.</p></li>
+<li><p>profile : estimate from interpolation of the likelihood profile.</p></li>
+<li><p>distrib : Assuming gaussian errors the likelihood is given by the probability density function
+of the normal distribution. For the upper limit case it is necessary to marginalize over the unknown
+measurement, so we integrate the normal distribution up to the upper limit value which gives the
+complementary error function. See eq. C7 of <a class="reference external" href="https://iopscience.iop.org/article/10.1088/0004-637X/773/2/168/pdf">Mohanty et al (2013)</a></p></li>
+</ul>
 </div></blockquote>
 <p>Default is <code class="xref py py-obj docutils literal notranslate"><span class="pre">chi2</span></code>, in that case upper limits are ignored and the mean of asymetrics error is used.
-However it is recommended to use <a class="reference external" href="https://docs.python.org/3/library/profile.html#module-profile" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">profile</span></code></a> if <code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_scan</span></code> is available on flux points.
+However, it is recommended to use <a class="reference external" href="https://docs.python.org/3/library/profile.html#module-profile" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">profile</span></code></a> if <code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_scan</span></code> is available on flux points.
 The <code class="xref py py-obj docutils literal notranslate"><span class="pre">distrib</span></code> case provides an approximation if the profile is not available.</p>
 </dd>
 <dt><strong>stat_kwargs</strong><span class="classifier">dict</span></dt><dd><p>Extra arguments specifying the interpolation scheme of the likelihood profile.
 Used only if <code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_type==&quot;profile&quot;</span></code>. In that case the default is :
-<a href="#id1"><span class="problematic" id="id2">`</span></a>stat_kwargs={“interp_scale”:”sqrt”, “extrapolate”:True}</p>
+<code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_kwargs={&quot;interp_scale&quot;:&quot;sqrt&quot;,</span> <span class="pre">&quot;extrapolate&quot;:True}</span></code></p>
 </dd>
 </dl>
 </dd>
@@ -1022,11 +980,11 @@ Used only if <code class="xref py py-obj docutils literal notranslate"><span cla
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">to_table</span><span class="p">())</span>
-<span class="go">type    name     value         unit      ... frozen is_norm link prior</span>
-<span class="go">---- --------- ---------- -------------- ... ------ ------- ---- -----</span>
-<span class="go">         index 2.2159e+00                ...  False   False</span>
-<span class="go">     amplitude 2.1619e-13 TeV-1 s-1 cm-2 ...  False    True</span>
-<span class="go">     reference 1.0000e+00            TeV ...   True   False</span>
+<span class="go">type    name     value         unit      ... frozen link prior</span>
+<span class="go">---- --------- ---------- -------------- ... ------ ---- -----</span>
+<span class="go">         index 2.2159e+00                ...  False</span>
+<span class="go">     amplitude 2.1619e-13 TeV-1 s-1 cm-2 ...  False</span>
+<span class="go">     reference 1.0000e+00            TeV ...   True</span>
 </pre></div>
 </div>
 <p>Note: In order to reproduce the example, you need the tests datasets folder.
@@ -1035,22 +993,31 @@ You may download it with the command:
 <p class="rubric">Attributes Summary</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.gti" title="gammapy.datasets.FluxPointsDataset.gti"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gti</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.available_stat_type" title="gammapy.datasets.FluxPointsDataset.available_stat_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_stat_type</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.gti" title="gammapy.datasets.FluxPointsDataset.gti"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gti</span></code></a></p></td>
 <td><p>Good time interval info (<code class="xref py py-obj docutils literal notranslate"><span class="pre">GTI</span></code>).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.mask" title="gammapy.datasets.FluxPointsDataset.mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.mask" title="gammapy.datasets.FluxPointsDataset.mask"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask</span></code></a></p></td>
 <td><p>Combined fit and safe mask.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.models" title="gammapy.datasets.FluxPointsDataset.models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.mask_safe" title="gammapy.datasets.FluxPointsDataset.mask_safe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.name" title="gammapy.datasets.FluxPointsDataset.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.mask_valid" title="gammapy.datasets.FluxPointsDataset.mask_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_valid</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.stat_type" title="gammapy.datasets.FluxPointsDataset.stat_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_type</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.models" title="gammapy.datasets.FluxPointsDataset.models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.tag" title="gammapy.datasets.FluxPointsDataset.tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.name" title="gammapy.datasets.FluxPointsDataset.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.stat_type" title="gammapy.datasets.FluxPointsDataset.stat_type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_type</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.tag" title="gammapy.datasets.FluxPointsDataset.tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag</span></code></a></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -1103,6 +1070,11 @@ You may download it with the command:
 </div>
 <p class="rubric">Attributes Documentation</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.datasets.FluxPointsDataset.available_stat_type">
+<span class="sig-name descname"><span class="pre">available_stat_type</span></span><a class="headerlink" href="#gammapy.datasets.FluxPointsDataset.available_stat_type" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.datasets.FluxPointsDataset.gti">
 <span class="sig-name descname"><span class="pre">gti</span></span><a class="headerlink" href="#gammapy.datasets.FluxPointsDataset.gti" title="Link to this definition">#</a></dt>
 <dd><p>Good time interval info (<code class="xref py py-obj docutils literal notranslate"><span class="pre">GTI</span></code>).</p>
@@ -1113,6 +1085,16 @@ You may download it with the command:
 <span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#gammapy.datasets.FluxPointsDataset.mask" title="Link to this definition">#</a></dt>
 <dd><p>Combined fit and safe mask.</p>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.datasets.FluxPointsDataset.mask_safe">
+<span class="sig-name descname"><span class="pre">mask_safe</span></span><a class="headerlink" href="#gammapy.datasets.FluxPointsDataset.mask_safe" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.datasets.FluxPointsDataset.mask_valid">
+<span class="sig-name descname"><span class="pre">mask_valid</span></span><a class="headerlink" href="#gammapy.datasets.FluxPointsDataset.mask_valid" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.datasets.FluxPointsDataset.models">
@@ -1193,9 +1175,9 @@ You may download it with the command:
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax_spectrum</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot flux points and best fit model on. Default is None.</p>
+<dt><strong>ax_spectrum</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot flux points and best fit model on. Default is None.</p>
 </dd>
-<dt><strong>ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot residuals on. Default is None.</p>
+<dt><strong>ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot residuals on. Default is None.</p>
 </dd>
 <dt><strong>kwargs_spectrum</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.plot_spectrum" title="gammapy.datasets.FluxPointsDataset.plot_spectrum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_spectrum</span></code></a>. Default is None.</p>
 </dd>
@@ -1203,7 +1185,7 @@ You may download it with the command:
 </dd>
 <dt><strong>Returns</strong></dt><dd></dd>
 <dt><strong>——-</strong></dt><dd></dd>
-<dt><strong>ax_spectrum, ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Flux points, best fit model and residuals plots.</p>
+<dt><strong>ax_spectrum, ax_residuals</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Flux points, best fit model and residuals plots.</p>
 </dd>
 </dl>
 </dd>
@@ -1234,17 +1216,17 @@ You may download it with the command:
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
 </dd>
 <dt><strong>method</strong><span class="classifier">{“diff”, “diff/model”}</span></dt><dd><p>Normalization used to compute the residuals, see <a class="reference internal" href="#gammapy.datasets.FluxPointsDataset.residuals" title="gammapy.datasets.FluxPointsDataset.residuals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPointsDataset.residuals</span></code></a>. Default is “diff”.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.errorbar.html#matplotlib.axes.Axes.errorbar" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errorbar</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
 </dd>
 </dl>
 </dd>
@@ -1258,7 +1240,7 @@ You may download it with the command:
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axes to plot on. Default is None.</p>
 </dd>
 <dt><strong>kwargs_fp</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference internal" href="gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gammapy.estimators.FluxPoints.plot</span></code></a> to configure the plot style.
 Default is None.</p>
@@ -1272,7 +1254,7 @@ Default is None.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axes object.</p>
 </dd>
 </dl>
 </dd>
@@ -1333,7 +1315,7 @@ Default is None.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>residuals</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Residuals array.</p>
+<dt><strong>residuals</strong><span class="classifier"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>Residuals array.</p>
 </dd>
 </dl>
 </dd>
@@ -1394,7 +1376,8 @@ Applies only if filename has .fits suffix. Default is False.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1406,8 +1389,11 @@ Applies only if filename has .fits suffix. Default is False.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.available_stat_type"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.available_stat_type</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.gti"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.gti</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.mask"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.mask</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.mask_safe"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.mask_safe</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.mask_valid"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.mask_valid</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.models"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.models</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.name"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.name</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.datasets.FluxPointsDataset.stat_type"><code class="docutils literal notranslate"><span class="pre">FluxPointsDataset.stat_type</span></code></a></li>
@@ -1452,8 +1438,8 @@ Applies only if filename has .fits suffix. Default is False.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1470,23 +1456,32 @@ Applies only if filename has .fits suffix. Default is False.</p>
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

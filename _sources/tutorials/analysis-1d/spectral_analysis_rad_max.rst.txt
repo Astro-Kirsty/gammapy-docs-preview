@@ -199,36 +199,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.9.18     
+            python_version         : 3.11.10    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 1.3.dev284+g868b2a7d7.d20240510 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
+            version                : 1.3.dev1278+g0c082c493.d20241024 
+            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.13.0     
+            scipy                  : 1.14.1     
             astropy                : 5.2.2      
-            regions                : 0.8        
+            regions                : 0.10       
             click                  : 8.1.7      
-            yaml                   : 6.0.1      
-            IPython                : 8.18.1     
+            yaml                   : 6.0.2      
+            IPython                : 8.28.0     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.4      
+            matplotlib             : 3.9.2      
             pandas                 : not installed 
-            healpy                 : 1.16.6     
-            iminuit                : 2.25.2     
-            sherpa                 : 4.16.0     
+            healpy                 : 1.17.3     
+            iminuit                : 2.30.1     
+            sherpa                 : 4.16.1     
             naima                  : 0.10.0     
             emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.21.0     
+            ray                    : 2.38.0     
 
 
     Gammapy environment variables:
@@ -481,7 +481,7 @@ map:
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/visualization/datasets.py:84: UserWarning: Setting the 'color' property will override the edgecolor or facecolor properties.
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/visualization/datasets.py:84: UserWarning: Setting the 'color' property will override the edgecolor or facecolor properties.
       handle = Patch(**plot_kwargs)
 
 
@@ -533,7 +533,7 @@ Fit spectrum
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/numpy/core/fromnumeric.py:88: RuntimeWarning: overflow encountered in reduce
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/core/fromnumeric.py:88: RuntimeWarning: overflow encountered in reduce
       return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
 
 
@@ -607,12 +607,12 @@ and check the best-fit parameters
 
  .. code-block:: none
 
-    model type    name     value         unit      ... max frozen is_norm link prior
-    ----- ---- --------- ---------- -------------- ... --- ------ ------- ---- -----
-     crab      amplitude 4.2903e-11 cm-2 s-1 TeV-1 ... nan  False    True           
-     crab      reference 1.0000e+00            TeV ... nan   True   False           
-     crab          alpha 2.5819e+00                ... nan  False   False           
-     crab           beta 1.9580e-01                ... nan  False   False           
+    model type    name     value         unit      ... min max frozen link prior
+    ----- ---- --------- ---------- -------------- ... --- --- ------ ---- -----
+     crab      amplitude 4.2903e-11 cm-2 s-1 TeV-1 ... nan nan  False           
+     crab      reference 1.0000e+00            TeV ... nan nan   True           
+     crab          alpha 2.5819e+00                ... nan nan  False           
+     crab           beta 1.9580e-01                ... nan nan  False           
 
 
 
@@ -745,12 +745,14 @@ provide a good distribution of the background.
 
  .. code-block:: none
 
-      model   type    name     value         unit      ... frozen is_norm link prior
-    --------- ---- --------- ---------- -------------- ... ------ ------- ---- -----
-    simulated      amplitude 4.3250e-11 cm-2 s-1 TeV-1 ...  False    True           
-    simulated      reference 1.0000e+00            TeV ...   True   False           
-    simulated          alpha 2.5120e+00                ...  False   False           
-    simulated           beta 1.8063e-01                ...  False   False           
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/quantity.py:673: RuntimeWarning: invalid value encountered in divide
+      result = super().__array_ufunc__(function, method, *arrays, **kwargs)
+      model   type    name     value         unit      ... min max frozen link prior
+    --------- ---- --------- ---------- -------------- ... --- --- ------ ---- -----
+    simulated      amplitude 4.3348e-11 cm-2 s-1 TeV-1 ... nan nan  False           
+    simulated      reference 1.0000e+00            TeV ... nan nan   True           
+    simulated          alpha 2.6660e+00                ... nan nan  False           
+    simulated           beta 2.5195e-01                ... nan nan  False           
 
 
 
@@ -776,6 +778,10 @@ provide a good distribution of the background.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: spectral_analysis_rad_max.py <spectral_analysis_rad_max.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: spectral_analysis_rad_max.zip <spectral_analysis_rad_max.zip>`
 
 
 .. only:: html

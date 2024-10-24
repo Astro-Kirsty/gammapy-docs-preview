@@ -35,7 +35,7 @@ and energy dispersion on the chosen analysis geometry.
 Setup
 -----
 
-.. GENERATED FROM PYTHON SOURCE LINES 20-40
+.. GENERATED FROM PYTHON SOURCE LINES 20-39
 
 .. code-block:: Python
 
@@ -45,7 +45,6 @@ Setup
     from astropy.coordinates import SkyCoord
     from regions import CircleSkyRegion
     import matplotlib.pyplot as plt
-    from IPython.display import display
     from gammapy.data import DataStore
     from gammapy.datasets import Datasets, MapDataset, SpectrumDataset
     from gammapy.makers import (
@@ -66,12 +65,12 @@ Setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 41-43
+.. GENERATED FROM PYTHON SOURCE LINES 40-42
 
 Check setup
 -----------
 
-.. GENERATED FROM PYTHON SOURCE LINES 43-48
+.. GENERATED FROM PYTHON SOURCE LINES 42-47
 
 .. code-block:: Python
 
@@ -92,36 +91,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.9.18     
+            python_version         : 3.11.10    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 1.3.dev284+g868b2a7d7.d20240510 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
+            version                : 1.3.dev1278+g0c082c493.d20241024 
+            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.13.0     
+            scipy                  : 1.14.1     
             astropy                : 5.2.2      
-            regions                : 0.8        
+            regions                : 0.10       
             click                  : 8.1.7      
-            yaml                   : 6.0.1      
-            IPython                : 8.18.1     
+            yaml                   : 6.0.2      
+            IPython                : 8.28.0     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.4      
+            matplotlib             : 3.9.2      
             pandas                 : not installed 
-            healpy                 : 1.16.6     
-            iminuit                : 2.25.2     
-            sherpa                 : 4.16.0     
+            healpy                 : 1.17.3     
+            iminuit                : 2.30.1     
+            sherpa                 : 4.16.1     
             naima                  : 0.10.0     
             emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.21.0     
+            ray                    : 2.38.0     
 
 
     Gammapy environment variables:
@@ -132,7 +131,7 @@ Check setup
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 49-59
+.. GENERATED FROM PYTHON SOURCE LINES 48-58
 
 Dataset
 -------
@@ -145,7 +144,7 @@ The first step of the data reduction is to create an empty dataset. A
 object. This is illustrated in the following example:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 59-74
+.. GENERATED FROM PYTHON SOURCE LINES 58-73
 
 .. code-block:: Python
 
@@ -175,7 +174,7 @@ object. This is illustrated in the following example:
     MapDataset
     ----------
 
-      Name                            : 6UvU3lKQ 
+      Name                            : eQ2yAD9v 
 
       Total counts                    : 0 
       Total background counts         : 0.00
@@ -203,7 +202,7 @@ object. This is illustrated in the following example:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 75-80
+.. GENERATED FROM PYTHON SOURCE LINES 74-79
 
 It is possible to compute the instrument response functions with
 different spatial and energy bins as compared to the counts and
@@ -211,7 +210,7 @@ background maps. For example, one can specify a true energy axis which
 defines the energy binning of the IRFs:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-87
+.. GENERATED FROM PYTHON SOURCE LINES 79-86
 
 .. code-block:: Python
 
@@ -229,13 +228,13 @@ defines the energy binning of the IRFs:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 88-91
+.. GENERATED FROM PYTHON SOURCE LINES 87-90
 
 For the detail of the other options available, you can always call the
 help:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-95
+.. GENERATED FROM PYTHON SOURCE LINES 90-94
 
 .. code-block:: Python
 
@@ -253,7 +252,7 @@ help:
 
     Help on method create in module gammapy.datasets.map:
 
-    create(geom, energy_axis_true=None, migra_axis=None, rad_axis=None, binsz_irf=<Quantity 0.2 deg>, reference_time='2000-01-01', name=None, meta_table=None, reco_psf=False, **kwargs) method of abc.ABCMeta instance
+    create(geom, energy_axis_true=None, migra_axis=None, rad_axis=None, binsz_irf=<Quantity 0.2 deg>, reference_time='2000-01-01', name=None, meta_table=None, reco_psf=False, **kwargs) class method of gammapy.datasets.map.MapDataset
         Create a MapDataset object with zero filled maps.
     
         Parameters
@@ -306,13 +305,13 @@ help:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-99
+.. GENERATED FROM PYTHON SOURCE LINES 95-98
 
 Once this empty “reference” dataset is defined, it can be filled with
 observational data using the `~gammapy.makers.MapDatasetMaker`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-113
+.. GENERATED FROM PYTHON SOURCE LINES 98-112
 
 .. code-block:: Python
 
@@ -346,7 +345,7 @@ observational data using the `~gammapy.makers.MapDatasetMaker`:
     MapDataset
     ----------
 
-      Name                            : pe6R2JhU 
+      Name                            : rxQAAmIa 
 
       Total counts                    : 2016 
       Total background counts         : 1866.72
@@ -374,7 +373,7 @@ observational data using the `~gammapy.makers.MapDatasetMaker`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-154
+.. GENERATED FROM PYTHON SOURCE LINES 113-154
 
 The `~gammapy.makers.MapDatasetMaker` fills the corresponding `counts`,
 `exposure`, `background`, `psf` and `edisp` map per observation.
@@ -383,12 +382,13 @@ the maps should not be computed. There is also a
 `background_oversampling` parameter that defines the oversampling
 factor in energy used to compute the background (default is None).
 
+.. _safe-data-range:
 Safe data range handling
 ------------------------
 
-To exclude the data range from a `~gammapy.makers.MapDataset`, that is associated with
-high systematics on instrument response functions, a `~gammapy.makers.MapDataset.mask_safe`
-can be defined. The `~gammapy.makers.MapDataset.mask_safe` is a `~gammapy.maps.Map` object
+To exclude the data range from a `~gammapy.datasets.MapDataset`, that is associated with
+high systematics on instrument response functions, a `~gammapy.datasets.MapDataset.mask_safe`
+can be defined. The `~gammapy.datasets.MapDataset.mask_safe` is a `~gammapy.maps.Map` object
 with `bool` data type, which indicates for each pixel, whether it should be included in
 the analysis. The convention is that a value of `True` or `1`
 includes the pixel, while a value of `False` or `0` excludes a
@@ -407,8 +407,8 @@ options are :
    observation center are excluded
 -  bkg-peak, the energy threshold is defined as the upper edge of the
    energy bin with the highest predicted background rate. This method
-   was introduced in the HESS DL3 validation paper:
-   https://arxiv.org/pdf/1910.08088.pdf
+   was introduced in the
+   `H.E.S.S. DL3 validation paper <https://arxiv.org/pdf/1910.08088.pdf>`__
 
 Note that currently some methods computing a safe energy range
 ("aeff-default", "aeff-max" and "edisp-bias") determine a true energy range and
@@ -473,7 +473,7 @@ map during fitting. This correctly accounts for contributions
 Background estimation
 ---------------------
 
-The background computed by the `MapDatasetMaker` gives the number of
+The background computed by the `~gammapy.makers.MapDatasetMaker` gives the number of
 counts predicted by the background IRF of the observation. Because its
 actual normalization, or even its spectral shape, might be poorly
 constrained, it is necessary to correct it with the data themselves.
@@ -552,7 +552,7 @@ Data reduction loop
 -------------------
 
 The data reduction steps can be combined in a single loop to run a full
-data reduction chain. For this the `MapDatasetMaker` is run first and
+data reduction chain. For this the `~gammapy.makers.MapDatasetMaker` is run first and
 the output dataset is the passed on to the next maker step. Finally, the
 dataset per observation is stacked into a larger map.
 
@@ -598,7 +598,7 @@ dataset per observation is stacked into a larger map.
     MapDataset
     ----------
 
-      Name                            : pLoNqHmH 
+      Name                            : 51SX5RnU 
 
       Total counts                    : 7972 
       Total background counts         : 7555.42
@@ -629,7 +629,7 @@ dataset per observation is stacked into a larger map.
 .. GENERATED FROM PYTHON SOURCE LINES 276-294
 
 To maintain good performance it is always recommended to do a cutout of
-the `MapDataset` as shown above. In case you want to increase the
+the `~gammapy.datasets.MapDataset` as shown above. In case you want to increase the
 offset-cut later, you can also choose a larger width of the cutout than
 `2 * offset_max`.
 
@@ -673,30 +673,30 @@ allow to use multiple processes on run.
     Dataset 0: 
 
       Type       : MapDataset
-      Name       : 2FvJAl49
+      Name       : wZmP86NN
       Instrument : HESS
-      Models     : ['2FvJAl49-bkg']
+      Models     : ['wZmP86NN-bkg']
 
     Dataset 1: 
 
       Type       : MapDataset
-      Name       : mdPbn6Us
+      Name       : m-wUxMeo
       Instrument : HESS
-      Models     : ['mdPbn6Us-bkg']
+      Models     : ['m-wUxMeo-bkg']
 
     Dataset 2: 
 
       Type       : MapDataset
-      Name       : XBqnzpgM
+      Name       : 6QhIZ1hv
       Instrument : HESS
-      Models     : ['XBqnzpgM-bkg']
+      Models     : ['6QhIZ1hv-bkg']
 
     Dataset 3: 
 
       Type       : MapDataset
-      Name       : qxgMDHHb
+      Name       : e0KS_kS0
       Instrument : HESS
-      Models     : ['qxgMDHHb-bkg']
+      Models     : ['e0KS_kS0-bkg']
 
 
 
@@ -714,8 +714,8 @@ a background model. The `~gammapy.datasets.SpectrumDatasetOnOff` contains ON and
 count spectra, background is implicitly modeled via the OFF counts
 spectrum.
 
-The `~gammapy.datasets.SpectrumDatasetMaker` make spectrum dataset for a single
-observation. In that case the irfs and background are computed at a
+The `~gammapy.makers.SpectrumDatasetMaker` make spectrum dataset for a single
+observation. In that case the IRFs and background are computed at a
 single fixed offset, which is recommended only for point-sources.
 
 Here is an example of data reduction loop to create
@@ -805,7 +805,7 @@ Observation duration and effective livetime
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 It can often be useful to know the total number of hours spent
 in the given field of view (without correcting for the acceptance
-variation). This can be computed using `make_observation_time_map`
+variation). This can be computed using `~gammapy.makers.utils.make_observation_time_map`
 as shown below
 
 
@@ -918,7 +918,7 @@ number of hours.
 .. GENERATED FROM PYTHON SOURCE LINES 423-425
 
 To get the value of the observation time at a particular position,
-use `get_by_coord`
+use ``get_by_coord``
 
 .. GENERATED FROM PYTHON SOURCE LINES 425-439
 
@@ -958,7 +958,7 @@ use `get_by_coord`
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.509 seconds)
+   **Total running time of the script:** (0 minutes 16.349 seconds)
 
 
 .. _sphx_glr_download_tutorials_api_makers.py:
@@ -981,6 +981,10 @@ use `get_by_coord`
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: makers.py <makers.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: makers.zip <makers.zip>`
 
 
 .. only:: html

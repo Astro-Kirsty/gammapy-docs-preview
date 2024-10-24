@@ -16,49 +16,53 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/jquery.js?v=5d32c60e"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user-guide/howto';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -66,7 +70,8 @@
     <link rel="prev" title="Utility functions" href="utils.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +113,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -129,6 +122,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +136,7 @@
     
     
     <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -153,50 +148,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -216,55 +211,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -275,7 +250,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -287,7 +262,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -299,7 +274,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -311,20 +286,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -338,7 +309,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,45 +322,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -405,42 +377,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -451,7 +407,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -463,7 +419,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -475,7 +431,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -513,44 +469,44 @@ document.write(`
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">How To</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="model-gallery/index.html">Model gallery</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_shell.html">Shell spatial model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_template.html">Template spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_constant.html">Constant spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_disk.html">Disk spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_gauss.html">Gaussian spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_gen_gauss.html">Generalized gaussian spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_piecewise_norm_spatial.html">Piecewise norm spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_point.html">Point spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_shell.html">Shell spatial model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_disk.html">Disk spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_shell2.html">Shell2 spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_template.html">Template spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_absorbed.html">EBL absorption spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_broken_powerlaw.html">Broken power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_compound.html">Compound spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_constant_spectral.html">Constant spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_exp_cutoff_powerlaw.html">Exponential cutoff power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_exp_cutoff_powerlaw_3fgl.html">Exponential cutoff power law spectral model used for 3FGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_exp_cutoff_powerlaw_norm_spectral.html">Exponential cutoff power law norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_gauss_spectral.html">Gaussian spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_logparabola.html">Log parabola spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_logparabola_norm_spectral.html">Log parabola spectral norm model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_naima.html">Naima spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_piecewise_norm_spectral.html">Piecewise  norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_powerlaw.html">Power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_powerlaw2.html">Power law 2 spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_point.html">Point spatial model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spatial/plot_piecewise_norm_spatial.html">Piecewise norm spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_powerlaw_norm_spectral.html">Power law norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_smooth_broken_powerlaw.html">Smooth broken power law spectral model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_super_exp_cutoff_powerlaw_3fgl.html">Super exponential cutoff power law model used for 3FGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_super_exp_cutoff_powerlaw_4fgl.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_gauss_spectral.html">Gaussian spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_exp_cutoff_powerlaw.html">Exponential cutoff power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_smooth_broken_powerlaw.html">Smooth broken power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_piecewise_norm_spectral.html">Piecewise  norm spectral model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_super_exp_cutoff_powerlaw_4fgl_dr1.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR1 (and DR2)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_template_spectral.html">Template spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_constant_temporal.html">Constant temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_absorbed.html">EBL absorption spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_naima.html">Naima spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_logparabola_norm_spectral.html">Log parabola spectral norm model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_compound.html">Compound spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_super_exp_cutoff_powerlaw_4fgl.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_constant_spectral.html">Constant spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_powerlaw.html">Power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_exp_cutoff_powerlaw_norm_spectral.html">Exponential cutoff power law norm spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_logparabola.html">Log parabola spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_powerlaw2.html">Power law 2 spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_exp_cutoff_powerlaw_3fgl.html">Exponential cutoff power law spectral model used for 3FGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/spectral/plot_broken_powerlaw.html">Broken power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_template_phase_temporal.html">Phase curve temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_expdecay_temporal.html">ExpDecay temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_gaussian_temporal.html">Gaussian temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_generalized_gaussian_temporal.html">Generalized Gaussian temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_template_temporal.html">Light curve temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_constant_temporal.html">Constant temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_sine_temporal.html">Sine temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_linear_temporal.html">Linear temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_powerlaw_temporal.html">PowerLaw temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_sine_temporal.html">Sine temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_template_phase_temporal.html">Phase curve temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_template_temporal.html">Light curve temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-gallery/temporal/plot_gaussian_temporal.html">Gaussian temporal model</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference external" href="https://gammapy.github.io/gammapy-recipes">Gammapy recipes</a></li>
@@ -582,8 +538,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -595,7 +549,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="index.html" class="nav-link">User guide</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">How To</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">How To</span></li>
   </ul>
 </nav>
 </div>
@@ -625,16 +579,17 @@ how to do everything in Gammapy.</p>
 
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToGammapy">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Spell and pronounce Gammapy
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToGammapy" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Spell and pronounce Gammapy
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToGammapy" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -649,20 +604,21 @@ the english word “pie”. You can listen to it <a class="reference external" h
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToObs">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Select observations
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToObs" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Select observations
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/starting/analysis_2.html#defining-the-datastore-and-selecting-observations">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToObs" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -677,20 +633,21 @@ or also select observations based on other information available using the <a cl
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToObsMap">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Make observation duration maps
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToObsMap" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Make observation duration maps
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/api/makers.html#observation-duration-and-effective-livetime">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToObsMap" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -705,20 +662,21 @@ methods.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToGroupObs">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Group observations
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToGroupObs" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Group observations
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/api/observation_clustering.html">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToGroupObs" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -733,20 +691,21 @@ you group by can be adjusted according to each science case.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToLivetimeMap">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Make an on-axis equivalent livetime map
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToLivetimeMap" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Make an on-axis equivalent livetime map
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/data/hess.html#on-axis-equivalent-livetime">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToLivetimeMap" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -761,20 +720,21 @@ The on-axis equivalent number of observation hours on the source can be calculat
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToEnergyEdges">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Compute minimum number of counts of significance per bin
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToEnergyEdges" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Compute minimum number of counts of significance per bin
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-1d/spectral_analysis.html#compute-flux-points">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToEnergyEdges" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -788,20 +748,21 @@ t o satisfy a minimum number of counts of significance per bin.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToPlottingUnits">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Choose units for plotting
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToPlottingUnits" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Choose units for plotting
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToPlottingUnits" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-        <p>Units for plotting are handled with a combination of <a class="reference external" href="https://matplotlib.org/stable/index.html#module-matplotlib" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib</span></code></a> and <a class="reference external" href="https://docs.astropy.org/en/latest/units/ref_api.html#module-astropy.units" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units</span></code></a>.
+        <p>Units for plotting are handled with a combination of <a class="reference external" href="https://matplotlib.org/stable/index.html#module-matplotlib" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib</span></code></a> and <a class="reference external" href="https://docs.astropy.org/en/latest/units/ref_api.html#module-astropy.units" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units</span></code></a>.
 The methods <code class="xref py py-obj docutils literal notranslate"><span class="pre">ax.xaxis.set_units()</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">ax.yaxis.set_units()</span></code> allow
 you to define the x and y axis units using <a class="reference external" href="https://docs.astropy.org/en/latest/units/ref_api.html#module-astropy.units" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.units</span></code></a>. Here is a minimal example:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -825,16 +786,17 @@ you to define the x and y axis units using <a class="reference external" href="h
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToSrcSig">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Compute source significance
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToSrcSig" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Compute source significance
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToSrcSig" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -856,20 +818,21 @@ take the difference. Note that in Gammapy, the fit statistic is defined as <code
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToReduceData">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Perform data reduction loop with multi-processing
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToReduceData" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Perform data reduction loop with multi-processing
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/api/makers.html#data-reduction-loop">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToReduceData" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -884,20 +847,21 @@ utilising the <a class="reference internal" href="../api/gammapy.makers.Datasets
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToSrcCumSig">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Compute cumulative significance
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToSrcCumSig" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Compute cumulative significance
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-1d/spectral_analysis.html#source-statistic">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToSrcCumSig" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -914,20 +878,21 @@ access the total statistics with the <code class="docutils literal notranslate">
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToCustomModel">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Implement a custom model
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToCustomModel" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Implement a custom model
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/api/models.html#implementing-a-custom-model">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToCustomModel" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -940,20 +905,21 @@ access the total statistics with the <code class="docutils literal notranslate">
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToEDepSpatialModel">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Implement energy dependent spatial models
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToEDepSpatialModel" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Implement energy dependent spatial models
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/api/models.html#models-with-energy-dependent-morphology">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToEDepSpatialModel" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -967,16 +933,17 @@ such models within the modeling framework.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToElevenAstroSrcSpectra">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Model astrophysical source spectra
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToElevenAstroSrcSpectra" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Model astrophysical source spectra
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToElevenAstroSrcSpectra" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -984,7 +951,7 @@ such models within the modeling framework.</p>
 provide a Python interface. Usually this requires some glue code to be written,
 e.g. <a class="reference internal" href="../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NaimaSpectralModel</span></code></a> is an example of a Gammapy
 wrapper class around the Naima spectral model and radiation classes, which then
-allows modeling and fitting of Naima models within Gammapy (e.g. using CTA,
+allows modeling and fitting of Naima models within Gammapy (e.g. using CTAO,
 H.E.S.S. or Fermi-LAT data).</p>
 
                     </div>
@@ -994,20 +961,21 @@ H.E.S.S. or Fermi-LAT data).</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToTempProfile">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Model temporal profiles
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToTempProfile" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Model temporal profiles
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-time/light_curve_simulation.html#fitting-temporal-models">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToTempProfile" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1022,16 +990,17 @@ one for each time bin.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToFitConvergence">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Improve fit convergence with constraints on the source position
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToFitConvergence" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Improve fit convergence with constraints on the source position
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToFitConvergence" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1056,16 +1025,17 @@ explains how to add a validity range of a model parameter.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToReduceMemory">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Reduce memory budget for large datasets
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToReduceMemory" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Reduce memory budget for large datasets
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToReduceMemory" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1089,16 +1059,17 @@ by removing it from the list of options passed to the <a class="reference intern
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToCopyDataStore">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Copy part of a data store
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToCopyDataStore" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Copy part of a data store
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToCopyDataStore" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1115,20 +1086,21 @@ and build the associated observation and HDU tables.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToInterpolateGeom">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Interpolate onto a different geometry
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToInterpolateGeom" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Interpolate onto a different geometry
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/api/maps.html#filling-maps-from-interpolation">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="HowToInterpolateGeom" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1141,16 +1113,17 @@ and build the associated observation and HDU tables.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToSuppressWarn">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Suppress warnings
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToSuppressWarn" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Suppress warnings
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToSuppressWarn" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1175,16 +1148,17 @@ warning like so:</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToProgressBar">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Display a progress bar
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToProgressBar" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Display a progress bar
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToProgressBar" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -1213,20 +1187,21 @@ to your code:</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToChangePlotStyle">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Change plotting style and color-blind friendly visualizations
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToChangePlotStyle" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Change plotting style and color-blind friendly visualizations
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToChangePlotStyle" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-        <p>As the Gammapy visualisations are using the library <a class="reference external" href="https://matplotlib.org/stable/index.html#module-matplotlib" title="(in Matplotlib v3.9.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib</span></code></a> that provides color styles, it is possible to change the
+        <p>As the Gammapy visualisations are using the library <a class="reference external" href="https://matplotlib.org/stable/index.html#module-matplotlib" title="(in Matplotlib v3.9.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matplotlib</span></code></a> that provides color styles, it is possible to change the
 default colors map of the Gammapy plots. Using using the
 <a class="reference external" href="https://matplotlib.org/stable/gallery/style_sheets/style_sheets_reference.html">style sheet of matplotlib</a>, you
 should add into your notebooks or scripts the following lines after the Gammapy imports:</p>
@@ -1238,7 +1213,7 @@ should add into your notebooks or scripts the following lines after the Gammapy 
 <p>Note that you can create your own style with matplotlib (see
 <a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/customizing.html">here</a> and
 <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">here</a>)</p>
-<p>The CTA observatory released a document describing best practices for <strong>data visualisation in a way friendly to
+<p>The CTAO observatory released a document describing best practices for <strong>data visualisation in a way friendly to
 color-blind people</strong>:
 <a class="reference external" href="https://www.cta-observatory.org/wp-content/uploads/2020/10/CTA_ColourBlindness_BestPractices2.pdf">CTAO document</a>. To
 use them, you should add into your notebooks or scripts the following lines after the Gammapy imports:</p>
@@ -1259,27 +1234,30 @@ use them, you should add into your notebooks or scripts the following lines afte
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#HowToAddPhase">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        Add PHASE information to your data
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#HowToAddPhase" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    Add PHASE information to your data
+                </div>
         
 
-                </div>
             </div>
             <div id="HowToAddPhase" class="collapse" data-parent="#accordion">
                 <div class="card-body">
-        <p>For doing pulsar analysis, you must compute the phase associated
-to each event and then create a new <code class="xref py py-obj docutils literal notranslate"><span class="pre">EventList</span></code> and a new <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observation</span></code>.
-Modifying the <code class="xref py py-obj docutils literal notranslate"><span class="pre">EventList</span></code> of an <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observation</span></code> in-place is prohibited because of the
-underlying lazy loading implemented in reading observations.
-Code for computing phases is NOT provided within gammapy,
-and you must use an external s/w like PINT or TEMPO2. For brevity,
-this code example shows the only technical implementation
-using a dummy phase column.</p>
+        <p>To do a pulsar analysis, one must compute the pulsar phase of
+each event and put this new information in a new <a class="reference internal" href="../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Observation</span></code></a>.
+Computing pulsar phases can be done using an external library such as
+[PINT](<a class="reference external" href="https://nanograv-pint.readthedocs.io/en/latest/">https://nanograv-pint.readthedocs.io/en/latest/</a>) or
+[Tempo2](<a class="reference external" href="https://www.pulsarastronomy.net/pulsar/software/tempo2">https://www.pulsarastronomy.net/pulsar/software/tempo2</a>). A
+[Gammapy Recipe](<a class="reference external" href="https://gammapy.github.io/gammapy-recipes/_build/html/index.html">https://gammapy.github.io/gammapy-recipes/_build/html/index.html</a>)
+showing how to use PINT within the Gammapy framework is available
+[here](<a class="reference external" href="https://gammapy.github.io/gammapy-recipes/_build/html/notebooks/pulsar_phase/pulsar_phase_computation.html">https://gammapy.github.io/gammapy-recipes/_build/html/notebooks/pulsar_phase/pulsar_phase_computation.html</a>).
+For brevity, the code below shows how to add a dummy phase column to a new
+<a class="reference internal" href="../api/gammapy.data.EventList.html#gammapy.data.EventList" title="gammapy.data.EventList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EventList</span></code></a> and <a class="reference internal" href="../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Observation</span></code></a>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">DataStore</span><span class="p">,</span> <span class="n">Observation</span><span class="p">,</span> <span class="n">EventList</span>
 
@@ -1293,14 +1271,14 @@ using a dummy phase column.</p>
 <span class="c1"># create a new `EventList`</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">obs</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">table</span>
 <span class="n">table</span><span class="p">[</span><span class="s2">&quot;PHASE&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">phase</span>
-<span class="n">events_new</span> <span class="o">=</span> <span class="n">EventList</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+<span class="n">new_events</span> <span class="o">=</span> <span class="n">EventList</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
 
 <span class="c1"># copy the observation in memory, changing the events</span>
-<span class="n">o2</span> <span class="o">=</span> <span class="n">obs</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">events</span><span class="o">=</span><span class="n">events_new</span><span class="p">,</span> <span class="n">in_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">obs2</span> <span class="o">=</span> <span class="n">obs</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">events</span><span class="o">=</span><span class="n">new_events</span><span class="p">,</span> <span class="n">in_memory</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># The new observation and the new events table can be serialised independently</span>
-<span class="n">o2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;new_obs.fits.gz&quot;</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">events_new</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;events.fits.gz&quot;</span><span class="p">,</span> <span class="n">gti</span><span class="o">=</span><span class="n">obs</span><span class="o">.</span><span class="n">gti</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">obs2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;new_obs.fits.gz&quot;</span><span class="p">)</span>
+<span class="n">obs2</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;events.fits.gz&quot;</span><span class="p">,</span> <span class="n">include_irfs</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 
@@ -1321,7 +1299,8 @@ using a dummy phase column.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1346,8 +1325,8 @@ using a dummy phase column.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1364,23 +1343,32 @@ using a dummy phase column.</p>
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

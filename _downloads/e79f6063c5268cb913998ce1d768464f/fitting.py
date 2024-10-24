@@ -335,9 +335,7 @@ def make_contours(fit, datasets, model, params, npoints, sigmas):
     for sigma in sigmas:
         contours = dict()
         for par_1, par_2 in combinations(params, r=2):
-            idx1, idx2 = model.parameters.index(par_1), model.parameters.index(
-                par_2
-            )
+            idx1, idx2 = model.parameters.index(par_1), model.parameters.index(par_2)
             name1 = model.parameters_unique_names[idx1]
             name2 = model.parameters_unique_names[idx2]
             contour = fit.stat_contour(
@@ -348,8 +346,8 @@ def make_contours(fit, datasets, model, params, npoints, sigmas):
                 sigma=sigma,
             )
             contours[f"contour_{par_1}_{par_2}"] = {
-                par_1: contour[f'{model.name}.{name1}'].tolist(),
-                par_2: contour[f'{model.name}.{name2}'].tolist(),
+                par_1: contour[f"{model.name}.{name1}"].tolist(),
+                par_2: contour[f"{model.name}.{name2}"].tolist(),
             }
         cts_sigma.append(contours)
     return cts_sigma
@@ -408,7 +406,6 @@ for (par_1, par_2), ax in zip(param_pairs, axes):
     ax.set_ylabel(labels[par_2])
 plt.legend()
 plt.tight_layout()
-
 
 
 ######################################################################

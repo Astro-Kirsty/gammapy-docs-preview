@@ -16,6 +16,12 @@ CovarianceResult
       ~CovarianceResult.method
       ~CovarianceResult.success
 
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~CovarianceResult.to_dict
+
    .. rubric:: Attributes Documentation
 
    .. autoattribute:: backend
@@ -23,3 +29,7 @@ CovarianceResult
    .. autoattribute:: message
    .. autoattribute:: method
    .. autoattribute:: success
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: to_dict

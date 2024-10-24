@@ -37,12 +37,11 @@ Setup
 As usual, we’ll start with the standard imports …
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 21-37
+.. GENERATED FROM PYTHON SOURCE LINES 21-36
 
 .. code-block:: Python
 
 
-    from copy import deepcopy
     import astropy.units as u
     import matplotlib.pyplot as plt
     from gammapy.catalog import SourceCatalog4FGL
@@ -64,7 +63,7 @@ As usual, we’ll start with the standard imports …
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 38-51
+.. GENERATED FROM PYTHON SOURCE LINES 37-50
 
 Load the data
 -------------
@@ -73,14 +72,14 @@ We will use 6 observations of the blazars PKS 2155-304 taken in 2008 by
 H.E.S.S. when it was in a steady state. The data have already been
 reduced to OGIP format `SpectrumDatasetOnOff` following the procedure
 :doc:`/tutorials/analysis-1d/spectral_analysis` tutorial using a
-`ReflectedRegions` background estimation. The spectra and IRF from the
+`ReflectedRegions` background estimation. The spectra and IRFs from the
 6 observations have been stacked together.
 
 We will load this dataset as a `~gammapy.datasets.SpectrumDatasetOnOff` and proceed with
 the modeling. You can do a 3D analysis as well.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 51-59
+.. GENERATED FROM PYTHON SOURCE LINES 50-58
 
 .. code-block:: Python
 
@@ -134,7 +133,7 @@ the modeling. You can do a 3D analysis as well.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 60-68
+.. GENERATED FROM PYTHON SOURCE LINES 59-67
 
 Model the observed spectrum
 ---------------------------
@@ -145,13 +144,13 @@ that the intrinsic spectrum is a power law, the observed spectrum is a
 intrinsic model.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 71-74
+.. GENERATED FROM PYTHON SOURCE LINES 70-73
 
 For a list of available models, see
 :doc:`/api/gammapy.modeling.models.EBL_DATA_BUILTIN`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 74-77
+.. GENERATED FROM PYTHON SOURCE LINES 73-76
 
 .. code-block:: Python
 
@@ -171,12 +170,20 @@ For a list of available models, see
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-80
+.. GENERATED FROM PYTHON SOURCE LINES 77-82
+
+To use other EBL models, you need to save the optical depth as a
+function of energy and redshift as an XSPEC model.
+Alternatively, you can use packages like `ebltable <https://github.com/me-manu/ebltable>`_
+which shows how to interface other EBL models with Gammapy.
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 84-86
 
 Define the power law
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-96
+.. GENERATED FROM PYTHON SOURCE LINES 86-102
 
 .. code-block:: Python
 
@@ -207,35 +214,54 @@ Define the power law
     CompoundSpectralModel
         Component 1 : PowerLawSpectralModel
 
-    type    name     value         unit        error   ... frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-             index 2.3000e+00                0.000e+00 ...  False   False           
-         amplitude 1.8100e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
-         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
+    type    name     value         unit        error   min max frozen link prior
+    ---- --------- ---------- -------------- --------- --- --- ------ ---- -----
+             index 2.3000e+00                0.000e+00 nan nan  False           
+         amplitude 1.8100e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False           
+         reference 1.0000e+00            TeV 0.000e+00 nan nan   True           
         Component 2 : EBLAbsorptionNormSpectralModel
 
-    type    name      value    unit   error   min max frozen is_norm link prior
-    ---- ---------- ---------- ---- --------- --- --- ------ ------- ---- -----
-         alpha_norm 1.0000e+00      0.000e+00 nan nan   True   False           
-           redshift 1.1600e-01      0.000e+00 nan nan   True   False           
+    type    name      value    unit   error   min max frozen link prior
+    ---- ---------- ---------- ---- --------- --- --- ------ ---- -----
+         alpha_norm 1.0000e+00      0.000e+00 nan nan   True           
+           redshift 1.1600e-01      0.000e+00 nan nan   True           
         Operator : mul
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 97-99
+.. GENERATED FROM PYTHON SOURCE LINES 103-105
 
 Now, create a sky model and proceed with the fit
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-112
+.. GENERATED FROM PYTHON SOURCE LINES 105-109
 
 .. code-block:: Python
 
     sky_model = SkyModel(spatial_model=None, spectral_model=spectral_model, name="pks2155")
 
     dataset.models = sky_model
+
+
+
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 110-114
+
+Note that since this dataset has been produced
+by a reflected region analysis, it uses ON-OFF statistic
+and does not require a background model.
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 114-124
+
+.. code-block:: Python
+
 
     fit = Fit()
     result = fit.run(datasets=[dataset])
@@ -254,27 +280,27 @@ Now, create a sky model and proceed with the fit
 
  .. code-block:: none
 
-     model  type    name      value         unit      ... frozen is_norm link prior
-    ------- ---- ---------- ---------- -------------- ... ------ ------- ---- -----
-    pks2155           index 2.5531e+00                ...  False   False           
-    pks2155       amplitude 1.2978e-11 cm-2 s-1 TeV-1 ...  False    True           
-    pks2155       reference 1.0000e+00            TeV ...   True   False           
-    pks2155      alpha_norm 1.0000e+00                ...   True   False           
-    pks2155        redshift 1.1600e-01                ...   True   False           
+     model  type    name      value         unit      ... min max frozen link prior
+    ------- ---- ---------- ---------- -------------- ... --- --- ------ ---- -----
+    pks2155           index 2.5531e+00                ... nan nan  False           
+    pks2155       amplitude 1.2978e-11 cm-2 s-1 TeV-1 ... nan nan  False           
+    pks2155       reference 1.0000e+00            TeV ... nan nan   True           
+    pks2155      alpha_norm 1.0000e+00                ... nan nan   True           
+    pks2155        redshift 1.1600e-01                ... nan nan   True           
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-119
+.. GENERATED FROM PYTHON SOURCE LINES 125-131
 
 Get the flux points
 ===================
 
-To get the observed flux points, just run the `~gammapy.estimators.FluxPointsEstimator
+To get the observed flux points, just run the `~gammapy.estimators.FluxPointsEstimator`
 normally
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-127
+.. GENERATED FROM PYTHON SOURCE LINES 131-139
 
 .. code-block:: Python
 
@@ -293,23 +319,26 @@ normally
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 128-132
+.. GENERATED FROM PYTHON SOURCE LINES 140-144
 
 To get the deabsorbed flux points (ie, intrinsic points), we simply need
 to set the reference model to the best fit power law instead of the
-compound model. We first make a copy of the computed flux points
+compound model.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-141
+.. GENERATED FROM PYTHON SOURCE LINES 144-156
 
 .. code-block:: Python
 
 
-    flux_points_intrinsic = deepcopy(flux_points_obs)
-    flux_points_intrinsic._reference_model = SkyModel(spectral_model=pwl)
+    flux_points_intrinsic = flux_points_obs.copy(
+        reference_model=SkyModel(spectral_model=pwl)
+    )
 
+    #
     print(flux_points_obs.reference_model)
 
+    #
     print(flux_points_intrinsic.reference_model)
 
 
@@ -323,7 +352,7 @@ compound model. We first make a copy of the computed flux points
 
     SkyModel
 
-      Name                      : qBym0by0
+      Name                      : sudLq-dB
       Datasets names            : None
       Spectral model type       : CompoundSpectralModel
       Spatial  model type       : 
@@ -338,7 +367,7 @@ compound model. We first make a copy of the computed flux points
 
     SkyModel
 
-      Name                      : q6VqFu1h
+      Name                      : FDIcmwmi
       Datasets names            : None
       Spectral model type       : PowerLawSpectralModel
       Spatial  model type       : 
@@ -353,104 +382,17 @@ compound model. We first make a copy of the computed flux points
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 142-148
-
-Set the covariance on the power law model correctly
----------------------------------------------------
-
-To set the covariance on the powerlaw, we must extract the relevant
-values from the full covariance
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 148-153
-
-.. code-block:: Python
-
-
-    # The covariance matrix on the full model
-    spectral_model.covariance.plot_correlation()
-    plt.show()
-
-
-
-
-.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_001.png
-   :alt: ebl
-   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_001.png
-   :class: sphx-glr-single-img
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 154-156
-
-The covariance matrix on the power law does not contain the off diagonal terms
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 156-159
-
-.. code-block:: Python
-
-    pwl.covariance.plot_correlation()
-    plt.show()
-
-
-
-
-.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_002.png
-   :alt: ebl
-   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_002.png
-   :class: sphx-glr-single-img
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 160-162
-
-Extract the sub covariance and set is on the `pwl`
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 162-168
-
-.. code-block:: Python
-
-    sub_covar = spectral_model.covariance.get_subcovariance(pwl.covariance.parameters)
-    pwl.covariance = sub_covar
-    pwl.covariance.plot_correlation()
-    plt.show()
-
-
-
-
-
-.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_003.png
-   :alt: ebl
-   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_003.png
-   :class: sphx-glr-single-img
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 169-171
-
-We see that the covariance is now set correctly
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 174-177
+.. GENERATED FROM PYTHON SOURCE LINES 157-160
 
 Plot the observed and intrinsic fluxes
 --------------------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 177-201
+.. GENERATED FROM PYTHON SOURCE LINES 160-184
 
 .. code-block:: Python
 
 
-    # sphinx_gallery_thumbnail_number = 2
     plt.figure()
     sed_type = "e2dnde"
     energy_bounds = [0.2, 20] * u.TeV
@@ -471,21 +413,22 @@ Plot the observed and intrinsic fluxes
     plt.ylim(bottom=1e-13)
     plt.legend()
     plt.show()
+    # sphinx_gallery_thumbnail_number = 2
 
 
 
 
 
-.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_004.png
+.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_001.png
    :alt: ebl
-   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_004.png
+   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_001.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-218
+.. GENERATED FROM PYTHON SOURCE LINES 185-201
 
 Further extensions
 ------------------
@@ -504,7 +447,7 @@ spectra vary with time and long term averaged states may not be
 representative of a specific steady state
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-228
+.. GENERATED FROM PYTHON SOURCE LINES 201-211
 
 .. code-block:: Python
 
@@ -528,24 +471,24 @@ representative of a specific steady state
 
     LogParabolaSpectralModel
 
-    type    name     value         unit        error   ... frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-         amplitude 1.2591e-11 cm-2 MeV-1 s-1 1.317e-13 ...  False    True           
-         reference 1.1610e+03            MeV 0.000e+00 ...   True   False           
-             alpha 1.7733e+00                1.029e-02 ...  False   False           
-              beta 4.1893e-02                3.743e-03 ...  False   False           
+    type    name     value         unit        error   min max frozen link prior
+    ---- --------- ---------- -------------- --------- --- --- ------ ---- -----
+         amplitude 1.2591e-11 cm-2 MeV-1 s-1 1.317e-13 nan nan  False           
+         reference 1.1610e+03            MeV 0.000e+00 nan nan   True           
+             alpha 1.7733e+00                1.029e-02 nan nan  False           
+              beta 4.1893e-02                3.743e-03 nan nan  False           
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-233
+.. GENERATED FROM PYTHON SOURCE LINES 212-216
 
 We add Gaussian priors on the `alpha` and `beta` parameters based on the 4FGL
 measurements and the associated errors. For more details on using priors, see
 :doc:`/tutorials/api/priors`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 233-242
+.. GENERATED FROM PYTHON SOURCE LINES 216-225
 
 .. code-block:: Python
 
@@ -565,12 +508,12 @@ measurements and the associated errors. For more details on using priors, see
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 243-245
+.. GENERATED FROM PYTHON SOURCE LINES 226-228
 
 As before, multiply the intrinsic model with the EBL model
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 245-249
+.. GENERATED FROM PYTHON SOURCE LINES 228-232
 
 .. code-block:: Python
 
@@ -585,12 +528,12 @@ As before, multiply the intrinsic model with the EBL model
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-252
+.. GENERATED FROM PYTHON SOURCE LINES 233-235
 
 Now, free the redshift of the source
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 252-265
+.. GENERATED FROM PYTHON SOURCE LINES 235-248
 
 .. code-block:: Python
 
@@ -615,27 +558,27 @@ Now, free the redshift of the source
 
  .. code-block:: none
 
-    type    name      value         unit      ... frozen is_norm link     prior    
-    ---- ---------- ---------- -------------- ... ------ ------- ---- -------------
-          amplitude 1.2591e-11 cm-2 MeV-1 s-1 ...  False    True                   
-          reference 1.1610e+03            MeV ...   True   False                   
-              alpha 1.7733e+00                ...  False   False      GaussianPrior
-               beta 4.1893e-02                ...  False   False      GaussianPrior
-         alpha_norm 1.0000e+00                ...   True   False                   
-           redshift 1.1600e-01                ...  False   False                   
-    type    name      value         unit      ... frozen is_norm link     prior    
-    ---- ---------- ---------- -------------- ... ------ ------- ---- -------------
-          amplitude 1.9692e-11 cm-2 MeV-1 s-1 ...  False    True                   
-          reference 1.1610e+03            MeV ...   True   False                   
-              alpha 1.7733e+00                ...  False   False      GaussianPrior
-               beta 4.1896e-02                ...  False   False      GaussianPrior
-         alpha_norm 1.0000e+00                ...   True   False                   
-           redshift 1.4338e-01                ...  False   False                   
+    type    name      value         unit      ... max frozen link     prior    
+    ---- ---------- ---------- -------------- ... --- ------ ---- -------------
+          amplitude 1.2591e-11 cm-2 MeV-1 s-1 ... nan  False                   
+          reference 1.1610e+03            MeV ... nan   True                   
+              alpha 1.7733e+00                ... nan  False      GaussianPrior
+               beta 4.1893e-02                ... nan  False      GaussianPrior
+         alpha_norm 1.0000e+00                ... nan   True                   
+           redshift 1.1600e-01                ... nan  False                   
+    type    name      value         unit      ... max frozen link     prior    
+    ---- ---------- ---------- -------------- ... --- ------ ---- -------------
+          amplitude 1.9692e-11 cm-2 MeV-1 s-1 ... nan  False                   
+          reference 1.1610e+03            MeV ... nan   True                   
+              alpha 1.7733e+00                ... nan  False      GaussianPrior
+               beta 4.1896e-02                ... nan  False      GaussianPrior
+         alpha_norm 1.0000e+00                ... nan   True                   
+           redshift 1.4338e-01                ... nan  False                   
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-272
+.. GENERATED FROM PYTHON SOURCE LINES 249-255
 
 Get a fit stat profile for the redshift
 ---------------------------------------
@@ -644,7 +587,7 @@ For more information about stat profiles, see
 :doc:`/tutorials/api/fitting`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 272-294
+.. GENERATED FROM PYTHON SOURCE LINES 255-279
 
 .. code-block:: Python
 
@@ -663,26 +606,28 @@ For more information about stat profiles, see
 
     plt.figure()
     ax = plt.gca()
-    ax.plot(profile["observed.spectral.redshift_scan"], profile["stat_scan"] - total_stat)
+    ax.plot(
+        profile["observed.spectral.model2.redshift_scan"], profile["stat_scan"] - total_stat
+    )
     ax.set_title("TS profile")
     ax.set_xlabel("Redshift")
-    ax.set_ylabel("del TS")
+    ax.set_ylabel("$\Delta$ TS")
     plt.show()
 
 
 
 
 
-.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_005.png
+.. image-sg:: /tutorials/analysis-1d/images/sphx_glr_ebl_002.png
    :alt: TS profile
-   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_005.png
+   :srcset: /tutorials/analysis-1d/images/sphx_glr_ebl_002.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-297
+.. GENERATED FROM PYTHON SOURCE LINES 280-282
 
 We see that the redshift is well constrained.
 
@@ -708,6 +653,10 @@ We see that the redshift is well constrained.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: ebl.py <ebl.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: ebl.zip <ebl.zip>`
 
 
 .. only:: html

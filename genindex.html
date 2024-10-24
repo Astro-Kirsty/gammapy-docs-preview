@@ -15,55 +15,60 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="_static/jquery.js?v=5d32c60e"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=30646c52"></script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -79,19 +84,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -99,7 +93,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -107,8 +100,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -117,7 +110,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -126,6 +119,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="index.html">
@@ -138,7 +133,7 @@
     
     
     <img src="_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -150,50 +145,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="release-notes/index.html">
     Release notes
   </a>
@@ -213,55 +208,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -272,7 +247,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -284,7 +259,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -296,7 +271,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -308,15 +283,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -333,7 +304,8 @@ document.write(`
       
         
       
-      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
         
 
   
@@ -345,45 +317,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="release-notes/index.html">
     Release notes
   </a>
@@ -400,42 +372,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -446,7 +402,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -458,7 +414,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -470,7 +426,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -764,6 +720,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.__call__">(gammapy.modeling.models.PowerLawTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.__call__">(gammapy.modeling.models.Prior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.__call__">(gammapy.modeling.models.ScaleSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.__call__">(gammapy.modeling.models.Shell2SpatialModel method)</a>
@@ -815,6 +773,18 @@ document.write(`
       </ul></li>
       <li><a href="api/gammapy.utils.time.absolute_time.html#gammapy.utils.time.absolute_time">absolute_time() (in module gammapy.utils.time)</a>
 </li>
+      <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.acceptance_off">acceptance_off (gammapy.estimators.FluxMaps attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.acceptance_off">(gammapy.estimators.FluxPoints attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.acceptance_on">acceptance_on (gammapy.estimators.FluxMaps attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.acceptance_on">(gammapy.estimators.FluxPoints attribute)</a>
+</li>
+      </ul></li>
       <li><a href="api/gammapy.makers.AdaptiveRingBackgroundMaker.html#gammapy.makers.AdaptiveRingBackgroundMaker">AdaptiveRingBackgroundMaker (class in gammapy.makers)</a>
 </li>
       <li><a href="api/gammapy.visualization.add_colorbar.html#gammapy.visualization.add_colorbar">add_colorbar() (in module gammapy.visualization)</a>
@@ -869,6 +839,10 @@ document.write(`
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.alpha">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.alpha">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.alpha">(gammapy.estimators.FluxMaps attribute)</a>
+</li>
+        <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.alpha">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel.html#gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel.alpha">(gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel attribute)</a>
 </li>
@@ -959,6 +933,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.visualization.annotate_heatmap.html#gammapy.visualization.annotate_heatmap">annotate_heatmap() (in module gammapy.visualization)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.data.Observations.html#gammapy.data.Observations.append">append() (gammapy.data.Observations method)</a>
 
       <ul>
@@ -967,8 +943,6 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.append">(gammapy.modeling.models.Models method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.datasets.apply_edisp.html#gammapy.datasets.apply_edisp">apply_edisp() (in module gammapy.datasets)</a>
 
       <ul>
@@ -1095,6 +1069,8 @@ document.write(`
         <li><a href="api/gammapy.makers.SpectrumDatasetMaker.html#gammapy.makers.SpectrumDatasetMaker.available_selection">(gammapy.makers.SpectrumDatasetMaker attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.available_stat_type">available_stat_type (gammapy.datasets.FluxPointsDataset attribute)</a>
+</li>
       <li><a href="api/gammapy.irf.Background2D.html#gammapy.irf.Background2D.axes">axes (gammapy.irf.Background2D attribute)</a>
 
       <ul>
@@ -1321,9 +1297,13 @@ document.write(`
 </li>
       <li><a href="api/gammapy.makers.DatasetsMaker.html#gammapy.makers.DatasetsMaker.callback">callback() (gammapy.makers.DatasetsMaker method)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.capitalize">capitalize() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.utils.coordinates.cartesian.html#gammapy.utils.coordinates.cartesian">cartesian() (in module gammapy.utils.coordinates)</a>
 </li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998">CaseBattacharya1998 (class in gammapy.astro.population)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.casefold">casefold() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="user-guide/references.html#term-Cash"><strong>Cash</strong></a>
 </li>
@@ -1343,6 +1323,8 @@ document.write(`
         <li><a href="api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.center">(gammapy.maps.TimeMapAxis attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.center">center() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.center_coord">center_coord (gammapy.maps.Geom attribute)</a>
 
       <ul>
@@ -1515,6 +1497,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.astro.darkmatter.JFactory.html#gammapy.astro.darkmatter.JFactory.compute_jfactor">compute_jfactor() (gammapy.astro.darkmatter.JFactory method)</a>
 </li>
+      <li><a href="api/gammapy.estimators.utils.compute_lightcurve_discrete_correlation.html#gammapy.estimators.utils.compute_lightcurve_discrete_correlation">compute_lightcurve_discrete_correlation() (in module gammapy.estimators.utils)</a>
+</li>
       <li><a href="api/gammapy.estimators.utils.compute_lightcurve_doublingtime.html#gammapy.estimators.utils.compute_lightcurve_doublingtime">compute_lightcurve_doublingtime() (in module gammapy.estimators.utils)</a>
 </li>
       <li><a href="api/gammapy.estimators.utils.compute_lightcurve_fpp.html#gammapy.estimators.utils.compute_lightcurve_fpp">compute_lightcurve_fpp() (in module gammapy.estimators.utils)</a>
@@ -1587,6 +1571,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.construct">(gammapy.data.EventListMetaData class method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.construct">(gammapy.data.ObservationMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.construct">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
@@ -1762,6 +1748,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.data.ObservationFilter.html#gammapy.data.ObservationFilter.copy">(gammapy.data.ObservationFilter method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.copy">(gammapy.data.ObservationMetaData method)</a>
+</li>
         <li><a href="api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.copy">(gammapy.data.ObservationTable method)</a>
 </li>
         <li><a href="api/gammapy.datasets.Dataset.html#gammapy.datasets.Dataset.copy">(gammapy.datasets.Dataset method)</a>
@@ -1788,7 +1776,11 @@ document.write(`
 </li>
         <li><a href="api/gammapy.estimators.ExcessMapEstimator.html#gammapy.estimators.ExcessMapEstimator.copy">(gammapy.estimators.ExcessMapEstimator method)</a>
 </li>
+        <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.copy">(gammapy.estimators.FluxMaps method)</a>
+</li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.copy">(gammapy.estimators.FluxMetaData method)</a>
+</li>
+        <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.copy">(gammapy.estimators.FluxPoints method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.copy">(gammapy.estimators.FluxPointsEstimator method)</a>
 </li>
@@ -1912,6 +1904,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.copy">(gammapy.modeling.models.PowerLawTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.copy">(gammapy.modeling.models.Prior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.copy">(gammapy.modeling.models.ScaleSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.copy">(gammapy.modeling.models.Shell2SpatialModel method)</a>
@@ -1969,6 +1963,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets.count">(gammapy.datasets.Datasets method)</a>
+</li>
+        <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.count">(gammapy.irf.FoVAlignment method)</a>
 </li>
         <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.count">(gammapy.maps.MapAxes method)</a>
 </li>
@@ -2093,6 +2089,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.covariance">(gammapy.modeling.models.PowerLawSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.covariance">(gammapy.modeling.models.PowerLawTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.covariance">(gammapy.modeling.models.Prior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.covariance">(gammapy.modeling.models.ScaleSpectralModel attribute)</a>
 </li>
@@ -2524,6 +2522,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.default_parameters">(gammapy.modeling.models.PowerLawTemporalModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.default_parameters">(gammapy.modeling.models.Prior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.default_parameters">(gammapy.modeling.models.ScaleSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.default_parameters">(gammapy.modeling.models.Shell2SpatialModel attribute)</a>
@@ -2624,11 +2624,15 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.dict">(gammapy.data.EventListMetaData method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.dict">(gammapy.data.ObservationMetaData method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.dict">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.dict">(gammapy.estimators.FluxMetaData method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.stats.discrete_correlation.html#gammapy.stats.discrete_correlation">discrete_correlation() (in module gammapy.stats)</a>
+</li>
       <li><a href="api/gammapy.modeling.models.DiskSpatialModel.html#gammapy.modeling.models.DiskSpatialModel">DiskSpatialModel (class in gammapy.modeling.models)</a>
 </li>
       <li><a href="api/gammapy.astro.darkmatter.BurkertProfile.html#gammapy.astro.darkmatter.BurkertProfile.DISTANCE_GC">DISTANCE_GC (gammapy.astro.darkmatter.BurkertProfile attribute)</a>
@@ -2685,6 +2689,12 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.dnde_ref">(gammapy.estimators.FluxPoints attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.dnde_scan_values">dnde_scan_values (gammapy.estimators.FluxMaps attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.dnde_scan_values">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.dnde_ul">dnde_ul (gammapy.estimators.FluxMaps attribute)</a>
@@ -2948,6 +2958,10 @@ document.write(`
       <li><a href="api/gammapy.modeling.models.PowerLaw2SpectralModel.html#gammapy.modeling.models.PowerLaw2SpectralModel.emax">emax (gammapy.modeling.models.PowerLaw2SpectralModel attribute)</a>
 </li>
       <li><a href="api/gammapy.modeling.models.PowerLaw2SpectralModel.html#gammapy.modeling.models.PowerLaw2SpectralModel.emin">emin (gammapy.modeling.models.PowerLaw2SpectralModel attribute)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.encode">encode() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.endswith">endswith() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.data.EventList.html#gammapy.data.EventList.energy">energy (gammapy.data.EventList attribute)</a>
 
@@ -3317,6 +3331,8 @@ document.write(`
         <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.estimate_ts">(gammapy.estimators.ParameterEstimator method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.estimate_ul">estimate_ul() (gammapy.estimators.FluxPointsEstimator method)</a>
 
       <ul>
@@ -3327,8 +3343,6 @@ document.write(`
         <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.estimate_ul">(gammapy.estimators.ParameterEstimator method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="user-guide/references.html#term-Estimator"><strong>Estimator</strong></a>
 
       <ul>
@@ -3771,6 +3785,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.expand_map">expand_map() (gammapy.estimators.LightCurveEstimator static method)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.expandtabs">expandtabs() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.modeling.models.ExpCutoffPowerLaw3FGLSpectralModel.html#gammapy.modeling.models.ExpCutoffPowerLaw3FGLSpectralModel">ExpCutoffPowerLaw3FGLSpectralModel (class in gammapy.modeling.models)</a>
 </li>
       <li><a href="api/gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel.html#gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel">ExpCutoffPowerLawNormSpectralModel (class in gammapy.modeling.models)</a>
@@ -3933,6 +3949,8 @@ document.write(`
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.filter_success_nan">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.find">find() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.estimators.utils.find_peaks.html#gammapy.estimators.utils.find_peaks">find_peaks() (in module gammapy.estimators.utils)</a>
 </li>
       <li><a href="api/gammapy.estimators.utils.find_peaks_in_flux_map.html#gammapy.estimators.utils.find_peaks_in_flux_map">find_peaks_in_flux_map() (in module gammapy.estimators.utils)</a>
@@ -4121,6 +4139,10 @@ document.write(`
 </li>
       <li><a href="api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.footprint_rectangle_sky_region">footprint_rectangle_sky_region (gammapy.maps.WcsGeom attribute)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.format">format() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.format_map">format_map() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.format_plot_xaxis">format_plot_xaxis() (gammapy.maps.LabelMapAxis method)</a>
 
       <ul>
@@ -4266,6 +4288,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.freeze">(gammapy.modeling.models.PowerLawTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.freeze">(gammapy.modeling.models.Prior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.freeze">(gammapy.modeling.models.ScaleSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.freeze">(gammapy.modeling.models.Shell2SpatialModel method)</a>
@@ -4409,6 +4433,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.from_dict">(gammapy.modeling.models.PowerLawSpectralModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.from_dict">(gammapy.modeling.models.PowerLawTemporalModel class method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.from_dict">(gammapy.modeling.models.Prior class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.from_dict">(gammapy.modeling.models.ScaleSpectralModel class method)</a>
 </li>
@@ -4604,6 +4630,8 @@ document.write(`
       <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.from_header">from_header() (gammapy.data.EventListMetaData class method)</a>
 
       <ul>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.from_header">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.from_header">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.from_header">(gammapy.estimators.FluxMetaData class method)</a>
@@ -4639,6 +4667,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.from_orm">(gammapy.data.EventListMetaData class method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.from_orm">(gammapy.data.ObservationMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.from_orm">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
@@ -4721,6 +4751,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.from_parameters">(gammapy.modeling.models.PowerLawSpectralModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.from_parameters">(gammapy.modeling.models.PowerLawTemporalModel class method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.from_parameters">(gammapy.modeling.models.Prior class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.from_parameters">(gammapy.modeling.models.ScaleSpectralModel class method)</a>
 </li>
@@ -4894,6 +4926,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.from_yaml">(gammapy.modeling.models.Models class method)</a>
 </li>
+        <li><a href="api/gammapy.utils.scripts.from_yaml.html#gammapy.utils.scripts.from_yaml">(in module gammapy.utils.scripts)</a>
+</li>
       </ul></li>
       <li><a href="api/gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel.html#gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel.frozen">frozen (gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel attribute)</a>
 
@@ -4969,6 +5003,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.frozen">(gammapy.modeling.models.PowerLawSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.frozen">(gammapy.modeling.models.PowerLawTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.frozen">(gammapy.modeling.models.Prior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.frozen">(gammapy.modeling.models.ScaleSpectralModel attribute)</a>
 </li>
@@ -5745,14 +5781,26 @@ document.write(`
         <li><a href="api/gammapy.irf.RadMax2D.html#gammapy.irf.RadMax2D.has_offset_axis">(gammapy.irf.RadMax2D attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.EDispKernelMap.html#gammapy.irf.EDispKernelMap.has_single_spatial_bin">has_single_spatial_bin (gammapy.irf.EDispKernelMap attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.irf.EDispMap.html#gammapy.irf.EDispMap.has_single_spatial_bin">(gammapy.irf.EDispMap attribute)</a>
+</li>
+        <li><a href="api/gammapy.irf.IRFMap.html#gammapy.irf.IRFMap.has_single_spatial_bin">(gammapy.irf.IRFMap attribute)</a>
+</li>
+        <li><a href="api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.has_single_spatial_bin">(gammapy.irf.PSFMap attribute)</a>
+</li>
+        <li><a href="api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.has_single_spatial_bin">(gammapy.irf.RecoPSFMap attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.has_stat_profiles">has_stat_profiles (gammapy.estimators.FluxMaps attribute)</a>
 
       <ul>
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.has_stat_profiles">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.has_success">has_success (gammapy.estimators.FluxMaps attribute)</a>
 
       <ul>
@@ -5869,6 +5917,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets.index">(gammapy.datasets.Datasets method)</a>
+</li>
+        <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.index">(gammapy.irf.FoVAlignment method)</a>
 </li>
         <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.index">(gammapy.maps.MapAxes method)</a>
 </li>
@@ -6441,8 +6491,6 @@ document.write(`
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.interp_by_pix">(gammapy.maps.WcsNDMap method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.irf.Background2D.html#gammapy.irf.Background2D.interp_missing_data">interp_missing_data() (gammapy.irf.Background2D method)</a>
 
       <ul>
@@ -6469,6 +6517,8 @@ document.write(`
         <li><a href="api/gammapy.irf.RadMax2D.html#gammapy.irf.RadMax2D.interp_missing_data">(gammapy.irf.RadMax2D method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.HpxMap.html#gammapy.maps.HpxMap.interp_to_geom">interp_to_geom() (gammapy.maps.HpxMap method)</a>
 
       <ul>
@@ -6819,12 +6869,6 @@ document.write(`
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.is_mask">(gammapy.maps.WcsNDMap attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.is_norm">is_norm (gammapy.modeling.Parameter attribute)</a>
-
-      <ul>
-        <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.is_norm">(gammapy.modeling.PriorParameter attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel.html#gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel.is_norm_spectral_model">is_norm_spectral_model (gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel attribute)</a>
 
       <ul>
@@ -6943,7 +6987,31 @@ document.write(`
       </ul></li>
       <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.is_unidimensional">is_unidimensional (gammapy.maps.MapAxes attribute)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isalnum">isalnum() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isalpha">isalpha() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isascii">isascii() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isdecimal">isdecimal() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isdigit">isdigit() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isidentifier">isidentifier() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.islower">islower() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isnumeric">isnumeric() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.astro.darkmatter.IsothermalProfile.html#gammapy.astro.darkmatter.IsothermalProfile">IsothermalProfile (class in gammapy.astro.darkmatter)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isprintable">isprintable() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isspace">isspace() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.istitle">istitle() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.isupper">isupper() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.data.HDUIndexTable.html#gammapy.data.HDUIndexTable.items">items() (gammapy.data.HDUIndexTable method)</a>
 
@@ -7043,12 +7111,16 @@ document.write(`
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.astro.darkmatter.JFactory.html#gammapy.astro.darkmatter.JFactory">JFactory (class in gammapy.astro.darkmatter)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.join">join() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="user-guide/references.html#term-Joint-Analysis"><strong>Joint Analysis</strong></a>
 </li>
       <li><a href="api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig.json">json() (gammapy.analysis.AnalysisConfig method)</a>
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.json">(gammapy.data.EventListMetaData method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.json">(gammapy.data.ObservationMetaData method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.json">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
@@ -7163,6 +7235,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.data.ObservationFilter.html#gammapy.data.ObservationFilter.livetime_fraction">livetime_fraction (gammapy.data.ObservationFilter attribute)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.ljust">ljust() (gammapy.irf.FoVAlignment method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.utils.fits.HDULocation.html#gammapy.utils.fits.HDULocation.load">load() (gammapy.utils.fits.HDULocation method)</a>
@@ -7228,6 +7302,10 @@ document.write(`
 </li>
       </ul></li>
       <li><a href="api/gammapy.astro.population.Lorimer2006.html#gammapy.astro.population.Lorimer2006">Lorimer2006 (class in gammapy.astro.population)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.lower">lower() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.lstrip">lstrip() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.astro.source.SimplePulsar.html#gammapy.astro.source.SimplePulsar.luminosity_spindown">luminosity_spindown (gammapy.astro.source.SimplePulsar attribute)</a>
 </li>
@@ -7375,6 +7453,8 @@ document.write(`
       </ul></li>
       <li><a href="api/gammapy.makers.MAKER_REGISTRY.html#gammapy.makers.MAKER_REGISTRY">MAKER_REGISTRY (in module gammapy.makers)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.maketrans">maketrans() (gammapy.irf.FoVAlignment static method)</a>
+</li>
       <li><a href="api/gammapy.maps.Map.html#gammapy.maps.Map">Map (class in gammapy.maps)</a>
 </li>
       <li><a href="api/gammapy.astro.darkmatter.PrimaryFlux.html#gammapy.astro.darkmatter.PrimaryFlux.map">map (gammapy.astro.darkmatter.PrimaryFlux attribute)</a>
@@ -7477,9 +7557,11 @@ document.write(`
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.mask_nearest_position">(gammapy.maps.WcsNDMap method)</a>
 </li>
       </ul></li>
-      <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.mask_safe">mask_safe (gammapy.datasets.MapDataset attribute)</a>
+      <li><a href="api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.mask_safe">mask_safe (gammapy.datasets.FluxPointsDataset attribute)</a>
 
       <ul>
+        <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.mask_safe">(gammapy.datasets.MapDataset attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_safe">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_safe">(gammapy.datasets.SpectrumDataset attribute)</a>
@@ -7527,6 +7609,8 @@ document.write(`
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask_safe_psf">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.mask_valid">mask_valid (gammapy.datasets.FluxPointsDataset attribute)</a>
+</li>
       <li><a href="api/gammapy.data.HDUIndexTable.html#gammapy.data.HDUIndexTable.masked">masked (gammapy.data.HDUIndexTable attribute)</a>
 
       <ul>
@@ -7547,6 +7631,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.PriorParameters.html#gammapy.modeling.PriorParameters.max">(gammapy.modeling.PriorParameters attribute)</a>
 </li>
       </ul></li>
+      <li><a href="user-guide/references.html#term-MCMC"><strong>MCMC</strong></a>
+</li>
       <li><a href="api/gammapy.astro.darkmatter.PrimaryFlux.html#gammapy.astro.darkmatter.PrimaryFlux.mDM">mDM (gammapy.astro.darkmatter.PrimaryFlux attribute)</a>
 </li>
       <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.mean">mean (gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -7613,8 +7699,6 @@ document.write(`
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.meta">(gammapy.maps.WcsNDMap attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets.meta_table">meta_table (gammapy.datasets.Datasets attribute)</a>
 
       <ul>
@@ -7627,6 +7711,8 @@ document.write(`
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.meta_table">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.makers.FoVBackgroundMaker.html#gammapy.makers.FoVBackgroundMaker.method">method (gammapy.makers.FoVBackgroundMaker attribute)</a>
 
       <ul>
@@ -7668,6 +7754,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_computed_fields">(gammapy.data.EventListMetaData attribute)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_computed_fields">(gammapy.data.ObservationMetaData attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_computed_fields">(gammapy.datasets.MapDatasetMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_computed_fields">(gammapy.estimators.FluxMetaData attribute)</a>
@@ -7677,6 +7765,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_config">(gammapy.data.EventListMetaData attribute)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_config">(gammapy.data.ObservationMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_config">(gammapy.datasets.MapDatasetMetaData attribute)</a>
 </li>
@@ -7710,6 +7800,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_construct">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_construct">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_construct">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_construct">(gammapy.estimators.FluxMetaData class method)</a>
@@ -7719,6 +7811,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_copy">(gammapy.data.EventListMetaData method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_copy">(gammapy.data.ObservationMetaData method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_copy">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
@@ -7730,6 +7824,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_dump">(gammapy.data.EventListMetaData method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_dump">(gammapy.data.ObservationMetaData method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_dump">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_dump">(gammapy.estimators.FluxMetaData method)</a>
@@ -7739,6 +7835,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_dump_json">(gammapy.data.EventListMetaData method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_dump_json">(gammapy.data.ObservationMetaData method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_dump_json">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
@@ -7750,6 +7848,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_extra">(gammapy.data.EventListMetaData attribute)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_extra">(gammapy.data.ObservationMetaData attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_extra">(gammapy.datasets.MapDatasetMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_extra">(gammapy.estimators.FluxMetaData attribute)</a>
@@ -7759,6 +7859,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_fields">(gammapy.data.EventListMetaData attribute)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_fields">(gammapy.data.ObservationMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_fields">(gammapy.datasets.MapDatasetMetaData attribute)</a>
 </li>
@@ -7770,6 +7872,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_fields_set">(gammapy.data.EventListMetaData attribute)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_fields_set">(gammapy.data.ObservationMetaData attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_fields_set">(gammapy.datasets.MapDatasetMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_fields_set">(gammapy.estimators.FluxMetaData attribute)</a>
@@ -7779,6 +7883,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_json_schema">(gammapy.data.EventListMetaData class method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_json_schema">(gammapy.data.ObservationMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_json_schema">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
@@ -7790,6 +7896,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_parametrized_name">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_parametrized_name">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_parametrized_name">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_parametrized_name">(gammapy.estimators.FluxMetaData class method)</a>
@@ -7800,6 +7908,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_post_init">(gammapy.data.EventListMetaData method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_post_init">(gammapy.data.ObservationMetaData method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_post_init">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_post_init">(gammapy.estimators.FluxMetaData method)</a>
@@ -7809,6 +7919,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_rebuild">(gammapy.data.EventListMetaData class method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_rebuild">(gammapy.data.ObservationMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_rebuild">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
@@ -7844,6 +7956,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_validate">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_validate">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_validate">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_validate">(gammapy.estimators.FluxMetaData class method)</a>
@@ -7854,6 +7968,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_validate_json">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_validate_json">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_validate_json">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.model_validate_json">(gammapy.estimators.FluxMetaData class method)</a>
@@ -7863,6 +7979,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.model_validate_strings">(gammapy.data.EventListMetaData class method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.model_validate_strings">(gammapy.data.ObservationMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.model_validate_strings">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
@@ -7975,8 +8093,6 @@ document.write(`
       <li><a href="api/gammapy.utils.testing.mpl_plot_check.html#gammapy.utils.testing.mpl_plot_check">mpl_plot_check() (in module gammapy.utils.testing)</a>
 </li>
       <li><a href="api/gammapy.utils.parallel.multiprocessing_manager.html#gammapy.utils.parallel.multiprocessing_manager">multiprocessing_manager (class in gammapy.utils.parallel)</a>
-</li>
-      <li><a href="api/gammapy.data.Observation.html#gammapy.data.Observation.muoneff">muoneff (gammapy.data.Observation attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -8200,6 +8316,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.PriorParameters.html#gammapy.modeling.PriorParameters.names">(gammapy.modeling.PriorParameters attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.nbin">nbin (gammapy.maps.LabelMapAxis attribute)</a>
 
       <ul>
@@ -8220,8 +8338,6 @@ document.write(`
       </ul></li>
       <li><a href="api/gammapy.maps.HpxGeom.html#gammapy.maps.HpxGeom.nest">nest (gammapy.maps.HpxGeom attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.modeling.FitResult.html#gammapy.modeling.FitResult.nfev">nfev (gammapy.modeling.FitResult attribute)</a>
 
       <ul>
@@ -8280,40 +8396,6 @@ document.write(`
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.norm_errp">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.norm_max">norm_max (gammapy.estimators.FluxPointsEstimator attribute)</a>
-
-      <ul>
-        <li><a href="api/gammapy.estimators.FluxProfileEstimator.html#gammapy.estimators.FluxProfileEstimator.norm_max">(gammapy.estimators.FluxProfileEstimator attribute)</a>
-</li>
-        <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.norm_max">(gammapy.estimators.LightCurveEstimator attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.norm_min">norm_min (gammapy.estimators.FluxPointsEstimator attribute)</a>
-
-      <ul>
-        <li><a href="api/gammapy.estimators.FluxProfileEstimator.html#gammapy.estimators.FluxProfileEstimator.norm_min">(gammapy.estimators.FluxProfileEstimator attribute)</a>
-</li>
-        <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.norm_min">(gammapy.estimators.LightCurveEstimator attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.norm_n_values">norm_n_values (gammapy.estimators.FluxPointsEstimator attribute)</a>
-
-      <ul>
-        <li><a href="api/gammapy.estimators.FluxProfileEstimator.html#gammapy.estimators.FluxProfileEstimator.norm_n_values">(gammapy.estimators.FluxProfileEstimator attribute)</a>
-</li>
-        <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.norm_n_values">(gammapy.estimators.LightCurveEstimator attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.norm_parameters">norm_parameters (gammapy.modeling.Parameter attribute)</a>
-
-      <ul>
-        <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.norm_parameters">(gammapy.modeling.Parameters attribute)</a>
-</li>
-        <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.norm_parameters">(gammapy.modeling.PriorParameter attribute)</a>
-</li>
-        <li><a href="api/gammapy.modeling.PriorParameters.html#gammapy.modeling.PriorParameters.norm_parameters">(gammapy.modeling.PriorParameters attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.norm_sensitivity">norm_sensitivity (gammapy.estimators.FluxMaps attribute)</a>
 
       <ul>
@@ -8324,14 +8406,6 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.norm_ul">(gammapy.estimators.FluxPoints attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.norm_values">norm_values (gammapy.estimators.FluxPointsEstimator attribute)</a>
-
-      <ul>
-        <li><a href="api/gammapy.estimators.FluxProfileEstimator.html#gammapy.estimators.FluxProfileEstimator.norm_values">(gammapy.estimators.FluxProfileEstimator attribute)</a>
-</li>
-        <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.norm_values">(gammapy.estimators.LightCurveEstimator attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.estimators.ImageProfile.html#gammapy.estimators.ImageProfile.normalize">normalize() (gammapy.estimators.ImageProfile method)</a>
@@ -8498,8 +8572,6 @@ document.write(`
 </li>
       <li><a href="api/gammapy.data.DataStore.html#gammapy.data.DataStore.obs_ids">obs_ids (gammapy.data.DataStore attribute)</a>
 </li>
-      <li><a href="api/gammapy.data.Observation.html#gammapy.data.Observation.obs_info">obs_info (gammapy.data.Observation attribute)</a>
-</li>
       <li><a href="api/gammapy.data.Observation.html#gammapy.data.Observation">Observation (class in gammapy.data)</a>
 </li>
       <li><a href="api/gammapy.data.EventList.html#gammapy.data.EventList.observation_dead_time_fraction">observation_dead_time_fraction (gammapy.data.EventList attribute)</a>
@@ -8527,6 +8599,8 @@ document.write(`
       <li><a href="api/gammapy.datasets.ObservationEventSampler.html#gammapy.datasets.ObservationEventSampler">ObservationEventSampler (class in gammapy.datasets)</a>
 </li>
       <li><a href="api/gammapy.data.ObservationFilter.html#gammapy.data.ObservationFilter">ObservationFilter (class in gammapy.data)</a>
+</li>
+      <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData">ObservationMetaData (class in gammapy.data)</a>
 </li>
       <li><a href="api/gammapy.data.Observations.html#gammapy.data.Observations">Observations (class in gammapy.data)</a>
 </li>
@@ -8873,6 +8947,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.parameters">(gammapy.modeling.models.PowerLawTemporalModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.parameters">(gammapy.modeling.models.Prior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.parameters">(gammapy.modeling.models.ScaleSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.parameters">(gammapy.modeling.models.Shell2SpatialModel attribute)</a>
@@ -8912,10 +8988,118 @@ document.write(`
         <li><a href="api/gammapy.modeling.OptimizeResult.html#gammapy.modeling.OptimizeResult.parameters">(gammapy.modeling.OptimizeResult attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/gammapy.modeling.models.DatasetModels.html#gammapy.modeling.models.DatasetModels.parameters_unique_names">parameters_unique_names (gammapy.modeling.models.DatasetModels attribute)</a>
+      <li><a href="api/gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel.html#gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel.parameters_unique_names">parameters_unique_names (gammapy.astro.darkmatter.DarkMatterAnnihilationSpectralModel attribute)</a>
 
       <ul>
+        <li><a href="api/gammapy.astro.darkmatter.DarkMatterDecaySpectralModel.html#gammapy.astro.darkmatter.DarkMatterDecaySpectralModel.parameters_unique_names">(gammapy.astro.darkmatter.DarkMatterDecaySpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.darkmatter.PrimaryFlux.html#gammapy.astro.darkmatter.PrimaryFlux.parameters_unique_names">(gammapy.astro.darkmatter.PrimaryFlux attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.BrokenPowerLawSpectralModel.html#gammapy.modeling.models.BrokenPowerLawSpectralModel.parameters_unique_names">(gammapy.modeling.models.BrokenPowerLawSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.CompoundSpectralModel.html#gammapy.modeling.models.CompoundSpectralModel.parameters_unique_names">(gammapy.modeling.models.CompoundSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ConstantFluxSpatialModel.html#gammapy.modeling.models.ConstantFluxSpatialModel.parameters_unique_names">(gammapy.modeling.models.ConstantFluxSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ConstantSpatialModel.html#gammapy.modeling.models.ConstantSpatialModel.parameters_unique_names">(gammapy.modeling.models.ConstantSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ConstantSpectralModel.html#gammapy.modeling.models.ConstantSpectralModel.parameters_unique_names">(gammapy.modeling.models.ConstantSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ConstantTemporalModel.html#gammapy.modeling.models.ConstantTemporalModel.parameters_unique_names">(gammapy.modeling.models.ConstantTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.DatasetModels.html#gammapy.modeling.models.DatasetModels.parameters_unique_names">(gammapy.modeling.models.DatasetModels attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.DiskSpatialModel.html#gammapy.modeling.models.DiskSpatialModel.parameters_unique_names">(gammapy.modeling.models.DiskSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.EBLAbsorptionNormSpectralModel.html#gammapy.modeling.models.EBLAbsorptionNormSpectralModel.parameters_unique_names">(gammapy.modeling.models.EBLAbsorptionNormSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ExpCutoffPowerLaw3FGLSpectralModel.html#gammapy.modeling.models.ExpCutoffPowerLaw3FGLSpectralModel.parameters_unique_names">(gammapy.modeling.models.ExpCutoffPowerLaw3FGLSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel.html#gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel.parameters_unique_names">(gammapy.modeling.models.ExpCutoffPowerLawNormSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ExpCutoffPowerLawSpectralModel.html#gammapy.modeling.models.ExpCutoffPowerLawSpectralModel.parameters_unique_names">(gammapy.modeling.models.ExpCutoffPowerLawSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ExpDecayTemporalModel.html#gammapy.modeling.models.ExpDecayTemporalModel.parameters_unique_names">(gammapy.modeling.models.ExpDecayTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.parameters_unique_names">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.parameters_unique_names">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.parameters_unique_names">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.GaussianTemporalModel.html#gammapy.modeling.models.GaussianTemporalModel.parameters_unique_names">(gammapy.modeling.models.GaussianTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.GeneralizedGaussianSpatialModel.html#gammapy.modeling.models.GeneralizedGaussianSpatialModel.parameters_unique_names">(gammapy.modeling.models.GeneralizedGaussianSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.GeneralizedGaussianTemporalModel.html#gammapy.modeling.models.GeneralizedGaussianTemporalModel.parameters_unique_names">(gammapy.modeling.models.GeneralizedGaussianTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel.parameters_unique_names">(gammapy.modeling.models.LightCurveTemplateTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LinearTemporalModel.html#gammapy.modeling.models.LinearTemporalModel.parameters_unique_names">(gammapy.modeling.models.LinearTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.parameters_unique_names">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.parameters_unique_names">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.parameters_unique_names">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ModelBase.html#gammapy.modeling.models.ModelBase.parameters_unique_names">(gammapy.modeling.models.ModelBase attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.parameters_unique_names">(gammapy.modeling.models.Models attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel.parameters_unique_names">(gammapy.modeling.models.NaimaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PiecewiseNormSpatialModel.html#gammapy.modeling.models.PiecewiseNormSpatialModel.parameters_unique_names">(gammapy.modeling.models.PiecewiseNormSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PiecewiseNormSpectralModel.html#gammapy.modeling.models.PiecewiseNormSpectralModel.parameters_unique_names">(gammapy.modeling.models.PiecewiseNormSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PointSpatialModel.html#gammapy.modeling.models.PointSpatialModel.parameters_unique_names">(gammapy.modeling.models.PointSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PowerLaw2SpectralModel.html#gammapy.modeling.models.PowerLaw2SpectralModel.parameters_unique_names">(gammapy.modeling.models.PowerLaw2SpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PowerLawNormSpectralModel.html#gammapy.modeling.models.PowerLawNormSpectralModel.parameters_unique_names">(gammapy.modeling.models.PowerLawNormSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.parameters_unique_names">(gammapy.modeling.models.PowerLawSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.parameters_unique_names">(gammapy.modeling.models.PowerLawTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.parameters_unique_names">(gammapy.modeling.models.Prior attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.parameters_unique_names">(gammapy.modeling.models.ScaleSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.parameters_unique_names">(gammapy.modeling.models.Shell2SpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.ShellSpatialModel.html#gammapy.modeling.models.ShellSpatialModel.parameters_unique_names">(gammapy.modeling.models.ShellSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SineTemporalModel.html#gammapy.modeling.models.SineTemporalModel.parameters_unique_names">(gammapy.modeling.models.SineTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.parameters_unique_names">(gammapy.modeling.models.SkyModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SmoothBrokenPowerLawSpectralModel.html#gammapy.modeling.models.SmoothBrokenPowerLawSpectralModel.parameters_unique_names">(gammapy.modeling.models.SmoothBrokenPowerLawSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SpatialModel.html#gammapy.modeling.models.SpatialModel.parameters_unique_names">(gammapy.modeling.models.SpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SpectralModel.html#gammapy.modeling.models.SpectralModel.parameters_unique_names">(gammapy.modeling.models.SpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SuperExpCutoffPowerLaw3FGLSpectralModel.html#gammapy.modeling.models.SuperExpCutoffPowerLaw3FGLSpectralModel.parameters_unique_names">(gammapy.modeling.models.SuperExpCutoffPowerLaw3FGLSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLDR3SpectralModel.html#gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLDR3SpectralModel.parameters_unique_names">(gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLDR3SpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLSpectralModel.html#gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLSpectralModel.parameters_unique_names">(gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemplateNDSpatialModel.html#gammapy.modeling.models.TemplateNDSpatialModel.parameters_unique_names">(gammapy.modeling.models.TemplateNDSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemplateNDSpectralModel.html#gammapy.modeling.models.TemplateNDSpectralModel.parameters_unique_names">(gammapy.modeling.models.TemplateNDSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemplateNPredModel.html#gammapy.modeling.models.TemplateNPredModel.parameters_unique_names">(gammapy.modeling.models.TemplateNPredModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemplatePhaseCurveTemporalModel.html#gammapy.modeling.models.TemplatePhaseCurveTemporalModel.parameters_unique_names">(gammapy.modeling.models.TemplatePhaseCurveTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemplateSpatialModel.html#gammapy.modeling.models.TemplateSpatialModel.parameters_unique_names">(gammapy.modeling.models.TemplateSpatialModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.parameters_unique_names">(gammapy.modeling.models.TemplateSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.parameters_unique_names">(gammapy.modeling.models.TemporalModel attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.irf.ParametricPSF.html#gammapy.irf.ParametricPSF">ParametricPSF (class in gammapy.irf)</a>
@@ -8924,6 +9108,8 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.parse_file">(gammapy.data.EventListMetaData class method)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.parse_file">(gammapy.data.ObservationMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.parse_file">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
@@ -8935,6 +9121,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.parse_obj">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.parse_obj">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.parse_obj">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.parse_obj">(gammapy.estimators.FluxMetaData class method)</a>
@@ -8945,12 +9133,16 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.parse_raw">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.parse_raw">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.parse_raw">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.parse_raw">(gammapy.estimators.FluxMetaData class method)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel.particle_distribution">particle_distribution (gammapy.modeling.models.NaimaSpectralModel attribute)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.partition">partition() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.utils.fits.HDULocation.html#gammapy.utils.fits.HDULocation.path">path() (gammapy.utils.fits.HDULocation method)</a>
 </li>
@@ -9922,6 +10114,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.astro.darkmatter.PrimaryFlux.html#gammapy.astro.darkmatter.PrimaryFlux">PrimaryFlux (class in gammapy.astro.darkmatter)</a>
 </li>
+      <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior">Prior (class in gammapy.modeling.models)</a>
+</li>
       <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.prior">prior (gammapy.modeling.Parameter attribute)</a>
 
       <ul>
@@ -10311,6 +10505,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.reassign">(gammapy.modeling.models.PowerLawTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.reassign">(gammapy.modeling.models.Prior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.reassign">(gammapy.modeling.models.ScaleSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.reassign">(gammapy.modeling.models.Shell2SpatialModel method)</a>
@@ -10526,14 +10722,14 @@ document.write(`
         <li><a href="api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.region_mask">(gammapy.maps.WcsGeom method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.utils.regions.region_to_frame.html#gammapy.utils.regions.region_to_frame">region_to_frame() (in module gammapy.utils.regions)</a>
 </li>
       <li><a href="api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.region_weights">region_weights() (gammapy.maps.WcsGeom method)</a>
 </li>
       <li><a href="api/gammapy.maps.RegionGeom.html#gammapy.maps.RegionGeom">RegionGeom (class in gammapy.maps)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap">RegionNDMap (class in gammapy.maps)</a>
 </li>
       <li><a href="api/gammapy.utils.regions.regions_to_compound_region.html#gammapy.utils.regions.regions_to_compound_region">regions_to_compound_region() (in module gammapy.utils.regions)</a>
@@ -10578,6 +10774,10 @@ document.write(`
         <li><a href="api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.remove_rows">(gammapy.data.ObservationTable method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.removeprefix">removeprefix() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.removesuffix">removesuffix() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.rename">rename() (gammapy.astro.population.CaseBattacharya1998 class method)</a>
 
       <ul>
@@ -10674,8 +10874,12 @@ document.write(`
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.reorder_axes">(gammapy.maps.WcsNDMap method)</a>
 </li>
       </ul></li>
-      <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.replace">replace() (gammapy.maps.MapAxes method)</a>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.replace">replace() (gammapy.irf.FoVAlignment method)</a>
+
+      <ul>
+        <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.replace">(gammapy.maps.MapAxes method)</a>
 </li>
+      </ul></li>
       <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.replace_axis">replace_axis() (gammapy.maps.Geom method)</a>
 
       <ul>
@@ -10894,9 +11098,15 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.reverse">(gammapy.modeling.models.Models method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rfind">rfind() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rindex">rindex() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="user-guide/references.html#term-Ring-Background"><strong>Ring Background</strong></a>
 </li>
       <li><a href="api/gammapy.makers.RingBackgroundMaker.html#gammapy.makers.RingBackgroundMaker">RingBackgroundMaker (class in gammapy.makers)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rjust">rjust() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="user-guide/references.html#term-RoI"><strong>RoI</strong></a>
 </li>
@@ -10964,6 +11174,12 @@ document.write(`
         <li><a href="api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.row_index">(gammapy.catalog.SourceCatalogHGPS method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rpartition">rpartition() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rsplit">rsplit() (gammapy.irf.FoVAlignment method)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rstrip">rstrip() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.data.ObservationsEventsSampler.html#gammapy.data.ObservationsEventsSampler.run">run() (gammapy.data.ObservationsEventsSampler method)</a>
 
       <ul>
@@ -11183,6 +11399,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.schema">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.schema">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.schema">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.schema">(gammapy.estimators.FluxMetaData class method)</a>
@@ -11193,12 +11411,16 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.schema_json">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.schema_json">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.schema_json">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.schema_json">(gammapy.estimators.FluxMetaData class method)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.modeling.Covariance.html#gammapy.modeling.Covariance.scipy_mvn">scipy_mvn (gammapy.modeling.Covariance attribute)</a>
+</li>
+      <li><a href="user-guide/references.html#term-SED"><strong>SED</strong></a>
 </li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.sed_type_init">sed_type_init (gammapy.estimators.FluxMaps attribute)</a>
 
@@ -11942,6 +12164,8 @@ document.write(`
         <li><a href="api/gammapy.astro.population.ValleeSpiral.html#gammapy.astro.population.ValleeSpiral.spiralarms">(gammapy.astro.population.ValleeSpiral attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.split">split() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.maps.HpxMap.html#gammapy.maps.HpxMap.split_by_axis">split_by_axis() (gammapy.maps.HpxMap method)</a>
 
       <ul>
@@ -11962,6 +12186,8 @@ document.write(`
         <li><a href="api/gammapy.datasets.utils.split_dataset.html#gammapy.datasets.utils.split_dataset">(in module gammapy.datasets.utils)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.splitlines">splitlines() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.sqrt_ts">sqrt_ts (gammapy.estimators.FluxMaps attribute)</a>
 
       <ul>
@@ -12034,8 +12260,6 @@ document.write(`
       </ul></li>
       <li><a href="api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets.stack_reduce">stack_reduce() (gammapy.datasets.Datasets method)</a>
 </li>
-      <li><a href="user-guide/references.html#term-Stacked-Analysis"><strong>Stacked Analysis</strong></a>
-</li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.standard_broadcasting">standard_broadcasting (gammapy.astro.population.CaseBattacharya1998 attribute)</a>
 
       <ul>
@@ -12061,6 +12285,8 @@ document.write(`
       <li><a href="api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler">standard_scaler() (in module gammapy.utils.cluster)</a>
 </li>
       <li><a href="api/gammapy.utils.units.standardise_unit.html#gammapy.utils.units.standardise_unit">standardise_unit() (in module gammapy.utils.units)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.startswith">startswith() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.stat">stat (gammapy.estimators.FluxMaps attribute)</a>
 
@@ -12162,6 +12388,8 @@ document.write(`
         <li><a href="api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B.stds">(gammapy.astro.population.YusifovKucuk2004B attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.strip">strip() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.strip_units_from_tree">strip_units_from_tree() (gammapy.astro.population.CaseBattacharya1998 method)</a>
 
       <ul>
@@ -12251,6 +12479,8 @@ document.write(`
       <li><a href="api/gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLDR3SpectralModel.html#gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLDR3SpectralModel">SuperExpCutoffPowerLaw4FGLDR3SpectralModel (class in gammapy.modeling.models)</a>
 </li>
       <li><a href="api/gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLSpectralModel.html#gammapy.modeling.models.SuperExpCutoffPowerLaw4FGLSpectralModel">SuperExpCutoffPowerLaw4FGLSpectralModel (class in gammapy.modeling.models)</a>
+</li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.swapcase">swapcase() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.sync_constraints">sync_constraints (gammapy.astro.population.CaseBattacharya1998 attribute)</a>
 
@@ -12356,6 +12586,8 @@ document.write(`
         <li><a href="api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.tag">(gammapy.catalog.SourceCatalogHGPS attribute)</a>
 </li>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.tag">(gammapy.data.EventListMetaData attribute)</a>
+</li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.tag">(gammapy.data.ObservationMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.Dataset.html#gammapy.datasets.Dataset.tag">(gammapy.datasets.Dataset attribute)</a>
 </li>
@@ -12704,6 +12936,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.stats.TimmerKonig_lightcurve_simulator.html#gammapy.stats.TimmerKonig_lightcurve_simulator">TimmerKonig_lightcurve_simulator() (in module gammapy.stats)</a>
 </li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.title">title() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.data.Observation.html#gammapy.data.Observation.tmid">tmid (gammapy.data.Observation attribute)</a>
 </li>
       <li><a href="api/gammapy.irf.Background3D.html#gammapy.irf.Background3D.to_2d">to_2d() (gammapy.irf.Background3D method)</a>
@@ -12775,6 +13009,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.to_dict">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.CovarianceResult.html#gammapy.modeling.CovarianceResult.to_dict">(gammapy.modeling.CovarianceResult method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.BrokenPowerLawSpectralModel.html#gammapy.modeling.models.BrokenPowerLawSpectralModel.to_dict">(gammapy.modeling.models.BrokenPowerLawSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.CompoundSpectralModel.html#gammapy.modeling.models.CompoundSpectralModel.to_dict">(gammapy.modeling.models.CompoundSpectralModel method)</a>
@@ -12843,6 +13079,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.to_dict">(gammapy.modeling.models.PowerLawTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.to_dict">(gammapy.modeling.models.Prior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.to_dict">(gammapy.modeling.models.ScaleSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.to_dict">(gammapy.modeling.models.Shell2SpatialModel method)</a>
@@ -12878,6 +13116,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.to_dict">(gammapy.modeling.models.TemplateSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.to_dict">(gammapy.modeling.models.TemporalModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.OptimizeResult.html#gammapy.modeling.OptimizeResult.to_dict">(gammapy.modeling.OptimizeResult method)</a>
 </li>
         <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.to_dict">(gammapy.modeling.Parameter method)</a>
 </li>
@@ -12977,6 +13217,8 @@ document.write(`
       <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.to_header">to_header() (gammapy.data.EventListMetaData method)</a>
 
       <ul>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.to_header">(gammapy.data.ObservationMetaData method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.to_header">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.to_header">(gammapy.estimators.FluxMetaData method)</a>
@@ -13209,6 +13451,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.to_table">(gammapy.maps.RegionNDMap method)</a>
 </li>
+        <li><a href="api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.to_table">(gammapy.maps.TimeMapAxis method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel.to_table">(gammapy.modeling.models.LightCurveTemplateTemporalModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.to_table">(gammapy.modeling.Parameters method)</a>
@@ -13323,6 +13567,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.to_yaml">(gammapy.data.EventListMetaData method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.to_yaml">(gammapy.data.ObservationMetaData method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.to_yaml">(gammapy.datasets.MapDatasetMetaData method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.to_yaml">(gammapy.estimators.FluxMetaData method)</a>
@@ -13330,6 +13576,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.DatasetModels.html#gammapy.modeling.models.DatasetModels.to_yaml">(gammapy.modeling.models.DatasetModels method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.to_yaml">(gammapy.modeling.models.Models method)</a>
+</li>
+        <li><a href="api/gammapy.utils.scripts.to_yaml.html#gammapy.utils.scripts.to_yaml">(in module gammapy.utils.scripts)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.modeling.FitResult.html#gammapy.modeling.FitResult.total_stat">total_stat (gammapy.modeling.FitResult attribute)</a>
@@ -13344,11 +13592,9 @@ document.write(`
         <li><a href="api/gammapy.modeling.OptimizeResult.html#gammapy.modeling.OptimizeResult.trace">(gammapy.modeling.OptimizeResult attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.translate">translate() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.utils.integrate.trapz_loglog.html#gammapy.utils.integrate.trapz_loglog">trapz_loglog() (in module gammapy.utils.integrate)</a>
-</li>
-      <li><a href="user-guide/references.html#term-True-Energy"><strong>True Energy</strong></a>
-</li>
-      <li><a href="user-guide/references.html#term-TS"><strong>TS</strong></a>
 </li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.ts">ts (gammapy.estimators.FluxMaps attribute)</a>
 
@@ -13442,6 +13688,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.type">(gammapy.modeling.models.PowerLawSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.type">(gammapy.modeling.models.PowerLawTemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.type">(gammapy.modeling.models.Prior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.type">(gammapy.modeling.models.ScaleSpectralModel attribute)</a>
 </li>
@@ -13571,6 +13819,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.modeling.models.PowerLawTemporalModel.html#gammapy.modeling.models.PowerLawTemporalModel.unfreeze">(gammapy.modeling.models.PowerLawTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.unfreeze">(gammapy.modeling.models.Prior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.ScaleSpectralModel.html#gammapy.modeling.models.ScaleSpectralModel.unfreeze">(gammapy.modeling.models.ScaleSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.Shell2SpatialModel.html#gammapy.modeling.models.Shell2SpatialModel.unfreeze">(gammapy.modeling.models.Shell2SpatialModel method)</a>
@@ -13695,6 +13945,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.update_forward_refs">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.update_forward_refs">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.update_forward_refs">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.update_forward_refs">(gammapy.estimators.FluxMetaData class method)</a>
@@ -13718,6 +13970,8 @@ document.write(`
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.update_parameters_from_table">(gammapy.modeling.models.Models method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.upper">upper() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.upsample">upsample() (gammapy.maps.Geom method)</a>
 
       <ul>
@@ -13789,6 +14043,8 @@ document.write(`
       <ul>
         <li><a href="api/gammapy.data.EventListMetaData.html#gammapy.data.EventListMetaData.validate">(gammapy.data.EventListMetaData class method)</a>
 </li>
+        <li><a href="api/gammapy.data.ObservationMetaData.html#gammapy.data.ObservationMetaData.validate">(gammapy.data.ObservationMetaData class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.validate">(gammapy.datasets.MapDatasetMetaData class method)</a>
 </li>
         <li><a href="api/gammapy.estimators.FluxMetaData.html#gammapy.estimators.FluxMetaData.validate">(gammapy.estimators.FluxMetaData class method)</a>
@@ -13854,6 +14110,8 @@ document.write(`
 </li>
       <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap">WcsNDMap (class in gammapy.maps)</a>
 </li>
+      <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.weight">weight (gammapy.modeling.models.Prior attribute)</a>
+</li>
       <li><a href="api/gammapy.maps.HpxGeom.html#gammapy.maps.HpxGeom.width">width (gammapy.maps.HpxGeom attribute)</a>
 
       <ul>
@@ -13914,6 +14172,8 @@ document.write(`
       </ul></li>
       <li><a href="api/gammapy.makers.WobbleRegionsFinder.html#gammapy.makers.WobbleRegionsFinder">WobbleRegionsFinder (class in gammapy.makers)</a>
 </li>
+      <li><a href="api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.wrap_coord">wrap_coord() (gammapy.maps.MapAxis method)</a>
+</li>
       <li><a href="api/gammapy.data.HDUIndexTable.html#gammapy.data.HDUIndexTable.write">write (gammapy.data.HDUIndexTable attribute)</a>
 
       <ul>
@@ -13924,8 +14184,6 @@ document.write(`
 
       <ul>
         <li><a href="api/gammapy.astro.darkmatter.PrimaryFlux.html#gammapy.astro.darkmatter.PrimaryFlux.write">(gammapy.astro.darkmatter.PrimaryFlux method)</a>
-</li>
-        <li><a href="api/gammapy.data.EventList.html#gammapy.data.EventList.write">(gammapy.data.EventList method)</a>
 </li>
         <li><a href="api/gammapy.data.GTI.html#gammapy.data.GTI.write">(gammapy.data.GTI method)</a>
 </li>
@@ -13999,6 +14257,8 @@ document.write(`
 </li>
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.write">(gammapy.maps.WcsNDMap method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.FitResult.html#gammapy.modeling.FitResult.write">(gammapy.modeling.FitResult method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.DatasetModels.html#gammapy.modeling.models.DatasetModels.write">(gammapy.modeling.models.DatasetModels method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel.write">(gammapy.modeling.models.LightCurveTemplateTemporalModel method)</a>
@@ -14037,8 +14297,6 @@ document.write(`
       <li><a href="api/gammapy.datasets.OGIPDatasetWriter.html#gammapy.datasets.OGIPDatasetWriter.write_rmf">write_rmf() (gammapy.datasets.OGIPDatasetWriter method)</a>
 </li>
       <li><a href="api/gammapy.utils.scripts.write_yaml.html#gammapy.utils.scripts.write_yaml">write_yaml() (in module gammapy.utils.scripts)</a>
-</li>
-      <li><a href="user-guide/references.html#term-WStat"><strong>WStat</strong></a>
 </li>
       <li><a href="api/gammapy.stats.wstat.html#gammapy.stats.wstat">wstat() (in module gammapy.stats)</a>
 </li>
@@ -14088,6 +14346,8 @@ document.write(`
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.zfill">zfill() (gammapy.irf.FoVAlignment method)</a>
+</li>
       <li><a href="api/gammapy.astro.darkmatter.ZhaoProfile.html#gammapy.astro.darkmatter.ZhaoProfile">ZhaoProfile (class in gammapy.astro.darkmatter)</a>
 </li>
   </ul></td>
@@ -14116,8 +14376,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -14134,23 +14394,32 @@ document.write(`
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

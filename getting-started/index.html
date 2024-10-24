@@ -16,49 +16,53 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/jquery.js?v=5d32c60e"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'getting-started/index';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -66,7 +70,8 @@
     <link rel="prev" title="Gammapy" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +113,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -129,6 +122,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -141,7 +136,7 @@
     
     
     <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -153,50 +148,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -216,55 +211,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -275,7 +250,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -287,7 +262,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -299,7 +274,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -311,20 +286,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -338,7 +309,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,45 +322,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="#">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -405,42 +377,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -451,7 +407,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -463,7 +419,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -475,7 +431,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -521,8 +477,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -531,7 +485,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Getting started</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Getting started</span></li>
   </ul>
 </nav>
 </div>
@@ -589,7 +543,9 @@ Prefer pip?</div>
 In-depth instructions?</div>
 <p class="sd-card-text">Update existing version? Working with virtual environments? Installing a specific version? Check the advanced
 installation page.</p>
-<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-secondary sd-stretched-link reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html#install" title="(in pandas v2.2.2)"><span>Learn more</span></a></span></p>
+</div>
+<div class="sd-card-footer docutils">
+<p class="sd-card-text"><span class="sd-d-grid"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-secondary sd-stretched-link reference internal" href="install.html#installation"><span class="std std-ref">Learn more</span></a></span></p>
 </div>
 </div>
 </div>
@@ -600,8 +556,8 @@ installation page.</p>
 <span id="quickstart-setup"></span><h2>Recommended Setup<a class="headerlink" href="#recommended-setup" title="Link to this heading">#</a></h2>
 <p>We recommend using <a class="reference internal" href="environments.html#virtual-envs"><span class="std std-ref">virtual environments</span></a>, to do so
 execute the following commands in the terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-O<span class="w"> </span>https://gammapy.org/download/install/gammapy-<span class="p">|</span>release<span class="p">|</span>-environment.yml
-conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>gammapy-<span class="p">|</span>release<span class="p">|</span>-environment.yml
+<div class="code console highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gammapy</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">gammapy</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span><span class="o">-</span><span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">gammapy</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span><span class="o">-</span><span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -622,17 +578,17 @@ in the environment using <code class="xref py py-obj docutils literal notranslat
 You can download the Gammapy tutorial notebooks and the example
 datasets. The total size to download is ~180 MB. Select the location where you
 want to install the datasets and proceed with the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>gammapy-<span class="p">|</span>release<span class="p">|</span>
-gammapy<span class="w"> </span>download<span class="w"> </span>notebooks
-gammapy<span class="w"> </span>download<span class="w"> </span>datasets
-conda<span class="w"> </span>env<span class="w"> </span>config<span class="w"> </span>vars<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">GAMMAPY_DATA</span><span class="o">=</span><span class="nv">$PWD</span>/gammapy-datasets/<span class="p">|</span>release<span class="p">|</span>
-conda<span class="w"> </span>activate<span class="w"> </span>gammapy-<span class="p">|</span>release<span class="p">|</span>
+<div class="code console highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">gammapy</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
+<span class="n">gammapy</span> <span class="n">download</span> <span class="n">notebooks</span>
+<span class="n">gammapy</span> <span class="n">download</span> <span class="n">datasets</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">config</span> <span class="nb">vars</span> <span class="nb">set</span> <span class="n">GAMMAPY_DATA</span><span class="o">=</span><span class="err">$</span><span class="n">PWD</span><span class="o">/</span><span class="n">gammapy</span><span class="o">-</span><span class="n">datasets</span><span class="o">/</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">gammapy</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
 </pre></div>
 </div>
 <p>The last conda commands will define the environment variable within the conda environment.
 Conversely, you might want to define the <code class="docutils literal notranslate"><span class="pre">$GAMMAPY_DATA</span></code> environment
 variable directly in your shell with:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">GAMMAPY_DATA</span><span class="o">=</span><span class="nv">$PWD</span>/gammapy-datasets/<span class="p">|</span>release<span class="p">|</span>
+<div class="code console highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">GAMMAPY_DATA</span><span class="o">=</span><span class="err">$</span><span class="n">PWD</span><span class="o">/</span><span class="n">gammapy</span><span class="o">-</span><span class="n">datasets</span><span class="o">/</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -644,11 +600,23 @@ On Windows, you should set the <code class="docutils literal notranslate"><span 
 “Environment Variables” settings dialog, as explained e.g.
 <a class="reference external" href="https://docs.python.org/3/using/windows.html#excursus-setting-environment-variables">here</a>.</p>
 </div>
-<p>Finally start a notebook server by executing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>notebooks
-jupyter<span class="w"> </span>notebook
+</section>
+<section id="id2">
+<h2>Jupyter<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Once you have activated your gammapy environment you can start
+a notebook server by executing:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">notebooks</span>
+<span class="n">jupyter</span> <span class="n">notebook</span>
 </pre></div>
 </div>
+<p>Another option is to utilise the ipykernel functionality of Jupyter Notebook, which allows you
+to choose a kernel from a predefined list. To add kernels to the list, use the following
+command lines:</p>
+<div class="code console highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">gammapy</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">ipykernel</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="o">--</span><span class="n">name</span> <span class="n">gammapy</span><span class="o">-</span><span class="n">X</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span> <span class="o">--</span><span class="n">display</span><span class="o">-</span><span class="n">name</span> <span class="s2">&quot;gammapy-X.Y.Z&quot;</span>
+</pre></div>
+</div>
+<p>To make use of it, simply choose it as your kernel when launching <code class="xref py py-obj docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span></code>.</p>
 <p>If you are new to conda, Python and Jupyter, it is recommended to also read the <a class="reference internal" href="usage.html#using-gammapy"><span class="std std-ref">Using Gammapy</span></a> guide.
 If you encounter any issues you can check the <a class="reference internal" href="troubleshooting.html#troubleshoot"><span class="std std-ref">Troubleshooting</span></a> guide.</p>
 </section>
@@ -657,32 +625,33 @@ If you encounter any issues you can check the <a class="reference internal" href
 
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#collapseOne">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        How to access gamma-ray data
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    How to access gamma-ray data
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/data/cta.html">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="collapseOne" class="collapse" data-parent="#accordion">
                 <div class="card-body">
         <p>Gammapy can read and access data from multiple gamma-ray instruments. Data from
-Imaging Atmospheric Cherenkov Telescopes, such as <a class="reference external" href="https://www.cta-observatory.org/">CTA</a>, <a class="reference external" href="https://www.mpi-hd.mpg.de/hfm/HESS/">H.E.S.S.</a>, <a class="reference external" href="https://magic.mpp.mpg.de/">MAGIC</a>
+Imaging Atmospheric Cherenkov Telescopes, such as <a class="reference external" href="https://www.ctao.org/">CTAO</a>, <a class="reference external" href="https://www.mpi-hd.mpg.de/hfm/HESS/">H.E.S.S.</a>, <a class="reference external" href="https://magic.mpp.mpg.de/">MAGIC</a>
 and <a class="reference external" href="https://veritas.sao.arizona.edu/">VERITAS</a>, is typically accessed from the <strong>event list data level</strong>, called “DL3”.
 This is most easily done using the <a class="reference internal" href="../api/gammapy.data.DataStore.html#gammapy.data.DataStore" title="gammapy.data.DataStore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataStore</span></code></a> class. In addition data
 can also be accessed from the <strong>level of binned events and pre-reduced instrument response functions</strong>,
 so called “DL4”. This is typically the case for <a class="reference external" href="https://fermi.gsfc.nasa.gov/">Fermi-LAT</a> data or data from
 Water Cherenkov Observatories. This data can be read directly using the
 <a class="reference internal" href="../api/gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> and <a class="reference internal" href="../api/gammapy.irf.IRFMap.html#gammapy.irf.IRFMap" title="gammapy.irf.core.IRFMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IRFMap</span></code></a> classes.</p>
-<p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="../tutorials/data/cta.html"><span>CTA data tutorial</span></a>
+<p><a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="../tutorials/data/cta.html"><span>CTAO data tutorial</span></a>
 <a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="../tutorials/data/hess.html"><span>HESS data tutorial</span></a>
 <a class="sd-sphinx-override sd-badge sd-bg-primary sd-bg-text-primary reference external" href="../tutorials/data/fermi_lat.html"><span>Fermi-LAT data tutorial</span></a></p>
 
@@ -693,20 +662,21 @@ Water Cherenkov Observatories. This data can be read directly using the
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#collapseTwo">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        How to compute a 1D spectrum
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    How to compute a 1D spectrum
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-1d/spectral_analysis.html">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="collapseTwo" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -732,20 +702,21 @@ Flux points can be computed using the <a class="reference internal" href="../api
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#collapseThree">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        How to compute a 2D image
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    How to compute a 2D image
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/index.html#d-image">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="collapseThree" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -767,20 +738,21 @@ fixed spectral index, or following the classical ring background estimation.</p>
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#collapseFour">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        How to compute a 3D cube
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapseFour" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    How to compute a 3D cube
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-3d/analysis_3d.html">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="collapseFour" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -803,20 +775,21 @@ Gammapy can also simulate events. Flux points can be computed using the
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#collapseFive">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        How to compute a lightcurve
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapseFive" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    How to compute a lightcurve
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-time/light_curve.html">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="collapseFive" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -837,20 +810,21 @@ curve is computed using the <a class="reference internal" href="../api/gammapy.e
         
             <div id="accordion" class="shadow tutorial-accordion">
         <div class="card tutorial-card">
-            <div class="card-header collapsed card-link" data-bs-toggle="collapse"
-             data-bs-target="#collapseSix">
-                <div class="d-flex flex-row tutorial-card-header-1">
-                    <div class="d-flex flex-row tutorial-card-header-2">
-                        <button class="btn btn-dark btn-sm"></button>
-                        How to combine data from multiple instruments
-                    </div>
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" data-bs-toggle="collapse"
+                data-bs-target="#collapseSix" style="cursor: pointer;">
+                    <button class="btn btn-dark btn-sm me-2"
+                    style="background-color: #150458; border-radius: 50%; width: 24px; height: 24px;">
+                        <span style="font-size: 14px;">+</span>
+                    </button>
+                    How to combine data from multiple instruments
+                </div>
         
              <span class="badge gs-badge-link">
              <a class="reference external" href="../tutorials/analysis-3d/analysis_mwl.html">Straight to tutorial…</a>
              </span>
              
 
-                </div>
             </div>
             <div id="collapseSix" class="collapse" data-parent="#accordion">
                 <div class="card-body">
@@ -879,7 +853,8 @@ at the same time and can also include e.g. flux points in a combined likelihood 
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -892,6 +867,7 @@ at the same time and can also include e.g. flux points in a combined likelihood 
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-setup">Recommended Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Jupyter</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials-overview">Tutorials Overview</a></li>
 </ul>
   </nav></div>
@@ -918,8 +894,8 @@ at the same time and can also include e.g. flux points in a combined likelihood 
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -936,23 +912,32 @@ at the same time and can also include e.g. flux points in a combined likelihood 
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

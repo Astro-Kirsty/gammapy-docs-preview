@@ -19,7 +19,6 @@ notebook shows how to use these models to correct for this interaction.
 # As usual, we’ll start with the standard imports …
 #
 
-from copy import deepcopy
 import astropy.units as u
 import matplotlib.pyplot as plt
 from gammapy.catalog import SourceCatalog4FGL
@@ -42,7 +41,7 @@ from gammapy.modeling.models import (
 # H.E.S.S. when it was in a steady state. The data have already been
 # reduced to OGIP format `SpectrumDatasetOnOff` following the procedure
 # :doc:`/tutorials/analysis-1d/spectral_analysis` tutorial using a
-# `ReflectedRegions` background estimation. The spectra and IRF from the
+# `ReflectedRegions` background estimation. The spectra and IRFs from the
 # 6 observations have been stacked together.
 #
 # We will load this dataset as a `~gammapy.datasets.SpectrumDatasetOnOff` and proceed with
@@ -75,6 +74,13 @@ print(dataset)
 print(EBL_DATA_BUILTIN.keys())
 
 ######################################################################
+# To use other EBL models, you need to save the optical depth as a
+# function of energy and redshift as an XSPEC model.
+# Alternatively, you can use packages like `ebltable <https://github.com/me-manu/ebltable>`_
+# which shows how to interface other EBL models with Gammapy.
+#
+
+######################################################################
 # Define the power law
 #
 index = 2.3
@@ -100,6 +106,12 @@ sky_model = SkyModel(spatial_model=None, spectral_model=spectral_model, name="pk
 
 dataset.models = sky_model
 
+######################################################################
+# Note that since this dataset has been produced
+# by a reflected region analysis, it uses ON-OFF statistic
+# and does not require a background model.
+#
+
 fit = Fit()
 result = fit.run(datasets=[dataset])
 
@@ -113,7 +125,7 @@ print(result.models.to_parameters_table())
 # Get the flux points
 # ===================
 #
-# To get the observed flux points, just run the `~gammapy.estimators.FluxPointsEstimator
+# To get the observed flux points, just run the `~gammapy.estimators.FluxPointsEstimator`
 # normally
 #
 
@@ -127,47 +139,18 @@ flux_points_obs = fpe.run(datasets=[dataset])
 ######################################################################
 # To get the deabsorbed flux points (ie, intrinsic points), we simply need
 # to set the reference model to the best fit power law instead of the
-# compound model. We first make a copy of the computed flux points
+# compound model.
 #
 
-flux_points_intrinsic = deepcopy(flux_points_obs)
-flux_points_intrinsic._reference_model = SkyModel(spectral_model=pwl)
+flux_points_intrinsic = flux_points_obs.copy(
+    reference_model=SkyModel(spectral_model=pwl)
+)
 
+#
 print(flux_points_obs.reference_model)
 
+#
 print(flux_points_intrinsic.reference_model)
-
-
-######################################################################
-# Set the covariance on the power law model correctly
-# ---------------------------------------------------
-#
-# To set the covariance on the powerlaw, we must extract the relevant
-# values from the full covariance
-#
-
-# The covariance matrix on the full model
-spectral_model.covariance.plot_correlation()
-plt.show()
-
-######################################################################
-# The covariance matrix on the power law does not contain the off diagonal terms
-#
-pwl.covariance.plot_correlation()
-plt.show()
-
-######################################################################
-# Extract the sub covariance and set is on the `pwl`
-#
-sub_covar = spectral_model.covariance.get_subcovariance(pwl.covariance.parameters)
-pwl.covariance = sub_covar
-pwl.covariance.plot_correlation()
-plt.show()
-
-
-######################################################################
-# We see that the covariance is now set correctly
-#
 
 
 ######################################################################
@@ -175,7 +158,6 @@ plt.show()
 # --------------------------------------
 #
 
-# sphinx_gallery_thumbnail_number = 2
 plt.figure()
 sed_type = "e2dnde"
 energy_bounds = [0.2, 20] * u.TeV
@@ -196,6 +178,7 @@ pwl.plot_error(
 plt.ylim(bottom=1e-13)
 plt.legend()
 plt.show()
+# sphinx_gallery_thumbnail_number = 2
 
 
 ######################################################################
@@ -284,10 +267,12 @@ profile = fit.stat_profile(
 
 plt.figure()
 ax = plt.gca()
-ax.plot(profile["observed.spectral.redshift_scan"], profile["stat_scan"] - total_stat)
+ax.plot(
+    profile["observed.spectral.model2.redshift_scan"], profile["stat_scan"] - total_stat
+)
 ax.set_title("TS profile")
 ax.set_xlabel("Redshift")
-ax.set_ylabel("del TS")
+ax.set_ylabel("$\Delta$ TS")
 plt.show()
 
 

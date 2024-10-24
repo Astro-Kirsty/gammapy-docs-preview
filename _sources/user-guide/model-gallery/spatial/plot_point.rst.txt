@@ -133,8 +133,8 @@ Here is an example YAML file using the model:
                 value: 0.0
                 unit: deg
     metadata:
-        creator: Gammapy 1.3.dev284+g868b2a7d7.d20240510
-        date: '2024-05-10T13:47:26.248300'
+        creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
+        date: '2024-10-24T19:05:14.605925'
         origin: null
 
 
@@ -162,6 +162,10 @@ Here is an example YAML file using the model:
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_point.py <plot_point.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_point.zip <plot_point.zip>`
 
 
 .. only:: html

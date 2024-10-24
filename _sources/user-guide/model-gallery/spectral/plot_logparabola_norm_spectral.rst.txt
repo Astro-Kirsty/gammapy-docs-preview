@@ -31,7 +31,7 @@ Example plot
 ------------
 Here is an example plot of the model:
 
-.. GENERATED FROM PYTHON SOURCE LINES 15-43
+.. GENERATED FROM PYTHON SOURCE LINES 15-42
 
 .. code-block:: Python
 
@@ -40,7 +40,6 @@ Here is an example plot of the model:
     import matplotlib.pyplot as plt
     from gammapy.modeling.models import (
         LogParabolaNormSpectralModel,
-        LogParabolaSpectralModel,
         Models,
         SkyModel,
         TemplateSpectralModel,
@@ -72,25 +71,16 @@ Here is an example plot of the model:
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1697: GammapyDeprecationWarning: The default alpha value changed from 2 to 0 since v1.2
-      warnings.warn(
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy/modeling/models/spectral.py:1703: GammapyDeprecationWarning: The default beta value changed from 1 to 0 since v1.2
-      warnings.warn(
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 44-47
+.. GENERATED FROM PYTHON SOURCE LINES 43-46
 
 YAML representation
 -------------------
 Here is an example YAML file using the model:
 
-.. GENERATED FROM PYTHON SOURCE LINES 47-52
+.. GENERATED FROM PYTHON SOURCE LINES 46-51
 
 .. code-block:: Python
 
@@ -145,8 +135,8 @@ Here is an example YAML file using the model:
                     value: 0.0
             operator: mul
     metadata:
-        creator: Gammapy 1.3.dev284+g868b2a7d7.d20240510
-        date: '2024-05-10T13:47:29.948573'
+        creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
+        date: '2024-10-24T19:05:19.130555'
         origin: null
 
 
@@ -174,6 +164,10 @@ Here is an example YAML file using the model:
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_logparabola_norm_spectral.py <plot_logparabola_norm_spectral.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_logparabola_norm_spectral.zip <plot_logparabola_norm_spectral.zip>`
 
 
 .. only:: html

@@ -44,12 +44,12 @@ using Poisson probability distribution.
 This can be done to check the feasibility of a measurement, to test
 whether fitted parameters really provide a good fit to the data etc.
 
-Here we will see how to perform a 1D spectral simulation of a CTA
+Here we will see how to perform a 1D spectral simulation of a CTAO
 observation, in particular, we will generate OFF observations following
-the template background stored in the CTA IRFs.
+the template background stored in the CTAO IRFs.
 
 **Objective: simulate a number of spectral ON-OFF observations of a
-source with a power-law spectral model with CTA using the CTA 1DC
+source with a power-law spectral model with CTAO using the CTA 1DC
 response, fit them with the assumed spectral model and check that the
 distribution of fitted parameters is consistent with the input values.**
 
@@ -135,36 +135,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.9.18     
+            python_version         : 3.11.10    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 1.3.dev284+g868b2a7d7.d20240510 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy 
+            version                : 1.3.dev1278+g0c082c493.d20241024 
+            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
             numpy                  : 1.26.4     
-            scipy                  : 1.13.0     
+            scipy                  : 1.14.1     
             astropy                : 5.2.2      
-            regions                : 0.8        
+            regions                : 0.10       
             click                  : 8.1.7      
-            yaml                   : 6.0.1      
-            IPython                : 8.18.1     
+            yaml                   : 6.0.2      
+            IPython                : 8.28.0     
             jupyterlab             : not installed 
-            matplotlib             : 3.8.4      
+            matplotlib             : 3.9.2      
             pandas                 : not installed 
-            healpy                 : 1.16.6     
-            iminuit                : 2.25.2     
-            sherpa                 : 4.16.0     
+            healpy                 : 1.17.3     
+            iminuit                : 2.30.1     
+            sherpa                 : 4.16.1     
             naima                  : 0.10.0     
             emcee                  : 3.1.6      
             corner                 : 2.2.2      
-            ray                    : 2.21.0     
+            ray                    : 2.38.0     
 
 
     Gammapy environment variables:
@@ -239,11 +239,11 @@ the `fake()` to get the simulated counts for each observation.
 
     PowerLawSpectralModel
 
-    type    name     value         unit        error   ... frozen is_norm link prior
-    ---- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-             index 3.0000e+00                0.000e+00 ...  False   False           
-         amplitude 2.5000e-12 cm-2 s-1 TeV-1 0.000e+00 ...  False    True           
-         reference 1.0000e+00            TeV 0.000e+00 ...   True   False           
+    type    name     value         unit        error   min max frozen link prior
+    ---- --------- ---------- -------------- --------- --- --- ------ ---- -----
+             index 3.0000e+00                0.000e+00 nan nan  False           
+         amplitude 2.5000e-12 cm-2 s-1 TeV-1 0.000e+00 nan nan  False           
+         reference 1.0000e+00            TeV 0.000e+00 nan nan   True           
 
 
 
@@ -278,7 +278,7 @@ In this simulation, we use the CTA-1DC IRFs shipped with Gammapy.
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2097: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
       warnings.warn(msg, UnitsWarning)
     Observation
 
@@ -411,14 +411,14 @@ dealing with simulations based on observations of real off counts.
     SpectrumDatasetOnOff
     --------------------
 
-      Name                            : 9V2Q4gso 
+      Name                            : fKquY0ef 
 
-      Total counts                    : 299 
-      Total background counts         : 25.60
-      Total excess counts             : 273.40
+      Total counts                    : 328 
+      Total background counts         : 20.20
+      Total excess counts             : 307.80
 
-      Predicted counts                : 306.85
-      Predicted background counts     : 25.48
+      Predicted counts                : 301.93
+      Predicted background counts     : 20.56
       Predicted excess counts         : 281.37
 
       Exposure min                    : 2.53e+08 m2 s
@@ -428,7 +428,7 @@ dealing with simulations based on observations of real off counts.
       Number of fit bins              : 9 
 
       Fit statistic type              : wstat
-      Fit statistic value (-2 log(L)) : 1.81
+      Fit statistic value (-2 log(L)) : 5.81
 
       Number of models                : 1 
       Number of parameters            : 3
@@ -446,7 +446,7 @@ dealing with simulations based on observations of real off counts.
           amplitude                     :   2.50e-12   +/- 0.0e+00 1 / (cm2 s TeV)
           reference             (frozen):      1.000       TeV         
   
-        Total counts_off                : 128 
+        Total counts_off                : 101 
       Acceptance                      : 9 
       Acceptance off                  : 45 
 
@@ -650,6 +650,10 @@ Exercises
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: spectrum_simulation.py <spectrum_simulation.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: spectrum_simulation.zip <spectrum_simulation.zip>`
 
 
 .. only:: html

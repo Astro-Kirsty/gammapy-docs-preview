@@ -16,57 +16,62 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=30646c52"></script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/api/catalog';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Datasets - Reduced data, IRFs, models" href="datasets.html" />
-    <link rel="prev" title="Dark matter spatial and spectral models" href="astro_dark_matter.html" />
+    <link rel="next" title="Observational clustering" href="observation_clustering.html" />
+    <link rel="prev" title="Makers - Data reduction" href="makers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +113,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -129,6 +122,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -141,7 +136,7 @@
     
     
     <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -153,50 +148,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
@@ -216,55 +211,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -275,7 +250,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -287,7 +262,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -299,7 +274,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -311,20 +286,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -338,7 +309,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,45 +322,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
@@ -405,42 +377,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -451,7 +407,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -463,7 +419,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -475,7 +431,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -490,60 +446,64 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../starting/overview.html">Data structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../starting/analysis_1.html">High level interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../starting/overview.html">Data structures</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../data/cta.html">CTA with Gammapy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis_hli.html">Spectral analysis with the HLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis_rad_max.html">Spectral analysis with energy-dependent directional cuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../analysis-2d/detect.html">Source detection and significance maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/modeling_2D.html">2D map fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-2d/ring_background.html">Ring background map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/modeling_2D.html">2D map fitting</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/Variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve.html">Light curves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve_flare.html">Light curves for flares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Source catalogs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fitting.html">Fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="priors.html">Priors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mask_maps.html">Mask maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model_management.html">Modelling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Source catalogs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="priors.html">Priors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_management.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitting.html">Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../scripts/survey_map.html">Survey Map Script</a></li>
@@ -574,8 +534,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -587,7 +545,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Tutorials</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Source catalogs</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Source catalogs</span></li>
   </ul>
 </nav>
 </div>
@@ -647,7 +605,7 @@ gamma-cat or 2HWC catalog in this way can also be useful.</p>
 <p>All catalog and source classes work the same, as long as some
 information is available. E.g. trying to access a lightcurve from a
 catalog and source that does not have that information will return
-<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 <p>Further information is available at <a class="reference internal" href="../../api-reference/catalog.html#module-gammapy.catalog" title="gammapy.catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalog</span></code></a>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
@@ -655,50 +613,50 @@ catalog and source that does not have that information will return
 <span class="c1"># %matplotlib inline</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">from</span> <span class="nn">gammapy.catalog</span> <span class="kn">import</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a>
+<span class="kn">from</span> <span class="nn">gammapy.catalog</span> <span class="kn">import</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><span class="n">SourceCatalog4FGL</span></a>
+<span class="kn">from</span> <span class="nn">gammapy.catalog</span> <span class="kn">import</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a>
 </pre></div>
 </div>
 </section>
 <section id="check-setup">
 <h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.utils.check</span> <span class="kn">import</span> <span class="n">check_tutorials_setup</span>
-
 <span class="n">check_tutorials_setup</span><span class="p">()</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
         python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.9.18
+        python_version         : 3.11.10
         machine                : x86_64
         system                 : Linux
 
 
 Gammapy package:
 
-        version                : 1.3.dev284+g868b2a7d7.d20240510
-        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.9/site-packages/gammapy
+        version                : 1.3.dev1278+g0c082c493.d20241024
+        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
 
 
 Other packages:
 
         numpy                  : 1.26.4
-        scipy                  : 1.13.0
+        scipy                  : 1.14.1
         astropy                : 5.2.2
-        regions                : 0.8
+        regions                : 0.10
         click                  : 8.1.7
-        yaml                   : 6.0.1
-        IPython                : 8.18.1
+        yaml                   : 6.0.2
+        IPython                : 8.28.0
         jupyterlab             : not installed
-        matplotlib             : 3.8.4
+        matplotlib             : 3.9.2
         pandas                 : not installed
-        healpy                 : 1.16.6
-        iminuit                : 2.25.2
-        sherpa                 : 4.16.0
+        healpy                 : 1.17.3
+        iminuit                : 2.30.1
+        sherpa                 : 4.16.1
         naima                  : 0.10.0
         emcee                  : 3.1.6
         corner                 : 2.2.2
-        ray                    : 2.21.0
+        ray                    : 2.38.0
 
 
 Gammapy environment variables:
@@ -712,7 +670,7 @@ Gammapy environment variables:
 <p><a class="reference internal" href="../../api-reference/catalog.html#module-gammapy.catalog" title="gammapy.catalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">catalog</span></code></a> contains a catalog registry <a class="reference internal" href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CATALOG_REGISTRY</span></code></a>,
 which maps catalog names (e.g. “3fhl”) to catalog classes
 (e.g. <code class="xref py py-obj docutils literal notranslate"><span class="pre">SourceCatalog3FHL</span></code>).</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Registry
@@ -725,7 +683,9 @@ SourceCatalog3FGL    : 3fgl
 SourceCatalog4FGL    : 4fgl
 SourceCatalog2FHL    : 2fhl
 SourceCatalog3FHL    : 3fhl
+SourceCatalog3PC     : 3PC
 SourceCatalog3HWC    : 3hwc
+SourceCatalog2PC     : 2PC
 SourceCatalog1LHAASO : 1LHAASO
 </pre></div>
 </div>
@@ -743,10 +703,8 @@ where <a class="reference internal" href="../../api-reference/catalog.html#modul
 </pre></div>
 </div>
 <p>So a catalog can be loaded directly from its corresponding class</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.catalog</span> <span class="kn">import</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><span class="n">SourceCatalog4FGL</span></a></a>
-
-<a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><span class="n">SourceCatalog4FGL</span></a></a><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><span class="n">SourceCatalog4FGL</span></a><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span><span class="o">.</span><span class="n">table</span></a><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Number of sources : 7195
@@ -755,8 +713,8 @@ where <a class="reference internal" href="../../api-reference/catalog.html#modul
 <p>Note that it loads the default catalog from <code class="xref py py-obj docutils literal notranslate"><span class="pre">$GAMMAPY_DATA/catalogs</span></code>,
 you could pass a different <code class="xref py py-obj docutils literal notranslate"><span class="pre">filename</span></code> when creating the catalog. For
 example here we load an older version of 4FGL catalog:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><span class="n">SourceCatalog4FGL</span></a></a><span class="p">(</span><span class="s2">&quot;$GAMMAPY_DATA/catalogs/fermi/gll_psc_v20.fit.gz&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class"><span class="n">SourceCatalog4FGL</span></a><span class="p">(</span><span class="s2">&quot;$GAMMAPY_DATA/catalogs/fermi/gll_psc_v20.fit.gz&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span><span class="o">.</span><span class="n">table</span></a><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Number of sources : 5066
@@ -769,8 +727,8 @@ and be useful), or by importing the catalog class
 (e.g. <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SourceCatalog3FGL</span></code></a>) directly. The two ways are equivalent, the
 result will be the same.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># FITS file is loaded</span>
-<a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;3fgl&quot;</span><span class="p">)()</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a></a><span class="p">)</span>
+<a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;3fgl&quot;</span><span class="p">)()</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FGL.html#gammapy.catalog.SourceCatalog3FGL" title="gammapy.catalog.SourceCatalog3FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SourceCatalog3FGL:
@@ -780,10 +738,10 @@ result will be the same.</p>
 </pre></div>
 </div>
 <p>Let’s load the source catalogs we will use throughout this tutorial</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogGammaCat.html#gammapy.catalog.SourceCatalogGammaCat" title="gammapy.catalog.SourceCatalogGammaCat" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogGammaCat.html#gammapy.catalog.SourceCatalogGammaCat" title="gammapy.catalog.SourceCatalogGammaCat" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_gammacat</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;gamma-cat&quot;</span><span class="p">)()</span>
-<a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;3fhl&quot;</span><span class="p">)()</span>
-<a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;4fgl&quot;</span><span class="p">)()</span>
-<a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_hgps</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;hgps&quot;</span><span class="p">)()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogGammaCat.html#gammapy.catalog.SourceCatalogGammaCat" title="gammapy.catalog.SourceCatalogGammaCat" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_gammacat</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;gamma-cat&quot;</span><span class="p">)()</span>
+<a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;3fhl&quot;</span><span class="p">)()</span>
+<a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;4fgl&quot;</span><span class="p">)()</span>
+<a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_hgps</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.CATALOG_REGISTRY.html#gammapy.catalog.CATALOG_REGISTRY" title="gammapy.catalog.CATALOG_REGISTRY" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-data"><span class="n">CATALOG_REGISTRY</span></a><span class="o">.</span><span class="n">get_cls</span><span class="p">(</span><span class="s2">&quot;hgps&quot;</span><span class="p">)()</span>
 </pre></div>
 </div>
 </section>
@@ -792,23 +750,23 @@ result will be the same.</p>
 <p>Source catalogs are given as <code class="xref py py-obj docutils literal notranslate"><span class="pre">FITS</span></code> files that contain one or multiple
 tables.</p>
 <p>However, you can also access the underlying <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.table.Table</span></code></a> for
-a catalog, and the row data as a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a>. This can be useful if
+a catalog, and the row data as a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a>. This can be useful if
 you want to do something that is not pre-scripted by the
 <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalog.html#gammapy.catalog.SourceCatalog" title="gammapy.catalog.SourceCatalog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SourceCatalog</span></code></a> classes, such as e.g. selecting sources by sky
 position or association class, or accessing special source information.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;astropy.table.table.Table&#39;&gt;
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>1556
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">[:</span><span class="mi">3</span><span class="p">][[</span><span class="s2">&quot;Source_Name&quot;</span><span class="p">,</span> <span class="s2">&quot;RAJ2000&quot;</span><span class="p">,</span> <span class="s2">&quot;DEJ2000&quot;</span><span class="p">]])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a><span class="p">[:</span><span class="mi">3</span><span class="p">][[</span><span class="s2">&quot;Source_Name&quot;</span><span class="p">,</span> <span class="s2">&quot;RAJ2000&quot;</span><span class="p">,</span> <span class="s2">&quot;DEJ2000&quot;</span><span class="p">]])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>   Source_Name     RAJ2000  DEJ2000
@@ -822,7 +780,7 @@ position or association class, or accessing special source information.</p>
 <p>Note that the catalogs object include a helper property that gives
 directly the sources positions as a <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyCoord</span></code></a> object (we will show an
 usage example in the following).</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL.positions" title="gammapy.catalog.SourceCatalog3FHL.positions" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL.positions" title="gammapy.catalog.SourceCatalog3FHL.positions" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">positions</span></a></a><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL.positions" title="gammapy.catalog.SourceCatalog3FHL.positions" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">positions</span></a><span class="p">[:</span><span class="mi">3</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;SkyCoord (ICRS): (ra, dec) in deg
@@ -842,8 +800,8 @@ first row is <code class="xref py py-obj docutils literal notranslate"><span cla
 table columns with source names and association names (“ASSOC1” in the
 example below) are searched top to bottom. There is no name resolution
 web query.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="mi">49</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="mi">49</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*** Basic info ***
@@ -912,27 +870,27 @@ Variability index : 20.426
 No peak measured for this source.
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>49 4FGL J0008.9+2509
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="s2">&quot;4FGL J0010.8-2154&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="s2">&quot;4FGL J0010.8-2154&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>64 4FGL J0010.8-2154
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ASSOC1&quot;</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;ASSOC1&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PKS 0008-222
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="s2">&quot;PKS 0008-222&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="s2">&quot;PKS 0008-222&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>64 4FGL J0010.8-2154
@@ -945,13 +903,13 @@ process sources of interest.</p>
 <h3>Source information<a class="headerlink" href="#source-information" title="Link to this heading">#</a></h3>
 <p>The source objects have a <code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code> property that contains the
 information of the catalog row corresponding to the source.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Npred&quot;</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Npred&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>336.59976
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;GLON&quot;</span><span class="p">],</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;GLAT&quot;</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;GLON&quot;</span><span class="p">],</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;GLAT&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>60.28118133544922 deg -79.40050506591797 deg
@@ -959,7 +917,7 @@ information of the catalog row corresponding to the source.</p>
 </div>
 <p>As for the catalog object, the source object has a <code class="xref py py-obj docutils literal notranslate"><span class="pre">position</span></code>
 property.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.position" title="gammapy.catalog.SourceCatalogObjectHGPS.position" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.position" title="gammapy.catalog.SourceCatalogObjectHGPS.position" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">galactic</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.position" title="gammapy.catalog.SourceCatalogObjectHGPS.position" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">galactic</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;SkyCoord (Galactic): (l, b) in deg
@@ -975,12 +933,12 @@ length), so one can create a new catalog as a subset of the main catalog
 that verify a set of conditions.</p>
 <p>In the next example we selection only few of the brightest sources
 brightest sources in the 100 to 200 GeV energy band.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bright</span></a></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
-<span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span></a></a><span class="p">):</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.spectral_model" title="gammapy.catalog.SourceCatalogObjectHGPS.spectral_model" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.spectral_model" title="gammapy.catalog.SourceCatalogObjectHGPS.spectral_model" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">spectral_model</span></a></a><span class="p">()</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a></a><span class="p">,</span> <span class="mi">200</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a></a><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;cm-2 s-1&quot;</span><span class="p">)</span>
-    <span class="k">if</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux</span></a></a> <span class="o">&gt;</span> <span class="mf">1e-10</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class"><span class="n">u</span><span class="o">.</span><span class="n">Unit</span></a></a><span class="p">(</span><span class="s2">&quot;cm-2 s-1&quot;</span><span class="p">):</span>
-        <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bright</span></a></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a></a><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a></a><span class="si">:</span><span class="s2">&lt;7d</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a></a><span class="si">:</span><span class="s2">20s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux</span></a></a><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bright</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span><span class="o">.</span><span class="n">table</span></a><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
+<span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a><span class="p">,</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span></a><span class="p">):</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.spectral_model" title="gammapy.catalog.SourceCatalogObjectHGPS.spectral_model" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">spectral_model</span></a><span class="p">()</span><span class="o">.</span><span class="n">integral</span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a><span class="p">,</span> <span class="mi">200</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="s2">&quot;cm-2 s-1&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux</span></a> <span class="o">&gt;</span> <span class="mf">1e-10</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class"><span class="n">u</span><span class="o">.</span><span class="n">Unit</span></a><span class="p">(</span><span class="s2">&quot;cm-2 s-1&quot;</span><span class="p">):</span>
+        <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bright</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">k</span></a><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.row_index" title="gammapy.catalog.SourceCatalogObjectHGPS.row_index" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">row_index</span></a><span class="si">:</span><span class="s2">&lt;7d</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.name" title="gammapy.catalog.SourceCatalogObjectHGPS.name" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">name</span></a><span class="si">:</span><span class="s2">20s</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux</span></a><span class="si">:</span><span class="s2">.3g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>352     3FHL J0534.5+2201    2.99e-10 1 / (cm2 s)
@@ -992,8 +950,8 @@ brightest sources in the 100 to 200 GeV energy band.</p>
 1361    3FHL J2028.6+4110e   1.75e-10 1 / (cm2 s)
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl_bright</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bright</span></a></a><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl_bright</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl_bright</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_bright</span></a><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl_bright</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SourceCatalog3FHL:
@@ -1002,7 +960,7 @@ brightest sources in the 100 to 200 GeV energy band.</p>
     sources: 7
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl_bright</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">[</span><span class="s2">&quot;Source_Name&quot;</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_3fhl_bright</span><span class="o">.</span><span class="n">table</span></a><span class="p">[</span><span class="s2">&quot;Source_Name&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>   Source_Name
@@ -1019,11 +977,11 @@ brightest sources in the 100 to 200 GeV energy band.</p>
 <p>Similarly we can select only sources within a region of interest. Here
 for example we use the <code class="xref py py-obj docutils literal notranslate"><span class="pre">position</span></code> property of the catalog object to
 select sources within 5 degrees from “PKS 0008-222”:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="s2">&quot;PKS 0008-222&quot;</span><span class="p">]</span>
-<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_roi</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.position" title="gammapy.catalog.SourceCatalogObjectHGPS.position" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.position" title="gammapy.catalog.SourceCatalogObjectHGPS.position" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">separation</span></a></a><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL.positions" title="gammapy.catalog.SourceCatalog4FGL.positions" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL.positions" title="gammapy.catalog.SourceCatalog4FGL.positions" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_4fgl</span><span class="o">.</span><span class="n">positions</span></a></a><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="s2">&quot;PKS 0008-222&quot;</span><span class="p">]</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_roi</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.position" title="gammapy.catalog.SourceCatalogObjectHGPS.position" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">position</span><span class="o">.</span><span class="n">separation</span></a><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL.positions" title="gammapy.catalog.SourceCatalog4FGL.positions" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_4fgl</span><span class="o">.</span><span class="n">positions</span></a><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a>
 
-<a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl_roi</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_roi</span></a></a><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl_roi</span><span class="o">.</span><span class="n">table</span></a></a><span class="p">))</span>
+<a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl_roi</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_roi</span></a><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of sources :&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl_roi</span><span class="o">.</span><span class="n">table</span></a><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Number of sources : 16
@@ -1042,10 +1000,10 @@ and parameter errors from the catalog filled in.</p>
 part individually.</p>
 <p>We use the <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalog3FHL.html#gammapy.catalog.SourceCatalog3FHL" title="gammapy.catalog.SourceCatalog3FHL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SourceCatalog3FHL</span></code></a> for the examples in
 this section.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="s2">&quot;PKS 2155-304&quot;</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="s2">&quot;PKS 2155-304&quot;</span><span class="p">]</span>
 
-<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.sky_model" title="gammapy.catalog.SourceCatalogObjectHGPS.sky_model" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.sky_model" title="gammapy.catalog.SourceCatalogObjectHGPS.sky_model" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">sky_model</span></a></a><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a><span class="p">)</span>
+<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.sky_model" title="gammapy.catalog.SourceCatalogObjectHGPS.sky_model" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">sky_model</span></a><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SkyModel
@@ -1064,7 +1022,7 @@ this section.</p>
     lat_0                         :    -30.225   +/-    0.00 deg
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>SkyModel
@@ -1083,43 +1041,43 @@ this section.</p>
     lat_0                         :    -30.225   +/-    0.00 deg
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spatial_model" title="gammapy.modeling.models.SkyModel.spatial_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spatial_model" title="gammapy.modeling.models.SkyModel.spatial_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spatial_model</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spatial_model" title="gammapy.modeling.models.SkyModel.spatial_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spatial_model</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>PointSpatialModel
 
-type  name    value    unit   error   ...    max    frozen is_norm link prior
----- ----- ----------- ---- --------- ... --------- ------ ------- ---- -----
-     lon_0  3.2971e+02  deg 3.735e-03 ...       nan  False   False
-     lat_0 -3.0225e+01  deg 3.227e-03 ... 9.000e+01  False   False
+type  name    value    unit   error      min        max    frozen link prior
+---- ----- ----------- ---- --------- ---------- --------- ------ ---- -----
+     lon_0  3.2971e+02  deg 3.735e-03        nan       nan  False
+     lat_0 -3.0225e+01  deg 3.227e-03 -9.000e+01 9.000e+01  False
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>LogParabolaSpectralModel
 
-type    name     value         unit        error   ... frozen is_norm link prior
----- --------- ---------- -------------- --------- ... ------ ------- ---- -----
-     amplitude 1.2591e-11 cm-2 MeV-1 s-1 1.317e-13 ...  False    True
-     reference 1.1610e+03            MeV 0.000e+00 ...   True   False
-         alpha 1.7733e+00                1.029e-02 ...  False   False
-          beta 4.1893e-02                3.743e-03 ...  False   False
+type    name     value         unit        error   min max frozen link prior
+---- --------- ---------- -------------- --------- --- --- ------ ---- -----
+     amplitude 1.2591e-11 cm-2 MeV-1 s-1 1.317e-13 nan nan  False
+     reference 1.1610e+03            MeV 0.000e+00 nan nan   True
+         alpha 1.7733e+00                1.029e-02 nan nan  False
+          beta 4.1893e-02                3.743e-03 nan nan  False
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_bounds</span></a></a> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">MeV</span></a></a><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a></a><span class="p">)</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;e2dnde&quot;</span><span class="p">,</span> <span class="n">yunits</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class"><span class="n">u</span><span class="o">.</span><span class="n">Unit</span></a></a><span class="p">(</span><span class="s2">&quot;TeV cm-2 s-1&quot;</span><span class="p">))</span>
-<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_bounds</span></a></a><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a></a><span class="p">)</span>
-<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="o">.</span><span class="n">plot_error</span></a></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_bounds</span></a></a><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a></a><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_bounds</span></a> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">MeV</span></a><span class="p">,</span> <span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;e2dnde&quot;</span><span class="p">,</span> <span class="n">yunits</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class"><span class="n">u</span><span class="o">.</span><span class="n">Unit</span></a><span class="p">(</span><span class="s2">&quot;TeV cm-2 s-1&quot;</span><span class="p">))</span>
+<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_bounds</span></a><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a><span class="p">)</span>
+<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spectral_model</span><span class="o">.</span><span class="n">plot_error</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_bounds</span></a><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_catalog_001.png" srcset="../../_images/sphx_glr_catalog_001.png" alt="catalog" class = "sphx-glr-single-img"/><p>You can create initial source models for your analyses using the
 <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalog.html#gammapy.catalog.SourceCatalog.to_models" title="gammapy.catalog.SourceCatalog.to_models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_models()</span></code></a> method of the catalog objects. Here for example we
 create a <a class="reference internal" href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Models</span></code></a> object from the 4FGL catalog subset we previously
 defined:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">models_4fgl_roi</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL.to_models" title="gammapy.catalog.SourceCatalog4FGL.to_models" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL.to_models" title="gammapy.catalog.SourceCatalog4FGL.to_models" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">catalog_4fgl_roi</span><span class="o">.</span><span class="n">to_models</span></a></a><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">models_4fgl_roi</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">models_4fgl_roi</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL.to_models" title="gammapy.catalog.SourceCatalog4FGL.to_models" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">catalog_4fgl_roi</span><span class="o">.</span><span class="n">to_models</span></a><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">models_4fgl_roi</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Models
@@ -1364,16 +1322,16 @@ components of the sources retained in the main catalog, several
 candidate objects appears only in the Gaussian components table (see
 section 4.9 of the HGPS paper, <a class="reference external" href="https://arxiv.org/abs/1804.02432">https://arxiv.org/abs/1804.02432</a>). To
 access these components you can do the following:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_ind</span></a></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.where.html#numpy.where" title="numpy.where" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.where.html#numpy.where" title="numpy.where" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">where</span></a></a><span class="p">(</span>
-    <span class="p">[</span><span class="s2">&quot;Discarded&quot;</span> <span class="ow">in</span> <span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_components" title="gammapy.catalog.SourceCatalogHGPS.table_components" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_components" title="gammapy.catalog.SourceCatalogHGPS.table_components" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">table_components</span></a></a><span class="p">[</span><span class="s2">&quot;Component_Class&quot;</span><span class="p">]]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_ind</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.where.html#numpy.where" title="numpy.where" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">where</span></a><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;Discarded&quot;</span> <span class="ow">in</span> <span class="n">_</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_components" title="gammapy.catalog.SourceCatalogHGPS.table_components" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">table_components</span></a><span class="p">[</span><span class="s2">&quot;Component_Class&quot;</span><span class="p">]]</span>
 <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_table</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_components" title="gammapy.catalog.SourceCatalogHGPS.table_components" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_components" title="gammapy.catalog.SourceCatalogHGPS.table_components" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">table_components</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_ind</span></a></a><span class="p">]</span>
+<a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_table</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_components" title="gammapy.catalog.SourceCatalogHGPS.table_components" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">table_components</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_ind</span></a><span class="p">]</span>
 </pre></div>
 </div>
 <p>There is no spectral model available for these components but you can
 access their spatial models:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_spatial</span></a></a> <span class="o">=</span> <span class="p">[</span>
-    <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.gaussian_component" title="gammapy.catalog.SourceCatalogHGPS.gaussian_component" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.gaussian_component" title="gammapy.catalog.SourceCatalogHGPS.gaussian_component" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">gaussian_component</span></a></a><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">spatial_model</span><span class="p">()</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_ind</span></a></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_spatial</span></a> <span class="o">=</span> <span class="p">[</span>
+    <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.gaussian_component" title="gammapy.catalog.SourceCatalogHGPS.gaussian_component" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">gaussian_component</span></a><span class="p">(</span><span class="n">idx</span><span class="p">)</span><span class="o">.</span><span class="n">spatial_model</span><span class="p">()</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">discarded_ind</span></a>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -1383,7 +1341,7 @@ window along the Galactic plane. Information on this model can be
 accessed via the properties <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" title="gammapy.catalog.SourceCatalogHGPS.table_large_scale_component"><code class="xref py py-obj docutils literal notranslate"><span class="pre">table_large_scale_component</span></code></a> and
 <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.large_scale_component" title="gammapy.catalog.SourceCatalogHGPS.large_scale_component"><code class="xref py py-obj docutils literal notranslate"><span class="pre">large_scale_component</span></code></a> of <a class="reference internal" href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SourceCatalogHGPS</span></code></a>.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we show the 5 first elements of the table</span>
-<span class="n">display</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" title="gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" title="gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">table_large_scale_component</span></a></a><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" title="gammapy.catalog.SourceCatalogHGPS.table_large_scale_component" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">catalog_hgps</span><span class="o">.</span><span class="n">table_large_scale_component</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
 <span class="c1"># you can also try :</span>
 <span class="c1"># help(catalog_hgps.large_scale_component)</span>
 </pre></div>
@@ -1403,11 +1361,11 @@ accessed via the properties <a class="reference internal" href="../../api/gammap
 <h2>Flux points<a class="headerlink" href="#flux-points" title="Link to this heading">#</a></h2>
 <p>The flux points are available via the <code class="xref py py-obj docutils literal notranslate"><span class="pre">flux_points</span></code> property as a
 <a class="reference internal" href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPoints</span></code></a> object.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="s2">&quot;PKS 2155-304&quot;</span><span class="p">]</span>
-<a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux_points</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.flux_points" title="gammapy.catalog.SourceCatalogObjectHGPS.flux_points" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.flux_points" title="gammapy.catalog.SourceCatalogObjectHGPS.flux_points" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">flux_points</span></a></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="s2">&quot;PKS 2155-304&quot;</span><span class="p">]</span>
+<a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux_points</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.flux_points" title="gammapy.catalog.SourceCatalogObjectHGPS.flux_points" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-attribute"><span class="n">source</span><span class="o">.</span><span class="n">flux_points</span></a>
 
 
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux_points</span></a></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">flux_points</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FluxPoints
@@ -1424,7 +1382,7 @@ accessed via the properties <a class="reference internal" href="../../api/gammap
   sed type init          : flux
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.to_table" title="gammapy.estimators.FluxPoints.to_table" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.to_table" title="gammapy.estimators.FluxPoints.to_table" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">flux_points</span><span class="o">.</span><span class="n">to_table</span></a></a><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;flux&quot;</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.to_table" title="gammapy.estimators.FluxPoints.to_table" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">flux_points</span><span class="o">.</span><span class="n">to_table</span></a><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;flux&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>      e_ref              e_min              e_max        ...  sqrt_ts  is_ul
@@ -1440,8 +1398,8 @@ accessed via the properties <a class="reference internal" href="../../api/gammap
  316227.7660168382 100000.00000000001  999999.9999999995 ... 31.402712 False
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">flux_points</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;e2dnde&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">flux_points</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;e2dnde&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_catalog_002.png" srcset="../../_images/sphx_glr_catalog_002.png" alt="catalog" class = "sphx-glr-single-img"/></section>
@@ -1450,9 +1408,9 @@ accessed via the properties <a class="reference internal" href="../../api/gammap
 <p>The Fermi catalogs contain lightcurves for each source. It is available
 via the <code class="xref py py-obj docutils literal notranslate"><span class="pre">source.lightcurve</span></code> method as a
 <a class="reference internal" href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPoints</span></code></a> object with a time axis.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lightcurve</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a></a><span class="p">[</span><span class="s2">&quot;4FGL J0349.8-2103&quot;</span><span class="p">]</span><span class="o">.</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lightcurve</span></a></a><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lightcurve</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalog4FGL.html#gammapy.catalog.SourceCatalog4FGL" title="gammapy.catalog.SourceCatalog4FGL" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_4fgl</span></a><span class="p">[</span><span class="s2">&quot;4FGL J0349.8-2103&quot;</span><span class="p">]</span><span class="o">.</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lightcurve</span></a><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lightcurve</span></a></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lightcurve</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>FluxPoints
@@ -1469,7 +1427,7 @@ via the <code class="xref py py-obj docutils literal notranslate"><span class="p
   sed type init          : flux
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.to_table" title="gammapy.estimators.FluxPoints.to_table" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.to_table" title="gammapy.estimators.FluxPoints.to_table" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">lightcurve</span><span class="o">.</span><span class="n">to_table</span></a></a><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;lightcurve&quot;</span><span class="p">,</span> <span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;flux&quot;</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.to_table" title="gammapy.estimators.FluxPoints.to_table" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">lightcurve</span><span class="o">.</span><span class="n">to_table</span></a><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;lightcurve&quot;</span><span class="p">,</span> <span class="n">sed_type</span><span class="o">=</span><span class="s2">&quot;flux&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     time_min           time_max            e_ref        ...  sqrt_ts  is_ul
@@ -1491,16 +1449,16 @@ via the <code class="xref py py-obj docutils literal notranslate"><span class="p
  59428.63500212963 59793.912779907405 3872.9833462074166 ...  6.248122 False
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">lightcurve</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">()</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a><span class="p">()</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.plot" title="gammapy.estimators.FluxPoints.plot" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">lightcurve</span><span class="o">.</span><span class="n">plot</span></a><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_catalog_003.png" srcset="../../_images/sphx_glr_catalog_003.png" alt="catalog" class = "sphx-glr-single-img"/></section>
 <section id="pretty-print-source-information">
 <h2>Pretty-print source information<a class="headerlink" href="#pretty-print-source-information" title="Link to this heading">#</a></h2>
 <p>A source object has a nice string representation that you can print.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_hgps</span></a></a><span class="p">[</span><span class="s2">&quot;MSH 15-52&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a> <span class="o">=</span> <a href="../../api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS" title="gammapy.catalog.SourceCatalogHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">catalog_hgps</span></a><span class="p">[</span><span class="s2">&quot;MSH 15-52&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS" title="gammapy.catalog.SourceCatalogObjectHGPS" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*** Basic info ***
@@ -1635,7 +1593,7 @@ Distance_Max: 6.599999904632568 kpc
 <p>You can also call <code class="xref py py-obj docutils literal notranslate"><span class="pre">source.info()</span></code> instead and pass as an option what
 information to print. The options available depend on the catalog, you
 can learn about them using <code class="xref py py-obj docutils literal notranslate"><span class="pre">help()</span></code></p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.info" title="gammapy.catalog.SourceCatalogObjectHGPS.info" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.info" title="gammapy.catalog.SourceCatalogObjectHGPS.info" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">info</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.info" title="gammapy.catalog.SourceCatalogObjectHGPS.info" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">info</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Help on method info in module gammapy.catalog.hess:
@@ -1649,7 +1607,7 @@ info(info=&#39;all&#39;) method of gammapy.catalog.hess.SourceCatalogObjectHGPS 
         Comma separated list of options.
 </pre></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.info" title="gammapy.catalog.SourceCatalogObjectHGPS.info" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.info" title="gammapy.catalog.SourceCatalogObjectHGPS.info" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">info</span></a></a><span class="p">(</span><span class="s2">&quot;associations&quot;</span><span class="p">))</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.info" title="gammapy.catalog.SourceCatalogObjectHGPS.info" class="sphx-glr-backref-module-gammapy-catalog sphx-glr-backref-type-py-method"><span class="n">source</span><span class="o">.</span><span class="n">info</span></a><span class="p">(</span><span class="s2">&quot;associations&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>*** Source associations info ***
@@ -1666,13 +1624,17 @@ info(info=&#39;all&#39;) method of gammapy.catalog.hess.SourceCatalogObjectHGPS 
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-catalog-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/catalog.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/catalog.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" style="width: 150px;" />
+</a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ad89d541901d6f48959e38416a90de29/catalog.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">catalog.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a7638b2c3d4b20bfbdde841a8af3fc11/catalog.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">catalog.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/1370bd9099a95d65461f2a665bb9decd/catalog.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">catalog.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -1690,7 +1652,8 @@ info(info=&#39;all&#39;) method of gammapy.catalog.hess.SourceCatalogObjectHGPS 
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1742,8 +1705,8 @@ info(info=&#39;all&#39;) method of gammapy.catalog.hess.SourceCatalogObjectHGPS 
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1760,23 +1723,32 @@ info(info=&#39;all&#39;) method of gammapy.catalog.hess.SourceCatalogObjectHGPS 
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

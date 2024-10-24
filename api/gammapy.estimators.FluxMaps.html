@@ -16,50 +16,54 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../_static/jquery.js?v=5d32c60e"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=30646c52"></script>
-    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/gammapy.estimators.FluxMaps';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -67,7 +71,8 @@
     <link rel="prev" title="ExcessMapEstimator" href="gammapy.estimators.ExcessMapEstimator.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -83,19 +88,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +97,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -111,8 +104,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -121,7 +114,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -130,6 +123,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../index.html">
@@ -142,7 +137,7 @@
     
     
     <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -154,50 +149,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -217,55 +212,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -276,7 +251,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -288,7 +263,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -300,7 +275,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -312,20 +287,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -339,7 +310,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -351,45 +323,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
@@ -406,42 +378,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -452,7 +408,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -464,7 +420,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -476,7 +432,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -496,6 +452,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.DataStore.html">DataStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.EventList.html">EventList</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.EventListMetaData.html">EventListMetaData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.data.ObservationMetaData.html">ObservationMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.FixedPointingInfo.html">FixedPointingInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.GTI.html">GTI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.data.HDUIndexTable.html">HDUIndexTable</a></li>
@@ -655,6 +612,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.PowerLawNormSpectralModel.html">PowerLawNormSpectralModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.PowerLawSpectralModel.html">PowerLawSpectralModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.PowerLawTemporalModel.html">PowerLawTemporalModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.Prior.html">Prior</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.ScaleSpectralModel.html">ScaleSpectralModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.Shell2SpatialModel.html">Shell2SpatialModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.modeling.models.ShellSpatialModel.html">ShellSpatialModel</a></li>
@@ -707,6 +665,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_fvar.html">compute_lightcurve_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_fpp.html">compute_lightcurve_fpp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_doublingtime.html">compute_lightcurve_doublingtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.estimators.utils.compute_lightcurve_discrete_correlation.html">compute_lightcurve_discrete_correlation</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/analysis.html">analysis - High level interface</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -799,6 +758,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_flux_doubling.html">compute_flux_doubling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_chisq.html">compute_chisq</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.WStatCountsStatistic.html">WStatCountsStatistic</a></li>
@@ -859,10 +819,12 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.parallel.POOL_KWARGS_DEFAULT.html">POOL_KWARGS_DEFAULT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.parallel.METHOD_DEFAULT.html">METHOD_DEFAULT</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.parallel.METHOD_KWARGS_DEFAULT.html">METHOD_KWARGS_DEFAULT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.from_yaml.html">from_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.get_images_paths.html">get_images_paths</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.make_path.html">make_path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.read_yaml.html">read_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.recursive_merge_dicts.html">recursive_merge_dicts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.to_yaml.html">to_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.scripts.write_yaml.html">write_yaml</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.table.hstack_columns.html">hstack_columns</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.table.table_row_to_dict.html">table_row_to_dict</a></li>
@@ -910,8 +872,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -926,7 +886,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../api-reference/estimators.html" class="nav-link">estimators - High level estimators</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">FluxMaps</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">FluxMaps</span></li>
   </ul>
 </nav>
 </div>
@@ -948,7 +908,7 @@ document.write(`
 <dl class="py class">
 <dt class="sig sig-object py" id="gammapy.estimators.FluxMaps">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.estimators.</span></span><span class="sig-name descname"><span class="pre">FluxMaps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gti</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_success_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/estimators/map/core.html#FluxMaps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.estimators.FluxMaps" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>A flux map / points container.</p>
 <p>It contains a set of <a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> objects that store the estimated
 flux as a function of energy as well as associated quantities (typically
@@ -978,6 +938,9 @@ The conversion is done according to the reference model spectral shape.</p>
 <li><p>sqrt_ts : optional, the square root of the test statistic, when relevant.</p></li>
 <li><p>success : optional, a boolean tagging the validity of the estimation.</p></li>
 <li><p>n_dof : optional, the number of degrees of freedom used in TS computation</p></li>
+<li><p>alpha : optional, normalisation factor to accounts for differences between the test region and the background</p></li>
+<li><p>acceptance_off : optional, acceptance from the off region</p></li>
+<li><p>acceptance_on : optional, acceptance from the on region</p></li>
 </ul>
 </dd>
 <dt><strong>reference_model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>, optional</span></dt><dd><p>The reference model to use for conversions. If None, a model consisting
@@ -995,26 +958,38 @@ of a point source with a power law spectrum of index 2 is assumed.</p>
 <p class="rubric">Attributes Summary</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.available_quantities" title="gammapy.estimators.FluxMaps.available_quantities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_quantities</span></code></a></p></td>
-<td><p>Available quantities</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.acceptance_off" title="gammapy.estimators.FluxMaps.acceptance_off"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acceptance_off</span></code></a></p></td>
+<td><p>The acceptance in the off region.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.counts" title="gammapy.estimators.FluxMaps.counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">counts</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.acceptance_on" title="gammapy.estimators.FluxMaps.acceptance_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">acceptance_on</span></code></a></p></td>
+<td><p>The acceptance in the on region.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.alpha" title="gammapy.estimators.FluxMaps.alpha"><code class="xref py py-obj docutils literal notranslate"><span class="pre">alpha</span></code></a></p></td>
+<td><p>The normalisation, alpha, for differences between the on and off regions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.available_quantities" title="gammapy.estimators.FluxMaps.available_quantities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">available_quantities</span></code></a></p></td>
+<td><p>Available quantities.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.counts" title="gammapy.estimators.FluxMaps.counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">counts</span></code></a></p></td>
 <td><p>Predicted counts null hypothesis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde" title="gammapy.estimators.FluxMaps.dnde"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde" title="gammapy.estimators.FluxMaps.dnde"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde</span></code></a></p></td>
 <td><p>Return differential flux (dnde) SED values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_err" title="gammapy.estimators.FluxMaps.dnde_err"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_err</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_err" title="gammapy.estimators.FluxMaps.dnde_err"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_err</span></code></a></p></td>
 <td><p>Return differential flux (dnde) SED errors.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_errn" title="gammapy.estimators.FluxMaps.dnde_errn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_errn</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_errn" title="gammapy.estimators.FluxMaps.dnde_errn"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_errn</span></code></a></p></td>
 <td><p>Return differential flux (dnde) SED negative errors.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_errp" title="gammapy.estimators.FluxMaps.dnde_errp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_errp</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_errp" title="gammapy.estimators.FluxMaps.dnde_errp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_errp</span></code></a></p></td>
 <td><p>Return differential flux (dnde) SED positive errors.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_ref" title="gammapy.estimators.FluxMaps.dnde_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_ref</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_ref" title="gammapy.estimators.FluxMaps.dnde_ref"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_ref</span></code></a></p></td>
 <td><p>Reference differential flux.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_scan_values" title="gammapy.estimators.FluxMaps.dnde_scan_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_scan_values</span></code></a></p></td>
+<td><p>Fit statistic norm scan values.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.dnde_ul" title="gammapy.estimators.FluxMaps.dnde_ul"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dnde_ul</span></code></a></p></td>
 <td><p>Return differential flux (dnde) SED upper limit.</p></td>
@@ -1173,7 +1148,7 @@ of a point source with a power law spectrum of index 2 is assumed.</p>
 <td><p>Reference model default as a <a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.reference_spectral_model" title="gammapy.estimators.FluxMaps.reference_spectral_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reference_spectral_model</span></code></a></p></td>
-<td><p>Reference spectral model as a <code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectralModel</span></code></p></td>
+<td><p>Reference spectral model as a <code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectralModel</span></code>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.sed_type_init" title="gammapy.estimators.FluxMaps.sed_type_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sed_type_init</span></code></a></p></td>
 <td><p>Initial SED type.</p></td>
@@ -1203,7 +1178,7 @@ of a point source with a power law spectrum of index 2 is assumed.</p>
 <td><p>Test statistic map as a <a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> object.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.ts_scan" title="gammapy.estimators.FluxMaps.ts_scan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ts_scan</span></code></a></p></td>
-<td><p>Test statistic scan as a <a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> object</p></td>
+<td><p>Test statistic scan as a <a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> object.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1214,43 +1189,46 @@ of a point source with a power law spectrum of index 2 is assumed.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.all_quantities" title="gammapy.estimators.FluxMaps.all_quantities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">all_quantities</span></code></a>(sed_type)</p></td>
 <td><p>All quantities allowed for a given SED type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.from_hdulist" title="gammapy.estimators.FluxMaps.from_hdulist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_hdulist</span></code></a>(hdulist[, hdu_bands, sed_type, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.copy" title="gammapy.estimators.FluxMaps.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>([reference_model])</p></td>
+<td><p>Deep copy.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.from_hdulist" title="gammapy.estimators.FluxMaps.from_hdulist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_hdulist</span></code></a>(hdulist[, hdu_bands, sed_type, ...])</p></td>
 <td><p>Create flux map dataset from list of HDUs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.from_maps" title="gammapy.estimators.FluxMaps.from_maps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_maps</span></code></a>(maps[, sed_type, reference_model, ...])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.from_maps" title="gammapy.estimators.FluxMaps.from_maps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_maps</span></code></a>(maps[, sed_type, reference_model, ...])</p></td>
 <td><p>Create FluxMaps from a dictionary of maps.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.from_stack" title="gammapy.estimators.FluxMaps.from_stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_stack</span></code></a>(maps, axis[, meta])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.from_stack" title="gammapy.estimators.FluxMaps.from_stack"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_stack</span></code></a>(maps, axis[, meta])</p></td>
 <td><p>Create flux points by stacking list of flux points.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.get_flux_points" title="gammapy.estimators.FluxMaps.get_flux_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_flux_points</span></code></a>([position])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.get_flux_points" title="gammapy.estimators.FluxMaps.get_flux_points"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_flux_points</span></code></a>([position])</p></td>
 <td><p>Extract flux point at a given position.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.iter_by_axis" title="gammapy.estimators.FluxMaps.iter_by_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_axis</span></code></a>(axis_name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.iter_by_axis" title="gammapy.estimators.FluxMaps.iter_by_axis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iter_by_axis</span></code></a>(axis_name)</p></td>
 <td><p>Create a set of FluxMaps by splitting along an axis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.read" title="gammapy.estimators.FluxMaps.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>(filename[, checksum])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.read" title="gammapy.estimators.FluxMaps.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read</span></code></a>(filename[, checksum])</p></td>
 <td><p>Read map dataset from file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_coord" title="gammapy.estimators.FluxMaps.slice_by_coord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_coord</span></code></a>(slices)</p></td>
-<td><p>Slice flux maps by coordinate values</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_coord" title="gammapy.estimators.FluxMaps.slice_by_coord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_coord</span></code></a>(slices)</p></td>
+<td><p>Slice flux maps by coordinate values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_energy" title="gammapy.estimators.FluxMaps.slice_by_energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_energy</span></code></a>(energy_min, energy_max)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_energy" title="gammapy.estimators.FluxMaps.slice_by_energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_energy</span></code></a>(energy_min, energy_max)</p></td>
 <td><p>Slice flux maps by coordinate values along the energy axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_idx" title="gammapy.estimators.FluxMaps.slice_by_idx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_idx</span></code></a>(slices)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_idx" title="gammapy.estimators.FluxMaps.slice_by_idx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_idx</span></code></a>(slices)</p></td>
 <td><p>Slice flux maps by index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_time" title="gammapy.estimators.FluxMaps.slice_by_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_time</span></code></a>(time_min, time_max)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.slice_by_time" title="gammapy.estimators.FluxMaps.slice_by_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice_by_time</span></code></a>(time_min, time_max)</p></td>
 <td><p>Slice flux maps by coordinate values along the time axis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.to_hdulist" title="gammapy.estimators.FluxMaps.to_hdulist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_hdulist</span></code></a>([sed_type, hdu_bands])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.to_hdulist" title="gammapy.estimators.FluxMaps.to_hdulist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_hdulist</span></code></a>([sed_type, hdu_bands])</p></td>
 <td><p>Convert flux map to list of HDUs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.to_maps" title="gammapy.estimators.FluxMaps.to_maps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_maps</span></code></a>([sed_type])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.to_maps" title="gammapy.estimators.FluxMaps.to_maps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_maps</span></code></a>([sed_type])</p></td>
 <td><p>Return maps in a given SED type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.write" title="gammapy.estimators.FluxMaps.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a>(filename[, filename_model, overwrite, ...])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.estimators.FluxMaps.write" title="gammapy.estimators.FluxMaps.write"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write</span></code></a>(filename[, filename_model, overwrite, ...])</p></td>
 <td><p>Write flux map to file.</p></td>
 </tr>
 </tbody>
@@ -1258,9 +1236,27 @@ of a point source with a power law spectrum of index 2 is assumed.</p>
 </div>
 <p class="rubric">Attributes Documentation</p>
 <dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.acceptance_off">
+<span class="sig-name descname"><span class="pre">acceptance_off</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.acceptance_off" title="Link to this definition">#</a></dt>
+<dd><p>The acceptance in the off region.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.acceptance_on">
+<span class="sig-name descname"><span class="pre">acceptance_on</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.acceptance_on" title="Link to this definition">#</a></dt>
+<dd><p>The acceptance in the on region.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.alpha">
+<span class="sig-name descname"><span class="pre">alpha</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.alpha" title="Link to this definition">#</a></dt>
+<dd><p>The normalisation, alpha, for differences between the on and off regions.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.available_quantities">
 <span class="sig-name descname"><span class="pre">available_quantities</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.available_quantities" title="Link to this definition">#</a></dt>
-<dd><p>Available quantities</p>
+<dd><p>Available quantities.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1297,6 +1293,12 @@ of a point source with a power law spectrum of index 2 is assumed.</p>
 <dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.dnde_ref">
 <span class="sig-name descname"><span class="pre">dnde_ref</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.dnde_ref" title="Link to this definition">#</a></dt>
 <dd><p>Reference differential flux.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.dnde_scan_values">
+<span class="sig-name descname"><span class="pre">dnde_scan_values</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.dnde_scan_values" title="Link to this definition">#</a></dt>
+<dd><p>Fit statistic norm scan values.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1639,7 +1641,7 @@ center, if <a class="reference internal" href="#gammapy.estimators.FluxMaps.ener
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.reference_spectral_model">
 <span class="sig-name descname"><span class="pre">reference_spectral_model</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.reference_spectral_model" title="Link to this definition">#</a></dt>
-<dd><p>Reference spectral model as a <code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectralModel</span></code></p>
+<dd><p>Reference spectral model as a <code class="xref py py-obj docutils literal notranslate"><span class="pre">SpectralModel</span></code>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1714,7 +1716,7 @@ center, if <a class="reference internal" href="#gammapy.estimators.FluxMaps.ener
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.ts_scan">
 <span class="sig-name descname"><span class="pre">ts_scan</span></span><a class="headerlink" href="#gammapy.estimators.FluxMaps.ts_scan" title="Link to this definition">#</a></dt>
-<dd><p>Test statistic scan as a <a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> object</p>
+<dd><p>Test statistic scan as a <a class="reference internal" href="gammapy.maps.Map.html#gammapy.maps.Map" title="gammapy.maps.Map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Map</span></code></a> object.</p>
 </dd></dl>
 
 <p class="rubric">Methods Documentation</p>
@@ -1732,6 +1734,28 @@ center, if <a class="reference internal" href="#gammapy.estimators.FluxMaps.ener
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>list</strong><span class="classifier">list of str</span></dt><dd><p>All allowed quantities for a given SED type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/estimators/map/core.html#FluxMaps.copy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.estimators.FluxMaps.copy" title="Link to this definition">#</a></dt>
+<dd><p>Deep copy.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl>
+<dt><strong>reference_model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>, optional</span></dt><dd><p>The reference model to use for conversions. If None, the original model is copied.
+Flux maps have been obtained for a specific reference model.
+Changing it will change the fluxes. Handle with care.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl>
+<dt><strong>flux_maps</strong><span class="classifier"><a class="reference internal" href="#gammapy.estimators.FluxMaps" title="gammapy.estimators.FluxMaps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxMaps</span></code></a></span></dt><dd><p>Copied flux maps object.</p>
 </dd>
 </dl>
 </dd>
@@ -1780,7 +1804,7 @@ law spectrum of index 2 is assumed. Default is None.</p>
 </dd>
 <dt><strong>gti</strong><span class="classifier"><a class="reference internal" href="gammapy.data.GTI.html#gammapy.data.GTI" title="gammapy.data.GTI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GTI</span></code></a>, optional</span></dt><dd><p>Maps GTI information. Default is None.</p>
 </dd>
-<dt><strong>meta</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Meta dictionary.</p>
+<dt><strong>meta</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Meta dictionary.</p>
 </dd>
 </dl>
 </dd>
@@ -1884,11 +1908,11 @@ column names and units for the stacked object.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gammapy.estimators.FluxMaps.slice_by_coord">
 <span class="sig-name descname"><span class="pre">slice_by_coord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slices</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/estimators/map/core.html#FluxMaps.slice_by_coord"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.estimators.FluxMaps.slice_by_coord" title="Link to this definition">#</a></dt>
-<dd><p>Slice flux maps by coordinate values</p>
+<dd><p>Slice flux maps by coordinate values.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>slices</strong><span class="classifier">dict</span></dt><dd><p>Dictionary of axes names and <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.Quantity</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.Time</span></code> or <a class="reference external" href="https://docs.python.org/3/library/functions.html#slice" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code></a> object pairs.
+<dt><strong>slices</strong><span class="classifier">dict</span></dt><dd><p>Dictionary of axes names and <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.Quantity</span></code> or <code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.Time</span></code> or <a class="reference external" href="https://docs.python.org/3/library/functions.html#slice" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code></a> object pairs.
 Contains one element for each non-spatial dimension. For integer indexing the
 corresponding axes is dropped from the map. Axes not specified in the
 dict are kept unchanged.</p>
@@ -1946,7 +1970,7 @@ dict are kept unchanged.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>slices</strong><span class="classifier">dict</span></dt><dd><p>Dictionary of axes names and integers or <a class="reference external" href="https://docs.python.org/3/library/functions.html#slice" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code></a> object pairs. Contains one
+<dt><strong>slices</strong><span class="classifier">dict</span></dt><dd><p>Dictionary of axes names and integers or <a class="reference external" href="https://docs.python.org/3/library/functions.html#slice" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">slice</span></code></a> object pairs. Contains one
 element for each non-spatial dimension. For integer indexing the
 corresponding axes is dropped from the map. Axes not specified in the
 dict are kept unchanged.</p>
@@ -2080,7 +2104,8 @@ Default is False.</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -2092,6 +2117,9 @@ Default is False.</p>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps"><code class="docutils literal notranslate"><span class="pre">FluxMaps</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.acceptance_off"><code class="docutils literal notranslate"><span class="pre">FluxMaps.acceptance_off</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.acceptance_on"><code class="docutils literal notranslate"><span class="pre">FluxMaps.acceptance_on</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.alpha"><code class="docutils literal notranslate"><span class="pre">FluxMaps.alpha</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.available_quantities"><code class="docutils literal notranslate"><span class="pre">FluxMaps.available_quantities</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.counts"><code class="docutils literal notranslate"><span class="pre">FluxMaps.counts</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.dnde"><code class="docutils literal notranslate"><span class="pre">FluxMaps.dnde</span></code></a></li>
@@ -2099,6 +2127,7 @@ Default is False.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.dnde_errn"><code class="docutils literal notranslate"><span class="pre">FluxMaps.dnde_errn</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.dnde_errp"><code class="docutils literal notranslate"><span class="pre">FluxMaps.dnde_errp</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.dnde_ref"><code class="docutils literal notranslate"><span class="pre">FluxMaps.dnde_ref</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.dnde_scan_values"><code class="docutils literal notranslate"><span class="pre">FluxMaps.dnde_scan_values</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.dnde_ul"><code class="docutils literal notranslate"><span class="pre">FluxMaps.dnde_ul</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.e2dnde"><code class="docutils literal notranslate"><span class="pre">FluxMaps.e2dnde</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.e2dnde_err"><code class="docutils literal notranslate"><span class="pre">FluxMaps.e2dnde_err</span></code></a></li>
@@ -2163,6 +2192,7 @@ Default is False.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.ts"><code class="docutils literal notranslate"><span class="pre">FluxMaps.ts</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.ts_scan"><code class="docutils literal notranslate"><span class="pre">FluxMaps.ts_scan</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.all_quantities"><code class="docutils literal notranslate"><span class="pre">FluxMaps.all_quantities()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.copy"><code class="docutils literal notranslate"><span class="pre">FluxMaps.copy()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.from_hdulist"><code class="docutils literal notranslate"><span class="pre">FluxMaps.from_hdulist()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.from_maps"><code class="docutils literal notranslate"><span class="pre">FluxMaps.from_maps()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxMaps.from_stack"><code class="docutils literal notranslate"><span class="pre">FluxMaps.from_stack()</span></code></a></li>
@@ -2203,8 +2233,8 @@ Default is False.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -2221,23 +2251,32 @@ Default is False.</p>
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

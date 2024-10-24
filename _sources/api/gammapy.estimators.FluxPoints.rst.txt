@@ -10,6 +10,9 @@ FluxPoints
 
    .. autosummary::
 
+      ~FluxPoints.acceptance_off
+      ~FluxPoints.acceptance_on
+      ~FluxPoints.alpha
       ~FluxPoints.available_quantities
       ~FluxPoints.counts
       ~FluxPoints.dnde
@@ -17,6 +20,7 @@ FluxPoints
       ~FluxPoints.dnde_errn
       ~FluxPoints.dnde_errp
       ~FluxPoints.dnde_ref
+      ~FluxPoints.dnde_scan_values
       ~FluxPoints.dnde_ul
       ~FluxPoints.e2dnde
       ~FluxPoints.e2dnde_err
@@ -86,6 +90,7 @@ FluxPoints
    .. autosummary::
 
       ~FluxPoints.all_quantities
+      ~FluxPoints.copy
       ~FluxPoints.from_hdulist
       ~FluxPoints.from_maps
       ~FluxPoints.from_stack
@@ -108,6 +113,9 @@ FluxPoints
 
    .. rubric:: Attributes Documentation
 
+   .. autoattribute:: acceptance_off
+   .. autoattribute:: acceptance_on
+   .. autoattribute:: alpha
    .. autoattribute:: available_quantities
    .. autoattribute:: counts
    .. autoattribute:: dnde
@@ -115,6 +123,7 @@ FluxPoints
    .. autoattribute:: dnde_errn
    .. autoattribute:: dnde_errp
    .. autoattribute:: dnde_ref
+   .. autoattribute:: dnde_scan_values
    .. autoattribute:: dnde_ul
    .. autoattribute:: e2dnde
    .. autoattribute:: e2dnde_err
@@ -182,6 +191,7 @@ FluxPoints
    .. rubric:: Methods Documentation
 
    .. automethod:: all_quantities
+   .. automethod:: copy
    .. automethod:: from_hdulist
    .. automethod:: from_maps
    .. automethod:: from_stack

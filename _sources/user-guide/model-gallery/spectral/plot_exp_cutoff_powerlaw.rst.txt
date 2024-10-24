@@ -110,8 +110,8 @@ Here is an example YAML file using the model:
             -   name: alpha
                 value: 1.0
     metadata:
-        creator: Gammapy 1.3.dev284+g868b2a7d7.d20240510
-        date: '2024-05-10T13:47:28.833353'
+        creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
+        date: '2024-10-24T19:05:16.180523'
         origin: null
 
 
@@ -139,6 +139,10 @@ Here is an example YAML file using the model:
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_exp_cutoff_powerlaw.py <plot_exp_cutoff_powerlaw.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: plot_exp_cutoff_powerlaw.zip <plot_exp_cutoff_powerlaw.zip>`
 
 
 .. only:: html

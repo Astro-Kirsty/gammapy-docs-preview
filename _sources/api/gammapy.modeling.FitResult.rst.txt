@@ -23,6 +23,12 @@ FitResult
       ~FitResult.total_stat
       ~FitResult.trace
 
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~FitResult.write
+
    .. rubric:: Attributes Documentation
 
    .. autoattribute:: backend
@@ -37,3 +43,7 @@ FitResult
    .. autoattribute:: success
    .. autoattribute:: total_stat
    .. autoattribute:: trace
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: write

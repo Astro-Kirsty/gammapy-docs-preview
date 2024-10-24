@@ -16,57 +16,62 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=30646c52"></script>
-    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/api/observation_clustering';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Priors" href="priors.html" />
-    <link rel="prev" title="Models" href="models.html" />
+    <link rel="next" title="Modelling" href="model_management.html" />
+    <link rel="prev" title="Source catalogs" href="catalog.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +113,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -129,6 +122,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -141,7 +136,7 @@
     
     
     <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -153,50 +148,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
@@ -216,55 +211,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -275,7 +250,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -287,7 +262,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -299,7 +274,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -311,20 +286,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -338,7 +309,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,45 +322,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../user-guide/index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
@@ -405,42 +377,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -451,7 +407,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -463,7 +419,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -475,7 +431,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -490,60 +446,64 @@ document.write(`
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../starting/overview.html">Data structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../starting/analysis_1.html">High level interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../starting/overview.html">Data structures</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../data/cta.html">CTA with Gammapy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis_hli.html">Spectral analysis with the HLI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis_rad_max.html">Spectral analysis with energy-dependent directional cuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../analysis-2d/detect.html">Source detection and significance maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/modeling_2D.html">2D map fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-2d/ring_background.html">Ring background map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/modeling_2D.html">2D map fitting</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/Variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve.html">Light curves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve_flare.html">Light curves for flares</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog.html">Source catalogs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fitting.html">Fitting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="priors.html">Priors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mask_maps.html">Mask maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model_management.html">Modelling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catalog.html">Source catalogs</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Observational clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="priors.html">Priors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_management.html">Modelling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fitting.html">Fitting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../scripts/survey_map.html">Survey Map Script</a></li>
@@ -574,8 +534,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -587,7 +545,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Tutorials</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Observationa...</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Observational clustering</span></li>
   </ul>
 </nav>
 </div>
@@ -633,12 +591,11 @@ together, and then the data reduction is performed.</p>
 </ul>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
-<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a></a>
+<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">DataStore</span>
-<span class="kn">from</span> <span class="nn">gammapy.data.observations</span> <span class="kn">import</span> <span class="n">Observations</span>
-<span class="kn">from</span> <span class="nn">gammapy.data.utils</span> <span class="kn">import</span> <a href="../../api/gammapy.data.get_irfs_features.html#gammapy.data.get_irfs_features" title="gammapy.data.get_irfs_features" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-function"><a href="../../api/gammapy.data.get_irfs_features.html#gammapy.data.get_irfs_features" title="gammapy.data.get_irfs_features" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-function"><span class="n">get_irfs_features</span></a></a>
-<span class="kn">from</span> <span class="nn">gammapy.utils.cluster</span> <span class="kn">import</span> <a href="../../api/gammapy.utils.cluster.hierarchical_clustering.html#gammapy.utils.cluster.hierarchical_clustering" title="gammapy.utils.cluster.hierarchical_clustering" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><a href="../../api/gammapy.utils.cluster.hierarchical_clustering.html#gammapy.utils.cluster.hierarchical_clustering" title="gammapy.utils.cluster.hierarchical_clustering" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">hierarchical_clustering</span></a></a><span class="p">,</span> <a href="../../api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler" title="gammapy.utils.cluster.standard_scaler" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><a href="../../api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler" title="gammapy.utils.cluster.standard_scaler" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">standard_scaler</span></a></a>
+<span class="kn">from</span> <span class="nn">gammapy.data.utils</span> <span class="kn">import</span> <a href="../../api/gammapy.data.get_irfs_features.html#gammapy.data.get_irfs_features" title="gammapy.data.get_irfs_features" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-function"><span class="n">get_irfs_features</span></a>
+<span class="kn">from</span> <span class="nn">gammapy.utils.cluster</span> <span class="kn">import</span> <a href="../../api/gammapy.utils.cluster.hierarchical_clustering.html#gammapy.utils.cluster.hierarchical_clustering" title="gammapy.utils.cluster.hierarchical_clustering" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">hierarchical_clustering</span></a><span class="p">,</span> <a href="../../api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler" title="gammapy.utils.cluster.standard_scaler" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">standard_scaler</span></a>
 </pre></div>
 </div>
 </section>
@@ -648,35 +605,35 @@ together, and then the data reduction is performed.</p>
 data. Next, utilise a cone search to select only the observations of interest.
 In this case, we choose PKS 2155-304 as the object of interest.</p>
 <p>The <a class="reference internal" href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ObservationTable</span></code></a> is then filtered using the <code class="xref py py-obj docutils literal notranslate"><span class="pre">select_observations</span></code> tool.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore" title="gammapy.data.DataStore" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore" title="gammapy.data.DataStore" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data_store</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.from_dir" title="gammapy.data.DataStore.from_dir" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.from_dir" title="gammapy.data.DataStore.from_dir" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">DataStore</span><span class="o">.</span><span class="n">from_dir</span></a></a><span class="p">(</span><span class="s2">&quot;$GAMMAPY_DATA/hess-dl3-dr1&quot;</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore" title="gammapy.data.DataStore" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data_store</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.from_dir" title="gammapy.data.DataStore.from_dir" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">DataStore</span><span class="o">.</span><span class="n">from_dir</span></a><span class="p">(</span><span class="s2">&quot;$GAMMAPY_DATA/hess-dl3-dr1&quot;</span><span class="p">)</span>
 
-<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selection</span></a></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selection</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;sky_circle&quot;</span><span class="p">,</span>
     <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span>
     <span class="n">lon</span><span class="o">=</span><span class="s2">&quot;329.71693826 deg&quot;</span><span class="p">,</span>
     <span class="n">lat</span><span class="o">=</span><span class="s2">&quot;-30.2255 deg&quot;</span><span class="p">,</span>
     <span class="n">radius</span><span class="o">=</span><span class="s2">&quot;2 deg&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_table</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data_store</span><span class="o">.</span><span class="n">obs_table</span></a></a>
-<a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.select_observations" title="gammapy.data.ObservationTable.select_observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.select_observations" title="gammapy.data.ObservationTable.select_observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs_table</span><span class="o">.</span><span class="n">select_observations</span></a></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selection</span></a></a><span class="p">)</span>
+<a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_table</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data_store</span><span class="o">.</span><span class="n">obs_table</span></a>
+<a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.select_observations" title="gammapy.data.ObservationTable.select_observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs_table</span><span class="o">.</span><span class="n">select_observations</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selection</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <p>More complex selection can be done by utilising the obs_table entries directly.
 We can now retrieve the relevant observations by passing their obs_id to the
 <a class="reference internal" href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.get_observations" title="gammapy.data.DataStore.get_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observations</span></code></a> method.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_ids</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a></a><span class="p">[</span><span class="s2">&quot;OBS_ID&quot;</span><span class="p">]</span>
-<a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observations</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.get_observations" title="gammapy.data.DataStore.get_observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.get_observations" title="gammapy.data.DataStore.get_observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">data_store</span><span class="o">.</span><span class="n">get_observations</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_ids</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_ids</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a><span class="p">[</span><span class="s2">&quot;OBS_ID&quot;</span><span class="p">]</span>
+<a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observations</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.DataStore.html#gammapy.data.DataStore.get_observations" title="gammapy.data.DataStore.get_observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">data_store</span><span class="o">.</span><span class="n">get_observations</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_ids</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <section id="show-various-observation-quantities">
 <h3>Show various observation quantities<a class="headerlink" href="#show-various-observation-quantities" title="Link to this heading">#</a></h3>
 <p>Print here the range of zenith angles and muon efficiencies, to see
 if there is a sensible way to group the observations.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a></a><span class="p">[</span><span class="s2">&quot;ZEN_PNT&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a></a><span class="p">)</span>
-<a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_muoneff</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a></a><span class="p">[</span><span class="s2">&quot;MUONEFF&quot;</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a><span class="p">[</span><span class="s2">&quot;ZEN_PNT&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">)</span>
+<a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_muoneff</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable" title="gammapy.data.ObservationTable" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">selected_obs_table</span></a><span class="p">[</span><span class="s2">&quot;MUONEFF&quot;</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.min.html#numpy.min" title="numpy.min" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.min.html#numpy.min" title="numpy.min" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">min</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> &lt; zenith angle &lt; </span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.max.html#numpy.max" title="numpy.max" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.max.html#numpy.max" title="numpy.max" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">max</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.min.html#numpy.min" title="numpy.min" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.min.html#numpy.min" title="numpy.min" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">min</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_muoneff</span></a></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> &lt; muon efficiency &lt; </span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.max.html#numpy.max" title="numpy.max" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.max.html#numpy.max" title="numpy.max" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">max</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_muoneff</span></a></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.min.html#numpy.min" title="numpy.min" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">min</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> &lt; zenith angle &lt; </span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.max.html#numpy.max" title="numpy.max" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">max</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.min.html#numpy.min" title="numpy.min" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">min</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_muoneff</span></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> &lt; muon efficiency &lt; </span><span class="si">{</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.max.html#numpy.max" title="numpy.max" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">max</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Column.html#astropy.table.Column" title="astropy.table.Column" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_muoneff</span></a><span class="p">)</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>7.23 deg &lt; zenith angle &lt; 50.42 deg
@@ -694,40 +651,40 @@ median value of the zenith angles to define each observation group.</p>
 <p>This type of grouping can be utilised according to different parameters i.e.
 zenith angle, muon efficiency, offset angle. The quantity chosen can therefore
 be adjusted according to each specific science case.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">median_zenith</span></a></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.median.html#numpy.median" title="numpy.median" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.median.html#numpy.median" title="numpy.median" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">median</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">median_zenith</span></a> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.median.html#numpy.median" title="numpy.median" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">median</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_zenith</span></a><span class="p">)</span>
 
-<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a></a> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs</span></a></a> <span class="ow">in</span> <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observations</span></a></a><span class="p">:</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="astropy.coordinates.Angle" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="astropy.coordinates.Angle" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">zenith</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs</span><span class="o">.</span><span class="n">get_pointing_altaz</span></a></a><span class="p">(</span><span class="n">time</span><span class="o">=</span><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">tmid</span></a></a><span class="p">)</span><span class="o">.</span><span class="n">zen</span>
-    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a></a><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;low_zenith&quot;</span> <span class="k">if</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="astropy.coordinates.Angle" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="astropy.coordinates.Angle" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">zenith</span></a></a> <span class="o">&lt;</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">median_zenith</span></a></a> <span class="k">else</span> <span class="s2">&quot;high_zenith&quot;</span><span class="p">)</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.group_by_label" title="gammapy.data.Observations.group_by_label" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.group_by_label" title="gammapy.data.Observations.group_by_label" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">observations</span><span class="o">.</span><span class="n">group_by_label</span></a></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a></a><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs</span></a> <span class="ow">in</span> <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observations</span></a><span class="p">:</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="astropy.coordinates.Angle" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">zenith</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs</span><span class="o">.</span><span class="n">get_pointing_altaz</span></a><span class="p">(</span><span class="n">time</span><span class="o">=</span><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">tmid</span></a><span class="p">)</span><span class="o">.</span><span class="n">zen</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;low_zenith&quot;</span> <span class="k">if</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="astropy.coordinates.Angle" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">zenith</span></a> <span class="o">&lt;</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">median_zenith</span></a> <span class="k">else</span> <span class="s2">&quot;high_zenith&quot;</span><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.group_by_label" title="gammapy.data.Observations.group_by_label" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">observations</span><span class="o">.</span><span class="n">group_by_label</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">labels</span></a><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_high_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x7a4d8a810d00&gt;, &#39;group_low_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x7a4d8af32040&gt;}
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_high_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x781c040f5190&gt;, &#39;group_low_zenith&#39;: &lt;gammapy.data.observations.Observations object at 0x781bf972d0d0&gt;}
 </pre></div>
 </div>
 <p>The results for each group of observations is shown visually below.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fix</span></a></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="k">for</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs</span></a></a> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a></a><span class="p">[</span><span class="s2">&quot;group_low_zenith&quot;</span><span class="p">]:</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span>
-        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs</span><span class="o">.</span><span class="n">get_pointing_altaz</span></a></a><span class="p">(</span><span class="n">time</span><span class="o">=</span><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">tmid</span></a></a><span class="p">)</span><span class="o">.</span><span class="n">zen</span><span class="p">,</span>
-        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.meta" title="gammapy.data.Observation.meta" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.meta" title="gammapy.data.Observation.meta" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">optional</span></a></a><span class="p">[</span><span class="s2">&quot;MUONEFF&quot;</span><span class="p">],</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fix</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="k">for</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs</span></a> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a><span class="p">[</span><span class="s2">&quot;group_low_zenith&quot;</span><span class="p">]:</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs</span><span class="o">.</span><span class="n">get_pointing_altaz</span></a><span class="p">(</span><span class="n">time</span><span class="o">=</span><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">tmid</span></a><span class="p">)</span><span class="o">.</span><span class="n">zen</span><span class="p">,</span>
+        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.meta" title="gammapy.data.Observation.meta" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">optional</span></a><span class="p">[</span><span class="s2">&quot;MUONEFF&quot;</span><span class="p">],</span>
         <span class="s2">&quot;d&quot;</span><span class="p">,</span>
         <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
     <span class="p">)</span>
-<span class="k">for</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs</span></a></a> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a></a><span class="p">[</span><span class="s2">&quot;group_high_zenith&quot;</span><span class="p">]:</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span>
-        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs</span><span class="o">.</span><span class="n">get_pointing_altaz</span></a></a><span class="p">(</span><span class="n">time</span><span class="o">=</span><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">tmid</span></a></a><span class="p">)</span><span class="o">.</span><span class="n">zen</span><span class="p">,</span>
-        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.meta" title="gammapy.data.Observation.meta" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.meta" title="gammapy.data.Observation.meta" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">optional</span></a></a><span class="p">[</span><span class="s2">&quot;MUONEFF&quot;</span><span class="p">],</span>
+<span class="k">for</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs</span></a> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grouped_observations</span></a><span class="p">[</span><span class="s2">&quot;group_high_zenith&quot;</span><span class="p">]:</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.get_pointing_altaz" title="gammapy.data.Observation.get_pointing_altaz" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">obs</span><span class="o">.</span><span class="n">get_pointing_altaz</span></a><span class="p">(</span><span class="n">time</span><span class="o">=</span><a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.tmid" title="gammapy.data.Observation.tmid" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">tmid</span></a><span class="p">)</span><span class="o">.</span><span class="n">zen</span><span class="p">,</span>
+        <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation.meta" title="gammapy.data.Observation.meta" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">obs</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">optional</span></a><span class="p">[</span><span class="s2">&quot;MUONEFF&quot;</span><span class="p">],</span>
         <span class="s2">&quot;o&quot;</span><span class="p">,</span>
         <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
     <span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span></a></a><span class="p">(</span><span class="s2">&quot;Muon efficiency&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span></a></a><span class="p">(</span><span class="s2">&quot;Zenith angle (deg)&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.axvline.html#matplotlib.axes.Axes.axvline" title="matplotlib.axes.Axes.axvline" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.axvline.html#matplotlib.axes.Axes.axvline" title="matplotlib.axes.Axes.axvline" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity.value" title="astropy.units.Quantity.value" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-attribute"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity.value" title="astropy.units.Quantity.value" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-attribute"><span class="n">median_zenith</span><span class="o">.</span><span class="n">value</span></a></a><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span></a><span class="p">(</span><span class="s2">&quot;Muon efficiency&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span></a><span class="p">(</span><span class="s2">&quot;Zenith angle (deg)&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.axvline.html#matplotlib.axes.Axes.axvline" title="matplotlib.axes.Axes.axvline" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity.value" title="astropy.units.Quantity.value" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-attribute"><span class="n">median_zenith</span><span class="o">.</span><span class="n">value</span></a><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_observation_clustering_001.png" srcset="../../_images/sphx_glr_observation_clustering_001.png" alt="observation clustering" class = "sphx-glr-single-img"/><p>This shows the observations grouped by zenith angle. The diamonds
@@ -735,7 +692,7 @@ are observations which have a zenith angle less than the median value,
 whilst the circles are observations above the median.</p>
 <p>The <code class="xref py py-obj docutils literal notranslate"><span class="pre">grouped_observations</span></code> provide a list of <a class="reference internal" href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code></a>
 which can be utilised in the usual way to show the various properties
-of the observations i.e. see the <a class="reference internal" href="../data/cta.html"><span class="doc">CTA with Gammapy</span></a> tutorial.</p>
+of the observations i.e. see the <a class="reference internal" href="../data/cta.html"><span class="doc">CTAO with Gammapy</span></a> tutorial.</p>
 </section>
 <section id="hierarchical-clustering-of-observations">
 <h2>Hierarchical clustering of observations<a class="headerlink" href="#hierarchical-clustering-of-observations" title="Link to this heading">#</a></h2>
@@ -748,12 +705,12 @@ the variance of both edisp and psf within a specific group to limit the error
 on the quantity when they are stacked at the dataset level.</p>
 <p>In this example, the irf features are computed for the <code class="xref py py-obj docutils literal notranslate"><span class="pre">edisp-res</span></code> and
 <code class="xref py py-obj docutils literal notranslate"><span class="pre">psf-radius</span></code> at 1 TeV. This is stored as a <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a>, as shown below.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source_position</span></a></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a></a><span class="p">(</span><span class="mf">329.71693826</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a></a><span class="p">,</span> <span class="o">-</span><span class="mf">30.2255890</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a></a><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">)</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">names</span></a></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">,</span> <span class="s2">&quot;psf-radius&quot;</span><span class="p">]</span>
-<a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.get_irfs_features.html#gammapy.data.get_irfs_features" title="gammapy.data.get_irfs_features" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-function"><a href="../../api/gammapy.data.get_irfs_features.html#gammapy.data.get_irfs_features" title="gammapy.data.get_irfs_features" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-function"><span class="n">get_irfs_features</span></a></a><span class="p">(</span>
-    <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observations</span></a></a><span class="p">,</span> <span class="n">energy_true</span><span class="o">=</span><span class="s2">&quot;1 TeV&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source_position</span></a></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">names</span></a></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">names</span></a></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source_position</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="mf">329.71693826</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span> <span class="o">-</span><span class="mf">30.2255890</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">names</span></a> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">,</span> <span class="s2">&quot;psf-radius&quot;</span><span class="p">]</span>
+<a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.get_irfs_features.html#gammapy.data.get_irfs_features" title="gammapy.data.get_irfs_features" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-function"><span class="n">get_irfs_features</span></a><span class="p">(</span>
+    <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observations</span></a><span class="p">,</span> <span class="n">energy_true</span><span class="o">=</span><span class="s2">&quot;1 TeV&quot;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">source_position</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">names</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">names</span></a>
 <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     edisp-res      obs_id      psf-radius
@@ -784,8 +741,8 @@ on the quantity when they are stacked at the dataset level.</p>
 </div>
 <p>Compute standardized features by removing the mean and scaling to unit
 variance:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">scaled_features_irfs</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler" title="gammapy.utils.cluster.standard_scaler" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><a href="../../api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler" title="gammapy.utils.cluster.standard_scaler" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">standard_scaler</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">scaled_features_irfs</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">scaled_features_irfs</span></a> <span class="o">=</span> <a href="../../api/gammapy.utils.cluster.standard_scaler.html#gammapy.utils.cluster.standard_scaler" title="gammapy.utils.cluster.standard_scaler" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">standard_scaler</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">scaled_features_irfs</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     edisp-res       obs_id       psf-radius
@@ -818,10 +775,10 @@ this table into <code class="docutils literal notranslate"><span class="pre">t=2
 In this case, we choose to cluster the observations into two groups.
 We can print this table to show the corresponding label which has been
 added to the previous <code class="docutils literal notranslate"><span class="pre">feature_irfs</span></code> table.</p>
-<p>The arguments for <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.fcluster.html#scipy.cluster.hierarchy.fcluster" title="(in SciPy v1.13.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fcluster</span></code></a> are passed as
+<p>The arguments for <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.fcluster.html#scipy.cluster.hierarchy.fcluster" title="(in SciPy v1.14.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fcluster</span></code></a> are passed as
 a dictionary here.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.utils.cluster.hierarchical_clustering.html#gammapy.utils.cluster.hierarchical_clustering" title="gammapy.utils.cluster.hierarchical_clustering" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><a href="../../api/gammapy.utils.cluster.hierarchical_clustering.html#gammapy.utils.cluster.hierarchical_clustering" title="gammapy.utils.cluster.hierarchical_clustering" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">hierarchical_clustering</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">scaled_features_irfs</span></a></a><span class="p">,</span> <span class="n">fcluster_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a> <span class="o">=</span> <a href="../../api/gammapy.utils.cluster.hierarchical_clustering.html#gammapy.utils.cluster.hierarchical_clustering" title="gammapy.utils.cluster.hierarchical_clustering" class="sphx-glr-backref-module-gammapy-utils-cluster sphx-glr-backref-type-py-function"><span class="n">hierarchical_clustering</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">scaled_features_irfs</span></a><span class="p">,</span> <span class="n">fcluster_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;t&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     edisp-res       obs_id       psf-radius      labels
@@ -851,34 +808,34 @@ a dictionary here.</p>
 </div>
 <p>Finally, <code class="docutils literal notranslate"><span class="pre">observations.group_by_label</span></code> creates a dictionary containing <code class="docutils literal notranslate"><span class="pre">t</span></code>
 <a class="reference internal" href="../../api/gammapy.data.Observations.html#gammapy.data.Observations" title="gammapy.data.Observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code></a> objects by grouping the similar labels.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_clusters</span></a></a> <span class="o">=</span> <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.group_by_label" title="gammapy.data.Observations.group_by_label" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.group_by_label" title="gammapy.data.Observations.group_by_label" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">observations</span><span class="o">.</span><span class="n">group_by_label</span></a></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a></a><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_clusters</span></a></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_clusters</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.group_by_label" title="gammapy.data.Observations.group_by_label" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">observations</span><span class="o">.</span><span class="n">group_by_label</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">obs_clusters</span></a><span class="p">)</span>
 
 
-<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_1</span></a></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a></a><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
-<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_2</span></a></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a></a><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fix</span></a></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span></a></a><span class="p">(</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span></a></a><span class="p">(</span><span class="s2">&quot;psf-radius&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_1</span></a></a><span class="p">][</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">],</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_1</span></a></a><span class="p">][</span><span class="s2">&quot;psf-radius&quot;</span><span class="p">],</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_1</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
+<a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_2</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features</span></a><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fix</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html#matplotlib.axes.Axes.set_ylabel" title="matplotlib.axes.Axes.set_ylabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span></a><span class="p">(</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html#matplotlib.axes.Axes.set_xlabel" title="matplotlib.axes.Axes.set_xlabel" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span></a><span class="p">(</span><span class="s2">&quot;psf-radius&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_1</span></a><span class="p">][</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">],</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_1</span></a><span class="p">][</span><span class="s2">&quot;psf-radius&quot;</span><span class="p">],</span>
     <span class="s2">&quot;d&quot;</span><span class="p">,</span>
     <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span>
     <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Group 1&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_2</span></a></a><span class="p">][</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">],</span>
-    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_2</span></a></a><span class="p">][</span><span class="s2">&quot;psf-radius&quot;</span><span class="p">],</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html#matplotlib.axes.Axes.plot" title="matplotlib.axes.Axes.plot" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_2</span></a><span class="p">][</span><span class="s2">&quot;edisp-res&quot;</span><span class="p">],</span>
+    <a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">features_irfs</span></a><span class="p">[</span><a href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_2</span></a><span class="p">][</span><span class="s2">&quot;psf-radius&quot;</span><span class="p">],</span>
     <span class="s2">&quot;o&quot;</span><span class="p">,</span>
     <span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span>
     <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Group 2&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span></a></a><span class="p">()</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a></a><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span></a><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_observation_clustering_002.png" srcset="../../_images/sphx_glr_observation_clustering_002.png" alt="observation clustering" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_1&#39;: &lt;gammapy.data.observations.Observations object at 0x7a4d86bad220&gt;, &#39;group_2&#39;: &lt;gammapy.data.observations.Observations object at 0x7a4d86bad3d0&gt;}
+<img src="../../_images/sphx_glr_observation_clustering_002.png" srcset="../../_images/sphx_glr_observation_clustering_002.png" alt="observation clustering" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;group_1&#39;: &lt;gammapy.data.observations.Observations object at 0x781c10b09010&gt;, &#39;group_2&#39;: &lt;gammapy.data.observations.Observations object at 0x781c10b08590&gt;}
 </pre></div>
 </div>
 <p>The groups here are divided by the quality of the IRFs values <code class="docutils literal notranslate"><span class="pre">edisp-res</span></code>
@@ -890,13 +847,17 @@ specific case) separate datasets. These can then be jointly fitted using the
 <a class="reference internal" href="../analysis-3d/analysis_mwl.html"><span class="doc">Multi instrument joint 3D and 1D analysis</span></a> tutorial.</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-observation-clustering-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/observation_clustering.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/observation_clustering.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" style="width: 150px;" />
+</a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f35633996f4b1e73bdc201360d64927f/observation_clustering.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">observation_clustering.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/393046b6b739ad08bb2a859cbed5922d/observation_clustering.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">observation_clustering.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/f49aa1b6b6eeb66ac89f34f562b16f06/observation_clustering.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">observation_clustering.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -914,7 +875,8 @@ specific case) separate datasets. These can then be jointly fitted using the
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -959,8 +921,8 @@ specific case) separate datasets. These can then be jointly fitted using the
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -977,23 +939,32 @@ specific case) separate datasets. These can then be jointly fitted using the
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

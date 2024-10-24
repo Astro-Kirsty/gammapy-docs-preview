@@ -16,57 +16,62 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-
-  
-  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=3252ec55" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=203afaf9" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
     <script src="../../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../../_static/documentation_options.js?v=1f75dfce"></script>
-    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../../_static/copybutton.js?v=30646c52"></script>
-    <script src="../../../_static/design-tabs.js?v=36754332"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user-guide/model-gallery/spectral/plot_naima';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
         </script>
+    <script src="../../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Piecewise norm spectral model" href="plot_piecewise_norm_spectral.html" />
-    <link rel="prev" title="Log parabola spectral norm model" href="plot_logparabola_norm_spectral.html" />
+    <link rel="next" title="Log parabola spectral norm model" href="plot_logparabola_norm_spectral.html" />
+    <link rel="prev" title="EBL absorption spectral model" href="plot_absorbed.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="25 Jun 2024"/>
+  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
+    <meta name="docbuild:last-update" content="24 Oct 2024"/>
   </head>
   
   
@@ -82,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../../search.html"
       method="get">
@@ -102,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -110,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,7 +113,7 @@
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -129,6 +122,8 @@
     
       <div class="navbar-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../../../index.html">
@@ -141,7 +136,7 @@
     
     
     <img src="../../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <script>document.write(`<img src="../../../_static/gammapy_logo_nav.png" class="logo__image only-dark" alt="gammapy vX.Y.Z - Home"/>`);</script>
+    <img src="../../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -153,50 +148,50 @@
     <div class="me-auto navbar-header-items__center">
       
         <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../../index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../development/index.html">
     Developer guide
   </a>
 </li>
 
-            <li class="nav-item dropdown pst-header-nav-item">
+            <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
                     More
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class="nav-item ">
+<li class=" ">
   <a class="nav-link dropdown-item nav-internal" href="../../../release-notes/index.html">
     Release notes
   </a>
@@ -216,55 +211,35 @@
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-      
-        <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
       
-        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+        <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -275,7 +250,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -287,7 +262,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -299,7 +274,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -311,20 +286,16 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -338,7 +309,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -350,45 +322,45 @@ document.write(`
           
           
             <div class="navbar-item">
-<nav class="navbar-nav">
+<nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../getting-started/index.html">
     Getting started
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item current active">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../../index.html">
     User guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../tutorials/index.html">
     Tutorials
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../api-reference/index.html">
     API reference
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../development/index.html">
     Developer guide
   </a>
 </li>
 
 
-<li class="nav-item pst-header-nav-item">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../release-notes/index.html">
     Release notes
   </a>
@@ -405,42 +377,26 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-3"
-      type="button"
-      class="version-switcher__button btn btn-sm navbar-btn dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-3"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-3"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-3">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
-  </div>
-`);
-</script></div>
-        
-          <div class="navbar-item">
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
   </button>
-`);
-</script></div>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
-          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+          <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
           
@@ -451,7 +407,7 @@ document.write(`
           
           
           
-          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-github-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
         </li>
         <li class="nav-item">
@@ -463,7 +419,7 @@ document.write(`
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-twitter-square fa-lg" aria-hidden="true"></i></span>
+          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
@@ -475,7 +431,7 @@ document.write(`
           
           
           
-          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fab fa-slack fa-lg" aria-hidden="true"></i></span>
+          <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
 </ul></div>
@@ -513,44 +469,44 @@ document.write(`
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../howto.html">How To</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Model gallery</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_shell.html">Shell spatial model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_template.html">Template spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spatial/plot_constant.html">Constant spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_disk.html">Disk spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spatial/plot_gauss.html">Gaussian spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spatial/plot_gen_gauss.html">Generalized gaussian spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_piecewise_norm_spatial.html">Piecewise norm spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_point.html">Point spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_shell.html">Shell spatial model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_disk.html">Disk spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../spatial/plot_shell2.html">Shell2 spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_template.html">Template spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_absorbed.html">EBL absorption spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_broken_powerlaw.html">Broken power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_compound.html">Compound spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_constant_spectral.html">Constant spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_exp_cutoff_powerlaw.html">Exponential cutoff power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_exp_cutoff_powerlaw_3fgl.html">Exponential cutoff power law spectral model used for 3FGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_exp_cutoff_powerlaw_norm_spectral.html">Exponential cutoff power law norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_gauss_spectral.html">Gaussian spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_logparabola.html">Log parabola spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_logparabola_norm_spectral.html">Log parabola spectral norm model</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Naima spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_piecewise_norm_spectral.html">Piecewise  norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_powerlaw.html">Power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_powerlaw2.html">Power law 2 spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_point.html">Point spatial model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spatial/plot_piecewise_norm_spatial.html">Piecewise norm spatial model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_powerlaw_norm_spectral.html">Power law norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_smooth_broken_powerlaw.html">Smooth broken power law spectral model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_super_exp_cutoff_powerlaw_3fgl.html">Super exponential cutoff power law model used for 3FGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plot_super_exp_cutoff_powerlaw_4fgl.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_gauss_spectral.html">Gaussian spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_exp_cutoff_powerlaw.html">Exponential cutoff power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_smooth_broken_powerlaw.html">Smooth broken power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_piecewise_norm_spectral.html">Piecewise  norm spectral model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_super_exp_cutoff_powerlaw_4fgl_dr1.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR1 (and DR2)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plot_template_spectral.html">Template spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_constant_temporal.html">Constant temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_absorbed.html">EBL absorption spectral model</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Naima spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_logparabola_norm_spectral.html">Log parabola spectral norm model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_compound.html">Compound spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_super_exp_cutoff_powerlaw_4fgl.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_constant_spectral.html">Constant spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_powerlaw.html">Power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_exp_cutoff_powerlaw_norm_spectral.html">Exponential cutoff power law norm spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_logparabola.html">Log parabola spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_powerlaw2.html">Power law 2 spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_exp_cutoff_powerlaw_3fgl.html">Exponential cutoff power law spectral model used for 3FGL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot_broken_powerlaw.html">Broken power law spectral model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_template_phase_temporal.html">Phase curve temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../temporal/plot_expdecay_temporal.html">ExpDecay temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_gaussian_temporal.html">Gaussian temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../temporal/plot_generalized_gaussian_temporal.html">Generalized Gaussian temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_template_temporal.html">Light curve temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_constant_temporal.html">Constant temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_sine_temporal.html">Sine temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../temporal/plot_linear_temporal.html">Linear temporal model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../temporal/plot_powerlaw_temporal.html">PowerLaw temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_sine_temporal.html">Sine temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_template_phase_temporal.html">Phase curve temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_template_temporal.html">Light curve temporal model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../temporal/plot_gaussian_temporal.html">Gaussian temporal model</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference external" href="https://gammapy.github.io/gammapy-recipes">Gammapy recipes</a></li>
@@ -582,8 +538,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -598,7 +552,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Model gallery</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Naima spectral model</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Naima spectral model</span></li>
   </ul>
 </nav>
 </div>
@@ -641,44 +595,44 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">naima</span>
-<span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">Models</span></a></a><span class="p">,</span> <a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">NaimaSpectralModel</span></a></a><span class="p">,</span> <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a></a>
+<span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">Models</span></a><span class="p">,</span> <a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">NaimaSpectralModel</span></a><span class="p">,</span> <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a>
 
-<a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">particle_distribution</span></a></a> <span class="o">=</span> <a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class"><span class="n">naima</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">ExponentialCutoffPowerLaw</span></a></a><span class="p">(</span>
-    <span class="mf">1e30</span> <span class="o">/</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">eV</span></a></a><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a></a><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">30</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a></a>
+<a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">particle_distribution</span></a> <span class="o">=</span> <a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class"><span class="n">naima</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">ExponentialCutoffPowerLaw</span></a><span class="p">(</span>
+    <span class="mf">1e30</span> <span class="o">/</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">eV</span></a><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">30</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a>
 <span class="p">)</span>
-<a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radiative_model</span></a></a> <span class="o">=</span> <a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class"><span class="n">naima</span><span class="o">.</span><span class="n">radiative</span><span class="o">.</span><span class="n">InverseCompton</span></a></a><span class="p">(</span>
-    <a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">particle_distribution</span></a></a><span class="p">,</span>
-    <span class="n">seed_photon_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;CMB&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;FIR&quot;</span><span class="p">,</span> <span class="mf">26.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">K</span></a></a><span class="p">,</span> <span class="mf">0.415</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">eV</span></a></a> <span class="o">/</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">cm</span></a></a><span class="o">**</span><span class="mi">3</span><span class="p">]],</span>
-    <span class="n">Eemin</span><span class="o">=</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a></a><span class="p">,</span>
+<a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radiative_model</span></a> <span class="o">=</span> <a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class"><span class="n">naima</span><span class="o">.</span><span class="n">radiative</span><span class="o">.</span><span class="n">InverseCompton</span></a><span class="p">(</span>
+    <a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.ExponentialCutoffPowerLaw" title="naima.models.ExponentialCutoffPowerLaw" class="sphx-glr-backref-module-naima-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">particle_distribution</span></a><span class="p">,</span>
+    <span class="n">seed_photon_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;CMB&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;FIR&quot;</span><span class="p">,</span> <span class="mf">26.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">K</span></a><span class="p">,</span> <span class="mf">0.415</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">eV</span></a> <span class="o">/</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">cm</span></a><span class="o">**</span><span class="mi">3</span><span class="p">]],</span>
+    <span class="n">Eemin</span><span class="o">=</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a><span class="p">,</span>
 <span class="p">)</span>
 
-<a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">NaimaSpectralModel</span></a></a><span class="p">(</span><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radiative_model</span></a></a><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">1.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">kpc</span></a></a><span class="p">)</span>
+<a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">NaimaSpectralModel</span></a><span class="p">(</span><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radiative_model</span></a><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">1.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">kpc</span></a><span class="p">)</span>
 
-<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a></a> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&quot;energy_bounds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a></a><span class="p">,</span> <span class="mi">80</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a></a><span class="p">],</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;energy_bounds&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">GeV</span></a><span class="p">,</span> <span class="mi">80</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">],</span>
     <span class="s2">&quot;sed_type&quot;</span><span class="p">:</span> <span class="s2">&quot;e2dnde&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 
 <span class="c1"># Plot the total inverse Compton emission</span>
-<a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;IC (total)&quot;</span><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a></a><span class="p">)</span>
+<a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;IC (total)&quot;</span><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a><span class="p">)</span>
 
 <span class="c1"># Plot the separate contributions from each seed photon field</span>
-<span class="k">for</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ls</span></a></a> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="s2">&quot;CMB&quot;</span><span class="p">,</span> <span class="s2">&quot;FIR&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;--&quot;</span><span class="p">]):</span>
-    <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">NaimaSpectralModel</span></a></a><span class="p">(</span><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radiative_model</span></a></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a></a><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">1.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">kpc</span></a></a><span class="p">)</span>
-    <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span><span class="o">.</span><span class="n">plot</span></a></a><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;IC (</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a></a><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ls</span></a></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ls</span></a></a><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a></a><span class="p">)</span>
+<span class="k">for</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ls</span></a> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="s2">&quot;CMB&quot;</span><span class="p">,</span> <span class="s2">&quot;FIR&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;--&quot;</span><span class="p">]):</span>
+    <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel" title="gammapy.modeling.models.NaimaSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">NaimaSpectralModel</span></a><span class="p">(</span><a href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.InverseCompton" title="naima.radiative.InverseCompton" class="sphx-glr-backref-module-naima-radiative sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radiative_model</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">1.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">kpc</span></a><span class="p">)</span>
+    <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;IC (</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">seed</span></a><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ls</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ls</span></a><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">opts</span></a><span class="p">)</span>
 
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" title="matplotlib.pyplot.legend" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" title="matplotlib.pyplot.legend" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a></a><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib.pyplot.legend" title="matplotlib.pyplot.legend" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
+<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.grid.html#matplotlib.pyplot.grid" title="matplotlib.pyplot.grid" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span></a><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_plot_naima_001.png" srcset="../../../_images/sphx_glr_plot_naima_001.png" alt="plot naima" class = "sphx-glr-single-img"/></section>
 <section id="yaml-representation">
 <h2>YAML representation<a class="headerlink" href="#yaml-representation" title="Link to this heading">#</a></h2>
 <p>Here is an example YAML file using the model:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a></a><span class="p">(</span><span class="n">spectral_model</span><span class="o">=</span><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;naima-model&quot;</span><span class="p">)</span>
-<a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">models</span></a></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">Models</span></a></a><span class="p">([</span><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a></a><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a><span class="p">(</span><span class="n">spectral_model</span><span class="o">=</span><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;naima-model&quot;</span><span class="p">)</span>
+<a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">models</span></a> <span class="o">=</span> <a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">Models</span></a><span class="p">([</span><a href="../../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a><span class="p">])</span>
 
-<span class="nb">print</span><span class="p">(</span><a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.to_yaml" title="gammapy.modeling.models.Models.to_yaml" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-method"><a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.to_yaml" title="gammapy.modeling.models.Models.to_yaml" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-method"><span class="n">models</span><span class="o">.</span><span class="n">to_yaml</span></a></a><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><a href="../../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.to_yaml" title="gammapy.modeling.models.Models.to_yaml" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-method"><span class="n">models</span><span class="o">.</span><span class="n">to_yaml</span></a><span class="p">())</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>components:
@@ -696,7 +650,6 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
             frozen: false
             interp: lin
             scale_method: scale10
-            is_norm: false
         -   name: e_0
             value: 10.0
             unit: TeV
@@ -706,7 +659,6 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
             frozen: false
             interp: lin
             scale_method: scale10
-            is_norm: false
         -   name: alpha
             value: 3.0
             unit: &#39;&#39;
@@ -716,7 +668,6 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
             frozen: false
             interp: lin
             scale_method: scale10
-            is_norm: false
         -   name: e_cutoff
             value: 30.0
             unit: TeV
@@ -726,7 +677,6 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
             frozen: false
             interp: lin
             scale_method: scale10
-            is_norm: false
         -   name: beta
             value: 1.0
             unit: &#39;&#39;
@@ -736,22 +686,25 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
             frozen: false
             interp: lin
             scale_method: scale10
-            is_norm: false
 metadata:
-    creator: Gammapy 1.3.dev284+g868b2a7d7.d20240510
-    date: &#39;2024-05-10T13:47:30.295342&#39;
+    creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
+    date: &#39;2024-10-24T19:05:18.789496&#39;
     origin: null
 </pre></div>
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-user-guide-model-gallery-spectral-plot-naima-py">
 <div class="binder-badge docutils container">
-<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/user-guide/model-gallery/spectral/plot_naima.ipynb"><img alt="Launch binder" src="../../../_images/binder_badge_logo9.svg" width="150px" /></a>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/user-guide/model-gallery/spectral/plot_naima.ipynb"><img alt="Launch binder" src="../../../_images/binder_badge_logo9.svg" style="width: 150px;" />
+</a>
 </div>
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/1da2d20e4827cb929843382d29b4df4b/plot_naima.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_naima.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/556a17d5de3ac9fe35b5686d819b1ac4/plot_naima.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_naima.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../../_downloads/760eb275a0d8a9d11ea857eb956132f2/plot_naima.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_naima.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -769,7 +722,8 @@ metadata:
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -807,8 +761,8 @@ metadata:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -825,23 +779,32 @@ metadata:
   </p>
 </div>
       
-        <div class="footer-item">
-
-  <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    <br/>
-  </p>
-</div>
-      
     </div>
   
+  
+    <div class="footer-items__center">
+      
+        <div class="footer-item"><p class="last-updated">
+  Last updated on 24 Oct 2024.
+  <br/>
+</p></div>
+      
+    </div>
   
   
     <div class="footer-items__end">
       
         <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>

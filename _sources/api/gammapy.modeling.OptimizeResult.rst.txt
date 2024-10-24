@@ -21,6 +21,12 @@ OptimizeResult
       ~OptimizeResult.total_stat
       ~OptimizeResult.trace
 
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+
+      ~OptimizeResult.to_dict
+
    .. rubric:: Attributes Documentation
 
    .. autoattribute:: backend
@@ -33,3 +39,7 @@ OptimizeResult
    .. autoattribute:: success
    .. autoattribute:: total_stat
    .. autoattribute:: trace
+
+   .. rubric:: Methods Documentation
+
+   .. automethod:: to_dict
