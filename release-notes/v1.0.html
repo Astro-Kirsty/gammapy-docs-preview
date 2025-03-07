@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,10 +55,11 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'release-notes/v1.0';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
@@ -70,8 +69,7 @@
     <link rel="prev" title="1.0.1 (March 14th, 2023)" href="v1.0.1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" current active">
-  <a class="nav-link dropdown-item nav-internal" href="index.html">
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -446,6 +428,9 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="v1.3.html">1.3 (November 26th, 2024)</a></li>
+</ul>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="v1.2.html">1.2 (February 29th 2024)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -531,9 +516,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -695,49 +685,49 @@ has been changed.</p></li>
 <h2>Pull Requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
 <p>This list is incomplete. Small improvements and bug fixes are not listed here.</p>
 <ul class="simple">
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4119">#4119</a>] simplification of np.array(set(labels)) (Mireia Nievas-Rosillo)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4115">#4115</a>] Add code of conduct file (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4113">#4113</a>] Move binder configuration to gammapy-webpage (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4112">#4112</a>] Add pre commit hooks and black CI (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4108">#4108</a>] Add tests with HAWC data (Laura Olivera-Nieto)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4107">#4107</a>] Implement peek methods for map evaluator and psf kernel (luca GIUNTI)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4106">#4106</a>] Reactivate gammapy download command (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4105">#4105</a>] Fix WcsNDMap upsampling along axis (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4103">#4103</a>] Activate binder for tutorials (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4098">#4098</a>] Fixed test failure after introducing new MAGIC RAD_MAX files (Cosimo Nigro)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4095">#4095</a>] Filling of the glossary (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4093">#4093</a>] Update Astropy package template (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4089">#4089</a>] Change sign of the value returned by CountsStatistic.compute_errn (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4088">#4088</a>] Add sample_coord for RegionNDMap (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4084">#4084</a>] Adapt TemplateTemporalModel to use a RegionNDMap internally (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4083">#4083</a>] Implement Observation.copy() and tests (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4080">#4080</a>] Use sphinx gallery for tutorials (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4079">#4079</a>] Update of the mailmap for the git push management (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4076">#4076</a>] Allow for DRIFT mode observations in the MapDatasetMaker (Laura Olivera-Nieto)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4075">#4075</a>] Validate nside parameter for HpxGeom  (luca GIUNTI)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4073">#4073</a>] Make spatial coordinates optional in RegionNDMap.interp_by_coord() (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4071">#4071</a>] Add tag on DM Annihilation spectral model (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4067">#4067</a>] Fix bug on TemporalModel.sample_time() (Fabio PINTORE)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4058">#4058</a>] Serialisation in the primary HDU of the Dataset name (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4054">#4054</a>] Update temporal model docs (aaguasca)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4051">#4051</a>] Using astropy Table indices on ObservationTable (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4044">#4044</a>] Addition of a tutorial about the 1D analysis with the HLI (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4043">#4043</a>] Colour blind friendly visualisations (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4037">#4037</a>] Implement IRF.slice_by_idx() (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4026">#4026</a>] Fix TemplateSpatialModel overwrite (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4025">#4025</a>] Add support for PSF in reco energy (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4024">#4024</a>] Add HowTo for adding phase column  (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4022">#4022</a>] Introduce consistent .rename_axes and .rename API for maps (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4018">#4018</a>] Computation of the WcsMap kernel at the nearest valid exposure (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4017">#4017</a>] Introduce a phase curve model (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4015">#4015</a>] Allow to stack mask_fit in Dataset.stack (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4014">#4014</a>] Avoid unnecessary copy in Map.stack (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4013">#4013</a>] Fix zeros errors in models created from 3HWC catalog (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4000">#4000</a>] MNT: Raise error rather than silently proceed (Brigitta Sipőcz)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/3956">#3956</a>] Safe mask range on the 1D spectrum tutorial (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/3950">#3950</a>] PIG 23 - Gammapy Release Cycle and Version Numbering (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/3925">#3925</a>] Temporal model integration (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/3862">#3862</a>] Add Map.reproject method (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4119">[#4119]</a> simplification of np.array(set(labels)) (Mireia Nievas-Rosillo)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4115">[#4115]</a> Add code of conduct file (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4113">[#4113]</a> Move binder configuration to gammapy-webpage (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4112">[#4112]</a> Add pre commit hooks and black CI (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4108">[#4108]</a> Add tests with HAWC data (Laura Olivera-Nieto)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4107">[#4107]</a> Implement peek methods for map evaluator and psf kernel (luca GIUNTI)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4106">[#4106]</a> Reactivate gammapy download command (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4105">[#4105]</a> Fix WcsNDMap upsampling along axis (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4103">[#4103]</a> Activate binder for tutorials (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4098">[#4098]</a> Fixed test failure after introducing new MAGIC RAD_MAX files (Cosimo Nigro)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4095">[#4095]</a> Filling of the glossary (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4093">[#4093]</a> Update Astropy package template (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4089">[#4089]</a> Change sign of the value returned by CountsStatistic.compute_errn (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4088">[#4088]</a> Add sample_coord for RegionNDMap (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4084">[#4084]</a> Adapt TemplateTemporalModel to use a RegionNDMap internally (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4083">[#4083]</a> Implement Observation.copy() and tests (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4080">[#4080]</a> Use sphinx gallery for tutorials (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4079">[#4079]</a> Update of the mailmap for the git push management (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4076">[#4076]</a> Allow for DRIFT mode observations in the MapDatasetMaker (Laura Olivera-Nieto)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4075">[#4075]</a> Validate nside parameter for HpxGeom  (luca GIUNTI)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4073">[#4073]</a> Make spatial coordinates optional in RegionNDMap.interp_by_coord() (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4071">[#4071]</a> Add tag on DM Annihilation spectral model (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4067">[#4067]</a> Fix bug on TemporalModel.sample_time() (Fabio PINTORE)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4058">[#4058]</a> Serialisation in the primary HDU of the Dataset name (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4054">[#4054]</a> Update temporal model docs (aaguasca)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4051">[#4051]</a> Using astropy Table indices on ObservationTable (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4044">[#4044]</a> Addition of a tutorial about the 1D analysis with the HLI (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4043">[#4043]</a> Colour blind friendly visualisations (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4037">[#4037]</a> Implement IRF.slice_by_idx() (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4026">[#4026]</a> Fix TemplateSpatialModel overwrite (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4025">[#4025]</a> Add support for PSF in reco energy (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4024">[#4024]</a> Add HowTo for adding phase column  (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4022">[#4022]</a> Introduce consistent .rename_axes and .rename API for maps (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4018">[#4018]</a> Computation of the WcsMap kernel at the nearest valid exposure (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4017">[#4017]</a> Introduce a phase curve model (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4015">[#4015]</a> Allow to stack mask_fit in Dataset.stack (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4014">[#4014]</a> Avoid unnecessary copy in Map.stack (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4013">[#4013]</a> Fix zeros errors in models created from 3HWC catalog (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4000">[#4000]</a> MNT: Raise error rather than silently proceed (Brigitta Sipőcz)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/3956">[#3956]</a> Safe mask range on the 1D spectrum tutorial (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/3950">[#3950]</a> PIG 23 - Gammapy Release Cycle and Version Numbering (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/3925">[#3925]</a> Temporal model integration (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/3862">[#3862]</a> Add Map.reproject method (Quentin Remy)</p></li>
 </ul>
 </section>
 </section>
@@ -775,13 +765,13 @@ has been changed.</p></li>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/release-notes/v1.0.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/release-notes/v1.0.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -796,8 +786,8 @@ has been changed.</p></li>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -808,23 +798,19 @@ has been changed.</p></li>
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -832,14 +818,15 @@ has been changed.</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -101,7 +101,7 @@ Here is an example YAML file using the model:
             parameters:
             -   name: amplitude
                 value: 1.0e-12
-                unit: cm-2 s-1
+                unit: s-1 cm-2
             -   name: index
                 value: 2.3
             -   name: emin
@@ -111,8 +111,8 @@ Here is an example YAML file using the model:
                 value: 10.0
                 unit: TeV
     metadata:
-        creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
-        date: '2024-10-24T19:05:21.393034'
+        creator: Gammapy 2.0.dev513+ge63c183da
+        date: '2025-03-07T08:42:12.340608'
         origin: null
 
 

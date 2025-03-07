@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,28 +26,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -56,10 +54,11 @@
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/gammapy/datasets/map';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../../_static/gammapy_logo.ico"/>
@@ -67,8 +66,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -132,8 +130,8 @@
     
     
     
-    <img src="../../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -182,21 +180,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -236,6 +226,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -249,18 +247,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -391,6 +377,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -414,18 +408,6 @@
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
           <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
@@ -437,9 +419,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -487,38 +474,42 @@
                   
   <h1>Source code for gammapy.datasets.map</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">median_abs_deviation</span> <span class="k">as</span> <span class="n">mad</span>
-<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
-<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-<span class="kn">from</span> <span class="nn">astropy.table</span> <span class="kn">import</span> <span class="n">Table</span>
-<span class="kn">from</span> <span class="nn">regions</span> <span class="kn">import</span> <span class="n">CircleSkyRegion</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">GTI</span><span class="p">,</span> <span class="n">PointingMode</span>
-<span class="kn">from</span> <span class="nn">gammapy.irf</span> <span class="kn">import</span> <span class="n">EDispKernelMap</span><span class="p">,</span> <span class="n">EDispMap</span><span class="p">,</span> <span class="n">PSFKernel</span><span class="p">,</span> <span class="n">PSFMap</span><span class="p">,</span> <span class="n">RecoPSFMap</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">LabelMapAxis</span><span class="p">,</span> <span class="n">Map</span><span class="p">,</span> <span class="n">MapAxes</span><span class="p">,</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">WcsGeom</span>
-<span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">DatasetModels</span><span class="p">,</span> <span class="n">FoVBackgroundModel</span><span class="p">,</span> <span class="n">Models</span>
-<span class="kn">from</span> <span class="nn">gammapy.stats</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">median_abs_deviation</span> <span class="k">as</span> <span class="n">mad</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">fits</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.table</span><span class="w"> </span><span class="kn">import</span> <span class="n">Table</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">regions</span><span class="w"> </span><span class="kn">import</span> <span class="n">CircleSkyRegion</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">gammapy.datasets.evaluator</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">meval</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">GTI</span><span class="p">,</span> <span class="n">PointingMode</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.irf</span><span class="w"> </span><span class="kn">import</span> <span class="n">EDispKernelMap</span><span class="p">,</span> <span class="n">EDispMap</span><span class="p">,</span> <span class="n">PSFKernel</span><span class="p">,</span> <span class="n">PSFMap</span><span class="p">,</span> <span class="n">RecoPSFMap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps</span><span class="w"> </span><span class="kn">import</span> <span class="n">LabelMapAxis</span><span class="p">,</span> <span class="n">Map</span><span class="p">,</span> <span class="n">MapAxes</span><span class="p">,</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">WcsGeom</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">DatasetModels</span><span class="p">,</span> <span class="n">FoVBackgroundModel</span><span class="p">,</span> <span class="n">Models</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">CashCountsStatistic</span><span class="p">,</span>
     <span class="n">WStatCountsStatistic</span><span class="p">,</span>
     <span class="n">cash</span><span class="p">,</span>
     <span class="n">cash_sum_cython</span><span class="p">,</span>
+    <span class="n">weighted_cash_sum_cython</span><span class="p">,</span>
     <span class="n">get_wstat_mu_bkg</span><span class="p">,</span>
     <span class="n">wstat</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.fits</span> <span class="kn">import</span> <span class="n">HDULocation</span><span class="p">,</span> <span class="n">LazyFitsData</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.random</span> <span class="kn">import</span> <span class="n">get_random_state</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.scripts</span> <span class="kn">import</span> <span class="n">make_name</span><span class="p">,</span> <span class="n">make_path</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.table</span> <span class="kn">import</span> <span class="n">hstack_columns</span>
-<span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="n">Dataset</span>
-<span class="kn">from</span> <span class="nn">.evaluator</span> <span class="kn">import</span> <span class="n">MapEvaluator</span>
-<span class="kn">from</span> <span class="nn">.metadata</span> <span class="kn">import</span> <span class="n">MapDatasetMetaData</span>
-<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">get_axes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.fits</span><span class="w"> </span><span class="kn">import</span> <span class="n">HDULocation</span><span class="p">,</span> <span class="n">LazyFitsData</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_state</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.scripts</span><span class="w"> </span><span class="kn">import</span> <span class="n">make_name</span><span class="p">,</span> <span class="n">make_path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.table</span><span class="w"> </span><span class="kn">import</span> <span class="n">hstack_columns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.evaluator</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapEvaluator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.metadata</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapDatasetMetaData</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_axes</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;MapDataset&quot;</span><span class="p">,</span>
     <span class="s2">&quot;MapDatasetOnOff&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;MapDatasetWeighted&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;create_empty_map_dataset_from_irfs&quot;</span><span class="p">,</span>
     <span class="s2">&quot;create_map_dataset_geoms&quot;</span><span class="p">,</span>
     <span class="s2">&quot;create_map_dataset_from_observation&quot;</span><span class="p">,</span>
 <span class="p">]</span>
@@ -542,7 +533,7 @@
 
 <div class="viewcode-block" id="create_map_dataset_geoms">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.create_map_dataset_geoms.html#gammapy.datasets.create_map_dataset_geoms">[docs]</a>
-<span class="k">def</span> <span class="nf">create_map_dataset_geoms</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_map_dataset_geoms</span><span class="p">(</span>
     <span class="n">geom</span><span class="p">,</span>
     <span class="n">energy_axis_true</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">migra_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -613,12 +604,31 @@
 
 
 
-<span class="k">def</span> <span class="nf">_default_energy_axis</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">energy_bin_per_decade_max</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_default_energy_axis</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">energy_bin_per_decade_max</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="c1"># number of bins per decade estimated from the energy resolution</span>
     <span class="c1"># such as diff(ereco.edges)/ereco.center ~ min(eres)</span>
-    <span class="n">etrue</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">edges</span>  <span class="c1"># only where psf is defined</span>
-    <span class="n">eres</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">to_edisp_kernel</span><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">)</span><span class="o">.</span><span class="n">get_resolution</span><span class="p">(</span><span class="n">etrue</span><span class="p">)</span>
-    <span class="n">eres</span> <span class="o">=</span> <span class="n">eres</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">eres</span><span class="p">)]</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span> <span class="n">PSFMap</span><span class="p">):</span>
+        <span class="n">etrue</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">energy_name</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="p">,</span> <span class="n">EDispKernelMap</span><span class="p">):</span>
+            <span class="n">ekern</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">get_edisp_kernel</span><span class="p">(</span>
+                <span class="n">energy_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="p">,</span> <span class="n">EDispMap</span><span class="p">):</span>
+            <span class="n">ekern</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">get_edisp_kernel</span><span class="p">(</span>
+                <span class="n">energy_axis</span><span class="o">=</span><span class="n">etrue</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;energy&quot;</span><span class="p">),</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span>
+            <span class="p">)</span>
+        <span class="n">eres</span> <span class="o">=</span> <span class="n">ekern</span><span class="o">.</span><span class="n">get_resolution</span><span class="p">(</span><span class="n">etrue</span><span class="o">.</span><span class="n">center</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span> <span class="s2">&quot;axes&quot;</span><span class="p">):</span>
+        <span class="n">etrue</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># only where psf is defined</span>
+        <span class="k">if</span> <span class="n">position</span><span class="p">:</span>
+            <span class="n">offset</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">pointing</span><span class="o">.</span><span class="n">fixed_icrs</span><span class="o">.</span><span class="n">separation</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+        <span class="n">ekern</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">to_edisp_kernel</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span>
+        <span class="n">eres</span> <span class="o">=</span> <span class="n">ekern</span><span class="o">.</span><span class="n">get_resolution</span><span class="p">(</span><span class="n">etrue</span><span class="o">.</span><span class="n">center</span><span class="p">)</span>
+
+    <span class="n">eres</span> <span class="o">=</span> <span class="n">eres</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">eres</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">eres</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)]</span>
     <span class="k">if</span> <span class="n">eres</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1"># remove outliers</span>
         <span class="n">beyond_mad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">eres</span><span class="p">)</span> <span class="o">-</span> <span class="n">mad</span><span class="p">(</span><span class="n">eres</span><span class="p">)</span> <span class="o">*</span> <span class="n">eres</span><span class="o">.</span><span class="n">unit</span>
@@ -630,22 +640,39 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">nbin_per_decade</span> <span class="o">=</span> <span class="n">energy_bin_per_decade_max</span>
 
-    <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_bounds</span><span class="p">(</span>
-        <span class="n">etrue</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="n">etrue</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+    <span class="n">energy_axis_true</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_bounds</span><span class="p">(</span>
+        <span class="n">etrue</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">etrue</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
         <span class="n">nbin</span><span class="o">=</span><span class="n">nbin_per_decade</span><span class="p">,</span>
         <span class="n">per_decade</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;energy_true&quot;</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="k">return</span> <span class="n">energy_axis</span>
+    <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="s2">&quot;bkg&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="n">observation</span><span class="o">.</span><span class="n">bkg</span><span class="p">:</span>
+        <span class="n">ereco</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">bkg</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">]</span>
+        <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_bounds</span><span class="p">(</span>
+            <span class="n">ereco</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">ereco</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">nbin</span><span class="o">=</span><span class="n">nbin_per_decade</span><span class="p">,</span>
+            <span class="n">per_decade</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">energy_axis_true</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;energy&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">energy_axis_true</span>
 
 
-<span class="k">def</span> <span class="nf">_default_binsz</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_bin_size_min</span><span class="o">=</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_default_binsz</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_bin_size_min</span><span class="o">=</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">):</span>
     <span class="c1"># bin size estimated from the minimal r68 of the psf</span>
-    <span class="n">etrue</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">edges</span>  <span class="c1"># only where psf is defined</span>
-    <span class="n">psf_r68</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">containment_radius</span><span class="p">(</span>
-        <span class="mf">0.68</span><span class="p">,</span> <span class="n">energy_true</span><span class="o">=</span><span class="n">etrue</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
-    <span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span> <span class="n">PSFMap</span><span class="p">):</span>
+        <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">energy_name</span><span class="p">]</span>
+        <span class="n">psf_r68</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">containment_radius</span><span class="p">(</span><span class="mf">0.68</span><span class="p">,</span> <span class="n">energy_axis</span><span class="o">.</span><span class="n">edges</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span> <span class="s2">&quot;axes&quot;</span><span class="p">):</span>
+        <span class="n">etrue</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># only where psf is defined</span>
+        <span class="n">psf_r68</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">containment_radius</span><span class="p">(</span>
+            <span class="mf">0.68</span><span class="p">,</span> <span class="n">energy_true</span><span class="o">=</span><span class="n">etrue</span><span class="o">.</span><span class="n">edges</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.0</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
+        <span class="p">)</span>
+
     <span class="n">psf_r68</span> <span class="o">=</span> <span class="n">psf_r68</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">psf_r68</span><span class="p">)]</span>
     <span class="k">if</span> <span class="n">psf_r68</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="c1"># remove outliers</span>
@@ -658,18 +685,122 @@
     <span class="k">return</span> <span class="n">binsz</span>
 
 
-<span class="k">def</span> <span class="nf">_default_width</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_width_max</span><span class="o">=</span><span class="mi">12</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_default_width</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_width_max</span><span class="o">=</span><span class="mi">12</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">):</span>
     <span class="c1"># width estimated from the rad_max or the offset_max</span>
-    <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">rad_max</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">width</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">rad_max</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span> <span class="n">PSFMap</span><span class="p">):</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span> <span class="s2">&quot;axes&quot;</span><span class="p">):</span>
         <span class="n">width</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;offset&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">edges</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">width</span> <span class="o">=</span> <span class="n">spatial_width_max</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">spatial_width_max</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="create_empty_map_dataset_from_irfs">
+<a class="viewcode-back" href="../../../api/gammapy.datasets.create_empty_map_dataset_from_irfs.html#gammapy.datasets.create_empty_map_dataset_from_irfs">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_empty_map_dataset_from_irfs</span><span class="p">(</span>
+    <span class="n">observation</span><span class="p">,</span>
+    <span class="n">dataset_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">energy_axis_true</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">energy_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">energy_bin_per_decade_max</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">spatial_width</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">spatial_width_max</span><span class="o">=</span><span class="mi">12</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span>
+    <span class="n">spatial_bin_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">spatial_bin_size_min</span><span class="o">=</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a MapDataset, if energy axes, spatial width or bin size are not given</span>
+<span class="sd">    they are determined automatically from the IRFs,</span>
+<span class="sd">    but the estimated value cannot exceed the given limits.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    observation : `~gammapy.data.Observation`</span>
+<span class="sd">        Observation containing the IRFs.</span>
+<span class="sd">    dataset_name : str, optional</span>
+<span class="sd">        Default is None. If None it is determined from the observation ID.</span>
+<span class="sd">    energy_axis_true : `~gammapy.maps.MapAxis`, optional</span>
+<span class="sd">        True energy axis. Default is None.</span>
+<span class="sd">        If None it is determined from the observation IRFs.</span>
+<span class="sd">    energy_axis : `~gammapy.maps.MapAxis`, optional</span>
+<span class="sd">        Reconstructed energy axis. Default is None.</span>
+<span class="sd">        If None it is determined from the observation IRFs.</span>
+<span class="sd">    energy_bin_per_decade_max : int, optional</span>
+<span class="sd">        Maximal number of bin per decade in energy for the reference dataset</span>
+<span class="sd">    spatial_width : `~astropy.units.Quantity`, optional</span>
+<span class="sd">        Spatial window size. Default is None.</span>
+<span class="sd">        If None it is determined from the observation offset max or rad max.</span>
+<span class="sd">    spatial_width_max : `~astropy.quantity.Quantity`, optional</span>
+<span class="sd">        Maximal spatial width. Default is 12 degree.</span>
+<span class="sd">    spatial_bin_size : `~astropy.units.Quantity`, optional</span>
+<span class="sd">        Pixel size. Default is None.</span>
+<span class="sd">        If None it is determined from the observation PSF R68.</span>
+<span class="sd">    spatial_bin_size_min : `~astropy.quantity.Quantity`, optional</span>
+<span class="sd">        Minimal spatial bin size. Default is 0.01 degree.</span>
+<span class="sd">    position : `~astropy.coordinates.SkyCoord`, optional</span>
+<span class="sd">        Center of the geometry. Default is the observation pointing at mid-observation time.</span>
+<span class="sd">    frame: str, optional</span>
+<span class="sd">        frame of the coordinate system. Default is &quot;icrs&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">position</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="s2">&quot;pointing&quot;</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">pointing</span><span class="o">.</span><span class="n">mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">PointingMode</span><span class="o">.</span><span class="n">POINTING</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+                    <span class="s2">&quot;Only datas with fixed pointing in ICRS are supported&quot;</span>
+                <span class="p">)</span>
+            <span class="n">position</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">pointing</span><span class="o">.</span><span class="n">fixed_icrs</span>
+
+    <span class="k">if</span> <span class="n">spatial_width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">spatial_width</span> <span class="o">=</span> <span class="n">_default_width</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_width_max</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">spatial_bin_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">spatial_bin_size</span> <span class="o">=</span> <span class="n">_default_binsz</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_bin_size_min</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">energy_axis</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">energy_axis_true</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">energy_axis_</span><span class="p">,</span> <span class="n">energy_axis_true_</span> <span class="o">=</span> <span class="n">_default_energy_axis</span><span class="p">(</span>
+            <span class="n">observation</span><span class="p">,</span> <span class="n">energy_bin_per_decade_max</span><span class="p">,</span> <span class="n">position</span>
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">energy_axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">energy_axis_</span>
+
+        <span class="k">if</span> <span class="n">energy_axis_true</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">energy_axis_true</span> <span class="o">=</span> <span class="n">energy_axis_true_</span>
+
+    <span class="k">if</span> <span class="n">dataset_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">dataset_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;obs_</span><span class="si">{</span><span class="n">observation</span><span class="o">.</span><span class="n">obs_id</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="n">geom</span> <span class="o">=</span> <span class="n">WcsGeom</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">skydir</span><span class="o">=</span><span class="n">position</span><span class="o">.</span><span class="n">transform_to</span><span class="p">(</span><span class="n">frame</span><span class="p">),</span>
+        <span class="n">width</span><span class="o">=</span><span class="n">spatial_width</span><span class="p">,</span>
+        <span class="n">binsz</span><span class="o">=</span><span class="n">spatial_bin_size</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
+        <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">,</span>
+        <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">energy_axis</span><span class="p">],</span>
+    <span class="p">)</span>
+
+    <span class="n">axes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">energy_axis_true</span><span class="o">=</span><span class="n">energy_axis_true</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="p">,</span> <span class="n">EDispMap</span><span class="p">):</span>
+            <span class="n">axes</span><span class="p">[</span><span class="s2">&quot;migra_axis&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">edisp_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;migra&quot;</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="p">,</span> <span class="s2">&quot;axes&quot;</span><span class="p">):</span>
+            <span class="n">axes</span><span class="p">[</span><span class="s2">&quot;migra_axis&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;migra&quot;</span><span class="p">]</span>
+
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">MapDataset</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+        <span class="n">geom</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">axes</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">return</span> <span class="n">dataset</span></div>
+
 
 
 <div class="viewcode-block" id="create_map_dataset_from_observation">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.create_map_dataset_from_observation.html#gammapy.datasets.create_map_dataset_from_observation">[docs]</a>
-<span class="k">def</span> <span class="nf">create_map_dataset_from_observation</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_map_dataset_from_observation</span><span class="p">(</span>
     <span class="n">observation</span><span class="p">,</span>
     <span class="n">models</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">dataset_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -680,6 +811,8 @@
     <span class="n">spatial_width_max</span><span class="o">=</span><span class="mi">12</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span>
     <span class="n">spatial_bin_size</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">spatial_bin_size_min</span><span class="o">=</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span>
 <span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Create a MapDataset, if energy axes, spatial width or bin size are not given</span>
 <span class="sd">    they are determined automatically from the observation IRFs,</span>
@@ -713,63 +846,44 @@
 <span class="sd">        If None it is determined from the observation PSF R68.</span>
 <span class="sd">    spatial_bin_size_min : `~astropy.quantity.Quantity`, optional</span>
 <span class="sd">        Minimal spatial bin size. Default is 0.01 degree.</span>
-
+<span class="sd">    position : `~astropy.coordinates.SkyCoord`, optional</span>
+<span class="sd">        Center of the geometry. Defalut is the observation pointing.</span>
+<span class="sd">    frame: str, optional</span>
+<span class="sd">        frame of the coordinate system. Default is &quot;icrs&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">gammapy.makers</span> <span class="kn">import</span> <span class="n">MapDatasetMaker</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.makers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapDatasetMaker</span>
 
-    <span class="k">if</span> <span class="n">spatial_width</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">spatial_width</span> <span class="o">=</span> <span class="n">_default_width</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_width_max</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">spatial_bin_size</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">spatial_bin_size</span> <span class="o">=</span> <span class="n">_default_binsz</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">spatial_bin_size_min</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">energy_axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">energy_axis</span> <span class="o">=</span> <span class="n">_default_energy_axis</span><span class="p">(</span><span class="n">observation</span><span class="p">,</span> <span class="n">energy_bin_per_decade_max</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">energy_axis_true</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">energy_axis_true</span> <span class="o">=</span> <span class="n">energy_axis</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;energy_true&quot;</span><span class="p">)</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">create_empty_map_dataset_from_irfs</span><span class="p">(</span>
+        <span class="n">observation</span><span class="p">,</span>
+        <span class="n">dataset_name</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">,</span>
+        <span class="n">energy_axis_true</span><span class="o">=</span><span class="n">energy_axis_true</span><span class="p">,</span>
+        <span class="n">energy_axis</span><span class="o">=</span><span class="n">energy_axis</span><span class="p">,</span>
+        <span class="n">energy_bin_per_decade_max</span><span class="o">=</span><span class="n">energy_bin_per_decade_max</span><span class="p">,</span>
+        <span class="n">spatial_width</span><span class="o">=</span><span class="n">spatial_width</span><span class="p">,</span>
+        <span class="n">spatial_width_max</span><span class="o">=</span><span class="n">spatial_width_max</span><span class="p">,</span>
+        <span class="n">spatial_bin_size</span><span class="o">=</span><span class="n">spatial_bin_size</span><span class="p">,</span>
+        <span class="n">spatial_bin_size_min</span><span class="o">=</span><span class="n">spatial_bin_size_min</span><span class="p">,</span>
+        <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span>
+        <span class="n">frame</span><span class="o">=</span><span class="n">frame</span><span class="p">,</span>
+    <span class="p">)</span>
 
     <span class="k">if</span> <span class="n">models</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">models</span> <span class="o">=</span> <span class="n">Models</span><span class="p">()</span>
-
-    <span class="k">if</span> <span class="n">dataset_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">dataset_name</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;obs_</span><span class="si">{</span><span class="n">observation</span><span class="o">.</span><span class="n">obs_id</span><span class="si">}</span><span class="s2">&quot;</span>
-
     <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span>
         <span class="p">[</span>
-            <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">FoVBackgroundModel</span><span class="p">)</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">datasets_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">dataset_name</span>
+            <span class="nb">isinstance</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">FoVBackgroundModel</span><span class="p">)</span> <span class="ow">and</span> <span class="n">m</span><span class="o">.</span><span class="n">datasets_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">dataset</span><span class="o">.</span><span class="n">name</span>
             <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">models</span>
         <span class="p">]</span>
     <span class="p">):</span>
-        <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">FoVBackgroundModel</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">pointing</span><span class="o">.</span><span class="n">mode</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">PointingMode</span><span class="o">.</span><span class="n">POINTING</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
-            <span class="s2">&quot;Only observations with fixed pointing in ICRS are supported&quot;</span>
-        <span class="p">)</span>
-    <span class="n">pointing_icrs</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">pointing</span><span class="o">.</span><span class="n">fixed_icrs</span>
-    <span class="n">geom</span> <span class="o">=</span> <span class="n">WcsGeom</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">skydir</span><span class="o">=</span><span class="n">pointing_icrs</span><span class="p">,</span>
-        <span class="n">width</span><span class="o">=</span><span class="n">spatial_width</span><span class="p">,</span>
-        <span class="n">binsz</span><span class="o">=</span><span class="n">spatial_bin_size</span><span class="o">.</span><span class="n">to_value</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">),</span>
-        <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span>
-        <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="n">energy_axis</span><span class="p">],</span>
-    <span class="p">)</span>
+        <span class="n">models</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">FoVBackgroundModel</span><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
 
     <span class="n">components</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;exposure&quot;</span><span class="p">]</span>
-    <span class="n">axes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-        <span class="n">energy_axis_true</span><span class="o">=</span><span class="n">energy_axis_true</span><span class="p">,</span>
-    <span class="p">)</span>
     <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">components</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;edisp&quot;</span><span class="p">)</span>
-        <span class="n">axes</span><span class="p">[</span><span class="s2">&quot;migra_axis&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">observation</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;migra&quot;</span><span class="p">]</span>
     <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">bkg</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">components</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;background&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">observation</span><span class="o">.</span><span class="n">psf</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">components</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;psf&quot;</span><span class="p">)</span>
-
-    <span class="n">dataset</span> <span class="o">=</span> <span class="n">MapDataset</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
-        <span class="n">geom</span><span class="p">,</span>
-        <span class="n">name</span><span class="o">=</span><span class="n">dataset_name</span><span class="p">,</span>
-        <span class="o">**</span><span class="n">axes</span><span class="p">,</span>
-    <span class="p">)</span>
 
     <span class="n">maker</span> <span class="o">=</span> <span class="n">MapDatasetMaker</span><span class="p">(</span><span class="n">selection</span><span class="o">=</span><span class="n">components</span><span class="p">)</span>
     <span class="n">dataset</span> <span class="o">=</span> <span class="n">maker</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="n">observation</span><span class="p">)</span>
@@ -780,7 +894,7 @@
 
 <div class="viewcode-block" id="MapDataset">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset">[docs]</a>
-<span class="k">class</span> <span class="nc">MapDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MapDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Main map dataset for likelihood fitting.</span>
 
 <span class="sd">    It bundles together binned counts, background, IRFs in the form of `~gammapy.maps.Map`.</span>
@@ -886,7 +1000,7 @@
     <span class="n">gti</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">meta_table</span> <span class="o">=</span> <span class="kc">None</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">models</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">counts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -914,13 +1028,13 @@
 
         <span class="k">if</span> <span class="n">psf</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">psf</span><span class="p">,</span> <span class="p">(</span><span class="n">PSFMap</span><span class="p">,</span> <span class="n">HDULocation</span><span class="p">)):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;&#39;psf&#39; must be a &#39;PSFMap&#39; or `HDULocation` object, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">psf</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="sa">f</span><span class="s2">&quot;&#39;psf&#39; must be a `PSFMap` or `HDULocation` object, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">psf</span><span class="p">)</span><span class="si">}</span><span class="s2"> instead.&quot;</span>
             <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">psf</span> <span class="o">=</span> <span class="n">psf</span>
 
         <span class="k">if</span> <span class="n">edisp</span> <span class="ow">and</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">edisp</span><span class="p">,</span> <span class="p">(</span><span class="n">EDispMap</span><span class="p">,</span> <span class="n">EDispKernelMap</span><span class="p">,</span> <span class="n">HDULocation</span><span class="p">)):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                <span class="s2">&quot;&#39;edisp&#39; must be a &#39;EDispMap&#39;, `EDispKernelMap` or &#39;HDULocation&#39; &quot;</span>
+                <span class="s2">&quot;&#39;edisp&#39; must be a `EDispMap`, `EDispKernelMap` or `HDULocation` &quot;</span>
                 <span class="sa">f</span><span class="s2">&quot;object, got `</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">edisp</span><span class="p">)</span><span class="si">}</span><span class="s2">` instead.&quot;</span>
             <span class="p">)</span>
 
@@ -929,13 +1043,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">gti</span> <span class="o">=</span> <span class="n">gti</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="n">models</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">meta_table</span> <span class="o">=</span> <span class="n">meta_table</span>
-        <span class="k">if</span> <span class="n">meta</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">MapDatasetMetaData</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">meta</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_psf_kernel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_psf_kernel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Precompute PSFkernel if there is only one spatial bin in the PSFmap&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">has_single_spatial_bin</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">energy_name</span> <span class="o">==</span> <span class="s2">&quot;energy_true&quot;</span><span class="p">:</span>
@@ -943,25 +1054,33 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">map_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span>
             <span class="k">if</span> <span class="n">map_ref</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">map_ref</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">is_region</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">get_psf_kernel</span><span class="p">(</span><span class="n">map_ref</span><span class="o">.</span><span class="n">geom</span><span class="p">)</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">get_psf_kernel</span><span class="p">(</span>
+                    <span class="n">position</span><span class="o">=</span><span class="n">map_ref</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">center_skydir</span><span class="p">,</span>
+                    <span class="n">geom</span><span class="o">=</span><span class="n">map_ref</span><span class="o">.</span><span class="n">geom</span><span class="p">,</span>
+                    <span class="n">containment</span><span class="o">=</span><span class="n">meval</span><span class="o">.</span><span class="n">PSF_CONTAINMENT</span><span class="p">,</span>
+                    <span class="n">max_radius</span><span class="o">=</span><span class="n">meval</span><span class="o">.</span><span class="n">PSF_MAX_RADIUS</span><span class="p">,</span>
+                <span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">meta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">meta</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span>
 
     <span class="nd">@meta</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">meta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">meta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">MapDatasetMetaData</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">value</span>
 
     <span class="c1"># TODO: keep or remove?</span>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">background_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">background_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">-bkg&quot;</span><span class="p">]</span>
         <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
             <span class="k">pass</span>
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">str_</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">str_</span> <span class="o">+=</span> <span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">str_</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -1008,7 +1127,7 @@
         <span class="k">return</span> <span class="n">str_</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">(</span><span class="n">tabsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">geoms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">geoms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Map geometries.</span>
 
 <span class="sd">        Returns</span>
@@ -1032,17 +1151,17 @@
         <span class="k">return</span> <span class="n">geoms</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">models</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Models set on the dataset (`~gammapy.modeling.models.Models`).&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_models</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">excess</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">excess</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Observed excess: counts-background.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span>
 
     <span class="nd">@models</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">models</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">models</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">models</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">models</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Models setter.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_evaluators</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">if</span> <span class="n">models</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -1064,12 +1183,12 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_models</span> <span class="o">=</span> <span class="n">models</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">evaluators</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluators</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Model evaluators.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_evaluators</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Main analysis geometry.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span>
@@ -1086,11 +1205,11 @@
             <span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">data_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Shape of the counts or background data (tuple).&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geom</span><span class="o">.</span><span class="n">data_shape</span>
 
-    <span class="k">def</span> <span class="nf">_energy_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask_map</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_energy_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mask_map</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute the energy range maps with or without the fit mask.&quot;&quot;&quot;</span>
         <span class="n">geom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geom</span>
         <span class="n">energy</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">edges</span>
@@ -1122,29 +1241,29 @@
         <span class="k">return</span> <span class="n">map_min</span><span class="p">,</span> <span class="n">map_max</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">energy_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">energy_range</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Energy range maps defined by the mask_safe and mask_fit.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_energy_range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">energy_range_safe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">energy_range_safe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Energy range maps defined by the mask_safe only.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_energy_range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">energy_range_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">energy_range_fit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Energy range maps defined by the mask_fit only.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_energy_range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">energy_range_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">energy_range_total</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Largest energy range among all pixels, defined by mask_safe and mask_fit.&quot;&quot;&quot;</span>
         <span class="n">energy_min_map</span><span class="p">,</span> <span class="n">energy_max_map</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">energy_range</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">energy_min_map</span><span class="o">.</span><span class="n">quantity</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmax</span><span class="p">(</span><span class="n">energy_max_map</span><span class="o">.</span><span class="n">quantity</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MapDataset.npred">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.npred">[docs]</a>
-    <span class="k">def</span> <span class="nf">npred</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">npred</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Total predicted source and background counts.</span>
 
 <span class="sd">        Returns</span>
@@ -1162,7 +1281,7 @@
 
 <div class="viewcode-block" id="MapDataset.npred_background">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.npred_background">[docs]</a>
-    <span class="k">def</span> <span class="nf">npred_background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">npred_background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicted background counts.</span>
 
 <span class="sd">        The predicted background counts depend on the parameters</span>
@@ -1190,7 +1309,8 @@
         <span class="k">return</span> <span class="n">background</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_background_parameters_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_background_parameters_changed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">background_model</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">value</span>
         <span class="n">changed</span> <span class="o">=</span> <span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_background_parameters_cached</span> <span class="o">==</span> <span class="n">values</span><span class="p">)</span>
 
@@ -1200,7 +1320,7 @@
 
 <div class="viewcode-block" id="MapDataset.npred_signal">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.npred_signal">[docs]</a>
-    <span class="k">def</span> <span class="nf">npred_signal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">npred_signal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">model_names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stack</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Model predicted signal counts.</span>
 
 <span class="sd">        If a list of model name is passed, predicted counts from these components are returned.</span>
@@ -1249,6 +1369,8 @@
                     <span class="n">npred_geom</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">npred</span><span class="p">)</span>
                     <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">evaluator_name</span><span class="p">)</span>
                     <span class="n">npred_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">npred_geom</span><span class="p">)</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">USE_NPRED_CACHE</span><span class="p">:</span>
+                    <span class="n">evaluator</span><span class="o">.</span><span class="n">reset_cache_properties</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="n">npred_list</span> <span class="o">!=</span> <span class="p">[]:</span>
             <span class="n">label_axis</span> <span class="o">=</span> <span class="n">LabelMapAxis</span><span class="p">(</span><span class="n">labels</span><span class="o">=</span><span class="n">labels</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;models&quot;</span><span class="p">)</span>
@@ -1260,7 +1382,7 @@
 <div class="viewcode-block" id="MapDataset.from_geoms">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.from_geoms">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_geoms</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_geoms</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">geom</span><span class="p">,</span>
         <span class="n">geom_exposure</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1328,7 +1450,7 @@
 <div class="viewcode-block" id="MapDataset.create">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.create">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">geom</span><span class="p">,</span>
         <span class="n">energy_axis_true</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1406,21 +1528,21 @@
 
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mask_safe_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mask_safe_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reduced safe mask.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="o">.</span><span class="n">reduce_over_axes</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mask_fit_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mask_fit_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reduced fit mask.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_fit</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_fit</span><span class="o">.</span><span class="n">reduce_over_axes</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mask_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mask_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reduced mask.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">mask</span> <span class="o">=</span> <span class="n">Map</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_geom</span><span class="o">.</span><span class="n">to_image</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
@@ -1430,7 +1552,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">reduce_over_axes</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">logical_or</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mask_safe_psf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mask_safe_psf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Safe mask for PSF maps.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -1440,7 +1562,7 @@
         <span class="k">return</span> <span class="n">mask_safe_psf</span><span class="o">.</span><span class="n">to_cube</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">mask_safe_edisp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">mask_safe_edisp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Safe mask for edisp maps.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">edisp</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
@@ -1466,7 +1588,7 @@
 
 <div class="viewcode-block" id="MapDataset.to_masked">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_masked">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_masked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_masked</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return masked dataset.</span>
 
 <span class="sd">        Parameters</span>
@@ -1488,7 +1610,7 @@
 
 <div class="viewcode-block" id="MapDataset.stack">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.stack">[docs]</a>
-    <span class="k">def</span> <span class="nf">stack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Stack another dataset in place. The original dataset is modified.</span>
 
 <span class="sd">        Safe mask is applied to the other dataset to compute the stacked counts data.</span>
@@ -1593,14 +1715,14 @@
 
 <div class="viewcode-block" id="MapDataset.stat_array">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.stat_array">[docs]</a>
-    <span class="k">def</span> <span class="nf">stat_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stat_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistic function value per bin given the current model parameters.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">cash</span><span class="p">(</span><span class="n">n_on</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">mu_on</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="MapDataset.residuals">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.residuals">[docs]</a>
-    <span class="k">def</span> <span class="nf">residuals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;diff&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">residuals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;diff&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute residuals map.</span>
 
 <span class="sd">        Parameters</span>
@@ -1650,7 +1772,7 @@
 
 <div class="viewcode-block" id="MapDataset.plot_residuals_spatial">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.plot_residuals_spatial">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_residuals_spatial</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_residuals_spatial</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">method</span><span class="o">=</span><span class="s2">&quot;diff&quot;</span><span class="p">,</span>
@@ -1720,7 +1842,7 @@
 
 <div class="viewcode-block" id="MapDataset.plot_residuals_spectral">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.plot_residuals_spectral">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_residuals_spectral</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;diff&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_residuals_spectral</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;diff&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot spectral residuals.</span>
 
 <span class="sd">        The residuals are extracted from the provided region, and the normalization</span>
@@ -1798,7 +1920,7 @@
 
 <div class="viewcode-block" id="MapDataset.plot_residuals">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.plot_residuals">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_residuals</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_residuals</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">ax_spatial</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">ax_spectral</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -1868,7 +1990,7 @@
 
 <div class="viewcode-block" id="MapDataset.stat_sum">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.stat_sum">[docs]</a>
-    <span class="k">def</span> <span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Total statistic function value given the current model parameters and priors.&quot;&quot;&quot;</span>
         <span class="n">prior_stat_sum</span> <span class="o">=</span> <span class="mf">0.0</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -1877,17 +1999,50 @@
         <span class="n">counts</span><span class="p">,</span> <span class="n">npred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="k">return</span> <span class="p">(</span>
-                <span class="n">cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="p">],</span> <span class="n">npred</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="p">])</span>
-                <span class="o">+</span> <span class="n">prior_stat_sum</span>
-            <span class="p">)</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># noqa</span>
+            <span class="n">counts</span> <span class="o">=</span> <span class="n">counts</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+            <span class="n">npred</span> <span class="o">=</span> <span class="n">npred</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">bool</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">==</span> <span class="s2">&quot;cash&quot;</span><span class="p">:</span>
+                <span class="n">cash_sum</span> <span class="o">=</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">npred</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">==</span> <span class="s2">&quot;cash_weighted&quot;</span><span class="p">:</span>
+                <span class="n">weight</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+                <span class="n">cash_sum</span> <span class="o">=</span> <span class="n">weighted_cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">npred</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s2">&quot;&#39;stat_type&#39; must be a &#39;cash&#39; or `cash_weighted`.&quot;</span>
+                    <span class="sa">f</span><span class="s2">&quot;, got `</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span><span class="si">}</span><span class="s2">` instead.&quot;</span>
+                <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">npred</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span> <span class="o">+</span> <span class="n">prior_stat_sum</span></div>
+            <span class="n">cash_sum</span> <span class="o">=</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">npred</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">cash_sum</span> <span class="o">+</span> <span class="n">prior_stat_sum</span></div>
 
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_to_asimov_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Asimov dataset from the current models.&quot;&quot;&quot;</span>
+
+        <span class="n">npred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">npred</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nan</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">posinf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">neginf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">npred</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+
+        <span class="n">asimov_dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span>
+            <span class="n">models</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="p">,</span>
+            <span class="n">counts</span><span class="o">=</span><span class="n">npred</span><span class="p">,</span>
+            <span class="n">exposure</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">exposure</span><span class="p">,</span>
+            <span class="n">background</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">,</span>
+            <span class="n">psf</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span>
+            <span class="n">edisp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edisp</span><span class="p">,</span>
+            <span class="n">mask_safe</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">,</span>
+            <span class="n">mask_fit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit</span><span class="p">,</span>
+            <span class="n">gti</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gti</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">meta</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">asimov_dataset</span><span class="o">.</span><span class="n">_evaluators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_evaluators</span>
+        <span class="k">return</span> <span class="n">asimov_dataset</span>
 
 <div class="viewcode-block" id="MapDataset.fake">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.fake">[docs]</a>
-    <span class="k">def</span> <span class="nf">fake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Simulate fake counts for the current model and reduced IRFs.</span>
 
 <span class="sd">        This method overwrites the counts defined on the dataset object.</span>
@@ -1908,7 +2063,7 @@
 
 <div class="viewcode-block" id="MapDataset.to_hdulist">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_hdulist">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_hdulist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_hdulist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert map dataset to list of HDUs.</span>
 
 <span class="sd">        Returns</span>
@@ -1959,7 +2114,7 @@
 <div class="viewcode-block" id="MapDataset.from_hdulist">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.from_hdulist">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_hdulist</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">hdulist</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_hdulist</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">hdulist</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create map dataset from list of HDUs.</span>
 
 <span class="sd">        Parameters</span>
@@ -2029,7 +2184,7 @@
 
 <div class="viewcode-block" id="MapDataset.write">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.write">[docs]</a>
-    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Write Dataset to file.</span>
 
 <span class="sd">        A MapDataset is serialised using the GADF format with a WCS geometry.</span>
@@ -2051,7 +2206,7 @@
 
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_read_lazy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_lazy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">cache</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">):</span>
         <span class="n">name</span> <span class="o">=</span> <span class="n">make_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">}</span>
         <span class="k">try</span><span class="p">:</span>
@@ -2093,7 +2248,7 @@
 <div class="viewcode-block" id="MapDataset.read">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.read">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">read</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">,</span> <span class="n">checksum</span><span class="o">=</span><span class="kc">False</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read a dataset from file.</span>
@@ -2138,7 +2293,7 @@
 <div class="viewcode-block" id="MapDataset.from_dict">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.from_dict">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create from dicts and models list generated from YAML serialization.&quot;&quot;&quot;</span>
         <span class="n">filename</span> <span class="o">=</span> <span class="n">make_path</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;filename&quot;</span><span class="p">])</span>
         <span class="n">dataset</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">lazy</span><span class="o">=</span><span class="n">lazy</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="n">cache</span><span class="p">)</span>
@@ -2146,13 +2301,13 @@
 
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_counts_statistic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_counts_statistic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Counts statistics of the dataset.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">CashCountsStatistic</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred_background</span><span class="p">())</span>
 
 <div class="viewcode-block" id="MapDataset.info_dict">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.info_dict">[docs]</a>
-    <span class="k">def</span> <span class="nf">info_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_safe_data_range</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">info_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_safe_data_range</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Info dict with summary statistics, summed over energy.</span>
 
 <span class="sd">        Parameters</span>
@@ -2266,7 +2421,7 @@
 
 <div class="viewcode-block" id="MapDataset.to_spectrum_dataset">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_spectrum_dataset">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_spectrum_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on_region</span><span class="p">,</span> <span class="n">containment_correction</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_spectrum_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on_region</span><span class="p">,</span> <span class="n">containment_correction</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a ~gammapy.datasets.SpectrumDataset from on_region.</span>
 
 <span class="sd">        Counts and background are summed in the on_region. Exposure is taken</span>
@@ -2292,7 +2447,7 @@
 <span class="sd">        dataset : `~gammapy.datasets.SpectrumDataset`</span>
 <span class="sd">            The resulting reduced dataset.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">.spectrum</span> <span class="kn">import</span> <span class="n">SpectrumDataset</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpectrumDataset</span>
 
         <span class="n">dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_region_map_dataset</span><span class="p">(</span><span class="n">region</span><span class="o">=</span><span class="n">on_region</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
 
@@ -2334,7 +2489,7 @@
 
 <div class="viewcode-block" id="MapDataset.to_region_map_dataset">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_region_map_dataset">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_region_map_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_region_map_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Integrate the map dataset in a given region.</span>
 
 <span class="sd">        Counts and background of the dataset are integrated in the given region,</span>
@@ -2391,7 +2546,7 @@
 
 <div class="viewcode-block" id="MapDataset.cutout">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.cutout">[docs]</a>
-    <span class="k">def</span> <span class="nf">cutout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trim&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cutout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trim&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Cutout map dataset.</span>
 
 <span class="sd">        Parameters</span>
@@ -2441,7 +2596,7 @@
 
 <div class="viewcode-block" id="MapDataset.downsample">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.downsample">[docs]</a>
-    <span class="k">def</span> <span class="nf">downsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">downsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Downsample map dataset.</span>
 
 <span class="sd">        The PSFMap and EDispKernelMap are not downsampled, except if</span>
@@ -2512,7 +2667,7 @@
 
 <div class="viewcode-block" id="MapDataset.pad">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.pad">[docs]</a>
-    <span class="k">def</span> <span class="nf">pad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pad_width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pad_width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Pad the spatial dimensions of the dataset.</span>
 
 <span class="sd">        The padding only applies to counts, masks, background and exposure.</span>
@@ -2563,7 +2718,7 @@
 
 <div class="viewcode-block" id="MapDataset.slice_by_idx">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.slice_by_idx">[docs]</a>
-    <span class="k">def</span> <span class="nf">slice_by_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slice_by_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Slice sub dataset.</span>
 
 <span class="sd">        The slicing only applies to the maps that define the corresponding axes.</span>
@@ -2631,7 +2786,7 @@
 
 <div class="viewcode-block" id="MapDataset.slice_by_energy">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.slice_by_energy">[docs]</a>
-    <span class="k">def</span> <span class="nf">slice_by_energy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slice_by_energy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_min</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Select and slice datasets in energy range.</span>
 
 <span class="sd">        Parameters</span>
@@ -2680,7 +2835,7 @@
 
 <div class="viewcode-block" id="MapDataset.reset_data_cache">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.reset_data_cache">[docs]</a>
-    <span class="k">def</span> <span class="nf">reset_data_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">reset_data_cache</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset data cache to free memory space.&quot;&quot;&quot;</span>
         <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lazy_data_members</span><span class="p">:</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
@@ -2689,7 +2844,7 @@
 
 <div class="viewcode-block" id="MapDataset.resample_energy_axis">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.resample_energy_axis">[docs]</a>
-    <span class="k">def</span> <span class="nf">resample_energy_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">resample_energy_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Resample MapDataset over new reco energy axis.</span>
 
 <span class="sd">        Counts are summed taking into account safe mask.</span>
@@ -2748,7 +2903,7 @@
 
 <div class="viewcode-block" id="MapDataset.to_image">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_image">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create images by summing over the reconstructed energy axis.</span>
 
 <span class="sd">        Parameters</span>
@@ -2767,7 +2922,7 @@
 
 <div class="viewcode-block" id="MapDataset.peek">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.peek">[docs]</a>
-    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Quick-look summary plots.</span>
 
 <span class="sd">        Parameters</span>
@@ -2777,7 +2932,7 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
 
-        <span class="k">def</span> <span class="nf">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">mask</span><span class="o">.</span><span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
@@ -2812,9 +2967,17 @@
 
 
 
+<div class="viewcode-block" id="MapDatasetWeighted">
+<a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">MapDatasetWeighted</span><span class="p">(</span><span class="n">MapDataset</span><span class="p">):</span>
+    <span class="n">stat_type</span> <span class="o">=</span> <span class="s2">&quot;cash_weighted&quot;</span>
+    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;MapDatasetWeighted&quot;</span></div>
+
+
+
 <div class="viewcode-block" id="MapDatasetOnOff">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff">[docs]</a>
-<span class="k">class</span> <span class="nc">MapDatasetOnOff</span><span class="p">(</span><span class="n">MapDataset</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">MapDatasetOnOff</span><span class="p">(</span><span class="n">MapDataset</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Map dataset for on-off likelihood fitting.</span>
 
 <span class="sd">    It bundles together the binned on and off counts, the binned IRFs as well as the on and off acceptances.</span>
@@ -2867,7 +3030,7 @@
     <span class="n">stat_type</span> <span class="o">=</span> <span class="s2">&quot;wstat&quot;</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;MapDatasetOnOff&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">models</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">counts</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -2904,7 +3067,7 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">meta</span>
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">str_</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">:</span>
@@ -2930,7 +3093,7 @@
         <span class="k">return</span> <span class="n">str_</span><span class="o">.</span><span class="n">expandtabs</span><span class="p">(</span><span class="n">tabsize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Main analysis geometry.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span>
@@ -2946,7 +3109,7 @@
             <span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">alpha</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Exposure ratio between signal and background regions.</span>
 
 <span class="sd">        See :ref:`wstat`.</span>
@@ -2964,7 +3127,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.npred_background">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.npred_background">[docs]</a>
-    <span class="k">def</span> <span class="nf">npred_background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">npred_background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicted background counts estimated from the marginalized likelihood estimate.</span>
 
 <span class="sd">        See :ref:`wstat`.</span>
@@ -2986,7 +3149,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.npred_off">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.npred_off">[docs]</a>
-    <span class="k">def</span> <span class="nf">npred_off</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">npred_off</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Predicted counts in the off region; mu_bkg/alpha.</span>
 
 <span class="sd">        See :ref:`wstat`.</span>
@@ -3000,7 +3163,7 @@
 
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">background</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Computed as alpha * n_off.</span>
 
 <span class="sd">        See :ref:`wstat`.</span>
@@ -3016,7 +3179,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.stat_array">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_array">[docs]</a>
-    <span class="k">def</span> <span class="nf">stat_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stat_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistic function value per bin given the current model parameters.&quot;&quot;&quot;</span>
         <span class="n">mu_sig</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred_signal</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
         <span class="n">on_stat_</span> <span class="o">=</span> <span class="n">wstat</span><span class="p">(</span>
@@ -3029,14 +3192,14 @@
 
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_counts_statistic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_counts_statistic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Counts statistics of the dataset.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">WStatCountsStatistic</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts_off</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="p">)</span>
 
 <div class="viewcode-block" id="MapDatasetOnOff.from_geoms">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.from_geoms">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_geoms</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_geoms</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">geom</span><span class="p">,</span>
         <span class="n">geom_exposure</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -3093,7 +3256,7 @@
 <div class="viewcode-block" id="MapDatasetOnOff.from_map_dataset">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.from_map_dataset">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_map_dataset</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_map_dataset</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">acceptance</span><span class="p">,</span> <span class="n">acceptance_off</span><span class="p">,</span> <span class="n">counts_off</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create on off dataset from a map dataset.</span>
@@ -3148,7 +3311,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.to_map_dataset">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_map_dataset">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_map_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_map_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert a MapDatasetOnOff to a MapDataset.</span>
 
 <span class="sd">        The background model template is taken as alpha * counts_off.</span>
@@ -3181,8 +3344,33 @@
         <span class="p">)</span></div>
 
 
+    <span class="k">def</span><span class="w"> </span><span class="nf">_to_asimov_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Asimov dataset from the current models.&quot;&quot;&quot;</span>
+        <span class="n">npred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">npred</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">nan</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">posinf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">neginf</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+        <span class="n">npred</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;float&quot;</span><span class="p">)</span>
+
+        <span class="n">asimov_dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span>
+            <span class="n">models</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="p">,</span>
+            <span class="n">counts</span><span class="o">=</span><span class="n">npred</span><span class="p">,</span>
+            <span class="n">counts_off</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">counts_off</span><span class="p">,</span>
+            <span class="n">exposure</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">exposure</span><span class="p">,</span>
+            <span class="n">acceptance</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">acceptance</span><span class="p">,</span>
+            <span class="n">acceptance_off</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">acceptance_off</span><span class="p">,</span>
+            <span class="n">psf</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="p">,</span>
+            <span class="n">edisp</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">edisp</span><span class="p">,</span>
+            <span class="n">mask_safe</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">,</span>
+            <span class="n">mask_fit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit</span><span class="p">,</span>
+            <span class="n">gti</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">gti</span><span class="p">,</span>
+            <span class="n">name</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">meta</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">asimov_dataset</span><span class="o">.</span><span class="n">_evaluators</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_evaluators</span>
+
+        <span class="k">return</span> <span class="n">asimov_dataset</span>
+
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_is_stackable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_is_stackable</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if the Dataset contains enough information to be stacked.&quot;&quot;&quot;</span>
         <span class="n">incomplete</span> <span class="o">=</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">acceptance_off</span> <span class="ow">is</span> <span class="kc">None</span>
@@ -3197,7 +3385,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.stack">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stack">[docs]</a>
-    <span class="k">def</span> <span class="nf">stack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Stack another dataset in place.</span>
 
 <span class="sd">        Safe mask is applied to the other dataset to compute the stacked counts data,</span>
@@ -3273,7 +3461,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.stat_sum">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_sum">[docs]</a>
-    <span class="k">def</span> <span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Total statistic function value given the current model parameters.</span>
 
 <span class="sd">        If the off counts are passed as None and the elements of the safe mask are False, zero will be returned.</span>
@@ -3287,7 +3475,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.fake">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.fake">[docs]</a>
-    <span class="k">def</span> <span class="nf">fake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npred_background</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">fake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npred_background</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Simulate fake counts (on and off) for the current model and reduced IRFs.</span>
 
 <span class="sd">        This method overwrites the counts defined on the dataset object.</span>
@@ -3319,7 +3507,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.to_hdulist">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_hdulist">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_hdulist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_hdulist</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert map dataset to list of HDUs.</span>
 
 <span class="sd">        Returns</span>
@@ -3348,7 +3536,7 @@
 
 
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_read_lazy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_read_lazy</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="sa">f</span><span class="s2">&quot;Lazy loading is not implemented for </span><span class="si">{</span><span class="bp">cls</span><span class="si">}</span><span class="s2">, please use option lazy=False.&quot;</span>
         <span class="p">)</span>
@@ -3356,7 +3544,7 @@
 <div class="viewcode-block" id="MapDatasetOnOff.from_hdulist">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.from_hdulist">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_hdulist</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">hdulist</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_hdulist</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">hdulist</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create map dataset from list of HDUs.</span>
 
 <span class="sd">        Parameters</span>
@@ -3444,7 +3632,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.info_dict">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.info_dict">[docs]</a>
-    <span class="k">def</span> <span class="nf">info_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_safe_data_range</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">info_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">in_safe_data_range</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Basic info dict with summary statistics.</span>
 
 <span class="sd">        If a region is passed, then a spectrum dataset is</span>
@@ -3498,7 +3686,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.to_spectrum_dataset">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_spectrum_dataset">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_spectrum_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on_region</span><span class="p">,</span> <span class="n">containment_correction</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_spectrum_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">on_region</span><span class="p">,</span> <span class="n">containment_correction</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a ~gammapy.datasets.SpectrumDatasetOnOff from on_region.</span>
 
 <span class="sd">        Counts and OFF counts are summed in the on_region.</span>
@@ -3528,7 +3716,7 @@
 <span class="sd">        dataset : `~gammapy.datasets.SpectrumDatasetOnOff`</span>
 <span class="sd">            The resulting reduced dataset.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">.spectrum</span> <span class="kn">import</span> <span class="n">SpectrumDatasetOnOff</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.spectrum</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpectrumDatasetOnOff</span>
 
         <span class="n">dataset</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">to_spectrum_dataset</span><span class="p">(</span>
             <span class="n">on_region</span><span class="o">=</span><span class="n">on_region</span><span class="p">,</span>
@@ -3559,7 +3747,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.cutout">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.cutout">[docs]</a>
-    <span class="k">def</span> <span class="nf">cutout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trim&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cutout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trim&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Cutout map dataset.</span>
 
 <span class="sd">        Parameters</span>
@@ -3604,7 +3792,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.downsample">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.downsample">[docs]</a>
-    <span class="k">def</span> <span class="nf">downsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">downsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Downsample map dataset.</span>
 
 <span class="sd">        The PSFMap and EDispKernelMap are not downsampled, except if</span>
@@ -3659,14 +3847,14 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.pad">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.pad">[docs]</a>
-    <span class="k">def</span> <span class="nf">pad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Not implemented for MapDatasetOnOff.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span></div>
 
 
 <div class="viewcode-block" id="MapDatasetOnOff.slice_by_idx">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.slice_by_idx">[docs]</a>
-    <span class="k">def</span> <span class="nf">slice_by_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">slice_by_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">slices</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Slice sub dataset.</span>
 
 <span class="sd">        The slicing only applies to the maps that define the corresponding axes.</span>
@@ -3703,7 +3891,7 @@
 
 <div class="viewcode-block" id="MapDatasetOnOff.resample_energy_axis">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.resample_energy_axis">[docs]</a>
-    <span class="k">def</span> <span class="nf">resample_energy_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">resample_energy_axis</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Resample MapDatasetOnOff over reconstructed energy edges.</span>
 
 <span class="sd">        Counts are summed taking into account safe mask.</span>
@@ -3775,8 +3963,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -3787,23 +3975,19 @@
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -3811,14 +3995,15 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

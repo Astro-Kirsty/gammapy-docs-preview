@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,21 +55,21 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'development/pigs/pig-026';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Release notes" href="../../release-notes/index.html" />
+    <link rel="next" title="PIG 27 - Bayesian Inference using Nested Sampling" href="pig-027.html" />
     <link rel="prev" title="PIG 25 - Metadata container for Gammapy" href="pig-025.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -483,6 +465,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pig-024.html">PIG 24 - Authorship policy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-025.html">PIG 25 - Metadata container for Gammapy</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">PIG 26 - Model Priors API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pig-027.html">PIG 27 - Bayesian Inference using Nested Sampling</a></li>
 </ul>
 </details></li>
 </ul>
@@ -492,9 +475,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -570,7 +558,7 @@ See the following issues and PRs of Gammapy:</p>
 <section id="case-1-background-systematics-as-a-nuisance-parameter-3955">
 <h3>Case 1: Background systematics as a nuisance parameter <a class="reference external" href="https://github.com/gammapy/gammapy/issues/3955">#3955</a><a class="headerlink" href="#case-1-background-systematics-as-a-nuisance-parameter-3955" title="Link to this heading">#</a></h3>
 <p>The goal is to fit energy-dependent systematics in the FoVBackground with nuisance parameters and set priors on the two model parameters <code class="docutils literal notranslate"><span class="pre">norm</span></code> and <code class="docutils literal notranslate"><span class="pre">tilt</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.modeling.model</span> <span class="kn">import</span> <span class="n">GaussianPrior</span><span class="p">,</span> <span class="n">PowerLawNormSpectralModel</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">GaussianPrior</span><span class="p">,</span> <span class="n">PowerLawNormSpectralModel</span>
 
 <span class="n">bkg_model</span> <span class="o">=</span> <span class="n">FoVBackgroundModel</span><span class="p">(</span><span class="n">spectral_model</span> <span class="o">=</span> <span class="n">PowerLawNormSpectralModel</span><span class="p">(),</span>
                         <span class="n">dataset_name</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
@@ -586,7 +574,7 @@ See the following issues and PRs of Gammapy:</p>
 <h3>Case 2: Favoring positive values for flux amplitudes<a class="headerlink" href="#case-2-favoring-positive-values-for-flux-amplitudes" title="Link to this heading">#</a></h3>
 <p>A step-like prior function can be used to favour positive values for physical properties like the flux amplitude. By setting a prior one avoids defining hard boundary conditions with the <code class="docutils literal notranslate"><span class="pre">min</span></code> attribute of the to-be-fitted parameter.
 The prior is set to <code class="docutils literal notranslate"><span class="pre">value</span></code> if the parameter value is between <code class="docutils literal notranslate"><span class="pre">xmin</span></code> and <code class="docutils literal notranslate"><span class="pre">xmax</span></code> and 0 if not.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">PowerLawSpectraModel</span><span class="p">,</span> <span class="n">StepPrior</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PowerLawSpectraModel</span><span class="p">,</span> <span class="n">StepPrior</span>
 
 <span class="n">pwl</span> <span class="o">=</span> <span class="n">PowerLawSpectraModel</span><span class="p">()</span>
 <span class="n">prior</span> <span class="o">=</span> <span class="n">StepPrior</span><span class="p">(</span><span class="n">xmin</span> <span class="o">=</span> <span class="s2">&quot;-inf&quot;</span><span class="p">,</span> <span class="n">xmax</span> <span class="o">=</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>  <span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
@@ -598,9 +586,9 @@ The prior is set to <code class="docutils literal notranslate"><span class="pre"
 <h3>Case 3: Support unfolding methods for spectral flux points <a class="reference external" href="https://github.com/gammapy/gammapy/issues/4122">#4122</a><a class="headerlink" href="#case-3-support-unfolding-methods-for-spectral-flux-points-4122" title="Link to this heading">#</a></h3>
 <p>The proposed prior class will allow the probability to unfold spectral flux points with Tikonov regularisation. The Tikonov matrix can be defined and set as the covariance matrix in the class <code class="docutils literal notranslate"><span class="pre">CovarianceGaussianPrior</span></code>. The weight of the <code class="docutils literal notranslate"><span class="pre">PriorFitStatistic</span></code> can be interpreted as the regularisation strength tau. However, this requires a more advanced setup since this multi-dimensional prior is set on multiple parameters simultaneously. The goal is to use the proposed prior class as a starting point and develop it into multidimensional use cases in the near future.
 A suggested implementation example is shown below. Here the prior is set on the model instead of the single parameters.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">from</span> <span class="nn">gammapy.modeling.model</span> <span class="kn">import</span> <span class="n">PiecewiseNormSpectralModel</span><span class="p">,</span> <span class="n">MultivariateGaussianPrior</span><span class="p">,</span> <span class="n">PowerLawSpectralModel</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.model</span><span class="w"> </span><span class="kn">import</span> <span class="n">PiecewiseNormSpectralModel</span><span class="p">,</span> <span class="n">MultivariateGaussianPrior</span><span class="p">,</span> <span class="n">PowerLawSpectralModel</span>
 
 <span class="n">n_points</span> <span class="o">=</span> <span class="mi">10</span>
 
@@ -621,13 +609,13 @@ A suggested implementation example is shown below. Here the prior is set on the 
 <h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading">#</a></h2>
 <p>The following implementation draft is compatible with the current API,
 where the models are set via Dataset.model and the Fit is run via Fit.run(datasets).</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PriorModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PriorModel</span><span class="p">(</span><span class="n">ModelBase</span><span class="p">):</span>
 
       <span class="n">_weight</span> <span class="o">=</span> <span class="mi">1</span>
       <span class="n">_type</span> <span class="o">=</span> <span class="s2">&quot;prior&quot;</span>
 
       <span class="nd">@property</span>
-      <span class="k">def</span> <span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">          </span><span class="sd">&quot;&quot;&quot;PriorParameters (`~gammapy.modeling.PriorParameters`)&quot;&quot;&quot;</span>
           <span class="k">return</span> <span class="n">PriorParameters</span><span class="p">(</span>
               <span class="p">[</span><span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">default_parameters</span><span class="o">.</span><span class="n">names</span><span class="p">]</span>
@@ -635,14 +623,14 @@ where the models are set via Dataset.model and the Fit is run via Fit.run(datase
 
 
       <span class="nd">@property</span>
-      <span class="k">def</span> <span class="nf">weight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">weight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
           <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_weight</span>
 
       <span class="nd">@weight</span><span class="o">.</span><span class="n">setter</span>
-      <span class="k">def</span> <span class="nf">weight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">weight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
           <span class="bp">self</span><span class="o">.</span><span class="n">_weight</span> <span class="o">=</span> <span class="n">value</span>
 
-      <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">          </span><span class="sd">&quot;&quot;&quot;Call evaluate method&quot;&quot;&quot;</span>
           <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="n">par</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">par</span><span class="o">.</span><span class="n">quantity</span> <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">}</span>
           <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">Parameter</span><span class="p">):</span>
@@ -661,7 +649,7 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
 </ul>
 <section id="exemplary-additional-prior-subclasses">
 <h3>Exemplary additional prior subclasses:<a class="headerlink" href="#exemplary-additional-prior-subclasses" title="Link to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">GaussianPrior</span><span class="p">(</span><span class="n">PriorModel</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">GaussianPrior</span><span class="p">(</span><span class="n">PriorModel</span><span class="p">):</span>
 
 <span class="w">      </span><span class="sd">&quot;&quot;&quot;Gaussian Prior with mu and sigma.</span>
 <span class="sd">      &quot;&quot;&quot;</span>
@@ -671,11 +659,11 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
       <span class="n">sigma</span> <span class="o">=</span> <span class="n">PriorParameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;sigma&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
 
       <span class="nd">@staticmethod</span>
-      <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
           <span class="k">return</span> <span class="p">((</span><span class="n">value</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">UniformPrior</span><span class="p">(</span><span class="n">PriorModel</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UniformPrior</span><span class="p">(</span><span class="n">PriorModel</span><span class="p">):</span>
 
 <span class="w">      </span><span class="sd">&quot;&quot;&quot;Uniform Prior</span>
 <span class="sd">      &quot;&quot;&quot;</span>
@@ -683,36 +671,36 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
       <span class="n">uni</span> <span class="o">=</span> <span class="n">PriorParameter</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;uni&quot;</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">unit</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="p">)</span>
 
       <span class="nd">@staticmethod</span>
-      <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">uni</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">uni</span><span class="p">):</span>
           <span class="k">return</span> <span class="n">uni</span>
 </pre></div>
 </div>
 <p>The priors can be set on a <code class="docutils literal notranslate"><span class="pre">`Parameter`</span></code> as <code class="docutils literal notranslate"><span class="pre">.prior</span></code> and get evaluated within:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Parameter</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Parameter</span><span class="p">():</span>
 
       <span class="n">_prior</span> <span class="o">=</span> <span class="kc">None</span>
 
       <span class="nd">@property</span>
-      <span class="k">def</span> <span class="nf">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
           <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_prior</span>
 
       <span class="nd">@prior</span><span class="o">.</span><span class="n">setter</span>
-      <span class="k">def</span> <span class="nf">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
           <span class="bp">self</span><span class="o">.</span><span class="n">_prior</span> <span class="o">=</span> <span class="n">value</span>
 
-      <span class="k">def</span> <span class="nf">prior_stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">prior_stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
           <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">prior</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
               <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">prior</span><span class="o">.</span><span class="n">weight</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">Parameters</span></code> inherit the priors and evaluate the <code class="docutils literal notranslate"><span class="pre">prior_stat_sum</span></code> of all the <code class="docutils literal notranslate"><span class="pre">Parameters.parameters</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Parameters</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Parameters</span><span class="p">():</span>
 
       <span class="nd">@property</span>
-      <span class="k">def</span> <span class="nf">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">prior</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">par</span><span class="o">.</span><span class="n">prior</span> <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">]</span>
 
-        <span class="k">def</span> <span class="nf">prior_stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">def</span><span class="w"> </span><span class="nf">prior_stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
             <span class="n">parameters_stat_sum</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">par</span><span class="o">.</span><span class="n">prior</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -721,9 +709,9 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <p>During the Fit the <code class="docutils literal notranslate"><span class="pre">Datasets.stat_sum()</span></code> function is evaluated.  Now the function has to compute the statistics due to the priors set on the parameters and add to the stat_sum.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Datasets</span><span class="p">():</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Datasets</span><span class="p">():</span>
 
-      <span class="k">def</span> <span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">          </span><span class="sd">&quot;&quot;&quot;Total statistic given the current model parameters.&quot;&quot;&quot;</span>
           <span class="n">stat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_array</span><span class="p">()</span>
 
@@ -734,9 +722,9 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <p>A simple method in the <code class="docutils literal notranslate"><span class="pre">Models</span></code> class will allow setting priors on multiple parameters simultaneously.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Models</span><span class="p">(</span><span class="n">Models</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Models</span><span class="p">(</span><span class="n">Models</span><span class="p">):</span>
 
-      <span class="k">def</span> <span class="nf">set_prior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">priors</span><span class="p">):</span>
+      <span class="k">def</span><span class="w"> </span><span class="nf">set_prior</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">priors</span><span class="p">):</span>
           <span class="k">for</span> <span class="n">parameter</span><span class="p">,</span> <span class="n">prior</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="n">priors</span><span class="p">):</span>
               <span class="n">parameter</span><span class="o">.</span><span class="n">prior</span> <span class="o">=</span> <span class="n">prior</span>
 </pre></div>
@@ -820,13 +808,13 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/development/pigs/pig-026.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/development/pigs/pig-026.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -841,8 +829,8 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -853,23 +841,19 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -877,14 +861,15 @@ It is assumed that the <code class="docutils literal notranslate"><span class="p
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,10 +55,11 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/data/cta';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
@@ -70,8 +69,7 @@
     <link rel="prev" title="H.E.S.S. with Gammapy" href="hess.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -514,9 +496,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -582,8 +569,10 @@ Release</a>).</p>
 analyse CTAO data and to use Gammapy, if you are a member of the CTAO
 consortium, you can use the simulated dataset from:</p>
 <ul class="simple">
-<li><p>the CTA first data challenge which ran in 2017 and 2018 (<a class="reference external" href="https://forge.in2p3.fr/projects/data-challenge-1-dc-1/wiki">https://forge.in2p3.fr/projects/data-challenge-1-dc-1/wiki</a>),</p></li>
-<li><p>the CTAO Science Data Challenge of 2024 (<a class="reference external" href="https://ctaoobservatory.sharepoint.com/:f:/r/sites/share-open-data/Shared%20Documents/Reference%20datasets/Internal%20Science%20Data%20Challenge?csf=1&amp;web=1&amp;e=gNuFzI">https://ctaoobservatory.sharepoint.com/:f:/r/sites/share-open-data/Shared%20Documents/Reference%20datasets/Internal%20Science%20Data%20Challenge?csf=1&amp;web=1&amp;e=gNuFzI</a>)</p></li>
+<li><p>the CTA first data challenge which ran in 2017 and 2018 (see <a class="reference external" href="https://forge.in2p3.fr/projects/data-challenge-1-dc-1/wiki">here</a>
+for CTAO members)</p></li>
+<li><p>the CTAO Science Data Challenge of 2024 (see <a class="reference external" href="https://ctaoobservatory.sharepoint.com/:f:/r/sites/share-open-data/Shared%20Documents/Reference%20datasets/Internal%20Science%20Data%20Challenge?csf=1&amp;web=1&amp;e=gNuFzI">here</a>
+for CTAO members)</p></li>
 </ul>
 <p>Gammapy fully supports the FITS data formats (events, IRFs) used in CTA
 1DC and SDC. The XML sky model format is not supported, but are also not needed
@@ -615,21 +604,21 @@ change the loaded data or IRFs to CTAO.</p>
 </section>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a>
-<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
 
 <span class="c1"># %matplotlib inline</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">DataStore</span><span class="p">,</span> <span class="n">EventList</span>
-<span class="kn">from</span> <span class="nn">gammapy.irf</span> <span class="kn">import</span> <span class="n">EffectiveAreaTable2D</span><span class="p">,</span> <a href="../../api/gammapy.irf.load_irf_dict_from_file.html#gammapy.irf.load_irf_dict_from_file" title="gammapy.irf.load_irf_dict_from_file" class="sphx-glr-backref-module-gammapy-irf sphx-glr-backref-type-py-function"><span class="n">load_irf_dict_from_file</span></a>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">DataStore</span><span class="p">,</span> <span class="n">EventList</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.irf</span><span class="w"> </span><span class="kn">import</span> <span class="n">EffectiveAreaTable2D</span><span class="p">,</span> <a href="../../api/gammapy.irf.load_irf_dict_from_file.html#gammapy.irf.load_irf_dict_from_file" title="gammapy.irf.load_irf_dict_from_file" class="sphx-glr-backref-module-gammapy-irf sphx-glr-backref-type-py-function"><span class="n">load_irf_dict_from_file</span></a>
 </pre></div>
 </div>
 </section>
 <section id="check-setup">
 <h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.utils.check</span> <span class="kn">import</span> <span class="n">check_tutorials_setup</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_tutorials_setup</span>
 
 <span class="n">check_tutorials_setup</span><span class="p">()</span>
 </pre></div>
@@ -637,36 +626,36 @@ change the loaded data or IRFs to CTAO.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
         python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.10
+        python_version         : 3.11.11
         machine                : x86_64
         system                 : Linux
 
 
 Gammapy package:
 
-        version                : 1.3.dev1278+g0c082c493.d20241024
+        version                : 2.0.dev513+ge63c183da
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.26.4
-        scipy                  : 1.14.1
-        astropy                : 5.2.2
+        numpy                  : 2.2.3
+        scipy                  : 1.15.2
+        astropy                : 7.0.1
         regions                : 0.10
-        click                  : 8.1.7
+        click                  : 8.1.8
         yaml                   : 6.0.2
-        IPython                : 8.28.0
+        IPython                : 9.0.1
         jupyterlab             : not installed
-        matplotlib             : 3.9.2
+        matplotlib             : 3.9.4
         pandas                 : not installed
-        healpy                 : 1.17.3
+        healpy                 : 1.18.0
         iminuit                : 2.30.1
-        sherpa                 : 4.16.1
-        naima                  : 0.10.0
+        sherpa                 : 4.17.0
+        naima                  : 0.10.2
         emcee                  : 3.1.6
-        corner                 : 2.2.2
-        ray                    : 2.38.0
+        corner                 : 2.2.3
+        ray                    : 2.43.0
 
 
 Gammapy environment variables:
@@ -728,8 +717,8 @@ HDU index table:
 BASE_DIR: /home/feijen/Documents/github/gammapy-data/cta-1dc/index/gps
 Rows: 24
 OBS_ID: 110380 -- 111630
-HDU_TYPE: [&#39;aeff&#39;, &#39;bkg&#39;, &#39;edisp&#39;, &#39;events&#39;, &#39;gti&#39;, &#39;psf&#39;]
-HDU_CLASS: [&#39;aeff_2d&#39;, &#39;bkg_3d&#39;, &#39;edisp_2d&#39;, &#39;events&#39;, &#39;gti&#39;, &#39;psf_3gauss&#39;]
+HDU_TYPE: [np.str_(&#39;aeff&#39;), np.str_(&#39;bkg&#39;), np.str_(&#39;edisp&#39;), np.str_(&#39;events&#39;), np.str_(&#39;gti&#39;), np.str_(&#39;psf&#39;)]
+HDU_CLASS: [np.str_(&#39;aeff_2d&#39;), np.str_(&#39;bkg_3d&#39;), np.str_(&#39;edisp_2d&#39;), np.str_(&#39;events&#39;), np.str_(&#39;gti&#39;), np.str_(&#39;psf_3gauss&#39;)]
 
 
 Observation table:
@@ -756,8 +745,8 @@ HDU index table:
 BASE_DIR: .
 Rows: 24
 OBS_ID: 110380 -- 111630
-HDU_TYPE: [&#39;aeff&#39;, &#39;bkg&#39;, &#39;edisp&#39;, &#39;events&#39;, &#39;gti&#39;, &#39;psf&#39;]
-HDU_CLASS: [&#39;aeff_2d&#39;, &#39;bkg_3d&#39;, &#39;edisp_2d&#39;, &#39;events&#39;, &#39;gti&#39;, &#39;psf_3gauss&#39;]
+HDU_TYPE: [np.str_(&#39;aeff&#39;), np.str_(&#39;bkg&#39;), np.str_(&#39;edisp&#39;), np.str_(&#39;events&#39;), np.str_(&#39;gti&#39;), np.str_(&#39;psf&#39;)]
+HDU_CLASS: [np.str_(&#39;aeff_2d&#39;), np.str_(&#39;bkg_3d&#39;), np.str_(&#39;edisp_2d&#39;), np.str_(&#39;events&#39;), np.str_(&#39;gti&#39;), np.str_(&#39;psf_3gauss&#39;)]
 
 
 Observation table:
@@ -804,7 +793,7 @@ which <code class="xref py py-obj docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 <p>Here we print the data from the first 5 events listed in the table:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span><span class="o">.</span><span class="n">table</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span><span class="o">.</span><span class="n">table</span></a><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>EVENT_ID        TIME           RA        DEC     ...    DETX       DETY    MC_ID
@@ -870,9 +859,9 @@ when using the DC1 IRFs for some analyses.</p></li>
   unit  : m2
   dtype : &gt;f4
 
-/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2097: UnitsWarning: &#39;1/s/MeV/sr&#39; did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2145: UnitsWarning: &#39;1/s/MeV/sr&#39; did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with &#39;u.def_unit&#39;. To have it recognized inside a file reader or other code, enable it with &#39;u.add_enabled_units&#39;. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
   warnings.warn(msg, UnitsWarning)
-{&#39;aeff&#39;: &lt;gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x781c10637550&gt;, &#39;psf&#39;: &lt;gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x781c107c8950&gt;, &#39;edisp&#39;: &lt;gammapy.irf.edisp.core.EnergyDispersion2D object at 0x781c1070ff50&gt;, &#39;bkg&#39;: &lt;gammapy.irf.background.Background3D object at 0x781c07a9c1d0&gt;}
+{&#39;aeff&#39;: &lt;gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x72253c568050&gt;, &#39;psf&#39;: &lt;gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x72253c145790&gt;, &#39;edisp&#39;: &lt;gammapy.irf.edisp.core.EnergyDispersion2D object at 0x722537c69ad0&gt;, &#39;bkg&#39;: &lt;gammapy.irf.background.Background3D object at 0x7225378fdc50&gt;}
 </pre></div>
 </div>
 <section id="effective-area">
@@ -916,8 +905,9 @@ when using the DC1 IRFs for some analyses.</p></li>
 </div>
 <img src="../../_images/sphx_glr_cta_004.png" srcset="../../_images/sphx_glr_cta_004.png" alt="cta" class = "sphx-glr-single-img"/><p>This is how for analysis you could slice out the PSF
 at a given field of view offset</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">irfs</span></a><span class="p">[</span><span class="s2">&quot;psf&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot_containment_radius_vs_energy</span><span class="p">(</span>
-    <span class="n">offset</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="p">[</span><span class="mf">0.68</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">irfs</span></a><span class="p">[</span><span class="s2">&quot;psf&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot_containment_radius_vs_energy</span><span class="p">(</span>
+    <span class="n">offset</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="p">[</span><span class="mf">0.68</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
 <span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
@@ -1017,7 +1007,7 @@ explain how to proceed. This example is made with the Alpha configuration (Prod5
 <li><p>Use <code class="xref py py-obj docutils literal notranslate"><span class="pre">table</span></code> to find the energy, sky coordinate and time of
 the highest-energy event.</p></li>
 <li><p>Use <a class="reference internal" href="../../api/gammapy.data.EventList.html#gammapy.data.EventList.pointing_radec" title="gammapy.data.EventList.pointing_radec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pointing_radec</span></code></a> to find the pointing position of this
-observation, and use <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.coordinates.SkyCoord</span></code></a> methods to find
+observation, and use <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.coordinates.SkyCoord</span></code></a> methods to find
 the field of view offset of the highest-energy event.</p></li>
 <li><p>What is the effective area and PSF 68% containment radius of CTAO at 1
 TeV for the <code class="xref py py-obj docutils literal notranslate"><span class="pre">South_z20_50h</span></code> configuration used for the CTA 1DC
@@ -1111,13 +1101,13 @@ or <a class="reference internal" href="../analysis-1d/cta_sensitivity.html"><spa
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/tutorials/data/cta.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/tutorials/data/cta.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -1132,8 +1122,8 @@ or <a class="reference internal" href="../analysis-1d/cta_sensitivity.html"><spa
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1144,23 +1134,19 @@ or <a class="reference internal" href="../analysis-1d/cta_sensitivity.html"><spa
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -1168,14 +1154,15 @@ or <a class="reference internal" href="../analysis-1d/cta_sensitivity.html"><spa
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

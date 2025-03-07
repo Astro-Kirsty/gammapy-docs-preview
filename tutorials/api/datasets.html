@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,10 +55,11 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/api/datasets';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
@@ -70,8 +69,7 @@
     <link rel="prev" title="Mask maps" href="mask_maps.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -514,9 +496,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -582,28 +569,28 @@ or estimator classes for modelling and fitting purposes.</p>
 </section>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
-<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a>
-<span class="kn">from</span> <span class="nn">regions</span> <span class="kn">import</span> <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">CircleSkyRegion</span></a>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="kn">from</span> <span class="nn">gammapy.data</span> <span class="kn">import</span> <span class="n">GTI</span>
-<span class="kn">from</span> <span class="nn">gammapy.datasets</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.coordinates</span><span class="w"> </span><span class="kn">import</span> <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">regions</span><span class="w"> </span><span class="kn">import</span> <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">CircleSkyRegion</span></a>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">GTI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <a href="../../api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets" title="gammapy.datasets.Datasets" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class"><span class="n">Datasets</span></a><span class="p">,</span>
     <a href="../../api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset" title="gammapy.datasets.FluxPointsDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class"><span class="n">FluxPointsDataset</span></a><span class="p">,</span>
     <span class="n">MapDataset</span><span class="p">,</span>
     <span class="n">SpectrumDatasetOnOff</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">gammapy.estimators</span> <span class="kn">import</span> <span class="n">FluxPoints</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">WcsGeom</span>
-<span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <a href="../../api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel" title="gammapy.modeling.models.FoVBackgroundModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">FoVBackgroundModel</span></a><span class="p">,</span> <a href="../../api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel" title="gammapy.modeling.models.PowerLawSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">PowerLawSpectralModel</span></a><span class="p">,</span> <a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.estimators</span><span class="w"> </span><span class="kn">import</span> <span class="n">FluxPoints</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">WcsGeom</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <a href="../../api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel" title="gammapy.modeling.models.FoVBackgroundModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">FoVBackgroundModel</span></a><span class="p">,</span> <a href="../../api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel" title="gammapy.modeling.models.PowerLawSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">PowerLawSpectralModel</span></a><span class="p">,</span> <a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a>
 </pre></div>
 </div>
 </section>
 <section id="check-setup">
 <h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">gammapy.utils.check</span> <span class="kn">import</span> <span class="n">check_tutorials_setup</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.scripts</span> <span class="kn">import</span> <a href="../../api/gammapy.utils.scripts.make_path.html#gammapy.utils.scripts.make_path" title="gammapy.utils.scripts.make_path" class="sphx-glr-backref-module-gammapy-utils-scripts sphx-glr-backref-type-py-function"><span class="n">make_path</span></a>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_tutorials_setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.scripts</span><span class="w"> </span><span class="kn">import</span> <a href="../../api/gammapy.utils.scripts.make_path.html#gammapy.utils.scripts.make_path" title="gammapy.utils.scripts.make_path" class="sphx-glr-backref-module-gammapy-utils-scripts sphx-glr-backref-type-py-function"><span class="n">make_path</span></a>
 
 <span class="c1"># %matplotlib inline</span>
 
@@ -614,36 +601,36 @@ or estimator classes for modelling and fitting purposes.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
         python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.10
+        python_version         : 3.11.11
         machine                : x86_64
         system                 : Linux
 
 
 Gammapy package:
 
-        version                : 1.3.dev1278+g0c082c493.d20241024
+        version                : 2.0.dev513+ge63c183da
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 1.26.4
-        scipy                  : 1.14.1
-        astropy                : 5.2.2
+        numpy                  : 2.2.3
+        scipy                  : 1.15.2
+        astropy                : 7.0.1
         regions                : 0.10
-        click                  : 8.1.7
+        click                  : 8.1.8
         yaml                   : 6.0.2
-        IPython                : 8.28.0
+        IPython                : 9.0.1
         jupyterlab             : not installed
-        matplotlib             : 3.9.2
+        matplotlib             : 3.9.4
         pandas                 : not installed
-        healpy                 : 1.17.3
+        healpy                 : 1.18.0
         iminuit                : 2.30.1
-        sherpa                 : 4.16.1
-        naima                  : 0.10.0
+        sherpa                 : 4.17.0
+        naima                  : 0.10.2
         emcee                  : 3.1.6
-        corner                 : 2.2.2
-        ray                    : 2.38.0
+        corner                 : 2.2.3
+        ray                    : 2.43.0
 
 
 Gammapy environment variables:
@@ -670,8 +657,8 @@ larger and more finely sampled and the reco energy bin.</p>
 <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom" title="gammapy.maps.WcsGeom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">geom</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.create" title="gammapy.maps.WcsGeom.create" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">WcsGeom</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
     <span class="n">skydir</span><span class="o">=</span><span class="p">(</span><span class="mf">83.63</span><span class="p">,</span> <span class="mf">22.01</span><span class="p">),</span>
     <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">],</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span>
-    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.05</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span>
+    <span class="n">binsz</span><span class="o">=</span><span class="mf">0.05</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span>
     <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
@@ -723,7 +710,7 @@ define the binning of the IRF related maps:</p>
 <span class="c1"># choose a different rad axis binning for the psf</span>
 <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rad_axis</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.from_bounds" title="gammapy.maps.MapAxis.from_bounds" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">MapAxis</span><span class="o">.</span><span class="n">from_bounds</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">nbin</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;rad&quot;</span><span class="p">)</span>
 
-<a href="../../api/gammapy.data.GTI.html#gammapy.data.GTI" title="gammapy.data.GTI" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">gti</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.GTI.html#gammapy.data.GTI.create" title="gammapy.data.GTI.create" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">GTI</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">s</span></a><span class="p">,</span> <span class="mi">1000</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">s</span></a><span class="p">)</span>
+<a href="../../api/gammapy.data.GTI.html#gammapy.data.GTI" title="gammapy.data.GTI" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">gti</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.GTI.html#gammapy.data.GTI.create" title="gammapy.data.GTI.create" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-method"><span class="n">GTI</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">s</span></a><span class="p">,</span> <span class="mi">1000</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">s</span></a><span class="p">)</span>
 
 <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dataset_empty</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.create" title="gammapy.datasets.MapDataset.create" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">MapDataset</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
     <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom" title="gammapy.maps.WcsGeom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">geom</span></a><span class="o">=</span><a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom" title="gammapy.maps.WcsGeom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">geom</span></a><span class="p">,</span>
@@ -739,7 +726,7 @@ define the binning of the IRF related maps:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.geoms" title="gammapy.datasets.MapDataset.geoms" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-attribute"><span class="n">dataset_empty</span><span class="o">.</span><span class="n">geoms</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;geom&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x781bf98de350&gt;, &#39;geom_exposure&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x781bf8a26c90&gt;, &#39;geom_psf&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x781c19415250&gt;, &#39;geom_edisp&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x781c10442190&gt;}
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;geom&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x72253790df10&gt;, &#39;geom_exposure&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x722536f07cd0&gt;, &#39;geom_psf&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x722537aeaf90&gt;, &#39;geom_edisp&#39;: &lt;gammapy.maps.wcs.geom.WcsGeom object at 0x72253c246790&gt;}
 </pre></div>
 </div>
 <p>Another way to create a <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDataset</span></code></a> is to just read an existing one
@@ -788,7 +775,7 @@ e.g. <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.h
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.info_dict" title="gammapy.datasets.MapDataset.info_dict" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">info_dict</span></a><span class="p">())</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;dataset-cta&#39;, &#39;counts&#39;: 104317, &#39;excess&#39;: 12809.3046875, &#39;sqrt_ts&#39;: 41.41009347393684, &#39;background&#39;: 91507.6953125, &#39;npred&#39;: 91507.68628538586, &#39;npred_background&#39;: 91507.6953125, &#39;npred_signal&#39;: nan, &#39;exposure_min&#39;: &lt;Quantity 62842028. m2 s&gt;, &#39;exposure_max&#39;: &lt;Quantity 1.90242058e+10 m2 s&gt;, &#39;livetime&#39;: &lt;Quantity 5292.00010298 s&gt;, &#39;ontime&#39;: &lt;Quantity 5400. s&gt;, &#39;counts_rate&#39;: &lt;Quantity 19.71220672 1 / s&gt;, &#39;background_rate&#39;: &lt;Quantity 17.29170324 1 / s&gt;, &#39;excess_rate&#39;: &lt;Quantity 2.42050348 1 / s&gt;, &#39;n_bins&#39;: 768000, &#39;n_fit_bins&#39;: 691680, &#39;stat_type&#39;: &#39;cash&#39;, &#39;stat_sum&#39;: nan}
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>{&#39;name&#39;: &#39;dataset-cta&#39;, &#39;counts&#39;: 104317, &#39;excess&#39;: 12809.3046875, &#39;sqrt_ts&#39;: np.float64(41.41009347393684), &#39;background&#39;: 91507.6953125, &#39;npred&#39;: 91507.68628538586, &#39;npred_background&#39;: 91507.6953125, &#39;npred_signal&#39;: nan, &#39;exposure_min&#39;: &lt;Quantity 62842028. m2 s&gt;, &#39;exposure_max&#39;: &lt;Quantity 1.90242058e+10 m2 s&gt;, &#39;livetime&#39;: &lt;Quantity 5292.00010298 s&gt;, &#39;ontime&#39;: &lt;Quantity 5400. s&gt;, &#39;counts_rate&#39;: &lt;Quantity 19.71220672 1 / s&gt;, &#39;background_rate&#39;: &lt;Quantity 17.29170324 1 / s&gt;, &#39;excess_rate&#39;: &lt;Quantity 2.42050348 1 / s&gt;, &#39;n_bins&#39;: 768000, &#39;n_fit_bins&#39;: 691680, &#39;stat_type&#39;: &#39;cash&#39;, &#39;stat_sum&#39;: nan}
 </pre></div>
 </div>
 <p>For a quick view, use</p>
@@ -799,7 +786,7 @@ e.g. <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.h
 <img src="../../_images/sphx_glr_datasets_001.png" srcset="../../_images/sphx_glr_datasets_001.png" alt="Counts, Excess counts, Exposure, Background" class = "sphx-glr-single-img"/><p>And access individual maps like:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">counts_image</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.smooth" title="gammapy.maps.WcsNDMap.smooth" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">counts_image</span><span class="o">.</span><span class="n">smooth</span></a><span class="p">(</span><span class="s2">&quot;0.1 deg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.smooth" title="gammapy.maps.WcsNDMap.smooth" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">counts_image</span><span class="o">.</span><span class="n">smooth</span></a><span class="p">(</span><span class="s2">&quot;0.1 deg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -812,15 +799,15 @@ e.g. <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.h
 
         geom  : WcsGeom
         axes  : [&#39;lon&#39;, &#39;lat&#39;, &#39;rad&#39;, &#39;energy_true&#39;]
-        shape : (16, 12, 66, 14)
+        shape : (np.int64(16), np.int64(12), 66, 14)
         ndim  : 4
         unit  : 1 / sr
         dtype : &gt;f4
 </pre></div>
 </div>
 <p>And use any method on the <a class="reference internal" href="../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap" title="gammapy.irf.PSFMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PSFMap</span></code></a> object:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radius</span></a> <span class="o">=</span> <a href="../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.containment_radius" title="gammapy.irf.PSFMap.containment_radius" class="sphx-glr-backref-module-gammapy-irf sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">containment_radius</span></a><span class="p">(</span><span class="n">energy_true</span><span class="o">=</span><span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.95</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radius</span></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radius</span></a> <span class="o">=</span> <a href="../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.containment_radius" title="gammapy.irf.PSFMap.containment_radius" class="sphx-glr-backref-module-gammapy-irf sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">psf</span><span class="o">.</span><span class="n">containment_radius</span></a><span class="p">(</span><span class="n">energy_true</span><span class="o">=</span><span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.95</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">radius</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0.08675] deg
@@ -841,7 +828,7 @@ map:</p>
 
         geom  : WcsGeom
         axes  : [&#39;lon&#39;, &#39;lat&#39;, &#39;energy&#39;]
-        shape : (320, 240, 10)
+        shape : (np.int64(320), np.int64(240), 10)
         ndim  : 3
         unit  :
         dtype : &gt;f4
@@ -850,7 +837,7 @@ map:</p>
 <p>As a next step we define a minimal model on the dataset using the
 <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.models" title="gammapy.datasets.MapDataset.models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code></a> setter:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a> <span class="o">=</span> <a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.create" title="gammapy.modeling.models.SkyModel.create" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-method"><span class="n">SkyModel</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span><span class="s2">&quot;pl&quot;</span><span class="p">,</span> <span class="s2">&quot;point&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;gc&quot;</span><span class="p">)</span>
-<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spatial_model" title="gammapy.modeling.models.SkyModel.spatial_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">position</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">)</span>
+<a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spatial_model" title="gammapy.modeling.models.SkyModel.spatial_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">model</span><span class="o">.</span><span class="n">spatial_model</span><span class="o">.</span><span class="n">position</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">)</span>
 <a href="../../api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel" title="gammapy.modeling.models.FoVBackgroundModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model_bkg</span></a> <span class="o">=</span> <a href="../../api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel" title="gammapy.modeling.models.FoVBackgroundModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">FoVBackgroundModel</span></a><span class="p">(</span><span class="n">dataset_name</span><span class="o">=</span><span class="s2">&quot;dataset-cta&quot;</span><span class="p">)</span>
 
 <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.models" title="gammapy.datasets.MapDataset.models" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-attribute"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">models</span></a> <span class="o">=</span> <span class="p">[</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model</span></a><span class="p">,</span> <a href="../../api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel" title="gammapy.modeling.models.FoVBackgroundModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model_bkg</span></a><span class="p">]</span>
@@ -896,7 +883,7 @@ Printing the dataset will now show the model components:</p>
     Temporal model type       :
     Parameters:
       index                         :      2.000   +/-    0.00
-      amplitude                     :   1.00e-12   +/- 0.0e+00 1 / (cm2 s TeV)
+      amplitude                     :   1.00e-12   +/- 0.0e+00 1 / (TeV s cm2)
       reference             (frozen):      1.000       TeV
       lon_0                         :      4.650   +/-    0.00 rad
       lat_0                         :     -0.505   +/-    0.00 rad
@@ -915,14 +902,14 @@ Printing the dataset will now show the model components:</p>
 <p>Now we can use the <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.npred" title="gammapy.datasets.MapDataset.npred"><code class="xref py py-obj docutils literal notranslate"><span class="pre">npred</span></code></a> method to get a map of the total predicted counts
 of the model:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">npred</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.npred" title="gammapy.datasets.MapDataset.npred" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">npred</span></a><span class="p">()</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">npred</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">npred</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_datasets_004.png" srcset="../../_images/sphx_glr_datasets_004.png" alt="datasets" class = "sphx-glr-single-img"/><p>To get the predicted counts from an individual model component we can
 use:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">npred_source</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.npred_signal" title="gammapy.datasets.MapDataset.npred_signal" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">npred_signal</span></a><span class="p">(</span><span class="n">model_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;gc&quot;</span><span class="p">])</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">npred_source</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">npred_source</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -952,21 +939,19 @@ applying masks, please refer to <a class="reference internal" href="mask_maps.ht
 <p>Both the <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.mask_fit" title="gammapy.datasets.MapDataset.mask_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit</span></code></a> and <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.mask_safe" title="gammapy.datasets.MapDataset.mask_safe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe</span></code></a> must
 have the same <a class="reference internal" href="../../api/gammapy.maps.Map.html#gammapy.maps.Map.geom" title="gammapy.maps.Map.geom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">geom</span></code></a> as the <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.counts" title="gammapy.datasets.MapDataset.counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">counts</span></code></a> and
 <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.background" title="gammapy.datasets.MapDataset.background"><code class="xref py py-obj docutils literal notranslate"><span class="pre">background</span></code></a> maps.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># eg: to see the safe data range</span>
-
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">mask_safe</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">()</span>
+<p>For example to see the safe data range:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">mask_safe</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_datasets_007.png" srcset="../../_images/sphx_glr_datasets_007.png" alt="Energy 100 GeV - 158 GeV, Energy 158 GeV - 251 GeV, Energy 251 GeV - 398 GeV, Energy 398 GeV - 631 GeV, Energy 631 GeV - 1.00 TeV, Energy 1.00 TeV - 1.58 TeV, Energy 1.58 TeV - 2.51 TeV, Energy 2.51 TeV - 3.98 TeV, Energy 3.98 TeV - 6.31 TeV, Energy 6.31 TeV - 10.0 TeV" class = "sphx-glr-single-img"/><p>In addition it is possible to define a custom <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.mask_fit" title="gammapy.datasets.MapDataset.mask_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit</span></code></a>:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># To apply a mask fit - in energy and space</span>
-
-<a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">region</span></a> <span class="o">=</span> <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">CircleSkyRegion</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">),</span> <span class="mf">1.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">)</span>
+<img src="../../_images/sphx_glr_datasets_007.png" srcset="../../_images/sphx_glr_datasets_007.png" alt="Energy 100 GeV - 158 GeV, Energy 158 GeV - 251 GeV, Energy 251 GeV - 398 GeV, Energy 398 GeV - 631 GeV, Energy 631 GeV - 1.00 TeV, Energy 1.00 TeV - 1.58 TeV, Energy 1.58 TeV - 2.51 TeV, Energy 2.51 TeV - 3.98 TeV, Energy 3.98 TeV - 6.31 TeV, Energy 6.31 TeV - 10.0 TeV" class = "sphx-glr-single-img"/><p>In addition it is possible to define a custom <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.mask_fit" title="gammapy.datasets.MapDataset.mask_fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_fit</span></code></a>.</p>
+<p>Here we apply a mask fit in energy and space:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">region</span></a> <span class="o">=</span> <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">CircleSkyRegion</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">),</span> <span class="mf">1.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">)</span>
 
 <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom" title="gammapy.maps.WcsGeom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">geom</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.geom" title="gammapy.maps.WcsNDMap.geom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span></a>
 
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_space</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.region_mask" title="gammapy.maps.WcsGeom.region_mask" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">geom</span><span class="o">.</span><span class="n">region_mask</span></a><span class="p">([</span><a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">region</span></a><span class="p">])</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_energy</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.energy_mask" title="gammapy.maps.WcsGeom.energy_mask" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">geom</span><span class="o">.</span><span class="n">energy_mask</span></a><span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">)</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_energy</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.energy_mask" title="gammapy.maps.WcsGeom.energy_mask" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">geom</span><span class="o">.</span><span class="n">energy_mask</span></a><span class="p">(</span><span class="mf">0.3</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="mi">8</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">)</span>
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">mask_fit</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_space</span></a> <span class="o">&amp;</span> <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap" title="gammapy.maps.WcsNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">mask_energy</span></a>
 <a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">mask_fit</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
@@ -997,20 +982,20 @@ values at each spatial pixel</p>
 <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDataset</span></code></a>, which will perform the cutout for all maps in
 parallel. Optionally one can provide a new name to the resulting dataset:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">cutout</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.cutout" title="gammapy.datasets.MapDataset.cutout" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">cutout</span></a><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">),</span>
-    <span class="n">width</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span>
+    <span class="n">position</span><span class="o">=</span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="s2">&quot;0d&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">),</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">2</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;cta-cutout&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">cutout</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">cutout</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_datasets_011.png" srcset="../../_images/sphx_glr_datasets_011.png" alt="datasets" class = "sphx-glr-single-img"/><p>It is also possible to slice a <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDataset</span></code></a> in energy:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sliced</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.slice_by_energy" title="gammapy.datasets.MapDataset.slice_by_energy" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">slice_by_energy</span></a><span class="p">(</span>
-    <span class="n">energy_min</span><span class="o">=</span><span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="mi">5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;slice-energy&quot;</span>
+    <span class="n">energy_min</span><span class="o">=</span><span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="mi">5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;slice-energy&quot;</span>
 <span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">sliced</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">sliced</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -1028,7 +1013,7 @@ by a specified factor. This can be done in either spatial or energy
 axes:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure" title="matplotlib.pyplot.figure" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">()</span>
 <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">downsampled</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.downsample" title="gammapy.datasets.MapDataset.downsample" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">downsample</span></a><span class="p">(</span><span class="n">factor</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">downsampled</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.sum_over_axes" title="gammapy.maps.WcsNDMap.sum_over_axes" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">downsampled</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span></a><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -1036,7 +1021,7 @@ axes:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">downsampled_energy</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.downsample" title="gammapy.datasets.MapDataset.downsample" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">downsample</span></a><span class="p">(</span>
     <span class="n">factor</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;downsampled-energy&quot;</span>
 <span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">downsampled_energy</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">downsampled_energy</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -1106,7 +1091,7 @@ preserved during the down-sampling:</p>
     Temporal model type       :
     Parameters:
       index                         :      2.000   +/-    0.00
-      amplitude                     :   1.00e-12   +/- 0.0e+00 1 / (cm2 s TeV)
+      amplitude                     :   1.00e-12   +/- 0.0e+00 1 / (TeV s cm2)
       reference             (frozen):      1.000       TeV
       lon_0                         :      4.650   +/-    0.00 rad
       lat_0                         :     -0.505   +/-    0.00 rad
@@ -1124,16 +1109,16 @@ preserved during the down-sampling:</p>
 </div>
 <p>We can also resample the finer binned datasets to an arbitrary coarser
 energy binning using:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis_new</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.from_energy_edges" title="gammapy.maps.MapAxis.from_energy_edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_edges</span></a><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis_new</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.from_energy_edges" title="gammapy.maps.MapAxis.from_energy_edges" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_edges</span></a><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">)</span>
 <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">resampled</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.resample_energy_axis" title="gammapy.datasets.MapDataset.resample_energy_axis" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">resample_energy_axis</span></a><span class="p">(</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="o">=</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis_new</span></a><span class="p">)</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">resampled</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot_grid" title="gammapy.maps.WcsNDMap.plot_grid" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">resampled</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot_grid</span></a><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_datasets_016.png" srcset="../../_images/sphx_glr_datasets_016.png" alt="Energy 100 GeV - 251 GeV, Energy 251 GeV - 1.00 TeV, Energy 1.00 TeV - 2.51 TeV, Energy 2.51 TeV - 10.0 TeV" class = "sphx-glr-single-img"/><p>To squash the whole dataset into a single energy bin there is the
 <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_image" title="gammapy.datasets.MapDataset.to_image"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_image()</span></code></a> convenience method:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dataset_image</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_image" title="gammapy.datasets.MapDataset.to_image" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">to_image</span></a><span class="p">()</span>
-<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot" title="gammapy.maps.WcsNDMap.plot" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">dataset_image</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot</span></a><span class="p">()</span>
+<a href="../../api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.plot" title="gammapy.maps.WcsNDMap.plot" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">dataset_image</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
@@ -1147,7 +1132,7 @@ adapted for 1D spectral analysis, and uses a <a class="reference internal" href=
 by summing the <code class="xref py py-obj docutils literal notranslate"><span class="pre">counts</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">background</span></code> inside the <code class="xref py py-obj docutils literal notranslate"><span class="pre">on_region</span></code>,
 which can then be used for classical spectral analysis. Containment
 correction is feasible only for circular regions.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">region</span></a> <span class="o">=</span> <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">CircleSkyRegion</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/latest/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">),</span> <span class="mf">0.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/latest/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">region</span></a> <span class="o">=</span> <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">CircleSkyRegion</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;galactic&quot;</span><span class="p">),</span> <span class="mf">0.5</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="astropy.units.Unit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">deg</span></a><span class="p">)</span>
 <a href="../../api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset" title="gammapy.datasets.SpectrumDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spectrum_dataset</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.to_spectrum_dataset" title="gammapy.datasets.MapDataset.to_spectrum_dataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">dataset_cta</span><span class="o">.</span><span class="n">to_spectrum_dataset</span></a><span class="p">(</span>
     <a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html#regions.CircleSkyRegion" title="regions.CircleSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">region</span></a><span class="p">,</span> <span class="n">containment_correction</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;spectrum-dataset&quot;</span>
 <span class="p">)</span>
@@ -1207,7 +1192,7 @@ points, which can be then used in fitting.</p>
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_datasets_019.png" srcset="../../_images/sphx_glr_datasets_019.png" alt="datasets" class = "sphx-glr-single-img"/><p>The masks on <a class="reference internal" href="../../api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset" title="gammapy.datasets.FluxPointsDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPointsDataset</span></code></a> are <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a> objects
+<img src="../../_images/sphx_glr_datasets_019.png" srcset="../../_images/sphx_glr_datasets_019.png" alt="datasets" class = "sphx-glr-single-img"/><p>The masks on <a class="reference internal" href="../../api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset" title="gammapy.datasets.FluxPointsDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPointsDataset</span></code></a> are <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a> objects
 and the data is a
 <code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPoints</span></code> object. The <a class="reference internal" href="../../api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.mask_safe" title="gammapy.datasets.FluxPointsDataset.mask_safe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mask_safe</span></code></a>,
 by default, masks the upper limit points.</p>
@@ -1519,7 +1504,7 @@ Dataset 3:
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>(&lt;Quantity [1.e+09, 1.e+09, 1.e+09, 1.e+09] keV&gt;, &lt;Quantity [1.e+10, 1.e+10, 1.e+10, 1.e+10] keV&gt;)
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 13.695 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 11.490 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-datasets-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/datasets.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" style="width: 150px;" />
@@ -1581,13 +1566,13 @@ Dataset 3:
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/tutorials/api/datasets.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/tutorials/api/datasets.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -1602,8 +1587,8 @@ Dataset 3:
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1614,23 +1599,19 @@ Dataset 3:
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -1638,14 +1619,15 @@ Dataset 3:
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

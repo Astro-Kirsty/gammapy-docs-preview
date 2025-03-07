@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,28 +26,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -56,10 +54,11 @@
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/gammapy/maps/wcs/geom';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../../../_static/gammapy_logo.ico"/>
@@ -67,8 +66,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -132,8 +130,8 @@
     
     
     
-    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -182,21 +180,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -236,6 +226,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -249,18 +247,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -391,6 +377,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -414,18 +408,6 @@
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
           <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
@@ -437,9 +419,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -487,34 +474,34 @@
                   
   <h1>Source code for gammapy.maps.wcs.geom</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
-<span class="kn">import</span> <span class="nn">copy</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
-<span class="kn">from</span> <span class="nn">astropy.convolution</span> <span class="kn">import</span> <span class="n">Tophat2DKernel</span>
-<span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">Angle</span><span class="p">,</span> <span class="n">SkyCoord</span>
-<span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span>
-<span class="kn">from</span> <span class="nn">astropy.nddata</span> <span class="kn">import</span> <span class="n">Cutout2D</span>
-<span class="kn">from</span> <span class="nn">astropy.nddata.utils</span> <span class="kn">import</span> <span class="n">overlap_slices</span>
-<span class="kn">from</span> <span class="nn">astropy.utils</span> <span class="kn">import</span> <span class="n">lazyproperty</span>
-<span class="kn">from</span> <span class="nn">astropy.wcs</span> <span class="kn">import</span> <span class="n">WCS</span>
-<span class="kn">from</span> <span class="nn">astropy.wcs.utils</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.convolution</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tophat2DKernel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.coordinates</span><span class="w"> </span><span class="kn">import</span> <span class="n">Angle</span><span class="p">,</span> <span class="n">SkyCoord</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">fits</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.nddata</span><span class="w"> </span><span class="kn">import</span> <span class="n">Cutout2D</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.nddata.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">overlap_slices</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">lazyproperty</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.wcs</span><span class="w"> </span><span class="kn">import</span> <span class="n">WCS</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.wcs.utils</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">celestial_frame_to_wcs</span><span class="p">,</span>
     <span class="n">proj_plane_pixel_scales</span><span class="p">,</span>
     <span class="n">wcs_to_celestial_frame</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span> <span class="nn">regions</span> <span class="kn">import</span> <span class="n">RectangleSkyRegion</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.array</span> <span class="kn">import</span> <span class="n">round_up_to_even</span><span class="p">,</span> <span class="n">round_up_to_odd</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.compat</span> <span class="kn">import</span> <span class="n">COPY_IF_NEEDED</span>
-<span class="kn">from</span> <span class="nn">..axes</span> <span class="kn">import</span> <span class="n">MapAxes</span>
-<span class="kn">from</span> <span class="nn">..coord</span> <span class="kn">import</span> <span class="n">MapCoord</span><span class="p">,</span> <span class="n">skycoord_to_lonlat</span>
-<span class="kn">from</span> <span class="nn">..geom</span> <span class="kn">import</span> <span class="n">Geom</span><span class="p">,</span> <span class="n">get_shape</span><span class="p">,</span> <span class="n">pix_tuple_to_idx</span>
-<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">INVALID_INDEX</span><span class="p">,</span> <span class="n">_check_binsz</span><span class="p">,</span> <span class="n">_check_width</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">regions</span><span class="w"> </span><span class="kn">import</span> <span class="n">RectangleSkyRegion</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.array</span><span class="w"> </span><span class="kn">import</span> <span class="n">round_up_to_even</span><span class="p">,</span> <span class="n">round_up_to_odd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.compat</span><span class="w"> </span><span class="kn">import</span> <span class="n">COPY_IF_NEEDED</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..axes</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapAxes</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..coord</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapCoord</span><span class="p">,</span> <span class="n">skycoord_to_lonlat</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..geom</span><span class="w"> </span><span class="kn">import</span> <span class="n">Geom</span><span class="p">,</span> <span class="n">get_shape</span><span class="p">,</span> <span class="n">pix_tuple_to_idx</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">INVALID_INDEX</span><span class="p">,</span> <span class="n">_check_binsz</span><span class="p">,</span> <span class="n">_check_width</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;WcsGeom&quot;</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">cast_to_shape</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cast_to_shape</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Cast a tuple of parameter arrays to a given shape.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">param</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
         <span class="n">param</span> <span class="o">=</span> <span class="p">[</span><span class="n">param</span><span class="p">]</span>
@@ -536,7 +523,7 @@
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">get_resampled_wcs</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">downsampled</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_resampled_wcs</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">downsampled</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get resampled WCS object.&quot;&quot;&quot;</span>
     <span class="n">wcs</span> <span class="o">=</span> <span class="n">wcs</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">()</span>
 
@@ -550,7 +537,7 @@
 
 <div class="viewcode-block" id="WcsGeom">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom">[docs]</a>
-<span class="k">class</span> <span class="nc">WcsGeom</span><span class="p">(</span><span class="n">Geom</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">WcsGeom</span><span class="p">(</span><span class="n">Geom</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Geometry class for WCS maps.</span>
 
 <span class="sd">    This class encapsulates both the WCS transformation object and</span>
@@ -577,7 +564,7 @@
     <span class="n">is_hpx</span> <span class="o">=</span> <span class="kc">False</span>
     <span class="n">is_region</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wcs</span><span class="p">,</span> <span class="n">npix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cdelt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">crpix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wcs</span><span class="p">,</span> <span class="n">npix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cdelt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">crpix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_wcs</span> <span class="o">=</span> <span class="n">wcs</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_frame</span> <span class="o">=</span> <span class="n">wcs_to_celestial_frame</span><span class="p">(</span><span class="n">wcs</span><span class="p">)</span><span class="o">.</span><span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_projection</span> <span class="o">=</span> <span class="n">wcs</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">ctype</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">:]</span>
@@ -607,7 +594,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">get_coord</span> <span class="o">=</span> <span class="n">lru_cache</span><span class="p">()(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_coord</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">get_pix</span> <span class="o">=</span> <span class="n">lru_cache</span><span class="p">()(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_pix</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">__setstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">state</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;get_coord&quot;</span><span class="p">,</span> <span class="s2">&quot;get_pix&quot;</span><span class="p">]:</span>
                 <span class="n">state</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">lru_cache</span><span class="p">()(</span><span class="n">value</span><span class="p">)</span>
@@ -615,47 +602,47 @@
         <span class="bp">self</span><span class="o">.</span><span class="vm">__dict__</span> <span class="o">=</span> <span class="n">state</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">data_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Shape of the `~numpy.ndarray` matching this geometry.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">axes_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">axes_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;All axes names.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">names</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">data_shape_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_shape_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Shape of data of the non-spatial axes and unit spatial axes.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">shape</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">data_shape_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">data_shape_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Shape of data of the spatial axes and unit non-spatial axes.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">(</span><span class="mi">1</span><span class="p">,)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_shape</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span> <span class="p">:]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">npix_shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">1</span><span class="p">])])</span>
         <span class="k">return</span> <span class="n">npix_shape</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">shape</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_shape_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_shape_edges</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">npix_shape</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">npix_shape</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">shape</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">shape_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">shape_axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Shape of non-spatial axes.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shape</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_slice_non_spatial_axes</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">wcs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">wcs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;WCS projection object.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wcs</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">frame</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Coordinate system of the projection.</span>
 
 <span class="sd">        Galactic (&quot;galactic&quot;) or Equatorial (&quot;icrs&quot;).</span>
@@ -664,7 +651,7 @@
 
 <div class="viewcode-block" id="WcsGeom.cutout_slices">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.cutout_slices">[docs]</a>
-    <span class="k">def</span> <span class="nf">cutout_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;partial&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cutout_slices</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;partial&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute cutout slices.</span>
 
 <span class="sd">        Parameters</span>
@@ -693,12 +680,12 @@
 
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">projection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">projection</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Map projection.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_projection</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_allsky</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_allsky</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Flag for all-sky maps.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mf">360.0</span><span class="p">))</span> <span class="ow">and</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span>
             <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mf">180.0</span><span class="p">)</span>
@@ -708,7 +695,7 @@
             <span class="k">return</span> <span class="kc">False</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">is_regular</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_regular</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;If geometry is regular in non-spatial dimensions as a boolean.</span>
 
 <span class="sd">        - False for multi-resolution or irregular geometries.</span>
@@ -720,34 +707,34 @@
             <span class="k">return</span> <span class="kc">True</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Tuple with image dimension in degrees in longitude and latitude.&quot;&quot;&quot;</span>
         <span class="n">dlon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">dlat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">dlon</span><span class="p">,</span> <span class="n">dlat</span><span class="p">)</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pixel_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_area</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Pixel area in deg^2.&quot;&quot;&quot;</span>
         <span class="c1"># FIXME: Correctly compute solid angle for projection</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">npix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">npix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Tuple with image dimension in pixels in longitude and latitude.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_npix</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">axes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;List of non-spatial axes.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_axes</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">ndim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ndim</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_shape</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">center_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">center_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Map coordinate of the center of the geometry.</span>
 
 <span class="sd">        Returns</span>
@@ -757,7 +744,7 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pix_to_coord</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">center_pix</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">center_pix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">center_pix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Pixel coordinate of the center of the geometry.</span>
 
 <span class="sd">        Returns</span>
@@ -767,7 +754,7 @@
         <span class="k">return</span> <span class="nb">tuple</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_shape</span><span class="p">)</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">center_skydir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">center_skydir</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sky coordinate of the center of the geometry.</span>
 
 <span class="sd">        Returns</span>
@@ -777,7 +764,7 @@
         <span class="k">return</span> <span class="n">SkyCoord</span><span class="o">.</span><span class="n">from_pixel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">center_pix</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_pix</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">pixel_scales</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pixel_scales</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Pixel scale.</span>
 
@@ -793,7 +780,7 @@
 <div class="viewcode-block" id="WcsGeom.create">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.create">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">create</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">(</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">npix</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">binsz</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
@@ -918,13 +905,13 @@
 
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">footprint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">footprint</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Footprint of the geometry as a `~astropy.coordinates.SkyCoord`.&quot;&quot;&quot;</span>
         <span class="n">coords</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">calc_footprint</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">footprint_rectangle_sky_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">footprint_rectangle_sky_region</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Footprint of the geometry as a `~regions.RectangleSkyRegion`.&quot;&quot;&quot;</span>
         <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">width</span>
         <span class="k">return</span> <span class="n">RectangleSkyRegion</span><span class="p">(</span>
@@ -934,7 +921,7 @@
 <div class="viewcode-block" id="WcsGeom.from_aligned">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.from_aligned">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_aligned</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">skydir</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_aligned</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">skydir</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create an aligned geometry from an existing one.</span>
 
 <span class="sd">        Parameters</span>
@@ -976,7 +963,7 @@
 <div class="viewcode-block" id="WcsGeom.from_header">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.from_header">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_header</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">hdu_bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_header</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="n">hdu_bands</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;gadf&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a WCS geometry object from a FITS header.</span>
 
 <span class="sd">        Parameters</span>
@@ -1015,7 +1002,7 @@
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">npix</span><span class="p">,</span> <span class="n">cdelt</span><span class="o">=</span><span class="n">cdelt</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">axes</span><span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_make_bands_cols</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_make_bands_cols</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">cols</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regular</span><span class="p">:</span>
             <span class="n">cols</span> <span class="o">+=</span> <span class="p">[</span>
@@ -1050,7 +1037,7 @@
 
 <div class="viewcode-block" id="WcsGeom.to_header">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.to_header">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_header</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">header</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">to_header</span><span class="p">()</span>
         <span class="n">header</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">to_header</span><span class="p">())</span>
         <span class="n">shape</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">,</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
@@ -1063,14 +1050,14 @@
 
 <div class="viewcode-block" id="WcsGeom.get_idx">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.get_idx">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">flat</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="n">pix</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_pix</span><span class="p">(</span><span class="n">idx</span><span class="o">=</span><span class="n">idx</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">flat</span><span class="p">:</span>
             <span class="n">pix</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">p</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">p</span><span class="p">)]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pix</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">pix_tuple_to_idx</span><span class="p">(</span><span class="n">pix</span><span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_get_pix_all</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_pix_all</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;lon&quot;</span><span class="p">,</span> <span class="s2">&quot;lat&quot;</span><span class="p">)</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get index coordinate array without footprint of the projection applied.&quot;&quot;&quot;</span>
@@ -1092,7 +1079,7 @@
 
 <div class="viewcode-block" id="WcsGeom.get_pix">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.get_pix">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_pix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_pix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get map pixel coordinates from the geometry.</span>
 
 <span class="sd">        Parameters</span>
@@ -1116,7 +1103,7 @@
 
 <div class="viewcode-block" id="WcsGeom.get_coord">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.get_coord">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_coord</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_coord</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sparse</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get map coordinates from the geometry.</span>
@@ -1157,7 +1144,7 @@
 
 <div class="viewcode-block" id="WcsGeom.coord_to_pix">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.coord_to_pix">[docs]</a>
-    <span class="k">def</span> <span class="nf">coord_to_pix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">coord_to_pix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
         <span class="n">coords</span> <span class="o">=</span> <span class="n">MapCoord</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">frame</span><span class="p">,</span> <span class="n">axis_names</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">coords</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -1179,7 +1166,7 @@
 
 <div class="viewcode-block" id="WcsGeom.pix_to_coord">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.pix_to_coord">[docs]</a>
-    <span class="k">def</span> <span class="nf">pix_to_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pix</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pix_to_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pix</span><span class="p">):</span>
         <span class="c1"># Variable Bin Size</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regular</span><span class="p">:</span>
             <span class="n">idxs</span> <span class="o">=</span> <span class="n">pix_tuple_to_idx</span><span class="p">(</span><span class="n">pix</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">_slice_non_spatial_axes</span><span class="p">])</span>
@@ -1200,7 +1187,7 @@
 
 <div class="viewcode-block" id="WcsGeom.pix_to_idx">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.pix_to_idx">[docs]</a>
-    <span class="k">def</span> <span class="nf">pix_to_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pix</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">pix_to_idx</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pix</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="n">pix</span> <span class="o">=</span> <span class="n">pix_tuple_to_idx</span><span class="p">(</span><span class="n">pix</span><span class="p">)</span>
 
         <span class="n">idx_non_spatial</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="o">.</span><span class="n">pix_to_idx</span><span class="p">(</span>
@@ -1227,26 +1214,26 @@
 
 <div class="viewcode-block" id="WcsGeom.contains">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.contains">[docs]</a>
-    <span class="k">def</span> <span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">contains</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">coords</span><span class="p">):</span>
         <span class="n">idx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">coord_to_idx</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">([</span><span class="n">t</span> <span class="o">!=</span> <span class="n">INVALID_INDEX</span><span class="o">.</span><span class="n">int</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">idx</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="WcsGeom.to_image">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.to_image">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_image</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_image_geom</span></div>
 
 
     <span class="nd">@lazyproperty</span>
-    <span class="k">def</span> <span class="nf">_image_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_image_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">npix</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
         <span class="n">cdelt</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_wcs</span><span class="p">,</span> <span class="n">npix</span><span class="p">,</span> <span class="n">cdelt</span><span class="o">=</span><span class="n">cdelt</span><span class="p">)</span>
 
 <div class="viewcode-block" id="WcsGeom.to_cube">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.to_cube">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_cube</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_cube</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axes</span><span class="p">):</span>
         <span class="n">npix</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_npix</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
         <span class="n">cdelt</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
         <span class="n">axes</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span> <span class="o">+</span> <span class="n">axes</span>
@@ -1258,7 +1245,7 @@
         <span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="nf">_pad_spatial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pad_width</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_pad_spatial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pad_width</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">pad_width</span><span class="p">):</span>
             <span class="n">pad_width</span> <span class="o">=</span> <span class="p">(</span><span class="n">pad_width</span><span class="p">,</span> <span class="n">pad_width</span><span class="p">)</span>
 
@@ -1270,7 +1257,7 @@
 
 <div class="viewcode-block" id="WcsGeom.crop">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.crop">[docs]</a>
-    <span class="k">def</span> <span class="nf">crop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">crop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">crop_width</span><span class="p">):</span>
             <span class="n">crop_width</span> <span class="o">=</span> <span class="p">(</span><span class="n">crop_width</span><span class="p">,</span> <span class="n">crop_width</span><span class="p">)</span>
 
@@ -1283,7 +1270,7 @@
 
 <div class="viewcode-block" id="WcsGeom.downsample">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.downsample">[docs]</a>
-    <span class="k">def</span> <span class="nf">downsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">downsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">axis_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
@@ -1306,7 +1293,7 @@
 
 <div class="viewcode-block" id="WcsGeom.upsample">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.upsample">[docs]</a>
-    <span class="k">def</span> <span class="nf">upsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">upsample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">axis_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">npix</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">factor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">npix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">factor</span><span class="p">)</span>
             <span class="n">cdelt</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">factor</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">factor</span><span class="p">)</span>
@@ -1323,7 +1310,7 @@
 
 <div class="viewcode-block" id="WcsGeom.to_binsz">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.to_binsz">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_binsz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binsz</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_binsz</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binsz</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Change pixel size of the geometry.</span>
 
 <span class="sd">        Parameters</span>
@@ -1348,7 +1335,7 @@
 
 <div class="viewcode-block" id="WcsGeom.solid_angle">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.solid_angle">[docs]</a>
-    <span class="k">def</span> <span class="nf">solid_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">solid_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Solid angle array as a `~astropy.units.Quantity` in ``sr``.</span>
 
 <span class="sd">        The array has the same dimension as the WcsGeom object</span>
@@ -1363,7 +1350,7 @@
 
 
     <span class="nd">@lazyproperty</span>
-    <span class="k">def</span> <span class="nf">_solid_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_solid_angle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regular</span><span class="p">:</span>
             <span class="n">coord</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span><span class="o">.</span><span class="n">get_coord</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s2">&quot;edges&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">skycoord</span>
         <span class="k">else</span><span class="p">:</span>
@@ -1404,13 +1391,13 @@
 
 <div class="viewcode-block" id="WcsGeom.bin_volume">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.bin_volume">[docs]</a>
-    <span class="k">def</span> <span class="nf">bin_volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">bin_volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Bin volume as a `~astropy.units.Quantity`.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bin_volume</span></div>
 
 
     <span class="nd">@lazyproperty</span>
-    <span class="k">def</span> <span class="nf">_bin_volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_bin_volume</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Cached property of bin volume.&quot;&quot;&quot;</span>
         <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span><span class="o">.</span><span class="n">solid_angle</span><span class="p">()</span>
 
@@ -1421,7 +1408,7 @@
 
 <div class="viewcode-block" id="WcsGeom.separation">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.separation">[docs]</a>
-    <span class="k">def</span> <span class="nf">separation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">separation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute sky separation with respect to a given center.</span>
 
 <span class="sd">        Parameters</span>
@@ -1440,7 +1427,7 @@
 
 <div class="viewcode-block" id="WcsGeom.cutout">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.cutout">[docs]</a>
-    <span class="k">def</span> <span class="nf">cutout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trim&quot;</span><span class="p">,</span> <span class="n">odd_npix</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">min_npix</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">cutout</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;trim&quot;</span><span class="p">,</span> <span class="n">odd_npix</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">min_npix</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Create a cutout around a given position.</span>
 
@@ -1489,7 +1476,7 @@
 
 <div class="viewcode-block" id="WcsGeom.boundary_mask">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.boundary_mask">[docs]</a>
-    <span class="k">def</span> <span class="nf">boundary_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">boundary_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a mask applying binary erosion with a given width from geometry edges.</span>
 
 <span class="sd">        Parameters</span>
@@ -1504,7 +1491,7 @@
 <span class="sd">            Boundary mask.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">.ndmap</span> <span class="kn">import</span> <span class="n">WcsNDMap</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">.ndmap</span><span class="w"> </span><span class="kn">import</span> <span class="n">WcsNDMap</span>
 
         <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">bool</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">WcsNDMap</span><span class="o">.</span><span class="n">from_geom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">binary_erode</span><span class="p">(</span>
@@ -1514,7 +1501,7 @@
 
 <div class="viewcode-block" id="WcsGeom.region_mask">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.region_mask">[docs]</a>
-    <span class="k">def</span> <span class="nf">region_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">,</span> <span class="n">inside</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">region_mask</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">,</span> <span class="n">inside</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a mask from a given list of regions.</span>
 
 <span class="sd">        The mask is filled such that a pixel inside the region is filled with</span>
@@ -1560,7 +1547,7 @@
 <span class="sd">        Note how we made a list with a single region,</span>
 <span class="sd">        since this method expects a list of regions.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">RegionGeom</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps</span><span class="w"> </span><span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">RegionGeom</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_regular</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Multi-resolution maps not supported yet&quot;</span><span class="p">)</span>
@@ -1577,7 +1564,7 @@
 
 <div class="viewcode-block" id="WcsGeom.region_weights">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.region_weights">[docs]</a>
-    <span class="k">def</span> <span class="nf">region_weights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">,</span> <span class="n">oversampling_factor</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">region_weights</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">,</span> <span class="n">oversampling_factor</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute regions weights.</span>
 
 <span class="sd">        Parameters</span>
@@ -1603,7 +1590,7 @@
 
 <div class="viewcode-block" id="WcsGeom.binary_structure">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.binary_structure">[docs]</a>
-    <span class="k">def</span> <span class="nf">binary_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;disk&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">binary_structure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s2">&quot;disk&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get binary structure.</span>
 
 <span class="sd">        Parameters</span>
@@ -1641,7 +1628,7 @@
         <span class="k">return</span> <span class="n">structure</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span></div>
 
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">lon</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_skydir</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">deg</span>
         <span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">center_skydir</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">deg</span>
         <span class="n">lon_ref</span><span class="p">,</span> <span class="n">lat_ref</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">crval</span>
@@ -1660,7 +1647,7 @@
 
 <div class="viewcode-block" id="WcsGeom.to_odd_npix">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.to_odd_npix">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_odd_npix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_radius</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_odd_npix</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">max_radius</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a new geometry object with an odd number of pixels and a maximum size.</span>
 
 <span class="sd">        This is useful for PSF kernel creation.</span>
@@ -1697,7 +1684,7 @@
 
 <div class="viewcode-block" id="WcsGeom.to_even_npix">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.to_even_npix">[docs]</a>
-    <span class="k">def</span> <span class="nf">to_even_npix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_even_npix</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a new geometry object with an even number of pixels and a maximum size.</span>
 
 <span class="sd">        Returns</span>
@@ -1722,7 +1709,7 @@
 
 <div class="viewcode-block" id="WcsGeom.is_aligned">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.is_aligned">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_aligned</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_aligned</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Check if WCS and extra axes are aligned.</span>
 
 <span class="sd">        Parameters</span>
@@ -1748,7 +1735,7 @@
 
 <div class="viewcode-block" id="WcsGeom.is_allclose">
 <a class="viewcode-back" href="../../../../api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.is_allclose">[docs]</a>
-    <span class="k">def</span> <span class="nf">is_allclose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">rtol_axes</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">atol_axes</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">rtol_wcs</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">is_allclose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">rtol_axes</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">atol_axes</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">rtol_wcs</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compare two data IRFs for equivalency.</span>
 
 <span class="sd">        Parameters</span>
@@ -1786,7 +1773,7 @@
         <span class="k">return</span> <span class="n">axes_eq</span> <span class="ow">and</span> <span class="n">wcs_eq</span></div>
 
 
-    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">):</span>
             <span class="k">return</span> <span class="kc">False</span>
 
@@ -1797,15 +1784,15 @@
 
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_allclose</span><span class="p">(</span><span class="n">other</span><span class="o">=</span><span class="n">other</span><span class="p">,</span> <span class="n">rtol_wcs</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">rtol_axes</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
         <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
 
 
-<span class="k">def</span> <span class="nf">pix2world</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">cdelt</span><span class="p">,</span> <span class="n">crpix</span><span class="p">,</span> <span class="n">pix</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pix2world</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">cdelt</span><span class="p">,</span> <span class="n">crpix</span><span class="p">,</span> <span class="n">pix</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Perform pixel to world coordinate transformation.</span>
 
 <span class="sd">    For a WCS projection with a given pixel size (CDELT) and reference pixel</span>
@@ -1837,7 +1824,7 @@
     <span class="k">return</span> <span class="n">wcs</span><span class="o">.</span><span class="n">wcs_pix2world</span><span class="p">(</span><span class="n">pix</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pix</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">world2pix</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">cdelt</span><span class="p">,</span> <span class="n">crpix</span><span class="p">,</span> <span class="n">coord</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">world2pix</span><span class="p">(</span><span class="n">wcs</span><span class="p">,</span> <span class="n">cdelt</span><span class="p">,</span> <span class="n">crpix</span><span class="p">,</span> <span class="n">coord</span><span class="p">):</span>
     <span class="n">pix_ratio</span> <span class="o">=</span> <span class="p">[</span>
         <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">wcs</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">cdelt</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
         <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">wcs</span><span class="o">.</span><span class="n">wcs</span><span class="o">.</span><span class="n">cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">cdelt</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
@@ -1870,8 +1857,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1882,23 +1869,19 @@
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -1906,14 +1889,15 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

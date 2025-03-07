@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,10 +55,11 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user-guide/scripts/index';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
@@ -70,8 +69,7 @@
     <link rel="prev" title="High Level Analysis Interface" href="../hli.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -468,47 +450,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../howto.html">How To</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../model-gallery/index.html">Model gallery</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_shell.html">Shell spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_template.html">Template spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_constant.html">Constant spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_gauss.html">Gaussian spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_gen_gauss.html">Generalized gaussian spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_disk.html">Disk spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_shell2.html">Shell2 spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_point.html">Point spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spatial/plot_piecewise_norm_spatial.html">Piecewise norm spatial model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_powerlaw_norm_spectral.html">Power law norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_super_exp_cutoff_powerlaw_3fgl.html">Super exponential cutoff power law model used for 3FGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_gauss_spectral.html">Gaussian spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_exp_cutoff_powerlaw.html">Exponential cutoff power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_smooth_broken_powerlaw.html">Smooth broken power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_piecewise_norm_spectral.html">Piecewise  norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_super_exp_cutoff_powerlaw_4fgl_dr1.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR1 (and DR2)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_template_spectral.html">Template spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_absorbed.html">EBL absorption spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_naima.html">Naima spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_logparabola_norm_spectral.html">Log parabola spectral norm model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_compound.html">Compound spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_super_exp_cutoff_powerlaw_4fgl.html">Super Exponential Cutoff Power Law Model used for 4FGL-DR3</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_constant_spectral.html">Constant spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_powerlaw.html">Power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_exp_cutoff_powerlaw_norm_spectral.html">Exponential cutoff power law norm spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_logparabola.html">Log parabola spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_powerlaw2.html">Power law 2 spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_exp_cutoff_powerlaw_3fgl.html">Exponential cutoff power law spectral model used for 3FGL</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/spectral/plot_broken_powerlaw.html">Broken power law spectral model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_template_phase_temporal.html">Phase curve temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_expdecay_temporal.html">ExpDecay temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_generalized_gaussian_temporal.html">Generalized Gaussian temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_template_temporal.html">Light curve temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_constant_temporal.html">Constant temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_sine_temporal.html">Sine temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_linear_temporal.html">Linear temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_powerlaw_temporal.html">PowerLaw temporal model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model-gallery/temporal/plot_gaussian_temporal.html">Gaussian temporal model</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../model-gallery/index.html">Model gallery</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://gammapy.github.io/gammapy-recipes">Gammapy recipes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references.html">Glossary and references</a></li>
 </ul>
@@ -518,9 +460,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -696,7 +643,7 @@ Datasets<span class="w"> </span>stored<span class="w"> </span><span class="k">in
 just call <a class="reference internal" href="../../api/gammapy.stats.CashCountsStatistic.html#gammapy.stats.CashCountsStatistic.sqrt_ts" title="gammapy.stats.CashCountsStatistic.sqrt_ts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gammapy.stats.CashCountsStatistic.sqrt_ts</span></code></a>.</p>
 <p>From the interactive Python or IPython prompt or from a Jupyter notebook you
 just import the functionality you need and call it, like this:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">gammapy.stats</span> <span class="kn">import</span> <span class="n">CashCountsStatistic</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">CashCountsStatistic</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">CashCountsStatistic</span><span class="p">(</span><span class="n">n_on</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">mu_bkg</span><span class="o">=</span><span class="mf">4.2</span><span class="p">)</span><span class="o">.</span><span class="n">sqrt_ts</span>
 <span class="go">np.float64(2.397918129147546)</span>
 </pre></div>
@@ -706,7 +653,7 @@ just a one-line function call), and that you need to do this computation
 frequently, you will probably write a Python script that looks something like
 this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute significance for a Poisson count observation</span>
-<span class="kn">from</span> <span class="nn">gammapy.stats</span> <span class="kn">import</span> <span class="n">CashCountsStatistic</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">CashCountsStatistic</span>
 
 <span class="n">n_observed</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">mu_background</span> <span class="o">=</span> <span class="mf">4.2</span>
@@ -772,8 +719,8 @@ but if you’re not sure what to use to build your own CLIs, we suggest you give
 CLI:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;Example how to write a command line tool with Click&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">click</span>
-<span class="kn">from</span> <span class="nn">gammapy.stats</span> <span class="kn">import</span> <span class="n">CashCountsStatistic</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">click</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">CashCountsStatistic</span>
 
 
 <span class="c1"># You can call the callback function for the click command anything you like.</span>
@@ -787,7 +734,7 @@ CLI:</p>
     <span class="n">default</span><span class="o">=</span><span class="s2">&quot;sqrt_ts&quot;</span><span class="p">,</span>
     <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Significance or p_value&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="k">def</span> <span class="nf">cli</span><span class="p">(</span><span class="n">n_observed</span><span class="p">,</span> <span class="n">mu_background</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">cli</span><span class="p">(</span><span class="n">n_observed</span><span class="p">,</span> <span class="n">mu_background</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute significance for a Poisson count observation.</span>
 
 <span class="sd">    The significance is the tail probability to observe N_OBSERVED counts</span>
@@ -923,13 +870,13 @@ and options of the <code class="docutils literal notranslate"><span class="pre">
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/user-guide/scripts/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/user-guide/scripts/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -944,8 +891,8 @@ and options of the <code class="docutils literal notranslate"><span class="pre">
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -956,23 +903,19 @@ and options of the <code class="docutils literal notranslate"><span class="pre">
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -980,14 +923,15 @@ and options of the <code class="docutils literal notranslate"><span class="pre">
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

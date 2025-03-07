@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,21 +55,21 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'release-notes/v1.2';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.1 (June 13th 2023)" href="v1.1.html" />
-    <link rel="prev" title="Release notes" href="index.html" />
+    <link rel="prev" title="1.3 (November 26th, 2024)" href="v1.3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" current active">
-  <a class="nav-link dropdown-item nav-internal" href="index.html">
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -445,7 +427,10 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="v1.3.html">1.3 (November 26th, 2024)</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1.2 (February 29th 2024)</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -531,9 +516,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -726,86 +716,86 @@ have been replaced by an equivalent analytical expression.</p></li>
 <h2>Pull Requests<a class="headerlink" href="#pull-requests" title="Link to this heading">#</a></h2>
 <p>This list is incomplete. Small improvements and bug fixes are not listed here.</p>
 <ul class="simple">
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/5044">#5044</a>] Add stat_null computation on ParameterEstimator (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/5040">#5040</a>] Add degrees of freedom on FluxMaps (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/5015">#5015</a>] Examples of radially asymmetric IRFs (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4994">#4994</a>] Spatial parameters in FovBackgroundModel (Katrin Streil)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4992">#4992</a>] Adding a function to guess the format of a FluxPoints object for serialization (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4989">#4989</a>] Reduce memory usage of MapEvaluator (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4978">#4978</a>] Support negative offset for Background2d.to_3d (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4975">#4975</a>] Reduce memory usage of get_psf_kernel (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4973">#4973</a>] Add position as a parameter for TemplateSpatialModel (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4971">#4971</a>] Use <code class="xref py py-obj docutils literal notranslate"><span class="pre">FixedPointingInfo</span></code> in notebook (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4970">#4970</a>] Adapt FluxPointsDataset to fit light curves (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4942">#4942</a>] Parallel support for FluxProfileEstimation (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4940">#4940</a>] Fix MapEvaluator for the apply_edisp=False case (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4937">#4937</a>] Fix import of angular_separation for astropy 6 (Maximilian Linhoff)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4936">#4936</a>] PiecewiseNormSpectralModel serialising interp (Katrin Streil)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4917">#4917</a>] Add new class to directly simulate observations (Maximilian Linhoff)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4904">#4904</a>] Deprecate is_norm on parameter (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4902">#4902</a>] Add norm attribute to estimators and deprecate previous norm related attributes (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4886">#4886</a>] Introduce hierarchical metadata structures (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4879">#4879</a>] Fix energy dependent temporal model simulation (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4854">#4854</a>] Notebook to sphinx-gallery script (REGEARD Maxime)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4851">#4851</a>] Parallel support for WcsNDMap map convolution (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4850">#4850</a>] Add utility function to split dataset into multiple datasets (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4849">#4849</a>] Add TimeMapAxis.to_gti() (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4847">#4847</a>] Variability tutorial (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4845">#4845</a>] Add context manager for multiprocessing configuration (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4837">#4837</a>] Add checksum argument to gammapy products write functions (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4835">#4835</a>] Management of metadata for <code class="xref py py-obj docutils literal notranslate"><span class="pre">Models</span></code> (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4834">#4834</a>] Adding prior stat sum to datasets (Katrin Streil)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4829">#4829</a>] Caching gti and radmax (REGEARD Maxime)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4828">#4828</a>] Adapt SkyModel to evaluate on TimeMapAxis (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4822">#4822</a>] Add a function to delete a time interval from GTI (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4817">#4817</a>] Computation of total observation time map (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4814">#4814</a>] Introduce a function to compute the doubling/halving time for a lightcurve (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4810">#4810</a>] Adding a tutorial for observational clustering (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4808">#4808</a>] adding <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code> in memory generator (REGEARD Maxime)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4805">#4805</a>] Description of the arguments of the class <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observation</span></code> (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4802">#4802</a>] Adapt detect tutorial to include flux parameters in find peaks (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4785">#4785</a>] Use interpolation for dark matter mass (Stefan Fröse)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4783">#4783</a>] Add EnergyDependentMorphologyEstimator (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4770">#4770</a>] Raise error if the predicted event number is too large in event sampling (Fabio PINTORE)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4759">#4759</a>] Display the default model parameters in docstrings (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4753">#4753</a>] Removes size 1 array to scalar conversion deprecation warnings from numpy (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4750">#4750</a>] Support pydantic v2.0 (Axel Donath)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4741">#4741</a>] Add Zhao profile (Stefan Fröse)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4740">#4740</a>] Add DarkMatterDecaySpectralModel (Stefan Fröse)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4738">#4738</a>] Introduce Observation metadata container (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4729">#4729</a>] Change default index for  NormSpectralModel (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4726">#4726</a>] Introduce a function to compute the point-to-point fractional variance (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4714">#4714</a>] Replace CashCountsStatistic error calculation by analytical expression (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4703">#4703</a>] Update 4FGL catalog default  to DR4 (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4697">#4697</a>] Deduce pointing mode from arguments in FixedPointingInfo (Maximilian Linhoff)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4677">#4677</a>] Fix wcs.array_shape  definition in WcsGeom.create (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4671">#4671</a>] Introduce metadata base class (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4669">#4669</a>] Add the progress bar for the DataStore (Bruno Khélifi)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4668">#4668</a>] Multidimensional geom support in SkyModel.integrate_geom and evaluate_geom (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4664">#4664</a>] Add a faster reprojection method  : reproject_by_image (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4660">#4660</a>] Add function to convert hermes maps to gammapy compatible format (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4657">#4657</a>] Fix the FluxProfileEstimator to take into account models (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4638">#4638</a>] Add a <code class="xref py py-obj docutils literal notranslate"><span class="pre">from_stack</span></code> method on <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code> (REGEARD Maxime)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4635">#4635</a>] Add function to determine pivot energy for any spectral model (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4628">#4628</a>] Match energy binning per decade to pyirf’s (JBernete)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4620">#4620</a>] Adding prior class (Katrin Streil)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4615">#4615</a>] Improve sensitivity example (Maximilian Linhoff)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4608">#4608</a>] Add a slice_by_coord function for FluxMaps (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4599">#4599</a>] Add a SafeMaskMaker at DL3 level (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4595">#4595</a>] Add 1LHAASO to gammapy.catalog (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4584">#4584</a>] Add optional sensitivity computation in ExcessMapEstimator (Quentin Remy)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4574">#4574</a>] Fixing if statements in OGIPDatasetWriter (REGEARD Maxime)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4567">#4567</a>] Freeze source parameters in FluxEstimator (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4561">#4561</a>] Export Datastore to Obscore table (PaulaKx)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4546">#4546</a>] Remove is_ul column in FluxPointsEstimator if no upper limit is defined (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4540">#4540</a>] Add function to extract values from FluxMaps (Astro-Kirsty)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4501">#4501</a>] Exposing computation of the fractional excess variance (Claudio Galelli)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4491">#4491</a>] PIG 27 - Metadata structure (Régis Terrier)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4485">#4485</a>] Implement TimeMapAxis.pix_to_coord (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4432">#4432</a>] Serialise gti table to flux points object (Atreyee Sinha)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4408">#4408</a>] Add plot function for 1D distribution of map data (REGEARD Maxime)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4381">#4381</a>] PIG 16 - Model Priors API (Noah Biederbeck)</p></li>
-<li><p>[<a class="reference external" href="https://github.com/gammapy/gammapy/issues/4217">#4217</a>] FluxPointsDataset support model with spatial template and NormSpectralModel (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/5044">[#5044]</a> Add stat_null computation on ParameterEstimator (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/5040">[#5040]</a> Add degrees of freedom on FluxMaps (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/5015">[#5015]</a> Examples of radially asymmetric IRFs (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4994">[#4994]</a> Spatial parameters in FovBackgroundModel (Katrin Streil)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4992">[#4992]</a> Adding a function to guess the format of a FluxPoints object for serialization (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4989">[#4989]</a> Reduce memory usage of MapEvaluator (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4978">[#4978]</a> Support negative offset for Background2d.to_3d (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4975">[#4975]</a> Reduce memory usage of get_psf_kernel (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4973">[#4973]</a> Add position as a parameter for TemplateSpatialModel (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4971">[#4971]</a> Use <code class="xref py py-obj docutils literal notranslate"><span class="pre">FixedPointingInfo</span></code> in notebook (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4970">[#4970]</a> Adapt FluxPointsDataset to fit light curves (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4942">[#4942]</a> Parallel support for FluxProfileEstimation (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4940">[#4940]</a> Fix MapEvaluator for the apply_edisp=False case (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4937">[#4937]</a> Fix import of angular_separation for astropy 6 (Maximilian Linhoff)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4936">[#4936]</a> PiecewiseNormSpectralModel serialising interp (Katrin Streil)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4917">[#4917]</a> Add new class to directly simulate observations (Maximilian Linhoff)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4904">[#4904]</a> Deprecate is_norm on parameter (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4902">[#4902]</a> Add norm attribute to estimators and deprecate previous norm related attributes (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4886">[#4886]</a> Introduce hierarchical metadata structures (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4879">[#4879]</a> Fix energy dependent temporal model simulation (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4854">[#4854]</a> Notebook to sphinx-gallery script (REGEARD Maxime)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4851">[#4851]</a> Parallel support for WcsNDMap map convolution (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4850">[#4850]</a> Add utility function to split dataset into multiple datasets (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4849">[#4849]</a> Add TimeMapAxis.to_gti() (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4847">[#4847]</a> Variability tutorial (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4845">[#4845]</a> Add context manager for multiprocessing configuration (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4837">[#4837]</a> Add checksum argument to gammapy products write functions (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4835">[#4835]</a> Management of metadata for <code class="xref py py-obj docutils literal notranslate"><span class="pre">Models</span></code> (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4834">[#4834]</a> Adding prior stat sum to datasets (Katrin Streil)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4829">[#4829]</a> Caching gti and radmax (REGEARD Maxime)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4828">[#4828]</a> Adapt SkyModel to evaluate on TimeMapAxis (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4822">[#4822]</a> Add a function to delete a time interval from GTI (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4817">[#4817]</a> Computation of total observation time map (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4814">[#4814]</a> Introduce a function to compute the doubling/halving time for a lightcurve (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4810">[#4810]</a> Adding a tutorial for observational clustering (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4808">[#4808]</a> adding <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code> in memory generator (REGEARD Maxime)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4805">[#4805]</a> Description of the arguments of the class <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observation</span></code> (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4802">[#4802]</a> Adapt detect tutorial to include flux parameters in find peaks (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4785">[#4785]</a> Use interpolation for dark matter mass (Stefan Fröse)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4783">[#4783]</a> Add EnergyDependentMorphologyEstimator (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4770">[#4770]</a> Raise error if the predicted event number is too large in event sampling (Fabio PINTORE)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4759">[#4759]</a> Display the default model parameters in docstrings (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4753">[#4753]</a> Removes size 1 array to scalar conversion deprecation warnings from numpy (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4750">[#4750]</a> Support pydantic v2.0 (Axel Donath)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4741">[#4741]</a> Add Zhao profile (Stefan Fröse)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4740">[#4740]</a> Add DarkMatterDecaySpectralModel (Stefan Fröse)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4738">[#4738]</a> Introduce Observation metadata container (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4729">[#4729]</a> Change default index for  NormSpectralModel (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4726">[#4726]</a> Introduce a function to compute the point-to-point fractional variance (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4714">[#4714]</a> Replace CashCountsStatistic error calculation by analytical expression (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4703">[#4703]</a> Update 4FGL catalog default  to DR4 (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4697">[#4697]</a> Deduce pointing mode from arguments in FixedPointingInfo (Maximilian Linhoff)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4677">[#4677]</a> Fix wcs.array_shape  definition in WcsGeom.create (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4671">[#4671]</a> Introduce metadata base class (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4669">[#4669]</a> Add the progress bar for the DataStore (Bruno Khélifi)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4668">[#4668]</a> Multidimensional geom support in SkyModel.integrate_geom and evaluate_geom (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4664">[#4664]</a> Add a faster reprojection method  : reproject_by_image (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4660">[#4660]</a> Add function to convert hermes maps to gammapy compatible format (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4657">[#4657]</a> Fix the FluxProfileEstimator to take into account models (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4638">[#4638]</a> Add a <code class="xref py py-obj docutils literal notranslate"><span class="pre">from_stack</span></code> method on <code class="xref py py-obj docutils literal notranslate"><span class="pre">Observations</span></code> (REGEARD Maxime)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4635">[#4635]</a> Add function to determine pivot energy for any spectral model (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4628">[#4628]</a> Match energy binning per decade to pyirf’s (JBernete)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4620">[#4620]</a> Adding prior class (Katrin Streil)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4615">[#4615]</a> Improve sensitivity example (Maximilian Linhoff)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4608">[#4608]</a> Add a slice_by_coord function for FluxMaps (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4599">[#4599]</a> Add a SafeMaskMaker at DL3 level (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4595">[#4595]</a> Add 1LHAASO to gammapy.catalog (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4584">[#4584]</a> Add optional sensitivity computation in ExcessMapEstimator (Quentin Remy)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4574">[#4574]</a> Fixing if statements in OGIPDatasetWriter (REGEARD Maxime)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4567">[#4567]</a> Freeze source parameters in FluxEstimator (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4561">[#4561]</a> Export Datastore to Obscore table (PaulaKx)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4546">[#4546]</a> Remove is_ul column in FluxPointsEstimator if no upper limit is defined (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4540">[#4540]</a> Add function to extract values from FluxMaps (Astro-Kirsty)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4501">[#4501]</a> Exposing computation of the fractional excess variance (Claudio Galelli)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4491">[#4491]</a> PIG 27 - Metadata structure (Régis Terrier)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4485">[#4485]</a> Implement TimeMapAxis.pix_to_coord (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4432">[#4432]</a> Serialise gti table to flux points object (Atreyee Sinha)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4408">[#4408]</a> Add plot function for 1D distribution of map data (REGEARD Maxime)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4381">[#4381]</a> PIG 16 - Model Priors API (Noah Biederbeck)</p></li>
+<li><p><a class="reference external" href="https://github.com/gammapy/gammapy/pull/4217">[#4217]</a> FluxPointsDataset support model with spatial template and NormSpectralModel (Quentin Remy)</p></li>
 </ul>
 </section>
 </section>
@@ -844,13 +834,13 @@ have been replaced by an equivalent analytical expression.</p></li>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/release-notes/v1.2.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/release-notes/v1.2.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -865,8 +855,8 @@ have been replaced by an equivalent analytical expression.</p></li>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -877,23 +867,19 @@ have been replaced by an equivalent analytical expression.</p></li>
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -901,14 +887,15 @@ have been replaced by an equivalent analytical expression.</p></li>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

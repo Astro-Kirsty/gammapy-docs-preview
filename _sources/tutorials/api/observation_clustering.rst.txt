@@ -73,7 +73,7 @@ For completeness two different methods for grouping of observations are shown he
 Obtain the observations
 -----------------------
 
-First need to define the `~gammapy.data.DataStore` object for the HESS DL3 DR1
+First need to define the `~gammapy.data.DataStore` object for the H.E.S.S. DL3 DR1
 data. Next, utilise a cone search to select only the observations of interest.
 In this case, we choose PKS 2155-304 as the object of interest.
 
@@ -201,7 +201,7 @@ be adjusted according to each specific science case.
 
  .. code-block:: none
 
-    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x781c040f5190>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x781bf972d0d0>}
+    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x72253fc57c10>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x722543f69810>}
 
 
 
@@ -481,7 +481,7 @@ Finally, ``observations.group_by_label`` creates a dictionary containing ``t``
 
  .. code-block:: none
 
-    {'group_1': <gammapy.data.observations.Observations object at 0x781c10b09010>, 'group_2': <gammapy.data.observations.Observations object at 0x781c10b08590>}
+    {'group_1': <gammapy.data.observations.Observations object at 0x722537e91f90>, 'group_2': <gammapy.data.observations.Observations object at 0x722536488250>}
 
 
 

@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,28 +26,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -56,10 +54,11 @@
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/gammapy/irf/psf/map';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../../../_static/gammapy_logo.ico"/>
@@ -67,8 +66,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -132,8 +130,8 @@
     
     
     
-    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -182,21 +180,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -236,6 +226,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -249,18 +247,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -391,6 +377,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -414,18 +408,6 @@
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
           <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
@@ -437,9 +419,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -487,20 +474,20 @@
                   
   <h1>Source code for gammapy.irf.psf.map</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">astropy.units</span> <span class="k">as</span> <span class="nn">u</span>
-<span class="kn">from</span> <span class="nn">astropy.visualization</span> <span class="kn">import</span> <span class="n">quantity_support</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">FormatStrFormatter</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps</span> <span class="kn">import</span> <span class="n">HpxGeom</span><span class="p">,</span> <span class="n">Map</span><span class="p">,</span> <span class="n">MapAxes</span><span class="p">,</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">MapCoord</span><span class="p">,</span> <span class="n">WcsGeom</span>
-<span class="kn">from</span> <span class="nn">gammapy.maps.axes</span> <span class="kn">import</span> <span class="n">UNIT_STRING_FORMAT</span>
-<span class="kn">from</span> <span class="nn">gammapy.modeling.models</span> <span class="kn">import</span> <span class="n">PowerLawSpectralModel</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.gauss</span> <span class="kn">import</span> <span class="n">Gauss2DPDF</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.random</span> <span class="kn">import</span> <span class="n">InverseCDFSampler</span><span class="p">,</span> <span class="n">get_random_state</span>
-<span class="kn">from</span> <span class="nn">..core</span> <span class="kn">import</span> <span class="n">IRFMap</span>
-<span class="kn">from</span> <span class="nn">.core</span> <span class="kn">import</span> <span class="n">PSF</span>
-<span class="kn">from</span> <span class="nn">.kernel</span> <span class="kn">import</span> <span class="n">PSFKernel</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.deprecation</span> <span class="kn">import</span> <span class="n">deprecated_renamed_argument</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.visualization</span><span class="w"> </span><span class="kn">import</span> <span class="n">quantity_support</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">FormatStrFormatter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps</span><span class="w"> </span><span class="kn">import</span> <span class="n">HpxGeom</span><span class="p">,</span> <span class="n">Map</span><span class="p">,</span> <span class="n">MapAxes</span><span class="p">,</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">MapCoord</span><span class="p">,</span> <span class="n">WcsGeom</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps.axes</span><span class="w"> </span><span class="kn">import</span> <span class="n">UNIT_STRING_FORMAT</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PowerLawSpectralModel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.gauss</span><span class="w"> </span><span class="kn">import</span> <span class="n">Gauss2DPDF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">InverseCDFSampler</span><span class="p">,</span> <span class="n">get_random_state</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..core</span><span class="w"> </span><span class="kn">import</span> <span class="n">IRFMap</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">PSF</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.kernel</span><span class="w"> </span><span class="kn">import</span> <span class="n">PSFKernel</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.deprecation</span><span class="w"> </span><span class="kn">import</span> <span class="n">deprecated_renamed_argument</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PSFMap&quot;</span><span class="p">,</span> <span class="s2">&quot;RecoPSFMap&quot;</span><span class="p">]</span>
 
@@ -508,7 +495,7 @@
 <span class="n">PSF_MAX_OVERSAMPLING</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># for backward compatibility</span>
 
 
-<span class="k">def</span> <span class="nf">_psf_upsampling_factor</span><span class="p">(</span><span class="n">psf</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">energy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">precision_factor</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_psf_upsampling_factor</span><span class="p">(</span><span class="n">psf</span><span class="p">,</span> <span class="n">geom</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">energy</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">precision_factor</span><span class="o">=</span><span class="mi">12</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Minimal factor between the bin half-width of the geom and the median R68% containment radius.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">energy</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">energy</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="n">psf</span><span class="o">.</span><span class="n">energy_name</span><span class="p">]</span><span class="o">.</span><span class="n">center</span>
@@ -527,14 +514,14 @@
     <span class="k">return</span> <span class="n">factors</span>
 
 
-<span class="k">class</span> <span class="nc">IRFLikePSF</span><span class="p">(</span><span class="n">PSF</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">IRFLikePSF</span><span class="p">(</span><span class="n">PSF</span><span class="p">):</span>
     <span class="n">required_axes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;energy_true&quot;</span><span class="p">,</span> <span class="s2">&quot;rad&quot;</span><span class="p">,</span> <span class="s2">&quot;lat_idx&quot;</span><span class="p">,</span> <span class="s2">&quot;lon_idx&quot;</span><span class="p">]</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;irf_like_psf&quot;</span>
 
 
 <div class="viewcode-block" id="PSFMap">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap">[docs]</a>
-<span class="k">class</span> <span class="nc">PSFMap</span><span class="p">(</span><span class="n">IRFMap</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">PSFMap</span><span class="p">(</span><span class="n">IRFMap</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class containing the Map of PSFs and allowing to interact with it.</span>
 
 <span class="sd">    Parameters</span>
@@ -586,25 +573,25 @@
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;psf_map&quot;</span>
     <span class="n">required_axes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rad&quot;</span><span class="p">,</span> <span class="s2">&quot;energy_true&quot;</span><span class="p">]</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psf_map</span><span class="p">,</span> <span class="n">exposure_map</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">psf_map</span><span class="p">,</span> <span class="n">exposure_map</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">irf_map</span><span class="o">=</span><span class="n">psf_map</span><span class="p">,</span> <span class="n">exposure_map</span><span class="o">=</span><span class="n">exposure_map</span><span class="p">)</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">energy_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">energy_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">required_axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">psf_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psf_map</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_irf_map</span>
 
     <span class="nd">@psf_map</span><span class="o">.</span><span class="n">setter</span>
-    <span class="k">def</span> <span class="nf">psf_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">psf_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_single_spatial_bin</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_irf_map</span> <span class="o">=</span> <span class="n">value</span>
 
 <div class="viewcode-block" id="PSFMap.normalize">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.normalize">[docs]</a>
-    <span class="k">def</span> <span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Normalize PSF map.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">axis_name</span><span class="o">=</span><span class="s2">&quot;rad&quot;</span><span class="p">)</span></div>
 
@@ -612,7 +599,7 @@
 <div class="viewcode-block" id="PSFMap.from_geom">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.from_geom">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_geom</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">geom</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_geom</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">geom</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create PSF map from geometry.</span>
 
 <span class="sd">        Parameters</span>
@@ -633,7 +620,7 @@
 
     <span class="c1"># TODO: this is a workaround for now, probably add Map.integral() or similar</span>
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">_psf_irf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_psf_irf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">geom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">geom</span>
         <span class="n">npix_x</span><span class="p">,</span> <span class="n">npix_y</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">npix</span>
         <span class="n">axis_lon</span> <span class="o">=</span> <span class="n">MapAxis</span><span class="o">.</span><span class="n">from_edges</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">npix_x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;lon_idx&quot;</span><span class="p">)</span>
@@ -649,7 +636,7 @@
             <span class="n">unit</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span>
         <span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">_get_irf_coords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_get_irf_coords</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="n">coords</span> <span class="o">=</span> <span class="n">MapCoord</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="n">geom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span>
@@ -670,7 +657,7 @@
 
 <div class="viewcode-block" id="PSFMap.containment">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.containment">[docs]</a>
-    <span class="k">def</span> <span class="nf">containment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">energy_true</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">containment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">energy_true</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Containment at given coordinates.</span>
 
 <span class="sd">        Parameters</span>
@@ -698,7 +685,7 @@
 
 <div class="viewcode-block" id="PSFMap.containment_radius">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.containment_radius">[docs]</a>
-    <span class="k">def</span> <span class="nf">containment_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">energy_true</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">containment_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">energy_true</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Containment at given coordinates.</span>
 
 <span class="sd">        Parameters</span>
@@ -727,7 +714,7 @@
 
 <div class="viewcode-block" id="PSFMap.containment_radius_map">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.containment_radius_map">[docs]</a>
-    <span class="k">def</span> <span class="nf">containment_radius_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_true</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.68</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">containment_radius_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy_true</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.68</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Containment radius map.</span>
 
 <span class="sd">        Parameters</span>
@@ -755,7 +742,7 @@
 
 <div class="viewcode-block" id="PSFMap.get_psf_kernel">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.get_psf_kernel">[docs]</a>
-    <span class="k">def</span> <span class="nf">get_psf_kernel</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_psf_kernel</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">geom</span><span class="p">,</span>
         <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -847,7 +834,7 @@
 
 <div class="viewcode-block" id="PSFMap.sample_coord">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.sample_coord">[docs]</a>
-    <span class="k">def</span> <span class="nf">sample_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_coord</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">sample_coord</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_coord</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">10000</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply PSF corrections on the coordinates of a set of simulated events.</span>
 
 <span class="sd">        Parameters</span>
@@ -908,7 +895,7 @@
 <div class="viewcode-block" id="PSFMap.from_gauss">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.from_gauss">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_gauss</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">energy_axis_true</span><span class="p">,</span> <span class="n">rad_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_gauss</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">energy_axis_true</span><span class="p">,</span> <span class="n">rad_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create all-sky PSF map from Gaussian width.</span>
 
 <span class="sd">        This is used for testing and examples.</span>
@@ -933,7 +920,7 @@
 <span class="sd">        psf_map : `PSFMap`</span>
 <span class="sd">            Point spread function map.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">gammapy.datasets.map</span> <span class="kn">import</span> <span class="n">RAD_AXIS_DEFAULT</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.datasets.map</span><span class="w"> </span><span class="kn">import</span> <span class="n">RAD_AXIS_DEFAULT</span>
 
         <span class="k">if</span> <span class="n">rad_axis</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">rad_axis</span> <span class="o">=</span> <span class="n">RAD_AXIS_DEFAULT</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -965,7 +952,7 @@
 <div class="viewcode-block" id="PSFMap.to_image">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.to_image">[docs]</a>
     <span class="nd">@deprecated_renamed_argument</span><span class="p">(</span><span class="s2">&quot;spectrum&quot;</span><span class="p">,</span> <span class="s2">&quot;spectral_model&quot;</span><span class="p">,</span> <span class="s2">&quot;v1.3&quot;</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">to_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spectral_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">to_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">spectral_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reduce to a 2D map after weighing with the associated exposure and a spectrum.</span>
 
 <span class="sd">        Parameters</span>
@@ -982,7 +969,7 @@
 <span class="sd">        psf_out : `PSFMap`</span>
 <span class="sd">            `PSFMap` with the energy axis summed over.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span> <span class="nn">gammapy.makers.utils</span> <span class="kn">import</span> <span class="n">_map_spectrum_weight</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.makers.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">_map_spectrum_weight</span>
 
         <span class="k">if</span> <span class="n">spectral_model</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">spectral_model</span> <span class="o">=</span> <span class="n">PowerLawSpectralModel</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
@@ -1001,7 +988,7 @@
 
 <div class="viewcode-block" id="PSFMap.plot_containment_radius_vs_energy">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.plot_containment_radius_vs_energy">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_containment_radius_vs_energy</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_containment_radius_vs_energy</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="p">(</span><span class="mf">0.68</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">),</span> <span class="o">**</span><span class="n">kwargs</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot containment fraction as a function of energy.</span>
@@ -1047,7 +1034,7 @@
 
 <div class="viewcode-block" id="PSFMap.plot_psf_vs_rad">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.plot_psf_vs_rad">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_psf_vs_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">energy_true</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_psf_vs_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">energy_true</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot PSF vs radius.</span>
 
 <span class="sd">        The method plots the profile at the center of the map.</span>
@@ -1088,16 +1075,16 @@
         <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rad [</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">UNIT_STRING_FORMAT</span><span class="p">)</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PSF [</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">UNIT_STRING_FORMAT</span><span class="p">)</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span><span class="p">))</span>
-        <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">ax</span></div>
 
 
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">psf_map</span><span class="p">)</span>
 
 <div class="viewcode-block" id="PSFMap.peek">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.PSFMap.html#gammapy.irf.PSFMap.peek">[docs]</a>
-    <span class="k">def</span> <span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">)):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Quick-look summary plots.</span>
 
 <span class="sd">        Parameters</span>
@@ -1138,7 +1125,7 @@
 
 <div class="viewcode-block" id="RecoPSFMap">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap">[docs]</a>
-<span class="k">class</span> <span class="nc">RecoPSFMap</span><span class="p">(</span><span class="n">PSFMap</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">RecoPSFMap</span><span class="p">(</span><span class="n">PSFMap</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class containing the Map of PSFs in reconstructed energy and allowing to interact with it.</span>
 
 <span class="sd">    Parameters</span>
@@ -1154,13 +1141,13 @@
     <span class="n">required_axes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;rad&quot;</span><span class="p">,</span> <span class="s2">&quot;energy&quot;</span><span class="p">]</span>
 
     <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">energy_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">energy_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">required_axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 
 <div class="viewcode-block" id="RecoPSFMap.from_gauss">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.from_gauss">[docs]</a>
     <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_gauss</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">rad_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">from_gauss</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">energy_axis</span><span class="p">,</span> <span class="n">rad_axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">0.1</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">deg</span><span class="p">,</span> <span class="n">geom</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create all -sky PSF map from Gaussian width.</span>
 
 <span class="sd">        This is used for testing and examples.</span>
@@ -1190,7 +1177,7 @@
 
 <div class="viewcode-block" id="RecoPSFMap.containment">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.containment">[docs]</a>
-    <span class="k">def</span> <span class="nf">containment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">containment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Containment at given coordinates.</span>
 
 <span class="sd">        Parameters</span>
@@ -1212,7 +1199,7 @@
 
 <div class="viewcode-block" id="RecoPSFMap.containment_radius">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.containment_radius">[docs]</a>
-    <span class="k">def</span> <span class="nf">containment_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">containment_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fraction</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Containment at given coordinates.</span>
 
 <span class="sd">        Parameters</span>
@@ -1234,7 +1221,7 @@
 
 <div class="viewcode-block" id="RecoPSFMap.containment_radius_map">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.containment_radius_map">[docs]</a>
-    <span class="k">def</span> <span class="nf">containment_radius_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.68</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">containment_radius_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">energy</span><span class="p">,</span> <span class="n">fraction</span><span class="o">=</span><span class="mf">0.68</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Containment radius map.</span>
 
 <span class="sd">        Parameters</span>
@@ -1255,7 +1242,7 @@
 
 <div class="viewcode-block" id="RecoPSFMap.plot_psf_vs_rad">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.plot_psf_vs_rad">[docs]</a>
-    <span class="k">def</span> <span class="nf">plot_psf_vs_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">energy</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plot_psf_vs_rad</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">energy</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot PSF vs radius.</span>
 
 <span class="sd">        The method plots the profile at the center of the map.</span>
@@ -1280,7 +1267,7 @@
 
 <div class="viewcode-block" id="RecoPSFMap.stack">
 <a class="viewcode-back" href="../../../../api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.stack">[docs]</a>
-    <span class="k">def</span> <span class="nf">stack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Stack IRF map with another one in place.&quot;&quot;&quot;</span>
         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
             <span class="s2">&quot;Stacking is not supported for PSF in reconstructed energy.&quot;</span>
@@ -1310,8 +1297,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1322,23 +1309,19 @@
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -1346,14 +1329,15 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

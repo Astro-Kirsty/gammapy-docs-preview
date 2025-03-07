@@ -12,6 +12,7 @@ FoVAlignment
 
       ~FoVAlignment.ALTAZ
       ~FoVAlignment.RADEC
+      ~FoVAlignment.REVERSE_LON_RADEC
 
    .. rubric:: Methods Summary
 
@@ -69,6 +70,7 @@ FoVAlignment
 
    .. autoattribute:: ALTAZ
    .. autoattribute:: RADEC
+   .. autoattribute:: REVERSE_LON_RADEC
 
    .. rubric:: Methods Documentation
 

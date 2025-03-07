@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,28 +26,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/jquery.js?v=5d32c60e"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="_static/documentation_options.js?v=1f75dfce"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -56,10 +54,11 @@
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="_static/gammapy_logo.ico"/>
@@ -67,8 +66,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -132,8 +130,8 @@
     
     
     
-    <img src="_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -182,21 +180,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -236,6 +226,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -249,18 +247,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -391,6 +377,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -414,18 +408,6 @@
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
           <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
@@ -437,9 +419,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -517,6 +504,10 @@
 </li>
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-analysis-run-filename">gammapy-analysis-run command line option</a>
 </li>
+        <li><a href="api-reference/scripts.html#cmdoption-gammapy-workflow-config-filename">gammapy-workflow-config command line option</a>
+</li>
+        <li><a href="api-reference/scripts.html#cmdoption-gammapy-workflow-run-filename">gammapy-workflow-run command line option</a>
+</li>
       </ul></li>
       <li>
     --ignore-warnings
@@ -553,6 +544,8 @@
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-info-system">gammapy-info command line option</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     --no-version
 
@@ -560,8 +553,6 @@
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-info-version">gammapy-info command line option</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     --out
 
@@ -580,6 +571,8 @@
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-analysis-config-overwrite">gammapy-analysis-config command line option</a>
 </li>
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-analysis-run-overwrite">gammapy-analysis-run command line option</a>
+</li>
+        <li><a href="api-reference/scripts.html#cmdoption-gammapy-workflow-config-overwrite">gammapy-workflow-config command line option</a>
 </li>
       </ul></li>
       <li>
@@ -684,6 +677,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.ExpDecayTemporalModel.html#gammapy.modeling.models.ExpDecayTemporalModel.__call__">(gammapy.modeling.models.ExpDecayTemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.__call__">(gammapy.modeling.models.GaussianPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.__call__">(gammapy.modeling.models.GaussianSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.__call__">(gammapy.modeling.models.GaussianSpectralModel method)</a>
@@ -701,6 +696,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.__call__">(gammapy.modeling.models.LogParabolaNormSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.__call__">(gammapy.modeling.models.LogParabolaSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.__call__">(gammapy.modeling.models.LogUniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.__call__">(gammapy.modeling.models.MeyerCrabSpectralModel method)</a>
 </li>
@@ -755,6 +752,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.__call__">(gammapy.modeling.models.TemplateSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.__call__">(gammapy.modeling.models.TemporalModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.__call__">(gammapy.modeling.models.UniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.utils.interpolation.ScaledRegularGridInterpolator.html#gammapy.utils.interpolation.ScaledRegularGridInterpolator.__call__">(gammapy.utils.interpolation.ScaledRegularGridInterpolator method)</a>
 </li>
@@ -1142,6 +1141,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.background">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.background">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.background">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.background">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -1155,6 +1156,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.background_model">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.background_model">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.background_model">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -1201,6 +1204,8 @@
         <li><a href="api/gammapy.modeling.models.SmoothBrokenPowerLawSpectralModel.html#gammapy.modeling.models.SmoothBrokenPowerLawSpectralModel.beta">(gammapy.modeling.models.SmoothBrokenPowerLawSpectralModel attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.bin_volume">bin_volume() (gammapy.maps.MapAxes method)</a>
 
       <ul>
@@ -1209,8 +1214,6 @@
         <li><a href="api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.bin_volume">(gammapy.maps.WcsGeom method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.bin_width">bin_width (gammapy.maps.LabelMapAxis attribute)</a>
 
       <ul>
@@ -1467,6 +1470,10 @@
         <li><a href="api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.ColumnClass">(gammapy.data.ObservationTable attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.utils.combine_flux_maps.html#gammapy.estimators.utils.combine_flux_maps">combine_flux_maps() (in module gammapy.estimators.utils)</a>
+</li>
+      <li><a href="api/gammapy.estimators.utils.combine_significance_maps.html#gammapy.estimators.utils.combine_significance_maps">combine_significance_maps() (in module gammapy.estimators.utils)</a>
+</li>
       <li><a href="api/gammapy.catalog.SourceCatalogObjectHGPS.html#gammapy.catalog.SourceCatalogObjectHGPS.components_models">components_models() (gammapy.catalog.SourceCatalogObjectHGPS method)</a>
 </li>
       <li><a href="api/gammapy.utils.regions.compound_region_to_regions.html#gammapy.utils.regions.compound_region_to_regions">compound_region_to_regions() (in module gammapy.utils.regions)</a>
@@ -1764,6 +1771,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.copy">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.copy">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.copy">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.copy">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -1864,6 +1873,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.copy">(gammapy.modeling.models.FoVBackgroundModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.copy">(gammapy.modeling.models.GaussianPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.copy">(gammapy.modeling.models.GaussianSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.copy">(gammapy.modeling.models.GaussianSpectralModel method)</a>
@@ -1881,6 +1892,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.copy">(gammapy.modeling.models.LogParabolaNormSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.copy">(gammapy.modeling.models.LogParabolaSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.copy">(gammapy.modeling.models.LogUniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.copy">(gammapy.modeling.models.MeyerCrabSpectralModel method)</a>
 </li>
@@ -1942,6 +1955,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.copy">(gammapy.modeling.models.TemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.copy">(gammapy.modeling.models.UniformPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.copy">(gammapy.modeling.Parameter method)</a>
 </li>
         <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.copy">(gammapy.modeling.Parameters method)</a>
@@ -1981,6 +1996,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.counts">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.counts">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.counts">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -2050,6 +2067,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.covariance">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.covariance">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.covariance">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.covariance">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -2067,6 +2086,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.covariance">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.covariance">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.covariance">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.covariance">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
 </li>
@@ -2128,6 +2149,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.covariance">(gammapy.modeling.models.TemporalModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.covariance">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
       </ul></li>
       <li><a href="api/gammapy.modeling.Fit.html#gammapy.modeling.Fit.covariance">covariance() (gammapy.modeling.Fit method)</a>
 </li>
@@ -2143,6 +2166,8 @@
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.create">(gammapy.datasets.MapDataset class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.create">(gammapy.datasets.MapDatasetOnOff class method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.create">(gammapy.datasets.MapDatasetWeighted class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.create">(gammapy.datasets.SpectrumDataset class method)</a>
 </li>
@@ -2177,12 +2202,28 @@
 </li>
       <li><a href="api/gammapy.modeling.models.create_crab_spectral_model.html#gammapy.modeling.models.create_crab_spectral_model">create_crab_spectral_model() (in module gammapy.modeling.models)</a>
 </li>
+      <li><a href="api/gammapy.datasets.FermipyDatasetsReader.html#gammapy.datasets.FermipyDatasetsReader.create_dataset">create_dataset() (gammapy.datasets.FermipyDatasetsReader static method)</a>
+</li>
+      <li><a href="api/gammapy.datasets.create_empty_map_dataset_from_irfs.html#gammapy.datasets.create_empty_map_dataset_from_irfs">create_empty_map_dataset_from_irfs() (in module gammapy.datasets)</a>
+</li>
       <li><a href="api/gammapy.modeling.models.create_fermi_isotropic_diffuse_model.html#gammapy.modeling.models.create_fermi_isotropic_diffuse_model">create_fermi_isotropic_diffuse_model() (in module gammapy.modeling.models)</a>
+</li>
+      <li><a href="api/gammapy.datasets.utils.create_map_dataset_from_dl4.html#gammapy.datasets.utils.create_map_dataset_from_dl4">create_map_dataset_from_dl4() (in module gammapy.datasets.utils)</a>
 </li>
       <li><a href="api/gammapy.datasets.create_map_dataset_from_observation.html#gammapy.datasets.create_map_dataset_from_observation">create_map_dataset_from_observation() (in module gammapy.datasets)</a>
 </li>
       <li><a href="api/gammapy.datasets.create_map_dataset_geoms.html#gammapy.datasets.create_map_dataset_geoms">create_map_dataset_geoms() (in module gammapy.datasets)</a>
 </li>
+      <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.create_mask">create_mask() (gammapy.maps.Geom method)</a>
+
+      <ul>
+        <li><a href="api/gammapy.maps.HpxGeom.html#gammapy.maps.HpxGeom.create_mask">(gammapy.maps.HpxGeom method)</a>
+</li>
+        <li><a href="api/gammapy.maps.RegionGeom.html#gammapy.maps.RegionGeom.create_mask">(gammapy.maps.RegionGeom method)</a>
+</li>
+        <li><a href="api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.create_mask">(gammapy.maps.WcsGeom method)</a>
+</li>
+      </ul></li>
       <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.crop">crop() (gammapy.maps.Geom method)</a>
 
       <ul>
@@ -2249,6 +2290,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.cutout">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.cutout">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.cutout">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -2349,6 +2392,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.data_shape">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.data_shape">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.data_shape">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -2486,6 +2531,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.default_parameters">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.default_parameters">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.default_parameters">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.default_parameters">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -2503,6 +2550,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.default_parameters">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.default_parameters">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.default_parameters">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.default_parameters">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
 </li>
@@ -2559,6 +2608,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.default_parameters">(gammapy.modeling.models.TemplateSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.default_parameters">(gammapy.modeling.models.TemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.default_parameters">(gammapy.modeling.models.UniformPrior attribute)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -2721,6 +2772,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.downsample">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.downsample">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.downsample">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -2897,6 +2950,8 @@
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.edisp">(gammapy.datasets.MapDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.edisp">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.edisp">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.edisp">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -3134,6 +3189,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.energy_range">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.energy_range">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.energy_range">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.energy_range">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -3143,6 +3200,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.energy_range_fit">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.energy_range_fit">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.energy_range_fit">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -3154,6 +3213,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.energy_range_safe">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.energy_range_safe">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.energy_range_safe">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.energy_range_safe">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -3163,6 +3224,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.energy_range_total">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.energy_range_total">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.energy_range_total">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -3319,6 +3382,16 @@
         <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.estimate_scan">(gammapy.estimators.ParameterEstimator method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.estimate_sensitivity">estimate_sensitivity() (gammapy.estimators.FluxPointsEstimator method)</a>
+
+      <ul>
+        <li><a href="api/gammapy.estimators.FluxProfileEstimator.html#gammapy.estimators.FluxProfileEstimator.estimate_sensitivity">(gammapy.estimators.FluxProfileEstimator method)</a>
+</li>
+        <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.estimate_sensitivity">(gammapy.estimators.LightCurveEstimator method)</a>
+</li>
+        <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.estimate_sensitivity">(gammapy.estimators.ParameterEstimator method)</a>
+</li>
+      </ul></li>
       <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.estimate_time_bin_flux">estimate_time_bin_flux() (gammapy.estimators.LightCurveEstimator method)</a>
 </li>
       <li><a href="api/gammapy.estimators.FluxPointsEstimator.html#gammapy.estimators.FluxPointsEstimator.estimate_ts">estimate_ts() (gammapy.estimators.FluxPointsEstimator method)</a>
@@ -3450,6 +3523,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.evaluate">(gammapy.modeling.models.FoVBackgroundModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.evaluate">(gammapy.modeling.models.GaussianPrior static method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.evaluate">(gammapy.modeling.models.GaussianSpatialModel static method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.evaluate">(gammapy.modeling.models.GaussianSpectralModel static method)</a>
@@ -3467,6 +3542,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.evaluate">(gammapy.modeling.models.LogParabolaNormSpectralModel static method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.evaluate">(gammapy.modeling.models.LogParabolaSpectralModel static method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.evaluate">(gammapy.modeling.models.LogUniformPrior static method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.evaluate">(gammapy.modeling.models.MeyerCrabSpectralModel static method)</a>
 </li>
@@ -3513,6 +3590,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpatialModel.html#gammapy.modeling.models.TemplateSpatialModel.evaluate">(gammapy.modeling.models.TemplateSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.evaluate">(gammapy.modeling.models.TemplateSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.evaluate">(gammapy.modeling.models.UniformPrior static method)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.irf.EnergyDependentMultiGaussPSF.html#gammapy.irf.EnergyDependentMultiGaussPSF.evaluate_containment">evaluate_containment() (gammapy.irf.EnergyDependentMultiGaussPSF static method)</a>
@@ -3730,6 +3809,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.evaluators">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.evaluators">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.evaluators">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.evaluators">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -3776,6 +3857,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.excess">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.excess">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.excess">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.excess">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -3807,6 +3890,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.exposure">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.exposure">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.exposure">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -3858,6 +3943,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.fake">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.fake">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.fake">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.fake">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -3870,6 +3957,8 @@
       <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.html#gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian">FaucherKaspi2006VelocityMaxwellian (class in gammapy.astro.population)</a>
 </li>
       <li><a href="api/gammapy.astro.population.FaucherSpiral.html#gammapy.astro.population.FaucherSpiral">FaucherSpiral (class in gammapy.astro.population)</a>
+</li>
+      <li><a href="api/gammapy.datasets.FermipyDatasetsReader.html#gammapy.datasets.FermipyDatasetsReader">FermipyDatasetsReader (class in gammapy.datasets)</a>
 </li>
       <li><a href="api/gammapy.data.HDUIndexTable.html#gammapy.data.HDUIndexTable.field">field() (gammapy.data.HDUIndexTable method)</a>
 
@@ -4248,6 +4337,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.freeze">(gammapy.modeling.models.FoVBackgroundModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.freeze">(gammapy.modeling.models.GaussianPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.freeze">(gammapy.modeling.models.GaussianSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.freeze">(gammapy.modeling.models.GaussianSpectralModel method)</a>
@@ -4265,6 +4356,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.freeze">(gammapy.modeling.models.LogParabolaNormSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.freeze">(gammapy.modeling.models.LogParabolaSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.freeze">(gammapy.modeling.models.LogUniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.freeze">(gammapy.modeling.models.MeyerCrabSpectralModel method)</a>
 </li>
@@ -4326,6 +4419,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.freeze">(gammapy.modeling.models.TemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.freeze">(gammapy.modeling.models.UniformPrior method)</a>
+</li>
       </ul></li>
       <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.freeze_all">freeze_all() (gammapy.modeling.Parameters method)</a>
 
@@ -4360,6 +4455,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.from_dict">(gammapy.datasets.MapDatasetOnOff class method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.from_dict">(gammapy.datasets.MapDatasetWeighted class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.from_dict">(gammapy.datasets.SpectrumDataset class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.from_dict">(gammapy.datasets.SpectrumDatasetOnOff class method)</a>
@@ -4392,6 +4489,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.from_dict">(gammapy.modeling.models.FoVBackgroundModel class method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.from_dict">(gammapy.modeling.models.GaussianPrior class method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.from_dict">(gammapy.modeling.models.GaussianSpatialModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.from_dict">(gammapy.modeling.models.GaussianSpectralModel class method)</a>
@@ -4409,6 +4508,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.from_dict">(gammapy.modeling.models.LogParabolaNormSpectralModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.from_dict">(gammapy.modeling.models.LogParabolaSpectralModel class method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.from_dict">(gammapy.modeling.models.LogUniformPrior class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.from_dict">(gammapy.modeling.models.MeyerCrabSpectralModel class method)</a>
 </li>
@@ -4471,6 +4572,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.from_dict">(gammapy.modeling.models.TemplateSpectralModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.from_dict">(gammapy.modeling.models.TemporalModel class method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.from_dict">(gammapy.modeling.models.UniformPrior class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.from_dict">(gammapy.modeling.Parameters class method)</a>
 </li>
@@ -4540,6 +4643,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.from_geoms">(gammapy.datasets.MapDatasetOnOff class method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.from_geoms">(gammapy.datasets.MapDatasetWeighted class method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.from_geoms">(gammapy.datasets.SpectrumDataset class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.from_geoms">(gammapy.datasets.SpectrumDatasetOnOff class method)</a>
@@ -4561,6 +4666,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.from_hdulist">(gammapy.datasets.MapDatasetOnOff class method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.from_hdulist">(gammapy.datasets.MapDatasetWeighted class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.from_hdulist">(gammapy.datasets.SpectrumDataset class method)</a>
 </li>
@@ -4714,6 +4821,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.from_parameters">(gammapy.modeling.models.FoVBackgroundModel class method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.from_parameters">(gammapy.modeling.models.GaussianPrior class method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.from_parameters">(gammapy.modeling.models.GaussianSpatialModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.from_parameters">(gammapy.modeling.models.GaussianSpectralModel class method)</a>
@@ -4731,6 +4840,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.from_parameters">(gammapy.modeling.models.LogParabolaNormSpectralModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.from_parameters">(gammapy.modeling.models.LogParabolaSpectralModel class method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.from_parameters">(gammapy.modeling.models.LogUniformPrior class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.from_parameters">(gammapy.modeling.models.MeyerCrabSpectralModel class method)</a>
 </li>
@@ -4789,6 +4900,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.from_parameters">(gammapy.modeling.models.TemplateSpectralModel class method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.from_parameters">(gammapy.modeling.models.TemporalModel class method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.from_parameters">(gammapy.modeling.models.UniformPrior class method)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.irf.EffectiveAreaTable2D.html#gammapy.irf.EffectiveAreaTable2D.from_parametrization">from_parametrization() (gammapy.irf.EffectiveAreaTable2D class method)</a>
@@ -4964,6 +5077,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.frozen">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.frozen">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.frozen">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.frozen">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -4981,6 +5096,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.frozen">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.frozen">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.frozen">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.frozen">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
 </li>
@@ -5041,6 +5158,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.frozen">(gammapy.modeling.models.TemplateSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.frozen">(gammapy.modeling.models.TemporalModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.frozen">(gammapy.modeling.models.UniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.frozen">(gammapy.modeling.Parameter attribute)</a>
 </li>
@@ -5129,6 +5248,22 @@
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-info-system">--system</a>
 </li>
         <li><a href="api-reference/scripts.html#cmdoption-gammapy-info-version">--version</a>
+</li>
+      </ul></li>
+      <li>
+    gammapy-workflow-config command line option
+
+      <ul>
+        <li><a href="api-reference/scripts.html#cmdoption-gammapy-workflow-config-filename">--filename</a>
+</li>
+        <li><a href="api-reference/scripts.html#cmdoption-gammapy-workflow-config-overwrite">--overwrite</a>
+</li>
+      </ul></li>
+      <li>
+    gammapy-workflow-run command line option
+
+      <ul>
+        <li><a href="api-reference/scripts.html#cmdoption-gammapy-workflow-run-filename">--filename</a>
 </li>
       </ul></li>
       <li>
@@ -5357,6 +5492,8 @@
       </ul></li>
       <li><a href="api/gammapy.catalog.SourceCatalogHGPS.html#gammapy.catalog.SourceCatalogHGPS.gaussian_component">gaussian_component() (gammapy.catalog.SourceCatalogHGPS method)</a>
 </li>
+      <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior">GaussianPrior (class in gammapy.modeling.models)</a>
+</li>
       <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel">GaussianSpatialModel (class in gammapy.modeling.models)</a>
 </li>
       <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel">GaussianSpectralModel (class in gammapy.modeling.models)</a>
@@ -5394,6 +5531,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.geoms">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.geoms">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.geoms">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.geoms">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -5407,10 +5546,10 @@
         <li><a href="api/gammapy.data.PointingInfo.html#gammapy.data.PointingInfo.get_altaz">(gammapy.data.PointingInfo method)</a>
 </li>
       </ul></li>
-      <li><a href="api/gammapy.irf.EDispKernel.html#gammapy.irf.EDispKernel.get_bias">get_bias() (gammapy.irf.EDispKernel method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/gammapy.irf.EDispKernel.html#gammapy.irf.EDispKernel.get_bias">get_bias() (gammapy.irf.EDispKernel method)</a>
+</li>
       <li><a href="api/gammapy.irf.EDispKernel.html#gammapy.irf.EDispKernel.get_bias_energy">get_bias_energy() (gammapy.irf.EDispKernel method)</a>
 </li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.get_bounding_box">get_bounding_box() (gammapy.astro.population.CaseBattacharya1998 method)</a>
@@ -5477,6 +5616,8 @@
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.get_by_pix">(gammapy.maps.WcsNDMap method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.utils.get_combined_flux_maps.html#gammapy.estimators.utils.get_combined_flux_maps">get_combined_flux_maps() (in module gammapy.estimators.utils)</a>
+</li>
       <li><a href="api/gammapy.estimators.utils.get_combined_significance_maps.html#gammapy.estimators.utils.get_combined_significance_maps">get_combined_significance_maps() (in module gammapy.estimators.utils)</a>
 </li>
       <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.get_coord">get_coord() (gammapy.maps.Geom method)</a>
@@ -5688,6 +5829,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.gti">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.gti">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.gti">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.gti">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -5705,6 +5848,28 @@
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.has_any_ts">(gammapy.estimators.FluxPoints attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.has_bounds">has_bounds (gammapy.astro.population.CaseBattacharya1998 attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.astro.population.Exponential.html#gammapy.astro.population.Exponential.has_bounds">(gammapy.astro.population.Exponential attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006.html#gammapy.astro.population.FaucherKaspi2006.has_bounds">(gammapy.astro.population.FaucherKaspi2006 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityBimodal.html#gammapy.astro.population.FaucherKaspi2006VelocityBimodal.has_bounds">(gammapy.astro.population.FaucherKaspi2006VelocityBimodal attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.html#gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.has_bounds">(gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Lorimer2006.html#gammapy.astro.population.Lorimer2006.has_bounds">(gammapy.astro.population.Lorimer2006 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Paczynski1990.html#gammapy.astro.population.Paczynski1990.has_bounds">(gammapy.astro.population.Paczynski1990 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Paczynski1990Velocity.html#gammapy.astro.population.Paczynski1990Velocity.has_bounds">(gammapy.astro.population.Paczynski1990Velocity attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.YusifovKucuk2004.html#gammapy.astro.population.YusifovKucuk2004.has_bounds">(gammapy.astro.population.YusifovKucuk2004 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B.has_bounds">(gammapy.astro.population.YusifovKucuk2004B attribute)</a>
+</li>
+      </ul></li>
       <li><a href="api/gammapy.maps.Geom.html#gammapy.maps.Geom.has_energy_axis">has_energy_axis (gammapy.maps.Geom attribute)</a>
 
       <ul>
@@ -5713,6 +5878,28 @@
         <li><a href="api/gammapy.maps.RegionGeom.html#gammapy.maps.RegionGeom.has_energy_axis">(gammapy.maps.RegionGeom attribute)</a>
 </li>
         <li><a href="api/gammapy.maps.WcsGeom.html#gammapy.maps.WcsGeom.has_energy_axis">(gammapy.maps.WcsGeom attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.has_fixed">has_fixed (gammapy.astro.population.CaseBattacharya1998 attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.astro.population.Exponential.html#gammapy.astro.population.Exponential.has_fixed">(gammapy.astro.population.Exponential attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006.html#gammapy.astro.population.FaucherKaspi2006.has_fixed">(gammapy.astro.population.FaucherKaspi2006 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityBimodal.html#gammapy.astro.population.FaucherKaspi2006VelocityBimodal.has_fixed">(gammapy.astro.population.FaucherKaspi2006VelocityBimodal attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.html#gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.has_fixed">(gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Lorimer2006.html#gammapy.astro.population.Lorimer2006.has_fixed">(gammapy.astro.population.Lorimer2006 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Paczynski1990.html#gammapy.astro.population.Paczynski1990.has_fixed">(gammapy.astro.population.Paczynski1990 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Paczynski1990Velocity.html#gammapy.astro.population.Paczynski1990Velocity.has_fixed">(gammapy.astro.population.Paczynski1990Velocity attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.YusifovKucuk2004.html#gammapy.astro.population.YusifovKucuk2004.has_fixed">(gammapy.astro.population.YusifovKucuk2004 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B.has_fixed">(gammapy.astro.population.YusifovKucuk2004B attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.has_inverse">has_inverse() (gammapy.astro.population.CaseBattacharya1998 method)</a>
@@ -5781,6 +5968,8 @@
         <li><a href="api/gammapy.irf.RadMax2D.html#gammapy.irf.RadMax2D.has_offset_axis">(gammapy.irf.RadMax2D attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.irf.EDispKernelMap.html#gammapy.irf.EDispKernelMap.has_single_spatial_bin">has_single_spatial_bin (gammapy.irf.EDispKernelMap attribute)</a>
 
       <ul>
@@ -5793,8 +5982,6 @@
         <li><a href="api/gammapy.irf.RecoPSFMap.html#gammapy.irf.RecoPSFMap.has_single_spatial_bin">(gammapy.irf.RecoPSFMap attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.has_stat_profiles">has_stat_profiles (gammapy.estimators.FluxMaps attribute)</a>
 
       <ul>
@@ -5805,6 +5992,28 @@
 
       <ul>
         <li><a href="api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints.has_success">(gammapy.estimators.FluxPoints attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.has_tied">has_tied (gammapy.astro.population.CaseBattacharya1998 attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.astro.population.Exponential.html#gammapy.astro.population.Exponential.has_tied">(gammapy.astro.population.Exponential attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006.html#gammapy.astro.population.FaucherKaspi2006.has_tied">(gammapy.astro.population.FaucherKaspi2006 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityBimodal.html#gammapy.astro.population.FaucherKaspi2006VelocityBimodal.has_tied">(gammapy.astro.population.FaucherKaspi2006VelocityBimodal attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.html#gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.has_tied">(gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Lorimer2006.html#gammapy.astro.population.Lorimer2006.has_tied">(gammapy.astro.population.Lorimer2006 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Paczynski1990.html#gammapy.astro.population.Paczynski1990.has_tied">(gammapy.astro.population.Paczynski1990 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.Paczynski1990Velocity.html#gammapy.astro.population.Paczynski1990Velocity.has_tied">(gammapy.astro.population.Paczynski1990Velocity attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.YusifovKucuk2004.html#gammapy.astro.population.YusifovKucuk2004.has_tied">(gammapy.astro.population.YusifovKucuk2004 attribute)</a>
+</li>
+        <li><a href="api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B.has_tied">(gammapy.astro.population.YusifovKucuk2004B attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps.has_ul">has_ul (gammapy.estimators.FluxMaps attribute)</a>
@@ -6045,6 +6254,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.info_dict">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.info_dict">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.info_dict">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -7237,10 +7448,10 @@
 </li>
       <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.ljust">ljust() (gammapy.irf.FoVAlignment method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.utils.fits.HDULocation.html#gammapy.utils.fits.HDULocation.load">load() (gammapy.utils.fits.HDULocation method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.irf.load_irf_dict_from_file.html#gammapy.irf.load_irf_dict_from_file">load_irf_dict_from_file() (in module gammapy.irf)</a>
 </li>
       <li><a href="api/gammapy.data.HDUIndexTable.html#gammapy.data.HDUIndexTable.loc">loc (gammapy.data.HDUIndexTable attribute)</a>
@@ -7282,6 +7493,8 @@
       <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel">LogParabolaSpectralModel (class in gammapy.modeling.models)</a>
 </li>
       <li><a href="api/gammapy.astro.population.LogSpiral.html#gammapy.astro.population.LogSpiral">LogSpiral (class in gammapy.astro.population)</a>
+</li>
+      <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior">LogUniformPrior (class in gammapy.modeling.models)</a>
 </li>
       <li><a href="api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord.lon">lon (gammapy.maps.MapCoord attribute)</a>
 </li>
@@ -7489,6 +7702,8 @@
 </li>
       <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff">MapDatasetOnOff (class in gammapy.datasets)</a>
 </li>
+      <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted">MapDatasetWeighted (class in gammapy.datasets)</a>
+</li>
       <li><a href="api/gammapy.visualization.MapPanelPlotter.html#gammapy.visualization.MapPanelPlotter">MapPanelPlotter (class in gammapy.visualization)</a>
 </li>
       <li><a href="api/gammapy.maps.Maps.html#gammapy.maps.Maps">Maps (class in gammapy.maps)</a>
@@ -7506,6 +7721,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7518,6 +7735,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_fit">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_fit">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_fit">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask_fit">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7528,6 +7747,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_fit_image">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_fit_image">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_fit_image">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask_fit_image">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7537,6 +7758,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_image">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_image">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_image">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -7564,6 +7787,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_safe">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_safe">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_safe">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask_safe">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7574,6 +7799,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_safe_edisp">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_safe_edisp">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_safe_edisp">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask_safe_edisp">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7583,6 +7810,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_safe_image">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_safe_image">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_safe_image">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -7604,6 +7833,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.mask_safe_psf">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.mask_safe_psf">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.mask_safe_psf">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.mask_safe_psf">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7621,9 +7852,13 @@
 </li>
       <li><a href="api/gammapy.modeling.CovarianceResult.html#gammapy.modeling.CovarianceResult.matrix">matrix (gammapy.modeling.CovarianceResult attribute)</a>
 </li>
-      <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.max">max (gammapy.modeling.Parameter attribute)</a>
+      <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.max">max (gammapy.modeling.models.LogUniformPrior attribute)</a>
 
       <ul>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.max">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.max">(gammapy.modeling.Parameter attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.max">(gammapy.modeling.Parameters attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.max">(gammapy.modeling.PriorParameter attribute)</a>
@@ -7682,6 +7917,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.meta">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.meta">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.meta">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.meta">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -7699,6 +7936,8 @@
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.meta">(gammapy.maps.WcsNDMap attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets.meta_table">meta_table (gammapy.datasets.Datasets attribute)</a>
 
       <ul>
@@ -7706,13 +7945,13 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.meta_table">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.meta_table">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.meta_table">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.meta_table">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.makers.FoVBackgroundMaker.html#gammapy.makers.FoVBackgroundMaker.method">method (gammapy.makers.FoVBackgroundMaker attribute)</a>
 
       <ul>
@@ -7729,9 +7968,13 @@
 </li>
       <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel">MeyerCrabSpectralModel (class in gammapy.modeling.models)</a>
 </li>
-      <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.min">min (gammapy.modeling.Parameter attribute)</a>
+      <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.min">min (gammapy.modeling.models.LogUniformPrior attribute)</a>
 
       <ul>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.min">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.min">(gammapy.modeling.Parameter attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.min">(gammapy.modeling.Parameters attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.min">(gammapy.modeling.PriorParameter attribute)</a>
@@ -8002,6 +8245,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.models">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.models">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.models">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.models">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -8091,6 +8336,8 @@
       <li><a href="api/gammapy.utils.coordinates.motion_since_birth.html#gammapy.utils.coordinates.motion_since_birth">motion_since_birth() (in module gammapy.utils.coordinates)</a>
 </li>
       <li><a href="api/gammapy.utils.testing.mpl_plot_check.html#gammapy.utils.testing.mpl_plot_check">mpl_plot_check() (in module gammapy.utils.testing)</a>
+</li>
+      <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.mu">mu (gammapy.modeling.models.GaussianPrior attribute)</a>
 </li>
       <li><a href="api/gammapy.utils.parallel.multiprocessing_manager.html#gammapy.utils.parallel.multiprocessing_manager">multiprocessing_manager (class in gammapy.utils.parallel)</a>
 </li>
@@ -8281,6 +8528,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.name">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.name">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.name">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.name">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -8316,8 +8565,6 @@
         <li><a href="api/gammapy.modeling.PriorParameters.html#gammapy.modeling.PriorParameters.names">(gammapy.modeling.PriorParameters attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.LabelMapAxis.html#gammapy.maps.LabelMapAxis.nbin">nbin (gammapy.maps.LabelMapAxis attribute)</a>
 
       <ul>
@@ -8326,6 +8573,8 @@
         <li><a href="api/gammapy.maps.TimeMapAxis.html#gammapy.maps.TimeMapAxis.nbin">(gammapy.maps.TimeMapAxis attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.nbin_per_decade">nbin_per_decade (gammapy.maps.MapAxis attribute)</a>
 </li>
       <li><a href="api/gammapy.maps.HpxGeom.html#gammapy.maps.HpxGeom.ndim">ndim (gammapy.maps.HpxGeom attribute)</a>
@@ -8485,6 +8734,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.npred">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.npred">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.npred">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.npred">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -8500,6 +8751,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.npred_background">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.npred_background">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.npred_background">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -8552,6 +8805,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.npred_signal">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.npred_signal">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.npred_signal">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -8707,6 +8962,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.pad">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.pad">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.pad">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.pad">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -8844,6 +9101,8 @@
         <li><a href="api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B.parameter_constraints">(gammapy.astro.population.YusifovKucuk2004B attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.ParameterSensitivityEstimator.html#gammapy.estimators.ParameterSensitivityEstimator.parameter_matching_significance">parameter_matching_significance() (gammapy.estimators.ParameterSensitivityEstimator method)</a>
+</li>
       <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator">ParameterEstimator (class in gammapy.estimators)</a>
 </li>
       <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters">Parameters (class in gammapy.modeling)</a>
@@ -8907,6 +9166,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.parameters">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.parameters">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.parameters">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.parameters">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -8924,6 +9185,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.parameters">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.parameters">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.parameters">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.parameters">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
 </li>
@@ -8985,6 +9248,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.parameters">(gammapy.modeling.models.TemporalModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.parameters">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.OptimizeResult.html#gammapy.modeling.OptimizeResult.parameters">(gammapy.modeling.OptimizeResult attribute)</a>
 </li>
       </ul></li>
@@ -9023,6 +9288,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.parameters_unique_names">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.parameters_unique_names">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.parameters_unique_names">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.parameters_unique_names">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -9040,6 +9307,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.parameters_unique_names">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.parameters_unique_names">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.parameters_unique_names">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.parameters_unique_names">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
 </li>
@@ -9101,7 +9370,11 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.parameters_unique_names">(gammapy.modeling.models.TemporalModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.parameters_unique_names">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
       </ul></li>
+      <li><a href="api/gammapy.estimators.ParameterSensitivityEstimator.html#gammapy.estimators.ParameterSensitivityEstimator">ParameterSensitivityEstimator (class in gammapy.estimators)</a>
+</li>
       <li><a href="api/gammapy.irf.ParametricPSF.html#gammapy.irf.ParametricPSF">ParametricPSF (class in gammapy.irf)</a>
 </li>
       <li><a href="api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig.parse_file">parse_file() (gammapy.analysis.AnalysisConfig class method)</a>
@@ -9168,6 +9441,8 @@
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.peek">(gammapy.datasets.MapDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.peek">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.peek">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.peek">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -9821,6 +10096,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.plot_residuals">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.plot_residuals">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.plot_residuals">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.plot_residuals">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -9831,6 +10108,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.plot_residuals_spatial">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.plot_residuals_spatial">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.plot_residuals_spatial">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.plot_residuals_spatial">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -9840,6 +10119,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.plot_residuals_spectral">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.plot_residuals_spectral">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.plot_residuals_spectral">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -10163,6 +10444,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.psf">(gammapy.datasets.MapDatasetOnOff attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.psf">(gammapy.datasets.MapDatasetWeighted attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.psf">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.psf">(gammapy.datasets.SpectrumDatasetOnOff attribute)</a>
@@ -10321,11 +10604,15 @@
 </li>
         <li><a href="api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets.read">(gammapy.datasets.Datasets class method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.FermipyDatasetsReader.html#gammapy.datasets.FermipyDatasetsReader.read">(gammapy.datasets.FermipyDatasetsReader method)</a>
+</li>
         <li><a href="api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.read">(gammapy.datasets.FluxPointsDataset class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.read">(gammapy.datasets.MapDataset class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.read">(gammapy.datasets.MapDatasetOnOff class method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.read">(gammapy.datasets.MapDatasetWeighted class method)</a>
 </li>
         <li><a href="api/gammapy.datasets.OGIPDatasetReader.html#gammapy.datasets.OGIPDatasetReader.read">(gammapy.datasets.OGIPDatasetReader method)</a>
 </li>
@@ -10465,6 +10752,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.reassign">(gammapy.modeling.models.FoVBackgroundModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.reassign">(gammapy.modeling.models.GaussianPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.reassign">(gammapy.modeling.models.GaussianSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.reassign">(gammapy.modeling.models.GaussianSpectralModel method)</a>
@@ -10482,6 +10771,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.reassign">(gammapy.modeling.models.LogParabolaNormSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.reassign">(gammapy.modeling.models.LogParabolaSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.reassign">(gammapy.modeling.models.LogUniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.reassign">(gammapy.modeling.models.MeyerCrabSpectralModel method)</a>
 </li>
@@ -10542,6 +10833,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.reassign">(gammapy.modeling.models.TemplateSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.reassign">(gammapy.modeling.models.TemporalModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.reassign">(gammapy.modeling.models.UniformPrior method)</a>
 </li>
       </ul></li>
       <li><a href="user-guide/references.html#term-Reco-Energy"><strong>Reco Energy</strong></a>
@@ -11019,6 +11312,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.resample_energy_axis">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.resample_energy_axis">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.resample_energy_axis">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.resample_energy_axis">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -11033,6 +11328,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.reset_data_cache">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.reset_data_cache">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.reset_data_cache">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.reset_data_cache">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -11046,6 +11343,8 @@
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.residuals">(gammapy.datasets.MapDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.residuals">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.residuals">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.residuals">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -11098,6 +11397,8 @@
         <li><a href="api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models.reverse">(gammapy.modeling.models.Models method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.REVERSE_LON_RADEC">REVERSE_LON_RADEC (gammapy.irf.FoVAlignment attribute)</a>
+</li>
       <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rfind">rfind() (gammapy.irf.FoVAlignment method)</a>
 </li>
       <li><a href="api/gammapy.irf.FoVAlignment.html#gammapy.irf.FoVAlignment.rindex">rindex() (gammapy.irf.FoVAlignment method)</a>
@@ -11204,6 +11505,8 @@
         <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.run">(gammapy.estimators.LightCurveEstimator method)</a>
 </li>
         <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.run">(gammapy.estimators.ParameterEstimator method)</a>
+</li>
+        <li><a href="api/gammapy.estimators.ParameterSensitivityEstimator.html#gammapy.estimators.ParameterSensitivityEstimator.run">(gammapy.estimators.ParameterSensitivityEstimator method)</a>
 </li>
         <li><a href="api/gammapy.estimators.SensitivityEstimator.html#gammapy.estimators.SensitivityEstimator.run">(gammapy.estimators.SensitivityEstimator method)</a>
 </li>
@@ -11620,6 +11923,12 @@
         <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap.set_by_pix">(gammapy.maps.WcsNDMap method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.set_lim">set_lim() (gammapy.modeling.Parameter method)</a>
+
+      <ul>
+        <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.set_lim">(gammapy.modeling.PriorParameter method)</a>
+</li>
+      </ul></li>
       <li><a href="api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig.set_logging">set_logging() (gammapy.analysis.AnalysisConfig method)</a>
 </li>
       <li><a href="api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis.set_models">set_models() (gammapy.analysis.Analysis method)</a>
@@ -11662,8 +11971,14 @@
       </ul></li>
       <li><a href="api/gammapy.modeling.Covariance.html#gammapy.modeling.Covariance.set_subcovariance">set_subcovariance() (gammapy.modeling.Covariance method)</a>
 </li>
-      <li><a href="api/gammapy.maps.Maps.html#gammapy.maps.Maps.setdefault">setdefault() (gammapy.maps.Maps method)</a>
+      <li><a href="api/gammapy.data.HDUIndexTable.html#gammapy.data.HDUIndexTable.setdefault">setdefault() (gammapy.data.HDUIndexTable method)</a>
+
+      <ul>
+        <li><a href="api/gammapy.data.ObservationTable.html#gammapy.data.ObservationTable.setdefault">(gammapy.data.ObservationTable method)</a>
 </li>
+        <li><a href="api/gammapy.maps.Maps.html#gammapy.maps.Maps.setdefault">(gammapy.maps.Maps method)</a>
+</li>
+      </ul></li>
       <li><a href="api/gammapy.maps.MapAxes.html#gammapy.maps.MapAxes.shape">shape (gammapy.maps.MapAxes attribute)</a>
 
       <ul>
@@ -11698,6 +12013,8 @@
 
       <ul>
         <li><a href="api/gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.html#gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian.sigma">(gammapy.astro.population.FaucherKaspi2006VelocityMaxwellian attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.sigma">(gammapy.modeling.models.GaussianPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.sigma">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
@@ -11769,6 +12086,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.slice_by_energy">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.slice_by_energy">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.slice_by_energy">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.slice_by_energy">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -11784,6 +12103,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.slice_by_idx">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.slice_by_idx">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.slice_by_idx">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -12235,6 +12556,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stack">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.stack">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.stack">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.stack">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -12303,6 +12626,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_array">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.stat_array">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.stat_array">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.stat_array">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -12347,6 +12672,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_sum">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.stat_sum">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.stat_sum">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.stat_sum">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -12360,6 +12687,8 @@
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.stat_type">(gammapy.datasets.MapDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_type">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.stat_type">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.stat_type">(gammapy.datasets.SpectrumDataset attribute)</a>
 </li>
@@ -12591,6 +12920,8 @@
 </li>
         <li><a href="api/gammapy.datasets.Dataset.html#gammapy.datasets.Dataset.tag">(gammapy.datasets.Dataset attribute)</a>
 </li>
+        <li><a href="api/gammapy.datasets.FermipyDatasetsReader.html#gammapy.datasets.FermipyDatasetsReader.tag">(gammapy.datasets.FermipyDatasetsReader attribute)</a>
+</li>
         <li><a href="api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.tag">(gammapy.datasets.FluxPointsDataset attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.tag">(gammapy.datasets.MapDataset attribute)</a>
@@ -12598,6 +12929,8 @@
         <li><a href="api/gammapy.datasets.MapDatasetMetaData.html#gammapy.datasets.MapDatasetMetaData.tag">(gammapy.datasets.MapDatasetMetaData attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.tag">(gammapy.datasets.MapDatasetOnOff attribute)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.tag">(gammapy.datasets.MapDatasetWeighted attribute)</a>
 </li>
         <li><a href="api/gammapy.datasets.OGIPDatasetReader.html#gammapy.datasets.OGIPDatasetReader.tag">(gammapy.datasets.OGIPDatasetReader attribute)</a>
 </li>
@@ -12626,6 +12959,8 @@
         <li><a href="api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.tag">(gammapy.estimators.LightCurveEstimator attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.ParameterEstimator.html#gammapy.estimators.ParameterEstimator.tag">(gammapy.estimators.ParameterEstimator attribute)</a>
+</li>
+        <li><a href="api/gammapy.estimators.ParameterSensitivityEstimator.html#gammapy.estimators.ParameterSensitivityEstimator.tag">(gammapy.estimators.ParameterSensitivityEstimator attribute)</a>
 </li>
         <li><a href="api/gammapy.estimators.SensitivityEstimator.html#gammapy.estimators.SensitivityEstimator.tag">(gammapy.estimators.SensitivityEstimator attribute)</a>
 </li>
@@ -12723,6 +13058,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.tag">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.tag">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.tag">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.tag">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -12740,6 +13077,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.tag">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.tag">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.tag">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.NaimaSpectralModel.html#gammapy.modeling.models.NaimaSpectralModel.tag">(gammapy.modeling.models.NaimaSpectralModel attribute)</a>
 </li>
@@ -12786,6 +13125,8 @@
         <li><a href="api/gammapy.modeling.models.TemplateSpatialModel.html#gammapy.modeling.models.TemplateSpatialModel.tag">(gammapy.modeling.models.TemplateSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.TemplateSpectralModel.html#gammapy.modeling.models.TemplateSpectralModel.tag">(gammapy.modeling.models.TemplateSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.tag">(gammapy.modeling.models.UniformPrior attribute)</a>
 </li>
       </ul></li>
       <li><a href="api/gammapy.data.Observation.html#gammapy.data.Observation.target_radec">target_radec (gammapy.data.Observation attribute)</a>
@@ -13005,6 +13346,8 @@
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_dict">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.to_dict">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.to_dict">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.to_dict">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -13039,6 +13382,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.to_dict">(gammapy.modeling.models.FoVBackgroundModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.to_dict">(gammapy.modeling.models.GaussianPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.to_dict">(gammapy.modeling.models.GaussianSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.to_dict">(gammapy.modeling.models.GaussianSpectralModel method)</a>
@@ -13056,6 +13401,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.to_dict">(gammapy.modeling.models.LogParabolaNormSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.to_dict">(gammapy.modeling.models.LogParabolaSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.to_dict">(gammapy.modeling.models.LogUniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.to_dict">(gammapy.modeling.models.MeyerCrabSpectralModel method)</a>
 </li>
@@ -13117,6 +13464,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.to_dict">(gammapy.modeling.models.TemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.to_dict">(gammapy.modeling.models.UniformPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.OptimizeResult.html#gammapy.modeling.OptimizeResult.to_dict">(gammapy.modeling.OptimizeResult method)</a>
 </li>
         <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.to_dict">(gammapy.modeling.Parameter method)</a>
@@ -13156,6 +13505,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_hdulist">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.to_hdulist">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.to_hdulist">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -13241,6 +13592,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_image">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.to_image">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.to_image">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.to_image">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -13280,6 +13633,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_masked">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.to_masked">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.to_masked">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -13367,6 +13722,8 @@
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_region_map_dataset">(gammapy.datasets.MapDatasetOnOff method)</a>
 </li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.to_region_map_dataset">(gammapy.datasets.MapDatasetWeighted method)</a>
+</li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.to_region_map_dataset">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDatasetOnOff.html#gammapy.datasets.SpectrumDatasetOnOff.to_region_map_dataset">(gammapy.datasets.SpectrumDatasetOnOff method)</a>
@@ -13402,6 +13759,8 @@
 
       <ul>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.to_spectrum_dataset">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.to_spectrum_dataset">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.SpectrumDataset.html#gammapy.datasets.SpectrumDataset.to_spectrum_dataset">(gammapy.datasets.SpectrumDataset method)</a>
 </li>
@@ -13651,6 +14010,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.type">(gammapy.modeling.models.FoVBackgroundModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.type">(gammapy.modeling.models.GaussianPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.type">(gammapy.modeling.models.GaussianSpatialModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.type">(gammapy.modeling.models.GaussianSpectralModel attribute)</a>
@@ -13668,6 +14029,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.type">(gammapy.modeling.models.LogParabolaNormSpectralModel attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.type">(gammapy.modeling.models.LogParabolaSpectralModel attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.type">(gammapy.modeling.models.LogUniformPrior attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.type">(gammapy.modeling.models.MeyerCrabSpectralModel attribute)</a>
 </li>
@@ -13727,6 +14090,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.type">(gammapy.modeling.models.TemporalModel attribute)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.type">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
         <li><a href="api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter.type">(gammapy.modeling.Parameter attribute)</a>
 </li>
         <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.type">(gammapy.modeling.PriorParameter attribute)</a>
@@ -13779,6 +14144,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.FoVBackgroundModel.html#gammapy.modeling.models.FoVBackgroundModel.unfreeze">(gammapy.modeling.models.FoVBackgroundModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.unfreeze">(gammapy.modeling.models.GaussianPrior method)</a>
+</li>
         <li><a href="api/gammapy.modeling.models.GaussianSpatialModel.html#gammapy.modeling.models.GaussianSpatialModel.unfreeze">(gammapy.modeling.models.GaussianSpatialModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.GaussianSpectralModel.html#gammapy.modeling.models.GaussianSpectralModel.unfreeze">(gammapy.modeling.models.GaussianSpectralModel method)</a>
@@ -13796,6 +14163,8 @@
         <li><a href="api/gammapy.modeling.models.LogParabolaNormSpectralModel.html#gammapy.modeling.models.LogParabolaNormSpectralModel.unfreeze">(gammapy.modeling.models.LogParabolaNormSpectralModel method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.LogParabolaSpectralModel.html#gammapy.modeling.models.LogParabolaSpectralModel.unfreeze">(gammapy.modeling.models.LogParabolaSpectralModel method)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.unfreeze">(gammapy.modeling.models.LogUniformPrior method)</a>
 </li>
         <li><a href="api/gammapy.modeling.models.MeyerCrabSpectralModel.html#gammapy.modeling.models.MeyerCrabSpectralModel.unfreeze">(gammapy.modeling.models.MeyerCrabSpectralModel method)</a>
 </li>
@@ -13857,6 +14226,8 @@
 </li>
         <li><a href="api/gammapy.modeling.models.TemporalModel.html#gammapy.modeling.models.TemporalModel.unfreeze">(gammapy.modeling.models.TemporalModel method)</a>
 </li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.unfreeze">(gammapy.modeling.models.UniformPrior method)</a>
+</li>
       </ul></li>
       <li><a href="api/gammapy.modeling.Parameters.html#gammapy.modeling.Parameters.unfreeze_all">unfreeze_all() (gammapy.modeling.Parameters method)</a>
 
@@ -13864,6 +14235,8 @@
         <li><a href="api/gammapy.modeling.PriorParameters.html#gammapy.modeling.PriorParameters.unfreeze_all">(gammapy.modeling.PriorParameters method)</a>
 </li>
       </ul></li>
+      <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior">UniformPrior (class in gammapy.modeling.models)</a>
+</li>
       <li><a href="api/gammapy.data.GTI.html#gammapy.data.GTI.union">union() (gammapy.data.GTI method)</a>
 
       <ul>
@@ -13876,6 +14249,8 @@
         <li><a href="api/gammapy.modeling.PriorParameters.html#gammapy.modeling.PriorParameters.unique_parameters">(gammapy.modeling.PriorParameters attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.irf.Background2D.html#gammapy.irf.Background2D.unit">unit (gammapy.irf.Background2D attribute)</a>
 
       <ul>
@@ -13924,8 +14299,6 @@
         <li><a href="api/gammapy.modeling.PriorParameter.html#gammapy.modeling.PriorParameter.unit">(gammapy.modeling.PriorParameter attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/gammapy.utils.units.unit_from_fits_image_hdu.html#gammapy.utils.units.unit_from_fits_image_hdu">unit_from_fits_image_hdu() (in module gammapy.utils.units)</a>
 </li>
       <li><a href="api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig.update">update() (gammapy.analysis.AnalysisConfig method)</a>
@@ -14110,7 +14483,17 @@
 </li>
       <li><a href="api/gammapy.maps.WcsNDMap.html#gammapy.maps.WcsNDMap">WcsNDMap (class in gammapy.maps)</a>
 </li>
-      <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.weight">weight (gammapy.modeling.models.Prior attribute)</a>
+      <li><a href="api/gammapy.modeling.models.GaussianPrior.html#gammapy.modeling.models.GaussianPrior.weight">weight (gammapy.modeling.models.GaussianPrior attribute)</a>
+
+      <ul>
+        <li><a href="api/gammapy.modeling.models.LogUniformPrior.html#gammapy.modeling.models.LogUniformPrior.weight">(gammapy.modeling.models.LogUniformPrior attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.Prior.html#gammapy.modeling.models.Prior.weight">(gammapy.modeling.models.Prior attribute)</a>
+</li>
+        <li><a href="api/gammapy.modeling.models.UniformPrior.html#gammapy.modeling.models.UniformPrior.weight">(gammapy.modeling.models.UniformPrior attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="api/gammapy.stats.weighted_cash_sum_cython.html#gammapy.stats.weighted_cash_sum_cython">weighted_cash_sum_cython() (in module gammapy.stats)</a>
 </li>
       <li><a href="api/gammapy.maps.HpxGeom.html#gammapy.maps.HpxGeom.width">width (gammapy.maps.HpxGeom attribute)</a>
 
@@ -14196,6 +14579,8 @@
         <li><a href="api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.write">(gammapy.datasets.MapDataset method)</a>
 </li>
         <li><a href="api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.write">(gammapy.datasets.MapDatasetOnOff method)</a>
+</li>
+        <li><a href="api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted.write">(gammapy.datasets.MapDatasetWeighted method)</a>
 </li>
         <li><a href="api/gammapy.datasets.OGIPDatasetWriter.html#gammapy.datasets.OGIPDatasetWriter.write">(gammapy.datasets.OGIPDatasetWriter method)</a>
 </li>
@@ -14376,8 +14761,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -14388,23 +14773,19 @@
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -14412,14 +14793,15 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

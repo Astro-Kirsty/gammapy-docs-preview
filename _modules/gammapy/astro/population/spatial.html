@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,28 +26,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../../../../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -56,10 +54,11 @@
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '_modules/gammapy/astro/population/spatial';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../../../../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../../../../_static/gammapy_logo.ico"/>
@@ -67,8 +66,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -132,8 +130,8 @@
     
     
     
-    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../../../../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../../../../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -182,21 +180,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../../../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -236,6 +226,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -249,18 +247,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -391,6 +377,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -414,18 +408,6 @@
           
           
           
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
           <a href="https://gammapy.slack.com/" title="Slack" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-slack fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Slack</span></a>
         </li>
@@ -437,9 +419,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -488,11 +475,12 @@
   <h1>Source code for gammapy.astro.population.spatial</h1><div class="highlight"><pre>
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
 <span class="sd">&quot;&quot;&quot;Galactic radial source distribution probability density functions.&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">astropy.modeling</span> <span class="kn">import</span> <span class="n">Fittable1DModel</span><span class="p">,</span> <span class="n">Parameter</span>
-<span class="kn">from</span> <span class="nn">astropy.units</span> <span class="kn">import</span> <span class="n">Quantity</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.coordinates</span> <span class="kn">import</span> <span class="n">D_SUN_TO_GALACTIC_CENTER</span><span class="p">,</span> <span class="n">cartesian</span><span class="p">,</span> <span class="n">polar</span>
-<span class="kn">from</span> <span class="nn">gammapy.utils.random</span> <span class="kn">import</span> <span class="n">get_random_state</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.modeling</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fittable1DModel</span><span class="p">,</span> <span class="n">Parameter</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="kn">import</span> <span class="n">Quantity</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.coordinates</span><span class="w"> </span><span class="kn">import</span> <span class="n">D_SUN_TO_GALACTIC_CENTER</span><span class="p">,</span> <span class="n">cartesian</span><span class="p">,</span> <span class="n">polar</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_state</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;CaseBattacharya1998&quot;</span><span class="p">,</span>
@@ -515,13 +503,13 @@
 
 <div class="viewcode-block" id="Paczynski1990">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.Paczynski1990.html#gammapy.astro.population.Paczynski1990">[docs]</a>
-<span class="k">class</span> <span class="nc">Paczynski1990</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Paczynski1990</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Radial distribution of the birth surface density of neutron stars.</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">        f(r) = A r_{exp}^{-2} \exp \left(-\frac{r}{r_{exp}} \right)</span>
 
-<span class="sd">    Formula (2) [Paczynski1990]_.</span>
+<span class="sd">    Formula (2) in [1]_.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -537,20 +525,21 @@
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
-<span class="sd">    .. [Paczynski1990] https://ui.adsabs.harvard.edu/abs/1990ApJ...348..485P</span>
+<span class="sd">    .. [1] `Paczynski (1990), &quot;A Test of the Galactic Origin of Gamma-Ray Bursts&quot;</span>
+<span class="sd">       &lt;https://ui.adsabs.harvard.edu/abs/1990ApJ...348..485P&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">r_exp</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">r_exp</span><span class="o">=</span><span class="mf">4.5</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">r_exp</span><span class="o">=</span><span class="mf">4.5</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">r_exp</span><span class="o">=</span><span class="n">r_exp</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Paczynski1990.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.Paczynski1990.html#gammapy.astro.population.Paczynski1990.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">r_exp</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">r_exp</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">r_exp</span><span class="o">**-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">/</span> <span class="n">r_exp</span><span class="p">)</span></div>
 </div>
@@ -559,14 +548,14 @@
 
 <div class="viewcode-block" id="CaseBattacharya1998">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998">[docs]</a>
-<span class="k">class</span> <span class="nc">CaseBattacharya1998</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CaseBattacharya1998</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Radial distribution of the surface density of supernova remnants in the galaxy.</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">        f(r) = A \left( \frac{r}{r_{\odot}} \right) ^ \alpha \exp</span>
 <span class="sd">        \left[ -\beta \left( \frac{ r - r_{\odot}}{r_{\odot}} \right) \right]</span>
 
-<span class="sd">    Formula (14) [CaseBattacharya1998]_.</span>
+<span class="sd">    Formula (14) in [1]_.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -584,7 +573,8 @@
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
-<span class="sd">    .. [CaseBattacharya1998] https://ui.adsabs.harvard.edu/abs/1998ApJ...504..761C</span>
+<span class="sd">    .. [1] `Case et al. (1998), &quot;A New Σ-D Relation and Its Application to the Galactic Supernova Remnant Distribution&quot;</span>
+<span class="sd">       &lt;https://ui.adsabs.harvard.edu/abs/1998ApJ...504..761C&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
@@ -592,13 +582,13 @@
     <span class="n">beta</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">3.53</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">3.53</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="CaseBattacharya1998.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.CaseBattacharya1998.html#gammapy.astro.population.CaseBattacharya1998.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="n">d_sun</span> <span class="o">=</span> <span class="n">D_SUN_TO_GALACTIC_CENTER</span><span class="o">.</span><span class="n">value</span>
         <span class="n">term1</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="n">d_sun</span><span class="p">)</span> <span class="o">**</span> <span class="n">alpha</span>
@@ -610,16 +600,16 @@
 
 <div class="viewcode-block" id="YusifovKucuk2004">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.YusifovKucuk2004.html#gammapy.astro.population.YusifovKucuk2004">[docs]</a>
-<span class="k">class</span> <span class="nc">YusifovKucuk2004</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">YusifovKucuk2004</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Radial distribution of the surface density of pulsars in the galaxy.</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">        f(r) = A \left ( \frac{r + r_1}{r_{\odot} + r_1} \right )^a \exp</span>
 <span class="sd">        \left [-b \left( \frac{r - r_{\odot}}{r_{\odot} + r_1} \right ) \right ]</span>
 
-<span class="sd">    Used by Faucher-Guigere and Kaspi. Density at ``r = 0`` is nonzero.</span>
+<span class="sd">    Used by Faucher-Giguère and Kaspi. Density at ``r = 0`` is nonzero.</span>
 
-<span class="sd">    Formula (15) [YusifovKucuk2004]_.</span>
+<span class="sd">    Formula (15) in [1]_.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -639,7 +629,8 @@
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
-<span class="sd">    .. [YusifovKucuk2004] https://ui.adsabs.harvard.edu/abs/2004A%26A...422..545Y</span>
+<span class="sd">    .. [1] `Yusifov et al. (2004), &quot;Revisiting the radial distribution of pulsars in the Galaxy&quot;</span>
+<span class="sd">       &lt;https://ui.adsabs.harvard.edu/abs/2004A%26A...422..545Y&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
@@ -648,13 +639,13 @@
     <span class="n">r_1</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.64</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">4.01</span><span class="p">,</span> <span class="n">r_1</span><span class="o">=</span><span class="mf">0.55</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">1.64</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">4.01</span><span class="p">,</span> <span class="n">r_1</span><span class="o">=</span><span class="mf">0.55</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">r_1</span><span class="o">=</span><span class="n">r_1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="YusifovKucuk2004.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.YusifovKucuk2004.html#gammapy.astro.population.YusifovKucuk2004.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">r_1</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">r_1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="n">d_sun</span> <span class="o">=</span> <span class="n">D_SUN_TO_GALACTIC_CENTER</span><span class="o">.</span><span class="n">value</span>
         <span class="n">term1</span> <span class="o">=</span> <span class="p">((</span><span class="n">r</span> <span class="o">+</span> <span class="n">r_1</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">d_sun</span> <span class="o">+</span> <span class="n">r_1</span><span class="p">))</span> <span class="o">**</span> <span class="n">a</span>
@@ -666,7 +657,7 @@
 
 <div class="viewcode-block" id="YusifovKucuk2004B">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B">[docs]</a>
-<span class="k">class</span> <span class="nc">YusifovKucuk2004B</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">YusifovKucuk2004B</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Radial distribution of the surface density of OB stars in the galaxy.</span>
 
 <span class="sd">    .. math::</span>
@@ -675,7 +666,7 @@
 
 <span class="sd">    Derived empirically from OB-stars distribution.</span>
 
-<span class="sd">    Formula (17) [YusifovKucuk2004]_.</span>
+<span class="sd">    Formula (17) in [1]_.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -693,8 +684,8 @@
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
-<span class="sd">    .. [YusifovKucuk2004] https://ui.adsabs.harvard.edu/abs/2004A%26A...422..545Y</span>
-
+<span class="sd">    .. [1] `Yusifov et al. (2004), &quot;Revisiting the radial distribution of pulsars in the Galaxy&quot;</span>
+<span class="sd">       &lt;https://ui.adsabs.harvard.edu/abs/2004A%26A...422..545Y&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
@@ -702,13 +693,13 @@
     <span class="n">b</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">6.8</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mf">6.8</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="YusifovKucuk2004B.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.YusifovKucuk2004B.html#gammapy.astro.population.YusifovKucuk2004B.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="n">d_sun</span> <span class="o">=</span> <span class="n">D_SUN_TO_GALACTIC_CENTER</span><span class="o">.</span><span class="n">value</span>
         <span class="k">return</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="n">d_sun</span><span class="p">)</span> <span class="o">**</span> <span class="n">a</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="n">d_sun</span><span class="p">))</span></div>
@@ -718,7 +709,7 @@
 
 <div class="viewcode-block" id="FaucherKaspi2006">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.FaucherKaspi2006.html#gammapy.astro.population.FaucherKaspi2006">[docs]</a>
-<span class="k">class</span> <span class="nc">FaucherKaspi2006</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FaucherKaspi2006</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Radial distribution of the birth surface density of pulsars in the galaxy.</span>
 
@@ -726,7 +717,7 @@
 <span class="sd">        f(r) = A \frac{1}{\sqrt{2 \pi} \sigma} \exp</span>
 <span class="sd">        \left(- \frac{(r - r_0)^2}{2 \sigma ^ 2}\right)</span>
 
-<span class="sd">    Appendix B [FaucherKaspi2006]_.</span>
+<span class="sd">    Appendix B in [1]_.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -744,7 +735,8 @@
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
-<span class="sd">    .. [FaucherKaspi2006] https://ui.adsabs.harvard.edu/abs/2006ApJ...643..332F</span>
+<span class="sd">    .. [1] `Faucher-Giguère and Kaspi (2006), &quot;Birth and Evolution of Isolated Radio Pulsars&quot;</span>
+<span class="sd">       &lt;https://ui.adsabs.harvard.edu/abs/2006ApJ...643..332F&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
@@ -752,13 +744,13 @@
     <span class="n">sigma</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">r_0</span><span class="o">=</span><span class="mf">7.04</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.83</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">r_0</span><span class="o">=</span><span class="mf">7.04</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.83</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">r_0</span><span class="o">=</span><span class="n">r_0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="n">sigma</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="FaucherKaspi2006.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.FaucherKaspi2006.html#gammapy.astro.population.FaucherKaspi2006.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">r_0</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">r_0</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="n">term1</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">sigma</span><span class="p">)</span>
         <span class="n">term2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">r</span> <span class="o">-</span> <span class="n">r_0</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
@@ -769,14 +761,14 @@
 
 <div class="viewcode-block" id="Lorimer2006">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.Lorimer2006.html#gammapy.astro.population.Lorimer2006">[docs]</a>
-<span class="k">class</span> <span class="nc">Lorimer2006</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Lorimer2006</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Radial distribution of the surface density of pulsars in the galaxy.</span>
 
 <span class="sd">    .. math::</span>
 <span class="sd">        f(r) = A \left( \frac{r}{r_{\odot}} \right) ^ B \exp</span>
 <span class="sd">        \left[ -C \left( \frac{r - r_{\odot}}{r_{\odot}} \right) \right]</span>
 
-<span class="sd">    Formula (10) [Lorimer2006]_.</span>
+<span class="sd">    Formula (10) in [1]_.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -794,7 +786,8 @@
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
-<span class="sd">    .. [Lorimer2006] https://ui.adsabs.harvard.edu/abs/2006MNRAS.372..777L</span>
+<span class="sd">    .. [1] `Lorimer et al. (2006), &quot;The Parkes Multibeam Pulsar Survey - VI. Discovery and timing of 142 pulsars and a</span>
+<span class="sd">       Galactic population analysis&quot; &lt;https://ui.adsabs.harvard.edu/abs/2006MNRAS.372..777L&gt;`_</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">amplitude</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
@@ -802,13 +795,13 @@
     <span class="n">C</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="mf">1.9</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="mf">1.9</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">B</span><span class="o">=</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="n">C</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Lorimer2006.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.Lorimer2006.html#gammapy.astro.population.Lorimer2006.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="n">d_sun</span> <span class="o">=</span> <span class="n">D_SUN_TO_GALACTIC_CENTER</span><span class="o">.</span><span class="n">value</span>
         <span class="n">term1</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">/</span> <span class="n">d_sun</span><span class="p">)</span> <span class="o">**</span> <span class="n">B</span>
@@ -820,7 +813,7 @@
 
 <div class="viewcode-block" id="Exponential">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.Exponential.html#gammapy.astro.population.Exponential">[docs]</a>
-<span class="k">class</span> <span class="nc">Exponential</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Exponential</span><span class="p">(</span><span class="n">Fittable1DModel</span><span class="p">):</span>
 <span class="w">    </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Exponential distribution.</span>
 
 <span class="sd">    .. math::</span>
@@ -846,13 +839,13 @@
     <span class="n">z_0</span> <span class="o">=</span> <span class="n">Parameter</span><span class="p">()</span>
     <span class="n">evolved</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">z_0</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">z_0</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">amplitude</span><span class="o">=</span><span class="n">amplitude</span><span class="p">,</span> <span class="n">z_0</span><span class="o">=</span><span class="n">z_0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <div class="viewcode-block" id="Exponential.evaluate">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.Exponential.html#gammapy.astro.population.Exponential.evaluate">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">evaluate</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">z_0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">z_0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evaluate model.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="n">z_0</span><span class="p">)</span></div>
 </div>
@@ -861,7 +854,7 @@
 
 <div class="viewcode-block" id="LogSpiral">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.LogSpiral.html#gammapy.astro.population.LogSpiral">[docs]</a>
-<span class="k">class</span> <span class="nc">LogSpiral</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LogSpiral</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Logarithmic spiral.</span>
 
 <span class="sd">    Reference: http://en.wikipedia.org/wiki/Logarithmic_spiral</span>
@@ -869,7 +862,7 @@
 
 <div class="viewcode-block" id="LogSpiral.xy_position">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.LogSpiral.html#gammapy.astro.population.LogSpiral.xy_position">[docs]</a>
-    <span class="k">def</span> <span class="nf">xy_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">spiralarm_index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">xy_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">spiralarm_index</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Compute (x, y) position for a given angle or radius.</span>
 
 <span class="sd">        Parameters</span>
@@ -901,7 +894,7 @@
 
 <div class="viewcode-block" id="LogSpiral.radius">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.LogSpiral.html#gammapy.astro.population.LogSpiral.radius">[docs]</a>
-    <span class="k">def</span> <span class="nf">radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">spiralarm_index</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">spiralarm_index</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Radius for a given angle.</span>
 
 <span class="sd">        Parameters</span>
@@ -926,7 +919,7 @@
 
 <div class="viewcode-block" id="LogSpiral.theta">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.LogSpiral.html#gammapy.astro.population.LogSpiral.theta">[docs]</a>
-    <span class="k">def</span> <span class="nf">theta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">spiralarm_index</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">theta</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">spiralarm_index</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Angle for a given radius.</span>
 
 <span class="sd">        Parameters</span>
@@ -953,7 +946,7 @@
 
 <div class="viewcode-block" id="FaucherSpiral">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.FaucherSpiral.html#gammapy.astro.population.FaucherSpiral">[docs]</a>
-<span class="k">class</span> <span class="nc">FaucherSpiral</span><span class="p">(</span><span class="n">LogSpiral</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">FaucherSpiral</span><span class="p">(</span><span class="n">LogSpiral</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Milky way spiral arm used in Faucher et al (2006).</span>
 
 <span class="sd">    Reference: https://ui.adsabs.harvard.edu/abs/2006ApJ...643..332F</span>
@@ -966,7 +959,7 @@
     <span class="n">spiralarms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;Norma&quot;</span><span class="p">,</span> <span class="s2">&quot;Carina Sagittarius&quot;</span><span class="p">,</span> <span class="s2">&quot;Perseus&quot;</span><span class="p">,</span> <span class="s2">&quot;Crux Scutum&quot;</span><span class="p">])</span>
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_blur</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_blur</span><span class="p">(</span><span class="n">radius</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">amount</span><span class="o">=</span><span class="mf">0.07</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Blur the positions around the centroid of the spiral arm.</span>
 
 <span class="sd">        The given positions are blurred by drawing a displacement in radius from</span>
@@ -996,7 +989,7 @@
         <span class="k">return</span> <span class="n">polar</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dy</span><span class="p">)</span>
 
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">_gc_correction</span><span class="p">(</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">_gc_correction</span><span class="p">(</span>
         <span class="n">radius</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">r_corr</span><span class="o">=</span><span class="n">Quantity</span><span class="p">(</span><span class="mf">2.857</span><span class="p">,</span> <span class="s2">&quot;kpc&quot;</span><span class="p">),</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span>
     <span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Correction of source distribution towards the galactic center.</span>
@@ -1025,7 +1018,7 @@
 
 <div class="viewcode-block" id="FaucherSpiral.__call__">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.FaucherSpiral.html#gammapy.astro.population.FaucherSpiral.__call__">[docs]</a>
-    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">blur</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="n">blur</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Draw random position from spiral arm distribution.</span>
 
 <span class="sd">        Returns the corresponding angle theta[rad] to a given radius[kpc] and number of spiral arm.</span>
@@ -1066,7 +1059,7 @@
 
 <div class="viewcode-block" id="ValleeSpiral">
 <a class="viewcode-back" href="../../../../api/gammapy.astro.population.ValleeSpiral.html#gammapy.astro.population.ValleeSpiral">[docs]</a>
-<span class="k">class</span> <span class="nc">ValleeSpiral</span><span class="p">(</span><span class="n">LogSpiral</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ValleeSpiral</span><span class="p">(</span><span class="n">LogSpiral</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Milky way spiral arm model from Vallee (2008).</span>
 
 <span class="sd">    Reference: https://ui.adsabs.harvard.edu/abs/2008AJ....135.1301V</span>
@@ -1082,7 +1075,7 @@
 
     <span class="n">spiralarms</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;Norma&quot;</span><span class="p">,</span> <span class="s2">&quot;Perseus&quot;</span><span class="p">,</span> <span class="s2">&quot;Carina Sagittarius&quot;</span><span class="p">,</span> <span class="s2">&quot;Crux Scutum&quot;</span><span class="p">])</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">r_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">r_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">theta_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">theta_0</span> <span class="o">+</span> <span class="n">Quantity</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">270</span><span class="p">],</span> <span class="s2">&quot;deg&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">Quantity</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">value</span><span class="p">))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;rad&quot;</span><span class="p">)</span>
@@ -1126,8 +1119,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1138,23 +1131,19 @@
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -1162,14 +1151,15 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

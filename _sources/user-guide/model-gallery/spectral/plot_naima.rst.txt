@@ -169,8 +169,8 @@ Here is an example YAML file using the model:
                 interp: lin
                 scale_method: scale10
     metadata:
-        creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
-        date: '2024-10-24T19:05:18.789496'
+        creator: Gammapy 2.0.dev513+ge63c183da
+        date: '2025-03-07T08:42:09.081519'
         origin: null
 
 

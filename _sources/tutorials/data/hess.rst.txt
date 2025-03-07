@@ -108,36 +108,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.10    
+            python_version         : 3.11.11    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 1.3.dev1278+g0c082c493.d20241024 
+            version                : 2.0.dev513+ge63c183da 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.4     
-            scipy                  : 1.14.1     
-            astropy                : 5.2.2      
+            numpy                  : 2.2.3      
+            scipy                  : 1.15.2     
+            astropy                : 7.0.1      
             regions                : 0.10       
-            click                  : 8.1.7      
+            click                  : 8.1.8      
             yaml                   : 6.0.2      
-            IPython                : 8.28.0     
+            IPython                : 9.0.1      
             jupyterlab             : not installed 
-            matplotlib             : 3.9.2      
+            matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.17.3     
+            healpy                 : 1.18.0     
             iminuit                : 2.30.1     
-            sherpa                 : 4.16.1     
-            naima                  : 0.10.0     
+            sherpa                 : 4.17.0     
+            naima                  : 0.10.2     
             emcee                  : 3.1.6      
-            corner                 : 2.2.2      
-            ray                    : 2.38.0     
+            corner                 : 2.2.3      
+            ray                    : 2.43.0     
 
 
     Gammapy environment variables:
@@ -185,8 +185,8 @@ Create and get info on the data store
     BASE_DIR: /home/feijen/Documents/github/gammapy-data/hess-dl3-dr1
     Rows: 630
     OBS_ID: 20136 -- 47829
-    HDU_TYPE: ['aeff', 'bkg', 'edisp', 'events', 'gti', 'psf']
-    HDU_CLASS: ['aeff_2d', 'bkg_3d', 'edisp_2d', 'events', 'gti', 'psf_table']
+    HDU_TYPE: [np.str_('aeff'), np.str_('bkg'), np.str_('edisp'), np.str_('events'), np.str_('gti'), np.str_('psf')]
+    HDU_CLASS: [np.str_('aeff_2d'), np.str_('bkg_3d'), np.str_('edisp_2d'), np.str_('events'), np.str_('gti'), np.str_('psf_table')]
 
 
     Observation table:
@@ -290,7 +290,7 @@ Peek the effective area
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/quantity.py:673: RuntimeWarning: invalid value encountered in divide
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/quantity.py:658: RuntimeWarning: invalid value encountered in divide
       result = super().__array_ufunc__(function, method, *arrays, **kwargs)
 
 

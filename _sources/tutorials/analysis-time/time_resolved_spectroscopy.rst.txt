@@ -272,238 +272,238 @@ modelled.
     Dataset 0: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : OuqNW7g6
+      Name       : rS0yfEvA
       Instrument : HESS
       Models     : 
 
     Dataset 1: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : QRjmIUaV
+      Name       : kS89ibJV
       Instrument : HESS
       Models     : 
 
     Dataset 2: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 4fwKcvZf
+      Name       : T0w_3TDo
       Instrument : HESS
       Models     : 
 
     Dataset 3: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : A-ZlbYQI
+      Name       : 0iWkaeJW
       Instrument : HESS
       Models     : 
 
     Dataset 4: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : hlRGvlss
+      Name       : nKE75LW8
       Instrument : HESS
       Models     : 
 
     Dataset 5: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : oHjahlgk
+      Name       : iGhmb2S_
       Instrument : HESS
       Models     : 
 
     Dataset 6: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : ftbTXjdI
+      Name       : H6oc-iSX
       Instrument : HESS
       Models     : 
 
     Dataset 7: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 1kSFfnc9
+      Name       : cIJ9Dqye
       Instrument : HESS
       Models     : 
 
     Dataset 8: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : gxbbtMdK
+      Name       : V3N6nJw3
       Instrument : HESS
       Models     : 
 
     Dataset 9: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : y96iWbNz
+      Name       : dNlaNumI
       Instrument : HESS
       Models     : 
 
     Dataset 10: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : YuSTfO-M
+      Name       : CCKZJb6r
       Instrument : HESS
       Models     : 
 
     Dataset 11: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : GkurwsXx
+      Name       : 0cw94act
       Instrument : HESS
       Models     : 
 
     Dataset 12: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : C4uNeOYO
+      Name       : acmvvQdc
       Instrument : HESS
       Models     : 
 
     Dataset 13: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : worGNm73
+      Name       : u8zcwADn
       Instrument : HESS
       Models     : 
 
     Dataset 14: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 29Ku1fsK
+      Name       : Urv7Dp2Q
       Instrument : HESS
       Models     : 
 
     Dataset 15: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : NYsXM7Fo
+      Name       : hPM3m5aH
       Instrument : HESS
       Models     : 
 
     Dataset 16: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 35jgaLN8
+      Name       : xzvzee_V
       Instrument : HESS
       Models     : 
 
     Dataset 17: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 74_NMwpt
+      Name       : vr7Em78n
       Instrument : HESS
       Models     : 
 
     Dataset 18: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : lwlt5lDb
+      Name       : brE8HNPq
       Instrument : HESS
       Models     : 
 
     Dataset 19: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : DGufFeOb
+      Name       : XdR73z9n
       Instrument : HESS
       Models     : 
 
     Dataset 20: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : dtLr7WhA
+      Name       : b9MbXs8O
       Instrument : HESS
       Models     : 
 
     Dataset 21: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : MIy2wUI8
+      Name       : VWTkO7bQ
       Instrument : HESS
       Models     : 
 
     Dataset 22: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : J65MokHw
+      Name       : aD89FM5L
       Instrument : HESS
       Models     : 
 
     Dataset 23: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : EkHeWXJ1
+      Name       : cE0GYO3A
       Instrument : HESS
       Models     : 
 
     Dataset 24: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 9JTPptm8
+      Name       : fIWQ_Ug2
       Instrument : HESS
       Models     : 
 
     Dataset 25: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 3wAVryKL
+      Name       : B3HkVr1M
       Instrument : HESS
       Models     : 
 
     Dataset 26: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : BZcTo7IR
+      Name       : QOdsnYrF
       Instrument : HESS
       Models     : 
 
     Dataset 27: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : nURy0pdn
+      Name       : nsDGHgPH
       Instrument : HESS
       Models     : 
 
     Dataset 28: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : vcYiBeA5
+      Name       : qtWGJmRz
       Instrument : HESS
       Models     : 
 
     Dataset 29: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : si12Bm9f
+      Name       : -Zq8s9Ze
       Instrument : HESS
       Models     : 
 
     Dataset 30: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : KPOonvA3
+      Name       : Q-JIK6Nt
       Instrument : HESS
       Models     : 
 
     Dataset 31: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : H0717DjI
+      Name       : 4ydtr_si
       Instrument : HESS
       Models     : 
 
     Dataset 32: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : GCZTKB9L
+      Name       : MXAMgd6h
       Instrument : HESS
       Models     : 
 
     Dataset 33: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : PqDinMll
+      Name       : jml55jzz
       Instrument : HESS
       Models     : 
 
@@ -558,7 +558,7 @@ configure the quantities you want to freeze.
       Temporal model type       : 
       Parameters:
         index                         :      3.000   +/-    0.00             
-        amplitude                     :   2.00e-11   +/- 0.0e+00 1 / (cm2 s TeV)
+        amplitude                     :   2.00e-11   +/- 0.0e+00 1 / (TeV s cm2)
         reference             (frozen):      1.000       TeV         
 
 
@@ -638,9 +638,9 @@ We now apply it to our data
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/core/fromnumeric.py:88: RuntimeWarning: overflow encountered in reduce
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
       return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/core/fromnumeric.py:88: RuntimeWarning: overflow encountered in reduce
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
       return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
 
 
@@ -719,7 +719,7 @@ Or, to access the fitted models,
       Temporal model type       : 
       Parameters:
         index                         :      4.009   +/-    0.35             
-        amplitude                     :   1.02e-10   +/- 1.3e-11 1 / (cm2 s TeV)
+        amplitude                     :   1.02e-10   +/- 1.3e-11 1 / (TeV s cm2)
         reference             (frozen):      1.000       TeV         
 
 
@@ -729,7 +729,7 @@ Or, to access the fitted models,
 
 .. GENERATED FROM PYTHON SOURCE LINES 248-254
 
-To better visualize the data, we can create a table by extracting some
+To better visualise the data, we can create a table by extracting some
 relevant information. In the following, we extract the time intervals,
 information on the fit convergence and the free parameters. You can
 extract more information if required, eg, the `total_stat` in each
@@ -772,7 +772,7 @@ bin, etc.
  .. code-block:: none
 
              tstart                  tstop          ...     amplitude_err     
-                                                    ...    1 / (cm2 s TeV)    
+                                                    ...    1 / (TeV s cm2)    
     ----------------------- ----------------------- ... ----------------------
     2006-07-29T20:30:00.000 2006-07-29T20:45:00.000 ... 1.2923272203680937e-11
     2006-07-29T20:45:00.000 2006-07-29T21:00:00.000 ... 1.1393881668086242e-11
@@ -873,7 +873,7 @@ result object, eg
 
  .. code-block:: none
 
-    Integral flux in the first bin: [3.39200283e-11 4.59497703e-12] 1 / (cm2 s)
+    Integral flux in the first bin: [3.39200283e-11 4.59497703e-12] 1 / (s cm2)
 
 
 
@@ -931,7 +931,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 17.610 seconds)
+   **Total running time of the script:** (0 minutes 25.014 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-time_time_resolved_spectroscopy.py:

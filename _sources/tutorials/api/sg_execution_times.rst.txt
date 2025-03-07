@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**02:34.876** total execution time for 13 files **from tutorials/api**:
+**03:26.747** total execution time for 13 files **from tutorials/api**:
 
 .. container::
 
@@ -33,41 +33,41 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorials_api_priors.py` (``priors.py``)
-     - 00:57.102
+     - 01:33.623
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_astro_dark_matter.py` (``astro_dark_matter.py``)
-     - 00:24.705
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_makers.py` (``makers.py``)
-     - 00:16.349
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_datasets.py` (``datasets.py``)
-     - 00:13.695
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_fitting.py` (``fitting.py``)
-     - 00:09.476
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_model_management.py` (``model_management.py``)
-     - 00:08.104
+     - 00:28.382
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_estimators.py` (``estimators.py``)
-     - 00:05.093
+     - 00:17.535
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_api_makers.py` (``makers.py``)
+     - 00:15.756
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_api_datasets.py` (``datasets.py``)
+     - 00:11.490
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_api_fitting.py` (``fitting.py``)
+     - 00:10.014
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_api_model_management.py` (``model_management.py``)
+     - 00:08.184
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_catalog.py` (``catalog.py``)
-     - 00:05.075
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_maps.py` (``maps.py``)
-     - 00:03.541
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_api_observation_clustering.py` (``observation_clustering.py``)
-     - 00:03.404
+     - 00:05.136
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_irfs.py` (``irfs.py``)
-     - 00:03.129
+     - 00:04.307
      - 0.0
-   * - :ref:`sphx_glr_tutorials_api_mask_maps.py` (``mask_maps.py``)
-     - 00:02.683
+   * - :ref:`sphx_glr_tutorials_api_observation_clustering.py` (``observation_clustering.py``)
+     - 00:03.766
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_api_maps.py` (``maps.py``)
+     - 00:03.055
      - 0.0
    * - :ref:`sphx_glr_tutorials_api_models.py` (``models.py``)
-     - 00:02.521
+     - 00:02.902
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_api_mask_maps.py` (``mask_maps.py``)
+     - 00:02.599
      - 0.0

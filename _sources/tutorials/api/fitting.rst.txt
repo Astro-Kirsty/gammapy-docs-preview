@@ -39,7 +39,7 @@ This is a hands-on tutorial to `~gammapy.modeling`, showing how to do
 perform a Fit in gammapy. The emphasis here is on interfacing the
 `Fit` class and inspecting the errors. To see an analysis example of
 how datasets and models interact, see the :doc:`/tutorials/api/model_management` tutorial.
-As an example, in this notebook, we are going to work with HESS data of the Crab Nebula and show in
+As an example, in this notebook, we are going to work with H.E.S.S. data of the Crab Nebula and show in
 particular how to :
 
 - perform a spectral analysis
@@ -100,36 +100,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.10    
+            python_version         : 3.11.11    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 1.3.dev1278+g0c082c493.d20241024 
+            version                : 2.0.dev513+ge63c183da 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.4     
-            scipy                  : 1.14.1     
-            astropy                : 5.2.2      
+            numpy                  : 2.2.3      
+            scipy                  : 1.15.2     
+            astropy                : 7.0.1      
             regions                : 0.10       
-            click                  : 8.1.7      
+            click                  : 8.1.8      
             yaml                   : 6.0.2      
-            IPython                : 8.28.0     
+            IPython                : 9.0.1      
             jupyterlab             : not installed 
-            matplotlib             : 3.9.2      
+            matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.17.3     
+            healpy                 : 1.18.0     
             iminuit                : 2.30.1     
-            sherpa                 : 4.16.1     
-            naima                  : 0.10.0     
+            sherpa                 : 4.17.0     
+            naima                  : 0.10.2     
             emcee                  : 3.1.6      
-            corner                 : 2.2.2      
-            ray                    : 2.38.0     
+            corner                 : 2.2.3      
+            ray                    : 2.43.0     
 
 
     Gammapy environment variables:
@@ -176,7 +176,7 @@ which we choose a log-parabola
 .. GENERATED FROM PYTHON SOURCE LINES 77-81
 
 The data and background are read from pre-computed ON/OFF datasets of
-HESS observations, for simplicity we stack them together. Then we set
+H.E.S.S. observations, for simplicity we stack them together. Then we set
 the model and fit range to the resulting dataset.
 
 
@@ -360,7 +360,7 @@ Refer to the automatically-generated results dictionary:
             backend    : scipy
             method     : L-BFGS-B
             success    : True
-            message    : CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH
+            message    : CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH
             nfev       : 60
             total stat : 30.35
 
@@ -516,27 +516,27 @@ properly
 
         total_stat     crab.spectral.amplitude ...  crab.spectral.beta
     ------------------ ----------------------- ... -------------------
-    30.349530550405035  3.8122425483643125e-11 ...  0.2264827111476982
-    30.349724940685938  3.8157971601581226e-11 ...  0.2264827111476982
-     30.34971209244579   3.808687936570502e-11 ...  0.2264827111476982
-     30.34953932636892   3.812951371538087e-11 ...  0.2264827111476982
-    30.349536723056637  3.8115337251905373e-11 ...  0.2264827111476982
-     30.35052105086856  3.8122425483643125e-11 ...  0.2264827111476982
-    30.350556388466543  3.8122425483643125e-11 ...  0.2264827111476982
-     30.34953910575007  3.8122425483643125e-11 ...  0.2264827111476982
-    30.349542158419318  3.8122425483643125e-11 ...  0.2264827111476982
-     30.35030398537787  3.8122425483643125e-11 ...  0.2278975306934438
+     30.34953055023599   3.812242563241853e-11 ... 0.22648275232365314
+     30.34972498666637   3.815797604661974e-11 ... 0.22648275232365314
+    30.349712137003408   3.808687521821733e-11 ... 0.22648275232365314
+    30.349539326192144   3.812951386418529e-11 ... 0.22648275232365314
+    30.349536722895394  3.8115337400651776e-11 ... 0.22648275232365314
+    30.350521804140612   3.812242563241853e-11 ... 0.22648275232365314
+    30.350557141562156   3.812242563241853e-11 ... 0.22648275232365314
+     30.34953911339307   3.812242563241853e-11 ... 0.22648275232365314
+     30.34954216550536   3.812242563241853e-11 ... 0.22648275232365314
+    30.350304440606685   3.812242563241853e-11 ...  0.2278979724512698
                    ...                     ... ...                 ...
-     30.34953807814367  3.8122169596532167e-11 ... 0.22635140877790516
-     30.34953077463306   3.812358724314062e-11 ... 0.22648881839710966
-     30.34953075819191   3.812075194992371e-11 ... 0.22648881839710966
-    30.349530807529028  3.8122169596532167e-11 ... 0.22648881839710966
-    30.349530725254468  3.8122169596532167e-11 ... 0.22648881839710966
-     30.34953073943366  3.8122169596532167e-11 ...  0.2265163003209506
-     30.34953079334042  3.8122169596532167e-11 ... 0.22646133647326874
-    30.349535814693404  3.8129257829574434e-11 ... 0.22648881839710966
-    30.349537158300407  3.8129257829574434e-11 ... 0.22662622801631419
-    30.349559366703698  3.8122169596532167e-11 ... 0.22662622801631419
+     30.34953807759153  3.8122169749504455e-11 ... 0.22635144489393122
+    30.349530774650837   3.812358739611534e-11 ... 0.22648885452071263
+    30.349530758007994   3.812075210289357e-11 ... 0.22648885452071263
+    30.349530807427385  3.8122169749504455e-11 ... 0.22648885452071263
+     30.34953072518999  3.8122169749504455e-11 ... 0.22648885452071263
+    30.349530739444464  3.8122169749504455e-11 ... 0.22651633644606892
+    30.349530793163513  3.8122169749504455e-11 ... 0.22646137259535634
+    30.349535815021504  3.8129257982558884e-11 ... 0.22648885452071263
+    30.349537159191097  3.8129257982558884e-11 ...   0.226626264147494
+     30.34955936699766  3.8122169749504455e-11 ...   0.226626264147494
     Length = 37 rows
 
 
@@ -568,7 +568,7 @@ for all parameters are reasonable, and no fitted parameter value is “too close
 
     model type    name     value         unit      ...    max    frozen link prior
     ----- ---- --------- ---------- -------------- ... --------- ------ ---- -----
-     crab      amplitude 3.8122e-11 cm-2 s-1 TeV-1 ...       nan  False           
+     crab      amplitude 3.8122e-11 TeV-1 s-1 cm-2 ...       nan  False           
      crab      reference 1.0000e+00            TeV ...       nan   True           
      crab          alpha 2.1958e+00                ... 3.000e+00  False           
      crab           beta 2.2649e-01                ...       nan  False           
@@ -653,10 +653,10 @@ You can access it directly with:
 
  .. code-block:: none
 
-    [[ 1.25743553e-23  0.00000000e+00  4.54676837e-13 -1.17016482e-13]
+    [[ 1.25743553e-23  0.00000000e+00  4.54676778e-13 -1.17016448e-13]
      [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00]
-     [ 4.54676837e-13  0.00000000e+00  6.89492144e-02 -3.31139074e-02]
-     [-1.17016482e-13  0.00000000e+00 -3.31139074e-02  1.95024543e-02]]
+     [ 4.54676778e-13  0.00000000e+00  6.89492003e-02 -3.31139007e-02]
+     [-1.17016448e-13  0.00000000e+00 -3.31139007e-02  1.95024514e-02]]
 
 
 
@@ -670,7 +670,7 @@ And you can plot the total parameter correlation as well:
 
 .. code-block:: Python
 
-    result_minuit.models.covariance.plot_correlation()
+    result_minuit.models.covariance.plot_correlation(figsize=(7, 5))
     plt.show()
 
 
@@ -709,7 +709,7 @@ accessing the `~gammapy.modeling.Parameter.error` attribute:
 
  .. code-block:: none
 
-    0.2625818241224747
+    0.2625817974208368
 
 
 
@@ -1114,6 +1114,11 @@ of the contours is not well defined. That’s why we advise to always
 choose a parameter space that contains the contours you’re interested
 in.
 
+
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** (0 minutes 10.014 seconds)
 
 
 .. _sphx_glr_download_tutorials_api_fitting.py:

@@ -119,7 +119,7 @@ Here is an example YAML file using the model:
                     - 20.0
                     - 10.0
                     - 1.0
-                    unit: 1 / (cm2 s TeV)
+                    unit: 1 / (TeV s cm2)
             model2:
                 type: PowerLawNormSpectralModel
                 parameters:
@@ -132,8 +132,8 @@ Here is an example YAML file using the model:
                     unit: TeV
             operator: mul
     metadata:
-        creator: Gammapy 1.3.dev1278+g0c082c493.d20241024
-        date: '2024-10-24T19:05:15.387606'
+        creator: Gammapy 2.0.dev513+ge63c183da
+        date: '2025-03-07T08:42:05.391947'
         origin: null
 
 

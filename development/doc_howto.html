@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,28 +27,26 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=203afaf9" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6865c87f" />
   
   <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/jquery.js?v=5d32c60e"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
     <script src="../_static/documentation_options.js?v=1f75dfce"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
@@ -57,10 +55,11 @@
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'development/doc_howto';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://docs.gammapy.org/stable/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
         </script>
     <script src="../_static/matomo.js?v=52704cab"></script>
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
@@ -70,8 +69,7 @@
     <link rel="prev" title="How to make a Gammapy release" href="release.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="1.3.dev1278+g0c082c493.d20241024" />
-    <meta name="docbuild:last-update" content="24 Oct 2024"/>
+  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
   </head>
   
   
@@ -135,8 +133,8 @@
     
     
     
-    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
-    <img src="../_static/gammapy_logo_nav.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../_static/gammapy_logo.png" class="logo__image only-light" alt="gammapy vX.Y.Z - Home"/>
+    <img src="../_static/gammapy_logo.png" class="logo__image only-dark pst-js-only" alt="gammapy vX.Y.Z - Home"/>
   
   
 </a></div>
@@ -185,21 +183,13 @@
   </a>
 </li>
 
-            <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-controls="pst-nav-more-links">
-                    More
-                </button>
-                <ul id="pst-nav-more-links" class="dropdown-menu">
-                    
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../release-notes/index.html">
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../release-notes/index.html">
     Release notes
   </a>
 </li>
 
-                </ul>
-            </li>
-            
   </ul>
 </nav></div>
       
@@ -239,6 +229,14 @@
   </div>
 </div></div>
       
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -252,18 +250,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -396,6 +382,14 @@
   </div>
 </div></div>
         
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
         <li class="nav-item">
@@ -409,18 +403,6 @@
           
           <a href="https://github.com/gammapy/gammapy" title="Github" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
             <span class="sr-only">Github</span></a>
-        </li>
-        <li class="nav-item">
-          
-          
-          
-          
-          
-          
-          
-          
-          <a href="https://twitter.com/gammapyST" title="Twitter" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fab fa-square-x-twitter fa-lg" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a>
         </li>
         <li class="nav-item">
           
@@ -458,33 +440,7 @@
 <li class="toctree-l1"><a class="reference internal" href="dev_howto.html">Developer How To</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="pigs/index.html">PIGs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-001.html">PIG 1 - PIG purpose and guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-002.html">PIG 2 - Organization of low level analysis code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-003.html">PIG 3 - Plan for dropping Python 2.7 support</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-004.html">PIG 4 - Setup for tutorial notebooks and data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-005.html">PIG 5 - Gammapy 1.0 roadmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-006.html">PIG 6 - CTA observation handling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-007.html">PIG 7 - Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-008.html">PIG 8 - Datasets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-009.html">PIG 9 - Event sampling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-010.html">PIG 10 - Regions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-011.html">PIG 11 - Light curves</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-012.html">PIG 12 - High level interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-013.html">PIG 13 - Gammapy dependencies and distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-014.html">PIG 14 - Uncertainty estimation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-016.html">PIG 16 - Gammapy package structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-018.html">PIG 18 - Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-019.html">PIG 19 - Gammapy package structure follow up</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-020.html">PIG 20 - Global Model API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-021.html">PIG 21 - Models improvements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-022.html">PIG 22 - Unified flux estimators API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-023.html">PIG 23 - Gammapy release cycle and version numbering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-024.html">PIG 24 - Authorship policy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-025.html">PIG 25 - Metadata container for Gammapy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pigs/pig-026.html">PIG 26 - Model Priors API</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="pigs/index.html">PIGs</a></li>
 </ul>
 </div>
 </nav></div>
@@ -492,9 +448,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -662,6 +623,27 @@ following command.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest<span class="w"> </span>--doctest-modules<span class="w"> </span><span class="s2">&quot;--ignore-glob=*/tests&quot;</span><span class="w"> </span>gammapy
 </pre></div>
 </div>
+<p>References can also be added to docstrings for proper documentation of specific equations or usage examples. There are
+a few ways to do this. Firstly if you reference a specific equation you can utilise the following syntax:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>From Equation (1) in [1]_.
+
+References
+----------
+.. [1] `Author et al. (2023), &quot;Title&quot; &lt;link_to_nasaads&gt;`_
+</pre></div>
+</div>
+<p>Another option is to create a general list of references, as follows:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>References
+----------
+* `Author et al. (2023), &quot;Title&quot; &lt;link_to_nasaads&gt;`_
+* `Author2 et al. (2022), &quot;Title2&quot; &lt;link_to_nasaads&gt;`_
+</pre></div>
+</div>
+<p>It is also important to check that you have correctly formatted your docstring. An easy way to check this
+is with the following for your specific file, i.e.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pydocstyle<span class="w"> </span>gammapy/data/event_list.py
+</pre></div>
+</div>
 </section>
 </section>
 <section id="sphinx-gallery-extension">
@@ -758,7 +740,7 @@ use the <code class="docutils literal notranslate"><span class="pre">gp-image</s
 <h2>Documentation guidelines<a class="headerlink" href="#documentation-guidelines" title="Link to this heading">#</a></h2>
 <p>Like almost all Python projects, the Gammapy documentation is written in a format called
 <a class="reference external" href="http://sphinx-doc.org/rest.html">restructured text (RST)</a> and built using <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>.
-We mostly follow the <a class="reference external" href="https://docs.astropy.org/en/latest/development/docguide.html#documentation-guidelines" title="(in Astropy v7.0)"><span class="xref std std-ref">Astropy documentation guidelines</span></a>,
+We mostly follow the <span class="xref std std-ref">Astropy documentation guidelines</span>,
 which are based on the <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">Numpy docstring standard</a>,
 which is what most scientific Python packages use.</p>
 <p>There’s a few details that are not easy to figure out by browsing the Numpy or Astropy
@@ -769,15 +751,33 @@ or Gammapy code a bit (either locally with your editor or online on GitHub or vi
 or search the Numpy or Astropy documentation guidelines mentioned above.
 If that doesn’t quickly turn up something useful, please ask by putting a comment on the issue or
 pull request you’re working on GitHub, or email the Gammapy mailing list.</p>
+<section id="correct-format-for-bullet-point-list">
+<h3>Correct format for bullet point list<a class="headerlink" href="#correct-format-for-bullet-point-list" title="Link to this heading">#</a></h3>
+<p>To correctly add a bullet point list to the docstring, the following can be implemented:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Docstring explanation.</span>
+
+<span class="sd">Parameters</span>
+<span class="sd">----------</span>
+<span class="sd">parameter_name : parameter_type</span>
+<span class="sd">    Description of the parameter with entries:</span>
+<span class="sd">            * option1 : description1</span>
+<span class="sd">            * option2 : description2</span>
+<span class="sd">            * option3 : description3 over more than</span>
+<span class="sd">            one line.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</section>
 <section id="functions-or-class-methods-that-return-a-single-object">
 <h3>Functions or class methods that return a single object<a class="headerlink" href="#functions-or-class-methods-that-return-a-single-object" title="Link to this heading">#</a></h3>
 <p>For functions or class methods that return a single object, following the
 Numpy docstring standard and adding a <em>Returns</em> section usually means
 that you duplicate the one-line description and repeat the function name as
 return variable name.
-See <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.cosmology.LambdaCDM.html#astropy.cosmology.LambdaCDM.w" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">w</span></code></a> or <a class="reference external" href="https://docs.astropy.org/en/latest/api/astropy.time.Time.html#astropy.time.Time.sidereal_time" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sidereal_time</span></code></a>
+See <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.cosmology.LambdaCDM.html#astropy.cosmology.LambdaCDM.w" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">w</span></code></a> or <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.time.Time.html#astropy.time.Time.sidereal_time" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sidereal_time</span></code></a>
 as examples in the Astropy codebase. Here’s a simple example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Circle area.</span>
 
 <span class="sd">    Parameters</span>
@@ -794,7 +794,7 @@ as examples in the Astropy codebase. Here’s a simple example:</p>
 </pre></div>
 </div>
 <p>In these cases, the following shorter format omitting the <em>Returns</em> section is recommended:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">circle_area</span><span class="p">(</span><span class="n">radius</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Circle area (`~astropy.units.Quantity`).</span>
 
 <span class="sd">    Parameters</span>
@@ -811,7 +811,7 @@ recommended to always keep this in the <em>Parameters</em> section.</p>
 because they always return a single object.
 As an example see <a class="reference internal" href="../api/gammapy.data.EventList.html#gammapy.data.EventList.radec" title="gammapy.data.EventList.radec"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radec</span></code></a>, which is reproduced here:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@property</span>
-<span class="k">def</span> <span class="nf">radec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">radec</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Event RA / DEC sky coordinates (`~astropy.coordinates.SkyCoord`).&quot;&quot;&quot;</span>
     <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span> <span class="o">=</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;RA&#39;</span><span class="p">],</span> <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;DEC&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">SkyCoord</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s1">&#39;icrs&#39;</span><span class="p">)</span>
@@ -878,6 +878,7 @@ so many getters and setters. We could start using descriptors.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-guidelines">Documentation guidelines</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correct-format-for-bullet-point-list">Correct format for bullet point list</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-or-class-methods-that-return-a-single-object">Functions or class methods that return a single object</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#class-attributes">Class attributes</a></li>
 </ul>
@@ -886,13 +887,13 @@ so many getters and setters. We could start using descriptors.</p>
   </nav></div>
 
   <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/development/doc_howto.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/development/doc_howto.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
 
 </div></div>
               
@@ -907,8 +908,8 @@ so many getters and setters. We could start using descriptors.</p>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -919,23 +920,19 @@ so many getters and setters. We could start using descriptors.</p>
 
   <p class="copyright">
     
-      © Copyright 2024, The Gammapy developers.
+      © Copyright 2025, The Gammapy developers.
       <br/>
     
   </p>
 </div>
       
-    </div>
-  
-  
-    <div class="footer-items__center">
-      
-        <div class="footer-item"><p class="last-updated">
-  Last updated on 24 Oct 2024.
-  <br/>
-</p></div>
+        <div class="footer-item">
+    
+     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+</div>
       
     </div>
+  
   
   
     <div class="footer-items__end">
@@ -943,14 +940,15 @@ so many getters and setters. We could start using descriptors.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
 </p></div>
       
     </div>

@@ -133,36 +133,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.10    
+            python_version         : 3.11.11    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 1.3.dev1278+g0c082c493.d20241024 
+            version                : 2.0.dev513+ge63c183da 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 1.26.4     
-            scipy                  : 1.14.1     
-            astropy                : 5.2.2      
+            numpy                  : 2.2.3      
+            scipy                  : 1.15.2     
+            astropy                : 7.0.1      
             regions                : 0.10       
-            click                  : 8.1.7      
+            click                  : 8.1.8      
             yaml                   : 6.0.2      
-            IPython                : 8.28.0     
+            IPython                : 9.0.1      
             jupyterlab             : not installed 
-            matplotlib             : 3.9.2      
+            matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.17.3     
+            healpy                 : 1.18.0     
             iminuit                : 2.30.1     
-            sherpa                 : 4.16.1     
-            naima                  : 0.10.0     
+            sherpa                 : 4.17.0     
+            naima                  : 0.10.2     
             emcee                  : 3.1.6      
-            corner                 : 2.2.2      
-            ray                    : 2.38.0     
+            corner                 : 2.2.3      
+            ray                    : 2.43.0     
 
 
     Gammapy environment variables:
@@ -426,7 +426,7 @@ any energy axis for your exposure cube that you like.
     HpxGeom
 
             axes       : ['skycoord', 'energy_true']
-            shape      : (49152, 18)
+            shape      : (np.int64(49152), 18)
             ndim       : 3
             nside      : 64
             nested     : False
@@ -481,7 +481,7 @@ For exposure, we choose a geometry with node_type='center',
     WcsGeom
 
             axes       : ['lon', 'lat', 'energy_true']
-            shape      : (100, 80, 24)
+            shape      : (np.int64(100), np.int64(80), 24)
             ndim       : 3
             frame      : galactic
             projection : TAN
@@ -600,9 +600,9 @@ want to normalise it again.
 
             geom  : WcsGeom 
             axes  : ['lon', 'lat', 'energy_true']
-            shape : (120, 64, 30)
+            shape : (np.int64(120), np.int64(64), 30)
             ndim  : 3
-            unit  : 1 / (cm2 MeV s sr)
+            unit  : 1 / (MeV s sr cm2)
             dtype : >f4
 
 
@@ -764,7 +764,7 @@ methods to get some information about it.
 .. GENERATED FROM PYTHON SOURCE LINES 311-315
 
 To get an idea of the size of the PSF we check how the containment radii
-of the Fermi-LAT PSF vari with energy and different containment
+of the Fermi-LAT PSF vary with energy and different containment
 fractions:
 
 
@@ -999,7 +999,7 @@ background normalization free.
       Temporal model type       : 
       Parameters:
         index                         :      2.754   +/-    0.12             
-        amplitude                     :   5.28e-10   +/- 1.1e-10 1 / (cm2 s TeV)
+        amplitude                     :   5.28e-10   +/- 1.1e-10 1 / (TeV s cm2)
         reference             (frozen):    100.000       GeV         
         lon_0                         :     -0.025   +/-    0.00 deg         
         lat_0                         :     -0.041   +/-    0.00 deg         
