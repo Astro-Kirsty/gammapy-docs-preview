@@ -133,36 +133,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -807,7 +807,7 @@ energy and compare it against the mean PSF between 50 GeV and 2000 GeV:
     psf.plot_psf_vs_rad(energy_true=energy)
 
     spectrum = PowerLawSpectralModel(index=2.3)
-    psf_mean = psf.to_image(spectrum=spectrum)
+    psf_mean = psf.to_image(spectral_model=spectrum)
     psf_mean.plot_psf_vs_rad(c="k", ls="--", energy_true=[500] * u.GeV)
 
     plt.xlim(1e-3, 0.3)
@@ -823,13 +823,6 @@ energy and compare it against the mean PSF between 50 GeV and 2000 GeV:
    :srcset: /tutorials/data/images/sphx_glr_fermi_lat_008.png
    :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/feijen/Documents/github/gammapy/examples/tutorials/data/fermi_lat.py:332: GammapyDeprecationWarning: "spectrum" was deprecated in version v1.3 and will be removed in a future version. Use argument "spectral_model" instead.
-      psf_mean = psf.to_image(spectrum=spectrum)
 
 
 
@@ -1012,8 +1005,8 @@ background normalization free.
       Spatial  model type       : TemplateSpatialModel
       Temporal model type       : 
       Parameters:
-        norm                          :      1.048   +/-    0.01             
         tilt                  (frozen):      0.000                   
+        norm                          :      1.048   +/-    0.01             
         reference             (frozen):      1.000       TeV         
         lon_0                 (frozen):      0.000       deg         
         lat_0                 (frozen):     -0.062       deg         
@@ -1026,8 +1019,8 @@ background normalization free.
       Spatial  model type       : ConstantSpatialModel
       Temporal model type       : 
       Parameters:
-        norm                          :      2.702   +/-    0.39             
         tilt                  (frozen):      0.000                   
+        norm                          :      2.702   +/-    0.39             
         reference             (frozen):      1.000       TeV         
         value                 (frozen):      1.000       1 / sr      
 
@@ -1067,7 +1060,7 @@ Datasets API
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/utils/scripts.py:66: UserWarning: Checksum verification failed.
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/utils/scripts.py:68: UserWarning: Checksum verification failed.
       warnings.warn("Checksum verification failed.", UserWarning)
     Datasets
     --------

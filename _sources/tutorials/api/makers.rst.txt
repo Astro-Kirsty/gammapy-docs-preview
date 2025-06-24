@@ -91,36 +91,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -174,7 +174,7 @@ object. This is illustrated in the following example:
     MapDataset
     ----------
 
-      Name                            : oFhl7bZ7 
+      Name                            : mTRCEZM_ 
 
       Total counts                    : 0 
       Total background counts         : 0.00
@@ -345,7 +345,7 @@ observational data using the `~gammapy.makers.MapDatasetMaker`:
     MapDataset
     ----------
 
-      Name                            : UbfcUrZA 
+      Name                            : GVL7dFlE 
 
       Total counts                    : 2016 
       Total background counts         : 1866.72
@@ -598,7 +598,7 @@ dataset per observation is stacked into a larger map.
     MapDataset
     ----------
 
-      Name                            : IPDwp_5T 
+      Name                            : ymGQ2DMK 
 
       Total counts                    : 7972 
       Total background counts         : 7555.42
@@ -673,30 +673,30 @@ allow to use multiple processes on run.
     Dataset 0: 
 
       Type       : MapDataset
-      Name       : L6Q-33YA
+      Name       : MazLE6ts
       Instrument : HESS
-      Models     : ['L6Q-33YA-bkg']
+      Models     : ['MazLE6ts-bkg']
 
     Dataset 1: 
 
       Type       : MapDataset
-      Name       : dNsO19FG
+      Name       : 7hryZqjZ
       Instrument : HESS
-      Models     : ['dNsO19FG-bkg']
+      Models     : ['7hryZqjZ-bkg']
 
     Dataset 2: 
 
       Type       : MapDataset
-      Name       : Jr60vvWE
+      Name       : zE4ny-BB
       Instrument : HESS
-      Models     : ['Jr60vvWE-bkg']
+      Models     : ['zE4ny-BB-bkg']
 
     Dataset 3: 
 
       Type       : MapDataset
-      Name       : F7u1VLme
+      Name       : pWDf7CWW
       Instrument : HESS
-      Models     : ['F7u1VLme-bkg']
+      Models     : ['pWDf7CWW-bkg']
 
 
 
@@ -799,17 +799,18 @@ Here is an example of data reduction loop to create
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 349-356
+.. GENERATED FROM PYTHON SOURCE LINES 349-357
 
 Observation duration and effective livetime
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 It can often be useful to know the total number of hours spent
 in the given field of view (without correcting for the acceptance
 variation). This can be computed using `~gammapy.makers.utils.make_observation_time_map`
 as shown below
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 356-399
+.. GENERATED FROM PYTHON SOURCE LINES 357-400
 
 .. code-block:: Python
 
@@ -874,14 +875,14 @@ as shown below
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 400-404
+.. GENERATED FROM PYTHON SOURCE LINES 401-405
 
 As the acceptance of IACT cameras vary within the field of
 view, it can also be interesting to plot the on-axis equivalent
 number of hours.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 404-422
+.. GENERATED FROM PYTHON SOURCE LINES 405-423
 
 .. code-block:: Python
 
@@ -915,12 +916,12 @@ number of hours.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 423-425
+.. GENERATED FROM PYTHON SOURCE LINES 424-426
 
 To get the value of the observation time at a particular position,
 use ``get_by_coord``
 
-.. GENERATED FROM PYTHON SOURCE LINES 425-439
+.. GENERATED FROM PYTHON SOURCE LINES 426-440
 
 .. code-block:: Python
 
@@ -958,7 +959,7 @@ use ``get_by_coord``
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 15.756 seconds)
+   **Total running time of the script:** (0 minutes 18.492 seconds)
 
 
 .. _sphx_glr_download_tutorials_api_makers.py:

@@ -88,36 +88,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -216,6 +216,8 @@ the spectral model registry or take a look at the :ref:`model-gallery`
     PowerLawNormSpectralModel                 : ['PowerLawNormSpectralModel', 'pl-norm'] 
     LogParabolaNormSpectralModel              : ['LogParabolaNormSpectralModel', 'lp-norm'] 
     ExpCutoffPowerLawNormSpectralModel        : ['ExpCutoffPowerLawNormSpectralModel', 'ecpl-norm'] 
+    DarkMatterAnnihilationSpectralModel       : ['DarkMatterAnnihilationSpectralModel', 'dm-annihilation'] 
+    DarkMatterDecaySpectralModel              : ['DarkMatterDecaySpectralModel', 'dm-decay'] 
 
 
 
@@ -502,8 +504,8 @@ As an example, we see the `~gammapy.modeling.models.PowerLawNormSpectralModel`
 
     type    name     value    unit   error   min max frozen link prior
     ---- --------- ---------- ---- --------- --- --- ------ ---- -----
-              norm 1.0000e+00      0.000e+00 nan nan  False           
               tilt 1.0000e-01      0.000e+00 nan nan   True           
+              norm 1.0000e+00      0.000e+00 nan nan  False           
          reference 1.0000e+00  TeV 0.000e+00 nan nan   True           
 
 
@@ -605,8 +607,8 @@ is an example of a `CompoundSpectralModel`
 
     type    name     value    unit   error   min max frozen link prior
     ---- --------- ---------- ---- --------- --- --- ------ ---- -----
-              norm 1.0000e+00      0.000e+00 nan nan  False           
               tilt 1.0000e-01      0.000e+00 nan nan   True           
+              norm 1.0000e+00      0.000e+00 nan nan  False           
          reference 1.0000e+00  TeV 0.000e+00 nan nan   True           
         Operator : mul
 
@@ -691,7 +693,7 @@ namespace, let’s start with a `~gammapy.modeling.models.GaussianSpatialModel`:
          lat_0 0.0000e+00  deg 0.000e+00 -9.000e+01 9.000e+01  False           
          sigma 2.0000e-01  deg 0.000e+00  0.000e+00       nan  False           
              e 0.0000e+00      0.000e+00  0.000e+00 1.000e+00   True           
-           phi 0.0000e+00  deg 0.000e+00        nan       nan   True           
+           phi 0.0000e+00  deg 0.000e+00 -1.800e+02 1.800e+02   True           
 
 
 
@@ -1196,7 +1198,7 @@ generated:
 
  .. code-block:: none
 
-    ZH1ko1sI
+    w_vHYGKr
 
 
 
@@ -1255,7 +1257,7 @@ The individual components of the source model can be accessed using
          lat_0 0.0000e+00  deg 0.000e+00 -9.000e+01 9.000e+01  False           
          sigma 2.0000e-01  deg 0.000e+00  0.000e+00       nan  False           
              e 0.0000e+00      0.000e+00  0.000e+00 1.000e+00   True           
-           phi 0.0000e+00  deg 0.000e+00        nan       nan   True           
+           phi 0.0000e+00  deg 0.000e+00 -1.800e+02 1.800e+02   True           
 
 
 
@@ -1390,14 +1392,14 @@ existing FITS file:
 
     SkyModel
 
-      Name                      : ngJg5elb
+      Name                      : Waw7sLOn
       Datasets names            : None
       Spectral model type       : PowerLawNormSpectralModel
       Spatial  model type       : TemplateSpatialModel
       Temporal model type       : 
       Parameters:
-        norm                          :      1.000   +/-    0.00             
         tilt                  (frozen):      0.000                   
+        norm                          :      1.000   +/-    0.00             
         reference             (frozen):      1.000       TeV         
         lon_0                 (frozen):      0.000       deg         
         lat_0                 (frozen):     -0.062       deg         
@@ -1463,7 +1465,7 @@ point), eg:
              lat_0 0.0000e+00            deg ... 9.000e+01  False           
              sigma 2.0000e-01            deg ...       nan  False           
                  e 0.0000e+00                ... 1.000e+00   True           
-               phi 0.0000e+00            deg ...       nan   True           
+               phi 0.0000e+00            deg ... 1.800e+02   True           
              t_ref 5.9240e+04              d ...       nan  False           
              sigma 2.0000e+00              d ...       nan  False           
 
@@ -1528,14 +1530,14 @@ multiple model components, Gammapy has a `~gammapy.modeling.models.Models` class
 
     Component 1: SkyModel
 
-      Name                      : ngJg5elb
+      Name                      : Waw7sLOn
       Datasets names            : None
       Spectral model type       : PowerLawNormSpectralModel
       Spatial  model type       : TemplateSpatialModel
       Temporal model type       : 
       Parameters:
-        norm                          :      1.000   +/-    0.00             
         tilt                  (frozen):      0.000                   
+        norm                          :      1.000   +/-    0.00             
         reference             (frozen):      1.000       TeV         
         lon_0                 (frozen):      0.000       deg         
         lat_0                 (frozen):     -0.062       deg         
@@ -1614,7 +1616,7 @@ To see which models are available you can use the ``.names`` attribute:
 
  .. code-block:: none
 
-    ['my-source', 'ngJg5elb']
+    ['my-source', 'Waw7sLOn']
 
 
 
@@ -1715,15 +1717,15 @@ format:
                 value: 2.0
                 unit: d
             scale: utc
-    -   name: ngJg5elb
+    -   name: Waw7sLOn
         type: SkyModel
         spectral:
             type: PowerLawNormSpectralModel
             parameters:
-            -   name: norm
-                value: 1.0
             -   name: tilt
                 value: 0.0
+            -   name: norm
+                value: 1.0
             -   name: reference
                 value: 1.0
                 unit: TeV
@@ -1784,8 +1786,8 @@ format:
                 unit: d
             scale: utc
     metadata:
-        creator: Gammapy 2.0.dev513+ge63c183da
-        date: '2025-03-07T08:50:05.335961'
+        creator: Gammapy 2.0.dev1454+g847764624.d20250624
+        date: '2025-06-24T11:46:23.738786'
         origin: null
 
 
@@ -1862,8 +1864,8 @@ amplitudes:
 
  .. code-block:: none
 
-    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x722536dec450)
-    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x722536dec450)
+    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x712bbc59af90)
+    Parameter(name='index', value=2.3, factor=2.3, scale=1.0, unit=Unit(dimensionless), min=1.0, max=5.0, frozen=False, prior=None, id=0x712bbc59af90)
 
 
 
@@ -1902,7 +1904,7 @@ In the YAML files the shared parameter is flagged by the additional
                 value: 2.3
                 min: 1.0
                 max: 5.0
-                link: index@MrZpSZxX
+                link: index@R5Kh6hBo
             -   name: amplitude
                 value: 2.7e-12
                 unit: TeV-1 s-1 cm-2
@@ -1918,7 +1920,7 @@ In the YAML files the shared parameter is flagged by the additional
                 value: 2.3
                 min: 1.0
                 max: 5.0
-                link: index@MrZpSZxX
+                link: index@R5Kh6hBo
             -   name: amplitude
                 value: 1.0e-12
                 unit: TeV-1 s-1 cm-2
@@ -1926,8 +1928,8 @@ In the YAML files the shared parameter is flagged by the additional
                 value: 1.0
                 unit: TeV
     metadata:
-        creator: Gammapy 2.0.dev513+ge63c183da
-        date: '2025-03-07T08:50:05.500531'
+        creator: Gammapy 2.0.dev1454+g847764624.d20250624
+        date: '2025-06-24T11:46:23.909432'
         origin: null
 
 

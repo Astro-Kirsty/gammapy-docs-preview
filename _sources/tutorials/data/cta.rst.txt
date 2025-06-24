@@ -126,36 +126,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -523,9 +523,9 @@ Notes:
       unit  : m2
       dtype : >f4
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2145: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2085: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
       warnings.warn(msg, UnitsWarning)
-    {'aeff': <gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x72253c568050>, 'psf': <gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x72253c145790>, 'edisp': <gammapy.irf.edisp.core.EnergyDispersion2D object at 0x722537c69ad0>, 'bkg': <gammapy.irf.background.Background3D object at 0x7225378fdc50>}
+    {'aeff': <gammapy.irf.effective_area.EffectiveAreaTable2D object at 0x7f3cd08109d0>, 'psf': <gammapy.irf.psf.parametric.EnergyDependentMultiGaussPSF object at 0x7f3cd0b39650>, 'edisp': <gammapy.irf.edisp.core.EnergyDispersion2D object at 0x7f3cd1a2c510>, 'bkg': <gammapy.irf.background.Background3D object at 0x7f3cd0b06890>}
 
 
 

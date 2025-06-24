@@ -31,15 +31,15 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6865c87f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=35abb870" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,14 +63,15 @@
             false;
         </script>
     <script src="../../_static/matomo.js?v=52704cab"></script>
+    <link rel="canonical" href="https://docs.gammapy.org/stable/tutorials/api/fitting.html" />
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Estimators" href="estimators.html" />
-    <link rel="prev" title="Modelling" href="model_management.html" />
+    <link rel="prev" title="Priors" href="priors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
+  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
   </head>
   
   
@@ -428,68 +429,75 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../starting/overview.html">Data structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../starting/analysis_1.html">High level interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../starting/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../starting/overview.html">Data structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../starting/analysis_1.html">High level interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis_hli.html">Spectral analysis with the HLI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectral_analysis_rad_max.html">Spectral analysis with energy-dependent directional cuts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Model Gallery</a></li>
+
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectral_analysis_hli.html">Spectral analysis with the HLI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectral_analysis_rad_max.html">Spectral analysis with energy-dependent directional cuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
 
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/detect.html">Source detection and significance maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/ring_background.html">Ring background map</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-2d/modeling_2D.html">2D map fitting</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-2d/index.html">2D Image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-2d/detect.html">Source detection and significance maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-2d/ring_background.html">Ring background map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-2d/modeling_2D.html">2D map fitting</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-3d/index.html">3D Cube</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve.html">Light curves</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve_flare.html">Light curves for flares</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-time/index.html">Time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-time/light_curve.html">Light curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-time/light_curve_flare.html">Light curves for flares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="priors.html">Priors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="maps.html">Maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mask_maps.html">Mask maps</a></li>
-<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="makers.html">Makers - Data reduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="catalog.html">Source catalogs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model_management.html">Modelling</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Fitting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="estimators.html">Estimators</a></li>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Package / API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="irfs.html">Using Gammapy IRFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theta_square_plot.html">Make a theta-square plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="observation_clustering.html">Observational clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mask_maps.html">Mask maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_management.html">Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="priors.html">Priors</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="catalog.html">Source catalogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../scripts/survey_map.html">Survey Map Script</a></li>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../scripts/index.html">Scripts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../scripts/survey_map.html">Survey Map Script</a></li>
+</ul>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -533,6 +541,9 @@
     
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Tutorials</a></li>
     
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">Package / API</a></li>
+    
     <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Fitting</span></li>
   </ul>
 </nav>
@@ -558,6 +569,15 @@ to download the full example code. or to run this example in your browser via Bi
 <section class="sphx-glr-example-title" id="fitting">
 <span id="sphx-glr-tutorials-api-fitting-py"></span><h1>Fitting<a class="headerlink" href="#fitting" title="Link to this heading">#</a></h1>
 <p>Learn how the model, dataset and fit Gammapy classes work together in a detailed modeling and fitting use-case.</p>
+<section id="note">
+<h2>Note<a class="headerlink" href="#note" title="Link to this heading">#</a></h2>
+<p>This tutorial describes the fitting steps using a maximum likelihood (Frequentist approach).</p>
+<p>Alternatively, we could have a Bayesian approach by assigning a prior probability distribution over
+the parameters and compute the posterior distribution to fit the parameters. This is described in the
+<a class="reference internal" href="priors.html"><span class="doc">Priors</span></a> tutorial.</p>
+<p>One can also perform a Bayesian analysis using a nested sampling technique. This is described
+in the <a class="reference internal" href="nested_sampling_Crab.html"><span class="doc">Bayesian analysis with nested sampling</span></a> tutorial.</p>
+</section>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -608,36 +628,36 @@ particular how to :</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
 
         python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.11
+        python_version         : 3.11.12
         machine                : x86_64
         system                 : Linux
 
 
 Gammapy package:
 
-        version                : 2.0.dev513+ge63c183da
+        version                : 2.0.dev1454+g847764624.d20250624
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
 
 
 Other packages:
 
-        numpy                  : 2.2.3
-        scipy                  : 1.15.2
-        astropy                : 7.0.1
+        numpy                  : 2.3.1
+        scipy                  : 1.16.0
+        astropy                : 7.1.0
         regions                : 0.10
-        click                  : 8.1.8
+        click                  : 8.2.1
         yaml                   : 6.0.2
-        IPython                : 9.0.1
+        IPython                : 9.3.0
         jupyterlab             : not installed
         matplotlib             : 3.9.4
         pandas                 : not installed
-        healpy                 : 1.18.0
-        iminuit                : 2.30.1
-        sherpa                 : 4.17.0
+        healpy                 : 1.18.1
+        iminuit                : 2.31.1
+        sherpa                 : 4.17.1
         naima                  : 0.10.2
         emcee                  : 3.1.6
         corner                 : 2.2.3
-        ray                    : 2.43.0
+        ray                    : 2.47.1
 
 
 Gammapy environment variables:
@@ -811,7 +831,7 @@ to check the convergence</p>
 │                                Migrad                                   │
 ├──────────────────────────────────┬──────────────────────────────────────┤
 │ FCN = 30.35                      │              Nfcn = 37               │
-│ EDM = 3.42e-08 (Goal: 2e-06)     │                                      │
+│ EDM = 3.42e-08 (Goal: 2e-06)     │            time = 0.2 sec            │
 ├──────────────────────────────────┼──────────────────────────────────────┤
 │          Valid Minimum           │   Below EDM threshold (goal x 10)    │
 ├──────────────────────────────────┼──────────────────────────────────────┤
@@ -842,27 +862,27 @@ properly</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>    total_stat     crab.spectral.amplitude ...  crab.spectral.beta
 ------------------ ----------------------- ... -------------------
- 30.34953055023599   3.812242563241853e-11 ... 0.22648275232365314
- 30.34972498666637   3.815797604661974e-11 ... 0.22648275232365314
-30.349712137003408   3.808687521821733e-11 ... 0.22648275232365314
-30.349539326192144   3.812951386418529e-11 ... 0.22648275232365314
-30.349536722895394  3.8115337400651776e-11 ... 0.22648275232365314
-30.350521804140612   3.812242563241853e-11 ... 0.22648275232365314
-30.350557141562156   3.812242563241853e-11 ... 0.22648275232365314
- 30.34953911339307   3.812242563241853e-11 ... 0.22648275232365314
- 30.34954216550536   3.812242563241853e-11 ... 0.22648275232365314
-30.350304440606685   3.812242563241853e-11 ...  0.2278979724512698
+30.349530550379946   3.812242557670563e-11 ... 0.22648271962031516
+30.349724767371743   3.815795551731731e-11 ... 0.22648271962031516
+30.349711923606158   3.808689563609395e-11 ... 0.22648271962031516
+ 30.34953932646135    3.81295138084605e-11 ... 0.22648271962031516
+30.349536722914145   3.811533734495075e-11 ... 0.22648271962031516
+ 30.35051658500457   3.812242557670563e-11 ... 0.22648271962031516
+ 30.35055181969279   3.812242557670563e-11 ... 0.22648271962031516
+ 30.34953906408279   3.812242557670563e-11 ... 0.22648271962031516
+30.349542109690898   3.812242557670563e-11 ... 0.22648271962031516
+30.350300833088948   3.812242557670563e-11 ...  0.2278946769587371
                ...                     ... ...                 ...
- 30.34953807759153  3.8122169749504455e-11 ... 0.22635144489393122
-30.349530774650837   3.812358739611534e-11 ... 0.22648885452071263
-30.349530758007994   3.812075210289357e-11 ... 0.22648885452071263
-30.349530807427385  3.8122169749504455e-11 ... 0.22648885452071263
- 30.34953072518999  3.8122169749504455e-11 ... 0.22648885452071263
-30.349530739444464  3.8122169749504455e-11 ... 0.22651633644606892
-30.349530793163513  3.8122169749504455e-11 ... 0.22646137259535634
-30.349535815021504  3.8129257982558884e-11 ... 0.22648885452071263
-30.349537159191097  3.8129257982558884e-11 ...   0.226626264147494
- 30.34955936699766  3.8122169749504455e-11 ...   0.226626264147494
+ 30.34953807801196   3.812216966614972e-11 ... 0.22635141639924783
+30.349530774645253   3.812358731275621e-11 ... 0.22648882601899323
+30.349530758146948  3.8120752019543235e-11 ... 0.22648882601899323
+   30.349530807511   3.812216966614972e-11 ... 0.22648882601899323
+30.349530725239617   3.812216966614972e-11 ... 0.22648882601899323
+30.349530739440176   3.812216966614972e-11 ... 0.22651630794294234
+ 30.34953079330093   3.812216966614972e-11 ... 0.22646134409504415
+ 30.34953581481228   3.812925789918216e-11 ... 0.22648882601899323
+30.349537158542407   3.812925789918216e-11 ... 0.22662623563873865
+30.349559366794338   3.812216966614972e-11 ... 0.22662623563873865
 Length = 37 rows
 </pre></div>
 </div>
@@ -918,10 +938,10 @@ You can access it directly with:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.FitResult.html#gammapy.modeling.FitResult.models" title="gammapy.modeling.FitResult.models" class="sphx-glr-backref-module-gammapy-modeling sphx-glr-backref-type-py-attribute"><span class="n">result_minuit</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">covariance</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ 1.25743553e-23  0.00000000e+00  4.54676778e-13 -1.17016448e-13]
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[ 1.25743546e-23  0.00000000e+00  4.54676684e-13 -1.17016400e-13]
  [ 0.00000000e+00  0.00000000e+00  0.00000000e+00  0.00000000e+00]
- [ 4.54676778e-13  0.00000000e+00  6.89492003e-02 -3.31139007e-02]
- [-1.17016448e-13  0.00000000e+00 -3.31139007e-02  1.95024514e-02]]
+ [ 4.54676684e-13  0.00000000e+00  6.89491820e-02 -3.31138904e-02]
+ [-1.17016400e-13  0.00000000e+00 -3.31138904e-02  1.95024454e-02]]
 </pre></div>
 </div>
 <p>And you can plot the total parameter correlation as well:</p>
@@ -935,7 +955,7 @@ accessing the <a class="reference internal" href="../../api/gammapy.modeling.Par
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel.spectral_model" title="gammapy.modeling.models.SkyModel.spectral_model" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-attribute"><span class="n">crab_model</span><span class="o">.</span><span class="n">spectral_model</span><span class="o">.</span><span class="n">alpha</span><span class="o">.</span><span class="n">error</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0.2625817974208368
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>0.262581762535213
 </pre></div>
 </div>
 <p>As an example, this step is needed to produce a butterfly plot showing
@@ -1134,7 +1154,7 @@ close to the contours lines, it is expected that the statistical meaning
 of the contours is not well defined. That’s why we advise to always
 choose a parameter space that contains the contours you’re interested
 in.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.014 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 25.421 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-api-fitting-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/api/fitting.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo4.svg" style="width: 150px;" />
@@ -1178,6 +1198,7 @@ in.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-approach">Proposed approach</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-setup">The setup</a></li>
@@ -1186,7 +1207,7 @@ in.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fitting-options">Fitting options</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fit-quality-assessment">Fit quality assessment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#covariance-and-parameters-errors">Covariance and parameters errors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-contours">Confidence contours</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-contours">Confidence contours</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-contours-using-stat-contour">Computing contours using <code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_contour</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-contours-using-stat-surface">Computing contours using <code class="xref py py-obj docutils literal notranslate"><span class="pre">stat_surface</span></code></a></li>
 </ul>
@@ -1236,7 +1257,11 @@ in.</p>
       
         <div class="footer-item">
     
-     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+    <p>Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>.</p>
+    <p>Examples, recipes, and other code licensed under
+      <a href="https://opensource.org/license/BSD-3-Clause>" target="_blank">BSD 3-Clause "New" or "Revised"</a> license.</p>
+    <p>Gammapy <a href="https://gammapy.org/DataPrivacy.html">Data Privacy</a> information.</p>
 </div>
       
     </div>

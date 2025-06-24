@@ -119,36 +119,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -326,8 +326,8 @@ MSH 1552
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev513+ge63c183da
-            date: '2025-03-07T08:45:54.916526'
+            creator: Gammapy 2.0.dev1454+g847764624.d20250624
+            date: '2025-06-24T11:39:45.372300'
             origin: null
     
 
@@ -369,6 +369,10 @@ Create the config:
 
  .. code-block:: none
 
+    Setting logging config: {'level': 'INFO', 'filename': None, 'filemode': None, 'format': None, 'datefmt': None}
+    Fetching observations.
+    Observations selected: 20 out of 20.
+    Number of selected observations: 20
     AnalysisConfig
 
         general:
@@ -475,8 +479,8 @@ Create the config:
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev513+ge63c183da
-            date: '2025-03-07T08:45:54.949896'
+            creator: Gammapy 2.0.dev1454+g847764624.d20250624
+            date: '2025-06-24T11:39:45.437468'
             origin: null
     
 
@@ -497,6 +501,75 @@ Data extraction:
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Creating reference dataset and makers.
+    Creating the background Maker.
+    No background maker set. Check configuration.
+    Start the data reduction loop.
+    Computing dataset for observation 20136
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20137
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20151
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20282
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20283
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20301
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20302
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20303
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20322
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20323
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20324
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20325
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20343
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20344
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20345
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20346
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20365
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20366
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20367
+    Running MapDatasetMaker
+    Running SafeMaskMaker
+    Computing dataset for observation 20368
+    Running MapDatasetMaker
+    Running SafeMaskMaker
 
 
 
@@ -666,7 +739,7 @@ events in the `on` and `off` regions respectively.
       Number of parameters            : 0
       Number of free parameters       : 0
 
-      Total counts_off                : 87621184 
+      Total counts_off                : 87621192 
       Acceptance                      : 44755 
       Acceptance off                  : 96374320 
 
@@ -732,7 +805,7 @@ to be a standard normal distribution. To compute the significance distribution o
 we can recompute the maps after adding a `mask_fit` to our dataset.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-291
+.. GENERATED FROM PYTHON SOURCE LINES 256-290
 
 .. code-block:: Python
 
@@ -770,7 +843,6 @@ we can recompute the maps after adding a `mask_fit` to our dataset.
     )
 
     plt.show()
-    # sphinx_gallery_thumbnail_number = 2
 
 
 
@@ -786,10 +858,12 @@ we can recompute the maps after adding a `mask_fit` to our dataset.
 
     /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/counts_statistic.py:398: RuntimeWarning: invalid value encountered in multiply
       return self.alpha * self.n_off
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/fit_statistics.py:207: RuntimeWarning: invalid value encountered in multiply
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/fit_statistics.py:225: RuntimeWarning: invalid value encountered in multiply
       C = alpha * (n_on + n_off) - (1 + alpha) * mu_sig
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/fit_statistics.py:208: RuntimeWarning: invalid value encountered in multiply
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/fit_statistics.py:226: RuntimeWarning: invalid value encountered in multiply
       D = np.sqrt(C**2 + 4 * alpha * (alpha + 1) * n_off * mu_sig)
+    Both actual and predicted relative reductions in the sum of squares
+      are at most 0.000000
 
 
 
@@ -797,7 +871,7 @@ we can recompute the maps after adding a `mask_fit` to our dataset.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 12.307 seconds)
+   **Total running time of the script:** (0 minutes 16.181 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-2d_ring_background.py:

@@ -30,15 +30,15 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=6865c87f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=35abb870" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -61,12 +61,13 @@
             false;
         </script>
     <script src="../../../_static/matomo.js?v=52704cab"></script>
+    <link rel="canonical" href="https://docs.gammapy.org/stable/_modules/gammapy/datasets/map.html" />
     <link rel="icon" href="../../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
+  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
   </head>
   
   
@@ -480,8 +481,9 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">astropy.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">fits</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">astropy.table</span><span class="w"> </span><span class="kn">import</span> <span class="n">Table</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">regions</span><span class="w"> </span><span class="kn">import</span> <span class="n">CircleSkyRegion</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">regions</span><span class="w"> </span><span class="kn">import</span> <span class="n">CircleSkyRegion</span><span class="p">,</span> <span class="n">RectangleSkyRegion</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogNorm</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">gammapy.datasets.evaluator</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">meval</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.data</span><span class="w"> </span><span class="kn">import</span> <span class="n">GTI</span><span class="p">,</span> <span class="n">PointingMode</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.irf</span><span class="w"> </span><span class="kn">import</span> <span class="n">EDispKernelMap</span><span class="p">,</span> <span class="n">EDispMap</span><span class="p">,</span> <span class="n">PSFKernel</span><span class="p">,</span> <span class="n">PSFMap</span><span class="p">,</span> <span class="n">RecoPSFMap</span>
@@ -490,11 +492,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">CashCountsStatistic</span><span class="p">,</span>
     <span class="n">WStatCountsStatistic</span><span class="p">,</span>
-    <span class="n">cash</span><span class="p">,</span>
-    <span class="n">cash_sum_cython</span><span class="p">,</span>
-    <span class="n">weighted_cash_sum_cython</span><span class="p">,</span>
     <span class="n">get_wstat_mu_bkg</span><span class="p">,</span>
-    <span class="n">wstat</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.fits</span><span class="w"> </span><span class="kn">import</span> <span class="n">HDULocation</span><span class="p">,</span> <span class="n">LazyFitsData</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_random_state</span>
@@ -508,7 +506,6 @@
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s2">&quot;MapDataset&quot;</span><span class="p">,</span>
     <span class="s2">&quot;MapDatasetOnOff&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;MapDatasetWeighted&quot;</span><span class="p">,</span>
     <span class="s2">&quot;create_empty_map_dataset_from_irfs&quot;</span><span class="p">,</span>
     <span class="s2">&quot;create_map_dataset_geoms&quot;</span><span class="p">,</span>
     <span class="s2">&quot;create_map_dataset_from_observation&quot;</span><span class="p">,</span>
@@ -847,7 +844,7 @@
 <span class="sd">    spatial_bin_size_min : `~astropy.quantity.Quantity`, optional</span>
 <span class="sd">        Minimal spatial bin size. Default is 0.01 degree.</span>
 <span class="sd">    position : `~astropy.coordinates.SkyCoord`, optional</span>
-<span class="sd">        Center of the geometry. Defalut is the observation pointing.</span>
+<span class="sd">        Center of the geometry. Default is the observation pointing.</span>
 <span class="sd">    frame: str, optional</span>
 <span class="sd">        frame of the coordinate system. Default is &quot;icrs&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -977,7 +974,6 @@
 <span class="sd">    MapDatasetOnOff, SpectrumDataset, FluxPointsDataset.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">stat_type</span> <span class="o">=</span> <span class="s2">&quot;cash&quot;</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;MapDataset&quot;</span>
     <span class="n">counts</span> <span class="o">=</span> <span class="n">LazyFitsData</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">exposure</span> <span class="o">=</span> <span class="n">LazyFitsData</span><span class="p">(</span><span class="n">cache</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1014,6 +1010,7 @@
         <span class="n">meta_table</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">stat_type</span><span class="o">=</span><span class="s2">&quot;cash&quot;</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">make_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_evaluators</span> <span class="o">=</span> <span class="p">{}</span>
@@ -1045,6 +1042,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">meta_table</span> <span class="o">=</span> <span class="n">meta_table</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">meta</span> <span class="o">=</span> <span class="n">meta</span>
 
+        <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">=</span> <span class="n">stat_type</span>
+
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_psf_kernel</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Precompute PSFkernel if there is only one spatial bin in the PSFmap&quot;&quot;&quot;</span>
@@ -1075,10 +1074,8 @@
     <span class="c1"># TODO: keep or remove?</span>
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">background_model</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">-bkg&quot;</span><span class="p">]</span>
-        <span class="k">except</span> <span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
-            <span class="k">pass</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">background_models</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">background_models</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">]]</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">str_</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -1713,13 +1710,6 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">other</span><span class="o">.</span><span class="n">meta</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MapDataset.stat_array">
-<a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.stat_array">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">stat_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistic function value per bin given the current model parameters.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">cash</span><span class="p">(</span><span class="n">n_on</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">mu_on</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">data</span><span class="p">)</span></div>
-
-
 <div class="viewcode-block" id="MapDataset.residuals">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.residuals">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">residuals</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;diff&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -1875,6 +1865,9 @@
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">counts</span><span class="p">,</span> <span class="n">npred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">counts</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span>
+            <span class="n">npred</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span>
         <span class="n">counts_spec</span> <span class="o">=</span> <span class="n">counts</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
         <span class="n">npred_spec</span> <span class="o">=</span> <span class="n">npred</span><span class="o">.</span><span class="n">get_spectrum</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
         <span class="n">residuals</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_compute_residuals</span><span class="p">(</span><span class="n">counts_spec</span><span class="p">,</span> <span class="n">npred_spec</span><span class="p">,</span> <span class="n">method</span><span class="p">)</span>
@@ -1988,35 +1981,6 @@
         <span class="k">return</span> <span class="n">ax_spatial</span><span class="p">,</span> <span class="n">ax_spectral</span></div>
 
 
-<div class="viewcode-block" id="MapDataset.stat_sum">
-<a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.stat_sum">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Total statistic function value given the current model parameters and priors.&quot;&quot;&quot;</span>
-        <span class="n">prior_stat_sum</span> <span class="o">=</span> <span class="mf">0.0</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">prior_stat_sum</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">prior_stat_sum</span><span class="p">()</span>
-
-        <span class="n">counts</span><span class="p">,</span> <span class="n">npred</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
-
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span> <span class="o">==</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># noqa</span>
-            <span class="n">counts</span> <span class="o">=</span> <span class="n">counts</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
-            <span class="n">npred</span> <span class="o">=</span> <span class="n">npred</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="nb">bool</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">==</span> <span class="s2">&quot;cash&quot;</span><span class="p">:</span>
-                <span class="n">cash_sum</span> <span class="o">=</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">npred</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">==</span> <span class="s2">&quot;cash_weighted&quot;</span><span class="p">:</span>
-                <span class="n">weight</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
-                <span class="n">cash_sum</span> <span class="o">=</span> <span class="n">weighted_cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">npred</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;&#39;stat_type&#39; must be a &#39;cash&#39; or `cash_weighted`.&quot;</span>
-                    <span class="sa">f</span><span class="s2">&quot;, got `</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span><span class="si">}</span><span class="s2">` instead.&quot;</span>
-                <span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">cash_sum</span> <span class="o">=</span> <span class="n">cash_sum_cython</span><span class="p">(</span><span class="n">counts</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="n">npred</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
-        <span class="k">return</span> <span class="n">cash_sum</span> <span class="o">+</span> <span class="n">prior_stat_sum</span></div>
-
-
     <span class="k">def</span><span class="w"> </span><span class="nf">_to_asimov_dataset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create Asimov dataset from the current models.&quot;&quot;&quot;</span>
 
@@ -2079,6 +2043,8 @@
         <span class="n">header</span> <span class="o">=</span> <span class="n">hdu_primary</span><span class="o">.</span><span class="n">header</span>
         <span class="n">header</span><span class="p">[</span><span class="s2">&quot;NAME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
         <span class="n">header</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">to_header</span><span class="p">())</span>
+        <span class="n">creation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">creation</span>
+        <span class="n">creation</span><span class="o">.</span><span class="n">update_time</span><span class="p">()</span>
 
         <span class="n">hdulist</span> <span class="o">=</span> <span class="n">fits</span><span class="o">.</span><span class="n">HDUList</span><span class="p">([</span><span class="n">hdu_primary</span><span class="p">])</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -2107,6 +2073,9 @@
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta_table</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">hdulist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fits</span><span class="o">.</span><span class="n">BinTableHDU</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">meta_table</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;META_TABLE&quot;</span><span class="p">))</span>
+
+        <span class="k">for</span> <span class="n">hdu</span> <span class="ow">in</span> <span class="n">hdulist</span><span class="p">:</span>
+            <span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">creation</span><span class="o">.</span><span class="n">to_header</span><span class="p">())</span>
 
         <span class="k">return</span> <span class="n">hdulist</span></div>
 
@@ -2494,7 +2463,7 @@
 
 <span class="sd">        Counts and background of the dataset are integrated in the given region,</span>
 <span class="sd">        taking the safe mask into account. The exposure is averaged in the</span>
-<span class="sd">        region again taking the safe mask into account. The PSF and energy</span>
+<span class="sd">        region. The PSF and energy</span>
 <span class="sd">        dispersion kernel are taken at the center of the region.</span>
 
 <span class="sd">        Parameters</span>
@@ -2512,6 +2481,34 @@
         <span class="n">name</span> <span class="o">=</span> <span class="n">make_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;gti&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">gti</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;meta_table&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta_table</span><span class="p">}</span>
 
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">is_region</span><span class="p">:</span>
+            <span class="n">region_mask</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">axis_name</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">region_mask</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">not_fully_contained</span> <span class="o">=</span> <span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">region_mask</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
+                <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">region_mask</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">:])</span>
+                <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">region_mask</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>
+                <span class="o">|</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">region_mask</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">not_fully_contained</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+<span class="w">                    </span><span class="sd">&quot;&quot;&quot;`to_region_map_dataset` can only be applied if the region</span>
+<span class="sd">                    is fully contained inside the counts geom.</span>
+<span class="sd">                    &quot;&quot;&quot;</span>
+                <span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">is_region</span><span class="p">:</span>
+            <span class="n">region_mask</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">to_image</span><span class="p">()</span><span class="o">.</span><span class="n">region_mask</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="n">region_mask</span><span class="o">.</span><span class="n">data</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">is_uniform</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">is_uniform</span> <span class="o">|=</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">values</span> <span class="o">==</span> <span class="kc">False</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># noqa</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">is_uniform</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+<span class="w">                    </span><span class="sd">&quot;&quot;&quot;`to_region_map_dataset` can only be applied if the mask</span>
+<span class="sd">                    is spatially uniform within the region for each energy bin&quot;&quot;&quot;</span>
+                <span class="p">)</span>
+
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="p">:</span>
             <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;mask_safe&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="o">.</span><span class="n">to_region_nd_map</span><span class="p">(</span><span class="n">region</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">)</span>
 
@@ -2524,7 +2521,7 @@
             <span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">==</span> <span class="s2">&quot;cash&quot;</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="p">:</span>
-            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="o">.</span><span class="n">to_region_nd_map</span><span class="p">(</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;background&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred_background</span><span class="p">()</span><span class="o">.</span><span class="n">to_region_nd_map</span><span class="p">(</span>
                 <span class="n">region</span><span class="p">,</span> <span class="n">func</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">,</span> <span class="n">weights</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span>
             <span class="p">)</span>
 
@@ -2922,56 +2919,155 @@
 
 <div class="viewcode-block" id="MapDataset.peek">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset.peek">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">)):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Quick-look summary plots.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">peek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">13.0</span><span class="p">,</span> <span class="mi">7</span><span class="p">)):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Quick-look summary plots for a given MapDataset:</span>
+<span class="sd">        - Exposure map</span>
+<span class="sd">        - Counts map</span>
+<span class="sd">        - Predicted counts map (Npred)</span>
+<span class="sd">        - Exposure profile at geom center</span>
+<span class="sd">        - PSF containment radius at geom center</span>
+<span class="sd">        - Energy dispersion matrix at geom center</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        figsize : tuple</span>
-<span class="sd">            Size of the figure. Default is (12, 10).</span>
+<span class="sd">            Size of the figure. Default is (13.5, 7).</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">plot_counts</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">counts_data</span><span class="p">,</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Counts map&quot;</span><span class="p">):</span>
+            <span class="n">counts_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+                <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
+                <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;bilinear&quot;</span><span class="p">,</span>
+                <span class="n">norm</span><span class="o">=</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">),</span>
+            <span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_box_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">plot_edisp</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">edisp_kernel</span><span class="p">):</span>
+            <span class="n">edisp_kernel</span><span class="o">.</span><span class="n">plot_matrix</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Energy Dispersion (at FoV center)&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_box_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">plot_exposure_map</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">exposure_map</span><span class="p">,</span> <span class="n">cmap</span><span class="p">):</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">exposure_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">nbin</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+            <span class="c1"># Dynamically scale the exposure by powers of 10 for improved readability</span>
+            <span class="n">exp_data</span> <span class="o">=</span> <span class="n">exposure_map</span><span class="o">.</span><span class="n">get_image_by_idx</span><span class="p">([</span><span class="n">index</span><span class="p">])</span>
+            <span class="n">vmin</span> <span class="o">=</span> <span class="n">exp_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">exp_data</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+            <span class="n">vmax</span> <span class="o">=</span> <span class="n">exp_data</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">exp_data</span><span class="o">.</span><span class="n">data</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+            <span class="n">energy_center</span> <span class="o">=</span> <span class="n">exposure_map</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">center</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+
+            <span class="n">exp_data</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+                <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">,</span>
+                <span class="n">norm</span><span class="o">=</span><span class="n">LogNorm</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">),</span>
+                <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)</span>
+
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">exposure_map</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="s2">&quot;latex&quot;</span><span class="p">)</span>
+            <span class="n">cbar</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">images</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">colorbar</span>  <span class="c1"># Access the colorbar</span>
+            <span class="n">cbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exposure [</span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>  <span class="c1"># Set the formatted label</span>
+
+            <span class="k">if</span> <span class="n">energy_center</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mf">1e-2</span> <span class="ow">or</span> <span class="n">energy_center</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="mf">1e2</span><span class="p">:</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Exposure map at </span><span class="si">{</span><span class="n">energy_center</span><span class="si">:</span><span class="s2">.1e</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">elif</span> <span class="n">energy_center</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="mf">1e-1</span> <span class="ow">or</span> <span class="n">energy_center</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="mf">1e1</span><span class="p">:</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Exposure map at </span><span class="si">{</span><span class="n">energy_center</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Exposure map at </span><span class="si">{</span><span class="n">energy_center</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_box_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">plot_exposure_profile</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">exposure_map</span><span class="p">):</span>
+            <span class="n">exposure_map</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s2">&quot;solid&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+            <span class="c1"># Dynamically format the y-axis label</span>
+            <span class="n">unit</span> <span class="o">=</span> <span class="n">exposure_map</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="s2">&quot;latex&quot;</span><span class="p">)</span>  <span class="c1"># Convert unit to LaTeX format</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exposure [</span><span class="si">{</span><span class="n">unit</span><span class="si">}</span><span class="s2">]&quot;</span><span class="p">)</span>  <span class="c1"># Set the formatted y-axis label</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Exposure (at FoV center)&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_box_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">plot_containment_radius</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">psf</span><span class="p">):</span>
+            <span class="n">psf</span><span class="o">.</span><span class="n">plot_containment_radius_vs_energy</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="s2">&quot;small&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Containment radius (at FoV center)&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+            <span class="n">ax</span><span class="o">.</span><span class="n">set_box_aspect</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
         <span class="k">def</span><span class="w"> </span><span class="nf">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
             <span class="k">if</span> <span class="n">mask</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
                 <span class="n">mask</span><span class="o">.</span><span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-        <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
-            <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-            <span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-            <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;projection&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geom</span><span class="o">.</span><span class="n">wcs</span><span class="p">},</span>
-            <span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span>
-            <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;hspace&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s2">&quot;wspace&quot;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span>
+        <span class="c1"># Reduce the datasets to 2D if needed</span>
+        <span class="n">countsmapdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">reduce_over_axes</span><span class="p">()</span>
+        <span class="n">npredmapdata</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">reduce_over_axes</span><span class="p">()</span>
+
+        <span class="c1"># Get the corresponding central pixel SpectrumDataset (exposure, edisp, psf)</span>
+        <span class="n">central_pixel</span> <span class="o">=</span> <span class="n">RectangleSkyRegion</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">center_skydir</span><span class="p">,</span>
+            <span class="n">width</span><span class="o">=</span><span class="mf">1.01</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">pixel_scales</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">height</span><span class="o">=</span><span class="mf">1.01</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">pixel_scales</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="p">)</span>
+        <span class="n">central_spectrum_dataset</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">to_spectrum_dataset</span><span class="p">(</span><span class="n">central_pixel</span><span class="p">)</span>
+
+        <span class="c1"># Determine plotting limits</span>
+        <span class="n">vmin</span> <span class="o">=</span> <span class="n">npredmapdata</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+        <span class="n">vmax</span> <span class="o">=</span> <span class="n">npredmapdata</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+        <span class="c1"># Fallback if the map is entirely zero</span>
+        <span class="k">if</span> <span class="n">vmin</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">vmin</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">([</span><span class="n">countsmapdata</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">*</span> <span class="mf">0.02</span><span class="p">,</span> <span class="n">countsmapdata</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
+        <span class="k">if</span> <span class="n">vmax</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+            <span class="n">vmax</span> <span class="o">=</span> <span class="n">countsmapdata</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+        <span class="c1"># Create custom colormaps</span>
+        <span class="n">cmapcustom</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;afmhot&quot;</span><span class="p">)</span>
+        <span class="n">cmapcustom</span><span class="o">.</span><span class="n">set_bad</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+        <span class="c1"># Create the figure and axes</span>
+        <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
+
+        <span class="c1"># --- Plot Exposure Map ---</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+        <span class="n">ax_exposure</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">exposure</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">wcs</span><span class="p">)</span>
+        <span class="n">plot_exposure_map</span><span class="p">(</span><span class="n">ax_exposure</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">exposure</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmapcustom</span><span class="p">)</span>
+        <span class="n">plot_mask</span><span class="p">(</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ax_exposure</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span>
         <span class="p">)</span>
 
-        <span class="n">axes</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">flat</span>
-        <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Counts&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit_image</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="c1"># --- Plot Counts Map ---</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+        <span class="n">ax_counts</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">wcs</span><span class="p">)</span>
+        <span class="n">plot_counts</span><span class="p">(</span><span class="n">ax_counts</span><span class="p">,</span> <span class="n">countsmapdata</span><span class="p">,</span> <span class="n">cmapcustom</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="s2">&quot;Counts map&quot;</span><span class="p">)</span>
+        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_counts</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit_image</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_counts</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 
-        <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Excess counts&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">excess</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit_image</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="c1"># --- Plot npred Map ---</span>
+        <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+        <span class="n">ax_npred</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">npred</span><span class="p">()</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">wcs</span><span class="p">)</span>
+        <span class="n">plot_counts</span><span class="p">(</span><span class="n">ax_npred</span><span class="p">,</span> <span class="n">npredmapdata</span><span class="p">,</span> <span class="n">cmapcustom</span><span class="p">,</span> <span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="p">,</span> <span class="s2">&quot;Model npred&quot;</span><span class="p">)</span>
+        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_npred</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit_image</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
+        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_npred</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
 
-        <span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Exposure&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">exposure</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>
+        <span class="c1"># --- Plot Exposure Profile ---</span>
+        <span class="n">ax_exp_profile</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">plot_exposure_profile</span><span class="p">(</span><span class="n">ax_exp_profile</span><span class="p">,</span> <span class="n">central_spectrum_dataset</span><span class="o">.</span><span class="n">exposure</span><span class="p">)</span>
 
-        <span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Background&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">background</span><span class="o">.</span><span class="n">sum_over_axes</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">add_cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_fit_image</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-        <span class="n">plot_mask</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">mask</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe_image</span><span class="p">,</span> <span class="n">hatches</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;///&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span></div>
+        <span class="c1"># --- Plot Containment Radius ---</span>
+        <span class="n">ax_containment</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="n">plot_containment_radius</span><span class="p">(</span><span class="n">ax_containment</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">psf</span><span class="p">)</span>
+
+        <span class="c1"># --- Plot Energy Dispersion ---</span>
+        <span class="n">ax_edisp</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="n">plot_edisp</span><span class="p">(</span><span class="n">ax_edisp</span><span class="p">,</span> <span class="n">central_spectrum_dataset</span><span class="o">.</span><span class="n">edisp</span><span class="o">.</span><span class="n">get_edisp_kernel</span><span class="p">())</span>
+
+        <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">w_pad</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 </div>
-
-
-
-<div class="viewcode-block" id="MapDatasetWeighted">
-<a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetWeighted.html#gammapy.datasets.MapDatasetWeighted">[docs]</a>
-<span class="k">class</span><span class="w"> </span><span class="nc">MapDatasetWeighted</span><span class="p">(</span><span class="n">MapDataset</span><span class="p">):</span>
-    <span class="n">stat_type</span> <span class="o">=</span> <span class="s2">&quot;cash_weighted&quot;</span>
-    <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;MapDatasetWeighted&quot;</span></div>
 
 
 
@@ -3027,7 +3123,6 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">stat_type</span> <span class="o">=</span> <span class="s2">&quot;wstat&quot;</span>
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;MapDatasetOnOff&quot;</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
@@ -3046,6 +3141,7 @@
         <span class="n">gti</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">meta_table</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">stat_type</span><span class="o">=</span><span class="s2">&quot;wstat&quot;</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">make_name</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_evaluators</span> <span class="o">=</span> <span class="p">{}</span>
@@ -3066,6 +3162,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">MapDatasetMetaData</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_meta</span> <span class="o">=</span> <span class="n">meta</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">stat_type</span> <span class="o">=</span> <span class="n">stat_type</span>
 
     <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">str_</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__str__</span><span class="p">()</span>
@@ -3176,20 +3274,6 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts_off</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">None</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">alpha</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts_off</span>
-
-<div class="viewcode-block" id="MapDatasetOnOff.stat_array">
-<a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_array">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">stat_array</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Statistic function value per bin given the current model parameters.&quot;&quot;&quot;</span>
-        <span class="n">mu_sig</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">npred_signal</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
-        <span class="n">on_stat_</span> <span class="o">=</span> <span class="n">wstat</span><span class="p">(</span>
-            <span class="n">n_on</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">counts</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-            <span class="n">n_off</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">counts_off</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
-            <span class="n">alpha</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alpha</span><span class="o">.</span><span class="n">data</span><span class="p">),</span>
-            <span class="n">mu_sig</span><span class="o">=</span><span class="n">mu_sig</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nan_to_num</span><span class="p">(</span><span class="n">on_stat_</span><span class="p">)</span></div>
-
 
     <span class="nd">@property</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_counts_statistic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -3459,20 +3543,6 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">nan_to_num</span><span class="o">=</span><span class="n">nan_to_num</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="MapDatasetOnOff.stat_sum">
-<a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.stat_sum">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Total statistic function value given the current model parameters.</span>
-
-<span class="sd">        If the off counts are passed as None and the elements of the safe mask are False, zero will be returned.</span>
-<span class="sd">        Otherwise, the stat sum will be calculated and returned.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">counts_off</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">mask_safe</span><span class="o">.</span><span class="n">data</span><span class="p">):</span>
-            <span class="k">return</span> <span class="mi">0</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">stat_sum</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
-
-
 <div class="viewcode-block" id="MapDatasetOnOff.fake">
 <a class="viewcode-back" href="../../../api/gammapy.datasets.MapDatasetOnOff.html#gammapy.datasets.MapDatasetOnOff.fake">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">fake</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">npred_background</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="s2">&quot;random-seed&quot;</span><span class="p">):</span>
@@ -3518,6 +3588,8 @@
         <span class="n">hdulist</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">to_hdulist</span><span class="p">()</span>
         <span class="n">exclude_primary</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
+        <span class="n">creation</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">meta</span><span class="o">.</span><span class="n">creation</span>
+
         <span class="k">del</span> <span class="n">hdulist</span><span class="p">[</span><span class="s2">&quot;BACKGROUND&quot;</span><span class="p">]</span>
         <span class="k">del</span> <span class="n">hdulist</span><span class="p">[</span><span class="s2">&quot;BACKGROUND_BANDS&quot;</span><span class="p">]</span>
 
@@ -3531,6 +3603,9 @@
             <span class="n">hdulist</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">acceptance_off</span><span class="o">.</span><span class="n">to_hdulist</span><span class="p">(</span><span class="n">hdu</span><span class="o">=</span><span class="s2">&quot;acceptance_off&quot;</span><span class="p">)[</span>
                 <span class="n">exclude_primary</span>
             <span class="p">]</span>
+
+        <span class="k">for</span> <span class="n">hdu</span> <span class="ow">in</span> <span class="n">hdulist</span><span class="p">:</span>
+            <span class="n">hdu</span><span class="o">.</span><span class="n">header</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">creation</span><span class="o">.</span><span class="n">to_header</span><span class="p">())</span>
 
         <span class="k">return</span> <span class="n">hdulist</span></div>
 
@@ -3983,7 +4058,11 @@
       
         <div class="footer-item">
     
-     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+    <p>Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>.</p>
+    <p>Examples, recipes, and other code licensed under
+      <a href="https://opensource.org/license/BSD-3-Clause>" target="_blank">BSD 3-Clause "New" or "Revised"</a> license.</p>
+    <p>Gammapy <a href="https://gammapy.org/DataPrivacy.html">Data Privacy</a> information.</p>
 </div>
       
     </div>

@@ -30,15 +30,15 @@
 <link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=6865c87f" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/custom.css?v=35abb870" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -61,12 +61,13 @@
             false;
         </script>
     <script src="../../../../_static/matomo.js?v=52704cab"></script>
+    <link rel="canonical" href="https://docs.gammapy.org/stable/_modules/gammapy/estimators/points/profile.html" />
     <link rel="icon" href="../../../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
+  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
   </head>
   
   
@@ -476,6 +477,7 @@
 <span></span><span class="c1"># Licensed under a 3-clause BSD style license - see LICENSE.rst</span>
 <span class="sd">&quot;&quot;&quot;Tools to create profiles (i.e. 1D &quot;slices&quot; from 2D images).&quot;&quot;&quot;</span>
 
+<span class="kn">import</span><span class="w"> </span><span class="nn">logging</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">repeat</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">astropy</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
@@ -486,7 +488,8 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PowerLawSpectralModel</span><span class="p">,</span> <span class="n">SkyModel</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">FluxPoints</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.sed</span><span class="w"> </span><span class="kn">import</span> <span class="n">FluxPointsEstimator</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.deprecation</span><span class="w"> </span><span class="kn">import</span> <span class="n">deprecated_renamed_argument</span>
+
+<span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FluxProfileEstimator&quot;</span><span class="p">]</span>
 
@@ -495,6 +498,8 @@
 <a class="viewcode-back" href="../../../../api/gammapy.estimators.FluxProfileEstimator.html#gammapy.estimators.FluxProfileEstimator">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">FluxProfileEstimator</span><span class="p">(</span><span class="n">FluxPointsEstimator</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Estimate flux profiles.</span>
+<span class="sd">    The class is backward folding of FluxPointsEstimator. However, the re-optimization</span>
+<span class="sd">    is not available, as only one spectral model can be fitted.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -512,7 +517,10 @@
 <span class="sd">        Defaults to `~gammapy.utils.parallel.BACKEND_DEFAULT`.</span>
 <span class="sd">    **kwargs : dict, optional</span>
 <span class="sd">        Keywords forwarded to the `FluxPointsEstimator` (see documentation</span>
-<span class="sd">        there for further description of valid keywords).</span>
+<span class="sd">        there for further description of valid keywords). Note that the `reoptimized`</span>
+<span class="sd">        keyword is accepted only if set to False. If not, an error is raised.</span>
+<span class="sd">        If the keyword is not set by the user, it will be internally set to False</span>
+<span class="sd">        by default.</span>
 
 <span class="sd">    Examples</span>
 <span class="sd">    --------</span>
@@ -567,7 +575,6 @@
 
     <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;FluxProfileEstimator&quot;</span>
 
-    <span class="nd">@deprecated_renamed_argument</span><span class="p">(</span><span class="s2">&quot;spectrum&quot;</span><span class="p">,</span> <span class="s2">&quot;spectral_model&quot;</span><span class="p">,</span> <span class="s2">&quot;v1.3&quot;</span><span class="p">)</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regions</span><span class="p">,</span> <span class="n">spectral_model</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">regions</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
@@ -580,6 +587,12 @@
             <span class="n">spectral_model</span> <span class="o">=</span> <span class="n">PowerLawSpectralModel</span><span class="p">()</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">spectral_model</span> <span class="o">=</span> <span class="n">spectral_model</span>
+
+        <span class="n">reoptimize</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;reoptimize&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">reoptimize</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;reoptimize=True is not available for </span><span class="si">{</span><span class="bp">self</span><span class="si">}</span><span class="s2">. Set to `False` instead.&quot;</span>
+            <span class="p">)</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="nd">@property</span>
@@ -711,7 +724,11 @@
       
         <div class="footer-item">
     
-     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+    <p>Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>.</p>
+    <p>Examples, recipes, and other code licensed under
+      <a href="https://opensource.org/license/BSD-3-Clause>" target="_blank">BSD 3-Clause "New" or "Revised"</a> license.</p>
+    <p>Gammapy <a href="https://gammapy.org/DataPrivacy.html">Data Privacy</a> information.</p>
 </div>
       
     </div>

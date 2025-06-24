@@ -31,15 +31,15 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6865c87f" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=35abb870" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -62,14 +62,15 @@
             false;
         </script>
     <script src="../_static/matomo.js?v=52704cab"></script>
+    <link rel="canonical" href="https://docs.gammapy.org/stable/development/index.html" />
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Project setup" href="setup.html" />
-    <link rel="prev" title="unit_from_fits_image_hdu" href="../api/gammapy.utils.units.unit_from_fits_image_hdu.html" />
+    <link rel="prev" title="wrap_at" href="../api/gammapy.utils.units.wrap_at.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
+  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
   </head>
   
   
@@ -440,7 +441,36 @@
 <li class="toctree-l1"><a class="reference internal" href="dev_howto.html">Developer How To</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="pigs/index.html">PIGs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pigs/index.html">PIGs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-001.html">PIG 1 - PIG purpose and guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-002.html">PIG 2 - Organization of low level analysis code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-003.html">PIG 3 - Plan for dropping Python 2.7 support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-004.html">PIG 4 - Setup for tutorial notebooks and data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-005.html">PIG 5 - Gammapy 1.0 roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-006.html">PIG 6 - CTA observation handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-007.html">PIG 7 - Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-008.html">PIG 8 - Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-009.html">PIG 9 - Event sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-010.html">PIG 10 - Regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-011.html">PIG 11 - Light curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-012.html">PIG 12 - High level interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-013.html">PIG 13 - Gammapy dependencies and distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-014.html">PIG 14 - Uncertainty estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-016.html">PIG 16 - Gammapy package structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-017.html">PIG 17 - Provenance capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-018.html">PIG 18 - Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-019.html">PIG 19 - Gammapy package structure follow up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-020.html">PIG 20 - Global Model API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-021.html">PIG 21 - Models improvements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-022.html">PIG 22 - Unified flux estimators API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-023.html">PIG 23 - Gammapy release cycle and version numbering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-024.html">PIG 24 - Authorship policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-025.html">PIG 25 - Metadata container for Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-026.html">PIG 26 - Model Priors API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-027.html">PIG 27 - Bayesian Inference using Nested Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-028.html">PIG 28 - Gammapy version 2.0 Roadmap</a></li>
+</ul>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -591,7 +621,11 @@ listed on the Gammapy webpage. Ideally you join directly the #dev channel in the
       
         <div class="footer-item">
     
-     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+    <p>Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>.</p>
+    <p>Examples, recipes, and other code licensed under
+      <a href="https://opensource.org/license/BSD-3-Clause>" target="_blank">BSD 3-Clause "New" or "Revised"</a> license.</p>
+    <p>Gammapy <a href="https://gammapy.org/DataPrivacy.html">Data Privacy</a> information.</p>
 </div>
       
     </div>

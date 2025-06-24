@@ -125,36 +125,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -426,10 +426,10 @@ The lightcurve `~gammapy.estimators.FluxPoints` object `lc_3d` contains a table 
          time_min           time_max     ...        flux_err       
                                          ...      1 / (s cm2)      
     ------------------ ----------------- ... ----------------------
-     53343.92234009259 53343.94186555556 ... 2.1162290917256776e-12
-     53343.95421509259 53343.97369425926 ... 2.1376407570489014e-12
-      53345.9619812963 53345.98149518519 ...  2.787169465401243e-12
-    53347.913196574074 53347.93271046296 ...  2.911552434768802e-12
+     53343.92234009259 53343.94186555556 ... 2.1162290849837497e-12
+     53343.95421509259 53343.97369425926 ... 2.1376407467165896e-12
+      53345.9619812963 53345.98149518519 ... 2.7871694602003052e-12
+    53347.913196574074 53347.93271046296 ...  2.911552441438736e-12
 
 
 
@@ -762,6 +762,11 @@ easily extend the light curve estimation approach presented above to any
 time binning. This is demonstrated in the :doc:`/tutorials/analysis-time/light_curve_flare`
 tutorial. which shows the extraction of the lightcurve of an AGN flare.
 
+
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** (0 minutes 16.855 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-time_light_curve.py:

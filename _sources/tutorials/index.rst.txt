@@ -8,9 +8,17 @@
 Tutorials
 =========
 
-**Notice :** it is
-advised to first read :ref:`package_structure` of the User Guide before using the
-tutorials.
+.. important::
+
+    * It is **strongly** advised to first read :ref:`package_structure` of the User Guide before using the
+      tutorials.
+
+    * In general, all methods and classes are defined with default values that permit a good execution per default.
+      In the tutorials, we frequently use extra values to just illustrate their usage.
+
+    * The Gammapy library is used by many instruments and as consequence can not describe the specificities of each
+      data release of each observatory. Get in touch with the observatory experts to get the best usage of a given
+      data release.
 
 This page lists the Gammapy tutorials that are available as `Jupyter`_ notebooks.
 You can read them here, or execute them using a temporary cloud server in Binder.
@@ -116,13 +124,12 @@ basic data structures like event lists, source catalogs, sky maps, spectral mode
 
     </div>
 
+Model Gallery
+=============
 
-.. toctree::
-   :hidden:
+A gallery of all possible spectral, spatial and temporal models can be found in this page:
+:ref:`model-gallery`.
 
-   /tutorials/starting/overview
-   /tutorials/starting/analysis_1
-   /tutorials/starting/analysis_2
 
 Data exploration
 ================
@@ -207,20 +214,28 @@ event lists according to different criteria, as well as to get a quick look of t
     </div>
 
 
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Explore VERITAS point-like DL3 files, including event lists and IRFs and calculate Li &amp; Ma significance, spectra, and fluxes.">
+
+.. only:: html
+
+  .. image:: /tutorials/data/images/thumb/sphx_glr_veritas_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_data_veritas.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">VERITAS with gammapy</div>
+    </div>
+
+
 .. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
-
-
-.. toctree::
-   :hidden:
-
-   /tutorials/data/hess
-   /tutorials/data/cta
-   /tutorials/data/fermi_lat
-   /tutorials/data/hawc
 
 Data analysis
 =============
@@ -381,19 +396,6 @@ time-dependent analysis with light-curves.
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /tutorials/analysis-1d/cta_sensitivity
-   /tutorials/analysis-1d/spectral_analysis
-   /tutorials/analysis-1d/spectral_analysis_hli
-   /tutorials/analysis-1d/spectral_analysis_rad_max
-   /tutorials/analysis-1d/extended_source_spectral_analysis
-   /tutorials/analysis-1d/spectrum_simulation
-   /tutorials/analysis-1d/sed_fitting
-   /tutorials/analysis-1d/ebl
-
 2D Image
 --------
 
@@ -460,14 +462,6 @@ time-dependent analysis with light-curves.
 .. raw:: html
 
     </div>
-
-
-.. toctree::
-   :hidden:
-
-   /tutorials/analysis-2d/detect
-   /tutorials/analysis-2d/ring_background
-   /tutorials/analysis-2d/modeling_2D
 
 3D Cube
 -------
@@ -621,19 +615,6 @@ time-dependent analysis with light-curves.
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /tutorials/analysis-3d/analysis_3d
-   /tutorials/analysis-3d/cta_data_analysis
-   /tutorials/analysis-3d/energy_dependent_estimation
-   /tutorials/analysis-3d/analysis_mwl
-   /tutorials/analysis-3d/simulate_3d
-   /tutorials/analysis-3d/event_sampling
-   /tutorials/analysis-3d/event_sampling_nrg_depend_models
-   /tutorials/analysis-3d/flux_profiles
-
 Time
 ----
 
@@ -752,17 +733,6 @@ Time
 
     </div>
 
-
-.. toctree::
-   :hidden:
-
-   /tutorials/analysis-time/light_curve
-   /tutorials/analysis-time/light_curve_flare
-   /tutorials/analysis-time/variability_estimation
-   /tutorials/analysis-time/time_resolved_spectroscopy
-   /tutorials/analysis-time/light_curve_simulation
-   /tutorials/analysis-time/pulsar_analysis
-
 Package / API
 =============
 
@@ -779,7 +749,7 @@ expose how to perform more specific use cases.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="gammapy.irf contains classes for handling Instrument Response Functions typically stored as multi-dimensional tables. For a list of IRF classes internally supported, see https://gamma-astro-data-formats.readthedocs.io/en/v0.3/irfs/full_enclosure/index.html">
+    <div class="sphx-glr-thumbcontainer" tooltip="gammapy.irf contains classes for handling Instrument Response Functions typically stored as multi-dimensional tables. Gammapy is currently supporting the functions defined in the GADF format (see https://gamma-astro-data-formats.readthedocs.io/en/v0.3/irfs/full_enclosure/index.html). The detailed list can be found in the IRF user guide &lt;/user-guide/irf/index&gt;.">
 
 .. only:: html
 
@@ -796,52 +766,35 @@ expose how to perform more specific use cases.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The sub-package modeling contains all the functionality related to modeling and fitting data. This includes spectral, spatial and temporal model classes, as well as the fit and parameter API.The models follow a naming scheme which contains the category as a suffix to the class name. An overview of all the available models can be found in the model-gallery.">
+    <div class="sphx-glr-thumbcontainer" tooltip="This tutorial explains how to make such a plot, that is the distribution of event counts as a function of the squared angular distance, to a test position.">
 
 .. only:: html
 
-  .. image:: /tutorials/api/images/thumb/sphx_glr_models_thumb.png
+  .. image:: /tutorials/api/images/thumb/sphx_glr_theta_square_plot_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_api_models.py`
+  :ref:`sphx_glr_tutorials_api_theta_square_plot.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Models</div>
+      <div class="sphx-glr-thumbnail-title">Make a theta-square plot</div>
     </div>
 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Learn how you can include prior knowledge into the fitting by setting priors on single parameters.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Clustering observations into specific groups.">
 
 .. only:: html
 
-  .. image:: /tutorials/api/images/thumb/sphx_glr_priors_thumb.png
+  .. image:: /tutorials/api/images/thumb/sphx_glr_observation_clustering_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_api_priors.py`
+  :ref:`sphx_glr_tutorials_api_observation_clustering.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Priors</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Convenience methods for dark matter high level analyses.">
-
-.. only:: html
-
-  .. image:: /tutorials/api/images/thumb/sphx_glr_astro_dark_matter_thumb.png
-    :alt:
-
-  :ref:`sphx_glr_tutorials_api_astro_dark_matter.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Dark matter spatial and spectral models</div>
+      <div class="sphx-glr-thumbnail-title">Observational clustering</div>
     </div>
 
 
@@ -881,23 +834,6 @@ expose how to perform more specific use cases.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Learn how to work with datasets">
-
-.. only:: html
-
-  .. image:: /tutorials/api/images/thumb/sphx_glr_datasets_thumb.png
-    :alt:
-
-  :ref:`sphx_glr_tutorials_api_datasets.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Datasets - Reduced data, IRFs, models</div>
-    </div>
-
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Data reduction: from observations to binned datasets">
 
 .. only:: html
@@ -915,35 +851,35 @@ expose how to perform more specific use cases.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Access and explore thew most common gamma-ray source catalogs.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Learn how to work with datasets">
 
 .. only:: html
 
-  .. image:: /tutorials/api/images/thumb/sphx_glr_catalog_thumb.png
+  .. image:: /tutorials/api/images/thumb/sphx_glr_datasets_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_api_catalog.py`
+  :ref:`sphx_glr_tutorials_api_datasets.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Source catalogs</div>
+      <div class="sphx-glr-thumbnail-title">Datasets - Reduced data, IRFs, models</div>
     </div>
 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Clustering observations into specific groups.">
+    <div class="sphx-glr-thumbcontainer" tooltip="The sub-package modeling contains all the functionality related to modeling and fitting data. This includes spectral, spatial and temporal model classes, as well as the fit and parameter API.The models follow a naming scheme which contains the category as a suffix to the class name. An overview of all the available models can be found in the model-gallery.">
 
 .. only:: html
 
-  .. image:: /tutorials/api/images/thumb/sphx_glr_observation_clustering_thumb.png
+  .. image:: /tutorials/api/images/thumb/sphx_glr_models_thumb.png
     :alt:
 
-  :ref:`sphx_glr_tutorials_api_observation_clustering.py`
+  :ref:`sphx_glr_tutorials_api_models.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Observational clustering</div>
+      <div class="sphx-glr-thumbnail-title">Models</div>
     </div>
 
 
@@ -961,6 +897,23 @@ expose how to perform more specific use cases.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Modelling</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Learn how you can include prior knowledge into the fitting by setting priors on single parameters.">
+
+.. only:: html
+
+  .. image:: /tutorials/api/images/thumb/sphx_glr_priors_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_api_priors.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Priors</div>
     </div>
 
 
@@ -998,29 +951,62 @@ expose how to perform more specific use cases.
     </div>
 
 
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Access and explore thew most common gamma-ray source catalogs.">
+
+.. only:: html
+
+  .. image:: /tutorials/api/images/thumb/sphx_glr_catalog_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_api_catalog.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Source catalogs</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Convenience methods for dark matter high level analyses.">
+
+.. only:: html
+
+  .. image:: /tutorials/api/images/thumb/sphx_glr_astro_dark_matter_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_api_astro_dark_matter.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Dark matter spatial and spectral models</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="A demonstration of a Bayesian analysis using the nested sampling technique.">
+
+.. only:: html
+
+  .. image:: /tutorials/api/images/thumb/sphx_glr_nested_sampling_Crab_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_api_nested_sampling_Crab.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Bayesian analysis with nested sampling</div>
+    </div>
+
+
 .. thumbnail-parent-div-close
 
 .. raw:: html
 
     </div>
-
-
-.. toctree::
-   :hidden:
-
-   /tutorials/api/irfs
-   /tutorials/api/models
-   /tutorials/api/priors
-   /tutorials/api/astro_dark_matter
-   /tutorials/api/maps
-   /tutorials/api/mask_maps
-   /tutorials/api/datasets
-   /tutorials/api/makers
-   /tutorials/api/catalog
-   /tutorials/api/observation_clustering
-   /tutorials/api/model_management
-   /tutorials/api/fitting
-   /tutorials/api/estimators
 
 
 Scripts
@@ -1065,8 +1051,17 @@ The following example shows how to run Gammapy within a Python script.
 
 .. toctree::
    :hidden:
+   :includehidden:
 
-   /tutorials/scripts/survey_map
+
+   /tutorials/starting/index.rst
+   /tutorials/data/index.rst
+   /tutorials/analysis-1d/index.rst
+   /tutorials/analysis-2d/index.rst
+   /tutorials/analysis-3d/index.rst
+   /tutorials/analysis-time/index.rst
+   /tutorials/api/index.rst
+   /tutorials/scripts/index.rst
 
 
 .. only:: html

@@ -119,36 +119,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -322,9 +322,9 @@ energy band has significant signal above the background.
     Emin Emax      delta_ts      df    significance   
     TeV  TeV                                          
     ---- ---- ----------------- --- ------------------
-     1.0  3.0 998.0521419985089   4 31.277522283785622
+     1.0  3.0 998.0521468441366   4 31.277522361013748
      3.0  5.0 712.8736082200157   4  26.34613054105945
-     5.0 20.0 290.4140541880588   4 16.564139576925786
+     5.0 20.0  290.414054187946   4 16.564139576922415
 
 
 
@@ -367,10 +367,10 @@ energy band and for each energy bin shown for :math:`H_1`.
     Hypothesis Emin Emax ...        sigma             sigma_err      
                TeV  TeV  ...         deg                 deg         
     ---------- ---- ---- ... ------------------- --------------------
-            H0  1.0 20.0 ... 0.21525804550772332 0.005909017160171437
-            H1  1.0  3.0 ...  0.2568710719919036 0.009433226692021113
+            H0  1.0 20.0 ... 0.21525839967018867 0.005911103564621735
+            H1  1.0  3.0 ...  0.2568710837134529 0.009428253484623464
             H1  3.0  5.0 ... 0.19736017641361556 0.008166963876141447
-            H1  5.0 20.0 ... 0.13499879586502125 0.008891944789387447
+            H1  5.0 20.0 ... 0.13499879586502125  0.00889194478934663
 
 
 
@@ -410,9 +410,9 @@ The weighted chi-squared significance for the ``sigma``, ``lat_0`` and ``lon_0``
 
     parameter        chi2         df    significance   
     --------- ------------------ --- ------------------
-        sigma  88.61453755944866   2  9.149445429667434
-        lat_0  4.691299354164691   2 1.6656409356335768
-        lon_0 1.3054538213469855   2 0.6423836025257211
+        sigma   88.6610048102039   2  9.151955134028793
+        lat_0  4.691492300600545   2 1.6656873021399468
+        lon_0 1.3055487448271073   2 0.6424216679053606
 
 
 
@@ -428,7 +428,7 @@ parameters, so it should be used cautiously.
 Plotting the results
 --------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 216-251
+.. GENERATED FROM PYTHON SOURCE LINES 216-250
 
 .. code-block:: Python
 
@@ -466,7 +466,6 @@ Plotting the results
     plt.show()
 
 
-    # sphinx_gallery_thumbnail_number = 1
 
 
 
@@ -482,7 +481,7 @@ Plotting the results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 16.012 seconds)
+   **Total running time of the script:** (0 minutes 22.366 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_energy_dependent_estimation.py:

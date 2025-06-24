@@ -135,36 +135,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -261,7 +261,7 @@ In this simulation, we use the CTA-1DC IRFs shipped with Gammapy.
         "$GAMMAPY_DATA/cta-1dc/caldb/data/cta/1dc/bcf/South_z20_50h/irf_file.fits"
     )
 
-    location = observatory_locations["cta_south"]
+    location = observatory_locations["ctao_south"]
     obs = Observation.create(
         pointing=pointing,
         livetime=livetime,
@@ -278,7 +278,7 @@ In this simulation, we use the CTA-1DC IRFs shipped with Gammapy.
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2145: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/core.py:2085: UnitsWarning: '1/s/MeV/sr' did not parse as fits unit: Numeric factor not supported by FITS If this is meant to be a custom unit, define it with 'u.def_unit'. To have it recognized inside a file reader or other code, enable it with 'u.add_enabled_units'. For details, see https://docs.astropy.org/en/latest/units/combining_and_defining.html
       warnings.warn(msg, UnitsWarning)
     Observation
 
@@ -411,14 +411,14 @@ dealing with simulations based on observations of real off counts.
     SpectrumDatasetOnOff
     --------------------
 
-      Name                            : b1QnZwPe 
+      Name                            : CcS9kdpx 
 
-      Total counts                    : 301 
-      Total background counts         : 24.80
-      Total excess counts             : 276.20
+      Total counts                    : 305 
+      Total background counts         : 25.20
+      Total excess counts             : 279.80
 
-      Predicted counts                : 306.04
-      Predicted background counts     : 24.67
+      Predicted counts                : 306.50
+      Predicted background counts     : 25.13
       Predicted excess counts         : 281.37
 
       Exposure min                    : 2.53e+08 m2 s
@@ -428,7 +428,7 @@ dealing with simulations based on observations of real off counts.
       Number of fit bins              : 9 
 
       Fit statistic type              : wstat
-      Fit statistic value (-2 log(L)) : 8.56
+      Fit statistic value (-2 log(L)) : 4.18
 
       Number of models                : 1 
       Number of parameters            : 3
@@ -446,7 +446,7 @@ dealing with simulations based on observations of real off counts.
           amplitude                     :   2.50e-12   +/- 0.0e+00 1 / (TeV s cm2)
           reference             (frozen):      1.000       TeV         
   
-        Total counts_off                : 124 
+        Total counts_off                : 126 
       Acceptance                      : 9 
       Acceptance off                  : 45 
 
@@ -611,7 +611,7 @@ very well with the spectrum that we initially injected.
 
  .. code-block:: none
 
-    index: 3.0036925550381217 += 0.08081469527619482
+    index: 3.0036925550396303 += 0.08081469527497996
 
 
 

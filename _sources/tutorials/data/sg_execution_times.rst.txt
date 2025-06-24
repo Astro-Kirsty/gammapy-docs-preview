@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:31.748** total execution time for 4 files **from tutorials/data**:
+**00:50.107** total execution time for 5 files **from tutorials/data**:
 
 .. container::
 
@@ -32,15 +32,18 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_tutorials_data_hawc.py` (``hawc.py``)
-     - 00:12.264
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_data_fermi_lat.py` (``fermi_lat.py``)
-     - 00:09.412
+   * - :ref:`sphx_glr_tutorials_data_veritas.py` (``veritas.py``)
+     - 00:50.107
      - 0.0
    * - :ref:`sphx_glr_tutorials_data_cta.py` (``cta.py``)
-     - 00:06.012
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_data_fermi_lat.py` (``fermi_lat.py``)
+     - 00:00.000
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_data_hawc.py` (``hawc.py``)
+     - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_tutorials_data_hess.py` (``hess.py``)
-     - 00:04.060
+     - 00:00.000
      - 0.0

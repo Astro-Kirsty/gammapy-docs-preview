@@ -107,10 +107,10 @@ Here is an example YAML file using the model:
         spectral:
             type: PowerLawNormSpectralModel
             parameters:
-            -   name: norm
-                value: 1.0
             -   name: tilt
                 value: 0.0
+            -   name: norm
+                value: 1.0
             -   name: reference
                 value: 1.0
                 unit: TeV
@@ -141,8 +141,8 @@ Here is an example YAML file using the model:
                 - -1.785
                 unit: deg
     metadata:
-        creator: Gammapy 2.0.dev513+ge63c183da
-        date: '2025-03-07T08:42:04.871048'
+        creator: Gammapy 2.0.dev1454+g847764624.d20250624
+        date: '2025-06-24T11:19:09.598697'
         origin: null
 
 

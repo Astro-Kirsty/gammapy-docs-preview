@@ -143,36 +143,36 @@ Check setup
     System:
 
             python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.11    
+            python_version         : 3.11.12    
             machine                : x86_64     
             system                 : Linux      
 
 
     Gammapy package:
 
-            version                : 2.0.dev513+ge63c183da 
+            version                : 2.0.dev1454+g847764624.d20250624 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.2.3      
-            scipy                  : 1.15.2     
-            astropy                : 7.0.1      
+            numpy                  : 2.3.1      
+            scipy                  : 1.16.0     
+            astropy                : 7.1.0      
             regions                : 0.10       
-            click                  : 8.1.8      
+            click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.0.1      
+            IPython                : 9.3.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
-            healpy                 : 1.18.0     
-            iminuit                : 2.30.1     
-            sherpa                 : 4.17.0     
+            healpy                 : 1.18.1     
+            iminuit                : 2.31.1     
+            sherpa                 : 4.17.1     
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.43.0     
+            ray                    : 2.47.1     
 
 
     Gammapy environment variables:
@@ -350,8 +350,8 @@ Here is what the configuration for our analysis looks like:
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev513+ge63c183da
-            date: '2025-03-07T08:44:55.423908'
+            creator: Gammapy 2.0.dev1454+g847764624.d20250624
+            date: '2025-06-24T11:36:23.783452'
             origin: null
     
 
@@ -571,8 +571,8 @@ One can export/import the `~gammapy.analysis.AnalysisConfig` to/from a YAML file
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev513+ge63c183da
-            date: '2025-03-07T08:44:55.438060'
+            creator: Gammapy 2.0.dev1454+g847764624.d20250624
+            date: '2025-06-24T11:36:23.802372'
             origin: null
     
 
@@ -606,6 +606,12 @@ configuration.
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Setting logging config: {'level': 'INFO', 'filename': None, 'filemode': None, 'format': None, 'datefmt': None}
+
 
 
 
@@ -629,6 +635,14 @@ We can directly select and load the observations from disk using
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Fetching observations.
+    Observations selected: 4 out of 4.
+    Number of selected observations: 4
 
 
 
@@ -686,6 +700,13 @@ run the reduction using `.get_datasets()`:
 
 
 
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Reducing spectrum datasets.
+    Creating the background Maker.
 
 
 
@@ -948,6 +969,27 @@ Now we set the model on the analysis object:
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Reading model.
+    Models
+
+    Component 0: SkyModel
+
+      Name                      : crab
+      Datasets names            : None
+      Spectral model type       : PowerLawSpectralModel
+      Spatial  model type       : 
+      Temporal model type       : 
+      Parameters:
+        index                         :      2.600   +/-    0.00             
+        amplitude                     :   5.00e-11   +/- 0.0e+00 1 / (TeV s cm2)
+        reference             (frozen):      1.000       TeV         
+
+
+
 
 
 
@@ -976,6 +1018,28 @@ Running the fit
 
 
 
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Fitting datasets.
+    OptimizeResult
+
+            backend    : minuit
+            method     : migrad
+            success    : True
+            message    : Optimization terminated successfully.
+            nfev       : 37
+            total stat : 10.29
+
+    CovarianceResult
+
+            backend    : minuit
+            method     : hesse
+            success    : True
+            message    : Hesse terminated successfully.
 
 
 
@@ -1095,19 +1159,19 @@ This is how we can write the model back to file again:
             type: PowerLawSpectralModel
             parameters:
             -   name: index
-                value: 2.6768369882260035
-                error: 0.1035002116788955
+                value: 2.6768369882203884
+                error: 0.10350020170706745
             -   name: amplitude
-                value: 4.679478008080033e-11
+                value: 4.679478008101006e-11
                 unit: TeV-1 s-1 cm-2
-                error: 4.678683717532289e-12
+                error: 4.6786834721261165e-12
             -   name: reference
                 value: 1.0
                 unit: TeV
     covariance: model-best-fit_covariance.dat
     metadata:
-        creator: Gammapy 2.0.dev513+ge63c183da
-        date: '2025-03-07T08:44:58.491245'
+        creator: Gammapy 2.0.dev1454+g847764624.d20250624
+        date: '2025-06-24T11:36:27.298240'
         origin: null
 
 
@@ -1146,6 +1210,37 @@ Running the estimation
 
  .. code-block:: none
 
+    Calculating flux points.
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Reoptimize = False ignored for iminuit backend
+    Inferred format: gadf-sed
+
+          e_ref                 dnde          ...      sqrt_ts      
+           TeV            1 / (TeV s cm2)     ...                   
+    ------------------ ---------------------- ... ------------------
+    1.1339665776330272 2.8346449199155368e-11 ... 13.649801869758486
+    1.7077149461898808 1.1933885561614052e-11 ... 18.229702352522242
+    2.5717603983775206  4.324671488042134e-12 ... 15.667883655301353
+     3.872983346207417 1.0021848816289716e-12 ...  9.096816080679885
+    5.8325806748806155  4.655417095161944e-13 ...  9.412238418379745
+     7.929067195782284 1.5268674345611268e-13 ...  3.999118135748669
+    10.779123358892521  9.692057551325467e-14 ...  5.744886132546257
+    16.232991721174255 1.5230023513998565e-14 ... 2.4501128213030277
+    Inferred format: gadf-sed
     e_ref  e_min  e_max        dnde      ... is_ul counts success   norm_scan   
      TeV    TeV    TeV   1 / (TeV s cm2) ...                                    
     ------ ------ ------ --------------- ... ----- ------ ------- --------------
@@ -1213,6 +1308,12 @@ defined
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Inferred format: gadf-sed
+
 
 
 
@@ -1265,7 +1366,7 @@ both methods on a unique plot.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 14.359 seconds)
+   **Total running time of the script:** (0 minutes 19.396 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-1d_spectral_analysis_hli.py:

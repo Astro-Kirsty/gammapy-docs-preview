@@ -31,15 +31,15 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=6865c87f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=35abb870" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -62,6 +62,7 @@
             false;
         </script>
     <script src="../../_static/matomo.js?v=52704cab"></script>
+    <link rel="canonical" href="https://docs.gammapy.org/stable/development/pigs/pig-024.html" />
     <link rel="icon" href="../../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -69,7 +70,7 @@
     <link rel="prev" title="PIG 23 - Gammapy release cycle and version numbering" href="pig-023.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
+  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
   </head>
   
   
@@ -456,6 +457,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pig-013.html">PIG 13 - Gammapy dependencies and distribution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-014.html">PIG 14 - Uncertainty estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-016.html">PIG 16 - Gammapy package structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pig-017.html">PIG 17 - Provenance capture</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-018.html">PIG 18 - Documentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-019.html">PIG 19 - Gammapy package structure follow up</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-020.html">PIG 20 - Global Model API</a></li>
@@ -466,6 +468,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pig-025.html">PIG 25 - Metadata container for Gammapy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-026.html">PIG 26 - Model Priors API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pig-027.html">PIG 27 - Bayesian Inference using Nested Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pig-028.html">PIG 28 - Gammapy version 2.0 Roadmap</a></li>
 </ul>
 </details></li>
 </ul>
@@ -711,7 +714,7 @@ Open Source research software and <strong>are mandatory</strong>.</p>
 <section id="citation-cff">
 <h3>CITATION.cff<a class="headerlink" href="#citation-cff" title="Link to this heading">#</a></h3>
 <p>The file <code class="docutils literal notranslate"><span class="pre">CITATION.cff</span></code> is used by Zenodo and GitHub. Its format should follow the rules set up by the
-<a class="reference external" href="https://pythonlang.dev/repo/citation-file-format-citation-file-format/">Citation File Format project</a>. A GitHub
+<a class="reference external" href="https://citation-file-format.github.io//">Citation File Format project</a>. A GitHub
 Action can be used to automatically check the compliance with the latest format. At the date of this PIG, there is no
 official scheme to handle current and past affiliations, that might be needed for LTS releases for example (see the
 CFF project <a class="reference external" href="https://github.com/citation-file-format/citation-file-format/issues/268">Issue #268</a>).
@@ -841,7 +844,7 @@ The choice of practical implementation of such scheme will be made in dedicated 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-scheme">Citation scheme</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authorship-policy">Authorship policy</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authorship-policy">Authorship policy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-a-contributor">Definition of a <em>Contributor</em></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#releases">Releases</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#long-term-support-releases">Long Term Support releases</a></li>
@@ -849,13 +852,13 @@ The choice of practical implementation of such scheme will be made in dedicated 
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contribution-in-conferences">Contribution in conferences</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-files">Metadata files</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata-files">Metadata files</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-cff">CITATION.cff</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codemeta-json">codemeta.json</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-the-maintainer">Definition of the <em>Maintainer</em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#possible-implementations">Possible implementations</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#possible-implementations">Possible implementations</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dco-implementation">DCO implementation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collection-of-the-personal-information-of-authors">Collection of the personal information of authors</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handling-of-conference-material">Handling of conference material</a></li>
@@ -908,7 +911,11 @@ The choice of practical implementation of such scheme will be made in dedicated 
       
         <div class="footer-item">
     
-     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+    <p>Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>.</p>
+    <p>Examples, recipes, and other code licensed under
+      <a href="https://opensource.org/license/BSD-3-Clause>" target="_blank">BSD 3-Clause "New" or "Revised"</a> license.</p>
+    <p>Gammapy <a href="https://gammapy.org/DataPrivacy.html">Data Privacy</a> information.</p>
 </div>
       
     </div>

@@ -31,15 +31,15 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=6865c87f" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=35abb870" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -62,6 +62,7 @@
             false;
         </script>
     <script src="../_static/matomo.js?v=52704cab"></script>
+    <link rel="canonical" href="https://docs.gammapy.org/stable/development/dev_howto.html" />
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -69,7 +70,7 @@
     <link rel="prev" title="Documentation How To" href="doc_howto.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev513+ge63c183da" />
+  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
   </head>
   
   
@@ -440,7 +441,36 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Developer How To</a></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="pigs/index.html">PIGs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pigs/index.html">PIGs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-001.html">PIG 1 - PIG purpose and guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-002.html">PIG 2 - Organization of low level analysis code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-003.html">PIG 3 - Plan for dropping Python 2.7 support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-004.html">PIG 4 - Setup for tutorial notebooks and data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-005.html">PIG 5 - Gammapy 1.0 roadmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-006.html">PIG 6 - CTA observation handling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-007.html">PIG 7 - Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-008.html">PIG 8 - Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-009.html">PIG 9 - Event sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-010.html">PIG 10 - Regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-011.html">PIG 11 - Light curves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-012.html">PIG 12 - High level interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-013.html">PIG 13 - Gammapy dependencies and distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-014.html">PIG 14 - Uncertainty estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-016.html">PIG 16 - Gammapy package structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-017.html">PIG 17 - Provenance capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-018.html">PIG 18 - Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-019.html">PIG 19 - Gammapy package structure follow up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-020.html">PIG 20 - Global Model API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-021.html">PIG 21 - Models improvements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-022.html">PIG 22 - Unified flux estimators API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-023.html">PIG 23 - Gammapy release cycle and version numbering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-024.html">PIG 24 - Authorship policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-025.html">PIG 25 - Metadata container for Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-026.html">PIG 26 - Model Priors API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-027.html">PIG 27 - Bayesian Inference using Nested Sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pigs/pig-028.html">PIG 28 - Gammapy version 2.0 Roadmap</a></li>
+</ul>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -583,7 +613,7 @@ For discussion on this, see <a class="reference external" href="https://github.c
 <h3>Pixel coordinate convention<a class="headerlink" href="#pixel-coordinate-convention" title="Link to this heading">#</a></h3>
 <p>All code in Gammapy should follow the Astropy pixel coordinate convention that the center of the first pixel
 has pixel coordinates <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0)</span></code> (and not <code class="docutils literal notranslate"><span class="pre">(1,</span> <span class="pre">1)</span></code> as shown e.g. in ds9).</p>
-<p>You should use <code class="docutils literal notranslate"><span class="pre">origin=0</span></code> when calling any of the pixel to world or world to pixel coordinate transformations in <a class="reference external" href="https://docs.astropy.org/en/stable/wcs/reference_api.html#module-astropy.wcs" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.wcs</span></code></a>.</p>
+<p>You should use <code class="docutils literal notranslate"><span class="pre">origin=0</span></code> when calling any of the pixel to world or world to pixel coordinate transformations in <a class="reference external" href="https://docs.astropy.org/en/stable/wcs/reference_api.html#module-astropy.wcs" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">astropy.wcs</span></code></a>.</p>
 </section>
 <section id="bsd-or-gpl-license">
 <h3>BSD or GPL license?<a class="headerlink" href="#bsd-or-gpl-license" title="Link to this heading">#</a></h3>
@@ -665,7 +695,7 @@ which means that when you write a function you should write it like this:</p>
 </div>
 </li>
 <li><p><strong>Don’t always add `numpy.asanyarray` calls for all array-like inputs</strong> … the caller can do this if
-it’s really needed … in the example above document <code class="docutils literal notranslate"><span class="pre">data</span></code> as type <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>
+it’s really needed … in the example above document <code class="docutils literal notranslate"><span class="pre">data</span></code> as type <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>
 instead of array-like and don’t put this line:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asanyarray</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
@@ -678,7 +708,7 @@ but not adding it would mean users get this error if they pass an invalid option
 </div>
 </li>
 </ul>
-<p>Now if you really want, you can add the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asanyarray.html#numpy.asanyarray" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.asanyarray</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/functions.html#isinstance" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isinstance</span></code></a> checks
+<p>Now if you really want, you can add the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.asanyarray.html#numpy.asanyarray" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.asanyarray</span></code></a> and <a class="reference external" href="https://docs.python.org/3/library/functions.html#isinstance" title="(in Python v3.13)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isinstance</span></code></a> checks
 for functions that end-users might often use for interactive work to provide them with
 better exception messages, but doing it everywhere would mean 1000s of lines of boilerplate
 code and take the fun out of Python programming.</p>
@@ -727,12 +757,12 @@ to the function you’re writing):</p>
 </pre></div>
 </div>
 <p>This allows callers flexible control over which random number generator
-(i.e. which <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.random.RandomState</span></code></a> instance) is used and how it’s initialised.
+(i.e. which <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.random.RandomState</span></code></a> instance) is used and how it’s initialised.
 The default <code class="docutils literal notranslate"><span class="pre">random_state='random-seed'</span></code> means “create a new RNG, seed it randomly”,
 i.e. different random numbers will be generated on every call.</p>
 <p>There’s a few ways to get deterministic results from a script that call
 functions that generate random numbers.</p>
-<p>One option is to create a single <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RandomState</span></code></a> object seeded with an integer
+<p>One option is to create a single <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RandomState</span></code></a> object seeded with an integer
 and then pass that <code class="docutils literal notranslate"><span class="pre">random_state</span></code> object to every function that generates random numbers:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.random</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomState</span>
 <span class="n">random_state</span> <span class="o">=</span> <span class="n">RandomState</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -749,7 +779,7 @@ and then pass that <code class="docutils literal notranslate"><span class="pre">
 </div>
 <p>This pattern was inspired by the way scikit-learn handles random numbers.
 We have changed the <code class="docutils literal notranslate"><span class="pre">None</span></code> option of <code class="docutils literal notranslate"><span class="pre">sklearn.utils.check_random_state</span></code> to <code class="docutils literal notranslate"><span class="pre">'global-rng'</span></code>,
-because we felt that this meaning for <code class="docutils literal notranslate"><span class="pre">None</span></code> was confusing given that <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.random.RandomState</span></code></a>
+because we felt that this meaning for <code class="docutils literal notranslate"><span class="pre">None</span></code> was confusing given that <a class="reference external" href="https://numpy.org/doc/stable/reference/random/legacy.html#numpy.random.RandomState" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.random.RandomState</span></code></a>
 uses a different meaning (for which we use the option <code class="docutils literal notranslate"><span class="pre">'global-rng'</span></code>).</p>
 </section>
 <section id="how-to-use-logging">
@@ -798,7 +828,7 @@ level or format in Gammapy, that should be left to callers … except from comma
 <h2>Interpolation and extrapolation<a class="headerlink" href="#interpolation-and-extrapolation" title="Link to this heading">#</a></h2>
 <p>In Gammapy, we use interpolation a lot, e.g. to evaluate instrument response functions (IRFs) on
 data grids, or to reproject diffuse models on data grids.</p>
-<p>The default interpolator we use is <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RegularGridInterpolator.html#scipy.interpolate.RegularGridInterpolator" title="(in SciPy v1.15.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.interpolate.RegularGridInterpolator</span></code></a> because it’s fast and robust
+<p>The default interpolator we use is <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.interpolate.RegularGridInterpolator.html#scipy.interpolate.RegularGridInterpolator" title="(in SciPy v1.16.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.interpolate.RegularGridInterpolator</span></code></a> because it’s fast and robust
 (more fancy interpolation schemes can lead to unstable response in some cases, so more careful checking
 across all parameter space would be needed).</p>
 <p>You should use this pattern to implement a function of method that does interpolation:</p>
@@ -843,7 +873,7 @@ aren’t quite correct because IRFs or background models or … were used outsid
 <section id="assert-convention">
 <h3>Assert convention<a class="headerlink" href="#assert-convention" title="Link to this heading">#</a></h3>
 <p>When performing tests, the preferred numerical assert method is
-<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_allclose.html#numpy.testing.assert_allclose" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.testing.assert_allclose</span></code></a>. Use</p>
+<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_allclose.html#numpy.testing.assert_allclose" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.testing.assert_allclose</span></code></a>. Use</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.testing</span><span class="w"> </span><span class="kn">import</span> <span class="n">assert_allclose</span>
 </pre></div>
 </div>
@@ -854,7 +884,7 @@ for the arguments.</p>
 it should be used consistently everywhere instead of using the
 dozens of other available asserts from pytest or numpy in various
 places.</p>
-<p>For assertions on <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> objects, you can do this
+<p>For assertions on <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> objects, you can do this
 to assert on the unit and value separately:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.testing</span><span class="w"> </span><span class="kn">import</span> <span class="n">assert_allclose</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">astropy.units</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">u</span>
@@ -864,7 +894,7 @@ to assert on the unit and value separately:</p>
 <span class="n">assert_allclose</span><span class="p">(</span><span class="n">actual</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="mf">0.33333333</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Note that <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> can be compared to unit strings directly.
+<p>Note that <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> can be compared to unit strings directly.
 Also note that the default for <code class="docutils literal notranslate"><span class="pre">assert_allclose</span></code> is <code class="docutils literal notranslate"><span class="pre">atol=0</span></code> and <code class="docutils literal notranslate"><span class="pre">rtol=1e-7</span></code>,
 so when using it, you have to give the reference value with a precision of
 <code class="docutils literal notranslate"><span class="pre">rtol</span> <span class="pre">~</span> <span class="pre">1e-8</span></code>, i.e. 8 digits to be on the safe side (or pass a lower <code class="docutils literal notranslate"><span class="pre">rtol</span></code> or set an <code class="docutils literal notranslate"><span class="pre">atol</span></code>).</p>
@@ -873,7 +903,7 @@ because it only requires that the values match after unit conversions.
 This is not so bad, but units in test cases should not change randomly,
 so asserting on unit and value separately establishes more behaviour.</p>
 <p>If you don’t like the two separate lines, you can use <a class="reference internal" href="../api/gammapy.utils.testing.assert_quantity_allclose.html#gammapy.utils.testing.assert_quantity_allclose" title="gammapy.utils.testing.assert_quantity_allclose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gammapy.utils.testing.assert_quantity_allclose</span></code></a>,
-which does assert that units are equal, and calls <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_equal.html#numpy.testing.assert_equal" title="(in NumPy v2.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.testing.assert_equal</span></code></a> for the values.</p>
+which does assert that units are equal, and calls <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.testing.assert_equal.html#numpy.testing.assert_equal" title="(in NumPy v2.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">numpy.testing.assert_equal</span></code></a> for the values.</p>
 </section>
 <section id="testing-of-plotting-functions">
 <h3>Testing of plotting functions<a class="headerlink" href="#testing-of-plotting-functions" title="Link to this heading">#</a></h3>
@@ -963,16 +993,20 @@ one of which involves the <a class="reference external" href="https://github.com
 <ol class="arabic simple">
 <li><p>Add the backport label to automatically backport your PR. e.g. “<code class="docutils literal notranslate"><span class="pre">backport-v1.1.x</span></code>”</p></li>
 <li><p>If you forgot, on your merged PR make the comment: “<code class="docutils literal notranslate"><span class="pre">&#64;meeseeksdev</span> <span class="pre">backport</span> <span class="pre">to</span> <span class="pre">[BRANCHNAME]</span></code>”</p></li>
-<li><p>If this does not work automatically, a set of instructions will be given to you as a comment in the PR to be backported. This involves using the “<code class="docutils literal notranslate"><span class="pre">cherry-pick</span></code>” git command. See <a class="reference external" href="https://docs.astropy.org/en/latest/development/releasing.html#backporting-fixes-from-main">here</a> for information.</p></li>
+<li><p>If this does not work automatically, a set of instructions will be given to you as a comment in
+the PR to be backported. This involves using the “<code class="docutils literal notranslate"><span class="pre">cherry-pick</span></code>” git command.
+See <a class="reference external" href="https://docs.astropy.org/en/latest/development/maintainers/releasing.html#backporting-fixes-from-main">here</a>
+for information.</p></li>
 </ol>
 </section>
 <section id="release-notes">
 <h3>Release notes<a class="headerlink" href="#release-notes" title="Link to this heading">#</a></h3>
 <p>In Gammapy we keep <a class="reference internal" href="../release-notes/index.html#release-notes"><span class="std std-ref">Release notes</span></a> with a list of pull requests.
 We sort by release and within the release by PR number (the largest first).</p>
-<p>As explained in the <span class="xref std std-ref">astropy:changelog-format</span> section in the Astropy docs,
-there are (at least) two approaches for adding to the releases, each with pros
-and cons.</p>
+<p>As explained in the
+<a class="reference external" href="https://docs.astropy.org/en/latest/development/maintainers/maintainer_workflow.html#updating-and-maintaining-the-changelog">Updating and Maintaining the Changelog</a>
+of the Astropy docs, there are (at least) two approaches for adding to the releases,
+each with pros and cons.</p>
 <p>We’ve had some pain due to merge conflicts in the releases notes and having to wait
 until the contributor rebases (and having to explain git rebase to new contributors).</p>
 <p>So our recommendation is that releases entries are not added in pull requests,
@@ -1060,20 +1094,23 @@ If you have a alternative attribute to use instead, pass its name in the <code c
 </pre></div>
 </div>
 </section>
+<section id="how-to-capture-a-deprecation">
+<h3>How to capture a deprecation<a class="headerlink" href="#how-to-capture-a-deprecation" title="Link to this heading">#</a></h3>
+<p>A deprecation warning raised during CI will be considered an error by <code class="xref py py-obj docutils literal notranslate"><span class="pre">pytest</span></code>.
+Nevertheless, it is important to also check that deprecation warnings are correctly
+emitted in the test files. This can be done in the following way:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Runs with the renamed argument</span>
+<span class="n">asmooth</span> <span class="o">=</span> <span class="n">ASmoothMapEstimator</span><span class="p">(</span><span class="n">scales</span><span class="o">=</span><span class="n">scales</span><span class="p">,</span> <span class="n">spectral_model</span><span class="o">=</span><span class="n">PowerLawSpectralModel</span><span class="p">())</span>
+
+<span class="c1"># Raises deprecation warning</span>
+<span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">warns</span><span class="p">(</span><span class="n">GammapyDeprecationWarning</span><span class="p">):</span>
+    <span class="n">ASmoothMapEstimator</span><span class="p">(</span><span class="n">scales</span><span class="o">=</span><span class="n">scales</span><span class="p">,</span> <span class="n">spectrum</span><span class="o">=</span><span class="n">PowerLawSpectralModel</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
 </section>
 <section id="others">
 <h2>Others<a class="headerlink" href="#others" title="Link to this heading">#</a></h2>
-<section id="command-line-tools-using-click">
-<h3>Command line tools using click<a class="headerlink" href="#command-line-tools-using-click" title="Link to this heading">#</a></h3>
-<p>Command line tools that use the <a class="reference external" href="https://click.palletsprojects.com/en/8.0.x/">click</a> module should disable
-the unicode literals warnings to clean up the output of the tool:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">click</span>
-<span class="n">click</span><span class="o">.</span><span class="n">disable_unicode_literals_warning</span> <span class="o">=</span> <span class="kc">True</span>
-</pre></div>
-</div>
-<p>See <a class="reference external" href="https://click.palletsprojects.com/en/5.x/python3/#unicode-literals">here</a> for further
-information.</p>
-</section>
 <section id="bundled-gammapy-extern-code">
 <h3>Bundled gammapy.extern code<a class="headerlink" href="#bundled-gammapy-extern-code" title="Link to this heading">#</a></h3>
 <p>We bundle some code in <code class="docutils literal notranslate"><span class="pre">gammapy.extern</span></code>.
@@ -1350,7 +1387,7 @@ the same name.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-conventions">General conventions</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general-conventions">General conventions</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-version-support">Python version support</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coordinate-and-axis-names">Coordinate and axis names</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clobber-or-overwrite">Clobber or overwrite?</a></li>
@@ -1358,7 +1395,7 @@ the same name.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bsd-or-gpl-license">BSD or GPL license?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-code">How to write code</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-code">How to write code</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-should-i-import-from">Where should I import from?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-returning-several-values">Functions returning several values</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-checks-and-conversions-should-i-do-for-inputs">What checks and conversions should I do for inputs?</a></li>
@@ -1366,19 +1403,19 @@ the same name.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-random-numbers">How to use random numbers</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-logging">How to use logging</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-use-logging">How to use logging</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-log-messages">Generating log messages</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpolation-and-extrapolation">Interpolation and extrapolation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-tests">How to write tests</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-write-tests">How to write tests</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assert-convention">Assert convention</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-of-plotting-functions">Testing of plotting functions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skip-unit-tests-for-some-astropy-versions">Skip unit tests for some Astropy versions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caplog-fixture">Caplog fixture</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-pull-request">How to make a pull request</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-make-a-pull-request">How to make a pull request</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-pull-request-with-new-or-modified-datasets">Making a pull request with new or modified datasets</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-a-pull-request-which-skips-github-actions">Making a pull request which skips GitHub Actions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fix-non-unix-line-endings">Fix non-Unix line endings</a></li>
@@ -1386,14 +1423,14 @@ the same name.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#release-notes">Release notes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-handle-api-breaking-changes">How to handle API breaking changes?</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-handle-api-breaking-changes">How to handle API breaking changes?</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deprecating-a-function-or-a-class">Deprecating a function or a class</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renaming-an-argument">Renaming an argument</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#removing-an-attribute">Removing an attribute</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-capture-a-deprecation">How to capture a deprecation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#others">Others</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-tools-using-click">Command line tools using click</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#others">Others</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bundled-gammapy-extern-code">Bundled gammapy.extern code</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-origin-of-warnings">Locate origin of warnings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-text-repr-str-and-info">Object text repr, str and info</a></li>
@@ -1446,7 +1483,11 @@ the same name.</p>
       
         <div class="footer-item">
     
-     <a href="https://gammapy.org/DataPrivacy.html">Data Privacy.</a>
+    <p>Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a>.</p>
+    <p>Examples, recipes, and other code licensed under
+      <a href="https://opensource.org/license/BSD-3-Clause>" target="_blank">BSD 3-Clause "New" or "Revised"</a> license.</p>
+    <p>Gammapy <a href="https://gammapy.org/DataPrivacy.html">Data Privacy</a> information.</p>
 </div>
       
     </div>
