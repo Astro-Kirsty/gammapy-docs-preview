@@ -109,8 +109,8 @@ Here is an example YAML file using the model:
                 value: 10.0
                 unit: TeV
     metadata:
-        creator: Gammapy 2.0.dev1454+g847764624.d20250624
-        date: '2025-06-24T11:19:17.881183'
+        creator: Gammapy 2.0.dev1916+g4ebdb930c
+        date: '2025-07-28T08:44:53.253690'
         origin: null
 
 

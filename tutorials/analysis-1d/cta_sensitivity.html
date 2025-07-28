@@ -70,7 +70,7 @@
     <link rel="prev" title="Data analysis" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -435,8 +435,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Model Gallery</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../model-gallery/index.html">Model Gallery</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Data exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/veritas.html">VERITAS with Gammapy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../details/index.html">Detailed explanation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../details/irfs.html">Using Gammapy IRFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/observation_clustering.html">Observational clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/theta_square_plot.html">Make a theta-square plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/mask_maps.html">Mask maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/catalog.html">Source catalogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/priors.html">Priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/model_management.html">Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Data analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Point source sensitivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spectral_analysis.html">Spectral analysis</a></li>
@@ -445,8 +469,6 @@
 <li class="toctree-l2"><a class="reference internal" href="extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spectrum_simulation.html">1D spectrum simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sed_fitting.html">Flux point fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ebl.html">Account for spectral absorption due to the EBL</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-2d/index.html">2D Image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +480,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-3d/index.html">3D Cube</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
@@ -472,25 +493,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">Package / API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/theta_square_plot.html">Make a theta-square plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/maps.html">Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/mask_maps.html">Mask maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/makers.html">Makers - Data reduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/models.html">Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/model_management.html">Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/priors.html">Priors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/estimators.html">Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/catalog.html">Source catalogs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../astrophysics/index.html">Astrophysics use cases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/pulsar_analysis.html">Pulsar analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../scripts/index.html">Scripts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -604,54 +614,6 @@ determine the 1D IRFs including a containment correction.</p>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.makers</span><span class="w"> </span><span class="kn">import</span> <a href="../../api/gammapy.makers.SpectrumDatasetMaker.html#gammapy.makers.SpectrumDatasetMaker" title="gammapy.makers.SpectrumDatasetMaker" class="sphx-glr-backref-module-gammapy-makers sphx-glr-backref-type-py-class"><span class="n">SpectrumDatasetMaker</span></a>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps</span><span class="w"> </span><span class="kn">import</span> <span class="n">MapAxis</span><span class="p">,</span> <span class="n">RegionGeom</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.maps.axes</span><span class="w"> </span><span class="kn">import</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">UNIT_STRING_FORMAT</span></a>
-</pre></div>
-</div>
-</section>
-<section id="check-setup">
-<h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_tutorials_setup</span>
-
-<span class="n">check_tutorials_setup</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
-
-        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.12
-        machine                : x86_64
-        system                 : Linux
-
-
-Gammapy package:
-
-        version                : 2.0.dev1454+g847764624.d20250624
-        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
-
-
-Other packages:
-
-        numpy                  : 2.3.1
-        scipy                  : 1.16.0
-        astropy                : 7.1.0
-        regions                : 0.10
-        click                  : 8.2.1
-        yaml                   : 6.0.2
-        IPython                : 9.3.0
-        jupyterlab             : not installed
-        matplotlib             : 3.9.4
-        pandas                 : not installed
-        healpy                 : 1.18.1
-        iminuit                : 2.31.1
-        sherpa                 : 4.17.1
-        naima                  : 0.10.2
-        emcee                  : 3.1.6
-        corner                 : 2.2.3
-        ray                    : 2.47.1
-
-
-Gammapy environment variables:
-
-        GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/
 </pre></div>
 </div>
 </section>
@@ -927,7 +889,6 @@ plotting the ratio as a function of energy.</p></li>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-setup">Check setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#define-analysis-region-and-energy-binning">Define analysis region and energy binning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-irfs-and-prepare-dataset">Load IRFs and prepare dataset</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compute-sensitivity">Compute sensitivity</a></li>

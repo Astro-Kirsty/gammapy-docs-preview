@@ -94,8 +94,8 @@ In practice, we have to:
 
 - Create the necessary makers :
 
-  - the spectrum dataset maker : `~gammapy.makers.SpectrumDatasetMaker` -
-    the OFF background maker, here a `~gammapy.makers.ReflectedRegionsBackgroundMaker`
+  - the spectrum dataset maker : `~gammapy.makers.SpectrumDatasetMaker`
+  - the OFF background maker, here a `~gammapy.makers.ReflectedRegionsBackgroundMaker`
   - and the safe range maker : `~gammapy.makers.SafeMaskMaker`
 
 - Perform the data reduction loop. And for every observation:
@@ -136,7 +136,7 @@ Setup
 As usual, we’ll start with some setup …
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 108-130
+.. GENERATED FROM PYTHON SOURCE LINES 108-132
 
 .. code-block:: Python
 
@@ -161,82 +161,17 @@ As usual, we’ll start with some setup …
         SkyModel,
         create_crab_spectral_model,
     )
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 131-133
-
-Check setup
------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 133-139
-
-.. code-block:: Python
-
-    from gammapy.utils.check import check_tutorials_setup
     from gammapy.visualization import plot_spectrum_datasets_off_regions
 
-    check_tutorials_setup()
 
 
 
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
 
 
-    System:
-
-            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.12    
-            machine                : x86_64     
-            system                 : Linux      
-
-
-    Gammapy package:
-
-            version                : 2.0.dev1454+g847764624.d20250624 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
-
-
-    Other packages:
-
-            numpy                  : 2.3.1      
-            scipy                  : 1.16.0     
-            astropy                : 7.1.0      
-            regions                : 0.10       
-            click                  : 8.2.1      
-            yaml                   : 6.0.2      
-            IPython                : 9.3.0      
-            jupyterlab             : not installed 
-            matplotlib             : 3.9.4      
-            pandas                 : not installed 
-            healpy                 : 1.18.1     
-            iminuit                : 2.31.1     
-            sherpa                 : 4.17.1     
-            naima                  : 0.10.2     
-            emcee                  : 3.1.6      
-            corner                 : 2.2.3      
-            ray                    : 2.47.1     
-
-
-    Gammapy environment variables:
-
-            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 140-148
+.. GENERATED FROM PYTHON SOURCE LINES 133-141
 
 Load Data
 ---------
@@ -247,7 +182,7 @@ We will access the events, effective area, energy dispersion, livetime
 and PSF for containment correction.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-154
+.. GENERATED FROM PYTHON SOURCE LINES 141-147
 
 .. code-block:: Python
 
@@ -264,17 +199,17 @@ and PSF for containment correction.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-162
+.. GENERATED FROM PYTHON SOURCE LINES 148-155
 
 Define Target Region
 --------------------
 
 The next step is to define a signal extraction region, also known as on
 region. In the simplest case this is just a
-`CircleSkyRegion <http://astropy-regions.readthedocs.io/en/latest/api/regions.CircleSkyRegion.html>`__.
+`~regions.CircleSkyRegion`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-168
+.. GENERATED FROM PYTHON SOURCE LINES 155-161
 
 .. code-block:: Python
 
@@ -291,7 +226,7 @@ region. In the simplest case this is just a
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 169-181
+.. GENERATED FROM PYTHON SOURCE LINES 162-174
 
 Create exclusion mask
 ---------------------
@@ -306,7 +241,7 @@ J0521+212 <http://gamma-sky.net/#/cat/tev/23>`__ at GLON = 183.604 deg
 and GLAT = -8.708 deg.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 181-197
+.. GENERATED FROM PYTHON SOURCE LINES 174-190
 
 .. code-block:: Python
 
@@ -338,7 +273,7 @@ and GLAT = -8.708 deg.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-203
+.. GENERATED FROM PYTHON SOURCE LINES 191-196
 
 Run data reduction chain
 ------------------------
@@ -346,7 +281,7 @@ Run data reduction chain
 We begin with the configuration of the maker classes:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 203-220
+.. GENERATED FROM PYTHON SOURCE LINES 196-223
 
 .. code-block:: Python
 
@@ -366,17 +301,6 @@ We begin with the configuration of the maker classes:
     )
     bkg_maker = ReflectedRegionsBackgroundMaker(exclusion_mask=exclusion_mask)
     safe_mask_maker = SafeMaskMaker(methods=["aeff-max"], aeff_percent=10)
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 221-231
-
-.. code-block:: Python
 
     datasets = Datasets()
 
@@ -432,19 +356,19 @@ We begin with the configuration of the maker classes:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 232-235
+.. GENERATED FROM PYTHON SOURCE LINES 224-227
 
 The data reduction loop can also be performed through the
 `~gammapy.makers.DatasetsMaker` class that take a list of makers as input,
-as described :doc:`here </tutorials/api/makers>`
+as described :doc:`here </tutorials/details/makers>`
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-241
+.. GENERATED FROM PYTHON SOURCE LINES 230-233
 
 Plot off regions
 ----------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 241-249
+.. GENERATED FROM PYTHON SOURCE LINES 233-241
 
 .. code-block:: Python
 
@@ -477,7 +401,7 @@ Plot off regions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-256
+.. GENERATED FROM PYTHON SOURCE LINES 242-248
 
 Source statistic
 ----------------
@@ -486,7 +410,7 @@ Next we’re going to look at the overall source statistics in our signal
 region.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-261
+.. GENERATED FROM PYTHON SOURCE LINES 248-253
 
 .. code-block:: Python
 
@@ -514,11 +438,11 @@ region.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-263
+.. GENERATED FROM PYTHON SOURCE LINES 254-255
 
 And make the corresponding plots
 
-.. GENERATED FROM PYTHON SOURCE LINES 263-289
+.. GENERATED FROM PYTHON SOURCE LINES 255-281
 
 .. code-block:: Python
 
@@ -560,7 +484,7 @@ And make the corresponding plots
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 290-295
+.. GENERATED FROM PYTHON SOURCE LINES 282-287
 
 Finally you can write the extracted datasets to disk using the OGIP (default)
 format (PHA, ARF, RMF, BKG, see
@@ -568,7 +492,7 @@ format (PHA, ARF, RMF, BKG, see
 for details):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-301
+.. GENERATED FROM PYTHON SOURCE LINES 287-293
 
 .. code-block:: Python
 
@@ -585,12 +509,12 @@ for details):
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-304
+.. GENERATED FROM PYTHON SOURCE LINES 294-296
 
 If you want to read back the datasets from disk you can use:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 304-308
+.. GENERATED FROM PYTHON SOURCE LINES 296-300
 
 .. code-block:: Python
 
@@ -602,17 +526,10 @@ If you want to read back the datasets from disk you can use:
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/utils/scripts.py:68: UserWarning: Checksum verification failed.
-      warnings.warn("Checksum verification failed.", UserWarning)
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 309-317
+.. GENERATED FROM PYTHON SOURCE LINES 301-309
 
 Fit spectrum
 ------------
@@ -623,7 +540,7 @@ observations see below. We will also produce a debug plot in order to
 show how the global fit matches one of the individual observations.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 317-332
+.. GENERATED FROM PYTHON SOURCE LINES 309-324
 
 .. code-block:: Python
 
@@ -649,12 +566,12 @@ show how the global fit matches one of the individual observations.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 333-335
+.. GENERATED FROM PYTHON SOURCE LINES 325-327
 
 Make a copy here to compare it later
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 335-339
+.. GENERATED FROM PYTHON SOURCE LINES 327-331
 
 .. code-block:: Python
 
@@ -669,18 +586,18 @@ Make a copy here to compare it later
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 340-343
+.. GENERATED FROM PYTHON SOURCE LINES 332-335
 
 Fit quality and model residuals
 -------------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 346-348
+.. GENERATED FROM PYTHON SOURCE LINES 338-340
 
 We can access the results dictionary to see if the fit converged:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 348-352
+.. GENERATED FROM PYTHON SOURCE LINES 340-344
 
 .. code-block:: Python
 
@@ -716,12 +633,12 @@ We can access the results dictionary to see if the fit converged:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 353-355
+.. GENERATED FROM PYTHON SOURCE LINES 345-347
 
 and check the best-fit parameters
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 355-359
+.. GENERATED FROM PYTHON SOURCE LINES 347-351
 
 .. code-block:: Python
 
@@ -748,13 +665,13 @@ and check the best-fit parameters
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 360-363
+.. GENERATED FROM PYTHON SOURCE LINES 352-355
 
 A simple way to inspect the model residuals is using the function
 `~gammapy.datasets.SpectrumDataset.plot_fit()`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 363-369
+.. GENERATED FROM PYTHON SOURCE LINES 355-361
 
 .. code-block:: Python
 
@@ -776,13 +693,13 @@ A simple way to inspect the model residuals is using the function
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 370-373
+.. GENERATED FROM PYTHON SOURCE LINES 362-365
 
 For more ways of assessing fit quality, please refer to the dedicated
-:doc:`/tutorials/api/fitting` tutorial.
+:doc:`/tutorials/details/fitting` tutorial.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 376-385
+.. GENERATED FROM PYTHON SOURCE LINES 368-377
 
 Compute Flux Points
 -------------------
@@ -794,7 +711,7 @@ We create an instance of the
 the energy binning:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 385-392
+.. GENERATED FROM PYTHON SOURCE LINES 377-384
 
 .. code-block:: Python
 
@@ -812,12 +729,12 @@ the energy binning:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 393-395
+.. GENERATED FROM PYTHON SOURCE LINES 385-387
 
 Here is a the table of the resulting flux points:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 395-399
+.. GENERATED FROM PYTHON SOURCE LINES 387-391
 
 .. code-block:: Python
 
@@ -861,13 +778,13 @@ Here is a the table of the resulting flux points:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 400-403
+.. GENERATED FROM PYTHON SOURCE LINES 392-395
 
 Now we plot the flux points and their likelihood profiles. For the
 plotting of upper limits we choose a threshold of TS < 4.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 403-410
+.. GENERATED FROM PYTHON SOURCE LINES 395-402
 
 .. code-block:: Python
 
@@ -890,20 +807,20 @@ plotting of upper limits we choose a threshold of TS < 4.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 411-415
+.. GENERATED FROM PYTHON SOURCE LINES 403-407
 
 Note: it is also possible to plot the flux distribution with the spectral model overlaid,
 but you must ensure the axis binning is identical for the flux points and
 integral flux.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 418-421
+.. GENERATED FROM PYTHON SOURCE LINES 410-413
 
 The final plot with the best fit model, flux points and residuals can be
 quickly made like this:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 421-430
+.. GENERATED FROM PYTHON SOURCE LINES 413-422
 
 .. code-block:: Python
 
@@ -928,7 +845,7 @@ quickly made like this:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 431-438
+.. GENERATED FROM PYTHON SOURCE LINES 423-430
 
 Stack observations
 ------------------
@@ -938,7 +855,7 @@ observations first and the fitting a model. For this we first stack the
 individual datasets:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 438-442
+.. GENERATED FROM PYTHON SOURCE LINES 430-434
 
 .. code-block:: Python
 
@@ -953,14 +870,14 @@ individual datasets:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 443-447
+.. GENERATED FROM PYTHON SOURCE LINES 435-439
 
 Again we set the model on the dataset we would like to fit (in this case
 it’s only a single one) and pass it to the `~gammapy.modeling.Fit`
 object:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 447-452
+.. GENERATED FROM PYTHON SOURCE LINES 439-444
 
 .. code-block:: Python
 
@@ -976,12 +893,12 @@ object:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 453-455
+.. GENERATED FROM PYTHON SOURCE LINES 445-447
 
 Make a copy to compare later
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 455-460
+.. GENERATED FROM PYTHON SOURCE LINES 447-452
 
 .. code-block:: Python
 
@@ -1018,11 +935,11 @@ Make a copy to compare later
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 461-462
+.. GENERATED FROM PYTHON SOURCE LINES 453-454
 
 And display the parameter table for both the joint and the stacked models
 
-.. GENERATED FROM PYTHON SOURCE LINES 462-468
+.. GENERATED FROM PYTHON SOURCE LINES 454-460
 
 .. code-block:: Python
 
@@ -1058,14 +975,14 @@ And display the parameter table for both the joint and the stacked models
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 469-473
+.. GENERATED FROM PYTHON SOURCE LINES 461-465
 
 Finally, we compare the results of our stacked analysis to a previously
 published Crab Nebula Spectrum for reference. This is available in
 `~gammapy.modeling.models.create_crab_spectral_model`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 473-500
+.. GENERATED FROM PYTHON SOURCE LINES 465-491
 
 .. code-block:: Python
 
@@ -1074,10 +991,9 @@ published Crab Nebula Spectrum for reference. This is available in
     plot_kwargs = {
         "energy_bounds": [0.1, 30] * u.TeV,
         "sed_type": "e2dnde",
-        "yunits": u.Unit("erg cm-2 s-1"),
         "ax": ax,
     }
-
+    ax.yaxis.set_units(u.Unit("erg cm-2 s-1"))
     # plot stacked model
     model_best_stacked.spectral_model.plot(**plot_kwargs, label="Stacked analysis result")
     model_best_stacked.spectral_model.plot_error(facecolor="blue", alpha=0.3, **plot_kwargs)
@@ -1108,7 +1024,7 @@ published Crab Nebula Spectrum for reference. This is available in
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 502-519
+.. GENERATED FROM PYTHON SOURCE LINES 493-510
 
 A note on statistics
 --------------------
@@ -1128,7 +1044,7 @@ which allows to take into accounts upper limit and asymmetric error.
 In the example below we can see that the `profile` case matches exactly the result
 from the joint analysis of the ON/OFF datasets using `wstat` (as labelled).
 
-.. GENERATED FROM PYTHON SOURCE LINES 519-556
+.. GENERATED FROM PYTHON SOURCE LINES 510-547
 
 .. code-block:: Python
 
@@ -1181,7 +1097,7 @@ from the joint analysis of the ON/OFF datasets using `wstat` (as labelled).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 557-562
+.. GENERATED FROM PYTHON SOURCE LINES 548-553
 
 In order to avoid discrepancies due to the treatment of upper limits
 we can utilise the `~gammapy.estimators.utils.resample_energy_edges`
@@ -1189,7 +1105,7 @@ for defining energy bins in which the minimum number of `sqrt_ts` is 2.
 In that case all the statistics definitions give equivalent results.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 563-577
+.. GENERATED FROM PYTHON SOURCE LINES 554-568
 
 .. code-block:: Python
 
@@ -1219,25 +1135,7 @@ In that case all the statistics definitions give equivalent results.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 578-593
-
-Exercises
----------
-
-Now you have learned the basics of a spectral analysis with Gammapy. To
-practice you can continue with the following exercises:
-
--  Fit a different spectral model to the data. You could try
-   `~gammapy.modeling.models.ExpCutoffPowerLawSpectralModel` or
-   `~gammapy.modeling.models.LogParabolaSpectralModel`.
--  Compute flux points for the stacked dataset.
--  Create a `~gammapy.datasets.FluxPointsDataset` with the flux points
-   you have computed for the stacked dataset and fit the flux points
-   again with obe of the spectral models. How does the result compare to
-   the best fit model, that was directly fitted to the counts data?
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 596-607
+.. GENERATED FROM PYTHON SOURCE LINES 569-580
 
 What next?
 ----------
@@ -1254,7 +1152,7 @@ tutorial.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (2 minutes 57.378 seconds)
+   **Total running time of the script:** (1 minutes 24.499 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-1d_spectral_analysis.py:

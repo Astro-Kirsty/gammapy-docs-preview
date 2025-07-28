@@ -272,238 +272,238 @@ modelled.
     Dataset 0: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : VnhfvOwa
+      Name       : A-pjiA6-
       Instrument : HESS
       Models     : 
 
     Dataset 1: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : O6a6pFQl
+      Name       : 9v9tJKxb
       Instrument : HESS
       Models     : 
 
     Dataset 2: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : m3KKGLfL
+      Name       : 55Oc08FL
       Instrument : HESS
       Models     : 
 
     Dataset 3: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 9b9DpJli
+      Name       : SOsoJQWX
       Instrument : HESS
       Models     : 
 
     Dataset 4: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : YqD69f6t
+      Name       : nrqv-mNO
       Instrument : HESS
       Models     : 
 
     Dataset 5: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 7zxxV3Kb
+      Name       : jNA39jMU
       Instrument : HESS
       Models     : 
 
     Dataset 6: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : ZVmO35lb
+      Name       : TGZ_vJ3b
       Instrument : HESS
       Models     : 
 
     Dataset 7: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : inVs_tgJ
+      Name       : hCm6vnXQ
       Instrument : HESS
       Models     : 
 
     Dataset 8: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : h91MYt9N
+      Name       : iNY1Tx8x
       Instrument : HESS
       Models     : 
 
     Dataset 9: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : Dqa3Iejt
+      Name       : rSrqiC33
       Instrument : HESS
       Models     : 
 
     Dataset 10: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : ilczlG_O
+      Name       : sLYcPVFG
       Instrument : HESS
       Models     : 
 
     Dataset 11: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 9XZzo5kU
+      Name       : pGv9k1TJ
       Instrument : HESS
       Models     : 
 
     Dataset 12: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : tOwzyp_4
+      Name       : A1T2H4rs
       Instrument : HESS
       Models     : 
 
     Dataset 13: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 8F4mza5c
+      Name       : -uugWOxx
       Instrument : HESS
       Models     : 
 
     Dataset 14: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : bzrgQuwx
+      Name       : fh5ok7hB
       Instrument : HESS
       Models     : 
 
     Dataset 15: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : YPBySBYz
+      Name       : E4DrrkQb
       Instrument : HESS
       Models     : 
 
     Dataset 16: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : w5Qq1kTu
+      Name       : gh_anJf4
       Instrument : HESS
       Models     : 
 
     Dataset 17: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : wWEmLK_b
+      Name       : cu5xOeHX
       Instrument : HESS
       Models     : 
 
     Dataset 18: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : XgMAl1Eu
+      Name       : hEszq0Tm
       Instrument : HESS
       Models     : 
 
     Dataset 19: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : Fr-ZK3sF
+      Name       : m7vHduwz
       Instrument : HESS
       Models     : 
 
     Dataset 20: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : OSojU9NH
+      Name       : aT04e8mh
       Instrument : HESS
       Models     : 
 
     Dataset 21: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : H38TlFtb
+      Name       : PerILQCs
       Instrument : HESS
       Models     : 
 
     Dataset 22: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : yV8HFYa_
+      Name       : 14THiwxt
       Instrument : HESS
       Models     : 
 
     Dataset 23: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : FJzQnV5T
+      Name       : JV35KqDF
       Instrument : HESS
       Models     : 
 
     Dataset 24: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : u3W8am_h
+      Name       : VzINpa1n
       Instrument : HESS
       Models     : 
 
     Dataset 25: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : BcFptckK
+      Name       : Ry0kLZUS
       Instrument : HESS
       Models     : 
 
     Dataset 26: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : NG7csw8I
+      Name       : ZUvDEPnK
       Instrument : HESS
       Models     : 
 
     Dataset 27: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : ibq3vdL8
+      Name       : MCPnI34N
       Instrument : HESS
       Models     : 
 
     Dataset 28: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : QQQCqRZ7
+      Name       : iHAGBKte
       Instrument : HESS
       Models     : 
 
     Dataset 29: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : olRQXPPP
+      Name       : HS7Snh2t
       Instrument : HESS
       Models     : 
 
     Dataset 30: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : ML5o52Q_
+      Name       : mLuNwryq
       Instrument : HESS
       Models     : 
 
     Dataset 31: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : d5_NFeJ8
+      Name       : B926BopE
       Instrument : HESS
       Models     : 
 
     Dataset 32: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : 3vU11WVA
+      Name       : 5iDVk2mZ
       Instrument : HESS
       Models     : 
 
     Dataset 33: 
 
       Type       : SpectrumDatasetOnOff
-      Name       : IqDiUsBJ
+      Name       : X35NNd0w
       Instrument : HESS
       Models     : 
 
@@ -634,15 +634,6 @@ We now apply it to our data
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
-      return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
-      return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-
 
 
 
@@ -732,7 +723,7 @@ Or, to access the fitted models,
 To better visualise the data, we can create a table by extracting some
 relevant information. In the following, we extract the time intervals,
 information on the fit convergence and the free parameters. You can
-extract more information if required, eg, the `total_stat` in each
+extract more information if required, eg, the ``total_stat`` in each
 bin, etc.
 
 
@@ -931,7 +922,7 @@ Exercises
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 28.163 seconds)
+   **Total running time of the script:** (0 minutes 15.060 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-time_time_resolved_spectroscopy.py:

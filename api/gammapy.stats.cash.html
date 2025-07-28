@@ -67,11 +67,11 @@
     <link rel="icon" href="../_static/gammapy_logo.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="cash_sum_cython" href="gammapy.stats.cash_sum_cython.html" />
+    <link rel="next" title="cstat" href="gammapy.stats.cstat.html" />
     <link rel="prev" title="stats - Statistics" href="../api-reference/stats.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -520,9 +520,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.SpectrumDatasetOnOff.html">SpectrumDatasetOnOff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.MapDatasetMetaData.html">MapDatasetMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.DATASET_REGISTRY.html">DATASET_REGISTRY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.apply_edisp.html">apply_edisp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.split_dataset.html">split_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.create_map_dataset_from_dl4.html">create_map_dataset_from_dl4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/maps.html">maps - Sky maps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -742,12 +739,9 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../api-reference/stats.html">stats - Statistics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">cash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash_sum_cython.html">cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cstat.html">cstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.f_cash_root_cython.html">f_cash_root_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_gof_terms.html">get_wstat_gof_terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_mu_bkg.html">get_wstat_mu_bkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.norm_bounds_cython.html">norm_bounds_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.wstat.html">wstat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fvar.html">compute_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fpp.html">compute_fpp</a></li>
@@ -756,7 +750,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.weighted_cash_sum_cython.html">weighted_cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.sigma_to_ts.html">sigma_to_ts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.ts_to_sigma.html">ts_to_sigma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
@@ -782,6 +775,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -916,7 +911,7 @@
 <h1>cash<a class="headerlink" href="#cash" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="gammapy.stats.cash">
-<span class="sig-prename descclassname"><span class="pre">gammapy.stats.</span></span><span class="sig-name descname"><span class="pre">cash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-25</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/stats/fit_statistics.html#cash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.stats.cash" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">gammapy.stats.</span></span><span class="sig-name descname"><span class="pre">cash</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">truncation_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/stats/fit_statistics.html#cash"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.stats.cash" title="Link to this definition">#</a></dt>
 <dd><p>Cash statistic, for Poisson data.</p>
 <p>The Cash statistic is defined as:</p>
 <div class="math notranslate nohighlight">

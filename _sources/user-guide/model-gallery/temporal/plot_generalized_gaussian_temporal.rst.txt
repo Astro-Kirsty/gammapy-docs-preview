@@ -132,8 +132,8 @@ Here is an example YAML file using the model:
                 value: 0.6666666666666666
             scale: utc
     metadata:
-        creator: Gammapy 2.0.dev1454+g847764624.d20250624
-        date: '2025-06-24T11:19:18.993152'
+        creator: Gammapy 2.0.dev1916+g4ebdb930c
+        date: '2025-07-28T08:44:53.893842'
         origin: null
 
 

@@ -32,7 +32,7 @@ will be done in two different ways:
 -  handling all the observations separately and doing a joint fitting on
    all the maps
 
-.. GENERATED FROM PYTHON SOURCE LINES 17-36
+.. GENERATED FROM PYTHON SOURCE LINES 17-38
 
 .. code-block:: Python
 
@@ -54,82 +54,17 @@ will be done in two different ways:
         PointSpatialModel,
         SkyModel,
     )
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 37-39
-
-Check setup
------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 39-45
-
-.. code-block:: Python
-
-    from gammapy.utils.check import check_tutorials_setup
     from gammapy.visualization import plot_distribution
 
-    check_tutorials_setup()
 
 
 
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
 
 
-    System:
-
-            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.12    
-            machine                : x86_64     
-            system                 : Linux      
-
-
-    Gammapy package:
-
-            version                : 2.0.dev1454+g847764624.d20250624 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
-
-
-    Other packages:
-
-            numpy                  : 2.3.1      
-            scipy                  : 1.16.0     
-            astropy                : 7.1.0      
-            regions                : 0.10       
-            click                  : 8.2.1      
-            yaml                   : 6.0.2      
-            IPython                : 9.3.0      
-            jupyterlab             : not installed 
-            matplotlib             : 3.9.4      
-            pandas                 : not installed 
-            healpy                 : 1.18.1     
-            iminuit                : 2.31.1     
-            sherpa                 : 4.17.1     
-            naima                  : 0.10.2     
-            emcee                  : 3.1.6      
-            corner                 : 2.2.3      
-            ray                    : 2.47.1     
-
-
-    Gammapy environment variables:
-
-            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 46-53
+.. GENERATED FROM PYTHON SOURCE LINES 39-46
 
 Analysis configuration
 ----------------------
@@ -139,7 +74,7 @@ geometries, irrespective of joint/stacked analysis. For configuration of
 the analysis, we will programmatically build a config file from scratch.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 53-91
+.. GENERATED FROM PYTHON SOURCE LINES 46-84
 
 .. code-block:: Python
 
@@ -295,8 +230,8 @@ the analysis, we will programmatically build a config file from scratch.
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1454+g847764624.d20250624
-            date: '2025-06-24T11:40:11.764373'
+            creator: Gammapy 2.0.dev1916+g4ebdb930c
+            date: '2025-07-28T08:50:37.625470'
             origin: null
     
     AnalysisConfig
@@ -409,15 +344,15 @@ the analysis, we will programmatically build a config file from scratch.
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1454+g847764624.d20250624
-            date: '2025-06-24T11:40:11.773086'
+            creator: Gammapy 2.0.dev1916+g4ebdb930c
+            date: '2025-07-28T08:50:37.628825'
             origin: null
     
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-100
+.. GENERATED FROM PYTHON SOURCE LINES 85-93
 
 Configuration for stacked and joint analysis
 --------------------------------------------
@@ -428,7 +363,7 @@ will write it as two config files and save it to disc in YAML format for
 future reference.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-114
+.. GENERATED FROM PYTHON SOURCE LINES 93-107
 
 .. code-block:: Python
 
@@ -454,15 +389,15 @@ future reference.
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/examples/tutorials/analysis-3d/analysis_3d.py:101: PydanticDeprecatedSince20: The `copy` method is deprecated; use `model_copy` instead. See the docstring of `BaseModel.copy` for details about how to handle `include` and `exclude`. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    /home/feijen/Documents/github/gammapy/examples/tutorials/analysis-3d/analysis_3d.py:94: PydanticDeprecatedSince20: The `copy` method is deprecated; use `model_copy` instead. See the docstring of `BaseModel.copy` for details about how to handle `include` and `exclude`. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
       config_stack = config.copy(deep=True)
-    /home/feijen/Documents/github/gammapy/examples/tutorials/analysis-3d/analysis_3d.py:104: PydanticDeprecatedSince20: The `copy` method is deprecated; use `model_copy` instead. See the docstring of `BaseModel.copy` for details about how to handle `include` and `exclude`. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    /home/feijen/Documents/github/gammapy/examples/tutorials/analysis-3d/analysis_3d.py:97: PydanticDeprecatedSince20: The `copy` method is deprecated; use `model_copy` instead. See the docstring of `BaseModel.copy` for details about how to handle `include` and `exclude`. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
       config_joint = config.copy(deep=True)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-124
+.. GENERATED FROM PYTHON SOURCE LINES 108-117
 
 Stacked analysis
 ----------------
@@ -474,7 +409,7 @@ We first show the steps for the stacked analysis and then repeat the
 same for the joint analysis later
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-130
+.. GENERATED FROM PYTHON SOURCE LINES 117-130
 
 .. code-block:: Python
 
@@ -484,21 +419,7 @@ same for the joint analysis later
 
     analysis_stacked = Analysis(config_stacked)
 
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 131-132
-
-select observations:
-
-.. GENERATED FROM PYTHON SOURCE LINES 132-138
-
-.. code-block:: Python
-
+    # select observations:
     analysis_stacked.get_observations()
 
     # run data reduction
@@ -523,12 +444,12 @@ select observations:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-141
+.. GENERATED FROM PYTHON SOURCE LINES 131-133
 
 We have one final dataset, which we can print and explore
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 141-145
+.. GENERATED FROM PYTHON SOURCE LINES 133-137
 
 .. code-block:: Python
 
@@ -575,12 +496,12 @@ We have one final dataset, which we can print and explore
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-148
+.. GENERATED FROM PYTHON SOURCE LINES 138-140
 
 To plot a smooth counts map
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-152
+.. GENERATED FROM PYTHON SOURCE LINES 140-144
 
 .. code-block:: Python
 
@@ -606,12 +527,12 @@ To plot a smooth counts map
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 153-155
+.. GENERATED FROM PYTHON SOURCE LINES 145-147
 
 And the background map
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-159
+.. GENERATED FROM PYTHON SOURCE LINES 147-151
 
 .. code-block:: Python
 
@@ -637,12 +558,12 @@ And the background map
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-162
+.. GENERATED FROM PYTHON SOURCE LINES 152-154
 
 We can quickly check the PSF
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-166
+.. GENERATED FROM PYTHON SOURCE LINES 154-158
 
 .. code-block:: Python
 
@@ -662,12 +583,12 @@ We can quickly check the PSF
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-169
+.. GENERATED FROM PYTHON SOURCE LINES 159-161
 
 And the energy dispersion in the center of the map
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 169-173
+.. GENERATED FROM PYTHON SOURCE LINES 161-165
 
 .. code-block:: Python
 
@@ -687,12 +608,12 @@ And the energy dispersion in the center of the map
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-176
+.. GENERATED FROM PYTHON SOURCE LINES 166-168
 
 You can also get an excess image with a few lines of code:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-181
+.. GENERATED FROM PYTHON SOURCE LINES 168-173
 
 .. code-block:: Python
 
@@ -713,7 +634,7 @@ You can also get an excess image with a few lines of code:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 182-191
+.. GENERATED FROM PYTHON SOURCE LINES 174-183
 
 Modeling and fitting
 ~~~~~~~~~~~~~~~~~~~~
@@ -725,20 +646,20 @@ We choose a point source model with an exponential cutoff power-law
 spectrum.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-204
+.. GENERATED FROM PYTHON SOURCE LINES 186-196
 
 To perform the fit on a restricted energy range, we can create a
-specific *mask*. On the dataset, the `mask_fit` is a `Map` sharing
-the same geometry as the `MapDataset` and containing boolean data.
+specific *mask*. On the dataset, the `mask_fit` is a `~gammapy.maps.Map` sharing
+the same geometry as the `~gammapy.datasets.MapDataset` and containing boolean data.
 
 To create a mask to limit the fit within a restricted energy range, one
 can rely on the `~gammapy.maps.Geom.energy_mask()` method.
 
 For more details on masks and the techniques to create them in gammapy,
-please checkout the dedicated :doc:`/tutorials/api/mask_maps` tutorial.
+please checkout the dedicated :doc:`/tutorials/details/mask_maps` tutorial.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 204-232
+.. GENERATED FROM PYTHON SOURCE LINES 196-228
 
 .. code-block:: Python
 
@@ -770,17 +691,6 @@ please checkout the dedicated :doc:`/tutorials/api/mask_maps` tutorial.
 
     dataset_stacked.models = models_stacked
 
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 233-237
-
-.. code-block:: Python
-
     fit = Fit(optimize_opts={"print_level": 1})
     result = fit.run(datasets=[dataset_stacked])
 
@@ -792,18 +702,19 @@ please checkout the dedicated :doc:`/tutorials/api/mask_maps` tutorial.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-241
+.. GENERATED FROM PYTHON SOURCE LINES 229-233
 
-Fit quality assessment and model residuals for a `MapDataset`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _mapdataset_fit_quality:
+Fit quality assessment and model residuals for a `~gammapy.datasets.MapDataset`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 244-246
+.. GENERATED FROM PYTHON SOURCE LINES 236-238
 
 We can access the results dictionary to see if the fit converged:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 246-250
+.. GENERATED FROM PYTHON SOURCE LINES 238-242
 
 .. code-block:: Python
 
@@ -839,12 +750,12 @@ We can access the results dictionary to see if the fit converged:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-253
+.. GENERATED FROM PYTHON SOURCE LINES 243-245
 
 Check best-fit parameters and error estimates:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 253-257
+.. GENERATED FROM PYTHON SOURCE LINES 245-249
 
 .. code-block:: Python
 
@@ -876,16 +787,16 @@ Check best-fit parameters and error estimates:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 258-264
+.. GENERATED FROM PYTHON SOURCE LINES 250-256
 
 A quick way to inspect the model residuals is using the function
-`~MapDataset.plot_residuals_spatial()`. This function computes and
+`~gammapy.datasets.MapDataset.plot_residuals_spatial()`. This function computes and
 plots a residual image (by default, the smoothing radius is `0.1 deg`
 and `method=diff`, which corresponds to a simple `data - model`
 plot):
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-268
+.. GENERATED FROM PYTHON SOURCE LINES 256-260
 
 .. code-block:: Python
 
@@ -905,13 +816,13 @@ plot):
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 269-272
+.. GENERATED FROM PYTHON SOURCE LINES 261-264
 
-The more general function `~MapDataset.plot_residuals()` can also
+The more general function `~gammapy.datasets.MapDataset.plot_residuals()` can also
 extract and display spectral residuals in a region:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 272-281
+.. GENERATED FROM PYTHON SOURCE LINES 264-273
 
 .. code-block:: Python
 
@@ -936,19 +847,21 @@ extract and display spectral residuals in a region:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-291
+.. GENERATED FROM PYTHON SOURCE LINES 274-285
 
 This way of accessing residuals is quick and handy, but comes with
-limitations. For example: - In case a fitting energy range was defined
-using a `MapDataset.mask_fit`, it won’t be taken into account.
-Residuals will be summed up over the whole reconstructed energy range -
-In order to make a proper statistic treatment, instead of simple
-residuals a proper residuals significance map should be computed
+limitations. For example:
+
+- In case a fitting energy range was defined using a
+  `~gammapy.datasets.MapDataset.mask_fit`, it won’t be taken into account.
+  Residuals will be summed up over the whole reconstructed energy range
+- In order to make a proper statistic treatment, instead of simple
+  residuals a proper residuals significance map should be computed
 
 A more accurate way to inspect spatial residuals is the following:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 291-305
+.. GENERATED FROM PYTHON SOURCE LINES 285-299
 
 .. code-block:: Python
 
@@ -978,12 +891,12 @@ A more accurate way to inspect spatial residuals is the following:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 306-308
+.. GENERATED FROM PYTHON SOURCE LINES 300-302
 
 Distribution of residuals significance in the full map geometry:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 308-322
+.. GENERATED FROM PYTHON SOURCE LINES 302-316
 
 .. code-block:: Python
 
@@ -1013,14 +926,14 @@ Distribution of residuals significance in the full map geometry:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 323-327
+.. GENERATED FROM PYTHON SOURCE LINES 317-321
 
 Here we could also plot the number of predicted counts for each model and
 for the background in our dataset by using the
 `~gammapy.visualization.plot_npred_signal` function.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 330-342
+.. GENERATED FROM PYTHON SOURCE LINES 324-336
 
 Joint analysis
 --------------
@@ -1035,9 +948,10 @@ Data reduction
 ~~~~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 344-359
+.. GENERATED FROM PYTHON SOURCE LINES 336-352
 
 .. code-block:: Python
+
 
 
     # Read the yaml file from disk
@@ -1074,21 +988,21 @@ Data reduction
     Dataset 0: 
 
       Type       : MapDataset
-      Name       : YtQVVt00
+      Name       : OeU93sSt
       Instrument : CTA
       Models     : 
 
     Dataset 1: 
 
       Type       : MapDataset
-      Name       : MrAdGmBH
+      Name       : hysueOFl
       Instrument : CTA
       Models     : 
 
     Dataset 2: 
 
       Type       : MapDataset
-      Name       : ZobwU7R4
+      Name       : 8VsDq89X
       Instrument : CTA
       Models     : 
 
@@ -1097,12 +1011,12 @@ Data reduction
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 360-362
+.. GENERATED FROM PYTHON SOURCE LINES 353-355
 
 You can access each one by name or by index, eg:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 362-366
+.. GENERATED FROM PYTHON SOURCE LINES 355-359
 
 .. code-block:: Python
 
@@ -1121,7 +1035,7 @@ You can access each one by name or by index, eg:
     MapDataset
     ----------
 
-      Name                            : YtQVVt00 
+      Name                            : OeU93sSt 
 
       Total counts                    : 40481 
       Total background counts         : 36014.51
@@ -1149,7 +1063,7 @@ You can access each one by name or by index, eg:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 367-372
+.. GENERATED FROM PYTHON SOURCE LINES 360-365
 
 After the data reduction stage, it is nice to get a quick summary info
 on the datasets. Here, we look at the statistics in the center of Map,
@@ -1157,7 +1071,7 @@ by passing an appropriate `region`. To get info on the entire spatial
 map, omit the region argument.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 372-389
+.. GENERATED FROM PYTHON SOURCE LINES 365-386
 
 .. code-block:: Python
 
@@ -1178,6 +1092,10 @@ map, omit the region argument.
     # and set the new model
     analysis_joint.datasets.models = models_joint
 
+    fit_joint = Fit()
+    result_joint = fit_joint.run(datasets=analysis_joint.datasets)
+
+
 
 
 
@@ -1186,12 +1104,12 @@ map, omit the region argument.
 
  .. code-block:: none
 
-      name   counts       excess      ... n_fit_bins stat_type stat_sum
-                                      ...                              
-    -------- ------ ----------------- ... ---------- --------- --------
-    YtQVVt00  40481 4466.493043594033 ...     693940      cash      nan
-    MrAdGmBH  40525 4510.505523195898 ...     693940      cash      nan
-    ZobwU7R4  40235 4220.480554966147 ...     693940      cash      nan
+      name   counts       excess       ... n_fit_bins stat_type stat_sum
+                                       ...                              
+    -------- ------ ------------------ ... ---------- --------- --------
+    OeU93sSt  40481 4466.4930435940405 ...     693940      cash      nan
+    hysueOFl  40525  4510.505523195905 ...     693940      cash      nan
+    8VsDq89X  40235  4220.480554966147 ...     693940      cash      nan
     Models
 
     Component 0: SkyModel
@@ -1212,8 +1130,8 @@ map, omit the region argument.
 
     Component 1: FoVBackgroundModel
 
-      Name                      : YtQVVt00-bkg
-      Datasets names            : ['YtQVVt00']
+      Name                      : OeU93sSt-bkg
+      Datasets names            : ['OeU93sSt']
       Spectral model type       : PowerLawNormSpectralModel
       Parameters:
         tilt                  (frozen):      0.000                   
@@ -1222,8 +1140,8 @@ map, omit the region argument.
 
     Component 2: FoVBackgroundModel
 
-      Name                      : MrAdGmBH-bkg
-      Datasets names            : ['MrAdGmBH']
+      Name                      : hysueOFl-bkg
+      Datasets names            : ['hysueOFl']
       Spectral model type       : PowerLawNormSpectralModel
       Parameters:
         tilt                  (frozen):      0.000                   
@@ -1232,8 +1150,8 @@ map, omit the region argument.
 
     Component 3: FoVBackgroundModel
 
-      Name                      : ZobwU7R4-bkg
-      Datasets names            : ['ZobwU7R4']
+      Name                      : 8VsDq89X-bkg
+      Datasets names            : ['8VsDq89X']
       Spectral model type       : PowerLawNormSpectralModel
       Parameters:
         tilt                  (frozen):      0.000                   
@@ -1245,33 +1163,19 @@ map, omit the region argument.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 390-394
+.. GENERATED FROM PYTHON SOURCE LINES 387-391
 
-.. code-block:: Python
-
-    fit_joint = Fit()
-    result_joint = fit_joint.run(datasets=analysis_joint.datasets)
-
+.. _dataset_fit_quality:
+Fit quality assessment and model residuals for a joint `~gammapy.datasets.Datasets`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 395-398
-
-Fit quality assessment and model residuals for a joint `Datasets`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 401-403
+.. GENERATED FROM PYTHON SOURCE LINES 394-396
 
 We can access the results dictionary to see if the fit converged:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 403-407
+.. GENERATED FROM PYTHON SOURCE LINES 396-400
 
 .. code-block:: Python
 
@@ -1293,7 +1197,7 @@ We can access the results dictionary to see if the fit converged:
             method     : migrad
             success    : True
             message    : Optimization terminated successfully.
-            nfev       : 220
+            nfev       : 225
             total stat : 748259.82
 
     CovarianceResult
@@ -1307,12 +1211,12 @@ We can access the results dictionary to see if the fit converged:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 408-410
+.. GENERATED FROM PYTHON SOURCE LINES 401-403
 
 Check best-fit parameters and error estimates:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 410-414
+.. GENERATED FROM PYTHON SOURCE LINES 403-407
 
 .. code-block:: Python
 
@@ -1348,8 +1252,8 @@ Check best-fit parameters and error estimates:
 
     Component 1: FoVBackgroundModel
 
-      Name                      : YtQVVt00-bkg
-      Datasets names            : ['YtQVVt00']
+      Name                      : OeU93sSt-bkg
+      Datasets names            : ['OeU93sSt']
       Spectral model type       : PowerLawNormSpectralModel
       Parameters:
         tilt                  (frozen):      0.000                   
@@ -1358,8 +1262,8 @@ Check best-fit parameters and error estimates:
 
     Component 2: FoVBackgroundModel
 
-      Name                      : MrAdGmBH-bkg
-      Datasets names            : ['MrAdGmBH']
+      Name                      : hysueOFl-bkg
+      Datasets names            : ['hysueOFl']
       Spectral model type       : PowerLawNormSpectralModel
       Parameters:
         tilt                  (frozen):      0.000                   
@@ -1368,8 +1272,8 @@ Check best-fit parameters and error estimates:
 
     Component 3: FoVBackgroundModel
 
-      Name                      : ZobwU7R4-bkg
-      Datasets names            : ['ZobwU7R4']
+      Name                      : 8VsDq89X-bkg
+      Datasets names            : ['8VsDq89X']
       Spectral model type       : PowerLawNormSpectralModel
       Parameters:
         tilt                  (frozen):      0.000                   
@@ -1381,16 +1285,16 @@ Check best-fit parameters and error estimates:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 415-421
+.. GENERATED FROM PYTHON SOURCE LINES 408-414
 
-Since the joint dataset is made of multiple datasets, we can either: -
-Look at the residuals for each dataset separately. In this case, we can
-directly refer to the section
-`Fit quality and model residuals for a MapDataset` in this notebook -
-Or, look at a stacked residual map.
+Since the joint dataset is made of multiple datasets, we can either:
+
+- Look at the residuals for each dataset separately. In this case, we can
+  directly refer to the section :ref:`mapdataset_fit_quality`
+- Or, look at a stacked residual map.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 421-429
+.. GENERATED FROM PYTHON SOURCE LINES 414-422
 
 .. code-block:: Python
 
@@ -1420,20 +1324,19 @@ Or, look at a stacked residual map.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 430-434
+.. GENERATED FROM PYTHON SOURCE LINES 423-426
 
 Then, we can access the stacked model residuals as previously shown in
-the section `Fit quality and model residuals for a MapDataset` in this
-notebook.
+the section :ref:`dataset_fit_quality`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 437-440
+.. GENERATED FROM PYTHON SOURCE LINES 429-432
 
 Finally, let us compare the spectral results from the stacked and joint
 fit:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 440-458
+.. GENERATED FROM PYTHON SOURCE LINES 432-450
 
 .. code-block:: Python
 
@@ -1467,7 +1370,7 @@ fit:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 459-468
+.. GENERATED FROM PYTHON SOURCE LINES 451-460
 
 Summary
 -------
@@ -1479,26 +1382,26 @@ Challenge (DC-1) and also the CTA model for the Galactic diffuse
 emission, as shown in the next image:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 471-473
+.. GENERATED FROM PYTHON SOURCE LINES 463-465
 
 .. image:: ../../_static/DC1_3d.png
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 476-484
+.. GENERATED FROM PYTHON SOURCE LINES 468-476
 
 Exercises
 ---------
 
--  Analyse the second source in the field of view: G0.9+0.1 and add it
-   to the combined model.
--  Perform modeling in more details - Add diffuse component, get flux
-   points.
+- Analyse the second source in the field of view: G0.9+0.1 and add it
+  to the combined model.
+- Perform modeling in more details.
+- Add diffuse component, get flux points.
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (1 minutes 14.526 seconds)
+   **Total running time of the script:** (0 minutes 34.402 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_analysis_3d.py:

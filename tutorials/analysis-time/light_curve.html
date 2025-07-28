@@ -70,7 +70,7 @@
     <link rel="prev" title="Time" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -435,8 +435,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Model Gallery</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../model-gallery/index.html">Model Gallery</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Data exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/veritas.html">VERITAS with Gammapy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../details/index.html">Detailed explanation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../details/irfs.html">Using Gammapy IRFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/observation_clustering.html">Observational clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/theta_square_plot.html">Make a theta-square plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/mask_maps.html">Mask maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/catalog.html">Source catalogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/priors.html">Priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/model_management.html">Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
@@ -445,8 +469,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-2d/index.html">2D Image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +480,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-3d/index.html">3D Cube</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
@@ -472,25 +493,14 @@
 <li class="toctree-l2"><a class="reference internal" href="variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">Package / API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/theta_square_plot.html">Make a theta-square plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/maps.html">Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/mask_maps.html">Mask maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/makers.html">Makers - Data reduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/models.html">Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/model_management.html">Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/priors.html">Priors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/estimators.html">Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/catalog.html">Source catalogs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../astrophysics/index.html">Astrophysics use cases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/pulsar_analysis.html">Pulsar analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../scripts/index.html">Scripts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -619,55 +629,8 @@ extract a light curve independently of the dataset type.</p>
     <a href="../../api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel" title="gammapy.modeling.models.PowerLawSpectralModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">PowerLawSpectralModel</span></a><span class="p">,</span>
     <a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class"><span class="n">SkyModel</span></a><span class="p">,</span>
 <span class="p">)</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_tutorials_setup</span>
 
 <a href="https://docs.python.org/3/library/logging.html#logging.Logger" title="logging.Logger" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">log</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/logging.html#logging.getLogger" title="logging.getLogger" class="sphx-glr-backref-module-logging sphx-glr-backref-type-py-function"><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span></a><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="check-setup">
-<h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">check_tutorials_setup</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
-
-        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.12
-        machine                : x86_64
-        system                 : Linux
-
-
-Gammapy package:
-
-        version                : 2.0.dev1454+g847764624.d20250624
-        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
-
-
-Other packages:
-
-        numpy                  : 2.3.1
-        scipy                  : 1.16.0
-        astropy                : 7.1.0
-        regions                : 0.10
-        click                  : 8.2.1
-        yaml                   : 6.0.2
-        IPython                : 9.3.0
-        jupyterlab             : not installed
-        matplotlib             : 3.9.4
-        pandas                 : not installed
-        healpy                 : 1.18.1
-        iminuit                : 2.31.1
-        sherpa                 : 4.17.1
-        naima                  : 0.10.2
-        emcee                  : 3.1.6
-        corner                 : 2.2.3
-        ray                    : 2.47.1
-
-
-Gammapy environment variables:
-
-        GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/
 </pre></div>
 </div>
 </section>
@@ -775,10 +738,11 @@ Here one dataset equals to one observing run.</p>
 <a href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lc_3d</span></a> <span class="o">=</span> <a href="../../api/gammapy.estimators.LightCurveEstimator.html#gammapy.estimators.LightCurveEstimator.run" title="gammapy.estimators.LightCurveEstimator.run" class="sphx-glr-backref-module-gammapy-estimators sphx-glr-backref-type-py-method"><span class="n">lc_maker_3d</span><span class="o">.</span><span class="n">run</span></a><span class="p">(</span><a href="../../api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets" title="gammapy.datasets.Datasets" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">analysis_3d</span><span class="o">.</span><span class="n">datasets</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p>The lightcurve <a class="reference internal" href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPoints</span></code></a> object <code class="xref py py-obj docutils literal notranslate"><span class="pre">lc_3d</span></code> contains a table which we can explore.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example showing how to change just before plotting the threshold on the signal significance</span>
-<span class="c1"># (points vs upper limits), even if this has no effect with this data set.</span>
-<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span>
+<p>The lightcurve <a class="reference internal" href="../../api/gammapy.estimators.FluxPoints.html#gammapy.estimators.FluxPoints" title="gammapy.estimators.FluxPoints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FluxPoints</span></code></a> object <code class="docutils literal notranslate"><span class="pre">lc_3d</span></code> contains
+a table which we can explore.</p>
+<p>Example showing how to change just before plotting the threshold on the signal significance
+(points vs upper limits), even if this has no effect with this data set.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span>
     <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
     <span class="n">gridspec_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;left&quot;</span><span class="p">:</span> <span class="mf">0.16</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">:</span> <span class="mf">0.98</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">:</span> <span class="mf">0.98</span><span class="p">},</span>
 <span class="p">)</span>
@@ -793,10 +757,10 @@ Here one dataset equals to one observing run.</p>
 <img src="../../_images/sphx_glr_light_curve_001.png" srcset="../../_images/sphx_glr_light_curve_001.png" alt="light curve" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     time_min           time_max     ...        flux_err
                                      ...      1 / (s cm2)
 ------------------ ----------------- ... ----------------------
- 53343.92234009259 53343.94186555556 ... 2.1162290849837497e-12
- 53343.95421509259 53343.97369425926 ... 2.1376407467165896e-12
-  53345.9619812963 53345.98149518519 ... 2.7871694602003052e-12
-53347.913196574074 53347.93271046296 ...  2.911552441438736e-12
+ 53343.92234009259 53343.94186555556 ... 2.1162291157924358e-12
+ 53343.95421509259 53343.97369425926 ... 2.1376407369088326e-12
+  53345.9619812963 53345.98149518519 ...  2.787169476678517e-12
+53347.913196574074 53347.93271046296 ...  2.911552452092108e-12
 </pre></div>
 </div>
 </section>
@@ -952,7 +916,7 @@ scales, the per-observation time binning is no longer relevant. One can
 easily extend the light curve estimation approach presented above to any
 time binning. This is demonstrated in the <a class="reference internal" href="light_curve_flare.html"><span class="doc">Light curves for flares</span></a>
 tutorial. which shows the extraction of the lightcurve of an AGN flare.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 16.855 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.108 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-analysis-time-light-curve-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-time/light_curve.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo3.svg" style="width: 150px;" />
@@ -999,7 +963,6 @@ tutorial. which shows the extraction of the lightcurve of an AGN flare.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-approach">Proposed approach</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-setup">Check setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-configuration">Analysis configuration</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-the-3d-analysis-configuration">Building the 3D analysis configuration</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-of-the-data-selection">Definition of the data selection</a></li>

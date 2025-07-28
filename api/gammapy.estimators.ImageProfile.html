@@ -71,7 +71,7 @@
     <link rel="prev" title="FluxProfileEstimator" href="gammapy.estimators.FluxProfileEstimator.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -520,9 +520,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.SpectrumDatasetOnOff.html">SpectrumDatasetOnOff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.MapDatasetMetaData.html">MapDatasetMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.DATASET_REGISTRY.html">DATASET_REGISTRY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.apply_edisp.html">apply_edisp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.split_dataset.html">split_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.create_map_dataset_from_dl4.html">create_map_dataset_from_dl4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/maps.html">maps - Sky maps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -742,12 +739,9 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/stats.html">stats - Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash.html">cash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash_sum_cython.html">cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cstat.html">cstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.f_cash_root_cython.html">f_cash_root_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_gof_terms.html">get_wstat_gof_terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_mu_bkg.html">get_wstat_mu_bkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.norm_bounds_cython.html">norm_bounds_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.wstat.html">wstat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fvar.html">compute_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fpp.html">compute_fpp</a></li>
@@ -756,7 +750,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.weighted_cash_sum_cython.html">weighted_cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.sigma_to_ts.html">sigma_to_ts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.ts_to_sigma.html">ts_to_sigma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
@@ -782,6 +775,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -1121,8 +1116,8 @@ error propagation, neglecting correlations between the individual
 is interpreted as smoothing width in pixels. If an (angular) quantity
 is given it is converted to pixels using <code class="xref py py-obj docutils literal notranslate"><span class="pre">xref[1]</span> <span class="pre">-</span> <span class="pre">x_ref[0]</span></code>. Default is “0.1 deg”.</p>
 </dd>
-<dt><strong>kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.uniform_filter.html#scipy.ndimage.uniform_filter" title="(in SciPy v1.16.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uniform_filter</span></code></a>
-(‘box’) and <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_filter.html#scipy.ndimage.gaussian_filter" title="(in SciPy v1.16.0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gaussian_filter</span></code></a> (‘gauss’).</p>
+<dt><strong>kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.uniform_filter.html#scipy.ndimage.uniform_filter" title="(in SciPy v1.16.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">uniform_filter</span></code></a>
+(‘box’) and <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_filter.html#scipy.ndimage.gaussian_filter" title="(in SciPy v1.16.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gaussian_filter</span></code></a> (‘gauss’).</p>
 </dd>
 </dl>
 </dd>

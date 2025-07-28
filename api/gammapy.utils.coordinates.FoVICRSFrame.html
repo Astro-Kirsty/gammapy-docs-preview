@@ -70,7 +70,7 @@
     <link rel="prev" title="FoVAltAzFrame" href="gammapy.utils.coordinates.FoVAltAzFrame.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -519,9 +519,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.SpectrumDatasetOnOff.html">SpectrumDatasetOnOff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.MapDatasetMetaData.html">MapDatasetMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.DATASET_REGISTRY.html">DATASET_REGISTRY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.apply_edisp.html">apply_edisp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.split_dataset.html">split_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.create_map_dataset_from_dl4.html">create_map_dataset_from_dl4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/maps.html">maps - Sky maps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -741,12 +738,9 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/stats.html">stats - Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash.html">cash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash_sum_cython.html">cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cstat.html">cstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.f_cash_root_cython.html">f_cash_root_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_gof_terms.html">get_wstat_gof_terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_mu_bkg.html">get_wstat_mu_bkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.norm_bounds_cython.html">norm_bounds_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.wstat.html">wstat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fvar.html">compute_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fpp.html">compute_fpp</a></li>
@@ -755,7 +749,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.weighted_cash_sum_cython.html">weighted_cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.sigma_to_ts.html">sigma_to_ts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.ts_to_sigma.html">ts_to_sigma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
@@ -781,6 +774,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -1122,7 +1117,7 @@
 <td><p>Return a new instance formed from the elements at the given indices.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.utils.coordinates.FoVICRSFrame.to_table" title="gammapy.utils.coordinates.FoVICRSFrame.to_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_table</span></code></a>()</p></td>
-<td><p>Convert this <a href="#id2"><span class="problematic" id="id3">|BaseFrame|</span></a> to a <a href="#id4"><span class="problematic" id="id5">|QTable|</span></a>.</p></td>
+<td><p>Convert this <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCoordinateFrame</span></code></a> to a <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QTable</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.utils.coordinates.FoVICRSFrame.transform_to" title="gammapy.utils.coordinates.FoVICRSFrame.transform_to"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_to</span></code></a>(new_frame)</p></td>
 <td><p>Transform this object's coordinate data to a new frame.</p></td>
@@ -1510,7 +1505,7 @@ only allowed value and will insert a row.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>coord</strong><span class="classifier"><a href="#id6"><span class="problematic" id="id7">|SkyCoord|</span></a>, <a href="#id8"><span class="problematic" id="id9">|BaseFrame|</span></a></span></dt><dd><p>Copy of instance with new values inserted.</p>
+<dt><strong>coord</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">SkyCoord</span></code></a>, <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCoordinateFrame</span></code></a></span></dt><dd><p>Copy of instance with new values inserted.</p>
 </dd>
 </dl>
 </dd>
@@ -1928,14 +1923,14 @@ obviously, no output array can be given.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="gammapy.utils.coordinates.FoVICRSFrame.to_table">
 <span class="sig-name descname"><span class="pre">to_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="astropy.table.QTable"><code class="docutils literal notranslate"><span class="pre">astropy.table.QTable</span></code></a></span></span><a class="headerlink" href="#gammapy.utils.coordinates.FoVICRSFrame.to_table" title="Link to this definition">#</a></dt>
-<dd><p>Convert this <a href="#id10"><span class="problematic" id="id11">|BaseFrame|</span></a> to a <a href="#id12"><span class="problematic" id="id13">|QTable|</span></a>.</p>
-<p>Any attributes that have the same length as the <a href="#id14"><span class="problematic" id="id15">|BaseFrame|</span></a> will be
-converted to columns of the <a href="#id16"><span class="problematic" id="id17">|QTable|</span></a>. All other attributes will be
+<dd><p>Convert this <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCoordinateFrame</span></code></a> to a <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QTable</span></code></a>.</p>
+<p>Any attributes that have the same length as the <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCoordinateFrame</span></code></a> will be
+converted to columns of the <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QTable</span></code></a>. All other attributes will be
 recorded as metadata.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QTable</span></code></a></dt><dd><p>A <a href="#id18"><span class="problematic" id="id19">|QTable|</span></a> containing the data of this <a href="#id20"><span class="problematic" id="id21">|BaseFrame|</span></a>.</p>
+<dt><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">QTable</span></code></a></dt><dd><p>A <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QTable</span></code></a> containing the data of this <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.BaseCoordinateFrame.html#astropy.coordinates.BaseCoordinateFrame" title="(in Astropy v7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseCoordinateFrame</span></code></a>.</p>
 </dd>
 </dl>
 </dd>

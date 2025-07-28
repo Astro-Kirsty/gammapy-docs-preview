@@ -70,7 +70,7 @@
     <link rel="prev" title="Estimation of time variability in a lightcurve" href="variability_estimation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -435,8 +435,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Model Gallery</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../model-gallery/index.html">Model Gallery</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Data exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/veritas.html">VERITAS with Gammapy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../details/index.html">Detailed explanation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../details/irfs.html">Using Gammapy IRFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/observation_clustering.html">Observational clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/theta_square_plot.html">Make a theta-square plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/mask_maps.html">Mask maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/catalog.html">Source catalogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/priors.html">Priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/model_management.html">Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
@@ -445,8 +469,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-2d/index.html">2D Image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +480,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-3d/index.html">3D Cube</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
@@ -472,25 +493,14 @@
 <li class="toctree-l2"><a class="reference internal" href="variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">Package / API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/theta_square_plot.html">Make a theta-square plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/maps.html">Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/mask_maps.html">Mask maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/makers.html">Makers - Data reduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/models.html">Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/model_management.html">Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/priors.html">Priors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/estimators.html">Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/catalog.html">Source catalogs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../astrophysics/index.html">Astrophysics use cases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/pulsar_analysis.html">Pulsar analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../scripts/index.html">Scripts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -728,238 +738,238 @@ modelled.</p>
 Dataset 0:
 
   Type       : SpectrumDatasetOnOff
-  Name       : VnhfvOwa
+  Name       : A-pjiA6-
   Instrument : HESS
   Models     :
 
 Dataset 1:
 
   Type       : SpectrumDatasetOnOff
-  Name       : O6a6pFQl
+  Name       : 9v9tJKxb
   Instrument : HESS
   Models     :
 
 Dataset 2:
 
   Type       : SpectrumDatasetOnOff
-  Name       : m3KKGLfL
+  Name       : 55Oc08FL
   Instrument : HESS
   Models     :
 
 Dataset 3:
 
   Type       : SpectrumDatasetOnOff
-  Name       : 9b9DpJli
+  Name       : SOsoJQWX
   Instrument : HESS
   Models     :
 
 Dataset 4:
 
   Type       : SpectrumDatasetOnOff
-  Name       : YqD69f6t
+  Name       : nrqv-mNO
   Instrument : HESS
   Models     :
 
 Dataset 5:
 
   Type       : SpectrumDatasetOnOff
-  Name       : 7zxxV3Kb
+  Name       : jNA39jMU
   Instrument : HESS
   Models     :
 
 Dataset 6:
 
   Type       : SpectrumDatasetOnOff
-  Name       : ZVmO35lb
+  Name       : TGZ_vJ3b
   Instrument : HESS
   Models     :
 
 Dataset 7:
 
   Type       : SpectrumDatasetOnOff
-  Name       : inVs_tgJ
+  Name       : hCm6vnXQ
   Instrument : HESS
   Models     :
 
 Dataset 8:
 
   Type       : SpectrumDatasetOnOff
-  Name       : h91MYt9N
+  Name       : iNY1Tx8x
   Instrument : HESS
   Models     :
 
 Dataset 9:
 
   Type       : SpectrumDatasetOnOff
-  Name       : Dqa3Iejt
+  Name       : rSrqiC33
   Instrument : HESS
   Models     :
 
 Dataset 10:
 
   Type       : SpectrumDatasetOnOff
-  Name       : ilczlG_O
+  Name       : sLYcPVFG
   Instrument : HESS
   Models     :
 
 Dataset 11:
 
   Type       : SpectrumDatasetOnOff
-  Name       : 9XZzo5kU
+  Name       : pGv9k1TJ
   Instrument : HESS
   Models     :
 
 Dataset 12:
 
   Type       : SpectrumDatasetOnOff
-  Name       : tOwzyp_4
+  Name       : A1T2H4rs
   Instrument : HESS
   Models     :
 
 Dataset 13:
 
   Type       : SpectrumDatasetOnOff
-  Name       : 8F4mza5c
+  Name       : -uugWOxx
   Instrument : HESS
   Models     :
 
 Dataset 14:
 
   Type       : SpectrumDatasetOnOff
-  Name       : bzrgQuwx
+  Name       : fh5ok7hB
   Instrument : HESS
   Models     :
 
 Dataset 15:
 
   Type       : SpectrumDatasetOnOff
-  Name       : YPBySBYz
+  Name       : E4DrrkQb
   Instrument : HESS
   Models     :
 
 Dataset 16:
 
   Type       : SpectrumDatasetOnOff
-  Name       : w5Qq1kTu
+  Name       : gh_anJf4
   Instrument : HESS
   Models     :
 
 Dataset 17:
 
   Type       : SpectrumDatasetOnOff
-  Name       : wWEmLK_b
+  Name       : cu5xOeHX
   Instrument : HESS
   Models     :
 
 Dataset 18:
 
   Type       : SpectrumDatasetOnOff
-  Name       : XgMAl1Eu
+  Name       : hEszq0Tm
   Instrument : HESS
   Models     :
 
 Dataset 19:
 
   Type       : SpectrumDatasetOnOff
-  Name       : Fr-ZK3sF
+  Name       : m7vHduwz
   Instrument : HESS
   Models     :
 
 Dataset 20:
 
   Type       : SpectrumDatasetOnOff
-  Name       : OSojU9NH
+  Name       : aT04e8mh
   Instrument : HESS
   Models     :
 
 Dataset 21:
 
   Type       : SpectrumDatasetOnOff
-  Name       : H38TlFtb
+  Name       : PerILQCs
   Instrument : HESS
   Models     :
 
 Dataset 22:
 
   Type       : SpectrumDatasetOnOff
-  Name       : yV8HFYa_
+  Name       : 14THiwxt
   Instrument : HESS
   Models     :
 
 Dataset 23:
 
   Type       : SpectrumDatasetOnOff
-  Name       : FJzQnV5T
+  Name       : JV35KqDF
   Instrument : HESS
   Models     :
 
 Dataset 24:
 
   Type       : SpectrumDatasetOnOff
-  Name       : u3W8am_h
+  Name       : VzINpa1n
   Instrument : HESS
   Models     :
 
 Dataset 25:
 
   Type       : SpectrumDatasetOnOff
-  Name       : BcFptckK
+  Name       : Ry0kLZUS
   Instrument : HESS
   Models     :
 
 Dataset 26:
 
   Type       : SpectrumDatasetOnOff
-  Name       : NG7csw8I
+  Name       : ZUvDEPnK
   Instrument : HESS
   Models     :
 
 Dataset 27:
 
   Type       : SpectrumDatasetOnOff
-  Name       : ibq3vdL8
+  Name       : MCPnI34N
   Instrument : HESS
   Models     :
 
 Dataset 28:
 
   Type       : SpectrumDatasetOnOff
-  Name       : QQQCqRZ7
+  Name       : iHAGBKte
   Instrument : HESS
   Models     :
 
 Dataset 29:
 
   Type       : SpectrumDatasetOnOff
-  Name       : olRQXPPP
+  Name       : HS7Snh2t
   Instrument : HESS
   Models     :
 
 Dataset 30:
 
   Type       : SpectrumDatasetOnOff
-  Name       : ML5o52Q_
+  Name       : mLuNwryq
   Instrument : HESS
   Models     :
 
 Dataset 31:
 
   Type       : SpectrumDatasetOnOff
-  Name       : d5_NFeJ8
+  Name       : B926BopE
   Instrument : HESS
   Models     :
 
 Dataset 32:
 
   Type       : SpectrumDatasetOnOff
-  Name       : 3vU11WVA
+  Name       : 5iDVk2mZ
   Instrument : HESS
   Models     :
 
 Dataset 33:
 
   Type       : SpectrumDatasetOnOff
-  Name       : IqDiUsBJ
+  Name       : X35NNd0w
   Instrument : HESS
   Models     :
 </pre></div>
@@ -1033,12 +1043,6 @@ created.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">valid_times</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results</span></a> <span class="o">=</span> <span class="n">time_resolved_spectroscopy</span><span class="p">(</span><a href="../../api/gammapy.datasets.Datasets.html#gammapy.datasets.Datasets" title="gammapy.datasets.Datasets" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">datasets</span></a><span class="p">,</span> <a href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sky_model</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_intervals</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
-  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
-  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
-</pre></div>
-</div>
 <p>To view the results of the fit,</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">results</span></a><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
@@ -1082,7 +1086,7 @@ Component 0: SkyModel
 <p>To better visualise the data, we can create a table by extracting some
 relevant information. In the following, we extract the time intervals,
 information on the fit convergence and the free parameters. You can
-extract more information if required, eg, the <code class="xref py py-obj docutils literal notranslate"><span class="pre">total_stat</span></code> in each
+extract more information if required, eg, the <code class="docutils literal notranslate"><span class="pre">total_stat</span></code> in each
 bin, etc.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_table</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_intervals</span></a><span class="p">,</span> <span class="n">fit_result</span><span class="p">):</span>
     <span class="n">t</span> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.table.QTable.html#astropy.table.QTable" title="astropy.table.QTable" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class"><span class="n">QTable</span></a><span class="p">()</span>
@@ -1197,7 +1201,7 @@ broken power law.</p></li>
 <li><p>Compare the significance of the new model with the simple power law.
 Take note of any fit non-convergence in the bins.</p></li>
 </ol>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 28.163 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 15.060 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-analysis-time-time-resolved-spectroscopy-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-time/time_resolved_spectroscopy.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo3.svg" style="width: 150px;" />

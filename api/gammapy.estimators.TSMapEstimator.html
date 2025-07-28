@@ -71,7 +71,7 @@
     <link rel="prev" title="ParameterSensitivityEstimator" href="gammapy.estimators.ParameterSensitivityEstimator.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -520,9 +520,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.SpectrumDatasetOnOff.html">SpectrumDatasetOnOff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.MapDatasetMetaData.html">MapDatasetMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.DATASET_REGISTRY.html">DATASET_REGISTRY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.apply_edisp.html">apply_edisp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.split_dataset.html">split_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.create_map_dataset_from_dl4.html">create_map_dataset_from_dl4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/maps.html">maps - Sky maps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -742,12 +739,9 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/stats.html">stats - Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash.html">cash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash_sum_cython.html">cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cstat.html">cstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.f_cash_root_cython.html">f_cash_root_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_gof_terms.html">get_wstat_gof_terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_mu_bkg.html">get_wstat_mu_bkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.norm_bounds_cython.html">norm_bounds_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.wstat.html">wstat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fvar.html">compute_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fpp.html">compute_fpp</a></li>
@@ -756,7 +750,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.weighted_cash_sum_cython.html">weighted_cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.sigma_to_ts.html">sigma_to_ts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.ts_to_sigma.html">ts_to_sigma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
@@ -782,6 +775,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -928,26 +923,32 @@ access to all computed quantities (see the example below and the <a class="refer
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a></span></dt><dd><p>Source model kernel. If set to None,
-assume spatail model: point source model, PointSpatialModel.
-spectral model: PowerLawSpectral Model of index 2</p>
+<dt><strong>model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>, optional</span></dt><dd><p>Source model kernel. If set to None,
+the assumes spatial model is <a class="reference internal" href="gammapy.modeling.models.PointSpatialModel.html#gammapy.modeling.models.PointSpatialModel" title="gammapy.modeling.models.PointSpatialModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PointSpatialModel</span></code></a> and the
+spectral model is <a class="reference internal" href="gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel" title="gammapy.modeling.models.PowerLawSpectralModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PowerLawSpectralModel</span></code></a> with an index of 2.
+Default is None.</p>
 </dd>
-<dt><strong>kernel_width</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Angle</span></code></a></span></dt><dd><p>Width of the kernel to use: the kernel will be truncated at this size</p>
+<dt><strong>kernel_width</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.coordinates.Angle.html#astropy.coordinates.Angle" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Angle</span></code></a>, optional</span></dt><dd><p>Width of the kernel to use: the kernel will be truncated at this size.
+Default is None.</p>
 </dd>
-<dt><strong>n_sigma</strong><span class="classifier">int</span></dt><dd><p>Number of sigma for flux error. Default is 1.</p>
-</dd>
-<dt><strong>n_sigma_ul</strong><span class="classifier">int</span></dt><dd><p>Number of sigma for flux upper limits. Default is 2.</p>
-</dd>
-<dt><strong>n_sigma_sensitivity</strong><span class="classifier">int</span></dt><dd><p>Number of sigma for flux  sensitivity. Default is 5.</p>
-</dd>
-<dt><strong>downsampling_factor</strong><span class="classifier">int</span></dt><dd><p>Sample down the input maps to speed up the computation. Only integer
+<dt><strong>downsampling_factor</strong><span class="classifier">int, optional</span></dt><dd><p>Sample down the input maps to speed up the computation. Only integer
 values that are a multiple of 2 are allowed. Note that the kernel is
-not sampled down, but must be provided with the downsampled bin size.</p>
+not sampled down, but must be provided with the downsampled bin size.
+Default is None.</p>
+</dd>
+<dt><strong>n_sigma</strong><span class="classifier">float, optional</span></dt><dd><p>Number of sigma for flux error. Must be a positive value.
+Default is 1.</p>
+</dd>
+<dt><strong>n_sigma_ul</strong><span class="classifier">float, optional</span></dt><dd><p>Number of sigma for flux upper limits. Must be a positive value.
+Default is 2.</p>
+</dd>
+<dt><strong>n_sigma_sensitivity</strong><span class="classifier">float, optional</span></dt><dd><p>Number of sigma for flux sensitivity. Must be a positive value.
+Default is 5.</p>
 </dd>
 <dt><strong>threshold</strong><span class="classifier">float, optional</span></dt><dd><p>If the test statistic value corresponding to the initial flux estimate is not above
 this threshold, the optimizing step is omitted to save computing time. Default is None.</p>
 </dd>
-<dt><strong>rtol</strong><span class="classifier">float</span></dt><dd><p>Relative precision of the flux estimate. Used as a stopping criterion for
+<dt><strong>rtol</strong><span class="classifier">float, optional</span></dt><dd><p>Relative precision of the flux estimate. Used as a stopping criterion for
 the norm fit. Default is 0.01.</p>
 </dd>
 <dt><strong>selection_optional</strong><span class="classifier">list of str, optional</span></dt><dd><p>Which maps to compute besides TS, sqrt(TS), flux and symmetric error on flux.
@@ -969,24 +970,24 @@ but rather the closest values to the energy axis edges of the parent dataset.
 Default is None: apply the estimator in each energy bin of the parent dataset.
 For further explanation see <a class="reference internal" href="../user-guide/estimators.html#estimators"><span class="std std-ref">Estimators (DL4 to DL5, and DL6)</span></a>.</p>
 </dd>
-<dt><strong>sum_over_energy_groups</strong><span class="classifier">bool</span></dt><dd><p>Whether to sum over the energy groups or fit the norm on the full energy
-cube.</p>
+<dt><strong>sum_over_energy_groups</strong><span class="classifier">bool, optional</span></dt><dd><p>Whether to sum over the energy groups or fit the norm on the full energy
+cube. Default is True.</p>
 </dd>
-<dt><strong>norm</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.Parameter.html#gammapy.modeling.Parameter" title="gammapy.modeling.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a> or dict</span></dt><dd><p>Norm parameter used for the likelihood profile computation on a fixed norm range.
-Only used for “stat_scan” in <a class="reference internal" href="#gammapy.estimators.TSMapEstimator.selection_optional" title="gammapy.estimators.TSMapEstimator.selection_optional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selection_optional</span></code></a>.
-Default is None and a new parameter is created automatically,
-with value=1, name=”norm”, scan_min=-100, scan_max=100,
-and values sampled such as we can probe a 0.1% relative error on the norm.
-If a dict is given the entries should be a subset of
-<a class="reference internal" href="gammapy.modeling.Parameter.html#gammapy.modeling.Parameter" title="gammapy.modeling.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a> arguments.</p>
-</dd>
-<dt><strong>n_jobs</strong><span class="classifier">int</span></dt><dd><p>Number of processes used in parallel for the computation. Default is one,
+<dt><strong>n_jobs</strong><span class="classifier">int, optional</span></dt><dd><p>Number of processes used in parallel for the computation. Default is one,
 unless <a class="reference internal" href="gammapy.utils.parallel.N_JOBS_DEFAULT.html#gammapy.utils.parallel.N_JOBS_DEFAULT" title="gammapy.utils.parallel.N_JOBS_DEFAULT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">N_JOBS_DEFAULT</span></code></a> was modified. The number
 of jobs limited to the number of physical CPUs.</p>
 </dd>
-<dt><strong>parallel_backend</strong><span class="classifier">{“multiprocessing”, “ray”}</span></dt><dd><p>Which backend to use for multiprocessing. Defaults to <a class="reference internal" href="gammapy.utils.parallel.BACKEND_DEFAULT.html#gammapy.utils.parallel.BACKEND_DEFAULT" title="gammapy.utils.parallel.BACKEND_DEFAULT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BACKEND_DEFAULT</span></code></a>.</p>
+<dt><strong>parallel_backend</strong><span class="classifier">{“multiprocessing”, “ray”}, optional</span></dt><dd><p>Which backend to use for multiprocessing. Defaults to <a class="reference internal" href="gammapy.utils.parallel.BACKEND_DEFAULT.html#gammapy.utils.parallel.BACKEND_DEFAULT" title="gammapy.utils.parallel.BACKEND_DEFAULT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BACKEND_DEFAULT</span></code></a>.</p>
 </dd>
-<dt><strong>max_niter</strong><span class="classifier">int</span></dt><dd><p>Maximal number of iterations used by the root finding algorithm.
+<dt><strong>norm</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.Parameter.html#gammapy.modeling.Parameter" title="gammapy.modeling.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a> or dict, optional</span></dt><dd><p>Norm parameter used for the likelihood profile computation on a fixed norm range.
+Only used for “stat_scan” in <a class="reference internal" href="#gammapy.estimators.TSMapEstimator.selection_optional" title="gammapy.estimators.TSMapEstimator.selection_optional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">selection_optional</span></code></a>.
+If a dict is given the entries should be a subset of
+<a class="reference internal" href="gammapy.modeling.Parameter.html#gammapy.modeling.Parameter" title="gammapy.modeling.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a> arguments.
+Default is None and a new parameter is created automatically,
+with value=1, name=”norm”, scan_min=-100, scan_max=100,
+and values sampled such as we can probe a 0.1% relative error on the norm.</p>
+</dd>
+<dt><strong>max_niter</strong><span class="classifier">int, optional</span></dt><dd><p>Maximal number of iterations used by the root finding algorithm.
 Default is 100.</p>
 </dd>
 </dl>
@@ -1021,14 +1022,14 @@ Default is 100.</p>
 
 <span class="go">  geom                   : WcsGeom</span>
 <span class="go">  axes                   : [&#39;lon&#39;, &#39;lat&#39;, &#39;energy&#39;]</span>
-<span class="go">  shape                  : (np.int64(400), np.int64(200), 1)</span>
+<span class="go">  shape                  : (400, 200, 1)</span>
 <span class="go">  quantities             : [&#39;ts&#39;, &#39;norm&#39;, &#39;niter&#39;, &#39;norm_err&#39;, &#39;npred&#39;, &#39;npred_excess&#39;, &#39;stat&#39;, &#39;stat_null&#39;, &#39;success&#39;]</span>
 <span class="go">  ref. model             : pl</span>
 <span class="go">  n_sigma                : 1</span>
 <span class="go">  n_sigma_ul             : 2</span>
 <span class="go">  sqrt_ts_threshold_ul   : 2</span>
 <span class="go">  sed type init          : likelihood</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">maps</span><span class="o">.</span><span class="n">available_quantities</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">maps</span><span class="o">.</span><span class="n">available_quantities</span><span class="p">)</span>
 <span class="go">[&#39;ts&#39;, &#39;norm&#39;, &#39;niter&#39;, &#39;norm_err&#39;, &#39;npred&#39;, &#39;npred_excess&#39;, &#39;stat&#39;, &#39;stat_null&#39;, &#39;success&#39;]</span>
 </pre></div>
 </div>

@@ -2,13 +2,6 @@
 
 .. _sphx_glr_tutorials_data:
 
-Model Gallery
-=============
-
-A gallery of all possible spectral, spatial and temporal models can be found in this page:
-:ref:`model-gallery`.
-
-
 Data exploration
 ================
 
@@ -105,7 +98,7 @@ event lists according to different criteria, as well as to get a quick look of t
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">VERITAS with gammapy</div>
+      <div class="sphx-glr-thumbnail-title">VERITAS with Gammapy</div>
     </div>
 
 

@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -502,6 +502,8 @@
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;FluxPoints&quot;</span><span class="p">]</span>
 
 <span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">DEFAULT_LABEL_TEMPLATE</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{quantity}</span><span class="s2"> [</span><span class="si">{unit}</span><span class="s2">]&quot;</span>
 
 
 <span class="k">def</span><span class="w"> </span><span class="nf">squash_fluxpoints</span><span class="p">(</span><span class="n">flux_point</span><span class="p">,</span> <span class="n">axis</span><span class="p">):</span>
@@ -1179,14 +1181,16 @@
     <span class="nd">@staticmethod</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">_plot_format_yax</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">energy_power</span><span class="p">,</span> <span class="n">sed_type</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">energy_power</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;e</span><span class="si">{</span><span class="n">energy_power</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">sed_type</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">UNIT_STRING_FORMAT</span><span class="p">)</span><span class="si">}</span><span class="s2">]&quot;</span>
+            <span class="n">ylabel</span> <span class="o">=</span> <span class="n">DEFAULT_LABEL_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;e</span><span class="si">{</span><span class="n">energy_power</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">sed_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">unit</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">UNIT_STRING_FORMAT</span><span class="p">),</span>
             <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sed_type</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">UNIT_STRING_FORMAT</span><span class="p">)</span><span class="si">}</span><span class="s2">]&quot;</span>
+            <span class="n">ylabel</span> <span class="o">=</span> <span class="n">DEFAULT_LABEL_TEMPLATE</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="n">quantity</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">sed_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                <span class="n">unit</span><span class="o">=</span><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">units</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">UNIT_STRING_FORMAT</span><span class="p">),</span>
             <span class="p">)</span>
-
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">ylabel</span><span class="p">)</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">,</span> <span class="n">nonpositive</span><span class="o">=</span><span class="s2">&quot;clip&quot;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="FluxPoints.plot_ts_profiles">
@@ -1298,8 +1302,9 @@
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
-<span class="sd">        n_sigma_ul : int</span>
-<span class="sd">            Number of sigma to use for upper limit computation. Default is 2.</span>
+<span class="sd">        n_sigma_ul : float, optional</span>
+<span class="sd">            Number of sigma to use for upper limit computation. Must be a positive value.</span>
+<span class="sd">            Default is 2.</span>
 <span class="sd">        **kwargs : dict, optional</span>
 <span class="sd">            Keyword arguments passed to `~scipy.optimize.brentq`.</span>
 
@@ -1311,13 +1316,13 @@
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; from gammapy.estimators import FluxPoints</span>
-<span class="sd">        &gt;&gt;&gt; filename = &#39;$GAMMAPY_DATA/tests/spectrum/flux_points/binlike.fits&#39;</span>
+<span class="sd">        &gt;&gt;&gt; filename = &quot;$GAMMAPY_DATA/estimators/crab_hess_fp/crab_hess_fp.fits&quot;</span>
 <span class="sd">        &gt;&gt;&gt; flux_points = FluxPoints.read(filename)</span>
-<span class="sd">        &gt;&gt;&gt; flux_points_recomputed = flux_points.recompute_ul(n_sigma_ul=3)</span>
-<span class="sd">        &gt;&gt;&gt; print(flux_points.meta[&quot;n_sigma_ul&quot;], flux_points.flux_ul.data[0])</span>
-<span class="sd">        2.0 [[3.95451985e-09]]</span>
-<span class="sd">        &gt;&gt;&gt; print(flux_points_recomputed.meta[&quot;n_sigma_ul&quot;], flux_points_recomputed.flux_ul.data[0])</span>
-<span class="sd">        3 [[6.22245374e-09]]</span>
+<span class="sd">        &gt;&gt;&gt; flux_points_recomputed = flux_points.recompute_ul(n_sigma_ul=4)</span>
+<span class="sd">        &gt;&gt;&gt; print(flux_points.meta[&quot;n_sigma_ul&quot;], flux_points.flux_ul.data[1])</span>
+<span class="sd">        3.0 [[3.99250033e-11]]</span>
+<span class="sd">        &gt;&gt;&gt; print(flux_points_recomputed.meta[&quot;n_sigma_ul&quot;], flux_points_recomputed.flux_ul.data[1])</span>
+<span class="sd">        4 [[4.24707167e-11]]</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_stat_profiles</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>

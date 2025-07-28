@@ -40,7 +40,7 @@ Context
 
 As already explained in the :doc:`/tutorials/analysis-1d/spectral_analysis`
 tutorial, the background is estimated from the field of view of the observation.
-In particular, the source and background events are counted within a circular 
+In particular, the source and background events are counted within a circular
 ON region enclosing the source. The background to be subtracted is then estimated
 from one or more OFF regions with an expected background rate similar to the one
 in the ON region (i.e. from regions with similar acceptance).
@@ -70,7 +70,7 @@ specifications offer two different ways to store this information:
   values are stored in additional `FITS` data unit, named
   `RAD_MAX_2D <https://gamma-astro-data-formats.readthedocs.io/en/latest/irfs/point_like/#rad-max-2d>`__.
 
-`Gammapy` provides a class to automatically read these values,
+Gammapy provides a class to automatically read these values,
 `~gammapy.irf.RadMax2D`, for both cases (fixed or energy-dependent
 :math:`\theta` cut). In this notebook we will focus on how to perform a
 spectral extraction with a point-like IRF with an energy-dependent
@@ -98,8 +98,8 @@ We load two MAGIC observations in the
 IRF component with a :math:`\theta` cut.
 
 We define the ON region, this time as a `~regions.PointSkyRegion` instead of a
-`CircleSkyRegion`, i.e. we specify only the center of our ON region.
-We create a `RegionGeom` adding to the region the estimated energy
+`~regions.CircleSkyRegion`, i.e. we specify only the center of our ON region.
+We create a `~gammapy.maps.RegionGeom` adding to the region the estimated energy
 axis of the `~gammapy.datasets.SpectrumDataset` object we want to
 produce. The corresponding dataset maker will automatically use the
 :math:`\theta` values in `~gammapy.irf.RadMax2D` to set the
@@ -144,7 +144,7 @@ Setup
 As usual, we’ll start with some setup …
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-133
+.. GENERATED FROM PYTHON SOURCE LINES 116-135
 
 .. code-block:: Python
 
@@ -164,82 +164,17 @@ As usual, we’ll start with some setup …
         SkyModel,
         create_crab_spectral_model,
     )
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 134-136
-
-Check setup
------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 136-142
-
-.. code-block:: Python
-
-    from gammapy.utils.check import check_tutorials_setup
     from gammapy.visualization import plot_spectrum_datasets_off_regions
 
-    check_tutorials_setup()
 
 
 
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
 
 
-    System:
-
-            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.12    
-            machine                : x86_64     
-            system                 : Linux      
-
-
-    Gammapy package:
-
-            version                : 2.0.dev1454+g847764624.d20250624 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
-
-
-    Other packages:
-
-            numpy                  : 2.3.1      
-            scipy                  : 1.16.0     
-            astropy                : 7.1.0      
-            regions                : 0.10       
-            click                  : 8.2.1      
-            yaml                   : 6.0.2      
-            IPython                : 9.3.0      
-            jupyterlab             : not installed 
-            matplotlib             : 3.9.4      
-            pandas                 : not installed 
-            healpy                 : 1.18.1     
-            iminuit                : 2.31.1     
-            sherpa                 : 4.17.1     
-            naima                  : 0.10.2     
-            emcee                  : 3.1.6      
-            corner                 : 2.2.3      
-            ray                    : 2.47.1     
-
-
-    Gammapy environment variables:
-
-            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 143-149
+.. GENERATED FROM PYTHON SOURCE LINES 136-142
 
 Load data
 ---------
@@ -248,7 +183,7 @@ We load the two MAGIC observations of the Crab Nebula containing the
 `RAD_MAX_2D` table.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-154
+.. GENERATED FROM PYTHON SOURCE LINES 142-147
 
 .. code-block:: Python
 
@@ -264,7 +199,7 @@ We load the two MAGIC observations of the Crab Nebula containing the
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-160
+.. GENERATED FROM PYTHON SOURCE LINES 148-153
 
 A `RadMax2D` attribute, containing the `RAD_MAX_2D` table, is
 automatically loaded in the observation. As we can see from the IRF
@@ -272,7 +207,7 @@ component axes, the table has a single offset value and 28 estimated
 energy values.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-165
+.. GENERATED FROM PYTHON SOURCE LINES 153-158
 
 .. code-block:: Python
 
@@ -302,12 +237,12 @@ energy values.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 166-168
+.. GENERATED FROM PYTHON SOURCE LINES 159-161
 
 We can also plot the rad max value against the energy:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 168-174
+.. GENERATED FROM PYTHON SOURCE LINES 161-167
 
 .. code-block:: Python
 
@@ -329,7 +264,7 @@ We can also plot the rad max value against the energy:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 175-182
+.. GENERATED FROM PYTHON SOURCE LINES 168-175
 
 Define the ON region
 --------------------
@@ -339,7 +274,7 @@ regions it is necessary to specify the ON region as
 a `~regions.PointSkyRegion`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 182-187
+.. GENERATED FROM PYTHON SOURCE LINES 175-180
 
 .. code-block:: Python
 
@@ -355,7 +290,7 @@ a `~regions.PointSkyRegion`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 188-193
+.. GENERATED FROM PYTHON SOURCE LINES 181-186
 
 Run data reduction chain
 ------------------------
@@ -363,7 +298,7 @@ Run data reduction chain
 We begin with the configuration of the dataset maker classes:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 193-208
+.. GENERATED FROM PYTHON SOURCE LINES 186-201
 
 .. code-block:: Python
 
@@ -389,20 +324,20 @@ We begin with the configuration of the dataset maker classes:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 209-219
+.. GENERATED FROM PYTHON SOURCE LINES 202-212
 
-The `SpectrumDataset` is now based on a geometry consisting of a
+The `~gammapy.datasets.SpectrumDataset` is now based on a geometry consisting of a
 single coordinate and an estimated energy axis. The
-`SpectrumDatasetMaker` and `ReflectedRegionsBackgroundMaker` will
+`~gammapy.datasets.SpectrumDatasetMaker` and `~gammapy.datasets.ReflectedRegionsBackgroundMaker` will
 take care of producing ON and OFF with the proper sizes, automatically
-adopting the :math:`\theta` values in `Observation.rad_max`.
+adopting the :math:`\theta` values in `~gammapy.data.Observation.rad_max`.
 
-As explained in the introduction, we use a `WobbleRegionsFinder`, to
-determine the OFF positions. The parameter `n_off_positions` specifies
+As explained in the introduction, we use a `~gammapy.makers.WobbleRegionsFinder`, to
+determine the OFF positions. The parameter ``n_off_positions`` specifies
 the number of OFF regions to be considered.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 219-231
+.. GENERATED FROM PYTHON SOURCE LINES 212-239
 
 .. code-block:: Python
 
@@ -417,17 +352,6 @@ the number of OFF regions to be considered.
 
     # use the energy threshold specified in the DL3 files
     safe_mask_masker = SafeMaskMaker(methods=["aeff-default"])
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 232-247
-
-.. code-block:: Python
 
     datasets = Datasets()
 
@@ -451,13 +375,13 @@ the number of OFF regions to be considered.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 248-251
+.. GENERATED FROM PYTHON SOURCE LINES 240-243
 
 Now we can plot the off regions and target positions on top of the counts
 map:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 251-258
+.. GENERATED FROM PYTHON SOURCE LINES 243-250
 
 .. code-block:: Python
 
@@ -487,17 +411,16 @@ map:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-266
+.. GENERATED FROM PYTHON SOURCE LINES 251-257
 
 Fit spectrum
 ------------
 
-| We perform a joint likelihood fit of the two datasets.
-| For this particular datasets we select a fit range between
-  :math:`80\,{\rm GeV}` and :math:`20\,{\rm TeV}`.
+We perform a joint likelihood fit of the two datasets. For this particular datasets
+we select a fit range between :math:`80\,{\rm GeV}` and :math:`20\,{\rm TeV}`.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 266-290
+.. GENERATED FROM PYTHON SOURCE LINES 257-281
 
 .. code-block:: Python
 
@@ -529,28 +452,21 @@ Fit spectrum
 
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:86: RuntimeWarning: overflow encountered in reduce
-      return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 291-294
+.. GENERATED FROM PYTHON SOURCE LINES 282-285
 
 Fit quality and model residuals
 -------------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 297-299
+.. GENERATED FROM PYTHON SOURCE LINES 288-290
 
 We can access the results dictionary to see if the fit converged:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-303
+.. GENERATED FROM PYTHON SOURCE LINES 290-294
 
 .. code-block:: Python
 
@@ -586,12 +502,12 @@ We can access the results dictionary to see if the fit converged:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 304-306
+.. GENERATED FROM PYTHON SOURCE LINES 295-297
 
 and check the best-fit parameters
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 306-310
+.. GENERATED FROM PYTHON SOURCE LINES 297-301
 
 .. code-block:: Python
 
@@ -617,13 +533,13 @@ and check the best-fit parameters
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 311-314
+.. GENERATED FROM PYTHON SOURCE LINES 302-305
 
 A simple way to inspect the model residuals is using the function
 `~SpectrumDataset.plot_fit()`
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 314-319
+.. GENERATED FROM PYTHON SOURCE LINES 305-310
 
 .. code-block:: Python
 
@@ -644,13 +560,13 @@ A simple way to inspect the model residuals is using the function
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 320-323
+.. GENERATED FROM PYTHON SOURCE LINES 311-314
 
 For more ways of assessing fit quality, please refer to the dedicated
-:doc:`/tutorials/api/fitting` tutorial.
+:doc:`/tutorials/details/fitting` tutorial.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 326-333
+.. GENERATED FROM PYTHON SOURCE LINES 317-324
 
 Compare against the literature
 ------------------------------
@@ -660,7 +576,7 @@ by
 MAGIC <https://ui.adsabs.harvard.edu/abs/2015JHEAp...5...30A/abstract>`__.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 333-355
+.. GENERATED FROM PYTHON SOURCE LINES 324-345
 
 .. code-block:: Python
 
@@ -668,11 +584,10 @@ MAGIC <https://ui.adsabs.harvard.edu/abs/2015JHEAp...5...30A/abstract>`__.
     plot_kwargs = {
         "energy_bounds": [0.08, 20] * u.TeV,
         "sed_type": "e2dnde",
-        "yunits": u.Unit("TeV cm-2 s-1"),
-        "xunits": u.GeV,
         "ax": ax,
     }
-
+    ax.yaxis.set_units(u.Unit("TeV cm-2 s-1"))
+    ax.xaxis.set_units(u.Unit("GeV"))
     crab_magic_lp = create_crab_spectral_model("magic_lp")
 
     best_fit_model.spectral_model.plot(
@@ -698,7 +613,7 @@ MAGIC <https://ui.adsabs.harvard.edu/abs/2015JHEAp...5...30A/abstract>`__.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 356-364
+.. GENERATED FROM PYTHON SOURCE LINES 346-354
 
 Dataset simulations
 -------------------
@@ -709,7 +624,7 @@ Here, we show how to perform one such simulation assuming the measured off count
 provide a good distribution of the background.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 364-382
+.. GENERATED FROM PYTHON SOURCE LINES 354-372
 
 .. code-block:: Python
 
@@ -744,14 +659,12 @@ provide a good distribution of the background.
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/astropy/units/quantity.py:659: RuntimeWarning: invalid value encountered in divide
-      result = super().__array_ufunc__(function, method, *arrays, **kwargs)
       model   type    name     value         unit      ... min max frozen link prior
     --------- ---- --------- ---------- -------------- ... --- --- ------ ---- -----
-    simulated      amplitude 3.9821e-11 TeV-1 s-1 cm-2 ... nan nan  False           
+    simulated      amplitude 4.7390e-11 TeV-1 s-1 cm-2 ... nan nan  False           
     simulated      reference 1.0000e+00            TeV ... nan nan   True           
-    simulated          alpha 2.4297e+00                ... nan nan  False           
-    simulated           beta 1.1442e-01                ... nan nan  False           
+    simulated          alpha 2.5146e+00                ... nan nan  False           
+    simulated           beta 2.0775e-01                ... nan nan  False           
 
 
 

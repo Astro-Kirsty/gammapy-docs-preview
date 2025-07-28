@@ -174,8 +174,8 @@ Here is an example YAML file using the model:
                 scale_method: scale10
                 scale_transform: lin
     metadata:
-        creator: Gammapy 2.0.dev1454+g847764624.d20250624
-        date: '2025-06-24T11:19:14.390624'
+        creator: Gammapy 2.0.dev1916+g4ebdb930c
+        date: '2025-07-28T08:44:51.481019'
         origin: null
 
 

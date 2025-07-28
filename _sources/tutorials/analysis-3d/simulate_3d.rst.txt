@@ -53,16 +53,16 @@ Proposed approach
 -----------------
 
 Here we can’t use the regular observation objects that are connected to
-a `DataStore`. Instead we will create a fake
+a `~gammapy.data.DataStore`. Instead, we will create a fake
 `~gammapy.data.Observation` that contain some pointing information and
 the CTA 1DC IRFs (that are loaded with `~gammapy.irf.load_irf_dict_from_file`).
 
-Then we will create a `~gammapy.datasets.MapDataset` geometry and
-create it with the `~gammapy.makers.MapDatasetMaker`.
+Next, we will create a `~gammapy.datasets.MapDataset` geometry through
+the `~gammapy.makers.MapDatasetMaker`.
 
-Then we will be able to define a model consisting of a
+Finally, we will define a model consisting of a
 `~gammapy.modeling.models.PowerLawSpectralModel` and a
-`~gammapy.modeling.models.GaussianSpatialModel`. We will assign it to
+`~gammapy.modeling.models.GaussianSpatialModel`. This model will be assigned to
 the dataset and fake the count data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 52-55
@@ -220,9 +220,9 @@ We will simulate using the CTA-1DC IRFs shipped with gammapy
 
 Now, comes the main part of dataset simulation. We create an in-memory
 observation and an empty dataset. We then predict the number of counts
-for the given model, and Poisson fluctuate it using `fake()` to make
+for the given model, and Poisson fluctuate it using ``fake()`` to make
 a simulated counts maps. Keep in mind that it is important to specify
-the `selection` of the maps that you want to produce
+the ``selection`` of the maps that you want to produce
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 146-170
@@ -303,9 +303,9 @@ the `selection` of the maps that you want to produce
 
       Name                            : dataset-simu 
 
-      Total counts                    : 170137 
+      Total counts                    : 169409 
       Total background counts         : 161250.95
-      Total excess counts             : 8886.05
+      Total excess counts             : 8158.05
 
       Predicted counts                : 169871.64
       Predicted background counts     : 161250.95
@@ -318,7 +318,7 @@ the `selection` of the maps that you want to produce
       Number of fit bins              : 804492 
 
       Fit statistic type              : cash
-      Fit statistic value (-2 log(L)) : 563369.67
+      Fit statistic value (-2 log(L)) : 560558.20
 
       Number of models                : 2 
       Number of parameters            : 11
@@ -403,7 +403,7 @@ is useful to simulate many such datasets and look at the distribution of
 the reconstructed parameters.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 191-201
+.. GENERATED FROM PYTHON SOURCE LINES 191-208
 
 .. code-block:: Python
 
@@ -417,8 +417,20 @@ the reconstructed parameters.
     dataset.models = models_fit
     print(dataset.models)
 
+    fit = Fit(optimize_opts={"print_level": 1})
+    result = fit.run(datasets=[dataset])
+
+    dataset.plot_residuals_spatial(method="diff/sqrt(model)", vmin=-0.5, vmax=0.5)
+    plt.show()
 
 
+
+
+
+.. image-sg:: /tutorials/analysis-3d/images/sphx_glr_simulate_3d_002.png
+   :alt: simulate 3d
+   :srcset: /tutorials/analysis-3d/images/sphx_glr_simulate_3d_002.png
+   :class: sphx-glr-single-img
 
 
 .. rst-class:: sphx-glr-script-out
@@ -459,35 +471,12 @@ the reconstructed parameters.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 202-209
-
-.. code-block:: Python
-
-    fit = Fit(optimize_opts={"print_level": 1})
-    result = fit.run(datasets=[dataset])
-
-    dataset.plot_residuals_spatial(method="diff/sqrt(model)", vmin=-0.5, vmax=0.5)
-    plt.show()
-
-
-
-
-
-.. image-sg:: /tutorials/analysis-3d/images/sphx_glr_simulate_3d_002.png
-   :alt: simulate 3d
-   :srcset: /tutorials/analysis-3d/images/sphx_glr_simulate_3d_002.png
-   :class: sphx-glr-single-img
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 210-212
+.. GENERATED FROM PYTHON SOURCE LINES 209-211
 
 Compare the injected and fitted models:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 212-221
+.. GENERATED FROM PYTHON SOURCE LINES 211-220
 
 .. code-block:: Python
 
@@ -537,12 +526,12 @@ Compare the injected and fitted models:
       Spatial  model type       : GaussianSpatialModel
       Temporal model type       : 
       Parameters:
-        index                         :      3.023   +/-    0.02             
-        amplitude                     :   9.65e-12   +/- 3.3e-13 1 / (TeV s cm2)
+        index                         :      3.000   +/-    0.02             
+        amplitude                     :   9.92e-12   +/- 3.3e-13 1 / (TeV s cm2)
         reference             (frozen):      1.000       TeV         
-        lon_0                         :      0.191   +/-    0.01 deg         
-        lat_0                         :      0.101   +/-    0.01 deg         
-        sigma                         :      0.301   +/-    0.00 deg         
+        lon_0                         :      0.196   +/-    0.01 deg         
+        lat_0                         :      0.099   +/-    0.01 deg         
+        sigma                         :      0.298   +/-    0.00 deg         
         e                     (frozen):      0.000                   
         phi                   (frozen):      0.000       deg         
 
@@ -551,12 +540,12 @@ Compare the injected and fitted models:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-224
+.. GENERATED FROM PYTHON SOURCE LINES 221-223
 
 Get the errors on the fitted parameters from the parameter table
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-226
+.. GENERATED FROM PYTHON SOURCE LINES 223-225
 
 .. code-block:: Python
 
@@ -572,12 +561,12 @@ Get the errors on the fitted parameters from the parameter table
 
     type    name     value         unit      ...    max    frozen link prior
     ---- --------- ---------- -------------- ... --------- ------ ---- -----
-             index 3.0233e+00                ...       nan  False           
-         amplitude 9.6494e-12 TeV-1 s-1 cm-2 ...       nan  False           
+             index 3.0000e+00                ...       nan  False           
+         amplitude 9.9184e-12 TeV-1 s-1 cm-2 ...       nan  False           
          reference 1.0000e+00            TeV ...       nan   True           
-             lon_0 1.9094e-01            deg ...       nan  False           
-             lat_0 1.0094e-01            deg ... 9.000e+01  False           
-             sigma 3.0103e-01            deg ...       nan  False           
+             lon_0 1.9645e-01            deg ...       nan  False           
+             lat_0 9.8877e-02            deg ... 9.000e+01  False           
+             sigma 2.9789e-01            deg ...       nan  False           
                  e 0.0000e+00                ... 1.000e+00   True           
                phi 0.0000e+00            deg ... 1.800e+02   True           
               tilt 0.0000e+00                ...       nan   True           
@@ -586,11 +575,6 @@ Get the errors on the fitted parameters from the parameter table
 
 
 
-
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 13.908 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-3d_simulate_3d.py:

@@ -71,7 +71,7 @@
     <link rel="prev" title="BackgroundIRF" href="gammapy.irf.BackgroundIRF.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -520,9 +520,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.SpectrumDatasetOnOff.html">SpectrumDatasetOnOff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.MapDatasetMetaData.html">MapDatasetMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.DATASET_REGISTRY.html">DATASET_REGISTRY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.apply_edisp.html">apply_edisp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.split_dataset.html">split_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.create_map_dataset_from_dl4.html">create_map_dataset_from_dl4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/maps.html">maps - Sky maps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -742,12 +739,9 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/stats.html">stats - Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash.html">cash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash_sum_cython.html">cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cstat.html">cstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.f_cash_root_cython.html">f_cash_root_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_gof_terms.html">get_wstat_gof_terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_mu_bkg.html">get_wstat_mu_bkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.norm_bounds_cython.html">norm_bounds_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.wstat.html">wstat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fvar.html">compute_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fpp.html">compute_fpp</a></li>
@@ -756,7 +750,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.weighted_cash_sum_cython.html">weighted_cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.sigma_to_ts.html">sigma_to_ts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.ts_to_sigma.html">ts_to_sigma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
@@ -782,6 +775,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -963,7 +958,7 @@
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.axes" title="gammapy.irf.EDispKernel.axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axes</span></code></a></p></td>
-<td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxes</span></code>.</p></td>
+<td><p><a class="reference internal" href="gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxes</span></code></a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.data" title="gammapy.irf.EDispKernel.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
 <td><p></p></td>
@@ -986,13 +981,16 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.quantity" title="gammapy.irf.EDispKernel.quantity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantity</span></code></a></p></td>
 <td><p>Quantity as a <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.required_axes" title="gammapy.irf.EDispKernel.required_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">required_axes</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.required_arguments" title="gammapy.irf.EDispKernel.required_arguments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">required_arguments</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.tag" title="gammapy.irf.EDispKernel.tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.required_axes" title="gammapy.irf.EDispKernel.required_axes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">required_axes</span></code></a></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.unit" title="gammapy.irf.EDispKernel.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.tag" title="gammapy.irf.EDispKernel.tag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tag</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gammapy.irf.EDispKernel.unit" title="gammapy.irf.EDispKernel.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a></p></td>
 <td><p>Map unit as a <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Unit</span></code></a> object.</p></td>
 </tr>
 </tbody>
@@ -1092,7 +1090,7 @@
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.irf.EDispKernel.axes">
 <span class="sig-name descname"><span class="pre">axes</span></span><a class="headerlink" href="#gammapy.irf.EDispKernel.axes" title="Link to this definition">#</a></dt>
-<dd><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxes</span></code>.</p>
+<dd><p><a class="reference internal" href="gammapy.maps.MapAxes.html#gammapy.maps.MapAxes" title="gammapy.maps.MapAxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxes</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1138,6 +1136,11 @@ Columns (second index): Reco Energy</p>
 <span class="sig-name descname"><span class="pre">quantity</span></span><a class="headerlink" href="#gammapy.irf.EDispKernel.quantity" title="Link to this definition">#</a></dt>
 <dd><p>Quantity as a <a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Quantity</span></code></a> object.</p>
 </dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="gammapy.irf.EDispKernel.required_arguments">
+<span class="sig-name descname"><span class="pre">required_arguments</span></span><a class="headerlink" href="#gammapy.irf.EDispKernel.required_arguments" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="gammapy.irf.EDispKernel.required_axes">
@@ -1437,7 +1440,7 @@ bias is chosen as <code class="docutils literal notranslate"><span class="pre">e
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>other</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IRF</span></code></span></dt><dd><p>The IRF to compare against.</p>
+<dt><strong>other</strong><span class="classifier"><a class="reference internal" href="gammapy.irf.IRF.html#gammapy.irf.IRF" title="gammapy.irf.IRF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IRF</span></code></a></span></dt><dd><p>The IRF to compare against.</p>
 </dd>
 <dt><strong>rtol_axes</strong><span class="classifier">float, optional</span></dt><dd><p>Relative tolerance for the axis comparison.
 Default is 1e-3.</p>
@@ -1516,6 +1519,12 @@ Default is 1e-6.</p>
 <dt class="sig sig-object py" id="gammapy.irf.EDispKernel.peek">
 <span class="sig-name descname"><span class="pre">peek</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">figsize</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(15,</span> <span class="pre">5)</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/irf/edisp/kernel.html#EDispKernel.peek"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.irf.EDispKernel.peek" title="Link to this definition">#</a></dt>
 <dd><p>Quick-look summary plots.</p>
+<p>This method creates a figure with two subplots:</p>
+<ul class="simple">
+<li><p>Bias plot : reconstruction bias as a function of true energy</p></li>
+<li><p>Energy dispersion matrix plot : probability density function matrix to have
+<code class="docutils literal notranslate"><span class="pre">energy</span></code> as a function of <code class="docutils literal notranslate"><span class="pre">energy_true</span></code></p></li>
+</ul>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -1712,7 +1721,7 @@ Default is None.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>unit</strong><span class="classifier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Unit</span></code> or str</span></dt><dd><p>New unit.</p>
+<dt><strong>unit</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.units.Unit.html#astropy.units.Unit" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Unit</span></code></a> or str</span></dt><dd><p>New unit.</p>
 </dd>
 </dl>
 </dd>
@@ -1782,6 +1791,7 @@ Default is None.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.is_pointlike"><code class="docutils literal notranslate"><span class="pre">EDispKernel.is_pointlike</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.pdf_matrix"><code class="docutils literal notranslate"><span class="pre">EDispKernel.pdf_matrix</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.quantity"><code class="docutils literal notranslate"><span class="pre">EDispKernel.quantity</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.required_arguments"><code class="docutils literal notranslate"><span class="pre">EDispKernel.required_arguments</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.required_axes"><code class="docutils literal notranslate"><span class="pre">EDispKernel.required_axes</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.tag"><code class="docutils literal notranslate"><span class="pre">EDispKernel.tag</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.irf.EDispKernel.unit"><code class="docutils literal notranslate"><span class="pre">EDispKernel.unit</span></code></a></li>

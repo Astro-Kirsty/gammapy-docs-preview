@@ -64,7 +64,7 @@ Setup
 As usual, we’ll start with some general imports…
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-66
+.. GENERATED FROM PYTHON SOURCE LINES 48-65
 
 .. code-block:: Python
 
@@ -81,7 +81,6 @@ As usual, we’ll start with some general imports…
     from gammapy.estimators import ExcessMapEstimator
     from gammapy.makers import RingBackgroundMaker
     from gammapy.visualization import plot_distribution
-    from gammapy.utils.check import check_tutorials_setup
 
     log = logging.getLogger(__name__)
 
@@ -93,73 +92,7 @@ As usual, we’ll start with some general imports…
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 67-69
-
-Check setup
------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 69-74
-
-.. code-block:: Python
-
-
-
-    check_tutorials_setup()
-
-
-
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    System:
-
-            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.12    
-            machine                : x86_64     
-            system                 : Linux      
-
-
-    Gammapy package:
-
-            version                : 2.0.dev1454+g847764624.d20250624 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
-
-
-    Other packages:
-
-            numpy                  : 2.3.1      
-            scipy                  : 1.16.0     
-            astropy                : 7.1.0      
-            regions                : 0.10       
-            click                  : 8.2.1      
-            yaml                   : 6.0.2      
-            IPython                : 9.3.0      
-            jupyterlab             : not installed 
-            matplotlib             : 3.9.4      
-            pandas                 : not installed 
-            healpy                 : 1.18.1     
-            iminuit                : 2.31.1     
-            sherpa                 : 4.17.1     
-            naima                  : 0.10.2     
-            emcee                  : 3.1.6      
-            corner                 : 2.2.3      
-            ray                    : 2.47.1     
-
-
-    Gammapy environment variables:
-
-            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 75-84
+.. GENERATED FROM PYTHON SOURCE LINES 66-75
 
 Creating the config file
 ------------------------
@@ -171,7 +104,7 @@ In this example, we will use a few H.E.S.S. runs on the pulsar wind nebula,
 MSH 1552
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-121
+.. GENERATED FROM PYTHON SOURCE LINES 75-112
 
 .. code-block:: Python
 
@@ -326,15 +259,15 @@ MSH 1552
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1454+g847764624.d20250624
-            date: '2025-06-24T11:39:45.372300'
+            creator: Gammapy 2.0.dev1916+g4ebdb930c
+            date: '2025-07-28T08:50:24.875892'
             origin: null
     
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-129
+.. GENERATED FROM PYTHON SOURCE LINES 113-120
 
 Getting the reduced dataset
 ---------------------------
@@ -344,7 +277,7 @@ then be used for a ring extraction
 
 Create the config:
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-142
+.. GENERATED FROM PYTHON SOURCE LINES 120-137
 
 .. code-block:: Python
 
@@ -361,6 +294,10 @@ Create the config:
 
     print(analysis.config)
 
+    # Data extraction:
+    analysis.get_datasets()
+
+
 
 
 
@@ -369,10 +306,6 @@ Create the config:
 
  .. code-block:: none
 
-    Setting logging config: {'level': 'INFO', 'filename': None, 'filemode': None, 'format': None, 'datefmt': None}
-    Fetching observations.
-    Observations selected: 20 out of 20.
-    Number of selected observations: 20
     AnalysisConfig
 
         general:
@@ -479,102 +412,15 @@ Create the config:
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1454+g847764624.d20250624
-            date: '2025-06-24T11:39:45.437468'
+            creator: Gammapy 2.0.dev1916+g4ebdb930c
+            date: '2025-07-28T08:50:24.901027'
             origin: null
     
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 143-144
-
-Data extraction:
-
-.. GENERATED FROM PYTHON SOURCE LINES 144-147
-
-.. code-block:: Python
-
-    analysis.get_datasets()
-
-
-
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Creating reference dataset and makers.
-    Creating the background Maker.
-    No background maker set. Check configuration.
-    Start the data reduction loop.
-    Computing dataset for observation 20136
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20137
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20151
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20282
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20283
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20301
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20302
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20303
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20322
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20323
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20324
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20325
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20343
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20344
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20345
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20346
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20365
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20366
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20367
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-    Computing dataset for observation 20368
-    Running MapDatasetMaker
-    Running SafeMaskMaker
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 148-155
+.. GENERATED FROM PYTHON SOURCE LINES 138-145
 
 Extracting the ring background
 ------------------------------
@@ -584,7 +430,7 @@ use the Wstat statistics in this case. For this, we will use the
 `~gammapy.datasets.MapDatasetOnOff` and the `~gammapy.makers.RingBackgroundMaker` classes.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-165
+.. GENERATED FROM PYTHON SOURCE LINES 148-155
 
 Create exclusion mask
 ~~~~~~~~~~~~~~~~~~~~~
@@ -594,7 +440,7 @@ case, we need to mask only MSH 15-52 but this depends on the sources
 present in our field of view.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 165-178
+.. GENERATED FROM PYTHON SOURCE LINES 155-168
 
 .. code-block:: Python
 
@@ -623,13 +469,13 @@ present in our field of view.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-182
+.. GENERATED FROM PYTHON SOURCE LINES 169-172
 
 For the present analysis, we use a ring with an inner radius of 0.5 deg
 and width of 0.3 deg.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 182-188
+.. GENERATED FROM PYTHON SOURCE LINES 172-178
 
 .. code-block:: Python
 
@@ -646,7 +492,7 @@ and width of 0.3 deg.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 189-195
+.. GENERATED FROM PYTHON SOURCE LINES 179-185
 
 Create a stacked dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -655,7 +501,7 @@ Now, we extract the background for each dataset and then stack the maps
 together to create a single stacked map for further analysis
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 195-201
+.. GENERATED FROM PYTHON SOURCE LINES 185-197
 
 .. code-block:: Python
 
@@ -664,17 +510,6 @@ together to create a single stacked map for further analysis
     stacked_on_off = MapDatasetOnOff.create(
         geom=geom_image, energy_axis_true=energy_axis_true, name="stacked"
     )
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 202-208
-
-.. code-block:: Python
 
     for dataset in analysis.datasets:
         # Ring extracting makes sense only for 2D analysis
@@ -689,7 +524,7 @@ together to create a single stacked map for further analysis
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 209-214
+.. GENERATED FROM PYTHON SOURCE LINES 198-203
 
 This `stacked_on_off` has `on` and `off` counts and acceptance
 maps which we will use in all further analysis. The `acceptance` and
@@ -697,7 +532,7 @@ maps which we will use in all further analysis. The `acceptance` and
 events in the `on` and `off` regions respectively.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 214-218
+.. GENERATED FROM PYTHON SOURCE LINES 203-207
 
 .. code-block:: Python
 
@@ -739,7 +574,7 @@ events in the `on` and `off` regions respectively.
       Number of parameters            : 0
       Number of free parameters       : 0
 
-      Total counts_off                : 87621192 
+      Total counts_off                : 87621184 
       Acceptance                      : 44755 
       Acceptance off                  : 96374320 
 
@@ -747,7 +582,7 @@ events in the `on` and `off` regions respectively.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 219-230
+.. GENERATED FROM PYTHON SOURCE LINES 208-219
 
 Compute correlated significance and correlated excess maps
 ----------------------------------------------------------
@@ -761,7 +596,7 @@ OFF Poisson measurements, see
 Also, since the off counts are obtained with a ring background estimation, and are thus already correlated, we specify `correlate_off=False`
 to avoid over correlation.
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-248
+.. GENERATED FROM PYTHON SOURCE LINES 219-237
 
 .. code-block:: Python
 
@@ -795,7 +630,7 @@ to avoid over correlation.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 249-256
+.. GENERATED FROM PYTHON SOURCE LINES 238-245
 
 It is often important to look at the significance distribution outside
 the exclusion region to check that the background estimation is not
@@ -805,7 +640,7 @@ to be a standard normal distribution. To compute the significance distribution o
 we can recompute the maps after adding a `mask_fit` to our dataset.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 256-290
+.. GENERATED FROM PYTHON SOURCE LINES 245-279
 
 .. code-block:: Python
 
@@ -852,26 +687,8 @@ we can recompute the maps after adding a `mask_fit` to our dataset.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/counts_statistic.py:398: RuntimeWarning: invalid value encountered in multiply
-      return self.alpha * self.n_off
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/fit_statistics.py:225: RuntimeWarning: invalid value encountered in multiply
-      C = alpha * (n_on + n_off) - (1 + alpha) * mu_sig
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/stats/fit_statistics.py:226: RuntimeWarning: invalid value encountered in multiply
-      D = np.sqrt(C**2 + 4 * alpha * (alpha + 1) * n_off * mu_sig)
-    Both actual and predicted relative reductions in the sum of squares
-      are at most 0.000000
 
 
-
-
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 16.181 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-2d_ring_background.py:

@@ -66,7 +66,7 @@ Setup
 As always, let’s get started with some setup …
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 50-64
+.. GENERATED FROM PYTHON SOURCE LINES 50-65
 
 .. code-block:: Python
 
@@ -91,73 +91,8 @@ As always, let’s get started with some setup …
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 65-67
 
-Check setup
------------
-
-.. GENERATED FROM PYTHON SOURCE LINES 67-72
-
-.. code-block:: Python
-
-    from gammapy.utils.check import check_tutorials_setup
-
-    check_tutorials_setup()
-
-
-
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-
-    System:
-
-            python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python 
-            python_version         : 3.11.12    
-            machine                : x86_64     
-            system                 : Linux      
-
-
-    Gammapy package:
-
-            version                : 2.0.dev1454+g847764624.d20250624 
-            path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
-
-
-    Other packages:
-
-            numpy                  : 2.3.1      
-            scipy                  : 1.16.0     
-            astropy                : 7.1.0      
-            regions                : 0.10       
-            click                  : 8.2.1      
-            yaml                   : 6.0.2      
-            IPython                : 9.3.0      
-            jupyterlab             : not installed 
-            matplotlib             : 3.9.4      
-            pandas                 : not installed 
-            healpy                 : 1.18.1     
-            iminuit                : 2.31.1     
-            sherpa                 : 4.17.1     
-            naima                  : 0.10.2     
-            emcee                  : 3.1.6      
-            corner                 : 2.2.3      
-            ray                    : 2.47.1     
-
-
-    Gammapy environment variables:
-
-            GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/ 
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 73-78
+.. GENERATED FROM PYTHON SOURCE LINES 66-71
 
 Read in input images
 --------------------
@@ -165,7 +100,7 @@ Read in input images
 We first read the relevant maps:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-106
+.. GENERATED FROM PYTHON SOURCE LINES 71-99
 
 .. code-block:: Python
 
@@ -213,7 +148,7 @@ We first read the relevant maps:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 107-118
+.. GENERATED FROM PYTHON SOURCE LINES 100-111
 
 Adaptive smoothing
 ------------------
@@ -223,13 +158,14 @@ image. This can be performed using the adaptive smoothing algorithm from
 `Ebeling et
 al. (2006) <https://ui.adsabs.harvard.edu/abs/2006MNRAS.368...65E/abstract>`__.
 
-In the following example the `ASmoothMapEstimator.threshold` argument gives the minimum
-significance expected, values below are clipped.
+In the following example the `~gammapy.estimators.ASmoothMapEstimator.threshold`
+argument gives the minimum significance expected, values below are clipped.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-129
+.. GENERATED FROM PYTHON SOURCE LINES 111-121
 
 .. code-block:: Python
+
 
     scales = u.Quantity(np.arange(0.05, 1, 0.05), unit="deg")
     smooth = ASmoothMapEstimator(threshold=3, scales=scales, energy_edges=[10, 500] * u.GeV)
@@ -252,7 +188,7 @@ significance expected, values below are clipped.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-146
+.. GENERATED FROM PYTHON SOURCE LINES 122-138
 
 TS map estimation
 -----------------
@@ -271,7 +207,7 @@ We first need to define the model that will be used to test for the
 existence of a source. Here, we use a point source.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 146-154
+.. GENERATED FROM PYTHON SOURCE LINES 138-146
 
 .. code-block:: Python
 
@@ -290,7 +226,7 @@ existence of a source. Here, we use a point source.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-165
+.. GENERATED FROM PYTHON SOURCE LINES 147-157
 
 Here we show a full configuration of the estimator. We remind the user of the meaning
 of the various quantities:
@@ -303,9 +239,11 @@ of the various quantities:
 -  ``n_jobs``: for running in parallel, the number of processes used for the computation
 -  ``sum_over_energy_groups``: to sum over the energy groups or fit the `norm` on the full energy cube
 
-.. GENERATED FROM PYTHON SOURCE LINES 168-182
+.. GENERATED FROM PYTHON SOURCE LINES 157-173
 
 .. code-block:: Python
+
+
 
     estimator = TSMapEstimator(
         model=model,
@@ -328,17 +266,17 @@ of the various quantities:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-190
+.. GENERATED FROM PYTHON SOURCE LINES 174-181
 
 Accessing and visualising results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Below we print the result of the `~gammapy.estimators.TSMapEstimator`. We have access to a number of
 different quantities, as shown below. We can also access the quantities names
-through ``map_result.available_quantities``.
+through ``maps.available_quantities``.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 190-193
+.. GENERATED FROM PYTHON SOURCE LINES 181-184
 
 .. code-block:: Python
 
@@ -370,7 +308,7 @@ through ``map_result.available_quantities``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 195-212
+.. GENERATED FROM PYTHON SOURCE LINES 186-203
 
 .. code-block:: Python
 
@@ -403,12 +341,12 @@ through ``map_result.available_quantities``.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 213-215
+.. GENERATED FROM PYTHON SOURCE LINES 204-206
 
 The flux in each pixel is obtained by multiplying a reference model with a
 normalisation factor:
 
-.. GENERATED FROM PYTHON SOURCE LINES 215-218
+.. GENERATED FROM PYTHON SOURCE LINES 206-209
 
 .. code-block:: Python
 
@@ -425,7 +363,7 @@ normalisation factor:
 
     SkyModel
 
-      Name                      : dy04spur
+      Name                      : 52-FcifC
       Datasets names            : None
       Spectral model type       : PowerLawSpectralModel
       Spatial  model type       : PointSpatialModel
@@ -442,7 +380,7 @@ normalisation factor:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 220-224
+.. GENERATED FROM PYTHON SOURCE LINES 211-215
 
 .. code-block:: Python
 
@@ -462,7 +400,7 @@ normalisation factor:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-234
+.. GENERATED FROM PYTHON SOURCE LINES 216-225
 
 Source candidates
 -----------------
@@ -474,7 +412,7 @@ window, the argument `min_distance` is the minimum pixel distance
 between peaks (smallest possible value and default is 1 pixel).
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-257
+.. GENERATED FROM PYTHON SOURCE LINES 225-248
 
 .. code-block:: Python
 
@@ -539,12 +477,12 @@ between peaks (smallest possible value and default is 1 pixel).
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-261
+.. GENERATED FROM PYTHON SOURCE LINES 250-252
 
 We can also utilise `~gammapy.estimators.utils.find_peaks_in_flux_map`
 to display various parameters from the FluxMaps
 
-.. GENERATED FROM PYTHON SOURCE LINES 261-266
+.. GENERATED FROM PYTHON SOURCE LINES 252-257
 
 .. code-block:: Python
 
@@ -586,7 +524,7 @@ to display various parameters from the FluxMaps
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 267-274
+.. GENERATED FROM PYTHON SOURCE LINES 258-265
 
 Note that we used the instrument point-spread-function (PSF) as kernel,
 so the hypothesis we test is the presence of a point source. In order to
@@ -596,7 +534,7 @@ significance of an extended excess using the Li & Ma formalism, which is
 faster as no fitting is involve.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 277-298
+.. GENERATED FROM PYTHON SOURCE LINES 268-289
 
 What next?
 ----------
@@ -623,7 +561,7 @@ Here’s some suggestions what to do next:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 19.297 seconds)
+   **Total running time of the script:** (0 minutes 10.870 seconds)
 
 
 .. _sphx_glr_download_tutorials_analysis-2d_detect.py:

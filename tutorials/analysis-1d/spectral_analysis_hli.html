@@ -70,7 +70,7 @@
     <link rel="prev" title="Spectral analysis" href="spectral_analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -435,8 +435,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Model Gallery</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../model-gallery/index.html">Model Gallery</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Data exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/veritas.html">VERITAS with Gammapy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../details/index.html">Detailed explanation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../details/irfs.html">Using Gammapy IRFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/observation_clustering.html">Observational clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/theta_square_plot.html">Make a theta-square plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/mask_maps.html">Mask maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/catalog.html">Source catalogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/priors.html">Priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/model_management.html">Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Data analysis</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cta_sensitivity.html">Point source sensitivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spectral_analysis.html">Spectral analysis</a></li>
@@ -445,8 +469,6 @@
 <li class="toctree-l2"><a class="reference internal" href="extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spectrum_simulation.html">1D spectrum simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sed_fitting.html">Flux point fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ebl.html">Account for spectral absorption due to the EBL</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-2d/index.html">2D Image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +480,6 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-3d/index.html">3D Cube</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_3d.html">3D detailed analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/cta_data_analysis.html">Basic image exploration and fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
@@ -472,25 +493,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">Package / API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/theta_square_plot.html">Make a theta-square plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/maps.html">Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/mask_maps.html">Mask maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/makers.html">Makers - Data reduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/models.html">Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/model_management.html">Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/priors.html">Priors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/estimators.html">Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/catalog.html">Source catalogs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../astrophysics/index.html">Astrophysics use cases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/pulsar_analysis.html">Pulsar analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../scripts/index.html">Scripts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -593,7 +603,7 @@ release 1 and perform a simple model fitting of the Crab nebula.</strong></p>
 <section id="proposed-approach">
 <h2>Proposed approach<a class="headerlink" href="#proposed-approach" title="Link to this heading">#</a></h2>
 <p>This notebook uses the high level <a class="reference internal" href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code></a> class to orchestrate data
-reduction and run the data fits. In its current state, <code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code>
+reduction and run the data fits. In its current state, <a class="reference internal" href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code></a>
 supports the standard analysis cases of joint or stacked 3D and 1D
 analyses. It is instantiated with an <a class="reference internal" href="../../api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig" title="gammapy.analysis.AnalysisConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AnalysisConfig</span></code></a> object that
 gives access to analysis parameters either directly or via a YAML config
@@ -633,54 +643,6 @@ and run the different analysis steps</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.analysis</span><span class="w"> </span><span class="kn">import</span> <a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-class"><span class="n">Analysis</span></a><span class="p">,</span> <span class="n">AnalysisConfig</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Models</span>
-</pre></div>
-</div>
-</section>
-<section id="check-setup">
-<h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_tutorials_setup</span>
-
-<span class="n">check_tutorials_setup</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
-
-        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.12
-        machine                : x86_64
-        system                 : Linux
-
-
-Gammapy package:
-
-        version                : 2.0.dev1454+g847764624.d20250624
-        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
-
-
-Other packages:
-
-        numpy                  : 2.3.1
-        scipy                  : 1.16.0
-        astropy                : 7.1.0
-        regions                : 0.10
-        click                  : 8.2.1
-        yaml                   : 6.0.2
-        IPython                : 9.3.0
-        jupyterlab             : not installed
-        matplotlib             : 3.9.4
-        pandas                 : not installed
-        healpy                 : 1.18.1
-        iminuit                : 2.31.1
-        sherpa                 : 4.17.1
-        naima                  : 0.10.2
-        emcee                  : 3.1.6
-        corner                 : 2.2.3
-        ray                    : 2.47.1
-
-
-Gammapy environment variables:
-
-        GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/
 </pre></div>
 </div>
 </section>
@@ -832,13 +794,13 @@ with any text editor of your choice.</p>
         parameters:
             selection_optional: all
     metadata:
-        creator: Gammapy 2.0.dev1454+g847764624.d20250624
-        date: &#39;2025-06-24T11:36:23.783452&#39;
+        creator: Gammapy 2.0.dev1916+g4ebdb930c
+        date: &#39;2025-07-28T08:49:43.458081&#39;
         origin: null
 </pre></div>
 </div>
 <p>Note that you can save this string into a yaml file and load it as
-follow:</p>
+follows:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># config = AnalysisConfig.read(&quot;config-1d.yaml&quot;)</span>
 <span class="c1"># # the AnalysisConfig gives access to the various parameters used from logging to reduced dataset geometries</span>
 <span class="c1"># print(config)</span>
@@ -985,8 +947,8 @@ background normalisation. For this tutorial, we use the following one
         parameters:
             selection_optional: all
     metadata:
-        creator: Gammapy 2.0.dev1454+g847764624.d20250624
-        date: &#39;2025-06-24T11:36:23.802372&#39;
+        creator: Gammapy 2.0.dev1916+g4ebdb930c
+        date: &#39;2025-07-28T08:49:43.476132&#39;
         origin: null
 </pre></div>
 </div>
@@ -1001,9 +963,6 @@ configuration.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">analysis</span></a> <span class="o">=</span> <a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-class"><span class="n">Analysis</span></a><span class="p">(</span><a href="../../api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig" title="gammapy.analysis.AnalysisConfig" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">config</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Setting logging config: {&#39;level&#39;: &#39;INFO&#39;, &#39;filename&#39;: None, &#39;filemode&#39;: None, &#39;format&#39;: None, &#39;datefmt&#39;: None}
-</pre></div>
-</div>
 </section>
 <section id="observation-selection">
 <h3>Observation selection<a class="headerlink" href="#observation-selection" title="Link to this heading">#</a></h3>
@@ -1012,13 +971,8 @@ configuration.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis.get_observations" title="gammapy.analysis.Analysis.get_observations" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-method"><span class="n">analysis</span><span class="o">.</span><span class="n">get_observations</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Fetching observations.
-Observations selected: 4 out of 4.
-Number of selected observations: 4
-</pre></div>
-</div>
-<p>The observations are now available on the <code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code> object. The
-selection corresponds to the following ids:</p>
+<p>The observations are now available on the <a class="reference internal" href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code></a> object.
+The selection corresponds to the following ids:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><a href="../../api/gammapy.data.Observations.html#gammapy.data.Observations.ids" title="gammapy.data.Observations.ids" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-attribute"><span class="n">analysis</span><span class="o">.</span><span class="n">observations</span><span class="o">.</span><span class="n">ids</span></a><span class="p">)</span>
 </pre></div>
 </div>
@@ -1034,10 +988,6 @@ notebook: <a class="reference internal" href="../data/cta.html"><span class="doc
 a WCS map geometry, energy axis and decided to stack the maps. We can
 run the reduction using <a class="reference internal" href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis.get_datasets" title="gammapy.analysis.Analysis.get_datasets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_datasets()</span></code></a>:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis.get_datasets" title="gammapy.analysis.Analysis.get_datasets" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-method"><span class="n">analysis</span><span class="o">.</span><span class="n">get_datasets</span></a><span class="p">()</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Reducing spectrum datasets.
-Creating the background Maker.
 </pre></div>
 </div>
 </section>
@@ -1173,50 +1123,16 @@ Component 0: SkyModel
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis.set_models" title="gammapy.analysis.Analysis.set_models" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-method"><span class="n">analysis</span><span class="o">.</span><span class="n">set_models</span></a><span class="p">(</span><a href="../../api/gammapy.modeling.models.Models.html#gammapy.modeling.models.Models" title="gammapy.modeling.models.Models" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">model_1d</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Reading model.
-Models
-
-Component 0: SkyModel
-
-  Name                      : crab
-  Datasets names            : None
-  Spectral model type       : PowerLawSpectralModel
-  Spatial  model type       :
-  Temporal model type       :
-  Parameters:
-    index                         :      2.600   +/-    0.00
-    amplitude                     :   5.00e-11   +/- 0.0e+00 1 / (TeV s cm2)
-    reference             (frozen):      1.000       TeV
-</pre></div>
-</div>
 </section>
 <section id="setting-fitting-parameters">
 <h3>Setting fitting parameters<a class="headerlink" href="#setting-fitting-parameters" title="Link to this heading">#</a></h3>
-<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code> can perform a few modeling and fitting tasks besides data
+<p><a class="reference internal" href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis" title="gammapy.analysis.Analysis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Analysis</span></code></a> can perform a few modeling and fitting tasks besides data
 reduction. Parameters have then to be passed to the configuration
 object.</p>
 </section>
 <section id="running-the-fit">
 <h3>Running the fit<a class="headerlink" href="#running-the-fit" title="Link to this heading">#</a></h3>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.analysis.Analysis.html#gammapy.analysis.Analysis.run_fit" title="gammapy.analysis.Analysis.run_fit" class="sphx-glr-backref-module-gammapy-analysis sphx-glr-backref-type-py-method"><span class="n">analysis</span><span class="o">.</span><span class="n">run_fit</span></a><span class="p">()</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Fitting datasets.
-OptimizeResult
-
-        backend    : minuit
-        method     : migrad
-        success    : True
-        message    : Optimization terminated successfully.
-        nfev       : 37
-        total stat : 10.29
-
-CovarianceResult
-
-        backend    : minuit
-        method     : hesse
-        success    : True
-        message    : Hesse terminated successfully.
 </pre></div>
 </div>
 </section>
@@ -1288,8 +1204,8 @@ predicted counts.</p>
             unit: TeV
 covariance: model-best-fit_covariance.dat
 metadata:
-    creator: Gammapy 2.0.dev1454+g847764624.d20250624
-    date: &#39;2025-06-24T11:36:27.298240&#39;
+    creator: Gammapy 2.0.dev1916+g4ebdb930c
+    date: &#39;2025-07-28T08:49:45.548505&#39;
     origin: null
 </pre></div>
 </div>
@@ -1306,38 +1222,7 @@ metadata:
 <span class="n">display</span><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="astropy.table.Table" class="sphx-glr-backref-module-astropy-table sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">crab_fp_table</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Calculating flux points.
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Reoptimize = False ignored for iminuit backend
-Inferred format: gadf-sed
-
-      e_ref                 dnde          ...      sqrt_ts
-       TeV            1 / (TeV s cm2)     ...
------------------- ---------------------- ... ------------------
-1.1339665776330272 2.8346449199155368e-11 ... 13.649801869758486
-1.7077149461898808 1.1933885561614052e-11 ... 18.229702352522242
-2.5717603983775206  4.324671488042134e-12 ... 15.667883655301353
- 3.872983346207417 1.0021848816289716e-12 ...  9.096816080679885
-5.8325806748806155  4.655417095161944e-13 ...  9.412238418379745
- 7.929067195782284 1.5268674345611268e-13 ...  3.999118135748669
-10.779123358892521  9.692057551325467e-14 ...  5.744886132546257
-16.232991721174255 1.5230023513998565e-14 ... 2.4501128213030277
-Inferred format: gadf-sed
-e_ref  e_min  e_max        dnde      ... is_ul counts success   norm_scan
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>e_ref  e_min  e_max        dnde      ... is_ul counts success   norm_scan
  TeV    TeV    TeV   1 / (TeV s cm2) ...
 ------ ------ ------ --------------- ... ----- ------ ------- --------------
  1.134  0.924  1.392       2.835e-11 ... False   56.0    True 0.200 .. 5.000
@@ -1369,9 +1254,6 @@ defined
 <a href="../../api/gammapy.datasets.FluxPointsDataset.html#gammapy.datasets.FluxPointsDataset.write" title="gammapy.datasets.FluxPointsDataset.write" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">analysis</span><span class="o">.</span><span class="n">flux_points</span><span class="o">.</span><span class="n">write</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Inferred format: gadf-sed
-</pre></div>
-</div>
 </section>
 </section>
 <section id="plotting-the-final-results-of-the-1d-analysis">
@@ -1388,10 +1270,10 @@ flux points:</p>
 <section id="whats-next">
 <h2>What’s next?<a class="headerlink" href="#whats-next" title="Link to this heading">#</a></h2>
 <p>You can look at the same analysis without the high level interface in
-<a class="reference internal" href="spectral_analysis.html"><span class="doc">Spectral analysis</span></a></p>
+<a class="reference internal" href="spectral_analysis.html"><span class="doc">Spectral analysis</span></a>.</p>
 <p>As we can store the best model fit, you can overlay the fit results of
 both methods on a unique plot.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 19.396 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.315 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-analysis-1d-spectral-analysis-hli-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-1d/spectral_analysis_hli.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo.svg" style="width: 150px;" />
@@ -1438,7 +1320,6 @@ both methods on a unique plot.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#context">Context</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-approach">Proposed approach</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-setup">Check setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-configuration">Analysis configuration</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-data-stored-into-your-computer">Using data stored into your computer</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-exclusion-mask">Setting the exclusion mask</a></li>

@@ -70,7 +70,7 @@
     <link rel="prev" title="Event sampling" href="event_sampling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -435,8 +435,32 @@
 <li class="toctree-l2"><a class="reference internal" href="../starting/analysis_2.html">Low level API</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../data/index.html">Model Gallery</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="../model-gallery/index.html">Model Gallery</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../data/index.html">Data exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/hess.html">H.E.S.S. with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/cta.html">CTAO with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/fermi_lat.html">Fermi-LAT with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/hawc.html">HAWC with Gammapy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data/veritas.html">VERITAS with Gammapy</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../details/index.html">Detailed explanation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../details/irfs.html">Using Gammapy IRFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/observation_clustering.html">Observational clustering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/theta_square_plot.html">Make a theta-square plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/makers.html">Makers - Data reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/maps.html">Maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/mask_maps.html">Mask maps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/catalog.html">Source catalogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/models.html">Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/priors.html">Priors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/model_management.html">Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/cta_sensitivity.html">Point source sensitivity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectral_analysis.html">Spectral analysis</a></li>
@@ -445,8 +469,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/extended_source_spectral_analysis.html">Spectral analysis of extended sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/spectrum_simulation.html">1D spectrum simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-1d/sed_fitting.html">Flux point fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-1d/ebl.html">Account for spectral absorption due to the EBL</a></li>
-
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-2d/index.html">2D Image</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -458,7 +480,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">3D Cube</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="analysis_3d.html">3D detailed analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cta_data_analysis.html">Basic image exploration and fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis_mwl.html">Multi instrument joint 3D and 1D analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simulate_3d.html">3D map simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="event_sampling.html">Event sampling</a></li>
@@ -472,25 +493,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/variability_estimation.html">Estimation of time variability in a lightcurve</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/time_resolved_spectroscopy.html">Time resolved spectroscopy estimator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-time/light_curve_simulation.html">Simulating and fitting a time varying source</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../analysis-time/pulsar_analysis.html">Pulsar analysis</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../api/index.html">Package / API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api/irfs.html">Using Gammapy IRFs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/theta_square_plot.html">Make a theta-square plot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/observation_clustering.html">Observational clustering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/maps.html">Maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/mask_maps.html">Mask maps</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/makers.html">Makers - Data reduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/datasets.html">Datasets - Reduced data, IRFs, models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/models.html">Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/model_management.html">Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/priors.html">Priors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/fitting.html">Fitting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/estimators.html">Estimators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/catalog.html">Source catalogs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../astrophysics/index.html">Astrophysics use cases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/ebl.html">Account for spectral absorption due to the EBL</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/energy_dependent_estimation.html">Morphological energy dependence estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/pulsar_analysis.html">Pulsar analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../astrophysics/astro_dark_matter.html">Dark matter spatial and spectral models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../scripts/index.html">Scripts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -619,54 +629,6 @@ and define a Dataset object. Finally, we describe how to sample events from the 
 </pre></div>
 </div>
 </section>
-<section id="check-setup">
-<h2>Check setup<a class="headerlink" href="#check-setup" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.utils.check</span><span class="w"> </span><span class="kn">import</span> <span class="n">check_tutorials_setup</span>
-
-<span class="n">check_tutorials_setup</span><span class="p">()</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>System:
-
-        python_executable      : /home/feijen/Documents/github/gammapy/.tox/build_docs/bin/python
-        python_version         : 3.11.12
-        machine                : x86_64
-        system                 : Linux
-
-
-Gammapy package:
-
-        version                : 2.0.dev1454+g847764624.d20250624
-        path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
-
-
-Other packages:
-
-        numpy                  : 2.3.1
-        scipy                  : 1.16.0
-        astropy                : 7.1.0
-        regions                : 0.10
-        click                  : 8.2.1
-        yaml                   : 6.0.2
-        IPython                : 9.3.0
-        jupyterlab             : not installed
-        matplotlib             : 3.9.4
-        pandas                 : not installed
-        healpy                 : 1.18.1
-        iminuit                : 2.31.1
-        sherpa                 : 4.17.1
-        naima                  : 0.10.2
-        emcee                  : 3.1.6
-        corner                 : 2.2.3
-        ray                    : 2.47.1
-
-
-Gammapy environment variables:
-
-        GAMMAPY_DATA           : /home/feijen/Documents/github/gammapy-data/
-</pre></div>
-</div>
-</section>
 <section id="create-the-energy-dependent-temporal-model">
 <h2>Create the energy-dependent temporal model<a class="headerlink" href="#create-the-energy-dependent-temporal-model" title="Link to this heading">#</a></h2>
 <p>The source we want to simulate has a spectrum that varies as a function of
@@ -692,52 +654,51 @@ is also shown in the following plot:</p>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_event_sampling_nrg_depend_models_001.png" srcset="../../_images/sphx_glr_event_sampling_nrg_depend_models_001.png" alt="event sampling nrg depend models" class = "sphx-glr-single-img"/><p>Let’s now create the temporal model (if you already have this model,
-please go directly to the <code class="xref py py-obj docutils literal notranslate"><span class="pre">Read</span> <span class="pre">the</span> <span class="pre">energy-dependent</span> <span class="pre">model</span></code> section),
-that will be defined as a <code class="xref py py-obj docutils literal notranslate"><span class="pre">LightCurveTemplateTemporalModel</span></code>. The latter
-take as input a <code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionNDMap</span></code> with temporal and energy axes, on which
+please go directly to the <a class="reference internal" href="#read-the-energy-dependent-model"><span class="std std-ref">Read the energy-dependent model</span></a> section),
+that will be defined as a <a class="reference internal" href="../../api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel" title="gammapy.modeling.models.LightCurveTemplateTemporalModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LightCurveTemplateTemporalModel</span></code></a>. The latter
+take as input a <a class="reference internal" href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap" title="gammapy.maps.RegionNDMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionNDMap</span></code></a> with temporal and energy axes, on which
 the fluxes are stored.</p>
-<p>To create such map, we first need to define a time axis with <code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxis</span></code>:
+<p>To create such map, we first need to define a time axis with <a class="reference internal" href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapAxis</span></code></a>:
 here we consider 5 time bins of 720 s (i.e. 1 hr in total).
 As a second step, we create an energy axis with 10 bins where the
 powerlaw spectral models will be evaluated.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># source position</span>
-<a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pointing_position</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;100 deg&quot;</span><span class="p">,</span> <span class="s2">&quot;30 deg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">)</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pointing_position</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class"><span class="n">SkyCoord</span></a><span class="p">(</span><span class="s2">&quot;100 deg&quot;</span><span class="p">,</span> <span class="s2">&quot;30 deg&quot;</span><span class="p">,</span> <span class="n">frame</span><span class="o">=</span><span class="s2">&quot;icrs&quot;</span><span class="p">)</span>
 <a href="../../api/gammapy.data.FixedPointingInfo.html#gammapy.data.FixedPointingInfo" title="gammapy.data.FixedPointingInfo" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">position</span></a> <span class="o">=</span> <a href="../../api/gammapy.data.FixedPointingInfo.html#gammapy.data.FixedPointingInfo" title="gammapy.data.FixedPointingInfo" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class"><span class="n">FixedPointingInfo</span></a><span class="p">(</span><span class="n">fixed_icrs</span><span class="o">=</span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pointing_position</span><span class="o">.</span><span class="n">icrs</span></a><span class="p">)</span>
 
-<span class="c1"># time axis</span>
 <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_axis</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.from_bounds" title="gammapy.maps.MapAxis.from_bounds" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">MapAxis</span><span class="o">.</span><span class="n">from_bounds</span></a><span class="p">(</span><span class="mi">0</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">s</span></a><span class="p">,</span> <span class="mi">3600</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.IrreducibleUnit.html#astropy.units.IrreducibleUnit" title="astropy.units.IrreducibleUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">s</span></a><span class="p">,</span> <span class="n">nbin</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="p">,</span> <span class="n">interp</span><span class="o">=</span><span class="s2">&quot;lin&quot;</span><span class="p">)</span>
 
-<span class="c1"># energy axis</span>
 <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis.from_energy_bounds" title="gammapy.maps.MapAxis.from_energy_bounds" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">MapAxis</span><span class="o">.</span><span class="n">from_energy_bounds</span></a><span class="p">(</span>
     <span class="n">energy_min</span><span class="o">=</span><span class="mf">0.2</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">energy_max</span><span class="o">=</span><span class="mi">100</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a><span class="p">,</span> <span class="n">nbin</span><span class="o">=</span><span class="mi">10</span>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Now let’s create the <code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionNDMap</span></code> and fill it with the expected
+<p>Now let’s create the <a class="reference internal" href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap" title="gammapy.maps.RegionNDMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionNDMap</span></code></a> and fill it with the expected
 spectral values:</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># create the RegionNDMap containing fluxes</span>
-<a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap" title="gammapy.maps.RegionNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.create" title="gammapy.maps.RegionNDMap.create" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">RegionNDMap</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap" title="gammapy.maps.RegionNDMap" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">m</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.create" title="gammapy.maps.RegionNDMap.create" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-method"><span class="n">RegionNDMap</span><span class="o">.</span><span class="n">create</span></a><span class="p">(</span>
     <span class="n">region</span><span class="o">=</span><a href="https://astropy-regions.readthedocs.io/en/latest/api/regions.PointSkyRegion.html#regions.PointSkyRegion" title="regions.PointSkyRegion" class="sphx-glr-backref-module-regions sphx-glr-backref-type-py-class"><span class="n">PointSkyRegion</span></a><span class="p">(</span><span class="n">center</span><span class="o">=</span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pointing_position</span></a><span class="p">),</span>
     <span class="n">axes</span><span class="o">=</span><span class="p">[</span><a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">energy_axis</span></a><span class="p">,</span> <a href="../../api/gammapy.maps.MapAxis.html#gammapy.maps.MapAxis" title="gammapy.maps.MapAxis" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">time_axis</span></a><span class="p">],</span>
     <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;cm-2s-1TeV-1&quot;</span><span class="p">,</span>
 <span class="p">)</span>
-
-<span class="c1"># to compute the spectra as a function of time we extract the coordinates of the geometry</span>
-<a href="../../api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord" title="gammapy.maps.MapCoord" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.geom" title="gammapy.maps.RegionNDMap.geom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">get_coord</span></a><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># We reshape the indices and amplitudes array to perform broadcasting</span>
-<a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">indices</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">indices</span></a><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><a href="../../api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord" title="gammapy.maps.MapCoord" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to compute the spectra as a function of time we extract the coordinates of the geometry</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord" title="gammapy.maps.MapCoord" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a> <span class="o">=</span> <a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.geom" title="gammapy.maps.RegionNDMap.geom" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">get_coord</span></a><span class="p">(</span><span class="n">sparse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We reshape the indices and amplitudes array to perform broadcasting</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">indices</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">indices</span></a><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><a href="../../api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord" title="gammapy.maps.MapCoord" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">amplitudes</span></a> <span class="o">=</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">amplitudes</span></a><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><a href="../../api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord" title="gammapy.maps.MapCoord" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-<span class="c1"># evaluate the spectra and fill the RegionNDMap</span>
-<a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.quantity" title="gammapy.maps.RegionNDMap.quantity" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m</span><span class="o">.</span><span class="n">quantity</span></a> <span class="o">=</span> <a href="../../api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.evaluate" title="gammapy.modeling.models.PowerLawSpectralModel.evaluate" class="sphx-glr-backref-module-gammapy-modeling-models-PowerLawSpectralModel sphx-glr-backref-type-py-method"><span class="n">PowerLawSpectralModel</span><span class="o">.</span><span class="n">evaluate</span></a><span class="p">(</span>
+</pre></div>
+</div>
+<p>evaluate the spectra and fill the <a class="reference internal" href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap" title="gammapy.maps.RegionNDMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionNDMap</span></code></a></p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap.quantity" title="gammapy.maps.RegionNDMap.quantity" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-attribute"><span class="n">m</span><span class="o">.</span><span class="n">quantity</span></a> <span class="o">=</span> <a href="../../api/gammapy.modeling.models.PowerLawSpectralModel.html#gammapy.modeling.models.PowerLawSpectralModel.evaluate" title="gammapy.modeling.models.PowerLawSpectralModel.evaluate" class="sphx-glr-backref-module-gammapy-modeling-models-PowerLawSpectralModel sphx-glr-backref-type-py-method"><span class="n">PowerLawSpectralModel</span><span class="o">.</span><span class="n">evaluate</span></a><span class="p">(</span>
     <a href="../../api/gammapy.maps.MapCoord.html#gammapy.maps.MapCoord" title="gammapy.maps.MapCoord" class="sphx-glr-backref-module-gammapy-maps sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">coords</span></a><span class="p">[</span><span class="s2">&quot;energy&quot;</span><span class="p">],</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">indices</span></a><span class="p">,</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.Quantity.html#astropy.units.Quantity" title="astropy.units.Quantity" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">amplitudes</span></a><span class="p">,</span> <span class="mi">1</span> <span class="o">*</span> <a href="https://docs.astropy.org/en/stable/api/astropy.units.PrefixUnit.html#astropy.units.PrefixUnit" title="astropy.units.PrefixUnit" class="sphx-glr-backref-module-astropy-units sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">u</span><span class="o">.</span><span class="n">TeV</span></a>
 <span class="p">)</span>
 </pre></div>
 </div>
 <section id="create-the-temporal-model-and-write-it-to-disk">
 <h3>Create the temporal model and write it to disk<a class="headerlink" href="#create-the-temporal-model-and-write-it-to-disk" title="Link to this heading">#</a></h3>
-<p>Now, we define the <code class="xref py py-obj docutils literal notranslate"><span class="pre">LightCurveTemplateTemporalModel</span></code>. It needs the
+<p>Now, we define the <a class="reference internal" href="../../api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel" title="gammapy.modeling.models.LightCurveTemplateTemporalModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">LightCurveTemplateTemporalModel</span></code></a>. It needs the
 map we created above and a reference time. The latter
 is crucial to evaluate the model as a function of time.
 We show also how to write the model on disk, noting that we explicitly
@@ -751,32 +712,34 @@ set the <a class="reference external" href="https://docs.python.org/3/library/fu
 </section>
 <section id="read-the-energy-dependent-model">
 <span id="id1"></span><h3>Read the energy-dependent model<a class="headerlink" href="#read-the-energy-dependent-model" title="Link to this heading">#</a></h3>
-<p>We read the map written on disc again with <code class="xref py py-obj docutils literal notranslate"><span class="pre">LightCurveTemplateTemporalModel.read</span></code>.
-When the model is from a map, the arguments <code class="xref py py-obj docutils literal notranslate"><span class="pre">format=&quot;map&quot;</span></code> is mandatory.
-The map is <code class="xref py py-obj docutils literal notranslate"><span class="pre">fits</span></code> file, with 3 extensions:</p>
-<p>1) <code class="xref py py-obj docutils literal notranslate"><span class="pre">SKYMAP</span></code>: a table with a <code class="xref py py-obj docutils literal notranslate"><span class="pre">CHANNEL</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">DATA</span></code> column; the number of rows is given
-by the product of the energy and time bins. The <code class="xref py py-obj docutils literal notranslate"><span class="pre">DATA</span></code> represent the values of the model
-at each energy;</p>
-<p>2) <code class="xref py py-obj docutils literal notranslate"><span class="pre">SKYMAP_BANDS</span></code>: a table with <code class="xref py py-obj docutils literal notranslate"><span class="pre">CHANNEL</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">ENERGY</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">E_MIN</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">E_MAX</span></code>, <code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME</span></code>,
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME_MIN</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME_MAX</span></code>. <code class="xref py py-obj docutils literal notranslate"><span class="pre">ENERGY</span></code> is the mean of <code class="xref py py-obj docutils literal notranslate"><span class="pre">E_MIN</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">E_MAX</span></code>, as well as
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME</span></code> is the mean of <code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME_MIN</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">TIME_MAX</span></code>; this extension should contain the
-reference time in the header, through the keywords <code class="xref py py-obj docutils literal notranslate"><span class="pre">MJDREFI</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">MJDREFF</span></code>.</p>
-<p>3) <code class="xref py py-obj docutils literal notranslate"><span class="pre">SKYMAP_REGION</span></code>: it gives information on the spatial morphology, i.e. <code class="xref py py-obj docutils literal notranslate"><span class="pre">SHAPE</span></code>
-(only <code class="xref py py-obj docutils literal notranslate"><span class="pre">point</span></code> is accepted), <code class="xref py py-obj docutils literal notranslate"><span class="pre">X</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">Y</span></code> (source position), <code class="xref py py-obj docutils literal notranslate"><span class="pre">R</span></code> (the radius if
-extended; not used in our case) and <code class="xref py py-obj docutils literal notranslate"><span class="pre">ROTANG</span></code> (the angular rotation of the spatial
-model, if extended; not used in our case).</p>
+<p>We read the map written on disc again with <a class="reference internal" href="../../api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel.read" title="gammapy.modeling.models.LightCurveTemplateTemporalModel.read"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read()</span></code></a>.
+When the model is from a map, the arguments <code class="docutils literal notranslate"><span class="pre">format=&quot;map&quot;</span></code> is mandatory.
+The map is <code class="docutils literal notranslate"><span class="pre">fits</span></code> file, with 3 extensions:</p>
+<ul class="simple">
+<li><p>1) <code class="docutils literal notranslate"><span class="pre">SKYMAP</span></code>: a table with a <code class="docutils literal notranslate"><span class="pre">CHANNEL</span></code> and <code class="docutils literal notranslate"><span class="pre">DATA</span></code> column; the number of rows is given
+by the product of the energy and time bins. The <code class="docutils literal notranslate"><span class="pre">DATA</span></code> represent the values of the model
+at each energy;</p></li>
+<li><p>2) <code class="docutils literal notranslate"><span class="pre">SKYMAP_BANDS</span></code>: a table with <code class="docutils literal notranslate"><span class="pre">CHANNEL</span></code>, <code class="docutils literal notranslate"><span class="pre">ENERGY</span></code>, <code class="docutils literal notranslate"><span class="pre">E_MIN</span></code>, <code class="docutils literal notranslate"><span class="pre">E_MAX</span></code>, <code class="docutils literal notranslate"><span class="pre">TIME</span></code>,
+<code class="docutils literal notranslate"><span class="pre">TIME_MIN</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME_MAX</span></code>. <code class="docutils literal notranslate"><span class="pre">ENERGY</span></code> is the mean of <code class="docutils literal notranslate"><span class="pre">E_MIN</span></code> and <code class="docutils literal notranslate"><span class="pre">E_MAX</span></code>, as well as
+<code class="docutils literal notranslate"><span class="pre">TIME</span></code> is the mean of <code class="docutils literal notranslate"><span class="pre">TIME_MIN</span></code> and <code class="docutils literal notranslate"><span class="pre">TIME_MAX</span></code>; this extension should contain the
+reference time in the header, through the keywords <code class="docutils literal notranslate"><span class="pre">MJDREFI</span></code> and <code class="docutils literal notranslate"><span class="pre">MJDREFF</span></code>.</p></li>
+<li><p>3) <code class="docutils literal notranslate"><span class="pre">SKYMAP_REGION</span></code>: it gives information on the spatial morphology, i.e. <code class="docutils literal notranslate"><span class="pre">SHAPE</span></code>
+(only <code class="xref py py-obj docutils literal notranslate"><span class="pre">point</span></code> is accepted), <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">Y</span></code> (source position), <code class="docutils literal notranslate"><span class="pre">R</span></code> (the radius if
+extended; not used in our case) and <code class="docutils literal notranslate"><span class="pre">ROTANG</span></code> (the angular rotation of the spatial
+model, if extended; not used in our case).</p></li>
+</ul>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel" title="gammapy.modeling.models.LightCurveTemplateTemporalModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temporal_model</span></a> <span class="o">=</span> <a href="../../api/gammapy.modeling.models.LightCurveTemplateTemporalModel.html#gammapy.modeling.models.LightCurveTemplateTemporalModel.read" title="gammapy.modeling.models.LightCurveTemplateTemporalModel.read" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-method"><span class="n">LightCurveTemplateTemporalModel</span><span class="o">.</span><span class="n">read</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">filename</span></a><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>We note that an interpolation scheme is also provided when loading
-a map: for an energy-dependent temporal model, the <code class="xref py py-obj docutils literal notranslate"><span class="pre">method</span></code> and
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">values_scale</span></code> arguments by default are set to <code class="xref py py-obj docutils literal notranslate"><span class="pre">linear</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code>.
+a map: for an energy-dependent temporal model, the <code class="docutils literal notranslate"><span class="pre">method</span></code> and
+<code class="docutils literal notranslate"><span class="pre">values_scale</span></code> arguments by default are set to <code class="docutils literal notranslate"><span class="pre">linear</span></code> and <code class="docutils literal notranslate"><span class="pre">log</span></code>.
 We warn the reader to carefully check the interpolation method used
 for the time axis while creating the template model, as different
 methods provide different results.
-By default, we assume <code class="xref py py-obj docutils literal notranslate"><span class="pre">linear</span></code> interpolation for the time, <code class="xref py py-obj docutils literal notranslate"><span class="pre">log</span></code>
+By default, we assume <code class="docutils literal notranslate"><span class="pre">linear</span></code> interpolation for the time, <code class="docutils literal notranslate"><span class="pre">log</span></code>
 for the energies and values.
-Users can modify the <code class="xref py py-obj docutils literal notranslate"><span class="pre">method</span></code> and <code class="xref py py-obj docutils literal notranslate"><span class="pre">values_scale</span></code> arguments but we
+Users can modify the <code class="docutils literal notranslate"><span class="pre">method</span></code> and <code class="docutils literal notranslate"><span class="pre">values_scale</span></code> arguments but we
 warn that this should be done only when the user knows the consequences
 of the changes. Here, we show how to set them explicitly:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">temporal_model</span><span class="o">.</span><span class="n">method</span></a> <span class="o">=</span> <span class="s2">&quot;linear&quot;</span>  <span class="c1"># default</span>
@@ -798,10 +761,10 @@ of the changes. Here, we show how to set them explicitly:</p>
 <section id="define-the-simulation-source-model">
 <h3>Define the simulation source model<a class="headerlink" href="#define-the-simulation-source-model" title="Link to this heading">#</a></h3>
 <p>Now that the temporal model is complete, we create the whole source
-<code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code>. We define its spatial morphology as <code class="xref py py-obj docutils literal notranslate"><span class="pre">point-like</span></code>. This
+<a class="reference internal" href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>. We define its spatial morphology as <code class="docutils literal notranslate"><span class="pre">point-like</span></code>. This
 is a mandatory condition to simulate energy-dependent temporal model.
 Other morphologies will raise an error!
-Note also that the source <code class="xref py py-obj docutils literal notranslate"><span class="pre">spectral_model</span></code> is a <code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstantSpectralModel</span></code>:
+Note also that the source <code class="docutils literal notranslate"><span class="pre">spectral_model</span></code> is a <a class="reference internal" href="../../api/gammapy.modeling.models.ConstantSpectralModel.html#gammapy.modeling.models.ConstantSpectralModel" title="gammapy.modeling.models.ConstantSpectralModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConstantSpectralModel</span></code></a>:
 this is necessary and mandatory, as the real source spectrum is actually
 passed through the map.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.modeling.models.PointSpatialModel.html#gammapy.modeling.models.PointSpatialModel" title="gammapy.modeling.models.PointSpatialModel" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">spatial_model</span></a> <span class="o">=</span> <a href="../../api/gammapy.modeling.models.PointSpatialModel.html#gammapy.modeling.models.PointSpatialModel.from_position" title="gammapy.modeling.models.PointSpatialModel.from_position" class="sphx-glr-backref-module-gammapy-modeling-models sphx-glr-backref-type-py-method"><span class="n">PointSpatialModel</span><span class="o">.</span><span class="n">from_position</span></a><span class="p">(</span><a href="https://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html#astropy.coordinates.SkyCoord" title="astropy.coordinates.SkyCoord" class="sphx-glr-backref-module-astropy-coordinates sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pointing_position</span></a><span class="p">)</span>
@@ -824,8 +787,8 @@ passed through the map.</p>
 <h3>Define an observation and make a dataset<a class="headerlink" href="#define-an-observation-and-make-a-dataset" title="Link to this heading">#</a></h3>
 <p>In the following, we define an observation of 1 hr with CTAO in the
 alpha-configuration for the south array, and we also create a dataset
-to be passed to the event sampler. The full <code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code> created above
-is passed to the dataset.</p>
+to be passed to the event sampler. The full <a class="reference internal" href="../../api/gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>
+created above is passed to the dataset.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="pathlib.PosixPath" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">path</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/pathlib.html#pathlib.Path" title="pathlib.Path" class="sphx-glr-backref-module-pathlib sphx-glr-backref-type-py-class"><span class="n">Path</span></a><span class="p">(</span><span class="s2">&quot;$GAMMAPY_DATA/cta-caldb&quot;</span><span class="p">)</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">irf_filename</span></a> <span class="o">=</span> <span class="s2">&quot;Prod5-South-20deg-AverageAz-14MSTs37SSTs.180000s-v0.1.fits.gz&quot;</span>
 
@@ -903,11 +866,11 @@ Component 1: FoVBackgroundModel
 </section>
 <section id="let-s-simulate-the-model">
 <h3>Let’s simulate the model<a class="headerlink" href="#let-s-simulate-the-model" title="Link to this heading">#</a></h3>
-<p>Initialize and run the <code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDatasetEventSampler</span></code> class. We also define
-the <code class="xref py py-obj docutils literal notranslate"><span class="pre">oversample_energy_factor</span></code> arguments: this should be carefully
-considered by the user, as a higher <code class="xref py py-obj docutils literal notranslate"><span class="pre">oversample_energy_factor</span></code> gives
+<p>Initialize and run the <a class="reference internal" href="../../api/gammapy.datasets.MapDatasetEventSampler.html#gammapy.datasets.MapDatasetEventSampler" title="gammapy.datasets.MapDatasetEventSampler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDatasetEventSampler</span></code></a> class. We also define
+the <code class="docutils literal notranslate"><span class="pre">oversample_energy_factor</span></code> arguments: this should be carefully
+considered by the user, as a higher <code class="docutils literal notranslate"><span class="pre">oversample_energy_factor</span></code> gives
 a more precise source flux estimate, at the expense of computational
-time. Here we adopt an <code class="xref py py-obj docutils literal notranslate"><span class="pre">oversample_energy_factor</span></code> of 10:</p>
+time. Here we adopt an <code class="docutils literal notranslate"><span class="pre">oversample_energy_factor</span></code> of 10:</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="../../api/gammapy.datasets.MapDatasetEventSampler.html#gammapy.datasets.MapDatasetEventSampler" title="gammapy.datasets.MapDatasetEventSampler" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">sampler</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDatasetEventSampler.html#gammapy.datasets.MapDatasetEventSampler" title="gammapy.datasets.MapDatasetEventSampler" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class"><span class="n">MapDatasetEventSampler</span></a><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">oversample_energy_factor</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 <a href="../../api/gammapy.data.EventList.html#gammapy.data.EventList" title="gammapy.data.EventList" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a> <span class="o">=</span> <a href="../../api/gammapy.datasets.MapDatasetEventSampler.html#gammapy.datasets.MapDatasetEventSampler.run" title="gammapy.datasets.MapDatasetEventSampler.run" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-method"><span class="n">sampler</span><span class="o">.</span><span class="n">run</span></a><span class="p">(</span><a href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset" class="sphx-glr-backref-module-gammapy-datasets sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dataset</span></a><span class="p">,</span> <a href="../../api/gammapy.data.Observation.html#gammapy.data.Observation" title="gammapy.data.Observation" class="sphx-glr-backref-module-gammapy-data sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">observation</span></a><span class="p">)</span>
 </pre></div>
@@ -990,7 +953,6 @@ evolution;</p></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objective">Objective</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-approach">Proposed approach</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-setup">Check setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-energy-dependent-temporal-model">Create the energy-dependent temporal model</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-the-temporal-model-and-write-it-to-disk">Create the temporal model and write it to disk</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#read-the-energy-dependent-model">Read the energy-dependent model</a></li>

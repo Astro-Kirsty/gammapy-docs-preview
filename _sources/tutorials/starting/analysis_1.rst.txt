@@ -138,19 +138,19 @@ Check setup
 
     Gammapy package:
 
-            version                : 2.0.dev1454+g847764624.d20250624 
+            version                : 2.0.dev1916+g4ebdb930c 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
     Other packages:
 
-            numpy                  : 2.3.1      
-            scipy                  : 1.16.0     
+            numpy                  : 2.1.3      
+            scipy                  : 1.16.1     
             astropy                : 7.1.0      
             regions                : 0.10       
             click                  : 8.2.1      
             yaml                   : 6.0.2      
-            IPython                : 9.3.0      
+            IPython                : 9.4.0      
             jupyterlab             : not installed 
             matplotlib             : 3.9.4      
             pandas                 : not installed 
@@ -160,7 +160,7 @@ Check setup
             naima                  : 0.10.2     
             emcee                  : 3.1.6      
             corner                 : 2.2.3      
-            ray                    : 2.47.1     
+            ray                    : 2.48.0     
 
 
     Gammapy environment variables:
@@ -310,8 +310,8 @@ Here is what the configuration for our analysis looks like:
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1454+g847764624.d20250624
-            date: '2025-06-24T11:19:22.878212'
+            creator: Gammapy 2.0.dev1916+g4ebdb930c
+            date: '2025-07-28T08:44:55.729337'
             origin: null
     
 
@@ -461,7 +461,7 @@ background normalisation. For this tutorial, we use the following one
 Setting modeling and fitting parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``Analysis`` can perform a few modeling and fitting tasks besides data
+`~gammapy.analysis.Analysis` can perform a few modeling and fitting tasks besides data
 reduction. Parameters have then to be passed to the configuration
 object.
 
@@ -491,7 +491,7 @@ correlation radius to compute excess and significance maps.
 .. GENERATED FROM PYTHON SOURCE LINES 211-214
 
 We’re all set. But before we go on let’s see how to save or import
-``AnalysisConfig`` objects though YAML files.
+`~gammapy.analysis.AnalysisConfig` objects though YAML files.
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 217-222
@@ -499,7 +499,7 @@ We’re all set. But before we go on let’s see how to save or import
 Using YAML configuration files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-One can export/import the `~gammapy.modeling.AnalysisConfig` to/from a YAML file.
+One can export/import the `~gammapy.analysis.AnalysisConfig` to/from a YAML file.
 
 
 .. GENERATED FROM PYTHON SOURCE LINES 222-229
@@ -628,8 +628,8 @@ One can export/import the `~gammapy.modeling.AnalysisConfig` to/from a YAML file
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1454+g847764624.d20250624
-            date: '2025-06-24T11:19:22.899222'
+            creator: Gammapy 2.0.dev1916+g4ebdb930c
+            date: '2025-07-28T08:44:55.739768'
             origin: null
     
 
@@ -700,7 +700,7 @@ We can directly select and load the observations from disk using
 
 .. GENERATED FROM PYTHON SOURCE LINES 252-255
 
-The observations are now available on the `~gammapy.modeling.Analysis` object. The
+The observations are now available on the `~gammapy.analysis.Analysis` object. The
 selection corresponds to the following ids:
 
 
@@ -728,7 +728,7 @@ selection corresponds to the following ids:
 .. GENERATED FROM PYTHON SOURCE LINES 260-264
 
 To see how to explore observations, please refer to the following
-notebook: :doc:`CTA with Gammapy </tutorials/data/cta>` or :doc:`H.E.S.S. with
+notebook: :doc:`CTAO with Gammapy </tutorials/data/cta>` or :doc:`H.E.S.S. with
 Gammapy </tutorials/data/hess>`
 
 
@@ -739,12 +739,13 @@ Data reduction
 
 Now we proceed to the data reduction. In the config file we have chosen
 a WCS map geometry, energy axis and decided to stack the maps. We can
-run the reduction using `~gammapy.modeling.Analysis.get_datasets()`:
+run the reduction using `~gammapy.analysis.Analysis.get_datasets()`:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 276-279
+.. GENERATED FROM PYTHON SOURCE LINES 274-278
 
 .. code-block:: Python
+
 
     analysis.get_datasets()
 
@@ -780,13 +781,13 @@ run the reduction using `~gammapy.modeling.Analysis.get_datasets()`:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-283
+.. GENERATED FROM PYTHON SOURCE LINES 279-282
 
 As we have chosen to stack the data, there is finally one dataset
 contained which we can print:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 283-287
+.. GENERATED FROM PYTHON SOURCE LINES 282-286
 
 .. code-block:: Python
 
@@ -833,7 +834,7 @@ contained which we can print:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 288-294
+.. GENERATED FROM PYTHON SOURCE LINES 287-293
 
 As you can see the dataset comes with a predefined background model out
 of the data reduction, but no source model has been set yet.
@@ -842,7 +843,7 @@ The counts, exposure and background model maps are directly available on
 the dataset and can be printed and plotted:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 294-299
+.. GENERATED FROM PYTHON SOURCE LINES 293-298
 
 .. code-block:: Python
 
@@ -869,14 +870,14 @@ the dataset and can be printed and plotted:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-304
+.. GENERATED FROM PYTHON SOURCE LINES 299-303
 
 We can also compute the map of the sqrt_ts (significance) of the excess
 counts above the background. The correlation radius to sum counts is
 defined in the config file.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 304-309
+.. GENERATED FROM PYTHON SOURCE LINES 303-308
 
 .. code-block:: Python
 
@@ -903,7 +904,7 @@ defined in the config file.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 310-317
+.. GENERATED FROM PYTHON SOURCE LINES 309-316
 
 Save dataset to disk
 --------------------
@@ -913,7 +914,7 @@ fit, because often the preparation of maps, PSF and energy dispersion is
 slow if you have a lot of data. We first create a folder:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 317-322
+.. GENERATED FROM PYTHON SOURCE LINES 316-321
 
 .. code-block:: Python
 
@@ -929,13 +930,13 @@ slow if you have a lot of data. We first create a folder:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 323-326
+.. GENERATED FROM PYTHON SOURCE LINES 322-325
 
 And then write the maps and IRFs to disk by calling the dedicated
 `~gammapy.datasets.Datasets.write` method:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 326-331
+.. GENERATED FROM PYTHON SOURCE LINES 325-330
 
 .. code-block:: Python
 
@@ -951,7 +952,7 @@ And then write the maps and IRFs to disk by calling the dedicated
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 332-338
+.. GENERATED FROM PYTHON SOURCE LINES 331-337
 
 Model fitting
 -------------
@@ -960,7 +961,7 @@ Now we define a model to be fitted to the dataset. Here we use its YAML
 definition to load it:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 338-369
+.. GENERATED FROM PYTHON SOURCE LINES 337-368
 
 .. code-block:: Python
 
@@ -1002,12 +1003,12 @@ definition to load it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 370-372
+.. GENERATED FROM PYTHON SOURCE LINES 369-371
 
 Now we set the model on the analysis object:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 372-376
+.. GENERATED FROM PYTHON SOURCE LINES 371-375
 
 .. code-block:: Python
 
@@ -1055,14 +1056,15 @@ Now we set the model on the analysis object:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 377-379
+.. GENERATED FROM PYTHON SOURCE LINES 376-378
 
 Finally we run the fit:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 381-386
+.. GENERATED FROM PYTHON SOURCE LINES 378-384
 
 .. code-block:: Python
+
 
     analysis.run_fit()
 
@@ -1114,12 +1116,12 @@ Finally we run the fit:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 387-389
+.. GENERATED FROM PYTHON SOURCE LINES 385-387
 
 This is how we can write the model back to file again:
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 389-397
+.. GENERATED FROM PYTHON SOURCE LINES 387-395
 
 .. code-block:: Python
 
@@ -1183,21 +1185,21 @@ This is how we can write the model back to file again:
                 unit: TeV
     covariance: model-best-fit_covariance.dat
     metadata:
-        creator: Gammapy 2.0.dev1454+g847764624.d20250624
-        date: '2025-06-24T11:19:34.272881'
+        creator: Gammapy 2.0.dev1916+g4ebdb930c
+        date: '2025-07-28T08:45:01.118812'
         origin: null
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 398-401
+.. GENERATED FROM PYTHON SOURCE LINES 396-399
 
 Flux points
 ~~~~~~~~~~~
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 401-421
+.. GENERATED FROM PYTHON SOURCE LINES 399-419
 
 .. code-block:: Python
 
@@ -1259,14 +1261,14 @@ Flux points
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 422-426
+.. GENERATED FROM PYTHON SOURCE LINES 420-424
 
 The flux points can be exported to a fits table following the format
 defined
 `here <https://gamma-astro-data-formats.readthedocs.io/en/latest/spectra/flux_points/index.html>`_
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 426-431
+.. GENERATED FROM PYTHON SOURCE LINES 424-429
 
 .. code-block:: Python
 
@@ -1288,13 +1290,13 @@ defined
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 432-435
+.. GENERATED FROM PYTHON SOURCE LINES 430-433
 
 To check the fit is correct, we compute the map of the sqrt_ts of the
 excess counts above the current model.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 435-441
+.. GENERATED FROM PYTHON SOURCE LINES 433-439
 
 .. code-block:: Python
 
@@ -1322,22 +1324,22 @@ excess counts above the current model.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 442-451
+.. GENERATED FROM PYTHON SOURCE LINES 440-449
 
 What’s next
 -----------
 
 You can look at the same analysis without the high level interface in
-:doc:`/tutorials/starting/analysis_2`
+:doc:`/tutorials/starting/analysis_2`.
 
 You can see how to perform a 1D spectral analysis of the same data in
-:doc:`/tutorials/analysis-1d/spectral_analysis`
+:doc:`/tutorials/analysis-1d/spectral_analysis`.
 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 30.826 seconds)
+   **Total running time of the script:** (0 minutes 14.402 seconds)
 
 
 .. _sphx_glr_download_tutorials_starting_analysis_1.py:

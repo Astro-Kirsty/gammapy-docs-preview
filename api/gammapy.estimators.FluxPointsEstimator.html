@@ -70,7 +70,7 @@
     <link rel="prev" title="FluxPoints" href="gammapy.estimators.FluxPoints.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1454+g847764624.d20250624" />
+  <meta name="docsearch:version" content="2.0.dev1916+g4ebdb930c" />
   </head>
   
   
@@ -519,9 +519,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.SpectrumDatasetOnOff.html">SpectrumDatasetOnOff</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.MapDatasetMetaData.html">MapDatasetMetaData</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.DATASET_REGISTRY.html">DATASET_REGISTRY</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.apply_edisp.html">apply_edisp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.split_dataset.html">split_dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.datasets.utils.create_map_dataset_from_dl4.html">create_map_dataset_from_dl4</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/maps.html">maps - Sky maps</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -741,12 +738,9 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/stats.html">stats - Statistics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash.html">cash</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cash_sum_cython.html">cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.cstat.html">cstat</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.f_cash_root_cython.html">f_cash_root_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_gof_terms.html">get_wstat_gof_terms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.get_wstat_mu_bkg.html">get_wstat_mu_bkg</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.norm_bounds_cython.html">norm_bounds_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.wstat.html">wstat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fvar.html">compute_fvar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.compute_fpp.html">compute_fpp</a></li>
@@ -755,7 +749,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.structure_function.html">structure_function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.discrete_correlation.html">discrete_correlation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.TimmerKonig_lightcurve_simulator.html">TimmerKonig_lightcurve_simulator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="gammapy.stats.weighted_cash_sum_cython.html">weighted_cash_sum_cython</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.sigma_to_ts.html">sigma_to_ts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.ts_to_sigma.html">ts_to_sigma</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.stats.CashCountsStatistic.html">CashCountsStatistic</a></li>
@@ -781,6 +774,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -932,11 +927,14 @@ or the <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/201
 <dd class="field-odd"><dl>
 <dt><strong>source</strong><span class="classifier">str or int</span></dt><dd><p>For which source in the model to compute the flux points.</p>
 </dd>
-<dt><strong>n_sigma</strong><span class="classifier">int, optional</span></dt><dd><p>Number of sigma to use for asymmetric error computation. Default is 1.</p>
+<dt><strong>n_sigma</strong><span class="classifier">float, optional</span></dt><dd><p>Number of sigma to use for asymmetric error computation. Must be a positive value.
+Default is 1.</p>
 </dd>
-<dt><strong>n_sigma_ul</strong><span class="classifier">int, optional</span></dt><dd><p>Number of sigma to use for upper limit computation. Default is 2.</p>
+<dt><strong>n_sigma_ul</strong><span class="classifier">float, optional</span></dt><dd><p>Number of sigma to use for upper limit computation. Must be a positive value.
+Default is 2.</p>
 </dd>
-<dt><strong>n_sigma_sensitivity</strong><span class="classifier">int, optional</span></dt><dd><p>Sigma to use for sensitivity computation. Default is 5.</p>
+<dt><strong>n_sigma_sensitivity</strong><span class="classifier">float, optional</span></dt><dd><p>Sigma to use for sensitivity computation. Must be a positive value.
+Default is 5.</p>
 </dd>
 <dt><strong>selection_optional</strong><span class="classifier">list of str, optional</span></dt><dd><p>Which additional quantities to estimate. Available options are:</p>
 <blockquote>
@@ -986,6 +984,31 @@ the entries should be a subset of <a class="reference internal" href="gammapy.mo
 <li><p>For further explanation, see <a class="reference internal" href="../user-guide/estimators.html#estimators"><span class="std std-ref">Estimators (DL4 to DL5, and DL6)</span></a>.</p></li>
 <li><p>In case of failure of upper limits computation (e.g. nan), see the User Guide <a class="reference internal" href="../user-guide/howto.html#how-to"><span class="std std-ref">How To</span></a>.</p></li>
 </ul>
+<p class="rubric">Examples</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">astropy</span><span class="w"> </span><span class="kn">import</span> <span class="n">units</span> <span class="k">as</span> <span class="n">u</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpectrumDatasetOnOff</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.estimators</span><span class="w"> </span><span class="kn">import</span> <span class="n">FluxPointsEstimator</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gammapy.modeling.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">PowerLawSpectralModel</span><span class="p">,</span> <span class="n">SkyModel</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;$GAMMAPY_DATA/joint-crab/spectra/hess/&quot;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">SpectrumDatasetOnOff</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;pha_obs23523.fits&quot;</span><span class="p">)</span>
+
+<span class="n">pwl</span> <span class="o">=</span> <span class="n">PowerLawSpectralModel</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mf">2.7</span><span class="p">,</span> <span class="n">amplitude</span><span class="o">=</span><span class="s1">&#39;3e-11  cm-2 s-1 TeV-1&#39;</span><span class="p">)</span>
+
+<span class="n">dataset</span><span class="o">.</span><span class="n">models</span> <span class="o">=</span> <span class="n">SkyModel</span><span class="p">(</span><span class="n">spectral_model</span><span class="o">=</span><span class="n">pwl</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;crab&quot;</span><span class="p">)</span>
+
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">FluxPointsEstimator</span><span class="p">(</span>
+    <span class="n">source</span><span class="o">=</span><span class="s2">&quot;crab&quot;</span><span class="p">,</span>
+    <span class="n">energy_edges</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="o">*</span> <span class="n">u</span><span class="o">.</span><span class="n">TeV</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">fp</span> <span class="o">=</span> <span class="n">estimator</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 <p class="rubric">Attributes Summary</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table">
 <tbody>
