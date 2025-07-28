@@ -2,8 +2,9 @@
 
 .. _sphx_glr_tutorials_analysis-time:
 
-Time
-----
+Time series
+-----------
+
 
 
 .. raw:: html

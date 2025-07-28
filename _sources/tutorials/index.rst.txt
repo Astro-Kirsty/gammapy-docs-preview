@@ -129,26 +129,6 @@ basic data structures like event lists, source catalogs, sky maps, spectral mode
 
     </div>
 
-Model Gallery
-=============
-
-A gallery of all possible spectral, spatial and temporal models can be found in this page:
-:ref:`model-gallery`.
-
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbnails">
-
-.. thumbnail-parent-div-open
-
-.. thumbnail-parent-div-close
-
-.. raw:: html
-
-    </div>
-
 Data exploration
 ================
 
@@ -255,11 +235,31 @@ event lists according to different criteria, as well as to get a quick look of t
 
     </div>
 
+Model Gallery
+=============
+
+A gallery of all possible spectral, spatial and temporal models can be found in this page:
+:ref:`model-gallery`.
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+.. thumbnail-parent-div-open
+
+.. thumbnail-parent-div-close
+
+.. raw:: html
+
+    </div>
+
 Detailed explanation
 ====================
 
-The following tutorials demonstrate different dimensions of the Gammapy API.
-The order follows the typical analysis workflow.
+The following tutorials demonstrate different how to use Gammapy tools
+across the full analysis chain, from data loading to model comparison.
 
 
 
@@ -857,8 +857,9 @@ time-dependent analysis with light-curves.
 
     </div>
 
-Time
-----
+Time series
+-----------
+
 
 
 .. raw:: html
@@ -1092,8 +1093,8 @@ The following example shows how to run Gammapy within a Python script.
 
 
    /tutorials/starting/index.rst
-   /tutorials/model-gallery/index.rst
    /tutorials/data/index.rst
+   /tutorials/model-gallery/index.rst
    /tutorials/details/index.rst
    /tutorials/analysis-1d/index.rst
    /tutorials/analysis-2d/index.rst
