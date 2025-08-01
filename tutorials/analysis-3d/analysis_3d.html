@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="3D Cube" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -459,6 +459,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/parameter_ul.html">Constraining parameter limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,6 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="event_sampling.html">Event sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flux_profiles.html">Flux Profile Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="non_detected_source.html">Computing flux upper limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-time/index.html">Time series</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -755,8 +757,8 @@ the analysis, we will programmatically build a config file from scratch.</p>
         parameters:
             selection_optional: all
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: &#39;2025-07-28T08:50:37.625470&#39;
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: &#39;2025-08-01T08:44:00.300022&#39;
         origin: null
 
 AnalysisConfig
@@ -869,8 +871,8 @@ AnalysisConfig
         parameters:
             selection_optional: all
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: &#39;2025-07-28T08:50:37.628825&#39;
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: &#39;2025-08-01T08:44:00.303348&#39;
         origin: null
 </pre></div>
 </div>
@@ -1175,21 +1177,21 @@ Datasets
 Dataset 0:
 
   Type       : MapDataset
-  Name       : OeU93sSt
+  Name       : e-ScjaLu
   Instrument : CTA
   Models     :
 
 Dataset 1:
 
   Type       : MapDataset
-  Name       : hysueOFl
+  Name       : 1ZON42T-
   Instrument : CTA
   Models     :
 
 Dataset 2:
 
   Type       : MapDataset
-  Name       : 8VsDq89X
+  Name       : 3ZZX0jaY
   Instrument : CTA
   Models     :
 </pre></div>
@@ -1201,7 +1203,7 @@ Dataset 2:
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>MapDataset
 ----------
 
-  Name                            : OeU93sSt
+  Name                            : e-ScjaLu
 
   Total counts                    : 40481
   Total background counts         : 36014.51
@@ -1252,9 +1254,9 @@ map, omit the region argument.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>  name   counts       excess       ... n_fit_bins stat_type stat_sum
                                    ...
 -------- ------ ------------------ ... ---------- --------- --------
-OeU93sSt  40481 4466.4930435940405 ...     693940      cash      nan
-hysueOFl  40525  4510.505523195905 ...     693940      cash      nan
-8VsDq89X  40235  4220.480554966147 ...     693940      cash      nan
+e-ScjaLu  40481 4466.4930435940405 ...     693940      cash      nan
+1ZON42T-  40525  4510.505523195905 ...     693940      cash      nan
+3ZZX0jaY  40235  4220.480554966147 ...     693940      cash      nan
 Models
 
 Component 0: SkyModel
@@ -1275,8 +1277,8 @@ Component 0: SkyModel
 
 Component 1: FoVBackgroundModel
 
-  Name                      : OeU93sSt-bkg
-  Datasets names            : [&#39;OeU93sSt&#39;]
+  Name                      : e-ScjaLu-bkg
+  Datasets names            : [&#39;e-ScjaLu&#39;]
   Spectral model type       : PowerLawNormSpectralModel
   Parameters:
     tilt                  (frozen):      0.000
@@ -1285,8 +1287,8 @@ Component 1: FoVBackgroundModel
 
 Component 2: FoVBackgroundModel
 
-  Name                      : hysueOFl-bkg
-  Datasets names            : [&#39;hysueOFl&#39;]
+  Name                      : 1ZON42T--bkg
+  Datasets names            : [&#39;1ZON42T-&#39;]
   Spectral model type       : PowerLawNormSpectralModel
   Parameters:
     tilt                  (frozen):      0.000
@@ -1295,8 +1297,8 @@ Component 2: FoVBackgroundModel
 
 Component 3: FoVBackgroundModel
 
-  Name                      : 8VsDq89X-bkg
-  Datasets names            : [&#39;8VsDq89X&#39;]
+  Name                      : 3ZZX0jaY-bkg
+  Datasets names            : [&#39;3ZZX0jaY&#39;]
   Spectral model type       : PowerLawNormSpectralModel
   Parameters:
     tilt                  (frozen):      0.000
@@ -1352,8 +1354,8 @@ Component 0: SkyModel
 
 Component 1: FoVBackgroundModel
 
-  Name                      : OeU93sSt-bkg
-  Datasets names            : [&#39;OeU93sSt&#39;]
+  Name                      : e-ScjaLu-bkg
+  Datasets names            : [&#39;e-ScjaLu&#39;]
   Spectral model type       : PowerLawNormSpectralModel
   Parameters:
     tilt                  (frozen):      0.000
@@ -1362,8 +1364,8 @@ Component 1: FoVBackgroundModel
 
 Component 2: FoVBackgroundModel
 
-  Name                      : hysueOFl-bkg
-  Datasets names            : [&#39;hysueOFl&#39;]
+  Name                      : 1ZON42T--bkg
+  Datasets names            : [&#39;1ZON42T-&#39;]
   Spectral model type       : PowerLawNormSpectralModel
   Parameters:
     tilt                  (frozen):      0.000
@@ -1372,8 +1374,8 @@ Component 2: FoVBackgroundModel
 
 Component 3: FoVBackgroundModel
 
-  Name                      : 8VsDq89X-bkg
-  Datasets names            : [&#39;8VsDq89X&#39;]
+  Name                      : 3ZZX0jaY-bkg
+  Datasets names            : [&#39;3ZZX0jaY&#39;]
   Spectral model type       : PowerLawNormSpectralModel
   Parameters:
     tilt                  (frozen):      0.000
@@ -1436,7 +1438,7 @@ to the combined model.</p></li>
 <li><p>Perform modeling in more details.</p></li>
 <li><p>Add diffuse component, get flux points.</p></li>
 </ul>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 34.402 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 42.066 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-analysis-3d-analysis-3d-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-3d/analysis_3d.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo2.svg" style="width: 150px;" />

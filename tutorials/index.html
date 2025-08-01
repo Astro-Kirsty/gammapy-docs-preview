@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="Glossary and references" href="../user-guide/references.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -459,6 +459,7 @@
 <li class="toctree-l2"><a class="reference internal" href="details/fitting.html">Fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="details/estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="details/parameter_ul.html">Constraining parameter limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,6 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="analysis-3d/event_sampling.html">Event sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis-3d/non_detected_source.html">Computing flux upper limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="analysis-time/index.html">Time series</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -682,6 +684,9 @@ across the full analysis chain, from data loading to model comparison.</p>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This tutorial provides an overview of the Estimator API. All estimators live in the gammapy.estimators sub-module, offering a range of algorithms and classes for high-level flux and significance estimation. This is accomplished through a common functionality allowing the estimation of flux points, light curves, flux maps and profiles via a common API."><img alt="" src="../_images/sphx_glr_estimators_thumb.png" />
 <p><a class="reference internal" href="details/estimators.html#sphx-glr-tutorials-details-estimators-py"><span class="std std-ref">Estimators</span></a></p>
   <div class="sphx-glr-thumbnail-title">Estimators</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Explore how to deal with upper limits on parameters."><img alt="" src="../_images/sphx_glr_parameter_ul_thumb.png" />
+<p><a class="reference internal" href="details/parameter_ul.html#sphx-glr-tutorials-details-parameter-ul-py"><span class="std std-ref">Constraining parameter limits</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Constraining parameter limits</div>
 </div></div></section>
 <section id="data-analysis">
 <h2>Data analysis<a class="headerlink" href="#data-analysis" title="Link to this heading">#</a></h2>
@@ -747,6 +752,9 @@ time-dependent analysis with light-curves.</p>
 </div><div class="sphx-glr-thumbcontainer" tooltip="Learn how to estimate flux profiles on a Fermi-LAT dataset."><img alt="" src="../_images/sphx_glr_flux_profiles_thumb.png" />
 <p><a class="reference internal" href="analysis-3d/flux_profiles.html#sphx-glr-tutorials-analysis-3d-flux-profiles-py"><span class="std std-ref">Flux Profile Estimation</span></a></p>
   <div class="sphx-glr-thumbnail-title">Flux Profile Estimation</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Explore how to compute flux upper limits for a non-detected source."><img alt="" src="../_images/sphx_glr_non_detected_source_thumb.png" />
+<p><a class="reference internal" href="analysis-3d/non_detected_source.html#sphx-glr-tutorials-analysis-3d-non-detected-source-py"><span class="std std-ref">Computing flux upper limits</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Computing flux upper limits</div>
 </div></div></section>
 <section id="time-series">
 <h3>Time series<a class="headerlink" href="#time-series" title="Link to this heading">#</a></h3>

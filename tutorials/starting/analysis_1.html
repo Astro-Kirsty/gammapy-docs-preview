@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="Data structures" href="overview.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -459,6 +459,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/parameter_ul.html">Constraining parameter limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,6 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/non_detected_source.html">Computing flux upper limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-time/index.html">Time series</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -660,7 +662,7 @@ and run the different analysis steps</p>
 
 Gammapy package:
 
-        version                : 2.0.dev1916+g4ebdb930c
+        version                : 2.0.dev2043+gd2c0fc8f8
         path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy
 
 
@@ -811,8 +813,8 @@ with any text editor of your choice.</p>
         parameters:
             selection_optional: all
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: &#39;2025-07-28T08:44:55.729337&#39;
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: &#39;2025-08-01T08:38:20.850126&#39;
         origin: null
 </pre></div>
 </div>
@@ -1018,8 +1020,8 @@ correlation radius to compute excess and significance maps.</p>
         parameters:
             selection_optional: all
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: &#39;2025-07-28T08:44:55.739768&#39;
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: &#39;2025-08-01T08:38:20.860607&#39;
         origin: null
 </pre></div>
 </div>
@@ -1318,8 +1320,8 @@ CovarianceResult
             unit: TeV
 covariance: model-best-fit_covariance.dat
 metadata:
-    creator: Gammapy 2.0.dev1916+g4ebdb930c
-    date: &#39;2025-07-28T08:45:01.118812&#39;
+    creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+    date: &#39;2025-08-01T08:38:26.316893&#39;
     origin: null
 </pre></div>
 </div>
@@ -1396,7 +1398,7 @@ excess counts above the current model.</p>
 <a class="reference internal" href="analysis_2.html"><span class="doc">Low level API</span></a>.</p>
 <p>You can see how to perform a 1D spectral analysis of the same data in
 <a class="reference internal" href="../analysis-1d/spectral_analysis.html"><span class="doc">Spectral analysis</span></a>.</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 14.402 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 14.531 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-starting-analysis-1-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/starting/analysis_1.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo8.svg" style="width: 150px;" />

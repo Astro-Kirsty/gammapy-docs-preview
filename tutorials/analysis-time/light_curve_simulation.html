@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="Time resolved spectroscopy estimator" href="time_resolved_spectroscopy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -459,6 +459,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/parameter_ul.html">Constraining parameter limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,6 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/non_detected_source.html">Computing flux upper limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Time series</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -767,16 +769,16 @@ quick look into our datasets.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>   name   counts       excess       ... n_fit_bins stat_type       stat_sum
                                     ...
 --------- ------ ------------------ ... ---------- --------- -------------------
-dataset-0    859  838.6812310184489 ...          9      cash -6999.4684049423895
-dataset-1    347 337.76419591747674 ...          9      cash -2214.6283253718375
-dataset-2    320  310.3947637541758 ...          9      cash -1997.7235096313782
-dataset-3    338  323.2227134679628 ...          9      cash -2126.9265490435355
-dataset-4    207 192.22271346796282 ...          9      cash -1049.1003159170916
-dataset-5    185 166.52839183495354 ...          9      cash   -947.876299656266
-dataset-6     34 19.222713467962826 ...          9      cash  -45.40554178250386
-dataset-7     31 11.789527508351693 ...          9      cash  -44.98478618609471
-dataset-8     39 23.114416978060046 ...          9      cash  -54.81056667647165
-dataset-9     26  8.636688324856333 ...          9      cash  -23.38537118622999
+dataset-0    840  819.6812310184489 ...          9      cash  -6848.502329660222
+dataset-1    337 327.76419591747674 ...          9      cash -2143.4670948888343
+dataset-2    287  277.3947637541758 ...          9      cash -1701.6051204551773
+dataset-3    348  333.2227134679628 ...          9      cash  -2176.858336738117
+dataset-4    204 189.22271346796282 ...          9      cash -1068.0973238312977
+dataset-5    195 176.52839183495354 ...          9      cash  -1039.084879787938
+dataset-6     49 34.222713467962826 ...          9      cash -128.18383193735636
+dataset-7     55 35.789527508351696 ...          9      cash   -165.092052561731
+dataset-8     35 19.114416978060046 ...          9      cash   -60.7718381095307
+dataset-9     38 20.636688324856333 ...          9      cash  -83.55109375823925
 </pre></div>
 </div>
 </section>
@@ -862,10 +864,10 @@ that <code class="docutils literal notranslate"><span class="pre">t_ref</span></
   Name                            : dataset_lc
 
   Number of total flux points     : 30
-  Number of fit bins              : 24
+  Number of fit bins              : 26
 
   Fit statistic type              : chi2
-  Fit statistic value (-2 log(L)) : 1578.65
+  Fit statistic value (-2 log(L)) : 1569.54
 
   Number of models                : 1
   Number of parameters            : 5
@@ -888,10 +890,10 @@ that <code class="docutils literal notranslate"><span class="pre">t_ref</span></
 
 type    name     value         unit        error   min max frozen link prior
 ---- --------- ---------- -------------- --------- --- --- ------ ---- -----
-         index 2.9978e+00                2.791e-02 nan nan  False
-     amplitude 1.0623e-11 TeV-1 s-1 cm-2 3.462e-13 nan nan  False
+         index 3.0165e+00                2.827e-02 nan nan  False
+     amplitude 9.7478e-12 TeV-1 s-1 cm-2 3.220e-13 nan nan  False
      reference 1.0000e+00            TeV 0.000e+00 nan nan   True
-            t0 5.7532e+00              h 2.069e-01 nan nan  False
+            t0 6.4296e+00              h 2.318e-01 nan nan  False
          t_ref 5.8909e+04              d 0.000e+00 nan nan   True
 </pre></div>
 </div>
@@ -945,10 +947,10 @@ fitting in Gammapy, see the <a class="reference internal" href="../analysis-3d/a
          t_ref 5.8909e+04              d 0.000e+00 nan nan   True
 type    name     value         unit        error   min max frozen link prior
 ---- --------- ---------- -------------- --------- --- --- ------ ---- -----
-         index 3.0012e+00                3.132e-02 nan nan  False
-     amplitude 1.0754e-11 TeV-1 s-1 cm-2 3.647e-13 nan nan  False
+         index 3.0315e+00                3.171e-02 nan nan  False
+     amplitude 9.7409e-12 TeV-1 s-1 cm-2 3.311e-13 nan nan  False
      reference 1.0000e+00            TeV 0.000e+00 nan nan   True
-            t0 5.7251e+00              h 1.904e-01 nan nan  False
+            t0 6.4267e+00              h 2.154e-01 nan nan  False
          t_ref 5.8909e+04              d 0.000e+00 nan nan   True
 </pre></div>
 </div>
@@ -965,7 +967,7 @@ the <a class="reference internal" href="light_curve_flare.html"><span class="doc
 Use a combination of a Gaussian and Exponential flare profiles.</p></li>
 <li><p>Do a joint fitting of the datasets.</p></li>
 </ol>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 10.686 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 11.285 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-analysis-time-light-curve-simulation-py">
 <div class="binder-badge docutils container">
 <a class="reference external image-reference" href="https://mybinder.org/v2/gh/gammapy/gammapy-webpage/main?urlpath=lab/tree/notebooks/dev/tutorials/analysis-time/light_curve_simulation.ipynb"><img alt="Launch binder" src="../../_images/binder_badge_logo3.svg" style="width: 150px;" />

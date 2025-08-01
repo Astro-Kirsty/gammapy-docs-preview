@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -699,7 +699,45 @@
 <div class="viewcode-block" id="AnalysisConfig">
 <a class="viewcode-back" href="../../../api/gammapy.analysis.AnalysisConfig.html#gammapy.analysis.AnalysisConfig">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">AnalysisConfig</span><span class="p">(</span><span class="n">GammapyBaseConfig</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gammapy analysis configuration.&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Gammapy analysis configuration.</span>
+
+<span class="sd">    This class defines the full analysis configuration schema, organised into different sections.</span>
+<span class="sd">    It can be read from or written to a YAML file using `.read()` and `.write()`, respectively.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    general : `GeneralConfig`</span>
+<span class="sd">        General settings for output, logging, and file paths.</span>
+<span class="sd">    observations : `ObservationsConfig`</span>
+<span class="sd">        Settings for the `~gammapy.data.Observation` selection including IDs, regions, and time filters.</span>
+<span class="sd">    datasets : `DatasetsConfig`</span>
+<span class="sd">        Settings for the `~gammapy.datasets.Dataset` Including but not limited to geometry (`GeomConfig`),</span>
+<span class="sd">        background (`BackgroundConfig`), safe mask (`SafeMaskConfig`), and stacking.</span>
+<span class="sd">    fit : `FitConfig`</span>
+<span class="sd">        Settings for the `~gammapy.modeling.Fit` strategy and global fit energy range.</span>
+<span class="sd">    flux_points : `FluxPointsConfig`</span>
+<span class="sd">        Settings for the `~gammapy.estimators.FluxPointsEstimator`.</span>
+<span class="sd">    excess_map : `ExcessMapConfig`</span>
+<span class="sd">        Settings for the `~gammapy.estimators.ExcessMapEstimator`.</span>
+<span class="sd">    light_curve : `LightCurveConfig`</span>
+<span class="sd">        Settings for the `~gammapy.estimators.LightCurveEstimator`.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    Read from a yaml file::</span>
+
+<span class="sd">    &gt;&gt;&gt; from gammapy.analysis import AnalysisConfig</span>
+<span class="sd">    &gt;&gt;&gt; config = AnalysisConfig.read(&quot;config.yaml&quot;) # doctest: +SKIP</span>
+<span class="sd">    &gt;&gt;&gt; print(config.datasets.geom) # doctest: +SKIP</span>
+
+<span class="sd">    Create from scratch</span>
+
+<span class="sd">    &gt;&gt;&gt; config = AnalysisConfig()</span>
+<span class="sd">    &gt;&gt;&gt; config.observations.datastore = &quot;$GAMMAPY_DATA/hess-dl3-dr1&quot;</span>
+<span class="sd">    &gt;&gt;&gt; config.observations.obs_cone = {&quot;frame&quot;: &quot;icrs&quot;, &quot;lon&quot;: &quot;83.633 deg&quot;, &quot;lat&quot;: &quot;22.014 deg&quot;, &quot;radius&quot;: &quot;5 deg&quot;}</span>
+<span class="sd">    &gt;&gt;&gt; print(config.observations.obs_cone.lat.deg)</span>
+<span class="sd">    22.014</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">general</span><span class="p">:</span> <span class="n">GeneralConfig</span> <span class="o">=</span> <span class="n">GeneralConfig</span><span class="p">()</span>
     <span class="n">observations</span><span class="p">:</span> <span class="n">ObservationsConfig</span> <span class="o">=</span> <span class="n">ObservationsConfig</span><span class="p">()</span>

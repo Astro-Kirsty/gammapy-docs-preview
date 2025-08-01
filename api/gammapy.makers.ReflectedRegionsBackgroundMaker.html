@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="PhaseBackgroundMaker" href="gammapy.makers.PhaseBackgroundMaker.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -776,6 +776,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.CacheInstanceMixin.html">CacheInstanceMixin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.USE_INSTANCE_CACHE.html">USE_INSTANCE_CACHE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -910,7 +912,7 @@
 <h1>ReflectedRegionsBackgroundMaker<a class="headerlink" href="#reflectedregionsbackgroundmaker" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gammapy.makers.ReflectedRegionsBackgroundMaker">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.makers.</span></span><span class="sig-name descname"><span class="pre">ReflectedRegionsBackgroundMaker</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_finder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclusion_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/makers/background/reflected.html#ReflectedRegionsBackgroundMaker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.makers.ReflectedRegionsBackgroundMaker" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.makers.</span></span><span class="sig-name descname"><span class="pre">ReflectedRegionsBackgroundMaker</span></span><a class="reference internal" href="../_modules/gammapy/makers/background/reflected.html#ReflectedRegionsBackgroundMaker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.makers.ReflectedRegionsBackgroundMaker" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="gammapy.makers.Maker.html#gammapy.makers.Maker" title="gammapy.makers.core.Maker"><code class="xref py py-class docutils literal notranslate"><span class="pre">Maker</span></code></a></p>
 <p>Reflected regions background maker.</p>
 <dl class="field-list">
@@ -1005,6 +1007,16 @@ of the on region that we will read from the <code class="xref py py-obj docutils
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.makers.ReflectedRegionsBackgroundMaker.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">region_finder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exclusion_mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/makers/background/reflected.html#ReflectedRegionsBackgroundMaker.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.__init__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.makers.ReflectedRegionsBackgroundMaker.__new__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.__new__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
@@ -1036,6 +1048,8 @@ of the on region that we will read from the <code class="xref py py-obj docutils
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.tag"><code class="docutils literal notranslate"><span class="pre">ReflectedRegionsBackgroundMaker.tag</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.make_counts_off"><code class="docutils literal notranslate"><span class="pre">ReflectedRegionsBackgroundMaker.make_counts_off()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.run"><code class="docutils literal notranslate"><span class="pre">ReflectedRegionsBackgroundMaker.run()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.__init__"><code class="docutils literal notranslate"><span class="pre">ReflectedRegionsBackgroundMaker.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.makers.ReflectedRegionsBackgroundMaker.__new__"><code class="docutils literal notranslate"><span class="pre">ReflectedRegionsBackgroundMaker.__new__()</span></code></a></li>
 </ul>
 </li>
 </ul>

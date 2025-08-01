@@ -202,7 +202,7 @@ be adjusted according to each specific science case.
 
  .. code-block:: none
 
-    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x7ec84ff87050>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x7ec84ff86e50>}
+    {'group_high_zenith': <gammapy.data.observations.Observations object at 0x737ca2216e50>, 'group_low_zenith': <gammapy.data.observations.Observations object at 0x737ca18596d0>}
 
 
 
@@ -482,7 +482,7 @@ Finally, ``observations.group_by_label`` creates a dictionary containing ``t``
 
  .. code-block:: none
 
-    {'group_1': <gammapy.data.observations.Observations object at 0x7ec8521add50>, 'group_2': <gammapy.data.observations.Observations object at 0x7ec8521b2190>}
+    {'group_1': <gammapy.data.observations.Observations object at 0x737ca03b8250>, 'group_2': <gammapy.data.observations.Observations object at 0x737ca03946d0>}
 
 
 

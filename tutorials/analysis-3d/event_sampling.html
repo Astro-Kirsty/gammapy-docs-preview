@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="3D map simulation" href="simulate_3d.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -459,6 +459,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/parameter_ul.html">Constraining parameter limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,6 +486,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Event sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="flux_profiles.html">Flux Profile Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="non_detected_source.html">Computing flux upper limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-time/index.html">Time series</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1101,7 +1103,7 @@ analysis following the instructions in the
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_event_sampling_004.png" srcset="../../_images/sphx_glr_event_sampling_004.png" alt="Effective area, Background rate, Energy dispersion, Point spread function, Events" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/data/observations.py:518: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+<img src="../../_images/sphx_glr_event_sampling_004.png" srcset="../../_images/sphx_glr_event_sampling_004.png" alt="Effective area, Background rate, Energy dispersion, Point spread function, Events" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/data/observations.py:530: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
   fig.tight_layout()
 </pre></div>
 </div>

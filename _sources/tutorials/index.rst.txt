@@ -507,6 +507,23 @@ across the full analysis chain, from data loading to model comparison.
     </div>
 
 
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Explore how to deal with upper limits on parameters.">
+
+.. only:: html
+
+  .. image:: /tutorials/details/images/thumb/sphx_glr_parameter_ul_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_details_parameter_ul.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Constraining parameter limits</div>
+    </div>
+
+
 .. thumbnail-parent-div-close
 
 .. raw:: html
@@ -848,6 +865,23 @@ time-dependent analysis with light-curves.
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Flux Profile Estimation</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Explore how to compute flux upper limits for a non-detected source.">
+
+.. only:: html
+
+  .. image:: /tutorials/analysis-3d/images/thumb/sphx_glr_non_detected_source_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_tutorials_analysis-3d_non_detected_source.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Computing flux upper limits</div>
     </div>
 
 

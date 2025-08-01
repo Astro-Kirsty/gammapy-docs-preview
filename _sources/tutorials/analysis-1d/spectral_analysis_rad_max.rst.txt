@@ -661,10 +661,10 @@ provide a good distribution of the background.
 
       model   type    name     value         unit      ... min max frozen link prior
     --------- ---- --------- ---------- -------------- ... --- --- ------ ---- -----
-    simulated      amplitude 4.7390e-11 TeV-1 s-1 cm-2 ... nan nan  False           
+    simulated      amplitude 4.3431e-11 TeV-1 s-1 cm-2 ... nan nan  False           
     simulated      reference 1.0000e+00            TeV ... nan nan   True           
-    simulated          alpha 2.5146e+00                ... nan nan  False           
-    simulated           beta 2.0775e-01                ... nan nan  False           
+    simulated          alpha 2.6400e+00                ... nan nan  False           
+    simulated           beta 2.2551e-01                ... nan nan  False           
 
 
 

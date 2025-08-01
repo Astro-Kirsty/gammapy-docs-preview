@@ -135,8 +135,8 @@ Here is an example YAML file using the model:
                     value: 0.0
             operator: mul
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: '2025-07-28T08:44:51.677991'
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: '2025-08-01T08:38:16.791925'
         origin: null
 
 

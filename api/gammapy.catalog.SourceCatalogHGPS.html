@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="SourceCatalogGammaCat" href="gammapy.catalog.SourceCatalogGammaCat.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -776,6 +776,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.CacheInstanceMixin.html">CacheInstanceMixin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.USE_INSTANCE_CACHE.html">USE_INSTANCE_CACHE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -910,7 +912,7 @@
 <h1>SourceCatalogHGPS<a class="headerlink" href="#sourcecataloghgps" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gammapy.catalog.SourceCatalogHGPS">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.catalog.</span></span><span class="sig-name descname"><span class="pre">SourceCatalogHGPS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$GAMMAPY_DATA/catalogs/hgps_catalog_v1.fits.gz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HGPS_SOURCES'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/catalog/hess.html#SourceCatalogHGPS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.catalog.SourceCatalogHGPS" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.catalog.</span></span><span class="sig-name descname"><span class="pre">SourceCatalogHGPS</span></span><a class="reference internal" href="../_modules/gammapy/catalog/hess.html#SourceCatalogHGPS"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.catalog.SourceCatalogHGPS" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="gammapy.catalog.SourceCatalog.html#gammapy.catalog.SourceCatalog" title="gammapy.catalog.core.SourceCatalog"><code class="xref py py-class docutils literal notranslate"><span class="pre">SourceCatalog</span></code></a></p>
 <p>HESS Galactic plane survey (HGPS) source catalog.</p>
 <p>Reference: <a class="reference external" href="https://www.mpi-hd.mpg.de/hfm/HESS/hgps/">https://www.mpi-hd.mpg.de/hfm/HESS/hgps/</a></p>
@@ -1227,6 +1229,16 @@ In that case the relative weights between the components cannot be adjusted.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.catalog.SourceCatalogHGPS.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'$GAMMAPY_DATA/catalogs/hgps_catalog_v1.fits.gz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hdu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HGPS_SOURCES'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/catalog/hess.html#SourceCatalogHGPS.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.catalog.SourceCatalogHGPS.__init__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.catalog.SourceCatalogHGPS.__new__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.catalog.SourceCatalogHGPS.__new__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
@@ -1267,6 +1279,8 @@ In that case the relative weights between the components cannot be adjusted.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.catalog.SourceCatalogHGPS.row_index"><code class="docutils literal notranslate"><span class="pre">SourceCatalogHGPS.row_index()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.catalog.SourceCatalogHGPS.source_name"><code class="docutils literal notranslate"><span class="pre">SourceCatalogHGPS.source_name()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.catalog.SourceCatalogHGPS.to_models"><code class="docutils literal notranslate"><span class="pre">SourceCatalogHGPS.to_models()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.catalog.SourceCatalogHGPS.__init__"><code class="docutils literal notranslate"><span class="pre">SourceCatalogHGPS.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.catalog.SourceCatalogHGPS.__new__"><code class="docutils literal notranslate"><span class="pre">SourceCatalogHGPS.__new__()</span></code></a></li>
 </ul>
 </li>
 </ul>

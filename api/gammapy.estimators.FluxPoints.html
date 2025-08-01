@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -71,7 +71,7 @@
     <link rel="prev" title="FluxMaps" href="gammapy.estimators.FluxMaps.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -777,6 +777,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.CacheInstanceMixin.html">CacheInstanceMixin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.USE_INSTANCE_CACHE.html">USE_INSTANCE_CACHE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -911,7 +913,7 @@
 <h1>FluxPoints<a class="headerlink" href="#fluxpoints" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gammapy.estimators.FluxPoints">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.estimators.</span></span><span class="sig-name descname"><span class="pre">FluxPoints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gti</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_success_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/estimators/points/core.html#FluxPoints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.estimators.FluxPoints" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.estimators.</span></span><span class="sig-name descname"><span class="pre">FluxPoints</span></span><a class="reference internal" href="../_modules/gammapy/estimators/points/core.html#FluxPoints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.estimators.FluxPoints" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="gammapy.estimators.FluxMaps.html#gammapy.estimators.FluxMaps" title="gammapy.estimators.map.core.FluxMaps"><code class="xref py py-class docutils literal notranslate"><span class="pre">FluxMaps</span></code></a></p>
 <p>Flux points container.</p>
 <p>The supported formats are described here: <a class="reference external" href="https://gamma-astro-data-formats.readthedocs.io/en/latest/spectra/flux_points/index.html#flux-points" title="(in Data formats for gamma-ray astronomy v0.3)"><span>SED</span></a>.</p>
@@ -925,13 +927,32 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>table</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a></span></dt><dd><p>Table with flux point data.</p>
+<dt><strong>data</strong><span class="classifier">dict of <a class="reference internal" href="gammapy.maps.RegionNDMap.html#gammapy.maps.RegionNDMap" title="gammapy.maps.RegionNDMap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RegionNDMap</span></code></a></span></dt><dd><p>The maps dictionary. Expected entries are the following:</p>
+<ul class="simple">
+<li><p>norm : the norm factor.</p></li>
+<li><p>norm_err : optional, the error on the norm factor.</p></li>
+<li><p>norm_errn : optional, the negative error on the norm factor.</p></li>
+<li><p>norm_errp : optional, the positive error on the norm factor.</p></li>
+<li><p>norm_ul : optional, the upper limit on the norm factor.</p></li>
+<li><p>norm_scan : optional, the norm values of the test statistic scan.</p></li>
+<li><p>stat_scan : optional, the test statistic scan values.</p></li>
+<li><p>ts : optional, the delta test statistic associated with the flux value.</p></li>
+<li><p>sqrt_ts : optional, the square root of the test statistic, when relevant.</p></li>
+<li><p>success : optional, a boolean tagging the validity of the estimation.</p></li>
+<li><p>n_dof : optional, the number of degrees of freedom used in TS computation</p></li>
+<li><p>alpha : optional, normalisation factor to accounts for differences between the test region and the background</p></li>
+<li><p>acceptance_off : optional, acceptance from the off region</p></li>
+<li><p>acceptance_on : optional, acceptance from the on region</p></li>
+</ul>
 </dd>
-</dl>
+<dt><strong>reference_model</strong><span class="classifier"><a class="reference internal" href="gammapy.modeling.models.SkyModel.html#gammapy.modeling.models.SkyModel" title="gammapy.modeling.models.SkyModel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SkyModel</span></code></a>, optional</span></dt><dd><p>The reference model to use for conversions. If None, a model consisting
+of a point source with a power law spectrum of index 2 is assumed.</p>
 </dd>
-<dt class="field-even">Attributes<span class="colon">:</span></dt>
-<dd class="field-even"><dl>
-<dt><strong>table</strong><span class="classifier"><a class="reference external" href="https://docs.astropy.org/en/stable/api/astropy.table.Table.html#astropy.table.Table" title="(in Astropy v7.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Table</span></code></a></span></dt><dd><p>Table with flux point data.</p>
+<dt><strong>meta</strong><span class="classifier">dict, optional</span></dt><dd><p>Dict of metadata.</p>
+</dd>
+<dt><strong>gti</strong><span class="classifier"><a class="reference internal" href="gammapy.data.GTI.html#gammapy.data.GTI" title="gammapy.data.GTI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GTI</span></code></a>, optional</span></dt><dd><p>Maps GTI information.</p>
+</dd>
+<dt><strong>filter_success_nan</strong><span class="classifier">boolean, optional</span></dt><dd><p>Set fitted norm and error to NaN when the fit has not succeeded.</p>
 </dd>
 </dl>
 </dd>
@@ -1979,7 +2000,7 @@ column names and units for the stacked object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axis object to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axis object to plot on. Default is None.</p>
 </dd>
 <dt><strong>sed_type</strong><span class="classifier">{“dnde”, “flux”, “eflux”, “e2dnde”}, optional</span></dt><dd><p>SED type. Default is None.</p>
 </dd>
@@ -1993,7 +2014,7 @@ column names and units for the stacked object.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis object.</p>
 </dd>
 </dl>
 </dd>
@@ -2007,19 +2028,19 @@ column names and units for the stacked object.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axis object to plot on. Default is None.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a>, optional</span></dt><dd><p>Axis object to plot on. Default is None.</p>
 </dd>
 <dt><strong>sed_type</strong><span class="classifier">{“dnde”, “flux”, “eflux”, “e2dnde”}, optional</span></dt><dd><p>SED type. Default is None.</p>
 </dd>
 <dt><strong>add_cbar</strong><span class="classifier">bool, optional</span></dt><dd><p>Whether to add a colorbar to the plot. Default is True.</p>
 </dd>
-<dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcolormesh</span></code></a>.</p>
+<dt><strong>**kwargs</strong><span class="classifier">dict, optional</span></dt><dd><p>Keyword arguments passed to <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html#matplotlib.pyplot.pcolormesh" title="(in Matplotlib v3.10.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pcolormesh</span></code></a>.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis object.</p>
+<dt><strong>ax</strong><span class="classifier"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.10.5)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Axes</span></code></a></span></dt><dd><p>Axis object.</p>
 </dd>
 </dl>
 </dd>
@@ -2372,6 +2393,16 @@ Default is False.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxPoints.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">meta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gti</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filter_success_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.estimators.FluxPoints.__init__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.estimators.FluxPoints.__new__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.estimators.FluxPoints.__new__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
@@ -2495,6 +2526,8 @@ Default is False.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxPoints.to_maps"><code class="docutils literal notranslate"><span class="pre">FluxPoints.to_maps()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxPoints.to_table"><code class="docutils literal notranslate"><span class="pre">FluxPoints.to_table()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxPoints.write"><code class="docutils literal notranslate"><span class="pre">FluxPoints.write()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxPoints.__init__"><code class="docutils literal notranslate"><span class="pre">FluxPoints.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.estimators.FluxPoints.__new__"><code class="docutils literal notranslate"><span class="pre">FluxPoints.__new__()</span></code></a></li>
 </ul>
 </li>
 </ul>

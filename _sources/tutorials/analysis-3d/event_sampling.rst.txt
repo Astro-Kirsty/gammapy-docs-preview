@@ -954,7 +954,7 @@ analysis following the instructions in the
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/data/observations.py:518: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/data/observations.py:530: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
       fig.tight_layout()
 
 

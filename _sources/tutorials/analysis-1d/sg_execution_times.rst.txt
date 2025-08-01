@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:54.460** total execution time for 7 files **from tutorials/analysis-1d**:
+**01:48.069** total execution time for 7 files **from tutorials/analysis-1d**:
 
 .. container::
 
@@ -33,23 +33,23 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorials_analysis-1d_spectral_analysis.py` (``spectral_analysis.py``)
-     - 01:24.499
+     - 01:19.652
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-1d_spectral_analysis_hli.py` (``spectral_analysis_hli.py``)
-     - 00:10.315
+     - 00:09.478
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-1d_sed_fitting.py` (``sed_fitting.py``)
-     - 00:08.919
+     - 00:08.662
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-1d_spectral_analysis_rad_max.py` (``spectral_analysis_rad_max.py``)
-     - 00:04.266
+     - 00:03.986
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-1d_spectrum_simulation.py` (``spectrum_simulation.py``)
-     - 00:03.871
+     - 00:03.691
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-1d_extended_source_spectral_analysis.py` (``extended_source_spectral_analysis.py``)
-     - 00:02.185
+     - 00:02.187
      - 0.0
    * - :ref:`sphx_glr_tutorials_analysis-1d_cta_sensitivity.py` (``cta_sensitivity.py``)
-     - 00:00.405
+     - 00:00.413
      - 0.0

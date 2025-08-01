@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="Documentation How To" href="doc_howto.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -537,7 +537,7 @@
 <h2>General conventions<a class="headerlink" href="#general-conventions" title="Link to this heading">#</a></h2>
 <section id="python-version-support">
 <h3>Python version support<a class="headerlink" href="#python-version-support" title="Link to this heading">#</a></h3>
-<p>In Gammapy we currently support Python 3.8 or later.</p>
+<p>In Gammapy we currently support Python 3.9 or later.</p>
 </section>
 <section id="coordinate-and-axis-names">
 <h3>Coordinate and axis names<a class="headerlink" href="#coordinate-and-axis-names" title="Link to this heading">#</a></h3>
@@ -1112,20 +1112,6 @@ emitted in the test files. This can be done in the following way:</p>
 </section>
 <section id="others">
 <h2>Others<a class="headerlink" href="#others" title="Link to this heading">#</a></h2>
-<section id="bundled-gammapy-extern-code">
-<h3>Bundled gammapy.extern code<a class="headerlink" href="#bundled-gammapy-extern-code" title="Link to this heading">#</a></h3>
-<p>We bundle some code in <code class="docutils literal notranslate"><span class="pre">gammapy.extern</span></code>.
-This is external code that we don’t maintain or modify in Gammapy.
-We only bundle small pure-Python files (currently all single-file modules) purely for convenience,
-because having to explain about these modules as Gammapy dependencies to end-users would be annoying.
-And in some cases the file was extracted from some other project, i.e. can’t be installed
-separately as a dependency.</p>
-<p>For <code class="docutils literal notranslate"><span class="pre">gammapy.extern</span></code> we don’t generate Sphinx API docs.
-To see what is there, check out the <code class="docutils literal notranslate"><span class="pre">gammapy/extern</span></code> directory locally or on
-<a class="reference external" href="https://github.com/gammapy/gammapy/tree/master/gammapy/extern">GitHub</a>.
-Notes on the bundled files are kept in the docstring of
-<a class="reference external" href="https://github.com/gammapy/gammapy/blob/master/gammapy/extern/__init__.py">gammapy/extern/__init__.py</a>.</p>
-</section>
 <section id="locate-origin-of-warnings">
 <h3>Locate origin of warnings<a class="headerlink" href="#locate-origin-of-warnings" title="Link to this heading">#</a></h3>
 <p>By default, warnings appear on the console, but often it’s not clear where a given warning
@@ -1439,7 +1425,6 @@ See also section: Making a pull request which skips GitHub Actions, above.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#others">Others</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bundled-gammapy-extern-code">Bundled gammapy.extern code</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#locate-origin-of-warnings">Locate origin of warnings</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-text-repr-str-and-info">Object text repr, str and info</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output-in-jupyter-notebook-cells">Output in Jupyter notebook cells</a></li>

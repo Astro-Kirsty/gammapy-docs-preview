@@ -127,8 +127,8 @@ Here is an example YAML file using the model:
             scale: utc
             filename: /home/feijen/Documents/github/gammapy-data/tests/phasecurve_LSI_DC.fits
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: '2025-07-28T08:44:53.645651'
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: '2025-08-01T08:38:18.765538'
         origin: null
 
 

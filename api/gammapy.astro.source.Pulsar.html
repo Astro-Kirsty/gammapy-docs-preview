@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -71,7 +71,7 @@
     <link rel="prev" title="velocity_distributions" href="gammapy.astro.population.velocity_distributions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -777,6 +777,8 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../api-reference/utils.html">utils - Utilities</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.cachemethod.html">cachemethod</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.make_key.html">make_key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.CacheInstanceMixin.html">CacheInstanceMixin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cache.USE_INSTANCE_CACHE.html">USE_INSTANCE_CACHE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.standard_scaler.html">standard_scaler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.cluster.hierarchical_clustering.html">hierarchical_clustering</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gammapy.utils.coordinates.cartesian.html">cartesian</a></li>
@@ -911,7 +913,7 @@
 <h1>Pulsar<a class="headerlink" href="#pulsar" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="gammapy.astro.source.Pulsar">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.astro.source.</span></span><span class="sig-name descname"><span class="pre">Pulsar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P_0='0.1</span> <span class="pre">s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B='1e10</span> <span class="pre">G'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I=&lt;Quantity</span> <span class="pre">1.e+45</span> <span class="pre">cm2</span> <span class="pre">g&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R=&lt;Quantity</span> <span class="pre">1000000.</span> <span class="pre">cm&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_0=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/astro/source/pulsar.html#Pulsar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.astro.source.Pulsar" title="Link to this definition">#</a></dt>
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">gammapy.astro.source.</span></span><span class="sig-name descname"><span class="pre">Pulsar</span></span><a class="reference internal" href="../_modules/gammapy/astro/source/pulsar.html#Pulsar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.astro.source.Pulsar" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.13)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Magnetic dipole spin-down pulsar model.</p>
 <dl class="field-list">
@@ -1054,6 +1056,16 @@ spin-down.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.astro.source.Pulsar.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P_0='0.1</span> <span class="pre">s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B='1e10</span> <span class="pre">G'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n=3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I=&lt;Quantity</span> <span class="pre">1.e+45</span> <span class="pre">cm2</span> <span class="pre">g&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R=&lt;Quantity</span> <span class="pre">1000000.</span> <span class="pre">cm&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">age=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">L_0=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/gammapy/astro/source/pulsar.html#Pulsar.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#gammapy.astro.source.Pulsar.__init__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="gammapy.astro.source.Pulsar.__new__">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#gammapy.astro.source.Pulsar.__new__" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
@@ -1088,6 +1100,8 @@ spin-down.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.astro.source.Pulsar.period"><code class="docutils literal notranslate"><span class="pre">Pulsar.period()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.astro.source.Pulsar.period_dot"><code class="docutils literal notranslate"><span class="pre">Pulsar.period_dot()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.astro.source.Pulsar.tau"><code class="docutils literal notranslate"><span class="pre">Pulsar.tau()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.astro.source.Pulsar.__init__"><code class="docutils literal notranslate"><span class="pre">Pulsar.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gammapy.astro.source.Pulsar.__new__"><code class="docutils literal notranslate"><span class="pre">Pulsar.__new__()</span></code></a></li>
 </ul>
 </li>
 </ul>

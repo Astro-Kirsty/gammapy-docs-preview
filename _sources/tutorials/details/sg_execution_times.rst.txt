@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**02:05.728** total execution time for 14 files **from tutorials/details**:
+**02:09.968** total execution time for 15 files **from tutorials/details**:
 
 .. container::
 
@@ -33,44 +33,47 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_tutorials_details_priors.py` (``priors.py``)
-     - 00:32.445
+     - 00:30.388
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_nested_sampling_Crab.py` (``nested_sampling_Crab.py``)
-     - 00:26.978
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_details_estimators.py` (``estimators.py``)
-     - 00:13.402
+     - 00:26.594
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_fitting.py` (``fitting.py``)
-     - 00:13.137
+     - 00:13.259
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_details_estimators.py` (``estimators.py``)
+     - 00:13.016
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_makers.py` (``makers.py``)
-     - 00:11.186
+     - 00:11.351
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_catalog.py` (``catalog.py``)
-     - 00:08.235
+     - 00:08.081
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_datasets.py` (``datasets.py``)
-     - 00:07.620
+     - 00:07.391
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_details_parameter_ul.py` (``parameter_ul.py``)
+     - 00:07.135
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_model_management.py` (``model_management.py``)
-     - 00:05.079
+     - 00:05.086
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_observation_clustering.py` (``observation_clustering.py``)
-     - 00:02.414
+     - 00:02.404
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_irfs.py` (``irfs.py``)
-     - 00:01.665
-     - 0.0
-   * - :ref:`sphx_glr_tutorials_details_models.py` (``models.py``)
-     - 00:01.248
+     - 00:01.641
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_maps.py` (``maps.py``)
-     - 00:01.168
+     - 00:01.432
+     - 0.0
+   * - :ref:`sphx_glr_tutorials_details_models.py` (``models.py``)
+     - 00:01.073
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_mask_maps.py` (``mask_maps.py``)
-     - 00:00.908
+     - 00:00.865
      - 0.0
    * - :ref:`sphx_glr_tutorials_details_theta_square_plot.py` (``theta_square_plot.py``)
-     - 00:00.245
+     - 00:00.252
      - 0.0

@@ -259,8 +259,8 @@ MSH 1552
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1916+g4ebdb930c
-            date: '2025-07-28T08:50:24.875892'
+            creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+            date: '2025-08-01T08:43:47.098753'
             origin: null
     
 
@@ -412,8 +412,8 @@ Create the config:
             parameters:
                 selection_optional: all
         metadata:
-            creator: Gammapy 2.0.dev1916+g4ebdb930c
-            date: '2025-07-28T08:50:24.901027'
+            creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+            date: '2025-08-01T08:43:47.124852'
             origin: null
     
 

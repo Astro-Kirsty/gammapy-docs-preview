@@ -117,12 +117,12 @@ Here is an example YAML file using the model:
                 value: 0.5
                 unit: d-1
             -   name: t_ref
-                value: 60884.26451798933
+                value: 60888.259947679144
                 unit: d
             scale: utc
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: '2025-07-28T08:44:54.398362'
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: '2025-08-01T08:38:19.523748'
         origin: null
 
 

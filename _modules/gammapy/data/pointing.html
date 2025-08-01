@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -67,7 +67,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -605,6 +605,8 @@
 <span class="sd">        (83.633, 22.014)&gt;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="FixedPointingInfo.__init__">
+<a class="viewcode-back" href="../../../api/gammapy.data.FixedPointingInfo.html#gammapy.data.FixedPointingInfo.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">meta</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -667,7 +669,8 @@
             <span class="n">_check_coord_frame</span><span class="p">(</span><span class="n">fixed_altaz</span><span class="p">,</span> <span class="n">AltAz</span><span class="p">,</span> <span class="s2">&quot;fixed_altaz&quot;</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_mode</span> <span class="o">=</span> <span class="n">PointingMode</span><span class="o">.</span><span class="n">DRIFT</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_icrs</span> <span class="o">=</span> <span class="kc">None</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_altaz</span> <span class="o">=</span> <span class="n">fixed_altaz</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_fixed_altaz</span> <span class="o">=</span> <span class="n">fixed_altaz</span></div>
+
 
     <span class="k">def</span><span class="w"> </span><span class="nf">_repr_html_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">try</span><span class="p">:</span>
@@ -1008,8 +1011,11 @@
 <span class="sd">    ``gammapy download datasets --tests --out $GAMMAPY_DATA``</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="PointingInfo.__init__">
+<a class="viewcode-back" href="../../../api/gammapy.data.PointingInfo.html#gammapy.data.PointingInfo.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">table</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">table</span> <span class="o">=</span> <span class="n">table</span></div>
+
 
 <div class="viewcode-block" id="PointingInfo.read">
 <a class="viewcode-back" href="../../../api/gammapy.data.PointingInfo.html#gammapy.data.PointingInfo.read">[docs]</a>

@@ -121,8 +121,8 @@ Here is an example YAML file using the model:
                 unit: d
             scale: utc
     metadata:
-        creator: Gammapy 2.0.dev1916+g4ebdb930c
-        date: '2025-07-28T08:44:53.769148'
+        creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+        date: '2025-08-01T08:38:18.888545'
         origin: null
 
 

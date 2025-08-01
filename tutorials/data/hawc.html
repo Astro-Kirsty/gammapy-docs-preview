@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="Fermi-LAT with Gammapy" href="fermi_lat.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -459,6 +459,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../details/fitting.html">Fitting</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/nested_sampling_Crab.html">Bayesian analysis with nested sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details/estimators.html">Estimators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details/parameter_ul.html">Constraining parameter limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-1d/index.html">Data analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -485,6 +486,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling.html">Event sampling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/event_sampling_nrg_depend_models.html">Sample a source with energy-dependent temporal evolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../analysis-3d/flux_profiles.html">Flux Profile Estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis-3d/non_detected_source.html">Computing flux upper limits</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../analysis-time/index.html">Time series</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -714,7 +716,7 @@ Number of observations: 1
 <img src="../../_images/sphx_glr_hawc_005.png" srcset="../../_images/sphx_glr_hawc_005.png" alt="hawc" class = "sphx-glr-single-img"/></section>
 </section>
 <section id="data-reduction-into-a-mapdataset">
-<h2>Data reduction into a MapDataset<a class="headerlink" href="#data-reduction-into-a-mapdataset" title="Link to this heading">#</a></h2>
+<h2>Data reduction into a <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDataset</span></code></a><a class="headerlink" href="#data-reduction-into-a-mapdataset" title="Link to this heading">#</a></h2>
 <p>We will now produce a <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.html#gammapy.datasets.MapDataset" title="gammapy.datasets.MapDataset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDataset</span></code></a> using the data from one of the
 fHit bins. In order to use all bins, one just needs to repeat this
 process inside a for loop that modifies the variable fHit.</p>
@@ -878,7 +880,7 @@ the <a class="reference internal" href="../../api/gammapy.datasets.MapDataset.ht
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#load-the-tables">Load the tables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-reduction-into-a-mapdataset">Data reduction into a MapDataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-reduction-into-a-mapdataset">Data reduction into a <code class="xref py py-obj docutils literal notranslate"><span class="pre">MapDataset</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#check-the-dataset-we-produced">Check the dataset we produced</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next steps</a></li>

@@ -154,7 +154,7 @@ Check setup
 
     Gammapy package:
 
-            version                : 2.0.dev1916+g4ebdb930c 
+            version                : 2.0.dev2043+gd2c0fc8f8 
             path                   : /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy 
 
 
@@ -291,7 +291,7 @@ the following instructions:
 
  .. code-block:: none
 
-    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/data/observations.py:518: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+    /home/feijen/Documents/github/gammapy/.tox/build_docs/lib/python3.11/site-packages/gammapy/data/observations.py:530: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
       fig.tight_layout()
     Observation
 

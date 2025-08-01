@@ -33,7 +33,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css?v=7f9a90b1" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -70,7 +70,7 @@
     <link rel="prev" title="EBL absorption spectral model" href="plot_absorbed.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.0.dev1917+g81893b894" />
+  <meta name="docsearch:version" content="2.0.dev2043+gd2c0fc8f8" />
   </head>
   
   
@@ -606,14 +606,14 @@ to download the full example code. or to run this example in your browser via Bi
 <span id="sphx-glr-user-guide-model-gallery-spectral-plot-naima-py"></span><span id="id1"></span><h1>Naima spectral model<a class="headerlink" href="#naima-spectral-model" title="Link to this heading">#</a></h1>
 <p>This class provides an interface with the models defined in the naima models module.</p>
 <p>The model accepts as a positional argument a <a class="reference external" href="https://naima.readthedocs.io/en/latest/">Naima</a>
-radiative <a class="reference external" href="https://naima.readthedocs.io/en/latest/api-models.html#module-naima.models" title="(in naima v0.10.3.dev2+g92076dd)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code></a> instance, used to compute the non-thermal emission from populations of
+radiative <a class="reference external" href="https://naima.readthedocs.io/en/latest/api-models.html#module-naima.models" title="(in naima v0.10.3.dev9+g30578c3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">models</span></code></a> instance, used to compute the non-thermal emission from populations of
 relativistic electrons or protons due to interactions with the ISM or with radiation and magnetic fields.</p>
 <p>One of the advantages provided by this class consists in the possibility of performing a maximum
 likelihood spectral fit of the model’s parameters directly on observations, as opposed to the MCMC
 <a class="reference external" href="https://naima.readthedocs.io/en/latest/mcmc.html">fit to flux points</a> featured in
 Naima. All the parameters defining the parent population of charged particles are stored as
 <a class="reference internal" href="../../../api/gammapy.modeling.Parameter.html#gammapy.modeling.Parameter" title="gammapy.modeling.Parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Parameter</span></code></a> and left free by default. In case that the radiative model is
-<a class="reference external" href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.Synchrotron" title="(in naima v0.10.3.dev2+g92076dd)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Synchrotron</span></code></a>, the magnetic field strength may also be fitted. Parameters can be
+<a class="reference external" href="https://naima.readthedocs.io/en/latest/api-models.html#naima.models.Synchrotron" title="(in naima v0.10.3.dev9+g30578c3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Synchrotron</span></code></a>, the magnetic field strength may also be fitted. Parameters can be
 freezed/unfreezed before the fit, and maximum/minimum values can be set to limit the parameters space to
 the physically interesting region.</p>
 <section id="example-plot">
@@ -720,8 +720,8 @@ electron distribution with an <code class="xref py py-obj docutils literal notra
             scale_method: scale10
             scale_transform: lin
 metadata:
-    creator: Gammapy 2.0.dev1916+g4ebdb930c
-    date: &#39;2025-07-28T08:44:51.481019&#39;
+    creator: Gammapy 2.0.dev2043+gd2c0fc8f8
+    date: &#39;2025-08-01T08:38:16.595123&#39;
     origin: null
 </pre></div>
 </div>
